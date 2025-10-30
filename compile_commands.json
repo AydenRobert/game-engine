@@ -1,0 +1,24 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/testbed/main.o",
+      "testbed/src/main.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game_engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game_engine/testbed/src/main.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game_engine/obj/testbed/main.o"
+  }
+]
