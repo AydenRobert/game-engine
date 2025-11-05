@@ -48,7 +48,7 @@ b8 platform_startup_x11(display_state *disp_state, const char *application_name,
 
     if (xcb_connection_has_error(state->connection)) {
         KFATAL("Failed to connect to X server via XCB");
-        return FALSE;
+        return false;
     }
 
     // Get data from X server
@@ -115,10 +115,10 @@ b8 platform_startup_x11(display_state *disp_state, const char *application_name,
     if (stream_result <= 0) {
         KFATAL("An error occurred while flushing the stream: %d",
                stream_result);
-        return FALSE;
+        return false;
     }
 
-    return TRUE;
+    return true;
 }
 
 void platform_shutdown_x11(display_state *disp_state) {
@@ -135,7 +135,7 @@ b8 platform_pump_messages_x11(display_state *disp_state) {
     xcb_generic_event_t *event;
     xcb_client_message_event_t *cm;
 
-    b8 quit_flagged = FALSE;
+    b8 quit_flagged = false;
 
     // Poll for events until null is returned
     while ((event = xcb_poll_for_event(state->connection))) {
@@ -208,7 +208,7 @@ b8 platform_pump_messages_x11(display_state *disp_state) {
 
             // Window close
             if (cm->data.data32[0] == state->wm_delete_win) {
-                quit_flagged = TRUE;
+                quit_flagged = true;
             }
         } break;
         default:
@@ -236,11 +236,11 @@ b8 platform_create_vulkan_surface_x11(display_state *disp_state,
         context->instance, &create_info, context->allocator, &state->surface);
     if (result != VK_SUCCESS) {
         KFATAL("Vulkan surface creation failed.");
-        return FALSE;
+        return false;
     }
 
     context->surface = state->surface;
-    return TRUE;
+    return true;
 }
 
 #endif // KPLATFORM_LINUX

@@ -12,7 +12,7 @@ struct memory_stats {
 };
 
 static const char *memory_tag_strings[MEMORY_TAG_MAX_TAGS] = {
-    "UNKNOWN          ", "ARRAY            ", "DARRAY           ",
+    "UNKNOWN          ", "ARRAY            ", "LINEAR ALLOCATOR ", "DARRAY           ",
     "DICT             ", "RING_QUEUE       ", "BST              ",
     "STRING           ", "APPLICATION      ", "JOB              ",
     "TEXTURE          ", "MATERIAL_INSTANCE", "RENDERER         ",
@@ -33,7 +33,7 @@ KAPI void *kallocate(u64 size, memory_tag tag) {
     stats.tagged_allocations[tag] += size;
 
     // TODO: Memory alignment
-    void *block = platform_allocate(size, FALSE);
+    void *block = platform_allocate(size, false);
     platform_zero_memory(block, size);
 
     return block;
@@ -51,7 +51,7 @@ KAPI void kfree(void *block, u64 size, memory_tag tag) {
     stats.tagged_allocations[tag] -= size;
 
     // TODO: Memory alignment
-    platform_free(block, FALSE);
+    platform_free(block, false);
 }
 
 KAPI void *kzero_memory(void *block, u64 size) {

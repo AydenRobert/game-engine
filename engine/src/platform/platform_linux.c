@@ -45,7 +45,7 @@ b8 platform_startup(platform_state *plat_state, const char *application_name,
                                     y, width, height);
     }
 
-    return FALSE;
+    return false;
 }
 
 void platform_shutdown(platform_state *plat_state) {
@@ -67,7 +67,7 @@ b8 platform_pump_messages(platform_state *plat_state) {
         return platform_pump_messages_x11(&state->display_state);
     }
 
-    return FALSE;
+    return false;
 }
 
 void *platform_allocate(u64 size, b8 aligned) { return malloc(size); }
@@ -128,11 +128,13 @@ b8 platform_create_vulkan_surface(platform_state *plat_state,
                                   struct vulkan_context *context) {
     internal_state *state = (internal_state *)plat_state->internal_state;
     if (wayland_display) {
-        return platform_create_vulkan_surface_wayland(&state->display_state, context);
+        return platform_create_vulkan_surface_wayland(&state->display_state,
+                                                      context);
     } else if (x_display) {
-        return platform_create_vulkan_surface_x11(&state->display_state, context);
+        return platform_create_vulkan_surface_x11(&state->display_state,
+                                                  context);
     }
-    return FALSE;
+    return false;
 }
 
 keys translate_keycode(u32 x_keycode) {
@@ -289,8 +291,10 @@ keys translate_keycode(u32 x_keycode) {
     case XK_Control_R:
         return KEY_RCONTROL;
         // case XK_Menu: return KEY_LMENU;
-    case XK_Menu:
-        return KEY_RMENU;
+    case XK_Alt_L:
+        return KEY_LALT;
+    case XK_Alt_R:
+        return KEY_RALT;
     case XK_semicolon:
         return KEY_SEMICOLON;
     case XK_plus:

@@ -14,31 +14,41 @@ OBJ_ENGINE = obj/engine
 OBJ_TESTBED = obj/testbed
 BIN_DIR = bin
 
+ASSET_SRC = assets
+ASSET_DST = $(BIN_DIR)/assets
+SHADER_SRC_DIR = $(ASSET_SRC)/shaders
+SHADER_DST_DIR = $(ASSET_DST)/shaders
+
 # --- Output Binaries ---
 ENGINE_TARGET = $(BIN_DIR)/lib$(ENGINE_NAME).so
 TESTBED_TARGET = $(BIN_DIR)/$(TESTBED_NAME)
 
-# --- File Discovery ---
+# --- File Discovery (C sources) ---
 ENGINE_SOURCES = $(shell find $(SRC_ENGINE) -name "*.c")
 ENGINE_OBJECTS = $(patsubst $(SRC_ENGINE)/%.c, $(OBJ_ENGINE)/%.o, $(ENGINE_SOURCES))
 
 TESTBED_SOURCES = $(shell find $(SRC_TESTBED) -name "*.c")
 TESTBED_OBJECTS = $(patsubst $(SRC_TESTBED)/%.c, $(OBJ_TESTBED)/%.o, $(TESTBED_SOURCES))
 
+# --- Shaders ---
+SHADER_SOURCES = $(wildcard $(SHADER_SRC_DIR)/*.glsl)
+SHADER_OUTPUTS = $(patsubst $(SHADER_SRC_DIR)/%.glsl, $(SHADER_DST_DIR)/%.spv, $(SHADER_SOURCES))
+
 # --- Build Flags ---
 DEFINES = -D_DEBUG -DKEXPORT
 INCLUDE_FLAGS = -I$(SRC_ENGINE) -I$(SRC_TESTBED) -I$(VULKAN_SDK)/include
 CFLAGS = -g -Wall -Werror -Wvarargs -fPIC
-LINKER_FLAGS_ENGINE = -shared -fPIC -lvulkan -lX11 -lxcb -lX11-xcb -lwayland-client -lxkbcommon
-LINKER_FLAGS_TESTBED = -lvulkan -ldl
-
 CPPFLAGS = $(DEFINES) $(INCLUDE_FLAGS)
+
+LINKER_FLAGS_ENGINE = -shared -fPIC -lvulkan -lX11 -lxcb -lX11-xcb -lwayland-client -lxkbcommon -lm
+LINKER_FLAGS_TESTBED = -lvulkan -ldl -L$(BIN_DIR) -l$(ENGINE_NAME) -Wl,-rpath,'$$ORIGIN'
 
 # === Targets ===
 
-.PHONY: all clean engine testbed
+.PHONY: all clean engine testbed shaders assets
 
-all: $(ENGINE_TARGET) $(TESTBED_TARGET)
+# Default build: build everything
+all: $(ENGINE_TARGET) $(TESTBED_TARGET) shaders assets
 
 # --- ENGINE (.so library) ---
 engine: $(ENGINE_TARGET)
@@ -59,14 +69,28 @@ testbed: $(TESTBED_TARGET)
 $(TESTBED_TARGET): $(TESTBED_OBJECTS) $(ENGINE_TARGET)
 	@echo "Linking $(TESTBED_NAME) executable..."
 	@mkdir -p $(BIN_DIR)
-	$(CC) $(TESTBED_OBJECTS) -o $@ $(LINKER_FLAGS_TESTBED) -L$(BIN_DIR) -l$(ENGINE_NAME) -Wl,-rpath,'$$ORIGIN'
+	$(CC) $(TESTBED_OBJECTS) -o $@ $(LINKER_FLAGS_TESTBED)
 
 $(OBJ_TESTBED)/%.o: $(SRC_TESTBED)/%.c
 	@echo "Compiling $<..."
 	@mkdir -p $(@D)
 	$(CC) -c $< -o $@ $(CFLAGS) $(CPPFLAGS)
 
-# --- Clean build artifacts ---
+# --- Shaders (GLSL → SPIR-V) ---
+$(SHADER_DST_DIR)/%.spv: $(SHADER_SRC_DIR)/%.glsl
+	@echo "Compiling shader $< -> $@"
+	@mkdir -p $(dir $@)
+	$(VULKAN_SDK)/bin/glslc -o $@ $<
+
+shaders: $(SHADER_OUTPUTS)
+
+# --- Asset Copy ---
+assets:
+	@echo "Copying assets..."
+	@mkdir -p $(ASSET_DST)
+	rsync -a $(ASSET_SRC)/ $(ASSET_DST)/ --exclude 'shaders'
+
+# --- Clean everything ---
 clean:
 	@echo "Cleaning..."
 	rm -rf obj $(BIN_DIR)

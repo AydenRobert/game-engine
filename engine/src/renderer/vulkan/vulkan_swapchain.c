@@ -38,13 +38,13 @@ b8 vulkan_swapchain_acquire_next_image_index(
     if (result == VK_ERROR_OUT_OF_DATE_KHR) {
         vulkan_swapchain_recreate(context, context->framebuffer_width,
                                   context->framebuffer_height, swapchain);
-        return FALSE;
+        return false;
     } else if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR) {
         KFATAL("Failed to acquire swapchain image!");
-        return FALSE;
+        return false;
     }
 
-    return TRUE;
+    return true;
 }
 
 void vulkan_swapchain_present(vulkan_context *context,
@@ -84,7 +84,7 @@ void create(vulkan_context *context, u32 width, u32 height,
     swapchain->max_frames_in_flight = 2;
 
     // Choose a swap surface format
-    b8 found = FALSE;
+    b8 found = false;
     for (u32 i = 0; i < context->device.swapchain_support.format_count; i++) {
         VkSurfaceFormatKHR format =
             context->device.swapchain_support.formats[i];
@@ -92,7 +92,7 @@ void create(vulkan_context *context, u32 width, u32 height,
         if (format.format == VK_FORMAT_B8G8R8A8_UNORM &&
             format.colorSpace == VK_COLOR_SPACE_SRGB_NONLINEAR_KHR) {
             swapchain->image_format = format;
-            found = TRUE;
+            found = true;
             break;
         }
     }
@@ -172,7 +172,7 @@ void create(vulkan_context *context, u32 width, u32 height,
         context->device.swapchain_support.capabilities.currentTransform;
     swapchain_create_info.compositeAlpha = VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR;
     swapchain_create_info.presentMode = present_mode;
-    swapchain_create_info.clipped = VK_TRUE;
+    swapchain_create_info.clipped = VK_FALSE;
     swapchain_create_info.oldSwapchain = 0;
 
     VK_CHECK(vkCreateSwapchainKHR(context->device.logical_device,
@@ -239,7 +239,7 @@ void create(vulkan_context *context, u32 width, u32 height,
         context, VK_IMAGE_TYPE_2D, swapchain_extent.width,
         swapchain_extent.height, context->device.depth_format,
         VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT,
-        VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, TRUE, VK_IMAGE_ASPECT_DEPTH_BIT,
+        VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, true, VK_IMAGE_ASPECT_DEPTH_BIT,
         &swapchain->depth_attachment);
     KINFO("Swapchain created successfully!");
 }

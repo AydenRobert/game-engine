@@ -71,7 +71,7 @@ void xdg_surface_config(void *data, struct xdg_surface *xdg_surface,
     xdg_surface_ack_configure(xdg_surface, serial);
 
     state->configure_serial = serial;
-    state->configured = TRUE;
+    state->configured = true;
 }
 
 struct xdg_surface_listener xdg_surface_listener = {.configure =
@@ -96,7 +96,7 @@ void xdg_toplevel_config(void *data, struct xdg_toplevel *top, i32 new_width,
 void xdg_toplevel_close(void *data, struct xdg_toplevel *xdg_toplevel) {
     wayland_state *state = (wayland_state *)data;
 
-    state->should_close = TRUE;
+    state->should_close = true;
 }
 
 struct xdg_toplevel_listener xdg_toplevel_listener = {
@@ -303,7 +303,7 @@ b8 platform_startup_wayland(display_state *disp_state,
     state->display = wl_display_connect(NULL);
     if (!state->display) {
         KFATAL("Failed to connect to Wayland display.");
-        return FALSE;
+        return false;
     }
 
     state->registry = wl_display_get_registry(state->display);
@@ -314,7 +314,7 @@ b8 platform_startup_wayland(display_state *disp_state,
 
     if (!state->compositor || !state->wm_base) {
         KFATAL("Wayland: Missing required globals (compositor or wm_base).");
-        return FALSE;
+        return false;
     }
 
     // Create base wl_surface
@@ -341,7 +341,7 @@ b8 platform_startup_wayland(display_state *disp_state,
     while (!state->configured && wl_display_dispatch(state->display) != -1) {
     }
 
-    return TRUE;
+    return true;
 }
 
 void platform_shutdown_wayland(display_state *disp_state) {
@@ -440,11 +440,11 @@ b8 platform_create_vulkan_surface_wayland(display_state *disp_state,
                                   context->allocator, &state->vulkan_surface);
     if (result != VK_SUCCESS) {
         KFATAL("Vulkan surface creation failed.");
-        return FALSE;
+        return false;
     }
 
     context->surface = state->vulkan_surface;
-    return TRUE;
+    return true;
 }
 
 #endif // KPLATFORM_LINUX

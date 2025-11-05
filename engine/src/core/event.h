@@ -32,33 +32,33 @@ void event_shutdown();
 /**
  * Register to listen when events are sent with the provided code. Events with
  * duplicate listener/callback combos will not register and cause this to return
- * FALSE.
+ * false.
  * @param code The event code to listen for.
  * @param listener A pointer to a listener instance, can be 0/NULL.
  * @param on_event The callback function pointer to be invoked when the event
  * code is fired.
- * @returns TRUE if the event is successfully registered; otherwise FALSE.
+ * @returns true if the event is successfully registered; otherwise false.
  */
 KAPI b8 event_register(u16 code, void *listener, PFN_on_event on_event);
 
 /**
  * Unregister from listening for when events are sent with the provided code. If
- * no matching registration is found, this will return FALSE.
+ * no matching registration is found, this will return false.
  * @param code The event code to stop listening for.
  * @param listener A pointer to a listener instance, can be 0/NULL.
  * @param on_event The callback function pointer to be unregistered.
- * @returns TRUE if the event is successfully unregistered; otherwise FALSE.
+ * @returns true if the event is successfully unregistered; otherwise false.
  */
 KAPI b8 event_unregister(u16 code, void *listener, PFN_on_event on_event);
 
 /**
  * Fires an event to listeners of the given code. If an event handler returns
- * TRUE, the event is considered handled and is not passed on to anymore
+ * true, the event is considered handled and is not passed on to anymore
  * listeners.
  * @param code The event code to fire.
  * @param sender A pointer to the sender, can be 0/NULL.
  * @param context The event data.
- * @returns TRUE if handled; otherwise FALSE.
+ * @returns true if handled; otherwise false.
  */
 KAPI b8 event_fire(u16 code, void *sender, event_context context);
 
