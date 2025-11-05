@@ -1,17 +1,28 @@
 #include "platform/platform.h"
+#include "renderer/vulkan/vulkan_platform.h"
 
 #if KPLATFORM_WINDOWS
 
+#include "core/event.h"
+#include "core/input.h"
 #include "core/logger.h"
+
+#include "containers/darray.h"
 
 #include <stdlib.h>
 
 #include <windows.h>
 #include <windowsx.h>
 
+// For surface creation
+#include "renderer/vulkan/vulkan_types.inl"
+#include <vulkan/vulkan.h>
+#include <vulkan/vulkan_win32.h>
+
 typedef struct internal_state {
     HINSTANCE h_instance;
     HWND hwnd;
+    VkSurfaceKHR surface;
 } internal_state;
 
 // Clock
@@ -162,6 +173,30 @@ f64 platform_get_absolute_time() {
 
 void platform_sleep(u64 ms) { Sleep(ms); }
 
+void platform_get_required_extension_names(const char ***names_darray) {
+    darray_push(*names_darray, &"VK_KHR_win32_surface");
+}
+
+b8 platform_create_vulkan_surface(platform_state *plat_state,
+                                  vulkan_context *context) {
+    internal_state *state = (internal_state *)plat_state->internal_state;
+
+    VkWin32SurfaceCreateInfoKHR create_info = {
+        VK_STRUCTURE_TYPE_WIN32_SURFACE_CREATE_INFO_KHR};
+    create_info.hinstance = state->h_instance;
+    create_info.hwnd = state->hwnd;
+
+    VkResult result = vkCreateWin32SurfaceKHR(
+        context->instance, &create_info, context->allocator, &state->surface);
+    if (result != VK_SUCCESS) {
+        KFATAL("Vulkan surface creation failed.");
+        return FALSE
+    }
+
+    context->surface = state->surface;
+    return TRUE;
+}
+
 LRESULT CALLBACK win32_process_message(HWND hwnd, u32 msg, WPARAM w_param,
                                        LPARAM l_param) {
     switch (msg) {
@@ -169,16 +204,22 @@ LRESULT CALLBACK win32_process_message(HWND hwnd, u32 msg, WPARAM w_param,
         // Notify the OS that the application will erase the background
         return 1;
     case WM_CLOSE:
-        // TODO: Fire an event the for application to quit
-        return 0;
+        event_context data = {};
+        event_fire(EVENT_CODE_APPLICATION_QUIT, 0, data);
+        return TRUE;
     case WM_DESTROY:
         PostQuitMessage(0);
         return 0;
     case WM_SIZE: {
-        // RECT r;
-        // GetClientRect(hwnd, &r);
-        // u32 width = r.right - r.left;
-        // u32 height = r.bottom - r.top;
+        RECT r;
+        GetClientRect(hwnd, &r);
+        u32 width = r.right - r.left;
+        u32 height = r.bottom - r.top;
+
+        event_context context;
+        context.data.u16[0] = (u16)width;
+        context.data.u16[1] = (u16)height;
+        event_fire(EVENT_CODE_RESIZED, 0, context);
 
         // TODO: Fire an event for window resize
     } break;
@@ -187,21 +228,28 @@ LRESULT CALLBACK win32_process_message(HWND hwnd, u32 msg, WPARAM w_param,
     case WM_KEYUP:
     case WM_SYSKEYUP: {
         // check if key is pressed or released
-        // b8 pressed = (msg == WM_KEYDOWN || msg == WM_SYSKEYDOWN);
-        // TODO: input processing
+        b8 pressed = (msg == WM_KEYDOWN || msg == WM_SYSKEYDOWN);
+        keys key = (u16)w_param;
+
+        // pass to input subsystem
+        input_process_key(key, pressed);
     } break;
     case WM_MOUSEMOVE: {
-        // i32 x_position = GET_X_LPARAM(l_param);
-        // i32 y_position = GET_Y_LPARAM(l_param);
-        // TODO: input processing
+        i32 x_position = GET_X_LPARAM(l_param);
+        i32 y_position = GET_Y_LPARAM(l_param);
+
+        // pass to input subsystem
+        input_process_mouse_move(x_position, y_position);
     } break;
     case WM_MOUSEWHEEL: {
-        // i32 z_delta = GET_WHEEL_DELTA_WPARAM(w_param);
-        // if (z_delta != 0) {
-        //     // flatten to be OS independent
-        //     z_delta = (z_delta < 0) ? -1 : 1;
-        // }
-        // TODO: input processing
+        i32 z_delta = GET_WHEEL_DELTA_WPARAM(w_param);
+        if (z_delta != 0) {
+            // flatten to be OS independent
+            z_delta = (z_delta < 0) ? -1 : 1;
+        }
+
+        // pass to input subsystem
+        input_process_mouse_wheel(z_delta);
     } break;
     case WM_LBUTTONDOWN:
     case WM_MBUTTONDOWN:
@@ -209,9 +257,29 @@ LRESULT CALLBACK win32_process_message(HWND hwnd, u32 msg, WPARAM w_param,
     case WM_LBUTTONUP:
     case WM_MBUTTONUP:
     case WM_RBUTTONUP: {
-        // b8 pressed = (msg == WM_LBUTTONDOWN || msg == WM_MBUTTONDOWN ||
-        //               msg == WM_RBUTTONDOWN);
-        // TODO: input processing
+        b8 pressed = (msg == WM_LBUTTONDOWN || msg == WM_MBUTTONDOWN ||
+                      msg == WM_RBUTTONDOWN);
+
+        buttons mouse_button = BUTTON_MAX_BUTTONS;
+        switch (msg) {
+        case WM_LBUTTONDOWN:
+        case WM_LBUTTONUP:
+            mouse_button = BUTTON_LEFT;
+            break;
+        case WM_MBUTTONDOWN:
+        case WM_MBUTTONUP:
+            mouse_button = BUTTON_MIDDLE;
+            break;
+        case WM_RBUTTONDOWN:
+        case WM_RBUTTONUP:
+            mouse_button = BUTTON_RIGHT;
+            break;
+        }
+
+        // pass to input subsystem
+        if (mouse_button != BUTTON_MAX_BUTTONS) {
+            input_process_button(mouse_button, pressed);
+        }
     } break;
     }
 

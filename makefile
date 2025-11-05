@@ -29,7 +29,7 @@ TESTBED_OBJECTS = $(patsubst $(SRC_TESTBED)/%.c, $(OBJ_TESTBED)/%.o, $(TESTBED_S
 DEFINES = -D_DEBUG -DKEXPORT
 INCLUDE_FLAGS = -I$(SRC_ENGINE) -I$(SRC_TESTBED) -I$(VULKAN_SDK)/include
 CFLAGS = -g -Wall -Werror -Wvarargs -fPIC
-LINKER_FLAGS_ENGINE = -shared -fPIC -lvulkan
+LINKER_FLAGS_ENGINE = -shared -fPIC -lvulkan -lX11 -lxcb -lX11-xcb -lwayland-client -lxkbcommon
 LINKER_FLAGS_TESTBED = -lvulkan -ldl
 
 CPPFLAGS = $(DEFINES) $(INCLUDE_FLAGS)
