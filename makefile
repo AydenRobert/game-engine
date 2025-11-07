@@ -37,9 +37,9 @@ TESTBED_OBJECTS = $(patsubst $(SRC_TESTBED)/%.c, $(OBJ_TESTBED)/%.o, $(TESTBED_S
 TESTS_SOURCES = $(shell find $(SRC_TESTS) -name "*.c")
 TESTS_OBJECTS = $(patsubst $(SRC_TESTS)/%.c, $(OBJ_TESTS)/%.o, $(TESTS_SOURCES))
 
-# --- Shaders ---
-SHADER_SOURCES = $(wildcard $(SHADER_SRC_DIR)/*.glsl)
-SHADER_OUTPUTS = $(patsubst $(SHADER_SRC_DIR)/%.glsl, $(SHADER_DST_DIR)/%.spv, $(SHADER_SOURCES))
+# --- Shaders (after renaming to .vert/.frag) ---
+SHADER_SOURCES = $(wildcard $(SHADER_SRC_DIR)/*)
+SHADER_OUTPUTS = $(patsubst $(SHADER_SRC_DIR)/%, $(SHADER_DST_DIR)/%.spv, $(SHADER_SOURCES))
 
 # --- Build Flags ---
 DEFINES = -D_DEBUG -DKEXPORT
@@ -52,10 +52,10 @@ LINKER_FLAGS_TESTBED = -lvulkan -ldl -L$(BIN_DIR) -l$(ENGINE_NAME) -Wl,-rpath,'$
 
 # === Targets ===
 
-.PHONY: all clean engine testbed shaders assets
+.PHONY: all clean engine testbed shaders assets tests run_tests
 
-# Default build: build everything
-all: clean $(ENGINE_TARGET) $(TESTBED_TARGET) shaders assets $(TESTS_TARGET) run_tests
+# Default build: everything
+all: $(ENGINE_TARGET) $(TESTBED_TARGET) shaders assets $(TESTS_TARGET) run_tests
 
 # --- ENGINE (.so library) ---
 engine: $(ENGINE_TARGET)
@@ -96,25 +96,25 @@ $(OBJ_TESTS)/%.o: $(SRC_TESTS)/%.c
 	@mkdir -p $(@D)
 	$(CC) -c $< -o $@ $(CFLAGS) $(CPPFLAGS)
 
-run_tests: tests
+run_tests: $(TESTS_TARGET)
 	@echo "Running tests..."
 	@$(BIN_DIR)/$(TESTS_NAME)
 
 # --- Shaders (GLSL → SPIR-V) ---
-$(SHADER_DST_DIR)/%.spv: $(SHADER_SRC_DIR)/%.glsl
+$(SHADER_DST_DIR)/%.spv: $(SHADER_SRC_DIR)/%
 	@echo "Compiling shader $< -> $@"
 	@mkdir -p $(dir $@)
 	$(VULKAN_SDK)/bin/glslc -o $@ $<
 
 shaders: $(SHADER_OUTPUTS)
 
-# --- Asset Copy ---
+# --- Copy other assets (non-shader) ---
 assets:
 	@echo "Copying assets..."
 	@mkdir -p $(ASSET_DST)
 	rsync -a $(ASSET_SRC)/ $(ASSET_DST)/ --exclude 'shaders'
 
-# --- Clean everything ---
+# --- Clean ---
 clean:
 	@echo "Cleaning..."
 	rm -rf obj $(BIN_DIR)

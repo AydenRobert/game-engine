@@ -1,7 +1,5 @@
 #include "renderer/vulkan/vulkan_backend.h"
 
-#include "core/application.h"
-#include "core/kmemory.h"
 #include "renderer/vulkan/vulkan_command_buffer.h"
 #include "renderer/vulkan/vulkan_device.h"
 #include "renderer/vulkan/vulkan_fence.h"
@@ -10,12 +8,16 @@
 #include "renderer/vulkan/vulkan_renderpass.h"
 #include "renderer/vulkan/vulkan_swapchain.h"
 #include "renderer/vulkan/vulkan_types.inl"
+#include "renderer/vulkan/vulkan_utils.h"
 
+#include "renderer/vulkan/shaders/vulkan_object_shader.h"
+
+#include "core/application.h"
+#include "core/kmemory.h"
 #include "core/kstring.h"
 #include "core/logger.h"
 
 #include "containers/darray.h"
-#include "renderer/vulkan/vulkan_utils.h"
 
 #include <vulkan/vulkan_core.h>
 
@@ -223,6 +225,11 @@ b8 vulkan_renderer_backend_initialize(renderer_backend *backend,
         darray_reserve(vulkan_fence *, context.swapchain.image_count);
     for (u32 i = 0; i < context.swapchain.image_count; i++) {
         context.images_in_flight[i] = 0; // NULL
+    }
+
+    // Create built in shaders
+    if (!vulkan_object_shader_create(&context, &context.object_shader)) {
+        KERROR("Error loading built-in basic_lighting shader.");
     }
 
     KINFO("Vulkan renderer initialized successfully!");

@@ -12,16 +12,36 @@ struct memory_stats {
 };
 
 static const char *memory_tag_strings[MEMORY_TAG_MAX_TAGS] = {
-    "UNKNOWN          ", "ARRAY            ", "LINEAR ALLOCATOR ", "DARRAY           ",
-    "DICT             ", "RING_QUEUE       ", "BST              ",
-    "STRING           ", "APPLICATION      ", "JOB              ",
-    "TEXTURE          ", "MATERIAL_INSTANCE", "RENDERER         ",
-    "GAME             ", "TRANSFORM        ", "ENTITY           ",
-    "ENTITY_NODE      ", "SCENE            "};
+    "UNKNOWN          ", "ARRAY            ", "LINEAR ALLOCATOR ",
+    "DARRAY           ", "DICT             ", "RING_QUEUE       ",
+    "BST              ", "STRING           ", "APPLICATION      ",
+    "JOB              ", "TEXTURE          ", "MATERIAL_INSTANCE",
+    "RENDERER         ", "GAME             ", "TRANSFORM        ",
+    "ENTITY           ", "ENTITY_NODE      ", "SCENE            "};
 
-static struct memory_stats stats;
+typedef struct memory_system_state {
+    b8 initialized;
+    struct memory_stats stats;
 
-void initialize_memory() { platform_zero_memory(&stats, sizeof(stats)); }
+    u64 alloc_count;
+} memory_system_state;
+
+static memory_system_state *state_ptr;
+
+b8 initialize_memory(u64 *memory_requirement, void *state) {
+    *memory_requirement = sizeof(memory_system_state);
+    if (state == 0) {
+        return true;
+    }
+
+    state_ptr = state;
+    state_ptr->initialized = true;
+    state_ptr->alloc_count = 0;
+
+    platform_zero_memory(&state_ptr->stats, sizeof(state_ptr->stats));
+
+    return true;
+}
 
 KAPI void *kallocate(u64 size, memory_tag tag) {
     if (tag == MEMORY_TAG_UNKNOWN) {
@@ -29,17 +49,21 @@ KAPI void *kallocate(u64 size, memory_tag tag) {
               "allocation.");
     }
 
-    stats.total_allocated += size;
-    stats.tagged_allocations[tag] += size;
+    if (state_ptr) {
+        state_ptr->stats.total_allocated += size;
+        state_ptr->stats.tagged_allocations[tag] += size;
+        state_ptr->alloc_count++;
+    }
 
     // TODO: Memory alignment
+
     void *block = platform_allocate(size, false);
     platform_zero_memory(block, size);
 
     return block;
 }
 
-void shutdown_memory() {}
+void shutdown_memory(void *state) { state_ptr = 0; }
 
 KAPI void kfree(void *block, u64 size, memory_tag tag) {
     if (tag == MEMORY_TAG_UNKNOWN) {
@@ -47,8 +71,10 @@ KAPI void kfree(void *block, u64 size, memory_tag tag) {
               "allocation.");
     }
 
-    stats.total_allocated -= size;
-    stats.tagged_allocations[tag] -= size;
+    if (state_ptr) {
+        state_ptr->stats.total_allocated -= size;
+        state_ptr->stats.tagged_allocations[tag] -= size;
+    }
 
     // TODO: Memory alignment
     platform_free(block, false);
@@ -76,19 +102,19 @@ KAPI char *get_memory_usage_str() {
         char unit[4] = "XiB";
         f32 amount = 1.0f;
 
-        if (stats.tagged_allocations[i] >= gib) {
+        if (state_ptr->stats.tagged_allocations[i] >= gib) {
             unit[0] = 'G';
-            amount = stats.tagged_allocations[i] / (f32)gib;
-        } else if (stats.tagged_allocations[i] >= mib) {
+            amount = state_ptr->stats.tagged_allocations[i] / (f32)gib;
+        } else if (state_ptr->stats.tagged_allocations[i] >= mib) {
             unit[0] = 'M';
-            amount = stats.tagged_allocations[i] / (f32)mib;
-        } else if (stats.tagged_allocations[i] >= kib) {
+            amount = state_ptr->stats.tagged_allocations[i] / (f32)mib;
+        } else if (state_ptr->stats.tagged_allocations[i] >= kib) {
             unit[0] = 'K';
-            amount = stats.tagged_allocations[i] / (f32)kib;
+            amount = state_ptr->stats.tagged_allocations[i] / (f32)kib;
         } else {
             unit[0] = 'B';
             unit[1] = 0;
-            amount = stats.tagged_allocations[i];
+            amount = state_ptr->stats.tagged_allocations[i];
         }
 
         i32 length = snprintf(buffer + offset, 8000, "  %s: %.2f%s\n",
@@ -98,4 +124,11 @@ KAPI char *get_memory_usage_str() {
 
     char *out_string = string_duplicate(buffer);
     return out_string;
+}
+
+u64 get_memory_alloc_count() {
+    if (!state_ptr) {
+        return 0;
+    }
+    return state_ptr->alloc_count;
 }

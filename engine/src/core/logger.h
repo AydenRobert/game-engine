@@ -21,8 +21,17 @@ typedef enum log_level {
     LOG_LEVEL_TRACE = 5
 } log_level;
 
-b8 initialize_logging();
-void shutdown_logging();
+/**
+ * @brief Initialises logging system. Call first with state = 0 to get memory
+ * size. The second time, pass the memory to the state;
+ *
+ * @param memory_requirement A pointer to hold the required memory size of the
+ * internal state struct.
+ * @param state 0 if just requesting memory requirments, otherwise, allocated block of memory.
+ * @return True on success; otherwise false.
+ */
+b8 initialize_logging(u64 *memory_requirement, void *state);
+void shutdown_logging(void *state);
 
 KAPI void log_output(log_level level, const char *, ...);
 
@@ -33,15 +42,13 @@ KAPI void log_output(log_level level, const char *, ...);
     log_output(LOG_LEVEL_ERROR, message, ##__VA_ARGS__);
 
 #if LOG_WARN_ENABLED == 1
-#define KWARN(message, ...)                                                   \
-    log_output(LOG_LEVEL_WARN, message, ##__VA_ARGS__);
+#define KWARN(message, ...) log_output(LOG_LEVEL_WARN, message, ##__VA_ARGS__);
 #else
 #define KWARN(message, ...)
 #endif
 
 #if LOG_INFO_ENABLED == 1
-#define KINFO(message, ...)                                                   \
-    log_output(LOG_LEVEL_INFO, message, ##__VA_ARGS__);
+#define KINFO(message, ...) log_output(LOG_LEVEL_INFO, message, ##__VA_ARGS__);
 #else
 #define KINFO(message, ...)
 #endif

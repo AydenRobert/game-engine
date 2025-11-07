@@ -6,18 +6,37 @@
 #include "core/logger.h"
 #include "renderer/renderer_types.inl"
 
-// Backend render context.
-static renderer_backend *backend = 0;
+typedef struct renderer_system_state {
+    b8 initialized;
+
+    renderer_backend *backend;
+} renderer_system_state;
+
+static renderer_system_state *state_ptr;
 
 b8 renderer_initialize(const char *application_name,
-                       struct platform_state *plat_state) {
-    backend = kallocate(sizeof(renderer_backend), MEMORY_TAG_RENDERER);
-    backend->frame_number = 0;
+                       struct platform_state *plat_state,
+                       u64 *memory_requirement, void *state) {
+    *memory_requirement =
+        sizeof(renderer_system_state) + sizeof(renderer_backend);
+    if (state == 0) {
+        return true;
+    }
+
+    state_ptr = state;
+    state_ptr->initialized = true;
+
+    u64 renderer_system_state_ptr = (u64)state_ptr;
+    state_ptr->backend = (renderer_backend *)(renderer_system_state_ptr +
+                                              sizeof(renderer_backend));
+    state_ptr->backend->frame_number = 0;
 
     // TODO: make this configurable
-    renderer_backend_create(RENDERER_BACKEND_TYPES_VULKAN, plat_state, backend);
+    renderer_backend_create(RENDERER_BACKEND_TYPES_VULKAN, plat_state,
+                            state_ptr->backend);
 
-    if (!backend->initialize(backend, application_name, plat_state)) {
+    if (!state_ptr->backend->initialize(state_ptr->backend, application_name,
+                                        plat_state)) {
         KFATAL("Renderer backend failed to initialize. Shutting down.");
         return false;
     }
@@ -25,26 +44,27 @@ b8 renderer_initialize(const char *application_name,
     return true;
 }
 
-void renderer_shutdown() {
-    backend->shutdown(backend);
-    kfree(backend, sizeof(renderer_backend), MEMORY_TAG_RENDERER);
+void renderer_shutdown(void *state) {
+    state_ptr->backend->shutdown(state_ptr->backend);
+    state_ptr->backend = 0;
+    state_ptr = 0;
 }
 
 b8 renderer_begin_frame(f32 delta_time) {
-    return backend->begin_frame(backend, delta_time);
+    return state_ptr->backend->begin_frame(state_ptr->backend, delta_time);
 }
 
 b8 renderer_end_frame(f32 delta_time) {
-    b8 result = backend->end_frame(backend, delta_time);
-    backend->frame_number++;
+    b8 result = state_ptr->backend->end_frame(state_ptr->backend, delta_time);
+    state_ptr->backend->frame_number++;
     return result;
 }
 
 void renderer_on_resize(u16 width, u16 height) {
-    if (backend) {
-        backend->resized(backend, width, height);
+    if (state_ptr) {
+        state_ptr->backend->resized(state_ptr->backend, width, height);
     } else {
-        KWARN("renderer_backend does not exist to accept resize.");
+        KWARN("renderer_state_ptr->backend does not exist to accept resize.");
     }
 }
 

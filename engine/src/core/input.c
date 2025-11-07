@@ -14,40 +14,50 @@ typedef struct mouse_state {
     u8 buttons[BUTTON_MAX_BUTTONS];
 } mouse_state;
 
-typedef struct input_state {
+typedef struct input_system_state {
+    b8 initialized;
+
     keyboard_state keyboard_current;
     keyboard_state keyboard_previous;
     mouse_state mouse_current;
     mouse_state mouse_previous;
-} input_state;
+} input_system_state;
 
 // Internal input state
-static b8 initialized = false;
-static input_state state = {};
+static input_system_state *state_ptr;
 
-void input_initialize() {
-    kzero_memory(&state, sizeof(state));
-    initialized = true;
+b8 input_initialize(u64 *memory_requirement, void *state) {
+    *memory_requirement = sizeof(input_system_state);
+    if (state == 0) {
+        return true;
+    }
+
+    state_ptr = state;
+    state_ptr->initialized = true;
+
+    kzero_memory(state_ptr, sizeof(state));
+    state_ptr->initialized = true;
     KINFO("Input subsystem initialized.");
+    return true;
 }
-void input_shutdown() {
+void input_shutdown(void *state) {
     // TODO: Add shutdown routine when needed.
-    initialized = false;
+    state_ptr = 0;
 }
 void input_update(f64 delta_time) {
-    if (!initialized) {
+    if (!state_ptr->initialized) {
         return;
     }
 
-    kcopy_memory(&state.keyboard_previous, &state.keyboard_current,
+    kcopy_memory(&state_ptr->keyboard_previous, &state_ptr->keyboard_current,
                  sizeof(keyboard_state));
-    kcopy_memory(&state.mouse_previous, &state.mouse_current,
+    kcopy_memory(&state_ptr->mouse_previous, &state_ptr->mouse_current,
                  sizeof(mouse_state));
 }
 
 void input_process_key(keys key, b8 pressed) {
-    if (state.keyboard_current.keys[key] != pressed) {
-        state.keyboard_current.keys[key] = pressed;
+    if (state_ptr->keyboard_current.keys[key] != pressed) {
+        state_ptr->keyboard_current.keys[key] = pressed;
 
         // Fire off event for processing
         event_context context;
@@ -58,8 +68,8 @@ void input_process_key(keys key, b8 pressed) {
 }
 
 void input_process_button(buttons button, b8 pressed) {
-    if (state.mouse_current.buttons[button] != pressed) {
-        state.mouse_current.buttons[button] = pressed;
+    if (state_ptr->mouse_current.buttons[button] != pressed) {
+        state_ptr->mouse_current.buttons[button] = pressed;
 
         // Fire off event for processing
         event_context context;
@@ -71,9 +81,9 @@ void input_process_button(buttons button, b8 pressed) {
 }
 
 void input_process_mouse_move(i16 x, i16 y) {
-    if (state.mouse_current.x != x || state.mouse_current.y != y) {
-        state.mouse_current.x = x;
-        state.mouse_current.y = y;
+    if (state_ptr->mouse_current.x != x || state_ptr->mouse_current.y != y) {
+        state_ptr->mouse_current.x = x;
+        state_ptr->mouse_current.y = y;
 
         // KDEBUG("Mouse x: %i, y: %i", x, y);
 
@@ -92,80 +102,80 @@ void input_process_mouse_wheel(i8 z_delta) {
 }
 
 KAPI b8 input_is_key_down(keys key) {
-    if (!initialized) {
+    if (!state_ptr->initialized) {
         return false;
     }
-    return state.keyboard_current.keys[key] == true;
+    return state_ptr->keyboard_current.keys[key] == true;
 }
 
 KAPI b8 input_is_key_up(keys key) {
-    if (!initialized) {
+    if (!state_ptr->initialized) {
         return true;
     }
-    return state.keyboard_current.keys[key] == false;
+    return state_ptr->keyboard_current.keys[key] == false;
 }
 
 KAPI b8 input_was_key_down(keys key) {
-    if (!initialized) {
+    if (!state_ptr->initialized) {
         return false;
     }
-    return state.keyboard_previous.keys[key] == true;
+    return state_ptr->keyboard_previous.keys[key] == true;
 }
 
 KAPI b8 input_was_key_up(keys key) {
-    if (!initialized) {
+    if (!state_ptr->initialized) {
         return true;
     }
-    return state.keyboard_previous.keys[key] == false;
+    return state_ptr->keyboard_previous.keys[key] == false;
 }
 
 // mouse input
 KAPI b8 input_is_button_down(buttons button) {
-    if (!initialized) {
+    if (!state_ptr->initialized) {
         return false;
     }
-    return state.mouse_current.buttons[button] == true;
+    return state_ptr->mouse_current.buttons[button] == true;
 }
 
 KAPI b8 input_is_button_up(buttons button) {
-    if (!initialized) {
+    if (!state_ptr->initialized) {
         return true;
     }
-    return state.mouse_current.buttons[button] == false;
+    return state_ptr->mouse_current.buttons[button] == false;
 }
 
 KAPI b8 input_was_button_down(buttons button) {
-    if (!initialized) {
+    if (!state_ptr->initialized) {
         return false;
     }
-    return state.mouse_previous.buttons[button] == true;
+    return state_ptr->mouse_previous.buttons[button] == true;
 }
 
 KAPI b8 input_was_button_up(buttons button) {
-    if (!initialized) {
+    if (!state_ptr->initialized) {
         return true;
     }
-    return state.mouse_previous.buttons[button] == false;
+    return state_ptr->mouse_previous.buttons[button] == false;
 }
 
 KAPI void input_get_mouse_position(i32 *x, i32 *y) {
-    if (!initialized) {
+    if (!state_ptr->initialized) {
         *x = 0;
         *y = 0;
         return;
     }
 
-    *x = state.mouse_current.x;
-    *y = state.mouse_current.y;
+    *x = state_ptr->mouse_current.x;
+    *y = state_ptr->mouse_current.y;
 }
 
 KAPI void input_get_previous_mouse_position(i32 *x, i32 *y) {
-    if (!initialized) {
+    if (!state_ptr->initialized) {
         *x = 0;
         *y = 0;
         return;
     }
 
-    *x = state.mouse_previous.x;
-    *y = state.mouse_previous.y;
+    *x = state_ptr->mouse_previous.x;
+    *y = state_ptr->mouse_previous.y;
 }
