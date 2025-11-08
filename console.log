@@ -5,7 +5,7 @@
 [DEBUG]: A test message: 3.140000
 [TRACE]: A test message: 3.140000
 [INFO]:  Input subsystem initialized.
-[INFO]:  Event system initialized at 0x7f632e0892da, size 131080
+[INFO]:  Event system initialized at 0x7fc6d14432da, size 131080
 [DEBUG]: Window resize: 1280 1405
 [WARN]:  renderer_state_ptr->backend does not exist to accept resize.
 [DEBUG]: Required Extensions:
@@ -73,6 +73,7 @@
 [INFO]:  Graphics command pool has been created.
 [INFO]:  Swapchain created successfully!
 [INFO]:  Vulkan command buffers created.
+[DEBUG]: Graphics pipeline created.
 [INFO]:  Vulkan renderer initialized successfully!
 [DEBUG]: game_initialize() called!
 [INFO]:  System memory use (tagged):
@@ -103,17 +104,20 @@
 [DEBUG]: In vulkan_backend recreate_swapchain
 [INFO]:  Vulkan command buffers created.
 [INFO]:  Resized, booting.
+[INFO]:  Left Shift was pressed
+[DEBUG]: Window resize: 1280 720
+[INFO]:  Vulkan renderer backend->resize: w/h/gen: 1280/720/3
+[INFO]:  Swapchain created successfully!
+[DEBUG]: In vulkan_backend recreate_swapchain
+[INFO]:  Vulkan command buffers created.
+[INFO]:  Resized, booting.
 [INFO]:  EVENT_CODE_APPLICATION_QUIT has been recieved, shutting down.
 
-[DEBUG]: Frame count: 215, running time: 0.797023
+[DEBUG]: Frame count: 61, running time: 64.253704
 [INFO]:  after temp watch close
 [DEBUG]: Destroying Vulkan device...
 [INFO]:  Destroying command pools...
 [INFO]:  Destroying logical device
-[ERROR]: vkDestroyDevice(): Object Tracking - For VkDevice 0x55ca14593ff0, VkShaderModule 0x1c000000001c has not been destroyed.
-The Vulkan spec states: All child objects created on device that can be destroyed or freed must have been destroyed or freed prior to destroying device (https://docs.vulkan.org/spec/latest/chapters/devsandqueues.html#VUID-vkDestroyDevice-device-05137)
-[ERROR]: vkDestroyDevice(): Object Tracking - For VkDevice 0x55ca14593ff0, VkShaderModule 0x1b000000001b has not been destroyed.
-The Vulkan spec states: All child objects created on device that can be destroyed or freed must have been destroyed or freed prior to destroying device (https://docs.vulkan.org/spec/latest/chapters/devsandqueues.html#VUID-vkDestroyDevice-device-05137)
 [INFO]:  Releasing physical device resources...
 [DEBUG]: Destroying Vulkan surface...
 [DEBUG]: Destroying Vulkan debugger...

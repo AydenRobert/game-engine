@@ -63,6 +63,8 @@ void shutdown_logging(void *state) {
 }
 
 void log_output(log_level level, const char *message, ...) {
+    // TODO: string operations are slow, move to another thread eventually.
+    // Along with file writes.
     const char *level_strings[6] = {
         "[FATAL]: ", "[ERROR]: ", "[WARN]:  ",
         "[INFO]:  ", "[DEBUG]: ", "[TRACE]: ",
