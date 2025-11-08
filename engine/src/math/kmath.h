@@ -356,7 +356,7 @@ KINLINE mat4 mat4_orthographic(f32 left, f32 right, f32 bottom, f32 top,
     return out_matrix;
 }
 
-KINLINE mat4 mat_perspective(f32 fov_radians, f32 aspect_ratio, f32 near_clip,
+KINLINE mat4 mat4_perspective(f32 fov_radians, f32 aspect_ratio, f32 near_clip,
                              f32 far_clip) {
     f32 tan_half_fov = ktan(fov_radians * 0.5f);
     mat4 out_matrix;
