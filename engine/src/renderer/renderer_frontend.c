@@ -76,12 +76,17 @@ b8 renderer_draw_frame(render_packet *packet) {
     if (renderer_begin_frame(packet->delta_time)) {
 
         mat4 projection =
-            mat4_perspective(deg_to_rad(45), 9 / 16.0f, 0.1f, 1000.0f);
-        static f32 z = -1.0f;
-        z -= 0.001f;
-        mat4 view = mat4_translation((vec3){{0, 0.5f * z, 5 * z}});
+            mat4_perspective(deg_to_rad(45), 1251 / 1361.0f, 0.1f, 1000.0f);
+        mat4 view = mat4_translation((vec3){{0, 0, -30.0f}});
+
         state_ptr->backend->update_global_state(projection, view, vec3_zero(),
                                                 vec4_one(), 0);
+
+        static f32 angle = 0.001f;
+        angle += 0.0005f;
+        quat rotation = quat_from_axis_angle(vec3_forward(), angle, false);
+        mat4 model = quat_to_rotation_matrix(rotation, vec3_zero());
+        state_ptr->backend->update_object(state_ptr->backend, model);
 
         // If renderer_end_frame fails, likely unrecoverable
         b8 result = renderer_end_frame(packet->delta_time);

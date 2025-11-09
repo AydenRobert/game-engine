@@ -142,6 +142,7 @@ typedef struct vulkan_object_shader {
 
     // One descriptor set per frame
     VkDescriptorSet global_descriptor_sets[3];
+    b8 descriptor_updated[3];
 
     // Global uniform object
     global_uniform_object global_ubo;

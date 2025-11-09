@@ -26,6 +26,8 @@ KAPI void _darray_pop(void *array, void *dest);
 KAPI void *_darray_pop_at(void *array, u64 index, void *dest);
 KAPI void *_darray_insert_at(void *array, u64 index, void *value_ptr);
 
+KAPI void *_darray_reserve_on(void *array, u64 count_to_add);
+
 #define DARRAY_DEFAULT_CAPACITY 1
 #define DARRAY_RESIZE_FACTOR 2
 
@@ -61,3 +63,6 @@ KAPI void *_darray_insert_at(void *array, u64 index, void *value_ptr);
 
 #define darray_length_set(array, value)                                        \
     _darray_field_set(array, DARRAY_LENGTH, value)
+
+#define darray_reserve_on(array, count_to_add)                                 \
+    array = _darray_reserve_on(array, count_to_add);
