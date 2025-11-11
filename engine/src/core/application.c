@@ -262,16 +262,7 @@ b8 application_on_key(u16 code, void *sender, void *listener_inst,
             event_context data = {};
             event_fire(EVENT_CODE_APPLICATION_QUIT, 0, data);
             return true;
-        } else if (key_code == KEY_LALT) {
-            KINFO("Left Alt was pressed");
-        } else if (key_code == KEY_RALT) {
-            KINFO("Right Alt was pressed");
-        } else if (key_code == KEY_LSHIFT) {
-            KINFO("Left Shift was pressed");
-        } else if (key_code == KEY_RSHIFT) {
-            KINFO("Right Shift was pressed");
         }
-
     } else if (code == EVENT_CODE_KEY_RELEASED) {
     }
     return false;

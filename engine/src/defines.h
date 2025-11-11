@@ -44,6 +44,12 @@ STATIC_ASSERT(sizeof(f64) == 8, "Expected f64 to be 8 bytes.");
 #define true 1
 #define false 0
 
+/**
+ * @brief any ID set to this should be considered invalid, therefore, not
+ * pointing to anything.
+ */
+#define INVALID_ID 4294967295U
+
 // Platform detection
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__)
 #define KPLATFORM_WINDOWS 1

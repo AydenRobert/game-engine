@@ -1,6 +1,7 @@
 #pragma once
 
 #include "renderer/renderer_backend.h"
+#include "resources/resource_types.h"
 
 b8 vulkan_renderer_backend_initialize(renderer_backend *backend,
                                       const char *application_name,
@@ -19,4 +20,10 @@ void vulkan_renderer_update_global_state(mat4 projection, mat4 view,
 
 b8 vulkan_renderer_backend_end_frame(renderer_backend *backend, f32 delta_time);
 
-void vulkan_renderer_update_object(renderer_backend *backend, mat4 model);
+void vulkan_renderer_update_object(renderer_backend *backend, geometry_render_data data);
+
+void vulkan_renderer_create_texture(b8 auto_release, i32 width, i32 height,
+                                    i32 channel_count, const u8 *pixels,
+                                    b8 has_transparency, texture *out_texture);
+
+void vulkan_renderer_destroy_texture(texture *texture);

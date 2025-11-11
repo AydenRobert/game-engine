@@ -10,7 +10,6 @@
 
 #include "core/logger.h"
 #include "renderer/vulkan/vulkan_types.inl"
-#include <vulkan/vulkan_core.h>
 
 #define BUILTIN_SHADER_NAME_OBJECT "Builtin.ObjectShader"
 
@@ -377,9 +376,7 @@ b8 vulkan_object_shader_acquire_resources(vulkan_context *context,
     alloc_info.descriptorPool = shader->object_descriptor_pool;
     alloc_info.descriptorSetCount = 3;
     alloc_info.pSetLayouts = layouts;
-    VkResult result =
-        vkAllocateDescriptorSets(context->device.logical_device, &alloc_info,
-                                 object_state->descriptor_sets);
+    VkResult result = vkAllocateDescriptorSets(context->device.logical_device, &alloc_info, object_state->descriptor_sets);
     if (result != VK_SUCCESS) {
         KERROR("Error allocating descriptor sets in shader!");
         return false;
@@ -390,22 +387,4 @@ b8 vulkan_object_shader_acquire_resources(vulkan_context *context,
 
 void vulkan_object_shader_release_resources(vulkan_context *context,
                                             struct vulkan_object_shader *shader,
-                                            u32 object_id) {
-    vulkan_object_shader_object_state *object_state =
-        &shader->object_states[object_id];
-    const u32 descriptor_set_count = 3;
-    VkResult result = vkFreeDescriptorSets(
-        context->device.logical_device, shader->object_descriptor_pool,
-        descriptor_set_count, object_state->descriptor_sets);
-    if (result != VK_SUCCESS) {
-        KERROR("Error freeing object shader descriptor sets!");
-    }
-
-    for (u32 i = 0; i < VULKAN_OBJECT_SHADER_DESCRIPTOR_COUNT; i++) {
-        for (u32 j = 0; j < 3; j++) {
-            object_state->descriptor_states[i].generations[j] = INVALID_ID;
-        }
-    }
-
-    // TODO: add the object_id to the free list
-}
+                                            u32 object_id);

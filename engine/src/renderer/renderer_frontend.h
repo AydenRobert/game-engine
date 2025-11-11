@@ -17,3 +17,12 @@ b8 renderer_draw_frame(render_packet *packet);
 b8 renderer_begin_frame(f32 delta_time);
 
 b8 renderer_end_frame(f32 delta_time);
+
+void renderer_create_texture(b8 auto_release, i32 width, i32 height,
+                             i32 channel_count, const u8 *pixels,
+                             b8 has_transparency, struct texture *out_texture);
+
+void renderer_destroy_texture(struct texture *texture);
+
+// HACK: this should not be exposed outside the engine
+KAPI void renderer_set_view(mat4 view);
