@@ -182,7 +182,7 @@ void vulkan_buffer_copy_to(vulkan_context *context, VkCommandPool pool,
 
     // Create a one-time-use command buffer
     vulkan_command_buffer temp_command_buffer;
-    vulkan_command_buffer_allocate_and_being_single_use(context, pool,
+    vulkan_command_buffer_allocate_and_begin_single_use(context, pool,
                                                         &temp_command_buffer);
 
     // Prepare the copy command and add to buffer

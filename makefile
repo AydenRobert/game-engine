@@ -17,10 +17,9 @@ OBJ_TESTBED = obj/testbed
 OBJ_TESTS = obj/tests
 BIN_DIR = bin
 
+# Assets stay where they are
 ASSET_SRC = assets
-ASSET_DST = $(BIN_DIR)/assets
 SHADER_SRC_DIR = $(ASSET_SRC)/shaders
-SHADER_DST_DIR = $(ASSET_DST)/shaders
 
 # --- Output Binaries ---
 ENGINE_TARGET = $(BIN_DIR)/lib$(ENGINE_NAME).so
@@ -37,9 +36,11 @@ TESTBED_OBJECTS = $(patsubst $(SRC_TESTBED)/%.c, $(OBJ_TESTBED)/%.o, $(TESTBED_S
 TESTS_SOURCES = $(shell find $(SRC_TESTS) -name "*.c")
 TESTS_OBJECTS = $(patsubst $(SRC_TESTS)/%.c, $(OBJ_TESTS)/%.o, $(TESTS_SOURCES))
 
-# --- Shaders (after renaming to .vert/.frag) ---
-SHADER_SOURCES = $(wildcard $(SHADER_SRC_DIR)/*)
-SHADER_OUTPUTS = $(patsubst $(SHADER_SRC_DIR)/%, $(SHADER_DST_DIR)/%.spv, $(SHADER_SOURCES))
+# --- Shaders (In-place compilation) ---
+# Only look for .vert and .frag files to avoid picking up the .spv files we generate
+SHADER_SOURCES = $(wildcard $(SHADER_SRC_DIR)/*.vert) $(wildcard $(SHADER_SRC_DIR)/*.frag)
+# Append .spv to the end (e.g., shader.vert -> shader.vert.spv)
+SHADER_OUTPUTS = $(addsuffix .spv, $(SHADER_SOURCES))
 
 # --- Build Flags ---
 DEFINES = -D_DEBUG -DKEXPORT
@@ -52,10 +53,10 @@ LINKER_FLAGS_TESTBED = -lvulkan -ldl -L$(BIN_DIR) -l$(ENGINE_NAME) -Wl,-rpath,'$
 
 # === Targets ===
 
-.PHONY: all clean engine testbed shaders assets tests run_tests
+.PHONY: all clean engine testbed shaders tests run_tests
 
 # Default build: everything
-all: $(ENGINE_TARGET) $(TESTBED_TARGET) shaders assets $(TESTS_TARGET) run_tests
+all: $(ENGINE_TARGET) $(TESTBED_TARGET) shaders $(TESTS_TARGET) run_tests
 
 # --- ENGINE (.so library) ---
 engine: $(ENGINE_TARGET)
@@ -100,21 +101,17 @@ run_tests: $(TESTS_TARGET)
 	@echo "Running tests..."
 	@$(BIN_DIR)/$(TESTS_NAME)
 
-# --- Shaders (GLSL → SPIR-V) ---
-$(SHADER_DST_DIR)/%.spv: $(SHADER_SRC_DIR)/%
+# --- Shaders (GLSL -> SPIR-V In Place) ---
+# Rule: shader.vert -> shader.vert.spv
+%.spv: %
 	@echo "Compiling shader $< -> $@"
-	@mkdir -p $(dir $@)
 	$(VULKAN_SDK)/bin/glslc -o $@ $<
 
 shaders: $(SHADER_OUTPUTS)
-
-# --- Copy other assets (non-shader) ---
-assets:
-	@echo "Copying assets..."
-	@mkdir -p $(ASSET_DST)
-	rsync -a $(ASSET_SRC)/ $(ASSET_DST)/ --exclude 'shaders'
 
 # --- Clean ---
 clean:
 	@echo "Cleaning..."
 	rm -rf obj $(BIN_DIR)
+	@echo "Cleaning compiled shaders..."
+	rm -f $(SHADER_OUTPUTS)

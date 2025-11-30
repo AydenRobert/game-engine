@@ -9,8 +9,13 @@
 #include <unistd.h>
 
 b8 filesystem_exists(const char *path) {
+#ifdef _MSC_VER
+    struct _stat buffer;
+    return _stat(path, &buffer);
+#else
     struct stat buffer;
     return stat(path, &buffer) == 0;
+#endif
 }
 
 b8 filesystem_open(const char *path, file_modes mode, b8 binary,
@@ -51,19 +56,28 @@ void filesystem_close(file_handle *handle) {
     handle->is_valid = false;
 }
 
-b8 filesystem_read_line(file_handle *handle, char **line_buf) {
+b8 filesystem_size(file_handle *handle, u64 *out_size) {
     if (!handle->handle) {
         return false;
     }
-    // Note: Asumming 32000 bytes is enough
-    char buffer[32000];
-    if (fgets(buffer, 32000, (FILE *)handle->handle) == 0) {
+    fseek((FILE *)handle->handle, 0, SEEK_END);
+    *out_size = ftell((FILE *)handle->handle);
+    rewind((FILE *)handle->handle);
+    return true;
+}
+
+KAPI b8 filesystem_read_line(file_handle *handle, u64 max_length,
+                             char **line_buf, u64 *out_line_length) {
+    if (!(handle->handle && line_buf && out_line_length && max_length > 0)) {
         return false;
     }
 
-    u64 length = strlen(buffer);
-    *line_buf = kallocate(sizeof(char) * (length + 1), MEMORY_TAG_STRING);
-    strcpy(*line_buf, buffer);
+    char *buf = *line_buf;
+    if (fgets(buf, max_length, (FILE *)handle->handle) == 0) {
+        return false;
+    }
+
+    *out_line_length = strlen(*line_buf);
     return true;
 }
 
@@ -95,24 +109,34 @@ b8 filesystem_read(file_handle *handle, u64 data_size, void *out_data,
     return true;
 }
 
-b8 filesystem_read_all_bytes(file_handle *handle, u8 **out_bytes,
+b8 filesystem_read_all_bytes(file_handle *handle, u8 *out_bytes,
                              u64 *out_bytes_read) {
     if (!handle->handle) {
         return false;
     }
 
-    // Get size of file
-    fseek((FILE *)handle->handle, 0, SEEK_END);
-    u64 size = ftell((FILE *)handle->handle);
-    rewind((FILE *)handle->handle);
-
-    *out_bytes = kallocate(sizeof(u8) * size, MEMORY_TAG_STRING);
-    *out_bytes_read = fread(*out_bytes, 1, size, (FILE *)handle->handle);
-    if (*out_bytes_read != size) {
+    u64 size = 0;
+    if (!filesystem_size(handle, &size)) {
         return false;
     }
 
-    return true;
+    *out_bytes_read = fread(out_bytes, 1, size, (FILE *)handle->handle);
+    return *out_bytes_read == size;
+}
+
+b8 filesystem_read_all_text(file_handle *handle, char *out_text,
+                            u64 *out_bytes_read) {
+    if (!handle->handle) {
+        return false;
+    }
+
+    u64 size = 0;
+    if (!filesystem_size(handle, &size)) {
+        return false;
+    }
+
+    *out_bytes_read = fread(out_text, 1, size, (FILE *)handle->handle);
+    return *out_bytes_read == size;
 }
 
 b8 filesystem_write(file_handle *handle, u64 data_size, const void *data,

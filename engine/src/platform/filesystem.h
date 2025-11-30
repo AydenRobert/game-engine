@@ -40,15 +40,26 @@ KAPI b8 filesystem_open(const char *path, file_modes mode, b8 binary,
 KAPI void filesystem_close(file_handle *handle);
 
 /**
- * @brief Reads up to a newline or EOF, allocated line_buf must be freed by the
- * caller.
+ * @brief Attempts to read the size of the file to which the handle is attatched
  *
  * @param handle A pointer to a file_handle struct.
- * @param line_buf A pointer to a character array which will be allocated and
- * populated by this method.
+ * @param out_size A pointer to hold the file size.
  * @return True if successful; otherwise False.
  */
-KAPI b8 filesystem_read_line(file_handle *handle, char **line_buf);
+KAPI b8 filesystem_size(file_handle *handle, u64 *out_size);
+
+/**
+ * @brief Reads up to a newline character or EOF.
+ *
+ * @param handle A pointer to a file_handle struct.
+ * @param max_length The maximum length to be read.
+ * @param line_buf A pointer to the buffer to be populated.
+ * Must be already allocated by the caller.
+ * @param out_line_length A pointer to hold the length read.
+ * @return
+ */
+KAPI b8 filesystem_read_line(file_handle *handle, u64 max_length,
+                             char **line_buf, u64 *out_line_length);
 
 /**
  * @brief Writes text to a provided file, appending `\n` to the end.
@@ -78,14 +89,25 @@ KAPI b8 filesystem_read(file_handle *handle, u64 data_size, void *out_data,
  * @brief Reads all bytes of a file.
  *
  * @param handle A pointer to a file_handle struct.
- * @param out_bytes A pointer to a byte array which will be allocated and
- * populated by this function. It must be freed by the caller.
+ * @param out_bytes A byte array which will be populated by this method.
  * @param out_bytes_read A pointer to a number which will be populated with the
  * actually byte amount read.
  * @return True if successful; otherwise False.
  */
-KAPI b8 filesystem_read_all_bytes(file_handle *handle, u8 **out_bytes,
+KAPI b8 filesystem_read_all_bytes(file_handle *handle, u8 *out_bytes,
                                   u64 *out_bytes_read);
+
+/**
+ * @brief Reads all tect of a file.
+ *
+ * @param handle A pointer to a file_handle struct.
+ * @param out_text A char array which will be populated by this method.
+ * @param out_bytes_read A pointer to a number which will be populated with the
+ * actually byte amount read.
+ * @return True if successful; otherwise False.
+ */
+KAPI b8 filesystem_read_all_text(file_handle *handle, char *out_text,
+                                 u64 *out_bytes_read);
 
 /**
  * @brief Writes provided data to a file.

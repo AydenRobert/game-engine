@@ -4,11 +4,22 @@
 #include "core/event.h"
 #include "core/input.h"
 #include "core/kmemory.h"
+#include "core/kstring.h"
 #include "core/logger.h"
 #include "game_types.h"
 #include "memory/linear_allocator.h"
 #include "platform/platform.h"
 #include "renderer/renderer_frontend.h"
+
+// systems
+#include "resources/resource_types.h"
+#include "systems/geometry_system.h"
+#include "systems/material_system.h"
+#include "systems/resource_system.h"
+#include "systems/texture_system.h"
+
+// TODO: temp
+#include "math/kmath.h"
 
 typedef struct application_state {
     game *game_inst;
@@ -33,8 +44,24 @@ typedef struct application_state {
     u64 event_system_memory_requirement;
     void *event_system_state;
 
+    u64 resource_system_memory_requirement;
+    void *resource_system_state;
+
     u64 renderer_system_memory_requirement;
     void *renderer_system_state;
+
+    u64 texture_system_memory_requirement;
+    void *texture_system_state;
+
+    u64 material_system_memory_requirement;
+    void *material_system_state;
+
+    u64 geometry_system_memory_requirement;
+    void *geometry_system_state;
+
+    // TODO: temp
+    geometry *test_world_geometry;
+    geometry *test_ui_geometry;
 } application_state;
 
 static application_state *app_state;
@@ -46,6 +73,33 @@ b8 application_on_key(u16 code, void *sender, void *listener_inst,
                       event_context context);
 b8 application_on_resized(u16 code, void *sender, void *listener_inst,
                           event_context context);
+
+// TODO: temp
+b8 event_on_debug_event(u16 code, void *sender, void *listener_inst,
+                        event_context data) {
+    const char *names[4] = {"cobblestone", "paving", "paving2", "grass"};
+    static i8 choice = 2;
+
+    // Save old name
+    const char *old_name = names[choice];
+
+    choice++;
+    choice %= 4;
+
+    // Acquire the new texture
+    app_state->test_world_geometry->material->diffuse_map.texture =
+        texture_system_acquire(names[choice], true);
+    if (!app_state->test_world_geometry->material->diffuse_map.texture) {
+        KWARN("event_on_debug - no texture, using default...");
+        app_state->test_world_geometry->material->diffuse_map.texture =
+            texture_system_get_default_texture();
+    }
+
+    // Release the old texture
+    texture_system_release(old_name);
+
+    return true;
+}
 
 KAPI b8 application_create(game *game_inst) {
     if (game_inst->application_state) {
@@ -115,6 +169,8 @@ KAPI b8 application_create(game *game_inst) {
     event_register(EVENT_CODE_KEY_PRESSED, 0, application_on_key);
     event_register(EVENT_CODE_KEY_RELEASED, 0, application_on_key);
     event_register(EVENT_CODE_RESIZED, 0, application_on_resized);
+    // TODO: temp registration
+    event_register(EVENT_CODE_DEBUG0, 0, event_on_debug_event);
 
     if (!platform_startup(&app_state->platform, game_inst->app_config.name,
                           game_inst->app_config.start_pos_x,
@@ -124,6 +180,23 @@ KAPI b8 application_create(game *game_inst) {
         return false;
     }
 
+    // Initialize resource system
+    resource_system_config resource_system_config;
+    resource_system_config.asset_base_path = "./assets";
+    resource_system_config.max_loader_count = 32;
+    resource_system_initialize(&app_state->resource_system_memory_requirement,
+                               0, resource_system_config);
+    app_state->resource_system_state = linear_allocator_allocate(
+        &app_state->systems_allocator,
+        app_state->resource_system_memory_requirement);
+    if (!resource_system_initialize(
+            &app_state->resource_system_memory_requirement,
+            app_state->resource_system_state, resource_system_config)) {
+        KFATAL("Failed to initialize resource system, shutting down.");
+        return false;
+    }
+
+    // Initialize renderer
     renderer_initialize(game_inst->app_config.name, &app_state->platform,
                         &app_state->renderer_system_memory_requirement, 0);
     app_state->renderer_system_state = linear_allocator_allocate(
@@ -132,9 +205,110 @@ KAPI b8 application_create(game *game_inst) {
     if (!renderer_initialize(game_inst->app_config.name, &app_state->platform,
                              &app_state->renderer_system_memory_requirement,
                              app_state->renderer_system_state)) {
-        KERROR("Failed to initialize renderer system, shutting down.");
+        KFATAL("Failed to initialize renderer system, shutting down.");
         return false;
     }
+
+    // Initialize texture system
+    texture_system_config texture_system_config;
+    texture_system_config.max_texture_count = 65536;
+    texture_system_initialize(&app_state->texture_system_memory_requirement, 0,
+                              texture_system_config);
+    app_state->texture_system_state =
+        linear_allocator_allocate(&app_state->systems_allocator,
+                                  app_state->texture_system_memory_requirement);
+    if (!texture_system_initialize(
+            &app_state->texture_system_memory_requirement,
+            app_state->texture_system_state, texture_system_config)) {
+        KFATAL("Failed to initialize texture system, shutting down.");
+        return false;
+    }
+
+    // Initialize material system
+    material_system_config material_system_config;
+    material_system_config.max_material_count = 4096;
+    material_system_initialize(&app_state->material_system_memory_requirement,
+                               0, material_system_config);
+    app_state->material_system_state = linear_allocator_allocate(
+        &app_state->systems_allocator,
+        app_state->material_system_memory_requirement);
+    if (!material_system_initialize(
+            &app_state->material_system_memory_requirement,
+            app_state->material_system_state, material_system_config)) {
+        KFATAL("Failed to initialize material system, shutting down.");
+        return false;
+    }
+
+    // Initialize geometry system
+    geometry_system_config geometry_system_config;
+    geometry_system_config.max_geometry_count = 4096;
+    geometry_system_initialize(&app_state->geometry_system_memory_requirement,
+                               0, geometry_system_config);
+    app_state->geometry_system_state = linear_allocator_allocate(
+        &app_state->systems_allocator,
+        app_state->geometry_system_memory_requirement);
+    if (!geometry_system_initialize(
+            &app_state->geometry_system_memory_requirement,
+            app_state->geometry_system_state, geometry_system_config)) {
+        KFATAL("Failed to initialize geometry system, shutting down.");
+        return false;
+    }
+
+    // TODO: temp
+
+    // Load plane geometry
+    geometry_config plane_config = geometry_system_generate_plane_config(
+        10.0f, 5.0f, 5, 5, 5.0f, 2.0f, "test_plane", "test_material");
+    app_state->test_world_geometry =
+        geometry_system_acquire_from_config(plane_config, true);
+
+    kfree(plane_config.vertices, sizeof(vertex_3d) * plane_config.vertex_count,
+          MEMORY_TAG_ARRAY);
+    kfree(plane_config.indices, sizeof(u32) * plane_config.index_count,
+          MEMORY_TAG_ARRAY);
+
+    geometry_config ui_config;
+    ui_config.vertex_size = sizeof(vertex_2d);
+    ui_config.vertex_count = 4;
+    ui_config.index_size = sizeof(u32);
+    ui_config.index_count = 6;
+    string_ncopy(ui_config.material_name, "test_ui_material",
+                 MATERIAL_NAME_MAX_LENGTH);
+    string_ncopy(ui_config.name, "test_ui_geometry", GEOMETRY_NAME_MAX_LENGTH);
+
+    const f32 f = 512.0f;
+    vertex_2d uiverts[4];
+
+    uiverts[0].position.x = 0.0f;
+    uiverts[0].position.y = 0.0f;
+    uiverts[0].texcoord.x = 0.0f;
+    uiverts[0].texcoord.y = 0.0f;
+
+    uiverts[1].position.x = f;
+    uiverts[1].position.y = f;
+    uiverts[1].texcoord.x = 1.0f;
+    uiverts[1].texcoord.y = 1.0f;
+
+    uiverts[2].position.x = 0.0f;
+    uiverts[2].position.y = f;
+    uiverts[2].texcoord.x = 0.0f;
+    uiverts[2].texcoord.y = 1.0f;
+
+    uiverts[3].position.x = f;
+    uiverts[3].position.y = 0.0f;
+    uiverts[3].texcoord.x = 1.0f;
+    uiverts[3].texcoord.y = 0.0f;
+
+    ui_config.vertices = uiverts;
+
+    u32 uiindices[6] = {2, 1, 0, 3, 0, 1};
+    ui_config.indices = uiindices;
+
+    app_state->test_ui_geometry =
+        geometry_system_acquire_from_config(ui_config, true);
+
+    // Load default geometry
+    // app_state->test_geometry = geometry_system_get_default_geometry();
 
     // Initialize the game
     if (!app_state->game_inst->initialize(app_state->game_inst)) {
@@ -186,6 +360,21 @@ KAPI b8 application_run() {
             // TODO: refactor packet creation
             render_packet packet;
             packet.delta_time = delta;
+
+            // TODO: temp
+            geometry_render_data test_render;
+            test_render.geometry = app_state->test_world_geometry;
+            test_render.model = mat4_identity();
+
+            packet.geometry_count = 1;
+            packet.geometries = &test_render;
+
+            geometry_render_data test_ui_render;
+            test_ui_render.geometry = app_state->test_ui_geometry;
+            test_ui_render.model = mat4_translation((vec3){{0, 0, 0}});
+            packet.ui_geometry_count = 1;
+            packet.ui_geometries = &test_ui_render;
+
             renderer_draw_frame(&packet);
 
             // Calculate frame time
@@ -223,10 +412,16 @@ KAPI b8 application_run() {
     event_unregister(EVENT_CODE_KEY_PRESSED, 0, application_on_key);
     event_unregister(EVENT_CODE_KEY_RELEASED, 0, application_on_key);
     event_unregister(EVENT_CODE_RESIZED, 0, application_on_resized);
+    // TODO: temp
+    event_register(EVENT_CODE_DEBUG0, 0, event_on_debug_event);
 
-    event_shutdown(app_state->event_system_state);
     input_shutdown(app_state->input_system_state);
+    geometry_system_shutdown(app_state->geometry_system_state);
+    material_system_shutdown(app_state->material_system_state);
+    texture_system_shutdown(app_state->texture_system_state);
     renderer_shutdown(app_state->renderer_system_state);
+    resource_system_shutdown(app_state->resource_system_state);
+    event_shutdown(app_state->event_system_state);
 
     linear_allocator_destroy(&app_state->systems_allocator);
 

@@ -1,5 +1,6 @@
 #include "game.h"
 
+#include <core/event.h>
 #include <core/input.h>
 #include <core/kmemory.h>
 #include <core/logger.h>
@@ -59,6 +60,13 @@ b8 game_update(game *game_inst, f32 delta_time) {
                alloc_count - previous_alloc_count);
     }
 
+    // TODO: temp
+    if (input_is_key_up('T') && input_was_key_down('T')) {
+        KDEBUG("Swapping textures!");
+        event_context context = {};
+        event_fire(EVENT_CODE_DEBUG0, game_inst, context);
+    }
+
     game_state *state = (game_state *)game_inst->state;
 
     if (input_is_key_down(KEY_LEFT)) {
@@ -114,7 +122,6 @@ b8 game_update(game *game_inst, f32 delta_time) {
         state->camera_position.z += velocity.z * temp_move_speed * delta_time;
         state->camera_view_dirty = true;
     }
-
 
     recalculate_view_matrix(state);
 

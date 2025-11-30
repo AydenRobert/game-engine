@@ -1,12 +1,13 @@
 #include "renderer/renderer_frontend.h"
 
+#include "core/kmemory.h"
+#include "defines.h"
 #include "math/kmath.h"
 #include "renderer/renderer_backend.h"
 
-#include "core/kmemory.h"
 #include "core/logger.h"
 #include "renderer/renderer_types.inl"
-#include "renderer/vulkan/vulkan_backend.h"
+#include "resources/resource_types.h"
 
 #include <assert.h>
 #include <stdalign.h>
@@ -21,10 +22,10 @@ typedef struct renderer_system_state {
     b8 initialized;
 
     renderer_backend *backend;
-
     mat4 projection;
     mat4 view;
-
+    mat4 ui_projection;
+    mat4 ui_view;
     f32 near_clip;
     f32 far_clip;
 } renderer_system_state;
@@ -77,19 +78,25 @@ b8 renderer_initialize(const char *application_name,
         return false;
     }
 
+    // World projection
     state_ptr->near_clip = 0.1f;
     state_ptr->far_clip = 1000.0f;
     state_ptr->projection =
         mat4_perspective(deg_to_rad(45), 1280 / 720.0f, state_ptr->near_clip,
                          state_ptr->far_clip);
+    // TODO: make camera starting position configurable
     state_ptr->view = mat4_translation((vec3){{0, 0, 30.0f}});
     state_ptr->view = mat4_inverse(state_ptr->view);
+
+    // UI projection
+    state_ptr->ui_projection =
+        mat4_orthographic(0, 1280.0f, 720.0f, 0, -100.0f, 100.0f);
+    state_ptr->ui_view = mat4_inverse(mat4_identity());
 
     return true;
 }
 
 void renderer_shutdown(void *state) {
-    (void)state;
     if (state_ptr && state_ptr->backend && state_ptr->backend->shutdown) {
         state_ptr->backend->shutdown(state_ptr->backend);
     }
@@ -97,21 +104,13 @@ void renderer_shutdown(void *state) {
     state_ptr = 0;
 }
 
-b8 renderer_begin_frame(f32 delta_time) {
-    return state_ptr->backend->begin_frame(state_ptr->backend, delta_time);
-}
-
-b8 renderer_end_frame(f32 delta_time) {
-    b8 result = state_ptr->backend->end_frame(state_ptr->backend, delta_time);
-    state_ptr->backend->frame_number++;
-    return result;
-}
-
 void renderer_on_resize(u16 width, u16 height) {
     if (state_ptr) {
         state_ptr->projection =
             mat4_perspective(deg_to_rad(45.0f), width / (f32)height,
                              state_ptr->near_clip, state_ptr->far_clip);
+        state_ptr->ui_projection =
+            mat4_orthographic(0, (f32)width, (f32)height, 0, -100.0f, 100.0f);
         state_ptr->backend->resized(state_ptr->backend, width, height);
     } else {
         KWARN("renderer_state_ptr->backend does not exist to accept resize.");
@@ -119,25 +118,67 @@ void renderer_on_resize(u16 width, u16 height) {
 }
 
 b8 renderer_draw_frame(render_packet *packet) {
-    if (renderer_begin_frame(packet->delta_time)) {
+    if (!state_ptr->backend->begin_frame(state_ptr->backend,
+                                         packet->delta_time)) {
+        return true;
+    }
 
-        state_ptr->backend->update_global_state(
-            state_ptr->projection, state_ptr->view, vec3_zero(), vec4_one(), 0);
+    // World renderpass
+    if (!state_ptr->backend->begin_renderpass(state_ptr->backend,
+                                              BUILTIN_RENDERPASS_WORLD)) {
+        KERROR("backend.begin_renderpass - BUILTIN_RENDERPASS_WORLD failed. "
+               "Application shutting down...");
+        return false;
+    }
 
-        static f32 angle = 0.001f;
-        angle += 0.0005f;
-        quat rotation = quat_from_axis_angle(vec3_forward(), angle, false);
-        mat4 model = quat_to_rotation_matrix(rotation, vec3_zero());
-        geometry_render_data data = {};
-        data.object_id = 0;
-        data.model = model;
-        state_ptr->backend->update_object(state_ptr->backend, data);
+    state_ptr->backend->update_global_world_state(
+        state_ptr->projection, state_ptr->view, vec3_zero(), vec4_one(), 0);
 
-        b8 result = renderer_end_frame(packet->delta_time);
-        if (!result) {
-            KERROR("renderer_end_frame failed. Application shutting down...");
-            return false;
-        }
+    u32 count = packet->geometry_count;
+    for (u32 i = 0; i < count; i++) {
+        state_ptr->backend->draw_geometry(state_ptr->backend,
+                                          packet->geometries[i]);
+    }
+
+    if (!state_ptr->backend->end_renderpass(state_ptr->backend,
+                                            BUILTIN_RENDERPASS_WORLD)) {
+        KERROR("backend.end_renderpass - BUILTIN_RENDERPASS_WORLD failed. "
+               "Application shutting down...");
+        return false;
+    }
+
+    // UI renderpass
+    if (!state_ptr->backend->begin_renderpass(state_ptr->backend,
+                                              BUILTIN_RENDERPASS_UI)) {
+        KERROR("backend.begin_renderpass - BUILTIN_RENDERPASS_UI failed. "
+               "Application shutting down...");
+        return false;
+    }
+
+    state_ptr->backend->update_global_ui_state(state_ptr->ui_projection,
+                                               state_ptr->ui_view, 0);
+
+    count = packet->ui_geometry_count;
+    for (u32 i = 0; i < count; i++) {
+        state_ptr->backend->draw_geometry(state_ptr->backend,
+                                          packet->ui_geometries[i]);
+    }
+
+    if (!state_ptr->backend->end_renderpass(state_ptr->backend,
+                                            BUILTIN_RENDERPASS_UI)) {
+        KERROR("backend.end_renderpass - BUILTIN_RENDERPASS_UI failed. "
+               "Application shutting down...");
+        return false;
+    }
+
+    // End frame
+    b8 result =
+        state_ptr->backend->end_frame(state_ptr->backend, packet->delta_time);
+    state_ptr->backend->frame_number++;
+
+    if (!result) {
+        KERROR("renderer_end_frame failed. Application shutting down...");
+        return false;
     }
 
     return true;
@@ -145,14 +186,31 @@ b8 renderer_draw_frame(render_packet *packet) {
 
 void renderer_set_view(mat4 view) { state_ptr->view = view; }
 
-void renderer_create_texture(b8 auto_release, i32 width, i32 height,
-                             i32 channel_count, const u8 *pixels,
-                             b8 has_transparency, struct texture *out_texture) {
-    state_ptr->backend->create_texture(auto_release, width, height,
-                                       channel_count, pixels, has_transparency,
-                                       out_texture);
+void renderer_create_texture(const u8 *pixels, struct texture *texture) {
+    state_ptr->backend->create_texture(pixels, texture);
 }
 
 void renderer_destroy_texture(struct texture *texture) {
     state_ptr->backend->destroy_texture(texture);
+}
+
+b8 renderer_create_material(struct material *material) {
+    return state_ptr->backend->create_material(material);
+}
+
+void renderer_destroy_material(struct material *material) {
+    state_ptr->backend->destroy_material(material);
+}
+
+b8 renderer_create_geometry(geometry *geometry, u32 vertex_size,
+                            u32 vertex_count, const void *vertices,
+                            u32 index_size, u32 index_count,
+                            const void *indices) {
+    return state_ptr->backend->create_geometry(
+        geometry, vertex_size, vertex_count, vertices, index_size, index_count,
+        indices);
+}
+
+void renderer_destroy_geometry(geometry *geometry) {
+    return state_ptr->backend->destroy_geometry(geometry);
 }

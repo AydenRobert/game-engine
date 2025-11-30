@@ -8,12 +8,13 @@
 #include <vulkan/vulkan_core.h>
 
 b8 vulkan_graphics_pipeline_create(
-    vulkan_context *context, vulkan_renderpass *renderpass, u32 attribute_count,
-    VkVertexInputAttributeDescription *attributes,
+    vulkan_context *context, vulkan_renderpass *renderpass, u32 stride,
+    u32 attribute_count, VkVertexInputAttributeDescription *attributes,
     u32 descriptor_set_layout_count,
     VkDescriptorSetLayout *descriptor_set_layouts, u32 stage_count,
     VkPipelineShaderStageCreateInfo *stages, VkViewport viewport,
-    VkRect2D scissor, b8 is_wireframe, vulkan_pipeline *out_pipeline) {
+    VkRect2D scissor, b8 is_wireframe, b8 depth_test_enabled,
+    vulkan_pipeline *out_pipeline) {
 
     // Viewport state
     VkPipelineViewportStateCreateInfo viewport_state = {
@@ -51,12 +52,11 @@ b8 vulkan_graphics_pipeline_create(
     // Depth and stencil testing
     VkPipelineDepthStencilStateCreateInfo depth_stencil = {
         VK_STRUCTURE_TYPE_PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO};
-    depth_stencil.depthTestEnable = VK_TRUE;
-    depth_stencil.depthWriteEnable = VK_TRUE;
+    depth_stencil.depthTestEnable = depth_test_enabled ? VK_TRUE : VK_FALSE;
+    depth_stencil.depthWriteEnable = depth_test_enabled ? VK_TRUE : VK_FALSE;
     depth_stencil.depthCompareOp = VK_COMPARE_OP_LESS;
     depth_stencil.depthBoundsTestEnable = VK_FALSE;
     depth_stencil.stencilTestEnable = VK_FALSE;
-
     // Color blend attachment
     VkPipelineColorBlendAttachmentState color_blend_attachment_state;
     kzero_memory(&color_blend_attachment_state,
@@ -84,7 +84,6 @@ b8 vulkan_graphics_pipeline_create(
     color_blend_state_create_info.pAttachments = &color_blend_attachment_state;
 
 // Dynamic state
-// TODO: make this look better
 #define DYNAMIC_STATE_COUNT 3
     VkDynamicState dynamic_states[DYNAMIC_STATE_COUNT] = {
         VK_DYNAMIC_STATE_VIEWPORT, VK_DYNAMIC_STATE_SCISSOR,
@@ -98,7 +97,7 @@ b8 vulkan_graphics_pipeline_create(
     // Vertex input
     VkVertexInputBindingDescription binding_description;
     binding_description.binding = 0;
-    binding_description.stride = sizeof(vertex_3d);
+    binding_description.stride = stride;
     // Move to next entry for each vertex
     binding_description.inputRate = VK_VERTEX_INPUT_RATE_VERTEX;
 

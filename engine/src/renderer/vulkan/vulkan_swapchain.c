@@ -69,6 +69,8 @@ void vulkan_swapchain_present(vulkan_context *context,
     if (result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR) {
         vulkan_swapchain_recreate(context, context->framebuffer_width,
                                   context->framebuffer_height, swapchain);
+        KDEBUG("Swapchain recreated because swapchain returned out of date or "
+               "suboptimal.");
     } else if (result != VK_SUCCESS) {
         KFATAL("Failed to present swapchain image!");
     }

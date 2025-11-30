@@ -36,28 +36,6 @@
       "-Itestbed/src",
       "-I/include",
       "-o",
-      "obj/engine/core/kmemory.o",
-      "engine/src/core/kmemory.c"
-    ],
-    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
-    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/core/kmemory.c",
-    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/core/kmemory.o"
-  },
-  {
-    "arguments": [
-      "/usr/bin/clang",
-      "-c",
-      "-g",
-      "-Wall",
-      "-Werror",
-      "-Wvarargs",
-      "-fPIC",
-      "-D_DEBUG",
-      "-DKEXPORT",
-      "-Iengine/src",
-      "-Itestbed/src",
-      "-I/include",
-      "-o",
       "obj/engine/core/input.o",
       "engine/src/core/input.c"
     ],
@@ -80,34 +58,12 @@
       "-Itestbed/src",
       "-I/include",
       "-o",
-      "obj/engine/core/application.o",
-      "engine/src/core/application.c"
+      "obj/engine/core/kmemory.o",
+      "engine/src/core/kmemory.c"
     ],
     "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
-    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/core/application.c",
-    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/core/application.o"
-  },
-  {
-    "arguments": [
-      "/usr/bin/clang",
-      "-c",
-      "-g",
-      "-Wall",
-      "-Werror",
-      "-Wvarargs",
-      "-fPIC",
-      "-D_DEBUG",
-      "-DKEXPORT",
-      "-Iengine/src",
-      "-Itestbed/src",
-      "-I/include",
-      "-o",
-      "obj/engine/core/kstring.o",
-      "engine/src/core/kstring.c"
-    ],
-    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
-    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/core/kstring.c",
-    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/core/kstring.o"
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/core/kmemory.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/core/kmemory.o"
   },
   {
     "arguments": [
@@ -152,6 +108,50 @@
     "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
     "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/core/event.c",
     "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/core/event.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/engine/core/kstring.o",
+      "engine/src/core/kstring.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/core/kstring.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/core/kstring.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/engine/core/application.o",
+      "engine/src/core/application.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/core/application.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/core/application.o"
   },
   {
     "arguments": [
@@ -322,78 +322,12 @@
       "-Itestbed/src",
       "-I/include",
       "-o",
-      "obj/engine/renderer/vulkan/vulkan_image.o",
-      "engine/src/renderer/vulkan/vulkan_image.c"
+      "obj/engine/containers/hashtable.o",
+      "engine/src/containers/hashtable.c"
     ],
     "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
-    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/vulkan/vulkan_image.c",
-    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/vulkan/vulkan_image.o"
-  },
-  {
-    "arguments": [
-      "/usr/bin/clang",
-      "-c",
-      "-g",
-      "-Wall",
-      "-Werror",
-      "-Wvarargs",
-      "-fPIC",
-      "-D_DEBUG",
-      "-DKEXPORT",
-      "-Iengine/src",
-      "-Itestbed/src",
-      "-I/include",
-      "-o",
-      "obj/engine/renderer/vulkan/vulkan_framebuffer.o",
-      "engine/src/renderer/vulkan/vulkan_framebuffer.c"
-    ],
-    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
-    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/vulkan/vulkan_framebuffer.c",
-    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/vulkan/vulkan_framebuffer.o"
-  },
-  {
-    "arguments": [
-      "/usr/bin/clang",
-      "-c",
-      "-g",
-      "-Wall",
-      "-Werror",
-      "-Wvarargs",
-      "-fPIC",
-      "-D_DEBUG",
-      "-DKEXPORT",
-      "-Iengine/src",
-      "-Itestbed/src",
-      "-I/include",
-      "-o",
-      "obj/engine/renderer/vulkan/vulkan_command_buffer.o",
-      "engine/src/renderer/vulkan/vulkan_command_buffer.c"
-    ],
-    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
-    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/vulkan/vulkan_command_buffer.c",
-    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/vulkan/vulkan_command_buffer.o"
-  },
-  {
-    "arguments": [
-      "/usr/bin/clang",
-      "-c",
-      "-g",
-      "-Wall",
-      "-Werror",
-      "-Wvarargs",
-      "-fPIC",
-      "-D_DEBUG",
-      "-DKEXPORT",
-      "-Iengine/src",
-      "-Itestbed/src",
-      "-I/include",
-      "-o",
-      "obj/engine/renderer/vulkan/vulkan_fence.o",
-      "engine/src/renderer/vulkan/vulkan_fence.c"
-    ],
-    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
-    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/vulkan/vulkan_fence.c",
-    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/vulkan/vulkan_fence.o"
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/containers/hashtable.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/containers/hashtable.o"
   },
   {
     "arguments": [
@@ -454,6 +388,72 @@
       "-Itestbed/src",
       "-I/include",
       "-o",
+      "obj/engine/renderer/vulkan/shaders/vulkan_material_shader.o",
+      "engine/src/renderer/vulkan/shaders/vulkan_material_shader.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/vulkan/shaders/vulkan_material_shader.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/vulkan/shaders/vulkan_material_shader.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/engine/renderer/vulkan/shaders/vulkan_ui_shader.o",
+      "engine/src/renderer/vulkan/shaders/vulkan_ui_shader.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/vulkan/shaders/vulkan_ui_shader.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/vulkan/shaders/vulkan_ui_shader.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/engine/renderer/vulkan/vulkan_image.o",
+      "engine/src/renderer/vulkan/vulkan_image.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/vulkan/vulkan_image.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/vulkan/vulkan_image.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
       "obj/engine/renderer/vulkan/vulkan_device.o",
       "engine/src/renderer/vulkan/vulkan_device.c"
     ],
@@ -476,12 +476,12 @@
       "-Itestbed/src",
       "-I/include",
       "-o",
-      "obj/engine/renderer/vulkan/vulkan_renderpass.o",
-      "engine/src/renderer/vulkan/vulkan_renderpass.c"
+      "obj/engine/renderer/vulkan/vulkan_buffer.o",
+      "engine/src/renderer/vulkan/vulkan_buffer.c"
     ],
     "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
-    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/vulkan/vulkan_renderpass.c",
-    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/vulkan/vulkan_renderpass.o"
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/vulkan/vulkan_buffer.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/vulkan/vulkan_buffer.o"
   },
   {
     "arguments": [
@@ -498,34 +498,12 @@
       "-Itestbed/src",
       "-I/include",
       "-o",
-      "obj/engine/renderer/vulkan/shaders/vulkan_object_shader.o",
-      "engine/src/renderer/vulkan/shaders/vulkan_object_shader.c"
+      "obj/engine/renderer/vulkan/vulkan_command_buffer.o",
+      "engine/src/renderer/vulkan/vulkan_command_buffer.c"
     ],
     "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
-    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/vulkan/shaders/vulkan_object_shader.c",
-    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/vulkan/shaders/vulkan_object_shader.o"
-  },
-  {
-    "arguments": [
-      "/usr/bin/clang",
-      "-c",
-      "-g",
-      "-Wall",
-      "-Werror",
-      "-Wvarargs",
-      "-fPIC",
-      "-D_DEBUG",
-      "-DKEXPORT",
-      "-Iengine/src",
-      "-Itestbed/src",
-      "-I/include",
-      "-o",
-      "obj/engine/renderer/vulkan/vulkan_backend.o",
-      "engine/src/renderer/vulkan/vulkan_backend.c"
-    ],
-    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
-    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/vulkan/vulkan_backend.c",
-    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/vulkan/vulkan_backend.o"
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/vulkan/vulkan_command_buffer.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/vulkan/vulkan_command_buffer.o"
   },
   {
     "arguments": [
@@ -564,12 +542,56 @@
       "-Itestbed/src",
       "-I/include",
       "-o",
-      "obj/engine/renderer/renderer_backend.o",
-      "engine/src/renderer/renderer_backend.c"
+      "obj/engine/renderer/vulkan/vulkan_pipeline.o",
+      "engine/src/renderer/vulkan/vulkan_pipeline.c"
     ],
     "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
-    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/renderer_backend.c",
-    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/renderer_backend.o"
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/vulkan/vulkan_pipeline.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/vulkan/vulkan_pipeline.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/engine/renderer/vulkan/vulkan_renderpass.o",
+      "engine/src/renderer/vulkan/vulkan_renderpass.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/vulkan/vulkan_renderpass.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/vulkan/vulkan_renderpass.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/engine/renderer/vulkan/vulkan_backend.o",
+      "engine/src/renderer/vulkan/vulkan_backend.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/vulkan/vulkan_backend.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/vulkan/vulkan_backend.o"
   },
   {
     "arguments": [
@@ -592,6 +614,28 @@
     "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
     "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/renderer_frontend.c",
     "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/renderer_frontend.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/engine/renderer/renderer_backend.o",
+      "engine/src/renderer/renderer_backend.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/renderer/renderer_backend.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/renderer/renderer_backend.o"
   },
   {
     "arguments": [
@@ -636,6 +680,182 @@
     "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
     "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/memory/linear_allocator.c",
     "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/memory/linear_allocator.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/engine/resources/loaders/material_loader.o",
+      "engine/src/resources/loaders/material_loader.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/resources/loaders/material_loader.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/resources/loaders/material_loader.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/engine/resources/loaders/image_loader.o",
+      "engine/src/resources/loaders/image_loader.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/resources/loaders/image_loader.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/resources/loaders/image_loader.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/engine/resources/loaders/text_loader.o",
+      "engine/src/resources/loaders/text_loader.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/resources/loaders/text_loader.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/resources/loaders/text_loader.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/engine/resources/loaders/binary_loader.o",
+      "engine/src/resources/loaders/binary_loader.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/resources/loaders/binary_loader.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/resources/loaders/binary_loader.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/engine/systems/geometry_system.o",
+      "engine/src/systems/geometry_system.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/systems/geometry_system.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/systems/geometry_system.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/engine/systems/texture_system.o",
+      "engine/src/systems/texture_system.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/systems/texture_system.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/systems/texture_system.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/engine/systems/material_system.o",
+      "engine/src/systems/material_system.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/systems/material_system.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/systems/material_system.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/engine/systems/resource_system.o",
+      "engine/src/systems/resource_system.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/engine/src/systems/resource_system.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/engine/systems/resource_system.o"
   },
   {
     "arguments": [
@@ -718,12 +938,12 @@
       "-Itestbed/src",
       "-I/include",
       "-o",
-      "obj/tests/main.o",
-      "tests/src/main.c"
+      "obj/tests/test_manager.o",
+      "tests/src/test_manager.c"
     ],
     "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
-    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/tests/src/main.c",
-    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/tests/main.o"
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/tests/src/test_manager.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/tests/test_manager.o"
   },
   {
     "arguments": [
@@ -740,11 +960,33 @@
       "-Itestbed/src",
       "-I/include",
       "-o",
-      "obj/tests/test_manager.o",
-      "tests/src/test_manager.c"
+      "obj/tests/containers/hastable_tests.o",
+      "tests/src/containers/hastable_tests.c"
     ],
     "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
-    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/tests/src/test_manager.c",
-    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/tests/test_manager.o"
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/tests/src/containers/hastable_tests.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/tests/containers/hastable_tests.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Werror",
+      "-Wvarargs",
+      "-fPIC",
+      "-D_DEBUG",
+      "-DKEXPORT",
+      "-Iengine/src",
+      "-Itestbed/src",
+      "-I/include",
+      "-o",
+      "obj/tests/main.o",
+      "tests/src/main.c"
+    ],
+    "directory": "/home/ayden/workspace/github.com/AydenRobert/game-engine",
+    "file": "/home/ayden/workspace/github.com/AydenRobert/game-engine/tests/src/main.c",
+    "output": "/home/ayden/workspace/github.com/AydenRobert/game-engine/obj/tests/main.o"
   }
 ]

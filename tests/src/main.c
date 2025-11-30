@@ -1,6 +1,7 @@
 #include "test_manager.h"
 
 #include "memory/linear_allocator_test.h"
+#include "containers/hastable_tests.h"
 
 #include <core/logger.h>
 
@@ -9,6 +10,7 @@ int main() {
 
     // register tests
     linear_allocator_register_tests();
+    hashtable_register_tests();
 
     KDEBUG("Starting tests...");
 

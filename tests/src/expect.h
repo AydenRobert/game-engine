@@ -16,7 +16,7 @@
         failed = 1;                                                            \
     }
 
-#define expect_float_to_be()                                                   \
+#define expect_float_to_be(expected, actual)                                                   \
     if (kabs(expected - actual) > 0.001f) {                                    \
         KERROR("--> Expected %f, but got: %f. File: %s:%d.", expected, actual, \
                __FILE__, __LINE__);                                            \
@@ -25,14 +25,14 @@
 
 #define expect_to_be_true(actual)                                              \
     if (!actual) {                                                             \
-        KERROR("--> Expected true but got: false. File: %s:%d.", expected,     \
-               actual, __FILE__, __LINE__);                                    \
+        KERROR("--> Expected true but got: false. File: %s:%d.", __FILE__,     \
+               __LINE__);                                                      \
         failed = 1;                                                            \
     }
 
 #define expect_to_be_false(actual)                                             \
     if (actual) {                                                              \
-        KERROR("--> Expected false but got: true. File: %s:%d.", expected,     \
-               actual, __FILE__, __LINE__);                                    \
+        KERROR("--> Expected false but got: true. File: %s:%d.", __FILE__,     \
+               __LINE__);                                                      \
         failed = 1;                                                            \
     }
