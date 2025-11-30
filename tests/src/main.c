@@ -1,3 +1,4 @@
+#include "containers/freelist_tests.h"
 #include "test_manager.h"
 
 #include "memory/linear_allocator_test.h"
@@ -11,6 +12,7 @@ int main() {
     // register tests
     linear_allocator_register_tests();
     hashtable_register_tests();
+    freelist_register_tests();
 
     KDEBUG("Starting tests...");
 

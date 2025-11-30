@@ -51,12 +51,18 @@ void freelist_create(u32 total_size, u64 *memory_requirement, void *memory,
     state->head->size = total_size;
     state->head->next = 0;
 
+    state->free_node_head = &state->nodes[1];
+
     // Invalidate other nodes
-    for (u32 i = 1; i < state->max_entries; i++) {
+    for (u32 i = 1; i < state->max_entries - 1; i++) {
         state->nodes[i].offset = INVALID_ID;
         state->nodes[i].size = INVALID_ID;
-        state->nodes[i].next = 0;
+        state->nodes[i].next = &state->nodes[i + 1];
     }
+
+    state->nodes[state->max_entries - 1].offset = INVALID_ID;
+    state->nodes[state->max_entries - 1].size = INVALID_ID;
+    state->nodes[state->max_entries - 1].next = 0;
 }
 
 void freelist_destroy(freelist *list) {
