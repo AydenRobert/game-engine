@@ -116,6 +116,11 @@ KAPI b8 application_create(game *game_inst) {
         return false;
     }
 
+    // TODO: handle alignment in dynamic allocator
+    void *raw_game_state_block =
+        kallocate(game_inst->state_memory_requirement + 63, MEMORY_TAG_GAME);
+    game_inst->state = (void *)(((u64)raw_game_state_block + 63) & ~63);
+
     game_inst->application_state =
         kallocate(sizeof(application_state), MEMORY_TAG_APPLICATION);
     app_state = game_inst->application_state;
@@ -428,6 +433,9 @@ KAPI b8 application_run() {
     renderer_shutdown(app_state->renderer_system_state);
     resource_system_shutdown(app_state->resource_system_state);
     event_shutdown(app_state->event_system_state);
+
+    kfree(app_state->game_inst->state,
+          app_state->game_inst->state_memory_requirement + 63, MEMORY_TAG_GAME);
 
     // Destroy and free linear allocator
     linear_allocator_destroy(&app_state->systems_allocator);

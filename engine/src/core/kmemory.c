@@ -113,7 +113,12 @@ KAPI void kfree(void *block, u64 size, memory_tag tag) {
         state_ptr->stats.total_allocated -= size;
         state_ptr->stats.tagged_allocations[tag] -= size;
 
-        dynamic_allocator_free(&state_ptr->allocator, block, size);
+        b8 result = dynamic_allocator_free(&state_ptr->allocator, block, size);
+        if (!result) {
+            // Handle dynamic allocator failing gracefully
+            // The piece of memory could have been created before initialisation
+            platform_free(block, false);
+        }
     }
 }
 
