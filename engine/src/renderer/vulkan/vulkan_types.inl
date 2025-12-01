@@ -348,9 +348,6 @@ typedef struct vulkan_context {
     vulkan_material_shader material_shader;
     vulkan_ui_shader ui_shader;
 
-    u64 geometry_vertex_offset;
-    u64 geometry_index_offset;
-
     // TODO: Make dynamic
     vulkan_geometry_data geometries[VULKAN_MAX_GEOMETRY_COUNT];
 

@@ -5,7 +5,7 @@
 [DEBUG]: A test message: 3.140000
 [TRACE]: A test message: 3.140000
 [INFO]:  Input subsystem initialized.
-[INFO]:  Event system initialized at 0x7f724a520540, size 131080
+[INFO]:  Event system initialized at 0x7ff60c953540, size 131080
 [DEBUG]: Window resize: 1280 1405
 [WARN]:  renderer_state_ptr->backend does not exist to accept resize.
 [TRACE]: Loader '0' registered.
@@ -85,11 +85,19 @@
 [INFO]:  Vulkan renderer initialized successfully!
 [TRACE]: Creating default texture...
 [TRACE]: Renderer: Material created.
+[WARN]:  Freelists are inefficient for small amounts of memory.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[ERROR]: vulkan_buffer_allocate - required valid buffer and size.
+[WARN]:  Freelists are inefficient for small amounts of memory.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[ERROR]: vulkan_buffer_allocate - required valid buffer and size.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Renderer: Material created.
+[WARN]:  Freelists are inefficient for small amounts of memory.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[WARN]:  Freelists are inefficient for small amounts of memory.
 [TRACE]: Renderer: Material created.
 [DEBUG]: game_initialize() called!
 [INFO]:  System memory use (tagged):
@@ -105,7 +113,7 @@
   JOB              : 0.00B
   TEXTURE          : 120.00B
   MATERIAL_INSTANCE: 0.00B
-  RENDERER         : 72.00B
+  RENDERER         : 49.00MiB
   GAME             : 175.00B
   TRANSFORM        : 0.00B
   ENTITY           : 0.00B
@@ -119,7 +127,7 @@
 [INFO]:  Resized, booting.
 [INFO]:  EVENT_CODE_APPLICATION_QUIT has been recieved, shutting down.
 
-[DEBUG]: Frame count: 74, running time: 0.831550
+[DEBUG]: Frame count: 61, running time: 18.676969
 [INFO]:  after temp watch close
 [TRACE]: Destroying material 'test_material'...
 [TRACE]: Released texture 'cobblestone'. Texture is now unloaded as reference_count = 0 and auto_release = true.
