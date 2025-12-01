@@ -2,6 +2,7 @@
 
 #include "core/kstring.h"
 #include "core/logger.h"
+#include "memory/dynamic_allocator.h"
 #include "platform/platform.h"
 
 #include <stdio.h>
@@ -20,27 +21,56 @@ static const char *memory_tag_strings[MEMORY_TAG_MAX_TAGS] = {
     "ENTITY           ", "ENTITY_NODE      ", "SCENE            "};
 
 typedef struct memory_system_state {
+    memory_system_configuration config;
     b8 initialized;
     struct memory_stats stats;
-
     u64 alloc_count;
+    u64 allocator_memory_requirement;
+    dynamic_allocator allocator;
+    void *allocator_block;
 } memory_system_state;
 
 static memory_system_state *state_ptr;
 
-b8 initialize_memory(u64 *memory_requirement, void *state) {
-    *memory_requirement = sizeof(memory_system_state);
-    if (state == 0) {
-        return true;
+b8 memory_system_initialize(memory_system_configuration config) {
+    u64 alloc_memory_requirement = 0;
+    dynamic_allocator_create(config.total_alloc_count,
+                             &alloc_memory_requirement, 0, 0);
+    u64 total_memory_size =
+        sizeof(memory_system_state) + alloc_memory_requirement;
+
+    void *memory_block = platform_allocate(total_memory_size, false);
+    if (!memory_block) {
+        KFATAL("Couldn't allocate memory for Memory System. Cannot continue.");
+        return false;
     }
 
-    state_ptr = state;
-    state_ptr->initialized = true;
-    state_ptr->alloc_count = 0;
+    state_ptr = (memory_system_state *)memory_block;
+    state_ptr->allocator_memory_requirement = alloc_memory_requirement;
 
-    platform_zero_memory(&state_ptr->stats, sizeof(state_ptr->stats));
+    state_ptr->allocator_block =
+        (void *)((u64)state_ptr + sizeof(memory_system_state));
+    dynamic_allocator_create(config.total_alloc_count,
+                             &state_ptr->allocator_memory_requirement,
+                             state_ptr->allocator_block, &state_ptr->allocator);
+
+    state_ptr->alloc_count = 0;
+    state_ptr->initialized = true;
 
     return true;
+}
+
+void memory_system_shutdown() {
+    if (!state_ptr) {
+        KWARN("Tried to shutdown memory system without it being initialized.");
+        return;
+    }
+
+    dynamic_allocator_destroy(&state_ptr->allocator);
+    u64 total_memory_size =
+        sizeof(memory_system_state) + state_ptr->allocator_memory_requirement;
+    platform_free(state_ptr, total_memory_size);
+    state_ptr = 0;
 }
 
 KAPI void *kallocate(u64 size, memory_tag tag) {
@@ -49,21 +79,25 @@ KAPI void *kallocate(u64 size, memory_tag tag) {
               "allocation.");
     }
 
-    if (state_ptr) {
+    // TODO: Memory alignment
+    void *block;
+    if (!state_ptr) {
+        KWARN("kallocate called before memory system initialized.");
+        block = platform_allocate(size, false);
+    } else {
         state_ptr->stats.total_allocated += size;
         state_ptr->stats.tagged_allocations[tag] += size;
         state_ptr->alloc_count++;
+
+        block = dynamic_allocator_allocate(&state_ptr->allocator, size);
     }
 
-    // TODO: Memory alignment
-
-    void *block = platform_allocate(size, false);
-    platform_zero_memory(block, size);
+    if (block) {
+        platform_zero_memory(block, size);
+    }
 
     return block;
 }
-
-void shutdown_memory(void *state) { state_ptr = 0; }
 
 KAPI void kfree(void *block, u64 size, memory_tag tag) {
     if (tag == MEMORY_TAG_UNKNOWN) {
@@ -71,13 +105,16 @@ KAPI void kfree(void *block, u64 size, memory_tag tag) {
               "allocation.");
     }
 
-    if (state_ptr) {
+    // TODO: Memory alignment
+    if (!state_ptr) {
+        KWARN("kallocate called before memory system initialized.");
+        platform_free(block, false);
+    } else {
         state_ptr->stats.total_allocated -= size;
         state_ptr->stats.tagged_allocations[tag] -= size;
-    }
 
-    // TODO: Memory alignment
-    platform_free(block, false);
+        dynamic_allocator_free(&state_ptr->allocator, block, size);
+    }
 }
 
 KAPI void *kzero_memory(void *block, u64 size) {

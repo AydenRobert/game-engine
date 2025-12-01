@@ -6,6 +6,7 @@
 #include "core/kmemory.h"
 #include "core/kstring.h"
 #include "core/logger.h"
+#include "defines.h"
 #include "game_types.h"
 #include "memory/linear_allocator.h"
 #include "platform/platform.h"
@@ -37,9 +38,6 @@ typedef struct application_state {
 
     u64 logging_system_memory_requirement;
     void *logging_system_state;
-
-    u64 memory_system_memory_requirement;
-    void *memory_system_state;
 
     u64 input_system_memory_requirement;
     void *input_system_state;
@@ -110,6 +108,14 @@ KAPI b8 application_create(game *game_inst) {
         return false;
     }
 
+    // memory
+    memory_system_configuration memory_system_config = {};
+    memory_system_config.total_alloc_count = GIBIBYTES(1);
+    if (!memory_system_initialize(memory_system_config)) {
+        KERROR("Failed to initialize memory system, shutting down.");
+        return false;
+    }
+
     game_inst->application_state =
         kallocate(sizeof(application_state), MEMORY_TAG_APPLICATION);
     app_state = game_inst->application_state;
@@ -126,17 +132,6 @@ KAPI b8 application_create(game *game_inst) {
                             &app_state->systems_allocator_memory_requirement,
                             app_state->systems_allocator_memory,
                             &app_state->systems_allocator);
-
-    // memory
-    initialize_memory(&app_state->memory_system_memory_requirement, 0);
-    app_state->memory_system_state = linear_allocator_allocate(
-        &app_state->systems_allocator,
-        app_state->memory_system_memory_requirement, 64);
-    if (!initialize_memory(&app_state->memory_system_memory_requirement,
-                           app_state->memory_system_state)) {
-        KERROR("Failed to initialize memory system, shutting down.");
-        return false;
-    }
 
     // Initialize subsystems
     // logging
@@ -441,7 +436,7 @@ KAPI b8 application_run() {
           MEMORY_TAG_LINEAR_ALLOCATOR);
 
     platform_shutdown(&app_state->platform);
-    shutdown_memory(app_state->memory_system_state);
+    memory_system_shutdown();
 
     return true;
 }

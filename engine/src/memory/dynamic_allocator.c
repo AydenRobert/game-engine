@@ -74,7 +74,6 @@ void *dynamic_allocator_allocate(dynamic_allocator *allocator, u64 size) {
     }
 
     void *block_to_return = (void *)(state->memory + offset);
-    kzero_memory(block_to_return, size);
 
     return block_to_return;
 }
