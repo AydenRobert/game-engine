@@ -1,0 +1,26 @@
+<map id="material_system_initialize" name="material_system_initialize">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,109,200,137"/>
+<area shape="rect" id="Node000002" href="$da/dd6/material__system_8c.html#aaad0c4353df6e394f1e2aaa497c57714" title=" " alt="" coords="248,109,425,137"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,121,234,122,230,124,201,126"/>
+<area shape="rect" id="Node000009" href="$d8/de9/hashtable_8c.html#a448eebcc124b3704e519a7d063554fe3" title="Creates a hashtable and stores it in out_hashtable." alt="" coords="270,32,403,60"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="146,106,279,63,276,67,148,111"/>
+<area shape="rect" id="Node000010" href="$d8/de9/hashtable_8c.html#a82c34fd5fb438571847414f35e744b6e" title="Fills all entries with the given value. Useful when non&#45;existent &#39;names&#39; should retrieve a default va..." alt="" coords="282,221,390,249"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="134,135,294,213,290,216,133,140"/>
+<area shape="rect" id="Node000003" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="506,5,626,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="360,107,419,71,472,43,496,37,491,39,474,48,422,76,362,111"/>
+<area shape="rect" id="Node000005" href="$d0/dcc/renderer__frontend_8c.html#a4683817d4b1b2113b0df7662150a0fc5" title=" " alt="" coords="473,57,659,85"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="400,106,489,88,484,90,402,111"/>
+<area shape="rect" id="Node000006" href="$d6/d19/kstring_8c.html#a9e48021ce5b39920715bfaa5d92613bc" title=" " alt="" coords="514,109,618,137"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="425,121,501,123,496,124,426,126"/>
+<area shape="rect" id="Node000007" href="$d9/d0a/texture__system_8c.html#ae9e13f5483fd272b9430ca11719164e4" title=" " alt="" coords="490,161,642,206"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="392,135,478,159,473,160,392,140"/>
+<area shape="rect" id="Node000008" href="$dc/dd0/kmath_8h.html#a4b54896480357d67259f94d532e050dd" title=" " alt="" coords="524,229,608,257"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="355,135,407,175,474,215,512,231,507,231,472,220,404,179,353,140"/>
+<area shape="rect" id="Node000004" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="709,5,883,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="626,17,696,19,691,20,626,22"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="403,36,493,27,488,29,404,41"/>
+<area shape="rect" id="Node000011" href="$d3/d3c/kmemory_8c.html#ae88e143a36677919fee16bdf0f11bc79" title=" " alt="" coords="505,281,627,309"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="391,247,498,277,493,277,391,252"/>
+<area shape="rect" id="Node000012" href="$de/d03/platform_8h.html#a15258bb22b902725b1fbf405463ed07d" title=" " alt="" coords="707,281,885,309"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="628,293,694,295,689,295,628,298"/>
+</map>

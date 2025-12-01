@@ -1,0 +1,44 @@
+<map id="load_material" name="load_material">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,135,117,162"/>
+<area shape="rect" id="Node000002" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="198,5,318,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,133,108,89,134,64,163,44,186,34,182,38,166,48,138,69,112,92,75,136"/>
+<area shape="rect" id="Node000004" href="$d0/dcc/renderer__frontend_8c.html#a4683817d4b1b2113b0df7662150a0fc5" title=" " alt="" coords="165,57,351,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="87,132,164,95,189,88,185,92,166,100,90,136"/>
+<area shape="rect" id="Node000005" href="$d6/d19/kstring_8c.html#a3ac8f7f54a3429135da71637d268e6c9" title=" " alt="" coords="205,109,311,137"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="116,139,191,130,187,134,118,144"/>
+<area shape="rect" id="Node000006" href="$d6/d19/kstring_8c.html#a9e48021ce5b39920715bfaa5d92613bc" title=" " alt="" coords="662,55,767,82"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="117,149,226,152,351,146,432,134,512,118,652,86,647,88,514,123,433,139,351,151,226,157,118,155"/>
+<area shape="rect" id="Node000007" href="$d9/d0a/texture__system_8c.html#a94229d7d8c2e06fabb2d9e3c2296599e" title=" " alt="" coords="169,237,347,265"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="90,160,218,228,213,231,89,166"/>
+<area shape="rect" id="Node000020" href="$d9/d0a/texture__system_8c.html#ae9e13f5483fd272b9430ca11719164e4" title=" " alt="" coords="182,289,334,334"/>
+<area shape="poly" id="edge22_Node000001_Node000020" title=" " alt="" coords="71,160,109,216,135,247,166,274,174,281,168,281,163,279,132,251,105,219,70,166"/>
+<area shape="rect" id="Node000003" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="399,5,573,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="317,17,385,18,381,20,319,22"/>
+<area shape="rect" id="Node000008" href="$d8/de9/hashtable_8c.html#abc39f8ea1cbed6f616ea660f9f00b876" title="Obtains a copy of data present in the hashtable. Only use for tables which were NOT created with is_p..." alt="" coords="430,263,543,290"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="347,258,417,268,411,269,347,264"/>
+<area shape="rect" id="Node000012" href="$d8/de9/hashtable_8c.html#a33773f5004b2ecc9a3af543ba2e52c60" title="Stores a copy of the data in value into the provided hashtable. Only use for tables which were NOT cr..." alt="" coords="430,315,542,342"/>
+<area shape="poly" id="edge11_Node000007_Node000012" title=" " alt="" coords="319,263,352,274,400,299,421,309,416,309,398,304,350,279,319,268"/>
+<area shape="rect" id="Node000013" href="$d9/d0a/texture__system_8c.html#ac691176afc7122b609671e77b157ae2f" title=" " alt="" coords="434,211,538,238"/>
+<area shape="poly" id="edge14_Node000007_Node000013" title=" " alt="" coords="346,238,422,231,416,233,348,243"/>
+<area shape="rect" id="Node000019" href="$d6/d19/kstring_8c.html#a148b565b9af89efb432a895868c1e4d1" title=" " alt="" coords="430,367,542,394"/>
+<area shape="poly" id="edge21_Node000007_Node000019" title=" " alt="" coords="332,263,353,274,370,294,378,314,385,333,401,352,418,365,413,363,397,356,380,336,373,316,365,297,349,279,331,268"/>
+<area shape="rect" id="Node000009" href="$d8/de9/hashtable_8c.html#a69977851e8a85a621f7bd49b66405f3c" title=" " alt="" coords="666,315,763,342"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="543,287,654,314,648,314,543,292"/>
+<area shape="rect" id="Node000010" href="$d3/d3c/kmemory_8c.html#ae88e143a36677919fee16bdf0f11bc79" title=" " alt="" coords="653,367,776,394"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="544,287,575,301,590,314,599,327,608,340,623,352,641,363,636,362,620,356,604,343,595,330,586,318,572,305,543,292"/>
+<area shape="rect" id="Node000011" href="$de/d03/platform_8h.html#a15258bb22b902725b1fbf405463ed07d" title=" " alt="" coords="856,367,1033,394"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="776,378,843,380,837,381,776,383"/>
+<area shape="poly" id="edge12_Node000012_Node000009" title=" " alt="" coords="543,326,653,328,648,329,543,331"/>
+<area shape="poly" id="edge13_Node000012_Node000010" title=" " alt="" coords="543,339,641,363,635,363,542,344"/>
+<area shape="poly" id="edge20_Node000013_Node000006" title=" " alt="" coords="537,210,555,202,571,191,588,167,594,143,601,118,620,93,645,81,650,79,623,97,606,120,599,144,593,169,575,194,558,206,539,215"/>
+<area shape="rect" id="Node000014" href="$d0/dcc/renderer__frontend_8c.html#a576891b6b0f8e2de38a5c6def3823db9" title=" " alt="" coords="625,107,804,134"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="535,208,572,190,586,179,595,168,605,156,620,145,632,142,637,139,623,149,608,160,599,171,590,183,575,195,537,213"/>
+<area shape="rect" id="Node000015" href="$d0/dcc/renderer__frontend_8c.html#a07cb43f363df0240af713c483b72308f" title=" " alt="" coords="621,159,808,186"/>
+<area shape="poly" id="edge16_Node000013_Node000015" title=" " alt="" coords="537,210,638,190,633,191,539,215"/>
+<area shape="rect" id="Node000016" href="$d2/d8b/resource__system_8c.html#a6ca971dda0f7cd6545a27e30ae63e46d" title=" " alt="" coords="631,211,798,238"/>
+<area shape="poly" id="edge17_Node000013_Node000016" title=" " alt="" coords="538,222,618,224,613,225,538,227"/>
+<area shape="rect" id="Node000018" href="$d2/d8b/resource__system_8c.html#af2ee144059d829688ff5cfe7806ddeac" title=" " alt="" coords="623,263,806,290"/>
+<area shape="poly" id="edge19_Node000013_Node000018" title=" " alt="" coords="538,234,638,258,633,259,538,239"/>
+<area shape="rect" id="Node000017" href="$d2/d8b/resource__system_8c.html#add0733bf358721495904be57107031d6" title=" " alt="" coords="920,211,969,238"/>
+<area shape="poly" id="edge18_Node000016_Node000017" title=" " alt="" coords="798,222,907,224,901,225,799,227"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="vulkan_command_buffer_allocate" name="vulkan_command_buffer_allocate">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,187,50"/>
+<area shape="rect" id="Node000002" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="235,14,354,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,25,222,27,217,28,187,30"/>
+<area shape="rect" id="Node000003" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="402,14,576,42"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="354,25,389,28,384,28,354,30"/>
+</map>

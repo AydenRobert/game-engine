@@ -1,0 +1,31 @@
+\doxysection{freelist.\+h}
+\hypertarget{freelist_8h_source}{}\label{freelist_8h_source}\index{engine/src/containers/freelist.h@{engine/src/containers/freelist.h}}
+\mbox{\hyperlink{freelist_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structfreelist}{freelist}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structfreelist_a2df21c2cd2c4911d1fc19c11ab2b9b80}{memory}};}
+\DoxyCodeLine{00020\ \}\ \mbox{\hyperlink{structfreelist}{freelist}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00033\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{freelist_8h_ab2a44ec57fad9581a0c6319add25af0e}{freelist\_create}}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ total\_size,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ *memory\_requirement,\ \textcolor{keywordtype}{void}\ *memory,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structfreelist}{freelist}}\ *out\_list);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{freelist_8h_a31107721babf173d7e69145a71ff53b6}{freelist\_destroy}}(\mbox{\hyperlink{structfreelist}{freelist}}\ *list);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00051\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{freelist_8h_aee289832875a508505ed34b1f950e3b1}{freelist\_allocate\_block}}(\mbox{\hyperlink{structfreelist}{freelist}}\ *list,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ size,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ *out\_offset);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00061\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{freelist_8h_a5a73ca629d52e3213e3272dbd5bad562}{freelist\_free\_block}}(\mbox{\hyperlink{structfreelist}{freelist}}\ *list,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ size,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ offset);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00077\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{freelist_8h_a2a20fde443ef16390e47d2bafe41ea16}{freelist\_resize}}(\mbox{\hyperlink{structfreelist}{freelist}}\ *list,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ *memory\_requirement,}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *new\_memory,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ new\_size,\ \textcolor{keywordtype}{void}\ **out\_old\_memory);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{freelist_8h_a72515cfe15cb2bc6918590c93a4fc924}{freelist\_clear}}(\mbox{\hyperlink{structfreelist}{freelist}}\ *list);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00093\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{freelist_8h_af42df2c74093d0e5e017051079dc9c34}{freelist\_free\_space}}(\mbox{\hyperlink{structfreelist}{freelist}}\ *list);}
+
+\end{DoxyCode}

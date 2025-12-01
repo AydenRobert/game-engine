@@ -1,0 +1,19 @@
+<map id="material_loader_unload" name="material_loader_unload">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,84,181,112"/>
+<area shape="rect" id="Node000002" href="$dc/dfb/loader__utils_8c.html#a11867f22fab9baa82abfc58defcbffc2" title=" " alt="" coords="229,84,357,112"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,95,216,97,210,98,181,100"/>
+<area shape="rect" id="Node000003" href="$d3/d3c/kmemory_8c.html#a6b55b65a2f2d473dac0d8ff4605a44fb" title=" " alt="" coords="430,57,486,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="357,85,412,78,418,78,358,90"/>
+<area shape="rect" id="Node000009" href="$d6/d19/kstring_8c.html#a3ac8f7f54a3429135da71637d268e6c9" title=" " alt="" coords="405,109,511,137"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="358,105,392,113,387,113,357,110"/>
+<area shape="rect" id="Node000004" href="$dd/d44/dynamic__allocator_8c.html#a10c3c742d3900e743f85fe47c11be3e5" title="Frees a block of memory that was allocated by the allocator." alt="" coords="559,32,734,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="486,65,547,59,541,60,487,70"/>
+<area shape="rect" id="Node000008" href="$de/d03/platform_8h.html#a0b638fcfa31e0704eb976a8662c095f2" title=" " alt="" coords="591,84,702,112"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="487,72,579,88,573,88,486,78"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#a8af32093da394b6cfa1a3436b8e84283" title="Attempts to find a free block of memory given the size." alt="" coords="782,32,924,60"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="734,43,769,46,763,46,734,48"/>
+<area shape="rect" id="Node000006" href="$da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df" title=" " alt="" coords="981,5,1062,33"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="924,32,963,28,968,28,925,37"/>
+<area shape="rect" id="Node000007" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="972,57,1071,85"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="925,54,959,62,954,61,925,59"/>
+</map>

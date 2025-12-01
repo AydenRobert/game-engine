@@ -1,0 +1,5 @@
+<map id="filesystem_read_all_bytes" name="filesystem_read_all_bytes">
+<area shape="rect" id="Node000001" title="Reads all bytes of a file." alt="" coords="5,5,154,50"/>
+<area shape="rect" id="Node000002" href="$df/d45/filesystem_8c.html#ab492be8141f382a58e52a81018eaecbc" title="Attempts to read the size of the file to which the handle is attatched." alt="" coords="202,14,324,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,25,189,27,184,28,154,30"/>
+</map>

@@ -53,10 +53,10 @@ LINKER_FLAGS_TESTBED = -lvulkan -ldl -L$(BIN_DIR) -l$(ENGINE_NAME) -Wl,-rpath,'$
 
 # === Targets ===
 
-.PHONY: all clean engine testbed shaders tests run_tests
+.PHONY: all clean engine testbed shaders tests run_tests docs
 
 # Default build: everything
-all: $(ENGINE_TARGET) $(TESTBED_TARGET) shaders $(TESTS_TARGET) run_tests
+all: $(ENGINE_TARGET) $(TESTBED_TARGET) shaders $(TESTS_TARGET) run_tests docs
 
 # --- ENGINE (.so library) ---
 engine: $(ENGINE_TARGET)
@@ -101,13 +101,17 @@ run_tests: $(TESTS_TARGET)
 	@echo "Running tests..."
 	@$(BIN_DIR)/$(TESTS_NAME)
 
-# --- Shaders (GLSL -> SPIR-V In Place) ---
-# Rule: shader.vert -> shader.vert.spv
 %.spv: %
 	@echo "Compiling shader $< -> $@"
 	$(VULKAN_SDK)/bin/glslc -o $@ $<
 
 shaders: $(SHADER_OUTPUTS)
+
+# --- DOCS ---
+docs:
+	@echo "Generating documentation..."
+	doxygen Doxyfile
+	@echo "Docs available at docs/html/index.html"
 
 # --- Clean ---
 clean:

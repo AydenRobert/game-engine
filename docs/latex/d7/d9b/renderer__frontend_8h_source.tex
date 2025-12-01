@@ -1,0 +1,36 @@
+\doxysection{renderer\+\_\+frontend.\+h}
+\hypertarget{renderer__frontend_8h_source}{}\label{renderer__frontend_8h_source}\index{engine/src/renderer/renderer\_frontend.h@{engine/src/renderer/renderer\_frontend.h}}
+\mbox{\hyperlink{renderer__frontend_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{renderer__types_8inl}{renderer/renderer\_types.inl}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{struct\ }static\_mesh\_data;}
+\DoxyCodeLine{00006\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structplatform__state}{platform\_state}};}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{renderer__frontend_8h_a389fec0dabe6589332ed60bb427aaaef}{renderer\_initialize}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *application\_name,}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structplatform__state}{platform\_state}}\ *plat\_state,}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ *memory\_requirement,\ \textcolor{keywordtype}{void}\ *state);}
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{renderer__frontend_8h_afca1d9aa7e07852bc4a437e2a55ebbb6}{renderer\_shutdown}}(\textcolor{keywordtype}{void}\ *state);}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{renderer__frontend_8h_a132251baefe2198eda971cb071ab0bdd}{renderer\_on\_resize}}(\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}\ width,\ \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}\ height);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{renderer__frontend_8h_aa1a64974ce989cb8a822d5910e45eeec}{renderer\_draw\_frame}}(\mbox{\hyperlink{structrender__packet}{render\_packet}}\ *packet);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{renderer__frontend_8h_a576891b6b0f8e2de38a5c6def3823db9}{renderer\_create\_texture}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ *pixels,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structtexture}{texture}}\ *\mbox{\hyperlink{structtexture}{texture}});}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{renderer__frontend_8h_a07cb43f363df0240af713c483b72308f}{renderer\_destroy\_texture}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structtexture}{texture}}\ *\mbox{\hyperlink{structtexture}{texture}});}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{renderer__frontend_8h_a4683817d4b1b2113b0df7662150a0fc5}{renderer\_create\_material}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structmaterial}{material}}\ *\mbox{\hyperlink{structmaterial}{material}});}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{renderer__frontend_8h_ad87ce9fe4eeb5fb97c77edec9ab84d7a}{renderer\_destroy\_material}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structmaterial}{material}}\ *\mbox{\hyperlink{structmaterial}{material}});}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{renderer__frontend_8h_af97c5fd395a40f2dd026c72e14d45b62}{renderer\_create\_geometry}}(\mbox{\hyperlink{structgeometry}{geometry}}\ *\mbox{\hyperlink{structgeometry}{geometry}},\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ vertex\_size,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ vertex\_count,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *vertices,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ index\_size,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ index\_count,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *indices);}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{renderer__frontend_8h_a0ce11f2f9b370fcce3c0aec4667d6a2b}{renderer\_destroy\_geometry}}(\mbox{\hyperlink{structgeometry}{geometry}}\ *\mbox{\hyperlink{structgeometry}{geometry}});}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ HACK:\ this\ should\ not\ be\ exposed\ outside\ the\ engine}}
+\DoxyCodeLine{00030\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{renderer__frontend_8h_a2cdc1a0a88cbb69abe8544ea792134ab}{renderer\_set\_view}}(\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ view);}
+
+\end{DoxyCode}

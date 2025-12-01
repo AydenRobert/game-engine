@@ -1,0 +1,28 @@
+\doxysection{dynamic\+\_\+allocator.\+h}
+\hypertarget{dynamic__allocator_8h_source}{}\label{dynamic__allocator_8h_source}\index{engine/src/memory/dynamic\_allocator.h@{engine/src/memory/dynamic\_allocator.h}}
+\mbox{\hyperlink{dynamic__allocator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdynamic__allocator}{dynamic\_allocator}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structdynamic__allocator_ae140f8a9ea8723a4b8265b79cc32e404}{memory}};}
+\DoxyCodeLine{00018\ \}\ \mbox{\hyperlink{structdynamic__allocator}{dynamic\_allocator}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00032\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{dynamic__allocator_8h_abab35ff2360ba32d9765f5616a9ca5ef}{dynamic\_allocator\_create}}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ total\_size,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ *memory\_requirement,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *memory,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structdynamic__allocator}{dynamic\_allocator}}\ *out\_allocator);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{dynamic__allocator_8h_a7b36e5dd77cd9841dfc2e58fa0cbaaac}{dynamic\_allocator\_destroy}}(\mbox{\hyperlink{structdynamic__allocator}{dynamic\_allocator}}\ *allocator);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00051\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{dynamic__allocator_8h_a5fef1d1a70b9955033b43f3025afa4fb}{dynamic\_allocator\_allocate}}(\mbox{\hyperlink{structdynamic__allocator}{dynamic\_allocator}}\ *allocator,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ size);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00061\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{dynamic__allocator_8h_a121314924107b7f06d31c5f7433844cc}{dynamic\_allocator\_free}}(\mbox{\hyperlink{structdynamic__allocator}{dynamic\_allocator}}\ *allocator,\ \textcolor{keywordtype}{void}\ *block,}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ size);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{dynamic__allocator_8h_ad8c12386fc1052f977128713a035ff53}{dynamic\_allocator\_free\_space}}(\mbox{\hyperlink{structdynamic__allocator}{dynamic\_allocator}}\ *allocator);}
+
+\end{DoxyCode}

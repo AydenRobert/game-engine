@@ -1,0 +1,152 @@
+\doxysection{engine/src/memory/linear\+\_\+allocator.c File Reference}
+\hypertarget{linear__allocator_8c}{}\label{linear__allocator_8c}\index{engine/src/memory/linear\_allocator.c@{engine/src/memory/linear\_allocator.c}}
+{\ttfamily \#include "{}memory/linear\+\_\+allocator.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}core/logger.\+h"{}}\newline
+Include dependency graph for linear\+\_\+allocator.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d56/linear__allocator_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structinternal__state}{internal\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct internal\+\_\+state \mbox{\hyperlink{linear__allocator_8c_ab35b1ac13b18e76e3d842850f13337cc}{internal\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{linear__allocator_8c_a34370b39436b1e210744f2a117255dd2}{linear\+\_\+allocator\+\_\+create}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} total\+\_\+size, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}memory\+\_\+requirement, void \texorpdfstring{$\ast$}{*}memory, \mbox{\hyperlink{structlinear__allocator}{linear\+\_\+allocator}} \texorpdfstring{$\ast$}{*}out\+\_\+allocator)
+\begin{DoxyCompactList}\small\item\em Creates a \doxylink{structlinear__allocator}{linear\+\_\+allocator} struct. Use twice; first to get memory allocation requirement, second to create struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{linear__allocator_8c_a58161e69b409530adf4f9a925d10cfcc}{linear\+\_\+allocator\+\_\+destroy}} (\mbox{\hyperlink{structlinear__allocator}{linear\+\_\+allocator}} \texorpdfstring{$\ast$}{*}allocator)
+\begin{DoxyCompactList}\small\item\em Destroys the linear allocator struct. Does not own memory, and does not destroy memory. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linear__allocator_8c_a7590ba4869cfe39a3ed92923af39c5b1}{linear\+\_\+allocator\+\_\+allocate}} (\mbox{\hyperlink{structlinear__allocator}{linear\+\_\+allocator}} \texorpdfstring{$\ast$}{*}allocator, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} alignment)
+\begin{DoxyCompactList}\small\item\em Allocates memory within the allocator\textquotesingle{}s block of memory with padding to allow for alignment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{linear__allocator_8c_a92df78f169decacd209ca69c6e1252cd}{linear\+\_\+allocator\+\_\+free\+\_\+all}} (\mbox{\hyperlink{structlinear__allocator}{linear\+\_\+allocator}} \texorpdfstring{$\ast$}{*}allocator)
+\begin{DoxyCompactList}\small\item\em Resets the \doxylink{structlinear__allocator}{linear\+\_\+allocator} struct and zeros out memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{linear__allocator_8c_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{linear__allocator_8c_ab35b1ac13b18e76e3d842850f13337cc}\index{linear\_allocator.c@{linear\_allocator.c}!internal\_state@{internal\_state}}
+\index{internal\_state@{internal\_state}!linear\_allocator.c@{linear\_allocator.c}}
+\doxysubsubsection{\texorpdfstring{internal\_state}{internal\_state}}
+{\footnotesize\ttfamily \label{linear__allocator_8c_ab35b1ac13b18e76e3d842850f13337cc} 
+typedef struct internal\+\_\+state internal\+\_\+state}
+
+
+
+\label{doc-func-members}
+\Hypertarget{linear__allocator_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{linear__allocator_8c_a7590ba4869cfe39a3ed92923af39c5b1}\index{linear\_allocator.c@{linear\_allocator.c}!linear\_allocator\_allocate@{linear\_allocator\_allocate}}
+\index{linear\_allocator\_allocate@{linear\_allocator\_allocate}!linear\_allocator.c@{linear\_allocator.c}}
+\doxysubsubsection{\texorpdfstring{linear\_allocator\_allocate()}{linear\_allocator\_allocate()}}
+{\footnotesize\ttfamily \label{linear__allocator_8c_a7590ba4869cfe39a3ed92923af39c5b1} 
+void \texorpdfstring{$\ast$}{*} linear\+\_\+allocator\+\_\+allocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinear__allocator}{linear\+\_\+allocator}} \texorpdfstring{$\ast$}{*}}]{allocator}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{alignment}{}\end{DoxyParamCaption})}
+
+
+
+Allocates memory within the allocator\textquotesingle{}s block of memory with padding to allow for alignment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & A pointer to the allocator struct. \\
+\hline
+{\em size} & The size of the memory wanting to be allocated. \\
+\hline
+{\em alignment} & What to align on, has to be a power of 2. Cannot be zero. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d4e/linear__allocator_8c_a7590ba4869cfe39a3ed92923af39c5b1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linear__allocator_8c_a34370b39436b1e210744f2a117255dd2}\index{linear\_allocator.c@{linear\_allocator.c}!linear\_allocator\_create@{linear\_allocator\_create}}
+\index{linear\_allocator\_create@{linear\_allocator\_create}!linear\_allocator.c@{linear\_allocator.c}}
+\doxysubsubsection{\texorpdfstring{linear\_allocator\_create()}{linear\_allocator\_create()}}
+{\footnotesize\ttfamily \label{linear__allocator_8c_a34370b39436b1e210744f2a117255dd2} 
+void linear\+\_\+allocator\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{total\+\_\+size}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{memory\+\_\+requirement}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{memory}{, }\item[{\mbox{\hyperlink{structlinear__allocator}{linear\+\_\+allocator}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+allocator}{}\end{DoxyParamCaption})}
+
+
+
+Creates a \doxylink{structlinear__allocator}{linear\+\_\+allocator} struct. Use twice; first to get memory allocation requirement, second to create struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+\_\+size} & Size of memory to manage. \\
+\hline
+{\em memory\+\_\+requirment} & A pointer to store the total memory needed. \\
+\hline
+{\em memory} & A pointer to the memory, or 0. \\
+\hline
+{\em out\+\_\+allocator} & A pointer to the allocator. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d4e/linear__allocator_8c_a34370b39436b1e210744f2a117255dd2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linear__allocator_8c_a58161e69b409530adf4f9a925d10cfcc}\index{linear\_allocator.c@{linear\_allocator.c}!linear\_allocator\_destroy@{linear\_allocator\_destroy}}
+\index{linear\_allocator\_destroy@{linear\_allocator\_destroy}!linear\_allocator.c@{linear\_allocator.c}}
+\doxysubsubsection{\texorpdfstring{linear\_allocator\_destroy()}{linear\_allocator\_destroy()}}
+{\footnotesize\ttfamily \label{linear__allocator_8c_a58161e69b409530adf4f9a925d10cfcc} 
+void linear\+\_\+allocator\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinear__allocator}{linear\+\_\+allocator}} \texorpdfstring{$\ast$}{*}}]{allocator}{}\end{DoxyParamCaption})}
+
+
+
+Destroys the linear allocator struct. Does not own memory, and does not destroy memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & A pointer to the allocator struct. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d4e/linear__allocator_8c_a58161e69b409530adf4f9a925d10cfcc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linear__allocator_8c_a92df78f169decacd209ca69c6e1252cd}\index{linear\_allocator.c@{linear\_allocator.c}!linear\_allocator\_free\_all@{linear\_allocator\_free\_all}}
+\index{linear\_allocator\_free\_all@{linear\_allocator\_free\_all}!linear\_allocator.c@{linear\_allocator.c}}
+\doxysubsubsection{\texorpdfstring{linear\_allocator\_free\_all()}{linear\_allocator\_free\_all()}}
+{\footnotesize\ttfamily \label{linear__allocator_8c_a92df78f169decacd209ca69c6e1252cd} 
+void linear\+\_\+allocator\+\_\+free\+\_\+all (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinear__allocator}{linear\+\_\+allocator}} \texorpdfstring{$\ast$}{*}}]{allocator}{}\end{DoxyParamCaption})}
+
+
+
+Resets the \doxylink{structlinear__allocator}{linear\+\_\+allocator} struct and zeros out memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & A pointer to the allocator struct. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d4e/linear__allocator_8c_a92df78f169decacd209ca69c6e1252cd_cgraph}
+\end{center}
+\end{figure}

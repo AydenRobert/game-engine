@@ -1,0 +1,9 @@
+<map id="dynamic_allocator_create" name="dynamic_allocator_create">
+<area shape="rect" id="Node000001" title="Creates a dynamic allocator. Should be called twice; once to get the memory requirement,..." alt="" coords="5,5,195,33"/>
+<area shape="rect" id="Node000002" href="$da/d3f/freelist_8c.html#a35b2b1bfb7b00a27b847ba5c00cd4826" title="Creates a new freelist or gets the memory requirement for one. Call twice; first passing 0 to memory ..." alt="" coords="243,5,358,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,17,230,19,225,19,195,22"/>
+<area shape="rect" id="Node000003" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="406,5,525,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="359,17,393,19,388,19,359,22"/>
+<area shape="rect" id="Node000004" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="573,5,748,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="526,17,561,19,555,19,526,22"/>
+</map>

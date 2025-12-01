@@ -1,0 +1,11 @@
+<map id="engine/src/renderer/vulkan/vulkan_buffer.h" name="engine/src/renderer/vulkan/vulkan_buffer.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="301,5,472,50"/>
+<area shape="rect" id="Node000002" href="$d2/d8c/vulkan__material__shader_8c.html" title=" " alt="" coords="5,98,176,160"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="305,56,177,102,175,96,310,54"/>
+<area shape="rect" id="Node000003" href="$da/d35/vulkan__ui__shader_8c.html" title=" " alt="" coords="200,98,370,160"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="356,60,317,100,315,95,351,62"/>
+<area shape="rect" id="Node000004" href="$d1/da5/vulkan__backend_8c.html" title=" " alt="" coords="394,106,582,151"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="420,58,469,107,463,106,418,63"/>
+<area shape="rect" id="Node000005" href="$db/dab/vulkan__buffer_8c.html" title=" " alt="" coords="605,106,776,151"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="468,53,627,106,621,106,467,58"/>
+</map>

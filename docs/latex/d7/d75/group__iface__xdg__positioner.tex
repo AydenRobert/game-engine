@@ -1,0 +1,310 @@
+\doxysection{The xdg\+\_\+positioner interface }
+\hypertarget{group__iface__xdg__positioner}{}\label{group__iface__xdg__positioner}\index{The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__positioner_ga3d18b7208aa266eec54f1a437dd42e33}{XDG\+\_\+\+POSITIONER\+\_\+\+DESTROY\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__positioner_gab6e7b1104a2309ded8c722bac5038ed6}{XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+SIZE\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__positioner_ga3ef0d821776d545ab84686b99945a3af}{XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+ANCHOR\+\_\+\+RECT\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__positioner_ga0bd68e1dbaf738c942d963f337a26509}{XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+ANCHOR\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__positioner_gafe5bf03fc03e051d0a798f6fd8390593}{XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+GRAVITY\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__positioner_gaf1a789c9b8987c2d620c788d677fa593}{XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__positioner_gaaa1a3683222a7fdb004f4f19eca50b84}{XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+OFFSET\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__positioner_gacb16ae69f785d4e1d120dab025023b4e}{XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+REACTIVE\+\_\+\+SINCE\+\_\+\+VERSION}}~3
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__positioner_ga8c6be97f1cf9fcb2cf800f50c0c66d8a}{XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+PARENT\+\_\+\+SIZE\+\_\+\+SINCE\+\_\+\+VERSION}}~3
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__positioner_ga093d5cdbfd183567f68e2a893191b417}{XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+PARENT\+\_\+\+CONFIGURE\+\_\+\+SINCE\+\_\+\+VERSION}}~3
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__iface__xdg__positioner_ga2d4543f555d079de131eb49d7787c85f}{xdg\+\_\+positioner\+\_\+constraint\+\_\+adjustment}} \{ \newline
+\mbox{\hyperlink{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa44f1660f28048349487c7cbace5d2d3e}{XDG\+\_\+\+POSITIONER\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+NONE}} = 0
+, \mbox{\hyperlink{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa3169ca4e42d1143b7f906af6b0378969}{XDG\+\_\+\+POSITIONER\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+SLIDE\+\_\+X}} = 1
+, \mbox{\hyperlink{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa066357a9a6de591a0a2696597d857e91}{XDG\+\_\+\+POSITIONER\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+SLIDE\+\_\+Y}} = 2
+, \mbox{\hyperlink{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa8e0c3271b0c560c5121ca99b6f8c65b7}{XDG\+\_\+\+POSITIONER\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+FLIP\+\_\+X}} = 4
+, \newline
+\mbox{\hyperlink{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa4015c1eade9d716c59e1a8209a7fde6a}{XDG\+\_\+\+POSITIONER\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+FLIP\+\_\+Y}} = 8
+, \mbox{\hyperlink{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa3905454c90089d34fe80470a8dad7f36}{XDG\+\_\+\+POSITIONER\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+RESIZE\+\_\+X}} = 16
+, \mbox{\hyperlink{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85facb0dac66328d3e4a82437dd2978210db}{XDG\+\_\+\+POSITIONER\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+RESIZE\+\_\+Y}} = 32
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__positioner_gaf85d8cc991344c82a8fab4dc9755076f}{xdg\+\_\+positioner\+\_\+set\+\_\+user\+\_\+data}} (struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}xdg\+\_\+positioner, void \texorpdfstring{$\ast$}{*}user\+\_\+data)
+\item 
+static void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__iface__xdg__positioner_ga2ecf2ae9597b49ef40f46a330eccc92a}{xdg\+\_\+positioner\+\_\+get\+\_\+user\+\_\+data}} (struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}xdg\+\_\+positioner)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__positioner_ga4480bbe5bc6f1deb96e21c5e0f0b7de3}{xdg\+\_\+positioner\+\_\+destroy}} (struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}xdg\+\_\+positioner)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__positioner_gad28f21dd8d1fa33338928b477aa16ab1}{xdg\+\_\+positioner\+\_\+set\+\_\+size}} (struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}xdg\+\_\+positioner, int32\+\_\+t width, int32\+\_\+t height)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__positioner_ga87f7cf443c8864a1fedb537223a6cbf6}{xdg\+\_\+positioner\+\_\+set\+\_\+anchor\+\_\+rect}} (struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}xdg\+\_\+positioner, int32\+\_\+t x, int32\+\_\+t y, int32\+\_\+t width, int32\+\_\+t height)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__positioner_gac600cf0ce9cc45c49caf0a7c5d336615}{xdg\+\_\+positioner\+\_\+set\+\_\+anchor}} (struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}xdg\+\_\+positioner, uint32\+\_\+t anchor)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__positioner_gafded3c56c5cd18c3436aa72763d18e3e}{xdg\+\_\+positioner\+\_\+set\+\_\+gravity}} (struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}xdg\+\_\+positioner, uint32\+\_\+t gravity)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__positioner_ga0969ad376c5edd0d28a688c39231712e}{xdg\+\_\+positioner\+\_\+set\+\_\+constraint\+\_\+adjustment}} (struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}xdg\+\_\+positioner, uint32\+\_\+t constraint\+\_\+adjustment)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__positioner_gab92acfa9e0a07c3d3979bcb23181c71d}{xdg\+\_\+positioner\+\_\+set\+\_\+offset}} (struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}xdg\+\_\+positioner, int32\+\_\+t x, int32\+\_\+t y)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__positioner_gac6a4d854184ccac49c75402f99cf4924}{xdg\+\_\+positioner\+\_\+set\+\_\+reactive}} (struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}xdg\+\_\+positioner)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__positioner_gae9d07bd57520696a8062d2237cba1a2b}{xdg\+\_\+positioner\+\_\+set\+\_\+parent\+\_\+size}} (struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}xdg\+\_\+positioner, int32\+\_\+t parent\+\_\+width, int32\+\_\+t parent\+\_\+height)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__positioner_gad540aca61b99146ca605110a39e61e75}{xdg\+\_\+positioner\+\_\+set\+\_\+parent\+\_\+configure}} (struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}xdg\+\_\+positioner, uint32\+\_\+t serial)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The xdg\+\_\+positioner provides a collection of rules for the placement of a child surface relative to a parent surface. Rules can be defined to ensure the child surface remains within the visible area\textquotesingle{}s borders, and to specify how the child surface changes its position, such as sliding along an axis, or flipping around a rectangle. These positioner-\/created rules are constrained by the requirement that a child surface must intersect with or be at least partially adjacent to its parent surface.
+
+See the various requests for details about possible rules.
+
+At the time of the request, the compositor makes a copy of the rules specified by the xdg\+\_\+positioner. Thus, after the request is complete the xdg\+\_\+positioner object can be destroyed or reused; further changes to the object will have no effect on previous usages.
+
+For an xdg\+\_\+positioner object to be considered complete, it must have a non-\/zero size set by set\+\_\+size, and a non-\/zero anchor rectangle set by set\+\_\+anchor\+\_\+rect. Passing an incomplete xdg\+\_\+positioner object when positioning a surface raises an invalid\+\_\+positioner error. 
+
+\label{doc-define-members}
+\Hypertarget{group__iface__xdg__positioner_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{group__iface__xdg__positioner_ga3d18b7208aa266eec54f1a437dd42e33}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_DESTROY\_SINCE\_VERSION@{XDG\_POSITIONER\_DESTROY\_SINCE\_VERSION}}
+\index{XDG\_POSITIONER\_DESTROY\_SINCE\_VERSION@{XDG\_POSITIONER\_DESTROY\_SINCE\_VERSION}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_POSITIONER\_DESTROY\_SINCE\_VERSION}{XDG\_POSITIONER\_DESTROY\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_ga3d18b7208aa266eec54f1a437dd42e33} 
+\#define XDG\+\_\+\+POSITIONER\+\_\+\+DESTROY\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__positioner_ga3ef0d821776d545ab84686b99945a3af}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_SET\_ANCHOR\_RECT\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_ANCHOR\_RECT\_SINCE\_VERSION}}
+\index{XDG\_POSITIONER\_SET\_ANCHOR\_RECT\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_ANCHOR\_RECT\_SINCE\_VERSION}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_POSITIONER\_SET\_ANCHOR\_RECT\_SINCE\_VERSION}{XDG\_POSITIONER\_SET\_ANCHOR\_RECT\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_ga3ef0d821776d545ab84686b99945a3af} 
+\#define XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+ANCHOR\+\_\+\+RECT\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__positioner_ga0bd68e1dbaf738c942d963f337a26509}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_SET\_ANCHOR\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_ANCHOR\_SINCE\_VERSION}}
+\index{XDG\_POSITIONER\_SET\_ANCHOR\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_ANCHOR\_SINCE\_VERSION}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_POSITIONER\_SET\_ANCHOR\_SINCE\_VERSION}{XDG\_POSITIONER\_SET\_ANCHOR\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_ga0bd68e1dbaf738c942d963f337a26509} 
+\#define XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+ANCHOR\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__positioner_gaf1a789c9b8987c2d620c788d677fa593}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_SET\_CONSTRAINT\_ADJUSTMENT\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_CONSTRAINT\_ADJUSTMENT\_SINCE\_VERSION}}
+\index{XDG\_POSITIONER\_SET\_CONSTRAINT\_ADJUSTMENT\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_CONSTRAINT\_ADJUSTMENT\_SINCE\_VERSION}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_POSITIONER\_SET\_CONSTRAINT\_ADJUSTMENT\_SINCE\_VERSION}{XDG\_POSITIONER\_SET\_CONSTRAINT\_ADJUSTMENT\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_gaf1a789c9b8987c2d620c788d677fa593} 
+\#define XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__positioner_gafe5bf03fc03e051d0a798f6fd8390593}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_SET\_GRAVITY\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_GRAVITY\_SINCE\_VERSION}}
+\index{XDG\_POSITIONER\_SET\_GRAVITY\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_GRAVITY\_SINCE\_VERSION}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_POSITIONER\_SET\_GRAVITY\_SINCE\_VERSION}{XDG\_POSITIONER\_SET\_GRAVITY\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_gafe5bf03fc03e051d0a798f6fd8390593} 
+\#define XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+GRAVITY\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__positioner_gaaa1a3683222a7fdb004f4f19eca50b84}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_SET\_OFFSET\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_OFFSET\_SINCE\_VERSION}}
+\index{XDG\_POSITIONER\_SET\_OFFSET\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_OFFSET\_SINCE\_VERSION}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_POSITIONER\_SET\_OFFSET\_SINCE\_VERSION}{XDG\_POSITIONER\_SET\_OFFSET\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_gaaa1a3683222a7fdb004f4f19eca50b84} 
+\#define XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+OFFSET\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__positioner_ga093d5cdbfd183567f68e2a893191b417}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_SET\_PARENT\_CONFIGURE\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_PARENT\_CONFIGURE\_SINCE\_VERSION}}
+\index{XDG\_POSITIONER\_SET\_PARENT\_CONFIGURE\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_PARENT\_CONFIGURE\_SINCE\_VERSION}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_POSITIONER\_SET\_PARENT\_CONFIGURE\_SINCE\_VERSION}{XDG\_POSITIONER\_SET\_PARENT\_CONFIGURE\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_ga093d5cdbfd183567f68e2a893191b417} 
+\#define XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+PARENT\+\_\+\+CONFIGURE\+\_\+\+SINCE\+\_\+\+VERSION~3}
+
+\Hypertarget{group__iface__xdg__positioner_ga8c6be97f1cf9fcb2cf800f50c0c66d8a}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_SET\_PARENT\_SIZE\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_PARENT\_SIZE\_SINCE\_VERSION}}
+\index{XDG\_POSITIONER\_SET\_PARENT\_SIZE\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_PARENT\_SIZE\_SINCE\_VERSION}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_POSITIONER\_SET\_PARENT\_SIZE\_SINCE\_VERSION}{XDG\_POSITIONER\_SET\_PARENT\_SIZE\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_ga8c6be97f1cf9fcb2cf800f50c0c66d8a} 
+\#define XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+PARENT\+\_\+\+SIZE\+\_\+\+SINCE\+\_\+\+VERSION~3}
+
+\Hypertarget{group__iface__xdg__positioner_gacb16ae69f785d4e1d120dab025023b4e}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_SET\_REACTIVE\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_REACTIVE\_SINCE\_VERSION}}
+\index{XDG\_POSITIONER\_SET\_REACTIVE\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_REACTIVE\_SINCE\_VERSION}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_POSITIONER\_SET\_REACTIVE\_SINCE\_VERSION}{XDG\_POSITIONER\_SET\_REACTIVE\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_gacb16ae69f785d4e1d120dab025023b4e} 
+\#define XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+REACTIVE\+\_\+\+SINCE\+\_\+\+VERSION~3}
+
+\Hypertarget{group__iface__xdg__positioner_gab6e7b1104a2309ded8c722bac5038ed6}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_SET\_SIZE\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_SIZE\_SINCE\_VERSION}}
+\index{XDG\_POSITIONER\_SET\_SIZE\_SINCE\_VERSION@{XDG\_POSITIONER\_SET\_SIZE\_SINCE\_VERSION}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_POSITIONER\_SET\_SIZE\_SINCE\_VERSION}{XDG\_POSITIONER\_SET\_SIZE\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_gab6e7b1104a2309ded8c722bac5038ed6} 
+\#define XDG\+\_\+\+POSITIONER\+\_\+\+SET\+\_\+\+SIZE\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{group__iface__xdg__positioner_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{group__iface__xdg__positioner_ga2d4543f555d079de131eb49d7787c85f}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!xdg\_positioner\_constraint\_adjustment@{xdg\_positioner\_constraint\_adjustment}}
+\index{xdg\_positioner\_constraint\_adjustment@{xdg\_positioner\_constraint\_adjustment}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_positioner\_constraint\_adjustment}{xdg\_positioner\_constraint\_adjustment}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_ga2d4543f555d079de131eb49d7787c85f} 
+enum \mbox{\hyperlink{group__iface__xdg__positioner_ga2d4543f555d079de131eb49d7787c85f}{xdg\+\_\+positioner\+\_\+constraint\+\_\+adjustment}}}
+
+constraint adjustments
+
+The constraint adjustment value define ways the compositor will adjust the position of the surface, if the unadjusted position would result in the surface being partly constrained.
+
+Whether a surface is considered \textquotesingle{}constrained\textquotesingle{} is left to the compositor to determine. For example, the surface may be partly outside the compositor\textquotesingle{}s defined \textquotesingle{}work area\textquotesingle{}, thus necessitating the child surface\textquotesingle{}s position be adjusted until it is entirely inside the work area.
+
+The adjustments can be combined, according to a defined precedence\+: 1) Flip, 2) Slide, 3) Resize. \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_NONE@{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_NONE}!The xdg\_positioner interface@{The xdg\_positioner interface}}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_NONE@{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_NONE}}}\Hypertarget{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa44f1660f28048349487c7cbace5d2d3e}\label{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa44f1660f28048349487c7cbace5d2d3e} 
+XDG\+\_\+\+POSITIONER\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+NONE&don\textquotesingle{}t move the child surface when constrained
+
+Don\textquotesingle{}t alter the surface position even if it is constrained on some axis, for example partially outside the edge of an output. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_SLIDE\_X@{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_SLIDE\_X}!The xdg\_positioner interface@{The xdg\_positioner interface}}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_SLIDE\_X@{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_SLIDE\_X}}}\Hypertarget{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa3169ca4e42d1143b7f906af6b0378969}\label{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa3169ca4e42d1143b7f906af6b0378969} 
+XDG\+\_\+\+POSITIONER\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+SLIDE\+\_\+X&move along the x axis until unconstrained
+
+Slide the surface along the x axis until it is no longer constrained.
+
+First try to slide towards the direction of the gravity on the x axis until either the edge in the opposite direction of the gravity is unconstrained or the edge in the direction of the gravity is constrained.
+
+Then try to slide towards the opposite direction of the gravity on the x axis until either the edge in the direction of the gravity is unconstrained or the edge in the opposite direction of the gravity is constrained. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_SLIDE\_Y@{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_SLIDE\_Y}!The xdg\_positioner interface@{The xdg\_positioner interface}}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_SLIDE\_Y@{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_SLIDE\_Y}}}\Hypertarget{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa066357a9a6de591a0a2696597d857e91}\label{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa066357a9a6de591a0a2696597d857e91} 
+XDG\+\_\+\+POSITIONER\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+SLIDE\+\_\+Y&move along the y axis until unconstrained
+
+Slide the surface along the y axis until it is no longer constrained.
+
+First try to slide towards the direction of the gravity on the y axis until either the edge in the opposite direction of the gravity is unconstrained or the edge in the direction of the gravity is constrained.
+
+Then try to slide towards the opposite direction of the gravity on the y axis until either the edge in the direction of the gravity is unconstrained or the edge in the opposite direction of the gravity is constrained. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_FLIP\_X@{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_FLIP\_X}!The xdg\_positioner interface@{The xdg\_positioner interface}}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_FLIP\_X@{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_FLIP\_X}}}\Hypertarget{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa8e0c3271b0c560c5121ca99b6f8c65b7}\label{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa8e0c3271b0c560c5121ca99b6f8c65b7} 
+XDG\+\_\+\+POSITIONER\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+FLIP\+\_\+X&invert the anchor and gravity on the x axis
+
+Invert the anchor and gravity on the x axis if the surface is constrained on the x axis. For example, if the left edge of the surface is constrained, the gravity is \textquotesingle{}left\textquotesingle{} and the anchor is \textquotesingle{}left\textquotesingle{}, change the gravity to \textquotesingle{}right\textquotesingle{} and the anchor to \textquotesingle{}right\textquotesingle{}.
+
+If the adjusted position also ends up being constrained, the resulting position of the flip\+\_\+x adjustment will be the one before the adjustment. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_FLIP\_Y@{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_FLIP\_Y}!The xdg\_positioner interface@{The xdg\_positioner interface}}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_FLIP\_Y@{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_FLIP\_Y}}}\Hypertarget{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa4015c1eade9d716c59e1a8209a7fde6a}\label{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa4015c1eade9d716c59e1a8209a7fde6a} 
+XDG\+\_\+\+POSITIONER\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+FLIP\+\_\+Y&invert the anchor and gravity on the y axis
+
+Invert the anchor and gravity on the y axis if the surface is constrained on the y axis. For example, if the bottom edge of the surface is constrained, the gravity is \textquotesingle{}bottom\textquotesingle{} and the anchor is \textquotesingle{}bottom\textquotesingle{}, change the gravity to \textquotesingle{}top\textquotesingle{} and the anchor to \textquotesingle{}top\textquotesingle{}.
+
+The adjusted position is calculated given the original anchor rectangle and offset, but with the new flipped anchor and gravity values.
+
+If the adjusted position also ends up being constrained, the resulting position of the flip\+\_\+y adjustment will be the one before the adjustment. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_RESIZE\_X@{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_RESIZE\_X}!The xdg\_positioner interface@{The xdg\_positioner interface}}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_RESIZE\_X@{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_RESIZE\_X}}}\Hypertarget{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa3905454c90089d34fe80470a8dad7f36}\label{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85fa3905454c90089d34fe80470a8dad7f36} 
+XDG\+\_\+\+POSITIONER\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+RESIZE\+\_\+X&horizontally resize the surface
+
+Resize the surface horizontally so that it is completely unconstrained. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_RESIZE\_Y@{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_RESIZE\_Y}!The xdg\_positioner interface@{The xdg\_positioner interface}}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_RESIZE\_Y@{XDG\_POSITIONER\_CONSTRAINT\_ADJUSTMENT\_RESIZE\_Y}}}\Hypertarget{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85facb0dac66328d3e4a82437dd2978210db}\label{group__iface__xdg__positioner_gga2d4543f555d079de131eb49d7787c85facb0dac66328d3e4a82437dd2978210db} 
+XDG\+\_\+\+POSITIONER\+\_\+\+CONSTRAINT\+\_\+\+ADJUSTMENT\+\_\+\+RESIZE\+\_\+Y&vertically resize the surface
+
+Resize the surface vertically so that it is completely unconstrained. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{group__iface__xdg__positioner_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group__iface__xdg__positioner_ga4480bbe5bc6f1deb96e21c5e0f0b7de3}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!xdg\_positioner\_destroy@{xdg\_positioner\_destroy}}
+\index{xdg\_positioner\_destroy@{xdg\_positioner\_destroy}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_positioner\_destroy()}{xdg\_positioner\_destroy()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_ga4480bbe5bc6f1deb96e21c5e0f0b7de3} 
+void xdg\+\_\+positioner\+\_\+destroy (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+positioner}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Notify the compositor that the xdg\+\_\+positioner will no longer be used. \Hypertarget{group__iface__xdg__positioner_ga2ecf2ae9597b49ef40f46a330eccc92a}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!xdg\_positioner\_get\_user\_data@{xdg\_positioner\_get\_user\_data}}
+\index{xdg\_positioner\_get\_user\_data@{xdg\_positioner\_get\_user\_data}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_positioner\_get\_user\_data()}{xdg\_positioner\_get\_user\_data()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_ga2ecf2ae9597b49ef40f46a330eccc92a} 
+void \texorpdfstring{$\ast$}{*} xdg\+\_\+positioner\+\_\+get\+\_\+user\+\_\+data (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+positioner}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{group__iface__xdg__positioner_gac600cf0ce9cc45c49caf0a7c5d336615}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!xdg\_positioner\_set\_anchor@{xdg\_positioner\_set\_anchor}}
+\index{xdg\_positioner\_set\_anchor@{xdg\_positioner\_set\_anchor}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_positioner\_set\_anchor()}{xdg\_positioner\_set\_anchor()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_gac600cf0ce9cc45c49caf0a7c5d336615} 
+void xdg\+\_\+positioner\+\_\+set\+\_\+anchor (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+positioner}{, }\item[{uint32\+\_\+t}]{anchor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Defines the anchor point for the anchor rectangle. The specified anchor is used derive an anchor point that the child surface will be positioned relative to. If a corner anchor is set (e.\+g. \textquotesingle{}top\+\_\+left\textquotesingle{} or \textquotesingle{}bottom\+\_\+right\textquotesingle{}), the anchor point will be at the specified corner; otherwise, the derived anchor point will be centered on the specified edge, or in the center of the anchor rectangle if no edge is specified. \Hypertarget{group__iface__xdg__positioner_ga87f7cf443c8864a1fedb537223a6cbf6}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!xdg\_positioner\_set\_anchor\_rect@{xdg\_positioner\_set\_anchor\_rect}}
+\index{xdg\_positioner\_set\_anchor\_rect@{xdg\_positioner\_set\_anchor\_rect}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_positioner\_set\_anchor\_rect()}{xdg\_positioner\_set\_anchor\_rect()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_ga87f7cf443c8864a1fedb537223a6cbf6} 
+void xdg\+\_\+positioner\+\_\+set\+\_\+anchor\+\_\+rect (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+positioner}{, }\item[{int32\+\_\+t}]{x}{, }\item[{int32\+\_\+t}]{y}{, }\item[{int32\+\_\+t}]{width}{, }\item[{int32\+\_\+t}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Specify the anchor rectangle within the parent surface that the child surface will be placed relative to. The rectangle is relative to the window geometry as defined by xdg\+\_\+surface.\+set\+\_\+window\+\_\+geometry of the parent surface.
+
+When the xdg\+\_\+positioner object is used to position a child surface, the anchor rectangle may not extend outside the window geometry of the positioned child\textquotesingle{}s parent surface.
+
+If a negative size is set the invalid\+\_\+input error is raised. \Hypertarget{group__iface__xdg__positioner_ga0969ad376c5edd0d28a688c39231712e}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!xdg\_positioner\_set\_constraint\_adjustment@{xdg\_positioner\_set\_constraint\_adjustment}}
+\index{xdg\_positioner\_set\_constraint\_adjustment@{xdg\_positioner\_set\_constraint\_adjustment}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_positioner\_set\_constraint\_adjustment()}{xdg\_positioner\_set\_constraint\_adjustment()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_ga0969ad376c5edd0d28a688c39231712e} 
+void xdg\+\_\+positioner\+\_\+set\+\_\+constraint\+\_\+adjustment (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+positioner}{, }\item[{uint32\+\_\+t}]{constraint\+\_\+adjustment}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Specify how the window should be positioned if the originally intended position caused the surface to be constrained, meaning at least partially outside positioning boundaries set by the compositor. The adjustment is set by constructing a bitmask describing the adjustment to be made when the surface is constrained on that axis.
+
+If no bit for one axis is set, the compositor will assume that the child surface should not change its position on that axis when constrained.
+
+If more than one bit for one axis is set, the order of how adjustments are applied is specified in the corresponding adjustment descriptions.
+
+The default adjustment is none. \Hypertarget{group__iface__xdg__positioner_gafded3c56c5cd18c3436aa72763d18e3e}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!xdg\_positioner\_set\_gravity@{xdg\_positioner\_set\_gravity}}
+\index{xdg\_positioner\_set\_gravity@{xdg\_positioner\_set\_gravity}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_positioner\_set\_gravity()}{xdg\_positioner\_set\_gravity()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_gafded3c56c5cd18c3436aa72763d18e3e} 
+void xdg\+\_\+positioner\+\_\+set\+\_\+gravity (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+positioner}{, }\item[{uint32\+\_\+t}]{gravity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Defines in what direction a surface should be positioned, relative to the anchor point of the parent surface. If a corner gravity is specified (e.\+g. \textquotesingle{}bottom\+\_\+right\textquotesingle{} or \textquotesingle{}top\+\_\+left\textquotesingle{}), then the child surface will be placed towards the specified gravity; otherwise, the child surface will be centered over the anchor point on any axis that had no gravity specified. If the gravity is not in the ‘gravity’ enum, an invalid\+\_\+input error is raised. \Hypertarget{group__iface__xdg__positioner_gab92acfa9e0a07c3d3979bcb23181c71d}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!xdg\_positioner\_set\_offset@{xdg\_positioner\_set\_offset}}
+\index{xdg\_positioner\_set\_offset@{xdg\_positioner\_set\_offset}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_positioner\_set\_offset()}{xdg\_positioner\_set\_offset()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_gab92acfa9e0a07c3d3979bcb23181c71d} 
+void xdg\+\_\+positioner\+\_\+set\+\_\+offset (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+positioner}{, }\item[{int32\+\_\+t}]{x}{, }\item[{int32\+\_\+t}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Specify the surface position offset relative to the position of the anchor on the anchor rectangle and the anchor on the surface. For example if the anchor of the anchor rectangle is at (x, y), the surface has the gravity bottom\texorpdfstring{$\vert$}{|}right, and the offset is (ox, oy), the calculated surface position will be (x + ox, y + oy). The offset position of the surface is the one used for constraint testing. See set\+\_\+constraint\+\_\+adjustment.
+
+An example use case is placing a popup menu on top of a user interface element, while aligning the user interface element of the parent surface with some user interface element placed somewhere in the popup surface. \Hypertarget{group__iface__xdg__positioner_gad540aca61b99146ca605110a39e61e75}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!xdg\_positioner\_set\_parent\_configure@{xdg\_positioner\_set\_parent\_configure}}
+\index{xdg\_positioner\_set\_parent\_configure@{xdg\_positioner\_set\_parent\_configure}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_positioner\_set\_parent\_configure()}{xdg\_positioner\_set\_parent\_configure()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_gad540aca61b99146ca605110a39e61e75} 
+void xdg\+\_\+positioner\+\_\+set\+\_\+parent\+\_\+configure (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+positioner}{, }\item[{uint32\+\_\+t}]{serial}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Set the serial of an xdg\+\_\+surface.\+configure event this positioner will be used in response to. The compositor may use this information together with set\+\_\+parent\+\_\+size to determine what future state the popup should be constrained using. \Hypertarget{group__iface__xdg__positioner_gae9d07bd57520696a8062d2237cba1a2b}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!xdg\_positioner\_set\_parent\_size@{xdg\_positioner\_set\_parent\_size}}
+\index{xdg\_positioner\_set\_parent\_size@{xdg\_positioner\_set\_parent\_size}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_positioner\_set\_parent\_size()}{xdg\_positioner\_set\_parent\_size()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_gae9d07bd57520696a8062d2237cba1a2b} 
+void xdg\+\_\+positioner\+\_\+set\+\_\+parent\+\_\+size (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+positioner}{, }\item[{int32\+\_\+t}]{parent\+\_\+width}{, }\item[{int32\+\_\+t}]{parent\+\_\+height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Set the parent window geometry the compositor should use when positioning the popup. The compositor may use this information to determine the future state the popup should be constrained using. If this doesn\textquotesingle{}t match the dimension of the parent the popup is eventually positioned against, the behavior is undefined.
+
+The arguments are given in the surface-\/local coordinate space. \Hypertarget{group__iface__xdg__positioner_gac6a4d854184ccac49c75402f99cf4924}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!xdg\_positioner\_set\_reactive@{xdg\_positioner\_set\_reactive}}
+\index{xdg\_positioner\_set\_reactive@{xdg\_positioner\_set\_reactive}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_positioner\_set\_reactive()}{xdg\_positioner\_set\_reactive()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_gac6a4d854184ccac49c75402f99cf4924} 
+void xdg\+\_\+positioner\+\_\+set\+\_\+reactive (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+positioner}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+When set reactive, the surface is reconstrained if the conditions used for constraining changed, e.\+g. the parent window moved.
+
+If the conditions changed and the popup was reconstrained, an xdg\+\_\+popup.\+configure event is sent with updated geometry, followed by an xdg\+\_\+surface.\+configure event. \Hypertarget{group__iface__xdg__positioner_gad28f21dd8d1fa33338928b477aa16ab1}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!xdg\_positioner\_set\_size@{xdg\_positioner\_set\_size}}
+\index{xdg\_positioner\_set\_size@{xdg\_positioner\_set\_size}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_positioner\_set\_size()}{xdg\_positioner\_set\_size()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_gad28f21dd8d1fa33338928b477aa16ab1} 
+void xdg\+\_\+positioner\+\_\+set\+\_\+size (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+positioner}{, }\item[{int32\+\_\+t}]{width}{, }\item[{int32\+\_\+t}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Set the size of the surface that is to be positioned with the positioner object. The size is in surface-\/local coordinates and corresponds to the window geometry. See xdg\+\_\+surface.\+set\+\_\+window\+\_\+geometry.
+
+If a zero or negative size is set the invalid\+\_\+input error is raised. \Hypertarget{group__iface__xdg__positioner_gaf85d8cc991344c82a8fab4dc9755076f}\index{The xdg\_positioner interface@{The xdg\_positioner interface}!xdg\_positioner\_set\_user\_data@{xdg\_positioner\_set\_user\_data}}
+\index{xdg\_positioner\_set\_user\_data@{xdg\_positioner\_set\_user\_data}!The xdg\_positioner interface@{The xdg\_positioner interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_positioner\_set\_user\_data()}{xdg\_positioner\_set\_user\_data()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__positioner_gaf85d8cc991344c82a8fab4dc9755076f} 
+void xdg\+\_\+positioner\+\_\+set\+\_\+user\+\_\+data (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+positioner}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+\_\+data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+

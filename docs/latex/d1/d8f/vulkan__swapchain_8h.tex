@@ -1,0 +1,147 @@
+\doxysection{engine/src/renderer/vulkan/vulkan\+\_\+swapchain.h File Reference}
+\hypertarget{vulkan__swapchain_8h}{}\label{vulkan__swapchain_8h}\index{engine/src/renderer/vulkan/vulkan\_swapchain.h@{engine/src/renderer/vulkan/vulkan\_swapchain.h}}
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+types.\+inl"{}}\newline
+Include dependency graph for vulkan\+\_\+swapchain.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dcf/vulkan__swapchain_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d35/vulkan__swapchain_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{vulkan__swapchain_8h_a3385e045032018c37ee427c2caa82bfb}{vulkan\+\_\+swapchain\+\_\+create}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} width, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} height, \mbox{\hyperlink{structvulkan__swapchain}{vulkan\+\_\+swapchain}} \texorpdfstring{$\ast$}{*}out\+\_\+swapchain)
+\item 
+void \mbox{\hyperlink{vulkan__swapchain_8h_a37945527d25893e83ecde0d83f11b550}{vulkan\+\_\+swapchain\+\_\+recreate}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} width, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} height, \mbox{\hyperlink{structvulkan__swapchain}{vulkan\+\_\+swapchain}} \texorpdfstring{$\ast$}{*}swapchain)
+\item 
+void \mbox{\hyperlink{vulkan__swapchain_8h_a6f1b2b14ddf48b8eb0877e9d1192352f}{vulkan\+\_\+swapchain\+\_\+destroy}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{structvulkan__swapchain}{vulkan\+\_\+swapchain}} \texorpdfstring{$\ast$}{*}swapchain)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__swapchain_8h_a559f69815dfb6ccb3a6776516d9025b7}{vulkan\+\_\+swapchain\+\_\+acquire\+\_\+next\+\_\+image\+\_\+index}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{structvulkan__swapchain}{vulkan\+\_\+swapchain}} \texorpdfstring{$\ast$}{*}swapchain, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} timeout\+\_\+ns, Vk\+Semaphore image\+\_\+available\+\_\+semaphore, Vk\+Fence fence, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}out\+\_\+image\+\_\+index)
+\item 
+void \mbox{\hyperlink{vulkan__swapchain_8h_a401617aff019b05a923dcda96f83c958}{vulkan\+\_\+swapchain\+\_\+present}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{structvulkan__swapchain}{vulkan\+\_\+swapchain}} \texorpdfstring{$\ast$}{*}swapchain, Vk\+Queue graphics\+\_\+queue, Vk\+Queue present\+\_\+queue, Vk\+Semaphore render\+\_\+complete\+\_\+semaphore, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} present\+\_\+image\+\_\+index)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{vulkan__swapchain_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{vulkan__swapchain_8h_a559f69815dfb6ccb3a6776516d9025b7}\index{vulkan\_swapchain.h@{vulkan\_swapchain.h}!vulkan\_swapchain\_acquire\_next\_image\_index@{vulkan\_swapchain\_acquire\_next\_image\_index}}
+\index{vulkan\_swapchain\_acquire\_next\_image\_index@{vulkan\_swapchain\_acquire\_next\_image\_index}!vulkan\_swapchain.h@{vulkan\_swapchain.h}}
+\doxysubsubsection{\texorpdfstring{vulkan\_swapchain\_acquire\_next\_image\_index()}{vulkan\_swapchain\_acquire\_next\_image\_index()}}
+{\footnotesize\ttfamily \label{vulkan__swapchain_8h_a559f69815dfb6ccb3a6776516d9025b7} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vulkan\+\_\+swapchain\+\_\+acquire\+\_\+next\+\_\+image\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structvulkan__swapchain}{vulkan\+\_\+swapchain}} \texorpdfstring{$\ast$}{*}}]{swapchain}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{timeout\+\_\+ns}{, }\item[{Vk\+Semaphore}]{image\+\_\+available\+\_\+semaphore}{, }\item[{Vk\+Fence}]{fence}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+image\+\_\+index}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d8f/vulkan__swapchain_8h_a559f69815dfb6ccb3a6776516d9025b7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d8f/vulkan__swapchain_8h_a559f69815dfb6ccb3a6776516d9025b7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__swapchain_8h_a3385e045032018c37ee427c2caa82bfb}\index{vulkan\_swapchain.h@{vulkan\_swapchain.h}!vulkan\_swapchain\_create@{vulkan\_swapchain\_create}}
+\index{vulkan\_swapchain\_create@{vulkan\_swapchain\_create}!vulkan\_swapchain.h@{vulkan\_swapchain.h}}
+\doxysubsubsection{\texorpdfstring{vulkan\_swapchain\_create()}{vulkan\_swapchain\_create()}}
+{\footnotesize\ttfamily \label{vulkan__swapchain_8h_a3385e045032018c37ee427c2caa82bfb} 
+void vulkan\+\_\+swapchain\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{width}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{height}{, }\item[{\mbox{\hyperlink{structvulkan__swapchain}{vulkan\+\_\+swapchain}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+swapchain}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d8f/vulkan__swapchain_8h_a3385e045032018c37ee427c2caa82bfb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d8f/vulkan__swapchain_8h_a3385e045032018c37ee427c2caa82bfb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__swapchain_8h_a6f1b2b14ddf48b8eb0877e9d1192352f}\index{vulkan\_swapchain.h@{vulkan\_swapchain.h}!vulkan\_swapchain\_destroy@{vulkan\_swapchain\_destroy}}
+\index{vulkan\_swapchain\_destroy@{vulkan\_swapchain\_destroy}!vulkan\_swapchain.h@{vulkan\_swapchain.h}}
+\doxysubsubsection{\texorpdfstring{vulkan\_swapchain\_destroy()}{vulkan\_swapchain\_destroy()}}
+{\footnotesize\ttfamily \label{vulkan__swapchain_8h_a6f1b2b14ddf48b8eb0877e9d1192352f} 
+void vulkan\+\_\+swapchain\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structvulkan__swapchain}{vulkan\+\_\+swapchain}} \texorpdfstring{$\ast$}{*}}]{swapchain}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d8f/vulkan__swapchain_8h_a6f1b2b14ddf48b8eb0877e9d1192352f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d8f/vulkan__swapchain_8h_a6f1b2b14ddf48b8eb0877e9d1192352f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__swapchain_8h_a401617aff019b05a923dcda96f83c958}\index{vulkan\_swapchain.h@{vulkan\_swapchain.h}!vulkan\_swapchain\_present@{vulkan\_swapchain\_present}}
+\index{vulkan\_swapchain\_present@{vulkan\_swapchain\_present}!vulkan\_swapchain.h@{vulkan\_swapchain.h}}
+\doxysubsubsection{\texorpdfstring{vulkan\_swapchain\_present()}{vulkan\_swapchain\_present()}}
+{\footnotesize\ttfamily \label{vulkan__swapchain_8h_a401617aff019b05a923dcda96f83c958} 
+void vulkan\+\_\+swapchain\+\_\+present (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structvulkan__swapchain}{vulkan\+\_\+swapchain}} \texorpdfstring{$\ast$}{*}}]{swapchain}{, }\item[{Vk\+Queue}]{graphics\+\_\+queue}{, }\item[{Vk\+Queue}]{present\+\_\+queue}{, }\item[{Vk\+Semaphore}]{render\+\_\+complete\+\_\+semaphore}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{present\+\_\+image\+\_\+index}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d8f/vulkan__swapchain_8h_a401617aff019b05a923dcda96f83c958_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d8f/vulkan__swapchain_8h_a401617aff019b05a923dcda96f83c958_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__swapchain_8h_a37945527d25893e83ecde0d83f11b550}\index{vulkan\_swapchain.h@{vulkan\_swapchain.h}!vulkan\_swapchain\_recreate@{vulkan\_swapchain\_recreate}}
+\index{vulkan\_swapchain\_recreate@{vulkan\_swapchain\_recreate}!vulkan\_swapchain.h@{vulkan\_swapchain.h}}
+\doxysubsubsection{\texorpdfstring{vulkan\_swapchain\_recreate()}{vulkan\_swapchain\_recreate()}}
+{\footnotesize\ttfamily \label{vulkan__swapchain_8h_a37945527d25893e83ecde0d83f11b550} 
+void vulkan\+\_\+swapchain\+\_\+recreate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{width}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{height}{, }\item[{\mbox{\hyperlink{structvulkan__swapchain}{vulkan\+\_\+swapchain}} \texorpdfstring{$\ast$}{*}}]{swapchain}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d8f/vulkan__swapchain_8h_a37945527d25893e83ecde0d83f11b550_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d8f/vulkan__swapchain_8h_a37945527d25893e83ecde0d83f11b550_icgraph}
+\end{center}
+\end{figure}

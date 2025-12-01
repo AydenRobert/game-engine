@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['data_0',['data',['../d8/d95/structevent__context.html#aa6a1245be39596b3345111470dd4889f',1,'event_context::data'],['../d6/d3a/unionmat4__u.html#a6620223582f7ff7804fb7bf579d06d32',1,'mat4_u::data'],['../db/dde/structresource.html#a6d2c86769bb2ec68a0087e5a0175d276',1,'resource::data']]],
+  ['data_5fsize_1',['data_size',['../db/dde/structresource.html#aa5e7f8e92bce1c6f990f044570f4a814',1,'resource']]],
+  ['default_5f2d_5fgeometry_2',['default_2d_geometry',['../d7/d9b/structgeometry__system__state.html#a2fac0acdb7ceb58a16e8393bb1cdccb4',1,'geometry_system_state']]],
+  ['default_5f3d_5fgeometry_3',['default_3d_geometry',['../d7/d9b/structgeometry__system__state.html#a8a043d48da48cff7152a68a803449c31',1,'geometry_system_state']]],
+  ['default_5fmaterial_4',['default_material',['../d2/dc7/structmaterial__system__state.html#a21267f8e6c6a0aeda6c81fe298ed5b8d',1,'material_system_state']]],
+  ['default_5ftexture_5',['default_texture',['../d2/df9/structtexture__system__state.html#a9a672af939129176dff6e9fb08f1a74d',1,'texture_system_state']]],
+  ['delta_5ftime_6',['delta_time',['../dd/da5/structrender__packet.html#a735db3997ce6caf918bbc2a1fd1086ab',1,'render_packet::delta_time'],['../d9/d92/structgame__state.html#a569999ffeeaf87a08fd91bcfe61e2f48',1,'game_state::delta_time']]],
+  ['depth_7',['depth',['../d0/d06/structvulkan__renderpass.html#a26f267ee8a233712e967f07efc76a1e2',1,'vulkan_renderpass']]],
+  ['depth_5fattachment_8',['depth_attachment',['../de/dc9/structvulkan__swapchain.html#ac68489dfc155f848fc1371204e2bc55e',1,'vulkan_swapchain']]],
+  ['depth_5fformat_9',['depth_format',['../d7/d6e/structvulkan__device.html#a766151b1f51198f642ac13c171f0f3e8',1,'vulkan_device']]],
+  ['descriptor_5fsets_10',['descriptor_sets',['../d6/d93/structvulkan__material__shader__instance__state.html#a61c8fc58d3ad0d0afb1db8511acf29fd',1,'vulkan_material_shader_instance_state::descriptor_sets'],['../d9/d85/structvulkan__ui__shader__instance__state.html#ab9da8aee5bd7048713d8ca5cc97481a9',1,'vulkan_ui_shader_instance_state::descriptor_sets']]],
+  ['descriptor_5fstates_11',['descriptor_states',['../d6/d93/structvulkan__material__shader__instance__state.html#af3ff794339f7ede9e5570292675621ff',1,'vulkan_material_shader_instance_state::descriptor_states'],['../d9/d85/structvulkan__ui__shader__instance__state.html#ac837d614bfbd18830143ae622fd18c25',1,'vulkan_ui_shader_instance_state::descriptor_states']]],
+  ['descriptor_5fupdated_12',['descriptor_updated',['../d0/d57/structvulkan__material__shader.html#abf9bdb6fff0acc5b5e44b8f01c4168bd',1,'vulkan_material_shader']]],
+  ['destroy_5fgeometry_13',['destroy_geometry',['../df/d02/structrenderer__backend.html#a80442307b76370120d34e33cd0b58887',1,'renderer_backend']]],
+  ['destroy_5fmaterial_14',['destroy_material',['../df/d02/structrenderer__backend.html#a8e18558e489f01e5fc1cf144c03c7139',1,'renderer_backend']]],
+  ['destroy_5ftexture_15',['destroy_texture',['../df/d02/structrenderer__backend.html#a30a965d79114c284246036ec484954b2',1,'renderer_backend']]],
+  ['device_16',['device',['../d9/dc9/structvulkan__context.html#a125a2b961a4805e2eefc3ad2ab4f709a',1,'vulkan_context']]],
+  ['device_5fextension_5fnames_17',['device_extension_names',['../d4/d4a/structvulkan__physical__device__requirements.html#a8fd02bdca69952af910a69708aedf702',1,'vulkan_physical_device_requirements']]],
+  ['diffuse_5fcolor_18',['diffuse_color',['../dd/dfc/structvulkan__material__shader__instance__ubo.html#a54074855c06467912505619b89c5becb',1,'vulkan_material_shader_instance_ubo::diffuse_color'],['../d7/db2/structvulkan__ui__shader__instance__ubo.html#a4481767d57618e230c3bad19aa7b3e5a',1,'vulkan_ui_shader_instance_ubo::diffuse_color']]],
+  ['diffuse_5fcolour_19',['diffuse_colour',['../dc/d5f/structmaterial__config.html#a5208780d48ccf706dd4602bb311f6ff4',1,'material_config::diffuse_colour'],['../da/d20/structmaterial.html#aea5d0c3195e6306af5ae29d652eea0b8',1,'material::diffuse_colour']]],
+  ['diffuse_5fmap_20',['diffuse_map',['../da/d20/structmaterial.html#a805109350e71f2cf0dd8c8912f24e070',1,'material']]],
+  ['diffuse_5fmap_5fname_21',['diffuse_map_name',['../dc/d5f/structmaterial__config.html#a7031da2bb93b1b4957fa3f7f5c219804',1,'material_config']]],
+  ['discrete_5fgpu_22',['discrete_gpu',['../d4/d4a/structvulkan__physical__device__requirements.html#a2a6ed14c466b3fa9f8d2f9e9fd61d61c',1,'vulkan_physical_device_requirements']]],
+  ['draw_5fgeometry_23',['draw_geometry',['../df/d02/structrenderer__backend.html#a6bd935642686406899d11420744900b6',1,'renderer_backend']]]
+];

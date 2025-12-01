@@ -1,0 +1,11 @@
+<map id="mat4_right" name="mat4_right">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,32,98,60"/>
+<area shape="rect" id="Node000002" href="$dc/dd0/kmath_8h.html#a913dca8151840c5998928a08cc62ede8" title=" " alt="" coords="146,32,270,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,43,132,45,127,47,98,48"/>
+<area shape="rect" id="Node000003" href="$dc/dd0/kmath_8h.html#acbdb6afe5697ca4833089800c0ac7376" title=" " alt="" coords="318,32,397,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="270,43,305,46,300,46,270,48"/>
+<area shape="rect" id="Node000004" href="$df/dc5/kmath_8c.html#a44537c51868208d3bcfec4fe46db9bf4" title=" " alt="" coords="487,5,542,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="398,36,469,27,475,26,398,42"/>
+<area shape="rect" id="Node000005" href="$dc/dd0/kmath_8h.html#ac7825b4b417b34eccaf811fd737ee052" title=" " alt="" coords="445,57,584,85"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="398,50,433,58,427,57,398,55"/>
+</map>

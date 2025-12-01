@@ -1,0 +1,27 @@
+var input_8c =
+[
+    [ "keyboard_state", "d5/daa/structkeyboard__state.html", "d5/daa/structkeyboard__state" ],
+    [ "mouse_state", "dc/d81/structmouse__state.html", "dc/d81/structmouse__state" ],
+    [ "input_system_state", "df/d8b/structinput__system__state.html", "df/d8b/structinput__system__state" ],
+    [ "input_system_state", "d1/d06/input_8c.html#a97be9c91bf421cb2a4f82cd4f4cd1780", null ],
+    [ "keyboard_state", "d1/d06/input_8c.html#a3eda7f0cade2331516e6a139c62b81c3", null ],
+    [ "mouse_state", "d1/d06/input_8c.html#a1b858b011b548e2f09a64c9785ce2850", null ],
+    [ "input_get_mouse_position", "d1/d06/input_8c.html#afc6f79db4354bffcaa5341e3dd94e561", null ],
+    [ "input_get_previous_mouse_position", "d1/d06/input_8c.html#a41ff32b5688dd414ca371c42262c55cb", null ],
+    [ "input_initialize", "d1/d06/input_8c.html#a0e554a7be3b23d981dcb7792a73abb2a", null ],
+    [ "input_is_button_down", "d1/d06/input_8c.html#a1cb18f9945283271dfaea87fa2520d7c", null ],
+    [ "input_is_button_up", "d1/d06/input_8c.html#a530ad40d8d2e99ec04dff39922774f41", null ],
+    [ "input_is_key_down", "d1/d06/input_8c.html#a5ddb7abdf49d3f4fdfae00112c50e14e", null ],
+    [ "input_is_key_up", "d1/d06/input_8c.html#aa3f06d2bbe94fa40aa9d12f2685783cb", null ],
+    [ "input_process_button", "d1/d06/input_8c.html#a4b149b586e2e5e770ddd9ed63f4f5dd2", null ],
+    [ "input_process_key", "d1/d06/input_8c.html#aa50febeebd057f91a70704851a9b6300", null ],
+    [ "input_process_mouse_move", "d1/d06/input_8c.html#a5d56afad3d78c1e177fa44cef3e7d19d", null ],
+    [ "input_process_mouse_wheel", "d1/d06/input_8c.html#af9d0e1b4ff7fce1972ba93c810bfbabc", null ],
+    [ "input_shutdown", "d1/d06/input_8c.html#aca59b2d698832311156e9aaf03a8b6cc", null ],
+    [ "input_update", "d1/d06/input_8c.html#a85450297ce513c03fe70c80cdba41609", null ],
+    [ "input_was_button_down", "d1/d06/input_8c.html#a6345fe3f4af808a3acfa8686b1fa6eef", null ],
+    [ "input_was_button_up", "d1/d06/input_8c.html#ac75809be9ce0e6ec52b368ce9ee7dfe5", null ],
+    [ "input_was_key_down", "d1/d06/input_8c.html#a0247347a29f6fbdc6bc523e0b81999f8", null ],
+    [ "input_was_key_up", "d1/d06/input_8c.html#a15f2db5046f21794f16d24dcefd6cd61", null ],
+    [ "state_ptr", "d1/d06/input_8c.html#a55f2fb9f419939fd1041b412b0246587", null ]
+];

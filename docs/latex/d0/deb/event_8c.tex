@@ -1,0 +1,220 @@
+\doxysection{engine/src/core/event.c File Reference}
+\hypertarget{event_8c}{}\label{event_8c}\index{engine/src/core/event.c@{engine/src/core/event.c}}
+{\ttfamily \#include $<$core/event.\+h$>$}\newline
+{\ttfamily \#include "{}containers/darray.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}core/logger.\+h"{}}\newline
+Include dependency graph for event.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d7c/event_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structregistered__event}{registered\+\_\+event}}
+\item 
+struct \mbox{\hyperlink{structevent__code__entry}{event\+\_\+code\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structevent__system__state}{event\+\_\+system\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{event_8c_a59db8f883e31171b78490d26c0251f64}{MAX\+\_\+\+MESSAGE\+\_\+\+CODES}}~16384
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct registered\+\_\+event \mbox{\hyperlink{event_8c_aa8b5e9c994ed612f290eb5e1f03624a9}{registered\+\_\+event}}
+\item 
+typedef struct event\+\_\+code\+\_\+entry \mbox{\hyperlink{event_8c_a41448e3cfa7669aec19192551ab82ec8}{event\+\_\+code\+\_\+entry}}
+\item 
+typedef struct event\+\_\+system\+\_\+state \mbox{\hyperlink{event_8c_a137cc0eeba0b3a0e3e2a2bfa2ece4691}{event\+\_\+system\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{event_8c_a57f2384d2b1404b8cc887ccb9432da50}{event\+\_\+initialize}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}memory\+\_\+requirement, void \texorpdfstring{$\ast$}{*}state)
+\item 
+void \mbox{\hyperlink{event_8c_ae014ad101930547bce61ff7ebf93be23}{event\+\_\+shutdown}} (void \texorpdfstring{$\ast$}{*}state)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{event_8c_ae0709e6ce288dc76ad2889c194572f1f}{event\+\_\+register}} (\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} code, void \texorpdfstring{$\ast$}{*}listener, \mbox{\hyperlink{event_8h_ac694dc305b9660134b170d9560b0563a}{PFN\+\_\+on\+\_\+event}} on\+\_\+event)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{event_8c_a59fc6e1b34ce65e68076a1e3ba004380}{event\+\_\+unregister}} (\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} code, void \texorpdfstring{$\ast$}{*}listener, \mbox{\hyperlink{event_8h_ac694dc305b9660134b170d9560b0563a}{PFN\+\_\+on\+\_\+event}} on\+\_\+event)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{event_8c_a1c350143596c6f99cfd34595b4959ef8}{event\+\_\+fire}} (\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} code, void \texorpdfstring{$\ast$}{*}sender, \mbox{\hyperlink{structevent__context}{event\+\_\+context}} \mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structevent__system__state}{event\+\_\+system\+\_\+state}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{event_8c_a8dc4a58304f35c6161d98770d856890f}{state\+\_\+ptr}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{event_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{event_8c_a59db8f883e31171b78490d26c0251f64}\index{event.c@{event.c}!MAX\_MESSAGE\_CODES@{MAX\_MESSAGE\_CODES}}
+\index{MAX\_MESSAGE\_CODES@{MAX\_MESSAGE\_CODES}!event.c@{event.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_MESSAGE\_CODES}{MAX\_MESSAGE\_CODES}}
+{\footnotesize\ttfamily \label{event_8c_a59db8f883e31171b78490d26c0251f64} 
+\#define MAX\+\_\+\+MESSAGE\+\_\+\+CODES~16384}
+
+
+
+\label{doc-typedef-members}
+\Hypertarget{event_8c_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{event_8c_a41448e3cfa7669aec19192551ab82ec8}\index{event.c@{event.c}!event\_code\_entry@{event\_code\_entry}}
+\index{event\_code\_entry@{event\_code\_entry}!event.c@{event.c}}
+\doxysubsubsection{\texorpdfstring{event\_code\_entry}{event\_code\_entry}}
+{\footnotesize\ttfamily \label{event_8c_a41448e3cfa7669aec19192551ab82ec8} 
+typedef struct event\+\_\+code\+\_\+entry event\+\_\+code\+\_\+entry}
+
+\Hypertarget{event_8c_a137cc0eeba0b3a0e3e2a2bfa2ece4691}\index{event.c@{event.c}!event\_system\_state@{event\_system\_state}}
+\index{event\_system\_state@{event\_system\_state}!event.c@{event.c}}
+\doxysubsubsection{\texorpdfstring{event\_system\_state}{event\_system\_state}}
+{\footnotesize\ttfamily \label{event_8c_a137cc0eeba0b3a0e3e2a2bfa2ece4691} 
+typedef struct event\+\_\+system\+\_\+state event\+\_\+system\+\_\+state}
+
+\Hypertarget{event_8c_aa8b5e9c994ed612f290eb5e1f03624a9}\index{event.c@{event.c}!registered\_event@{registered\_event}}
+\index{registered\_event@{registered\_event}!event.c@{event.c}}
+\doxysubsubsection{\texorpdfstring{registered\_event}{registered\_event}}
+{\footnotesize\ttfamily \label{event_8c_aa8b5e9c994ed612f290eb5e1f03624a9} 
+typedef struct registered\+\_\+event registered\+\_\+event}
+
+
+
+\label{doc-func-members}
+\Hypertarget{event_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{event_8c_a1c350143596c6f99cfd34595b4959ef8}\index{event.c@{event.c}!event\_fire@{event\_fire}}
+\index{event\_fire@{event\_fire}!event.c@{event.c}}
+\doxysubsubsection{\texorpdfstring{event\_fire()}{event\_fire()}}
+{\footnotesize\ttfamily \label{event_8c_a1c350143596c6f99cfd34595b4959ef8} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} event\+\_\+fire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{code}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{sender}{, }\item[{\mbox{\hyperlink{structevent__context}{event\+\_\+context}}}]{context}{}\end{DoxyParamCaption})}
+
+Fires an event to listeners of the given code. If an event handler returns true, the event is considered handled and is not passed on to anymore listeners. 
+\begin{DoxyParams}{Parameters}
+{\em code} & The event code to fire. \\
+\hline
+{\em sender} & A pointer to the sender, can be 0/\+NULL. \\
+\hline
+{\em context} & The event data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if handled; otherwise false. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/deb/event_8c_a1c350143596c6f99cfd34595b4959ef8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{event_8c_a57f2384d2b1404b8cc887ccb9432da50}\index{event.c@{event.c}!event\_initialize@{event\_initialize}}
+\index{event\_initialize@{event\_initialize}!event.c@{event.c}}
+\doxysubsubsection{\texorpdfstring{event\_initialize()}{event\_initialize()}}
+{\footnotesize\ttfamily \label{event_8c_a57f2384d2b1404b8cc887ccb9432da50} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} event\+\_\+initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{memory\+\_\+requirement}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/deb/event_8c_a57f2384d2b1404b8cc887ccb9432da50_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/deb/event_8c_a57f2384d2b1404b8cc887ccb9432da50_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{event_8c_ae0709e6ce288dc76ad2889c194572f1f}\index{event.c@{event.c}!event\_register@{event\_register}}
+\index{event\_register@{event\_register}!event.c@{event.c}}
+\doxysubsubsection{\texorpdfstring{event\_register()}{event\_register()}}
+{\footnotesize\ttfamily \label{event_8c_ae0709e6ce288dc76ad2889c194572f1f} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} event\+\_\+register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{code}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{listener}{, }\item[{\mbox{\hyperlink{event_8h_ac694dc305b9660134b170d9560b0563a}{PFN\+\_\+on\+\_\+event}}}]{on\+\_\+event}{}\end{DoxyParamCaption})}
+
+Register to listen when events are sent with the provided code. Events with duplicate listener/callback combos will not register and cause this to return false. 
+\begin{DoxyParams}{Parameters}
+{\em code} & The event code to listen for. \\
+\hline
+{\em listener} & A pointer to a listener instance, can be 0/\+NULL. \\
+\hline
+{\em on\+\_\+event} & The callback function pointer to be invoked when the event code is fired. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the event is successfully registered; otherwise false. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/deb/event_8c_ae0709e6ce288dc76ad2889c194572f1f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{event_8c_ae014ad101930547bce61ff7ebf93be23}\index{event.c@{event.c}!event\_shutdown@{event\_shutdown}}
+\index{event\_shutdown@{event\_shutdown}!event.c@{event.c}}
+\doxysubsubsection{\texorpdfstring{event\_shutdown()}{event\_shutdown()}}
+{\footnotesize\ttfamily \label{event_8c_ae014ad101930547bce61ff7ebf93be23} 
+void event\+\_\+shutdown (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/deb/event_8c_ae014ad101930547bce61ff7ebf93be23_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{event_8c_a59fc6e1b34ce65e68076a1e3ba004380}\index{event.c@{event.c}!event\_unregister@{event\_unregister}}
+\index{event\_unregister@{event\_unregister}!event.c@{event.c}}
+\doxysubsubsection{\texorpdfstring{event\_unregister()}{event\_unregister()}}
+{\footnotesize\ttfamily \label{event_8c_a59fc6e1b34ce65e68076a1e3ba004380} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} event\+\_\+unregister (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{code}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{listener}{, }\item[{\mbox{\hyperlink{event_8h_ac694dc305b9660134b170d9560b0563a}{PFN\+\_\+on\+\_\+event}}}]{on\+\_\+event}{}\end{DoxyParamCaption})}
+
+Unregister from listening for when events are sent with the provided code. If no matching registration is found, this will return false. 
+\begin{DoxyParams}{Parameters}
+{\em code} & The event code to stop listening for. \\
+\hline
+{\em listener} & A pointer to a listener instance, can be 0/\+NULL. \\
+\hline
+{\em on\+\_\+event} & The callback function pointer to be unregistered. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the event is successfully unregistered; otherwise false. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/deb/event_8c_a59fc6e1b34ce65e68076a1e3ba004380_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-var-members}
+\Hypertarget{event_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{event_8c_a8dc4a58304f35c6161d98770d856890f}\index{event.c@{event.c}!state\_ptr@{state\_ptr}}
+\index{state\_ptr@{state\_ptr}!event.c@{event.c}}
+\doxysubsubsection{\texorpdfstring{state\_ptr}{state\_ptr}}
+{\footnotesize\ttfamily \label{event_8c_a8dc4a58304f35c6161d98770d856890f} 
+\mbox{\hyperlink{structevent__system__state}{event\+\_\+system\+\_\+state}}\texorpdfstring{$\ast$}{*} state\+\_\+ptr\hspace{0.3cm}{\ttfamily [static]}}
+
+Event system internal state 

@@ -1,0 +1,31 @@
+<map id="texture_system_acquire" name="texture_system_acquire">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,136,184,164"/>
+<area shape="rect" id="Node000002" href="$d8/de9/hashtable_8c.html#abc39f8ea1cbed6f616ea660f9f00b876" title="Obtains a copy of data present in the hashtable. Only use for tables which were NOT created with is_p..." alt="" coords="232,32,345,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,133,230,70,245,65,241,68,233,75,122,137"/>
+<area shape="rect" id="Node000006" href="$d8/de9/hashtable_8c.html#a33773f5004b2ecc9a3af543ba2e52c60" title="Stores a copy of the data in value into the provided hashtable. Only use for tables which were NOT cr..." alt="" coords="232,84,344,112"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="148,133,221,114,217,118,150,138"/>
+<area shape="rect" id="Node000007" href="$d9/d0a/texture__system_8c.html#ac691176afc7122b609671e77b157ae2f" title=" " alt="" coords="237,161,340,189"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="184,159,223,165,218,167,185,164"/>
+<area shape="rect" id="Node000014" href="$d6/d19/kstring_8c.html#a148b565b9af89efb432a895868c1e4d1" title=" " alt="" coords="232,213,344,241"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="131,162,240,206,235,209,131,167"/>
+<area shape="rect" id="Node000003" href="$d8/de9/hashtable_8c.html#a69977851e8a85a621f7bd49b66405f3c" title=" " alt="" coords="438,57,534,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="345,50,425,62,420,64,346,56"/>
+<area shape="rect" id="Node000004" href="$d3/d3c/kmemory_8c.html#ae88e143a36677919fee16bdf0f11bc79" title=" " alt="" coords="425,5,547,33"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="345,36,412,28,407,31,347,41"/>
+<area shape="rect" id="Node000005" href="$de/d03/platform_8h.html#a15258bb22b902725b1fbf405463ed07d" title=" " alt="" coords="627,5,805,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="547,17,614,18,609,20,548,22"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="344,88,425,78,420,81,346,93"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="319,81,344,69,392,43,416,37,411,40,394,48,346,74,322,86"/>
+<area shape="rect" id="Node000008" href="$d0/dcc/renderer__frontend_8c.html#a576891b6b0f8e2de38a5c6def3823db9" title=" " alt="" coords="397,161,575,189"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="340,173,384,174,379,176,341,178"/>
+<area shape="rect" id="Node000009" href="$d0/dcc/renderer__frontend_8c.html#a07cb43f363df0240af713c483b72308f" title=" " alt="" coords="393,213,579,241"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="340,186,419,208,413,209,340,191"/>
+<area shape="rect" id="Node000010" href="$d2/d8b/resource__system_8c.html#a6ca971dda0f7cd6545a27e30ae63e46d" title=" " alt="" coords="402,265,570,293"/>
+<area shape="poly" id="edge11_Node000007_Node000010" title=" " alt="" coords="324,187,347,200,361,213,371,226,380,238,394,250,408,259,403,259,392,255,376,242,366,230,357,217,343,204,324,192"/>
+<area shape="rect" id="Node000012" href="$d2/d8b/resource__system_8c.html#af2ee144059d829688ff5cfe7806ddeac" title=" " alt="" coords="394,317,578,345"/>
+<area shape="poly" id="edge13_Node000007_Node000012" title=" " alt="" coords="329,187,347,200,365,227,371,254,377,279,384,291,395,303,402,310,397,309,391,306,379,294,372,281,365,255,360,229,343,204,328,192"/>
+<area shape="rect" id="Node000013" href="$d6/d19/kstring_8c.html#a9e48021ce5b39920715bfaa5d92613bc" title=" " alt="" coords="434,109,538,137"/>
+<area shape="poly" id="edge14_Node000007_Node000013" title=" " alt="" coords="340,159,421,140,417,142,341,164"/>
+<area shape="rect" id="Node000011" href="$d2/d8b/resource__system_8c.html#add0733bf358721495904be57107031d6" title=" " alt="" coords="691,265,741,293"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="570,277,678,279,673,279,570,282"/>
+</map>

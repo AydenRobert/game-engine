@@ -1,0 +1,36 @@
+\doxysection{vulkan\+\_\+command\+\_\+buffer.\+h}
+\hypertarget{vulkan__command__buffer_8h_source}{}\label{vulkan__command__buffer_8h_source}\index{engine/src/renderer/vulkan/vulkan\_command\_buffer.h@{engine/src/renderer/vulkan/vulkan\_command\_buffer.h}}
+\mbox{\hyperlink{vulkan__command__buffer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vulkan__types_8inl}{renderer/vulkan/vulkan\_types.inl}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__command__buffer_8h_a174f0a4daec13ac82dbddd7d8d957950}{vulkan\_command\_buffer\_allocate}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},\ VkCommandPool\ pool,}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ isPrimary,}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__command__buffer}{vulkan\_command\_buffer}}\ *out\_command\_buffer);}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__command__buffer_8h_afd9ae4003a9b698f447b74d43944bb93}{vulkan\_command\_buffer\_free}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},\ VkCommandPool\ pool,}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__command__buffer}{vulkan\_command\_buffer}}\ *command\_buffer);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__command__buffer_8h_a953bb97410e7ac3fb6bcb885111b076a}{vulkan\_command\_buffer\_begin}}(\mbox{\hyperlink{structvulkan__command__buffer}{vulkan\_command\_buffer}}\ *command\_buffer,}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ is\_single\_use,\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ is\_renderpass\_continue,}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ is\_simultaneous\_use);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__command__buffer_8h_aedec1e6180808de057ff8ef5b802a5dd}{vulkan\_command\_buffer\_end}}(\mbox{\hyperlink{structvulkan__command__buffer}{vulkan\_command\_buffer}}\ *command\_buffer);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__command__buffer_8h_a9b48258e5cd826ab0019e7ecfb49f8b8}{vulkan\_command\_buffer\_update\_submitted}}(}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{structvulkan__command__buffer}{vulkan\_command\_buffer}}\ *command\_buffer);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__command__buffer_8h_a5a8ef2aed8ec624bc28be0419c84cb3c}{vulkan\_command\_buffer\_reset}}(\mbox{\hyperlink{structvulkan__command__buffer}{vulkan\_command\_buffer}}\ *command\_buffer);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__command__buffer_8h_a9e829f593db51d6e99e6030a68e07976}{vulkan\_command\_buffer\_allocate\_and\_begin\_single\_use}}(}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},\ VkCommandPool\ pool,}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{structvulkan__command__buffer}{vulkan\_command\_buffer}}\ *out\_command\_buffer);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__command__buffer_8h_aa8a73bb91861b477161430027abfdb54}{vulkan\_command\_buffer\_end\_single\_use}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkCommandPool\ pool,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__command__buffer}{vulkan\_command\_buffer}}\ *command\_buffer,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkQueue\ queue);}
+
+\end{DoxyCode}

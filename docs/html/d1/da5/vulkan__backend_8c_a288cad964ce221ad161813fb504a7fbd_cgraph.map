@@ -1,0 +1,11 @@
+<map id="free_data_range" name="free_data_range">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,32,133,60"/>
+<area shape="rect" id="Node000002" href="$db/dab/vulkan__buffer_8c.html#a6c3e7f58859f0ce58ff89d052c58fc8b" title=" " alt="" coords="181,32,323,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,43,168,45,162,46,133,48"/>
+<area shape="rect" id="Node000003" href="$da/d3f/freelist_8c.html#a8af32093da394b6cfa1a3436b8e84283" title="Attempts to find a free block of memory given the size." alt="" coords="371,32,513,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="323,43,358,46,353,46,324,48"/>
+<area shape="rect" id="Node000004" href="$da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df" title=" " alt="" coords="570,5,652,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="514,32,552,28,558,28,514,37"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="561,57,661,85"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="514,54,549,62,543,61,514,59"/>
+</map>

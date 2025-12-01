@@ -1,0 +1,54 @@
+<map id="vulkan_renderer_backend_end_frame" name="vulkan_renderer_backend_end_frame">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,117,193,162"/>
+<area shape="rect" id="Node000002" href="$d4/d8c/vulkan__command__buffer_8c.html#aedec1e6180808de057ff8ef5b802a5dd" title=" " alt="" coords="241,5,453,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,115,177,77,240,42,259,37,254,40,242,47,180,82,130,118"/>
+<area shape="rect" id="Node000003" href="$d4/d8c/vulkan__command__buffer_8c.html#a9b48258e5cd826ab0019e7ecfb49f8b8" title=" " alt="" coords="256,57,438,102"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,114,243,103,239,106,194,119"/>
+<area shape="rect" id="Node000004" href="$d4/d18/vulkan__utils_8c.html#ad8a757bc800267c37b75303b1a8b0f63" title=" " alt="" coords="255,125,439,153"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="192,137,241,138,237,140,194,142"/>
+<area shape="rect" id="Node000005" href="$d4/d18/vulkan__utils_8c.html#a7c6284088860932a8a66b8153b4bc0a4" title=" " alt="" coords="271,177,423,205"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="193,156,265,172,260,175,193,161"/>
+<area shape="rect" id="Node000006" href="$d5/d02/vulkan__swapchain_8c.html#a401617aff019b05a923dcda96f83c958" title=" " alt="" coords="249,229,445,257"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="135,159,186,188,242,214,267,224,261,225,240,219,183,192,136,164"/>
+<area shape="rect" id="Node000007" href="$d5/d02/vulkan__swapchain_8c.html#a37945527d25893e83ecde0d83f11b550" title=" " alt="" coords="501,229,702,257"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="445,241,488,243,483,244,446,246"/>
+<area shape="rect" id="Node000008" href="$d5/d02/vulkan__swapchain_8c.html#ae7bc76657ea3c43a52b2ee91604db7b3" title=" " alt="" coords="754,173,817,201"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="649,226,737,202,742,200,650,231"/>
+<area shape="rect" id="Node000020" href="$d5/d02/vulkan__swapchain_8c.html#aa329dd100f2cdf51fd538278203d37b4" title=" " alt="" coords="750,285,821,313"/>
+<area shape="poly" id="edge19_Node000007_Node000020" title=" " alt="" coords="650,255,738,284,733,284,649,260"/>
+<area shape="rect" id="Node000009" href="$d3/d3c/kmemory_8c.html#a35f22575c2b4fcbda423b6108e352b15" title=" " alt="" coords="913,44,993,72"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="793,171,821,127,842,102,867,81,895,70,900,68,870,85,846,106,825,130,796,175"/>
+<area shape="rect" id="Node000016" href="$de/d02/vulkan__device_8c.html#a4af4291b3e9e0fc739c88bde97d74693" title=" " alt="" coords="872,96,1034,140"/>
+<area shape="poly" id="edge15_Node000008_Node000016" title=" " alt="" coords="816,172,868,150,880,147,885,146,870,155,818,177"/>
+<area shape="rect" id="Node000017" href="$de/d02/vulkan__device_8c.html#ac4eb42eebcc937d35197f1b899668021" title=" " alt="" coords="874,165,1032,210"/>
+<area shape="poly" id="edge16_Node000008_Node000017" title=" " alt="" coords="817,185,861,187,856,187,817,190"/>
+<area shape="rect" id="Node000018" href="$da/d00/vulkan__image_8c.html#ae8efa06d320d8156f69f0c8352f37340" title=" " alt="" coords="873,233,1033,261"/>
+<area shape="poly" id="edge17_Node000008_Node000018" title=" " alt="" coords="818,198,870,219,890,228,884,228,868,224,817,204"/>
+<area shape="rect" id="Node000010" href="$dd/d44/dynamic__allocator_8c.html#aeef3ef902c20758ce4e52fd3ce7c3112" title="Allocates an amount of memory and returns the given block." alt="" coords="1085,19,1285,46"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="993,51,1072,45,1067,46,994,56"/>
+<area shape="rect" id="Node000014" href="$de/d03/platform_8h.html#a19df473ff145c8579c4c838d5bc67372" title=" " alt="" coords="1117,71,1253,98"/>
+<area shape="poly" id="edge13_Node000009_Node000014" title=" " alt="" coords="994,60,1104,75,1099,75,994,65"/>
+<area shape="rect" id="Node000015" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="1098,123,1272,150"/>
+<area shape="poly" id="edge14_Node000009_Node000015" title=" " alt="" coords="994,65,1038,81,1062,94,1086,107,1110,118,1104,118,1084,112,1060,99,1036,86,993,71"/>
+<area shape="rect" id="Node000011" href="$da/d3f/freelist_8c.html#ae855f01b88cfd86e3ff8ae7682bbd06c" title="Attempts to find a allocate block of memory given the size." alt="" coords="1333,40,1502,68"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="1286,39,1320,44,1315,45,1286,44"/>
+<area shape="rect" id="Node000012" href="$da/d3f/freelist_8c.html#a1ce834d1bd9f9caf272e6d63aa00deb8" title="Obtains the amount of free space within the freelist." alt="" coords="1550,40,1695,68"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="1502,51,1537,54,1531,54,1502,56"/>
+<area shape="rect" id="Node000013" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="1573,109,1672,137"/>
+<area shape="poly" id="edge12_Node000011_Node000013" title=" " alt="" coords="1461,66,1567,104,1562,104,1460,71"/>
+<area shape="rect" id="Node000019" href="$da/d00/vulkan__image_8c.html#acac51c2be133dd1ff4bf11dbb613bf41" title=" " alt="" coords="1086,212,1284,240"/>
+<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="1033,237,1073,236,1068,237,1033,242"/>
+<area shape="rect" id="Node000021" href="$d3/d3c/kmemory_8c.html#a6b55b65a2f2d473dac0d8ff4605a44fb" title=" " alt="" coords="925,285,980,313"/>
+<area shape="poly" id="edge20_Node000020_Node000021" title=" " alt="" coords="821,297,913,299,907,299,821,302"/>
+<area shape="rect" id="Node000026" href="$da/d00/vulkan__image_8c.html#a7d1140c936aeeadb57f27f293db7674a" title=" " alt="" coords="869,337,1037,365"/>
+<area shape="poly" id="edge26_Node000020_Node000026" title=" " alt="" coords="821,307,894,333,889,332,821,313"/>
+<area shape="rect" id="Node000022" href="$dd/d44/dynamic__allocator_8c.html#a10c3c742d3900e743f85fe47c11be3e5" title="Frees a block of memory that was allocated by the allocator." alt="" coords="1098,264,1272,292"/>
+<area shape="poly" id="edge21_Node000021_Node000022" title=" " alt="" coords="981,294,1080,287,1085,287,981,299"/>
+<area shape="rect" id="Node000025" href="$de/d03/platform_8h.html#a0b638fcfa31e0704eb976a8662c095f2" title=" " alt="" coords="1130,316,1240,344"/>
+<area shape="poly" id="edge25_Node000021_Node000025" title=" " alt="" coords="981,300,1118,321,1112,321,981,305"/>
+<area shape="rect" id="Node000023" href="$da/d3f/freelist_8c.html#a8af32093da394b6cfa1a3436b8e84283" title="Attempts to find a free block of memory given the size." alt="" coords="1346,196,1489,224"/>
+<area shape="poly" id="edge22_Node000022_Node000023" title=" " alt="" coords="1241,261,1285,249,1355,229,1360,228,1286,254,1242,266"/>
+<area shape="poly" id="edge24_Node000023_Node000013" title=" " alt="" coords="1451,193,1571,144,1576,143,1453,198"/>
+<area shape="rect" id="Node000024" href="$da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df" title=" " alt="" coords="1582,196,1663,224"/>
+<area shape="poly" id="edge23_Node000023_Node000024" title=" " alt="" coords="1489,207,1568,210,1563,210,1489,212"/>
+</map>

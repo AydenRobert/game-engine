@@ -1,0 +1,24 @@
+\doxysection{clock.\+h}
+\hypertarget{clock_8h_source}{}\label{clock_8h_source}\index{engine/src/core/clock.h@{engine/src/core/clock.h}}
+\mbox{\hyperlink{clock_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structclock}{clock}}\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}}\ \mbox{\hyperlink{structclock_a139887730e22bc3797ec70e49a6b9e6d}{start\_time}};}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}}\ \mbox{\hyperlink{structclock_a0ebb32a24769f97d0e05b8e9559bbd8f}{elapsed}};}
+\DoxyCodeLine{00008\ \}\ \mbox{\hyperlink{structclock}{clock}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ Updates\ the\ provided\ clock,\ should\ be\ called\ just\ before\ checking\ elapsed}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ time.\ No\ effect\ on\ non-\/started\ clocks.}}
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{clock_8h_a4abbdac65212baafffa5d8332a519a16}{clock\_update}}(\mbox{\hyperlink{structclock}{clock}}\ *\mbox{\hyperlink{structclock}{clock}});}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ Starts\ the\ provided\ clock.\ Resets\ elapsed\ time.}}
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{clock_8h_a824107240a85b26523e51012294accbd}{clock\_start}}(\mbox{\hyperlink{structclock}{clock}}\ *\mbox{\hyperlink{structclock}{clock}});}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ Stops\ the\ provided\ clock,\ does\ not\ reset\ elapsed\ time.}}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{clock_8h_ae285a2a67b6015de5ee7a3d07a0c1710}{clock\_stop}}(\mbox{\hyperlink{structclock}{clock}}\ *\mbox{\hyperlink{structclock}{clock}});}
+
+\end{DoxyCode}

@@ -1,0 +1,23 @@
+<map id="application_state" name="application_state">
+<area shape="rect" id="Node000001" title=" " alt="" coords="231,430,364,458"/>
+<area shape="rect" id="Node000002" href="$d9/db7/structgame.html" title=" " alt="" coords="46,307,104,335"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,347,98,378,119,404,138,413,165,421,233,435,228,436,164,426,136,418,116,408,93,381,81,352"/>
+<area shape="rect" id="Node000003" href="$de/db0/structapplication__config.html" title=" " alt="" coords="5,207,145,234"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="76,247,78,307,72,306,74,253"/>
+<area shape="rect" id="Node000004" href="$d4/d3a/structplatform__state.html" title=" " alt="" coords="128,307,246,335"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="197,347,211,377,230,405,246,417,265,430,260,429,243,422,226,408,206,380,194,352"/>
+<area shape="rect" id="Node000005" href="$da/d6d/structclock.html" title=" " alt="" coords="270,307,325,335"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="300,349,300,431,295,428,296,352"/>
+<area shape="rect" id="Node000006" href="$db/de8/structlinear__allocator.html" title=" " alt="" coords="350,307,472,335"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="396,347,346,408,317,432,315,427,342,404,391,349"/>
+<area shape="rect" id="Node000007" href="$dd/ddc/structgeometry.html" title=" " alt="" coords="512,307,596,335"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="551,349,539,382,518,408,491,421,453,430,365,441,364,436,452,425,490,416,515,404,535,379,546,352"/>
+<area shape="rect" id="Node000008" href="$da/d20/structmaterial.html" title=" " alt="" coords="516,207,592,234"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="555,248,556,308,551,305,552,252"/>
+<area shape="rect" id="Node000009" href="$df/dbe/unionvec4__u.html" title=" " alt="" coords="455,106,522,134"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="481,146,482,166,486,181,499,195,518,208,512,208,496,200,482,184,476,166,478,151"/>
+<area shape="rect" id="Node000010" href="$dc/d86/structtexture__map.html" title=" " alt="" coords="566,106,670,134"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="609,146,591,184,570,208,566,204,586,181,605,150"/>
+<area shape="rect" id="Node000011" href="$dd/db6/structtexture.html" title=" " alt="" coords="584,5,652,33"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="619,46,620,107,615,104,616,51"/>
+</map>

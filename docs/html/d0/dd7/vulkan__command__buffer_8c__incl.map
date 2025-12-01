@@ -1,0 +1,35 @@
+<map id="engine/src/renderer/vulkan/vulkan_command_buffer.c" name="engine/src/renderer/vulkan/vulkan_command_buffer.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="577,5,764,67"/>
+<area shape="rect" id="Node000002" href="$d8/dbb/vulkan__command__buffer_8h.html" title=" " alt="" coords="408,115,579,160"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="614,69,547,109,544,105,619,66"/>
+<area shape="rect" id="Node000012" href="$d6/dbf/kmemory_8h.html" title=" " alt="" coords="608,216,734,244"/>
+<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="672,65,673,202,668,200,669,70"/>
+<area shape="rect" id="Node000013" href="$d1/d8c/logger_8h.html" title=" " alt="" coords="718,384,824,412"/>
+<area shape="poly" id="edge19_Node000001_Node000013" title=" " alt="" coords="688,65,720,130,748,207,765,295,772,370,767,368,760,296,743,208,715,132,686,70"/>
+<area shape="rect" id="Node000003" href="$d2/d63/vulkan__types_8inl.html" title=" " alt="" coords="336,208,507,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="478,158,450,198,446,194,475,162"/>
+<area shape="rect" id="Node000004" href="$de/d3c/freelist_8h.html" title="this file contains a free list, used for dynamic allocation tracking." alt="" coords="304,469,456,496"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="390,251,368,276,351,301,344,321,342,341,345,383,356,422,369,456,364,454,351,423,340,384,337,341,339,320,346,299,364,272,386,255"/>
+<area shape="rect" id="Node000005" href="$d8/db0/defines_8h.html" title=" " alt="" coords="453,544,534,572"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="455,250,479,272,497,299,508,330,514,361,517,425,512,484,503,531,499,527,506,483,512,425,509,362,503,331,492,302,475,276,454,255"/>
+<area shape="rect" id="Node000006" href="$da/d96/asserts_8h.html" title=" " alt="" coords="531,384,643,412"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="472,250,509,271,541,299,565,333,581,371,576,369,560,336,537,302,505,276,472,256"/>
+<area shape="rect" id="Node000007" href="$de/df8/renderer__types_8inl.html" title=" " alt="" coords="88,300,286,328"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="357,255,240,297,238,292,361,251"/>
+<area shape="rect" id="Node000010" href="$de/d9c/resource__types_8h.html" title=" " alt="" coords="5,376,150,421"/>
+<area shape="poly" id="edge15_Node000003_Node000010" title=" " alt="" coords="334,238,262,247,184,259,118,277,94,289,78,302,71,315,68,329,69,361,64,360,62,329,66,313,74,299,91,284,117,272,183,254,261,241,338,235"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="360,300,483,328"/>
+<area shape="poly" id="edge16_Node000003_Node000011" title=" " alt="" coords="423,250,424,286,419,284,420,255"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="401,494,463,536,458,535,400,499"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="582,411,511,533,507,529,577,414"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="191,326,205,361,226,406,255,454,294,494,328,516,365,531,441,551,435,551,364,536,325,520,290,498,251,457,221,408,200,363,190,331"/>
+<area shape="rect" id="Node000008" href="$d4/d7e/math__types_8h.html" title=" " alt="" coords="81,469,229,496"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="186,327,163,454,158,452,182,330"/>
+<area shape="poly" id="edge13_Node000007_Node000010" title=" " alt="" coords="168,331,121,368,117,364,171,326"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="216,494,440,543,436,547,215,500"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="112,544,198,572"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="157,495,157,530,152,527,153,499"/>
+<area shape="poly" id="edge14_Node000010_Node000008" title=" " alt="" coords="98,418,135,456,129,458,97,424"/>
+<area shape="poly" id="edge18_Node000012_Node000005" title=" " alt="" coords="674,242,679,277,680,322,674,373,657,422,632,459,600,492,565,518,533,539,531,534,562,514,596,488,628,456,652,419,669,372,675,322,674,277,672,246"/>
+<area shape="poly" id="edge20_Node000013_Node000005" title=" " alt="" coords="767,411,742,455,723,479,700,499,664,519,624,535,549,553,549,548,623,530,662,515,697,494,719,475,738,452,763,414"/>
+</map>

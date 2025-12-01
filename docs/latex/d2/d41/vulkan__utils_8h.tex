@@ -1,0 +1,72 @@
+\doxysection{engine/src/renderer/vulkan/vulkan\+\_\+utils.h File Reference}
+\hypertarget{vulkan__utils_8h}{}\label{vulkan__utils_8h}\index{engine/src/renderer/vulkan/vulkan\_utils.h@{engine/src/renderer/vulkan/vulkan\_utils.h}}
+{\ttfamily \#include "{}vulkan\+\_\+types.\+inl"{}}\newline
+Include dependency graph for vulkan\+\_\+utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d07/vulkan__utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/de0/vulkan__utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{vulkan__utils_8h_a7c6284088860932a8a66b8153b4bc0a4}{vulkan\+\_\+result\+\_\+string}} (Vk\+Result result, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} get\+\_\+extended)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__utils_8h_ad8a757bc800267c37b75303b1a8b0f63}{vulkan\+\_\+result\+\_\+is\+\_\+success}} (Vk\+Result result)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{vulkan__utils_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{vulkan__utils_8h_ad8a757bc800267c37b75303b1a8b0f63}\index{vulkan\_utils.h@{vulkan\_utils.h}!vulkan\_result\_is\_success@{vulkan\_result\_is\_success}}
+\index{vulkan\_result\_is\_success@{vulkan\_result\_is\_success}!vulkan\_utils.h@{vulkan\_utils.h}}
+\doxysubsubsection{\texorpdfstring{vulkan\_result\_is\_success()}{vulkan\_result\_is\_success()}}
+{\footnotesize\ttfamily \label{vulkan__utils_8h_ad8a757bc800267c37b75303b1a8b0f63} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vulkan\+\_\+result\+\_\+is\+\_\+success (\begin{DoxyParamCaption}\item[{Vk\+Result}]{result}{}\end{DoxyParamCaption})}
+
+Inticates if the passed result is a success or an error as defined by the Vulkan spec. \begin{DoxyReturn}{Returns}
+True if success; otherwise false. Defaults to true for unknown result types. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d41/vulkan__utils_8h_ad8a757bc800267c37b75303b1a8b0f63_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__utils_8h_a7c6284088860932a8a66b8153b4bc0a4}\index{vulkan\_utils.h@{vulkan\_utils.h}!vulkan\_result\_string@{vulkan\_result\_string}}
+\index{vulkan\_result\_string@{vulkan\_result\_string}!vulkan\_utils.h@{vulkan\_utils.h}}
+\doxysubsubsection{\texorpdfstring{vulkan\_result\_string()}{vulkan\_result\_string()}}
+{\footnotesize\ttfamily \label{vulkan__utils_8h_a7c6284088860932a8a66b8153b4bc0a4} 
+const char \texorpdfstring{$\ast$}{*} vulkan\+\_\+result\+\_\+string (\begin{DoxyParamCaption}\item[{Vk\+Result}]{result}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{get\+\_\+extended}{}\end{DoxyParamCaption})}
+
+Returns the string representation of result. 
+\begin{DoxyParams}{Parameters}
+{\em result} & The result to get the string for. \\
+\hline
+{\em get\+\_\+extended} & Indicates whether to also return an extended result. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The error code and/or extended error message in string form. Defaults to success for unknown result types. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d41/vulkan__utils_8h_a7c6284088860932a8a66b8153b4bc0a4_icgraph}
+\end{center}
+\end{figure}

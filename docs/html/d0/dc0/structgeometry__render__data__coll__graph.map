@@ -1,0 +1,15 @@
+<map id="geometry_render_data" name="geometry_render_data">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,408,175,436"/>
+<area shape="rect" id="Node000002" href="$d6/d3a/unionmat4__u.html" title=" " alt="" coords="15,307,85,335"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,348,65,383,81,407,75,408,60,385,52,353"/>
+<area shape="rect" id="Node000003" href="$dd/ddc/structgeometry.html" title=" " alt="" coords="109,307,194,335"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,347,100,409,96,406,133,348"/>
+<area shape="rect" id="Node000004" href="$da/d20/structmaterial.html" title=" " alt="" coords="113,207,190,234"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="153,248,154,307,149,306,150,252"/>
+<area shape="rect" id="Node000005" href="$df/dbe/unionvec4__u.html" title=" " alt="" coords="54,106,121,134"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="82,146,85,166,91,181,102,194,117,205,112,207,98,198,86,184,80,167,82,151"/>
+<area shape="rect" id="Node000006" href="$dc/d86/structtexture__map.html" title=" " alt="" coords="164,106,269,134"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="208,146,190,184,168,208,164,205,185,181,205,150"/>
+<area shape="rect" id="Node000007" href="$dd/db6/structtexture.html" title=" " alt="" coords="182,5,251,33"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="218,46,219,106,214,105,216,51"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="texture_system_shutdown" name="texture_system_shutdown">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,32,199,60"/>
+<area shape="rect" id="Node000002" href="$d9/d0a/texture__system_8c.html#a59474c12e344eb4e39e1d021e4cd34cd" title=" " alt="" coords="247,7,431,34"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,33,234,31,229,33,200,38"/>
+<area shape="rect" id="Node000006" href="$d0/dcc/renderer__frontend_8c.html#a07cb43f363df0240af713c483b72308f" title=" " alt="" coords="651,57,838,85"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="199,47,636,64,635,70,199,52"/>
+<area shape="rect" id="Node000003" href="$d9/d0a/texture__system_8c.html#aa476f8666968c3b8906989ac09b291a5" title=" " alt="" coords="479,7,603,34"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="431,18,466,20,461,21,431,23"/>
+<area shape="rect" id="Node000004" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="685,5,804,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="604,17,672,19,666,20,604,23"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="600,32,674,53,669,53,599,38"/>
+<area shape="rect" id="Node000005" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="886,5,1060,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="804,17,872,19,867,19,805,22"/>
+</map>

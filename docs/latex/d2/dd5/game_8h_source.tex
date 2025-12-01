@@ -1,0 +1,27 @@
+\doxysection{game.\+h}
+\hypertarget{game_8h_source}{}\label{game_8h_source}\index{testbed/src/game.h@{testbed/src/game.h}}
+\mbox{\hyperlink{game_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{math__types_8h}{math/math\_types.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{defines_8h}{defines.h}}>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{game__types_8h}{game\_types.h}}>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structgame__state}{game\_state}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ \mbox{\hyperlink{structgame__state_a569999ffeeaf87a08fd91bcfe61e2f48}{delta\_time}};}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ \mbox{\hyperlink{structgame__state_ac8ed864b792b0ddf54f2c11cd2073217}{view}};}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}\ \mbox{\hyperlink{structgame__state_a8324a3d08be65541a5fd7b386dca51ca}{camera\_position}};}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}\ \mbox{\hyperlink{structgame__state_a3bce150883b9843e6475d4c3c8e50801}{camera\_euler}};}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{structgame__state_ab1209e77ecff9ee4cd732078ee9bad63}{camera\_view\_dirty}};}
+\DoxyCodeLine{00013\ \}\ \mbox{\hyperlink{structgame__state}{game\_state}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{game_8h_ab56d8511d5b55e40d88999e59fe8084e}{game\_initialize}}(\mbox{\hyperlink{structgame}{game}}\ *game\_inst);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{game_8h_a1a612ae5a139848e80e1f7ddec49fdcf}{game\_update}}(\mbox{\hyperlink{structgame}{game}}\ *game\_inst,\ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ delta\_time);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{game_8h_aaa5f574e90e6577a78fbe8f01902525b}{game\_render}}(\mbox{\hyperlink{structgame}{game}}\ *game\_inst,\ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ delta\_time);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{game_8h_a5b4ce7177edb36b28a89471589432d17}{game\_on\_resize}}(\mbox{\hyperlink{structgame}{game}}\ *game\_inst,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ width,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ height);}
+
+\end{DoxyCode}

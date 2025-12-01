@@ -1,0 +1,9 @@
+<map id="dynamic_allocator_allocate" name="dynamic_allocator_allocate">
+<area shape="rect" id="Node000001" title="Allocates an amount of memory and returns the given block." alt="" coords="5,32,206,60"/>
+<area shape="rect" id="Node000002" href="$da/d3f/freelist_8c.html#ae855f01b88cfd86e3ff8ae7682bbd06c" title="Attempts to find a allocate block of memory given the size." alt="" coords="254,32,422,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,43,241,46,235,46,206,48"/>
+<area shape="rect" id="Node000003" href="$da/d3f/freelist_8c.html#a1ce834d1bd9f9caf272e6d63aa00deb8" title="Obtains the amount of free space within the freelist." alt="" coords="470,5,615,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="422,32,452,31,457,30,423,37"/>
+<area shape="rect" id="Node000004" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="493,57,592,85"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="423,54,481,63,475,63,422,59"/>
+</map>

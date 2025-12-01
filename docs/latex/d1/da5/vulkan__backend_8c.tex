@@ -1,0 +1,608 @@
+\doxysection{engine/src/renderer/vulkan/vulkan\+\_\+backend.c File Reference}
+\hypertarget{vulkan__backend_8c}{}\label{vulkan__backend_8c}\index{engine/src/renderer/vulkan/vulkan\_backend.c@{engine/src/renderer/vulkan/vulkan\_backend.c}}
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+backend.\+h"{}}\newline
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+{\ttfamily \#include "{}math/math\+\_\+types.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/shaders/vulkan\+\_\+ui\+\_\+shader.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+buffer.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+command\+\_\+buffer.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+device.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+image.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+platform.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+renderpass.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+swapchain.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+types.\+inl"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+utils.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/shaders/vulkan\+\_\+material\+\_\+shader.\+h"{}}\newline
+{\ttfamily \#include "{}core/application.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}core/kstring.\+h"{}}\newline
+{\ttfamily \#include "{}core/logger.\+h"{}}\newline
+{\ttfamily \#include "{}containers/darray.\+h"{}}\newline
+{\ttfamily \#include "{}systems/material\+\_\+system.\+h"{}}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$vulkan/vulkan\+\_\+core.\+h$>$}\newline
+Include dependency graph for vulkan\+\_\+backend.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dc0/vulkan__backend_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+VKAPI\+\_\+\+ATTR Vk\+Bool32 VKAPI\+\_\+\+CALL \mbox{\hyperlink{vulkan__backend_8c_a2ee6f6277021f0999f1be2f92b6bd21d}{vk\+\_\+debug\+\_\+callback}} (Vk\+Debug\+Utils\+Message\+Severity\+Flag\+Bits\+EXT message\+\_\+severity, Vk\+Debug\+Utils\+Message\+Type\+Flags\+EXT message\+\_\+types, const Vk\+Debug\+Utils\+Messenger\+Callback\+Data\+EXT \texorpdfstring{$\ast$}{*}callback\+\_\+data, void \texorpdfstring{$\ast$}{*}user\+\_\+data)
+\item 
+\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \mbox{\hyperlink{vulkan__backend_8c_aada43db2d3a25f12c6511695c5d74d0a}{find\+\_\+memory\+\_\+index}} (\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} type\+\_\+filter, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} property\+\_\+flags)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__backend_8c_af518f3f8b226671c0e27aec52faec49b}{create\+\_\+buffers}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}})
+\item 
+void \mbox{\hyperlink{vulkan__backend_8c_a6dfa9eb7e2169d6ab9a75cb9eb600e5e}{create\+\_\+command\+\_\+buffers}} (\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}backend)
+\item 
+void \mbox{\hyperlink{vulkan__backend_8c_ac4614229a4fe4f09cf49e328f1c93540}{regenerate\+\_\+framebuffers}} ()
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__backend_8c_afe660c6d3ba8621d1a7b395500e6fc02}{recreate\+\_\+swapchain}} (\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}backend)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__backend_8c_a5e1bd4cf15ecec24c982ccd79a58a94d}{upload\+\_\+data\+\_\+range}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, Vk\+Command\+Pool pool, Vk\+Fence fence, Vk\+Queue queue, \mbox{\hyperlink{structvulkan__buffer}{vulkan\+\_\+buffer}} \texorpdfstring{$\ast$}{*}buffer, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}out\+\_\+offset, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size, const void \texorpdfstring{$\ast$}{*}data)
+\item 
+void \mbox{\hyperlink{vulkan__backend_8c_a288cad964ce221ad161813fb504a7fbd}{free\+\_\+data\+\_\+range}} (\mbox{\hyperlink{structvulkan__buffer}{vulkan\+\_\+buffer}} \texorpdfstring{$\ast$}{*}buffer, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} offset, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__backend_8c_a0b90ec94f78aae6814140d684323d8d2}{vulkan\+\_\+renderer\+\_\+backend\+\_\+initialize}} (\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}backend, const char \texorpdfstring{$\ast$}{*}application\+\_\+name, struct \mbox{\hyperlink{structplatform__state}{platform\+\_\+state}} \texorpdfstring{$\ast$}{*}plat\+\_\+state)
+\item 
+void \mbox{\hyperlink{vulkan__backend_8c_aaf5c03bd71d214149e0e3e97b0d0fbca}{vulkan\+\_\+renderer\+\_\+backend\+\_\+shutdown}} (\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}backend)
+\item 
+void \mbox{\hyperlink{vulkan__backend_8c_a8eae56297e3b34f9dd52a04c24fd9730}{vulkan\+\_\+renderer\+\_\+backend\+\_\+on\+\_\+resized}} (\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}backend, \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} width, \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} height)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__backend_8c_af88b430f0e8f76ff7224c6d65ff7ce14}{vulkan\+\_\+renderer\+\_\+backend\+\_\+begin\+\_\+frame}} (\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}backend, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} delta\+\_\+time)
+\item 
+void \mbox{\hyperlink{vulkan__backend_8c_a4c1bce5a99480fe239e0920a92d471ea}{vulkan\+\_\+renderer\+\_\+update\+\_\+global\+\_\+world\+\_\+state}} (\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} projection, \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} view, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} view\+\_\+position, \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} ambient\+\_\+colour, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} mode)
+\item 
+void \mbox{\hyperlink{vulkan__backend_8c_ae8bcf3f950621f7ad986865960c2f538}{vulkan\+\_\+renderer\+\_\+update\+\_\+global\+\_\+ui\+\_\+state}} (\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} projection, \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} view, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} mode)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__backend_8c_aa4147f264f03182a1ae88ce189d6810d}{vulkan\+\_\+renderer\+\_\+backend\+\_\+end\+\_\+frame}} (\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}backend, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} delta\+\_\+time)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__backend_8c_a8ff5edfb594f4171710eb0e5ec3897a5}{vulkan\+\_\+renderer\+\_\+begin\+\_\+renderpass}} (\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}backend, \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} renderpass\+\_\+id)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__backend_8c_a3f4765d046f40fb3e61e8a6705723b39}{vulkan\+\_\+renderer\+\_\+end\+\_\+renderpass}} (\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}backend, \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} renderpass\+\_\+id)
+\item 
+void \mbox{\hyperlink{vulkan__backend_8c_acb133c3efb85bf8cd0029ceeb6f287a8}{vulkan\+\_\+renderer\+\_\+create\+\_\+texture}} (const \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \texorpdfstring{$\ast$}{*}pixels, struct \mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structtexture}{texture}})
+\item 
+void \mbox{\hyperlink{vulkan__backend_8c_a960741cefcbdc168f758b46407bcc9ec}{vulkan\+\_\+renderer\+\_\+destroy\+\_\+texture}} (\mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structtexture}{texture}})
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__backend_8c_aae87f32cda6dae5a302e4c7c23eeccb1}{vulkan\+\_\+renderer\+\_\+create\+\_\+material}} (struct \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structmaterial}{material}})
+\item 
+void \mbox{\hyperlink{vulkan__backend_8c_a897d4b85115557425812030916e8cc56}{vulkan\+\_\+renderer\+\_\+destroy\+\_\+material}} (struct \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structmaterial}{material}})
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__backend_8c_a58fed7c35e4d38f94c14ecb0203ebbe1}{vulkan\+\_\+renderer\+\_\+create\+\_\+geometry}} (\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structgeometry}{geometry}}, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} vertex\+\_\+size, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} vertex\+\_\+count, const void \texorpdfstring{$\ast$}{*}vertices, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} index\+\_\+size, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} index\+\_\+count, const void \texorpdfstring{$\ast$}{*}indices)
+\item 
+void \mbox{\hyperlink{vulkan__backend_8c_a798b85a7a54f19a9dfc5a3a7e05827a7}{vulkan\+\_\+renderer\+\_\+destroy\+\_\+geometry}} (\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structgeometry}{geometry}})
+\item 
+void \mbox{\hyperlink{vulkan__backend_8c_afb2953d737e09a76a30a16ed380d3a10}{vulkan\+\_\+renderer\+\_\+draw\+\_\+geometry}} (\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}backend, \mbox{\hyperlink{structgeometry__render__data}{geometry\+\_\+render\+\_\+data}} data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}
+\item 
+static \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{vulkan__backend_8c_aa377424afe1f7b31610bfc237af94a6f}{cached\+\_\+framebuffer\+\_\+width}} = 0
+\item 
+static \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{vulkan__backend_8c_acec393f5eb0238aceb1cf45a5c08aad2}{cached\+\_\+framebuffer\+\_\+height}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{vulkan__backend_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{vulkan__backend_8c_af518f3f8b226671c0e27aec52faec49b}\index{vulkan\_backend.c@{vulkan\_backend.c}!create\_buffers@{create\_buffers}}
+\index{create\_buffers@{create\_buffers}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{create\_buffers()}{create\_buffers()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_af518f3f8b226671c0e27aec52faec49b} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} create\+\_\+buffers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_af518f3f8b226671c0e27aec52faec49b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_a6dfa9eb7e2169d6ab9a75cb9eb600e5e}\index{vulkan\_backend.c@{vulkan\_backend.c}!create\_command\_buffers@{create\_command\_buffers}}
+\index{create\_command\_buffers@{create\_command\_buffers}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{create\_command\_buffers()}{create\_command\_buffers()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_a6dfa9eb7e2169d6ab9a75cb9eb600e5e} 
+void create\+\_\+command\+\_\+buffers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}}]{backend}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a6dfa9eb7e2169d6ab9a75cb9eb600e5e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a6dfa9eb7e2169d6ab9a75cb9eb600e5e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_aada43db2d3a25f12c6511695c5d74d0a}\index{vulkan\_backend.c@{vulkan\_backend.c}!find\_memory\_index@{find\_memory\_index}}
+\index{find\_memory\_index@{find\_memory\_index}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{find\_memory\_index()}{find\_memory\_index()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_aada43db2d3a25f12c6511695c5d74d0a} 
+\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} find\+\_\+memory\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{type\+\_\+filter}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{property\+\_\+flags}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_aada43db2d3a25f12c6511695c5d74d0a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_a288cad964ce221ad161813fb504a7fbd}\index{vulkan\_backend.c@{vulkan\_backend.c}!free\_data\_range@{free\_data\_range}}
+\index{free\_data\_range@{free\_data\_range}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{free\_data\_range()}{free\_data\_range()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_a288cad964ce221ad161813fb504a7fbd} 
+void free\+\_\+data\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__buffer}{vulkan\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{offset}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a288cad964ce221ad161813fb504a7fbd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a288cad964ce221ad161813fb504a7fbd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_afe660c6d3ba8621d1a7b395500e6fc02}\index{vulkan\_backend.c@{vulkan\_backend.c}!recreate\_swapchain@{recreate\_swapchain}}
+\index{recreate\_swapchain@{recreate\_swapchain}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{recreate\_swapchain()}{recreate\_swapchain()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_afe660c6d3ba8621d1a7b395500e6fc02} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} recreate\+\_\+swapchain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}}]{backend}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_afe660c6d3ba8621d1a7b395500e6fc02_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_afe660c6d3ba8621d1a7b395500e6fc02_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_ac4614229a4fe4f09cf49e328f1c93540}\index{vulkan\_backend.c@{vulkan\_backend.c}!regenerate\_framebuffers@{regenerate\_framebuffers}}
+\index{regenerate\_framebuffers@{regenerate\_framebuffers}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{regenerate\_framebuffers()}{regenerate\_framebuffers()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_ac4614229a4fe4f09cf49e328f1c93540} 
+void regenerate\+\_\+framebuffers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_ac4614229a4fe4f09cf49e328f1c93540_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_a5e1bd4cf15ecec24c982ccd79a58a94d}\index{vulkan\_backend.c@{vulkan\_backend.c}!upload\_data\_range@{upload\_data\_range}}
+\index{upload\_data\_range@{upload\_data\_range}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{upload\_data\_range()}{upload\_data\_range()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_a5e1bd4cf15ecec24c982ccd79a58a94d} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} upload\+\_\+data\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{Vk\+Command\+Pool}]{pool}{, }\item[{Vk\+Fence}]{fence}{, }\item[{Vk\+Queue}]{queue}{, }\item[{\mbox{\hyperlink{structvulkan__buffer}{vulkan\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+offset}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a5e1bd4cf15ecec24c982ccd79a58a94d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a5e1bd4cf15ecec24c982ccd79a58a94d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_a2ee6f6277021f0999f1be2f92b6bd21d}\index{vulkan\_backend.c@{vulkan\_backend.c}!vk\_debug\_callback@{vk\_debug\_callback}}
+\index{vk\_debug\_callback@{vk\_debug\_callback}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vk\_debug\_callback()}{vk\_debug\_callback()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_a2ee6f6277021f0999f1be2f92b6bd21d} 
+VKAPI\+\_\+\+ATTR Vk\+Bool32 VKAPI\+\_\+\+CALL vk\+\_\+debug\+\_\+callback (\begin{DoxyParamCaption}\item[{Vk\+Debug\+Utils\+Message\+Severity\+Flag\+Bits\+EXT}]{message\+\_\+severity}{, }\item[{Vk\+Debug\+Utils\+Message\+Type\+Flags\+EXT}]{message\+\_\+types}{, }\item[{const Vk\+Debug\+Utils\+Messenger\+Callback\+Data\+EXT \texorpdfstring{$\ast$}{*}}]{callback\+\_\+data}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+\_\+data}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a2ee6f6277021f0999f1be2f92b6bd21d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_af88b430f0e8f76ff7224c6d65ff7ce14}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_backend\_begin\_frame@{vulkan\_renderer\_backend\_begin\_frame}}
+\index{vulkan\_renderer\_backend\_begin\_frame@{vulkan\_renderer\_backend\_begin\_frame}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_backend\_begin\_frame()}{vulkan\_renderer\_backend\_begin\_frame()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_af88b430f0e8f76ff7224c6d65ff7ce14} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vulkan\+\_\+renderer\+\_\+backend\+\_\+begin\+\_\+frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}}]{backend}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{delta\+\_\+time}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_af88b430f0e8f76ff7224c6d65ff7ce14_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_af88b430f0e8f76ff7224c6d65ff7ce14_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_aa4147f264f03182a1ae88ce189d6810d}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_backend\_end\_frame@{vulkan\_renderer\_backend\_end\_frame}}
+\index{vulkan\_renderer\_backend\_end\_frame@{vulkan\_renderer\_backend\_end\_frame}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_backend\_end\_frame()}{vulkan\_renderer\_backend\_end\_frame()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_aa4147f264f03182a1ae88ce189d6810d} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vulkan\+\_\+renderer\+\_\+backend\+\_\+end\+\_\+frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}}]{backend}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{delta\+\_\+time}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_aa4147f264f03182a1ae88ce189d6810d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_aa4147f264f03182a1ae88ce189d6810d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_a0b90ec94f78aae6814140d684323d8d2}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_backend\_initialize@{vulkan\_renderer\_backend\_initialize}}
+\index{vulkan\_renderer\_backend\_initialize@{vulkan\_renderer\_backend\_initialize}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_backend\_initialize()}{vulkan\_renderer\_backend\_initialize()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_a0b90ec94f78aae6814140d684323d8d2} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vulkan\+\_\+renderer\+\_\+backend\+\_\+initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}}]{backend}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{application\+\_\+name}{, }\item[{struct \mbox{\hyperlink{structplatform__state}{platform\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{plat\+\_\+state}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a0b90ec94f78aae6814140d684323d8d2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a0b90ec94f78aae6814140d684323d8d2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_a8eae56297e3b34f9dd52a04c24fd9730}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_backend\_on\_resized@{vulkan\_renderer\_backend\_on\_resized}}
+\index{vulkan\_renderer\_backend\_on\_resized@{vulkan\_renderer\_backend\_on\_resized}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_backend\_on\_resized()}{vulkan\_renderer\_backend\_on\_resized()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_a8eae56297e3b34f9dd52a04c24fd9730} 
+void vulkan\+\_\+renderer\+\_\+backend\+\_\+on\+\_\+resized (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}}]{backend}{, }\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{width}{, }\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{height}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a8eae56297e3b34f9dd52a04c24fd9730_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_aaf5c03bd71d214149e0e3e97b0d0fbca}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_backend\_shutdown@{vulkan\_renderer\_backend\_shutdown}}
+\index{vulkan\_renderer\_backend\_shutdown@{vulkan\_renderer\_backend\_shutdown}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_backend\_shutdown()}{vulkan\_renderer\_backend\_shutdown()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_aaf5c03bd71d214149e0e3e97b0d0fbca} 
+void vulkan\+\_\+renderer\+\_\+backend\+\_\+shutdown (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}}]{backend}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_aaf5c03bd71d214149e0e3e97b0d0fbca_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_aaf5c03bd71d214149e0e3e97b0d0fbca_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_a8ff5edfb594f4171710eb0e5ec3897a5}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_begin\_renderpass@{vulkan\_renderer\_begin\_renderpass}}
+\index{vulkan\_renderer\_begin\_renderpass@{vulkan\_renderer\_begin\_renderpass}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_begin\_renderpass()}{vulkan\_renderer\_begin\_renderpass()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_a8ff5edfb594f4171710eb0e5ec3897a5} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vulkan\+\_\+renderer\+\_\+begin\+\_\+renderpass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}}]{backend}{, }\item[{\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}}]{renderpass\+\_\+id}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a8ff5edfb594f4171710eb0e5ec3897a5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a8ff5edfb594f4171710eb0e5ec3897a5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_a58fed7c35e4d38f94c14ecb0203ebbe1}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_create\_geometry@{vulkan\_renderer\_create\_geometry}}
+\index{vulkan\_renderer\_create\_geometry@{vulkan\_renderer\_create\_geometry}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_create\_geometry()}{vulkan\_renderer\_create\_geometry()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_a58fed7c35e4d38f94c14ecb0203ebbe1} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vulkan\+\_\+renderer\+\_\+create\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*}}]{geometry}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{vertex\+\_\+size}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{vertex\+\_\+count}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{vertices}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{index\+\_\+size}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{index\+\_\+count}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{indices}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a58fed7c35e4d38f94c14ecb0203ebbe1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a58fed7c35e4d38f94c14ecb0203ebbe1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_aae87f32cda6dae5a302e4c7c23eeccb1}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_create\_material@{vulkan\_renderer\_create\_material}}
+\index{vulkan\_renderer\_create\_material@{vulkan\_renderer\_create\_material}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_create\_material()}{vulkan\_renderer\_create\_material()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_aae87f32cda6dae5a302e4c7c23eeccb1} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vulkan\+\_\+renderer\+\_\+create\+\_\+material (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}}]{material}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_aae87f32cda6dae5a302e4c7c23eeccb1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_aae87f32cda6dae5a302e4c7c23eeccb1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_acb133c3efb85bf8cd0029ceeb6f287a8}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_create\_texture@{vulkan\_renderer\_create\_texture}}
+\index{vulkan\_renderer\_create\_texture@{vulkan\_renderer\_create\_texture}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_create\_texture()}{vulkan\_renderer\_create\_texture()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_acb133c3efb85bf8cd0029ceeb6f287a8} 
+void vulkan\+\_\+renderer\+\_\+create\+\_\+texture (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \texorpdfstring{$\ast$}{*}}]{pixels}{, }\item[{struct \mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*}}]{texture}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_acb133c3efb85bf8cd0029ceeb6f287a8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_acb133c3efb85bf8cd0029ceeb6f287a8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_a798b85a7a54f19a9dfc5a3a7e05827a7}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_destroy\_geometry@{vulkan\_renderer\_destroy\_geometry}}
+\index{vulkan\_renderer\_destroy\_geometry@{vulkan\_renderer\_destroy\_geometry}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_destroy\_geometry()}{vulkan\_renderer\_destroy\_geometry()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_a798b85a7a54f19a9dfc5a3a7e05827a7} 
+void vulkan\+\_\+renderer\+\_\+destroy\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*}}]{geometry}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a798b85a7a54f19a9dfc5a3a7e05827a7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a798b85a7a54f19a9dfc5a3a7e05827a7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_a897d4b85115557425812030916e8cc56}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_destroy\_material@{vulkan\_renderer\_destroy\_material}}
+\index{vulkan\_renderer\_destroy\_material@{vulkan\_renderer\_destroy\_material}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_destroy\_material()}{vulkan\_renderer\_destroy\_material()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_a897d4b85115557425812030916e8cc56} 
+void vulkan\+\_\+renderer\+\_\+destroy\+\_\+material (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}}]{material}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a897d4b85115557425812030916e8cc56_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a897d4b85115557425812030916e8cc56_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_a960741cefcbdc168f758b46407bcc9ec}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_destroy\_texture@{vulkan\_renderer\_destroy\_texture}}
+\index{vulkan\_renderer\_destroy\_texture@{vulkan\_renderer\_destroy\_texture}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_destroy\_texture()}{vulkan\_renderer\_destroy\_texture()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_a960741cefcbdc168f758b46407bcc9ec} 
+void vulkan\+\_\+renderer\+\_\+destroy\+\_\+texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*}}]{texture}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a960741cefcbdc168f758b46407bcc9ec_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a960741cefcbdc168f758b46407bcc9ec_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_afb2953d737e09a76a30a16ed380d3a10}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_draw\_geometry@{vulkan\_renderer\_draw\_geometry}}
+\index{vulkan\_renderer\_draw\_geometry@{vulkan\_renderer\_draw\_geometry}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_draw\_geometry()}{vulkan\_renderer\_draw\_geometry()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_afb2953d737e09a76a30a16ed380d3a10} 
+void vulkan\+\_\+renderer\+\_\+draw\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}}]{backend}{, }\item[{\mbox{\hyperlink{structgeometry__render__data}{geometry\+\_\+render\+\_\+data}}}]{data}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_afb2953d737e09a76a30a16ed380d3a10_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_afb2953d737e09a76a30a16ed380d3a10_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_a3f4765d046f40fb3e61e8a6705723b39}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_end\_renderpass@{vulkan\_renderer\_end\_renderpass}}
+\index{vulkan\_renderer\_end\_renderpass@{vulkan\_renderer\_end\_renderpass}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_end\_renderpass()}{vulkan\_renderer\_end\_renderpass()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_a3f4765d046f40fb3e61e8a6705723b39} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vulkan\+\_\+renderer\+\_\+end\+\_\+renderpass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}}]{backend}{, }\item[{\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}}]{renderpass\+\_\+id}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a3f4765d046f40fb3e61e8a6705723b39_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a3f4765d046f40fb3e61e8a6705723b39_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_ae8bcf3f950621f7ad986865960c2f538}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_update\_global\_ui\_state@{vulkan\_renderer\_update\_global\_ui\_state}}
+\index{vulkan\_renderer\_update\_global\_ui\_state@{vulkan\_renderer\_update\_global\_ui\_state}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_update\_global\_ui\_state()}{vulkan\_renderer\_update\_global\_ui\_state()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_ae8bcf3f950621f7ad986865960c2f538} 
+void vulkan\+\_\+renderer\+\_\+update\+\_\+global\+\_\+ui\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{projection}{, }\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{view}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{mode}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_ae8bcf3f950621f7ad986865960c2f538_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_ae8bcf3f950621f7ad986865960c2f538_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__backend_8c_a4c1bce5a99480fe239e0920a92d471ea}\index{vulkan\_backend.c@{vulkan\_backend.c}!vulkan\_renderer\_update\_global\_world\_state@{vulkan\_renderer\_update\_global\_world\_state}}
+\index{vulkan\_renderer\_update\_global\_world\_state@{vulkan\_renderer\_update\_global\_world\_state}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderer\_update\_global\_world\_state()}{vulkan\_renderer\_update\_global\_world\_state()}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_a4c1bce5a99480fe239e0920a92d471ea} 
+void vulkan\+\_\+renderer\+\_\+update\+\_\+global\+\_\+world\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{projection}{, }\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{view}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{view\+\_\+position}{, }\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{ambient\+\_\+colour}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{mode}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a4c1bce5a99480fe239e0920a92d471ea_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/vulkan__backend_8c_a4c1bce5a99480fe239e0920a92d471ea_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-var-members}
+\Hypertarget{vulkan__backend_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{vulkan__backend_8c_acec393f5eb0238aceb1cf45a5c08aad2}\index{vulkan\_backend.c@{vulkan\_backend.c}!cached\_framebuffer\_height@{cached\_framebuffer\_height}}
+\index{cached\_framebuffer\_height@{cached\_framebuffer\_height}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{cached\_framebuffer\_height}{cached\_framebuffer\_height}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_acec393f5eb0238aceb1cf45a5c08aad2} 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} cached\+\_\+framebuffer\+\_\+height = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{vulkan__backend_8c_aa377424afe1f7b31610bfc237af94a6f}\index{vulkan\_backend.c@{vulkan\_backend.c}!cached\_framebuffer\_width@{cached\_framebuffer\_width}}
+\index{cached\_framebuffer\_width@{cached\_framebuffer\_width}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{cached\_framebuffer\_width}{cached\_framebuffer\_width}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_aa377424afe1f7b31610bfc237af94a6f} 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} cached\+\_\+framebuffer\+\_\+width = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}\index{vulkan\_backend.c@{vulkan\_backend.c}!context@{context}}
+\index{context@{context}!vulkan\_backend.c@{vulkan\_backend.c}}
+\doxysubsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily \label{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9} 
+\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} context\hspace{0.3cm}{\ttfamily [static]}}
+

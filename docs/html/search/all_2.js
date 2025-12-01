@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['b_0',['b',['../d5/df1/unionvec3__u.html#a5f79539f30c85a461dddf0d4ac5a37de',1,'vec3_u::b'],['../df/dbe/unionvec4__u.html#a188b547c6bbc01a37cb1478c283dc953',1,'vec4_u::b']]],
+  ['b32_1',['b32',['../d8/db0/defines_8h.html#ac6baccc379c73d4e641ef847dbb08fa2',1,'defines.h']]],
+  ['b8_2',['b8',['../d8/db0/defines_8h.html#a3a58feb08f4f45ee137ec358217c3270',1,'defines.h']]],
+  ['backend_3',['backend',['../d3/df6/structrenderer__system__state.html#a52c3666e5bca364ff89ff93792576649',1,'renderer_system_state']]],
+  ['begin_5fframe_4',['begin_frame',['../df/d02/structrenderer__backend.html#ad9da44a8bb1fdc43db40189db8bb76ba',1,'renderer_backend']]],
+  ['begin_5frenderpass_5',['begin_renderpass',['../df/d02/structrenderer__backend.html#aa87489090b81db88a90ec8414bd01707',1,'renderer_backend']]],
+  ['binary_5floader_2ec_6',['binary_loader.c',['../df/d5e/binary__loader_8c.html',1,'']]],
+  ['binary_5floader_2eh_7',['binary_loader.h',['../dd/df7/binary__loader_8h.html',1,'']]],
+  ['binary_5floader_5fload_8',['binary_loader_load',['../df/d5e/binary__loader_8c.html#a6234e4d4aa32055857962d0b032cc32c',1,'binary_loader.c']]],
+  ['binary_5floader_5funload_9',['binary_loader_unload',['../df/d5e/binary__loader_8c.html#ae4064f67c751c8552cb796af5b19d57f',1,'binary_loader.c']]],
+  ['binary_5fresource_5floader_5fcreate_10',['binary_resource_loader_create',['../df/d5e/binary__loader_8c.html#a3f654b66807ff89405aec73e75e42268',1,'binary_resource_loader_create():&#160;binary_loader.c'],['../dd/df7/binary__loader_8h.html#a3f654b66807ff89405aec73e75e42268',1,'binary_resource_loader_create():&#160;binary_loader.c']]],
+  ['buffer_5ffreelist_11',['buffer_freelist',['../d5/def/structvulkan__buffer.html#a70b2eadbb17480d2598bee39180b67db',1,'vulkan_buffer']]],
+  ['build_20commands_12',['Build Commands',['../d0/d30/md_README.html#autotoc_md7',1,'']]],
+  ['building_13',['🔧 Building',['../d0/d30/md_README.html#autotoc_md6',1,'']]],
+  ['builtin_5frenderpass_14',['builtin_renderpass',['../de/df8/renderer__types_8inl.html#a041ad0c80961f41c674b44c0584ed2cb',1,'builtin_renderpass:&#160;renderer_types.inl'],['../de/df8/renderer__types_8inl.html#a6505c590d46dd12dcbbe4a2508425ec4',1,'builtin_renderpass:&#160;renderer_types.inl']]],
+  ['builtin_5frenderpass_5fui_15',['BUILTIN_RENDERPASS_UI',['../de/df8/renderer__types_8inl.html#a041ad0c80961f41c674b44c0584ed2cbab0d604d59ad38bbd1f49201458f23340',1,'renderer_types.inl']]],
+  ['builtin_5frenderpass_5fworld_16',['BUILTIN_RENDERPASS_WORLD',['../de/df8/renderer__types_8inl.html#a041ad0c80961f41c674b44c0584ed2cbad38480b8669ce13b29147fe4e33cd813',1,'renderer_types.inl']]],
+  ['builtin_5fshader_5fname_5fmaterial_17',['BUILTIN_SHADER_NAME_MATERIAL',['../d2/d8c/vulkan__material__shader_8c.html#afb2d381b62dbab53af2171d171a71ccc',1,'vulkan_material_shader.c']]],
+  ['builtin_5fshader_5fname_5fui_18',['BUILTIN_SHADER_NAME_UI',['../da/d35/vulkan__ui__shader_8c.html#a5a6d6d002896a61a09c7381cedbad972',1,'vulkan_ui_shader.c']]],
+  ['button_5fleft_19',['BUTTON_LEFT',['../de/ded/input_8h.html#a3e08a16703943b810da7b8b2a915c836a55dc0d53615e28ee8af66827bee48e4e',1,'input.h']]],
+  ['button_5fmax_5fbuttons_20',['BUTTON_MAX_BUTTONS',['../de/ded/input_8h.html#a3e08a16703943b810da7b8b2a915c836aec454ba81b583c1f98717cd9372683a7',1,'input.h']]],
+  ['button_5fmiddle_21',['BUTTON_MIDDLE',['../de/ded/input_8h.html#a3e08a16703943b810da7b8b2a915c836adc5b6dc06792e0f36a19c74e9c77c6fb',1,'input.h']]],
+  ['button_5fright_22',['BUTTON_RIGHT',['../de/ded/input_8h.html#a3e08a16703943b810da7b8b2a915c836a13046edd6d64a0de5821b5ff4c7581ce',1,'input.h']]],
+  ['buttons_23',['buttons',['../dc/d81/structmouse__state.html#a865695ad1100e332feb41e9fa6fd1dbc',1,'mouse_state::buttons'],['../de/ded/input_8h.html#a3e08a16703943b810da7b8b2a915c836',1,'buttons:&#160;input.h'],['../de/ded/input_8h.html#a5aec323161d474e9086513582ae9e13c',1,'buttons:&#160;input.h']]]
+];

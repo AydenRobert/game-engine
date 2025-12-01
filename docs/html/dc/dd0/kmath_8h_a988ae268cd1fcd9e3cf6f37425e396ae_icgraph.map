@@ -1,0 +1,13 @@
+<map id="quat_normal" name="quat_normal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="389,84,492,112"/>
+<area shape="rect" id="Node000002" href="$dc/dd0/kmath_8h.html#a80f41015fc07b514f4fedc2d76157e11" title=" " alt="" coords="219,84,341,112"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="371,98,342,100,341,95,376,97"/>
+<area shape="rect" id="Node000003" href="$dc/dd0/kmath_8h.html#adfcab382a3cbf4493982e93fda95e257" title=" " alt="" coords="5,5,171,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="235,77,170,48,137,36,137,31,172,43,240,76"/>
+<area shape="rect" id="Node000004" href="$dc/dd0/kmath_8h.html#a5c05ed1e69ca8563590cc8718fca5435" title=" " alt="" coords="35,57,141,85"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="201,88,141,81,141,76,206,86"/>
+<area shape="rect" id="Node000005" href="$dc/dd0/kmath_8h.html#aef737c7e466f76a8e93d4a8ee72d9b3a" title=" " alt="" coords="43,109,133,137"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="201,109,134,120,132,115,206,107"/>
+<area shape="rect" id="Node000006" href="$dc/dd0/kmath_8h.html#ac84936abc187f178a2228f699a5b5a9d" title=" " alt="" coords="32,161,144,189"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="240,118,172,151,137,163,136,158,170,146,234,120"/>
+</map>

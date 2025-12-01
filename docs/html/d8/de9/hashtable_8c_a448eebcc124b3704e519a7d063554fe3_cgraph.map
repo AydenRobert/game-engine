@@ -1,0 +1,7 @@
+<map id="hashtable_create" name="hashtable_create">
+<area shape="rect" id="Node000001" title="Creates a hashtable and stores it in out_hashtable." alt="" coords="5,5,139,33"/>
+<area shape="rect" id="Node000002" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="187,5,306,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,17,174,19,168,19,139,22"/>
+<area shape="rect" id="Node000003" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="354,5,528,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="306,17,341,19,336,19,306,22"/>
+</map>

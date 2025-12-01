@@ -1,0 +1,9 @@
+<map id="dynamic_allocator_destroy" name="dynamic_allocator_destroy">
+<area shape="rect" id="Node000001" title="Destroys a dynamic allocator." alt="" coords="5,5,203,33"/>
+<area shape="rect" id="Node000002" href="$da/d3f/freelist_8c.html#a8f4503d5fe7cfab1e90e20fe32801eff" title="Destroys the provided freelist." alt="" coords="251,5,374,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,17,238,19,232,19,203,22"/>
+<area shape="rect" id="Node000003" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="422,5,541,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="374,17,409,19,404,19,374,22"/>
+<area shape="rect" id="Node000004" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="589,5,764,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="542,17,577,19,571,19,542,22"/>
+</map>

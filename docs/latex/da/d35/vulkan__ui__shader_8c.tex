@@ -1,0 +1,216 @@
+\doxysection{engine/src/renderer/vulkan/shaders/vulkan\+\_\+ui\+\_\+shader.c File Reference}
+\hypertarget{vulkan__ui__shader_8c}{}\label{vulkan__ui__shader_8c}\index{engine/src/renderer/vulkan/shaders/vulkan\_ui\_shader.c@{engine/src/renderer/vulkan/shaders/vulkan\_ui\_shader.c}}
+{\ttfamily \#include "{}renderer/vulkan/shaders/vulkan\+\_\+ui\+\_\+shader.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+{\ttfamily \#include "{}math/kmath.\+h"{}}\newline
+{\ttfamily \#include "{}math/math\+\_\+types.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/renderer\+\_\+types.\+inl"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+buffer.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+pipeline.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+shader\+\_\+utils.\+h"{}}\newline
+{\ttfamily \#include "{}core/logger.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+types.\+inl"{}}\newline
+{\ttfamily \#include "{}resources/resource\+\_\+types.\+h"{}}\newline
+{\ttfamily \#include "{}systems/texture\+\_\+system.\+h"{}}\newline
+{\ttfamily \#include $<$vulkan/vulkan\+\_\+core.\+h$>$}\newline
+Include dependency graph for vulkan\+\_\+ui\+\_\+shader.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d9b/vulkan__ui__shader_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vulkan__ui__shader_8c_a5a6d6d002896a61a09c7381cedbad972}{BUILTIN\+\_\+\+SHADER\+\_\+\+NAME\+\_\+\+UI}}~"{}Builtin.\+UIShader"{}
+\item 
+\#define \mbox{\hyperlink{vulkan__ui__shader_8c_a56289c7c829da6e2f4716327dd9352b2}{ATTRIBUTE\+\_\+\+COUNT}}~2
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__ui__shader_8c_a012c2b7ad2f6fb9c9013e35220e860a6}{vulkan\+\_\+ui\+\_\+shader\+\_\+create}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}out\+\_\+shader)
+\item 
+void \mbox{\hyperlink{vulkan__ui__shader_8c_ad9846b7e3ee019c14d34155f7b520d35}{vulkan\+\_\+ui\+\_\+shader\+\_\+destroy}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}shader)
+\item 
+void \mbox{\hyperlink{vulkan__ui__shader_8c_a450c4ee72589e04bbc20790751332031}{vulkan\+\_\+ui\+\_\+shader\+\_\+use}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}shader)
+\item 
+void \mbox{\hyperlink{vulkan__ui__shader_8c_a642a21234ca4447ae88b154ba914b7bc}{vulkan\+\_\+ui\+\_\+shader\+\_\+update\+\_\+global\+\_\+state}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}shader, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} delta\+\_\+time)
+\item 
+void \mbox{\hyperlink{vulkan__ui__shader_8c_a863854771ebc5dc5a751db88d752e267}{vulkan\+\_\+ui\+\_\+shader\+\_\+set\+\_\+model}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}shader, \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} model)
+\item 
+void \mbox{\hyperlink{vulkan__ui__shader_8c_a2eac5443d2835edc14278dd82fdf1637}{vulkan\+\_\+ui\+\_\+shader\+\_\+apply\+\_\+material}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}shader, \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structmaterial}{material}})
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__ui__shader_8c_a5767e20e3beeceb4fd6d99dd6b9f6f0a}{vulkan\+\_\+ui\+\_\+shader\+\_\+acquire\+\_\+resources}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}shader, \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}mat)
+\item 
+void \mbox{\hyperlink{vulkan__ui__shader_8c_a09c1cd8d330a9fe0cf82c32e47961c03}{vulkan\+\_\+ui\+\_\+shader\+\_\+release\+\_\+resources}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}shader, \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}mat)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{vulkan__ui__shader_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{vulkan__ui__shader_8c_a56289c7c829da6e2f4716327dd9352b2}\index{vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}!ATTRIBUTE\_COUNT@{ATTRIBUTE\_COUNT}}
+\index{ATTRIBUTE\_COUNT@{ATTRIBUTE\_COUNT}!vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}}
+\doxysubsubsection{\texorpdfstring{ATTRIBUTE\_COUNT}{ATTRIBUTE\_COUNT}}
+{\footnotesize\ttfamily \label{vulkan__ui__shader_8c_a56289c7c829da6e2f4716327dd9352b2} 
+\#define ATTRIBUTE\+\_\+\+COUNT~2}
+
+\Hypertarget{vulkan__ui__shader_8c_a5a6d6d002896a61a09c7381cedbad972}\index{vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}!BUILTIN\_SHADER\_NAME\_UI@{BUILTIN\_SHADER\_NAME\_UI}}
+\index{BUILTIN\_SHADER\_NAME\_UI@{BUILTIN\_SHADER\_NAME\_UI}!vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}}
+\doxysubsubsection{\texorpdfstring{BUILTIN\_SHADER\_NAME\_UI}{BUILTIN\_SHADER\_NAME\_UI}}
+{\footnotesize\ttfamily \label{vulkan__ui__shader_8c_a5a6d6d002896a61a09c7381cedbad972} 
+\#define BUILTIN\+\_\+\+SHADER\+\_\+\+NAME\+\_\+\+UI~"{}Builtin.\+UIShader"{}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{vulkan__ui__shader_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{vulkan__ui__shader_8c_a5767e20e3beeceb4fd6d99dd6b9f6f0a}\index{vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}!vulkan\_ui\_shader\_acquire\_resources@{vulkan\_ui\_shader\_acquire\_resources}}
+\index{vulkan\_ui\_shader\_acquire\_resources@{vulkan\_ui\_shader\_acquire\_resources}!vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_ui\_shader\_acquire\_resources()}{vulkan\_ui\_shader\_acquire\_resources()}}
+{\footnotesize\ttfamily \label{vulkan__ui__shader_8c_a5767e20e3beeceb4fd6d99dd6b9f6f0a} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vulkan\+\_\+ui\+\_\+shader\+\_\+acquire\+\_\+resources (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}}]{shader}{, }\item[{\mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}}]{mat}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d35/vulkan__ui__shader_8c_a5767e20e3beeceb4fd6d99dd6b9f6f0a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__ui__shader_8c_a2eac5443d2835edc14278dd82fdf1637}\index{vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}!vulkan\_ui\_shader\_apply\_material@{vulkan\_ui\_shader\_apply\_material}}
+\index{vulkan\_ui\_shader\_apply\_material@{vulkan\_ui\_shader\_apply\_material}!vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_ui\_shader\_apply\_material()}{vulkan\_ui\_shader\_apply\_material()}}
+{\footnotesize\ttfamily \label{vulkan__ui__shader_8c_a2eac5443d2835edc14278dd82fdf1637} 
+void vulkan\+\_\+ui\+\_\+shader\+\_\+apply\+\_\+material (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}}]{shader}{, }\item[{\mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}}]{material}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d35/vulkan__ui__shader_8c_a2eac5443d2835edc14278dd82fdf1637_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d35/vulkan__ui__shader_8c_a2eac5443d2835edc14278dd82fdf1637_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__ui__shader_8c_a012c2b7ad2f6fb9c9013e35220e860a6}\index{vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}!vulkan\_ui\_shader\_create@{vulkan\_ui\_shader\_create}}
+\index{vulkan\_ui\_shader\_create@{vulkan\_ui\_shader\_create}!vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_ui\_shader\_create()}{vulkan\_ui\_shader\_create()}}
+{\footnotesize\ttfamily \label{vulkan__ui__shader_8c_a012c2b7ad2f6fb9c9013e35220e860a6} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vulkan\+\_\+ui\+\_\+shader\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+shader}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d35/vulkan__ui__shader_8c_a012c2b7ad2f6fb9c9013e35220e860a6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__ui__shader_8c_ad9846b7e3ee019c14d34155f7b520d35}\index{vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}!vulkan\_ui\_shader\_destroy@{vulkan\_ui\_shader\_destroy}}
+\index{vulkan\_ui\_shader\_destroy@{vulkan\_ui\_shader\_destroy}!vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_ui\_shader\_destroy()}{vulkan\_ui\_shader\_destroy()}}
+{\footnotesize\ttfamily \label{vulkan__ui__shader_8c_ad9846b7e3ee019c14d34155f7b520d35} 
+void vulkan\+\_\+ui\+\_\+shader\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}}]{shader}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d35/vulkan__ui__shader_8c_ad9846b7e3ee019c14d34155f7b520d35_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d35/vulkan__ui__shader_8c_ad9846b7e3ee019c14d34155f7b520d35_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__ui__shader_8c_a09c1cd8d330a9fe0cf82c32e47961c03}\index{vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}!vulkan\_ui\_shader\_release\_resources@{vulkan\_ui\_shader\_release\_resources}}
+\index{vulkan\_ui\_shader\_release\_resources@{vulkan\_ui\_shader\_release\_resources}!vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_ui\_shader\_release\_resources()}{vulkan\_ui\_shader\_release\_resources()}}
+{\footnotesize\ttfamily \label{vulkan__ui__shader_8c_a09c1cd8d330a9fe0cf82c32e47961c03} 
+void vulkan\+\_\+ui\+\_\+shader\+\_\+release\+\_\+resources (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}}]{shader}{, }\item[{\mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}}]{mat}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d35/vulkan__ui__shader_8c_a09c1cd8d330a9fe0cf82c32e47961c03_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__ui__shader_8c_a863854771ebc5dc5a751db88d752e267}\index{vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}!vulkan\_ui\_shader\_set\_model@{vulkan\_ui\_shader\_set\_model}}
+\index{vulkan\_ui\_shader\_set\_model@{vulkan\_ui\_shader\_set\_model}!vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_ui\_shader\_set\_model()}{vulkan\_ui\_shader\_set\_model()}}
+{\footnotesize\ttfamily \label{vulkan__ui__shader_8c_a863854771ebc5dc5a751db88d752e267} 
+void vulkan\+\_\+ui\+\_\+shader\+\_\+set\+\_\+model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}}]{shader}{, }\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{model}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d35/vulkan__ui__shader_8c_a863854771ebc5dc5a751db88d752e267_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__ui__shader_8c_a642a21234ca4447ae88b154ba914b7bc}\index{vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}!vulkan\_ui\_shader\_update\_global\_state@{vulkan\_ui\_shader\_update\_global\_state}}
+\index{vulkan\_ui\_shader\_update\_global\_state@{vulkan\_ui\_shader\_update\_global\_state}!vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_ui\_shader\_update\_global\_state()}{vulkan\_ui\_shader\_update\_global\_state()}}
+{\footnotesize\ttfamily \label{vulkan__ui__shader_8c_a642a21234ca4447ae88b154ba914b7bc} 
+void vulkan\+\_\+ui\+\_\+shader\+\_\+update\+\_\+global\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}}]{shader}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{delta\+\_\+time}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d35/vulkan__ui__shader_8c_a642a21234ca4447ae88b154ba914b7bc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d35/vulkan__ui__shader_8c_a642a21234ca4447ae88b154ba914b7bc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__ui__shader_8c_a450c4ee72589e04bbc20790751332031}\index{vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}!vulkan\_ui\_shader\_use@{vulkan\_ui\_shader\_use}}
+\index{vulkan\_ui\_shader\_use@{vulkan\_ui\_shader\_use}!vulkan\_ui\_shader.c@{vulkan\_ui\_shader.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_ui\_shader\_use()}{vulkan\_ui\_shader\_use()}}
+{\footnotesize\ttfamily \label{vulkan__ui__shader_8c_a450c4ee72589e04bbc20790751332031} 
+void vulkan\+\_\+ui\+\_\+shader\+\_\+use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \texorpdfstring{$\ast$}{*}}]{shader}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d35/vulkan__ui__shader_8c_a450c4ee72589e04bbc20790751332031_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d35/vulkan__ui__shader_8c_a450c4ee72589e04bbc20790751332031_icgraph}
+\end{center}
+\end{figure}

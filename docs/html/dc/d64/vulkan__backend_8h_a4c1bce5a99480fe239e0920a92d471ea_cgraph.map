@@ -1,0 +1,15 @@
+<map id="vulkan_renderer_update_global_world_state" name="vulkan_renderer_update_global_world_state">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,36,184,81"/>
+<area shape="rect" id="Node000002" href="$d2/d8c/vulkan__material__shader_8c.html#a8dbed0ba1490bb3a2c8d5384fe1e10ae" title=" " alt="" coords="247,5,424,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,44,234,40,229,42,185,50"/>
+<area shape="rect" id="Node000006" href="$d2/d8c/vulkan__material__shader_8c.html#ac2c0b7bd44f15a3d7508bdd19cb4a3dc" title=" " alt="" coords="232,74,439,102"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="184,67,219,73,213,73,184,72"/>
+<area shape="rect" id="Node000003" href="$db/dab/vulkan__buffer_8c.html#a74035aeef79e5ffe833042ce00499a64" title=" " alt="" coords="487,14,667,42"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="424,25,474,27,469,28,425,30"/>
+<area shape="rect" id="Node000004" href="$d3/d3c/kmemory_8c.html#ae88e143a36677919fee16bdf0f11bc79" title=" " alt="" coords="715,14,838,42"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="667,25,703,28,697,28,668,30"/>
+<area shape="rect" id="Node000005" href="$de/d03/platform_8h.html#a15258bb22b902725b1fbf405463ed07d" title=" " alt="" coords="886,14,1063,42"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="838,25,872,28,867,28,838,30"/>
+<area shape="rect" id="Node000007" href="$d8/d51/vulkan__pipeline_8c.html#a9db9bf776b663de8df2847b1493319e6" title=" " alt="" coords="498,74,656,102"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="439,85,485,88,480,88,440,90"/>
+</map>

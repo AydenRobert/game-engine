@@ -1,0 +1,35 @@
+\doxysection{vulkan\+\_\+ui\+\_\+shader.\+h}
+\hypertarget{vulkan__ui__shader_8h_source}{}\label{vulkan__ui__shader_8h_source}\index{engine/src/renderer/vulkan/shaders/vulkan\_ui\_shader.h@{engine/src/renderer/vulkan/shaders/vulkan\_ui\_shader.h}}
+\mbox{\hyperlink{vulkan__ui__shader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vulkan__types_8inl}{renderer/vulkan/vulkan\_types.inl}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{vulkan__ui__shader_8h_a012c2b7ad2f6fb9c9013e35220e860a6}{vulkan\_ui\_shader\_create}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\_ui\_shader}}\ *out\_shader);}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__ui__shader_8h_ad9846b7e3ee019c14d34155f7b520d35}{vulkan\_ui\_shader\_destroy}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\_ui\_shader}}\ *shader);}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__ui__shader_8h_a450c4ee72589e04bbc20790751332031}{vulkan\_ui\_shader\_use}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},\ \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\_ui\_shader}}\ *shader);}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__ui__shader_8h_a642a21234ca4447ae88b154ba914b7bc}{vulkan\_ui\_shader\_update\_global\_state}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\_ui\_shader}}\ *shader,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ delta\_time);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__ui__shader_8h_a863854771ebc5dc5a751db88d752e267}{vulkan\_ui\_shader\_set\_model}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\_ui\_shader}}\ *shader,\ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ model);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__ui__shader_8h_a2eac5443d2835edc14278dd82fdf1637}{vulkan\_ui\_shader\_apply\_material}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\_ui\_shader}}\ *shader,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structmaterial}{material}}\ *\mbox{\hyperlink{structmaterial}{material}});}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{vulkan__ui__shader_8h_a5767e20e3beeceb4fd6d99dd6b9f6f0a}{vulkan\_ui\_shader\_acquire\_resources}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\_ui\_shader}}\ *shader,\ \mbox{\hyperlink{structmaterial}{material}}\ *mat);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__ui__shader_8h_a09c1cd8d330a9fe0cf82c32e47961c03}{vulkan\_ui\_shader\_release\_resources}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\_ui\_shader}}\ *shader,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structmaterial}{material}}\ *mat);}
+
+\end{DoxyCode}

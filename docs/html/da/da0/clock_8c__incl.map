@@ -1,0 +1,10 @@
+<map id="engine/src/core/clock.c" name="engine/src/core/clock.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="44,5,213,33"/>
+<area shape="rect" id="Node000002" href="$d7/d6e/clock_8h.html" title=" " alt="" coords="5,81,105,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,36,81,72,77,68,117,31"/>
+<area shape="rect" id="Node000004" href="$de/d03/platform_8h.html" title=" " alt="" coords="128,81,278,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="142,31,181,69,176,70,141,36"/>
+<area shape="rect" id="Node000003" href="$d8/db0/defines_8h.html" title=" " alt="" coords="88,157,168,184"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="69,107,107,145,102,146,67,112"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="192,108,154,148,151,143,187,110"/>
+</map>

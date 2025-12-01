@@ -1,0 +1,249 @@
+\doxysection{vulkan\+\_\+context Struct Reference}
+\hypertarget{structvulkan__context}{}\label{structvulkan__context}\index{vulkan\_context@{vulkan\_context}}
+
+
+Collaboration diagram for vulkan\+\_\+context\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d21/structvulkan__context__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{structvulkan__context_a9704bbb6aa2aa202ded1e8b8b2b225d8}{frame\+\_\+delta\+\_\+time}}
+\item 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{structvulkan__context_ada8eb7300aedfc6bbdc6e9a01a10b0ca}{framebuffer\+\_\+width}}
+\item 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{structvulkan__context_a0369e76bf85701ba2cf8b7f0134a2a6e}{framebuffer\+\_\+height}}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structvulkan__context_a09568b52b351488c26c1309a0918ac69}{framebuffer\+\_\+size\+\_\+generation}}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structvulkan__context_aa1edc2a3352ce6bc0751aa8bb6d84631}{framebuffer\+\_\+size\+\_\+last\+\_\+generation}}
+\item 
+Vk\+Instance \mbox{\hyperlink{structvulkan__context_a71e13564f2111dafcda6c332918c196f}{instance}}
+\item 
+Vk\+Allocation\+Callbacks \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structvulkan__context_a8922bfe5172973875c0420bc010344cc}{allocator}}
+\item 
+Vk\+Surface\+KHR \mbox{\hyperlink{structvulkan__context_ad0cd4ef188f905064d59bb918b69eb38}{surface}}
+\item 
+\mbox{\hyperlink{structvulkan__device}{vulkan\+\_\+device}} \mbox{\hyperlink{structvulkan__context_a125a2b961a4805e2eefc3ad2ab4f709a}{device}}
+\item 
+\mbox{\hyperlink{structvulkan__swapchain}{vulkan\+\_\+swapchain}} \mbox{\hyperlink{structvulkan__context_a847e3b9f7c19d2dc9a623bc84403ee8e}{swapchain}}
+\item 
+\mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \mbox{\hyperlink{structvulkan__context_a35b6a0b0b1424b05c15e93298f69f26e}{main\+\_\+renderpass}}
+\item 
+\mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \mbox{\hyperlink{structvulkan__context_a3d3649c5e0be460c2554bccef014a96e}{ui\+\_\+renderpass}}
+\item 
+\mbox{\hyperlink{structvulkan__buffer}{vulkan\+\_\+buffer}} \mbox{\hyperlink{structvulkan__context_a668bba584e42365c13d9f5664ca217b8}{object\+\_\+vertex\+\_\+buffer}}
+\item 
+\mbox{\hyperlink{structvulkan__buffer}{vulkan\+\_\+buffer}} \mbox{\hyperlink{structvulkan__context_a036b1378d111274567245bd286d290d3}{object\+\_\+index\+\_\+buffer}}
+\item 
+\mbox{\hyperlink{structvulkan__command__buffer}{vulkan\+\_\+command\+\_\+buffer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structvulkan__context_ada97681614808238c130037d71d38dca}{graphics\+\_\+command\+\_\+buffers}}
+\item 
+Vk\+Semaphore \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structvulkan__context_a8c5785218cb8df87943aa9392f895350}{image\+\_\+available\+\_\+semaphores}}
+\item 
+Vk\+Semaphore \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structvulkan__context_a64c9d883d2534b9cc6b7b47890efdf36}{queue\+\_\+complete\+\_\+semaphores}}
+\item 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{structvulkan__context_a0f57ba68ce37990bdfde83b351c45747}{in\+\_\+flight\+\_\+fence\+\_\+count}}
+\item 
+Vk\+Fence \mbox{\hyperlink{structvulkan__context_a8112e981decf4df4525dc372e62f82c8}{in\+\_\+flight\+\_\+fences}} \mbox{[}2\mbox{]}
+\item 
+Vk\+Fence \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structvulkan__context_a7ad2a385f67a5e1a261b7ad6176c1a4c}{images\+\_\+in\+\_\+flight}} \mbox{[}3\mbox{]}
+\item 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{structvulkan__context_aa6a4941f42c210b9972650276df61972}{image\+\_\+index}}
+\item 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{structvulkan__context_acf8f27c63fbac8a561ce15d22f016157}{current\+\_\+frame}}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{structvulkan__context_ae2293aefe9b568ce7222268489f041b8}{recreating\+\_\+swapchain}}
+\item 
+\mbox{\hyperlink{structvulkan__material__shader}{vulkan\+\_\+material\+\_\+shader}} \mbox{\hyperlink{structvulkan__context_a010e151c3fe4f524195d131eda4f7ac2}{material\+\_\+shader}}
+\item 
+\mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} \mbox{\hyperlink{structvulkan__context_acd75fbe8660e13050c01861b80b5e17a}{ui\+\_\+shader}}
+\item 
+\mbox{\hyperlink{structvulkan__geometry__data}{vulkan\+\_\+geometry\+\_\+data}} \mbox{\hyperlink{structvulkan__context_a04574de8371d67ff15bed1c645585cc5}{geometries}} \mbox{[}\mbox{\hyperlink{vulkan__types_8inl_a1816dd90401e0fa385296483b24de2be}{VULKAN\+\_\+\+MAX\+\_\+\+GEOMETRY\+\_\+\+COUNT}}\mbox{]}
+\item 
+Vk\+Framebuffer \mbox{\hyperlink{structvulkan__context_a20bab9417ffec615b656145b026f75f4}{world\+\_\+framebuffers}} \mbox{[}3\mbox{]}
+\item 
+\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structvulkan__context_a4c078acb6ec1a93e3d0bef27b83354c8}{find\+\_\+memory\+\_\+index}} )(\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} type\+\_\+filter, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} property\+\_\+flags)
+\end{DoxyCompactItemize}
+
+
+\label{doc-variable-members}
+\Hypertarget{structvulkan__context_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{structvulkan__context_a8922bfe5172973875c0420bc010344cc}\index{vulkan\_context@{vulkan\_context}!allocator@{allocator}}
+\index{allocator@{allocator}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{allocator}{allocator}}
+{\footnotesize\ttfamily \label{structvulkan__context_a8922bfe5172973875c0420bc010344cc} 
+Vk\+Allocation\+Callbacks\texorpdfstring{$\ast$}{*} vulkan\+\_\+context\+::allocator}
+
+\Hypertarget{structvulkan__context_acf8f27c63fbac8a561ce15d22f016157}\index{vulkan\_context@{vulkan\_context}!current\_frame@{current\_frame}}
+\index{current\_frame@{current\_frame}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{current\_frame}{current\_frame}}
+{\footnotesize\ttfamily \label{structvulkan__context_acf8f27c63fbac8a561ce15d22f016157} 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} vulkan\+\_\+context\+::current\+\_\+frame}
+
+\Hypertarget{structvulkan__context_a125a2b961a4805e2eefc3ad2ab4f709a}\index{vulkan\_context@{vulkan\_context}!device@{device}}
+\index{device@{device}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily \label{structvulkan__context_a125a2b961a4805e2eefc3ad2ab4f709a} 
+\mbox{\hyperlink{structvulkan__device}{vulkan\+\_\+device}} vulkan\+\_\+context\+::device}
+
+\Hypertarget{structvulkan__context_a4c078acb6ec1a93e3d0bef27b83354c8}\index{vulkan\_context@{vulkan\_context}!find\_memory\_index@{find\_memory\_index}}
+\index{find\_memory\_index@{find\_memory\_index}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{find\_memory\_index}{find\_memory\_index}}
+{\footnotesize\ttfamily \label{structvulkan__context_a4c078acb6ec1a93e3d0bef27b83354c8} 
+\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}(\texorpdfstring{$\ast$}{*} vulkan\+\_\+context\+::find\+\_\+memory\+\_\+index) (\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} type\+\_\+filter, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} property\+\_\+flags)}
+
+\Hypertarget{structvulkan__context_a9704bbb6aa2aa202ded1e8b8b2b225d8}\index{vulkan\_context@{vulkan\_context}!frame\_delta\_time@{frame\_delta\_time}}
+\index{frame\_delta\_time@{frame\_delta\_time}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{frame\_delta\_time}{frame\_delta\_time}}
+{\footnotesize\ttfamily \label{structvulkan__context_a9704bbb6aa2aa202ded1e8b8b2b225d8} 
+\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} vulkan\+\_\+context\+::frame\+\_\+delta\+\_\+time}
+
+\Hypertarget{structvulkan__context_a0369e76bf85701ba2cf8b7f0134a2a6e}\index{vulkan\_context@{vulkan\_context}!framebuffer\_height@{framebuffer\_height}}
+\index{framebuffer\_height@{framebuffer\_height}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{framebuffer\_height}{framebuffer\_height}}
+{\footnotesize\ttfamily \label{structvulkan__context_a0369e76bf85701ba2cf8b7f0134a2a6e} 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} vulkan\+\_\+context\+::framebuffer\+\_\+height}
+
+\Hypertarget{structvulkan__context_a09568b52b351488c26c1309a0918ac69}\index{vulkan\_context@{vulkan\_context}!framebuffer\_size\_generation@{framebuffer\_size\_generation}}
+\index{framebuffer\_size\_generation@{framebuffer\_size\_generation}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{framebuffer\_size\_generation}{framebuffer\_size\_generation}}
+{\footnotesize\ttfamily \label{structvulkan__context_a09568b52b351488c26c1309a0918ac69} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} vulkan\+\_\+context\+::framebuffer\+\_\+size\+\_\+generation}
+
+\Hypertarget{structvulkan__context_aa1edc2a3352ce6bc0751aa8bb6d84631}\index{vulkan\_context@{vulkan\_context}!framebuffer\_size\_last\_generation@{framebuffer\_size\_last\_generation}}
+\index{framebuffer\_size\_last\_generation@{framebuffer\_size\_last\_generation}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{framebuffer\_size\_last\_generation}{framebuffer\_size\_last\_generation}}
+{\footnotesize\ttfamily \label{structvulkan__context_aa1edc2a3352ce6bc0751aa8bb6d84631} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} vulkan\+\_\+context\+::framebuffer\+\_\+size\+\_\+last\+\_\+generation}
+
+\Hypertarget{structvulkan__context_ada8eb7300aedfc6bbdc6e9a01a10b0ca}\index{vulkan\_context@{vulkan\_context}!framebuffer\_width@{framebuffer\_width}}
+\index{framebuffer\_width@{framebuffer\_width}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{framebuffer\_width}{framebuffer\_width}}
+{\footnotesize\ttfamily \label{structvulkan__context_ada8eb7300aedfc6bbdc6e9a01a10b0ca} 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} vulkan\+\_\+context\+::framebuffer\+\_\+width}
+
+\Hypertarget{structvulkan__context_a04574de8371d67ff15bed1c645585cc5}\index{vulkan\_context@{vulkan\_context}!geometries@{geometries}}
+\index{geometries@{geometries}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{geometries}{geometries}}
+{\footnotesize\ttfamily \label{structvulkan__context_a04574de8371d67ff15bed1c645585cc5} 
+\mbox{\hyperlink{structvulkan__geometry__data}{vulkan\+\_\+geometry\+\_\+data}} vulkan\+\_\+context\+::geometries\mbox{[}\mbox{\hyperlink{vulkan__types_8inl_a1816dd90401e0fa385296483b24de2be}{VULKAN\+\_\+\+MAX\+\_\+\+GEOMETRY\+\_\+\+COUNT}}\mbox{]}}
+
+\Hypertarget{structvulkan__context_ada97681614808238c130037d71d38dca}\index{vulkan\_context@{vulkan\_context}!graphics\_command\_buffers@{graphics\_command\_buffers}}
+\index{graphics\_command\_buffers@{graphics\_command\_buffers}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{graphics\_command\_buffers}{graphics\_command\_buffers}}
+{\footnotesize\ttfamily \label{structvulkan__context_ada97681614808238c130037d71d38dca} 
+\mbox{\hyperlink{structvulkan__command__buffer}{vulkan\+\_\+command\+\_\+buffer}}\texorpdfstring{$\ast$}{*} vulkan\+\_\+context\+::graphics\+\_\+command\+\_\+buffers}
+
+\Hypertarget{structvulkan__context_a8c5785218cb8df87943aa9392f895350}\index{vulkan\_context@{vulkan\_context}!image\_available\_semaphores@{image\_available\_semaphores}}
+\index{image\_available\_semaphores@{image\_available\_semaphores}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{image\_available\_semaphores}{image\_available\_semaphores}}
+{\footnotesize\ttfamily \label{structvulkan__context_a8c5785218cb8df87943aa9392f895350} 
+Vk\+Semaphore\texorpdfstring{$\ast$}{*} vulkan\+\_\+context\+::image\+\_\+available\+\_\+semaphores}
+
+\Hypertarget{structvulkan__context_aa6a4941f42c210b9972650276df61972}\index{vulkan\_context@{vulkan\_context}!image\_index@{image\_index}}
+\index{image\_index@{image\_index}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{image\_index}{image\_index}}
+{\footnotesize\ttfamily \label{structvulkan__context_aa6a4941f42c210b9972650276df61972} 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} vulkan\+\_\+context\+::image\+\_\+index}
+
+\Hypertarget{structvulkan__context_a7ad2a385f67a5e1a261b7ad6176c1a4c}\index{vulkan\_context@{vulkan\_context}!images\_in\_flight@{images\_in\_flight}}
+\index{images\_in\_flight@{images\_in\_flight}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{images\_in\_flight}{images\_in\_flight}}
+{\footnotesize\ttfamily \label{structvulkan__context_a7ad2a385f67a5e1a261b7ad6176c1a4c} 
+Vk\+Fence\texorpdfstring{$\ast$}{*} vulkan\+\_\+context\+::images\+\_\+in\+\_\+flight\mbox{[}3\mbox{]}}
+
+\Hypertarget{structvulkan__context_a0f57ba68ce37990bdfde83b351c45747}\index{vulkan\_context@{vulkan\_context}!in\_flight\_fence\_count@{in\_flight\_fence\_count}}
+\index{in\_flight\_fence\_count@{in\_flight\_fence\_count}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{in\_flight\_fence\_count}{in\_flight\_fence\_count}}
+{\footnotesize\ttfamily \label{structvulkan__context_a0f57ba68ce37990bdfde83b351c45747} 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} vulkan\+\_\+context\+::in\+\_\+flight\+\_\+fence\+\_\+count}
+
+\Hypertarget{structvulkan__context_a8112e981decf4df4525dc372e62f82c8}\index{vulkan\_context@{vulkan\_context}!in\_flight\_fences@{in\_flight\_fences}}
+\index{in\_flight\_fences@{in\_flight\_fences}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{in\_flight\_fences}{in\_flight\_fences}}
+{\footnotesize\ttfamily \label{structvulkan__context_a8112e981decf4df4525dc372e62f82c8} 
+Vk\+Fence vulkan\+\_\+context\+::in\+\_\+flight\+\_\+fences\mbox{[}2\mbox{]}}
+
+\Hypertarget{structvulkan__context_a71e13564f2111dafcda6c332918c196f}\index{vulkan\_context@{vulkan\_context}!instance@{instance}}
+\index{instance@{instance}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \label{structvulkan__context_a71e13564f2111dafcda6c332918c196f} 
+Vk\+Instance vulkan\+\_\+context\+::instance}
+
+\Hypertarget{structvulkan__context_a35b6a0b0b1424b05c15e93298f69f26e}\index{vulkan\_context@{vulkan\_context}!main\_renderpass@{main\_renderpass}}
+\index{main\_renderpass@{main\_renderpass}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{main\_renderpass}{main\_renderpass}}
+{\footnotesize\ttfamily \label{structvulkan__context_a35b6a0b0b1424b05c15e93298f69f26e} 
+\mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} vulkan\+\_\+context\+::main\+\_\+renderpass}
+
+\Hypertarget{structvulkan__context_a010e151c3fe4f524195d131eda4f7ac2}\index{vulkan\_context@{vulkan\_context}!material\_shader@{material\_shader}}
+\index{material\_shader@{material\_shader}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{material\_shader}{material\_shader}}
+{\footnotesize\ttfamily \label{structvulkan__context_a010e151c3fe4f524195d131eda4f7ac2} 
+\mbox{\hyperlink{structvulkan__material__shader}{vulkan\+\_\+material\+\_\+shader}} vulkan\+\_\+context\+::material\+\_\+shader}
+
+\Hypertarget{structvulkan__context_a036b1378d111274567245bd286d290d3}\index{vulkan\_context@{vulkan\_context}!object\_index\_buffer@{object\_index\_buffer}}
+\index{object\_index\_buffer@{object\_index\_buffer}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{object\_index\_buffer}{object\_index\_buffer}}
+{\footnotesize\ttfamily \label{structvulkan__context_a036b1378d111274567245bd286d290d3} 
+\mbox{\hyperlink{structvulkan__buffer}{vulkan\+\_\+buffer}} vulkan\+\_\+context\+::object\+\_\+index\+\_\+buffer}
+
+\Hypertarget{structvulkan__context_a668bba584e42365c13d9f5664ca217b8}\index{vulkan\_context@{vulkan\_context}!object\_vertex\_buffer@{object\_vertex\_buffer}}
+\index{object\_vertex\_buffer@{object\_vertex\_buffer}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{object\_vertex\_buffer}{object\_vertex\_buffer}}
+{\footnotesize\ttfamily \label{structvulkan__context_a668bba584e42365c13d9f5664ca217b8} 
+\mbox{\hyperlink{structvulkan__buffer}{vulkan\+\_\+buffer}} vulkan\+\_\+context\+::object\+\_\+vertex\+\_\+buffer}
+
+\Hypertarget{structvulkan__context_a64c9d883d2534b9cc6b7b47890efdf36}\index{vulkan\_context@{vulkan\_context}!queue\_complete\_semaphores@{queue\_complete\_semaphores}}
+\index{queue\_complete\_semaphores@{queue\_complete\_semaphores}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{queue\_complete\_semaphores}{queue\_complete\_semaphores}}
+{\footnotesize\ttfamily \label{structvulkan__context_a64c9d883d2534b9cc6b7b47890efdf36} 
+Vk\+Semaphore\texorpdfstring{$\ast$}{*} vulkan\+\_\+context\+::queue\+\_\+complete\+\_\+semaphores}
+
+\Hypertarget{structvulkan__context_ae2293aefe9b568ce7222268489f041b8}\index{vulkan\_context@{vulkan\_context}!recreating\_swapchain@{recreating\_swapchain}}
+\index{recreating\_swapchain@{recreating\_swapchain}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{recreating\_swapchain}{recreating\_swapchain}}
+{\footnotesize\ttfamily \label{structvulkan__context_ae2293aefe9b568ce7222268489f041b8} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vulkan\+\_\+context\+::recreating\+\_\+swapchain}
+
+\Hypertarget{structvulkan__context_ad0cd4ef188f905064d59bb918b69eb38}\index{vulkan\_context@{vulkan\_context}!surface@{surface}}
+\index{surface@{surface}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{surface}{surface}}
+{\footnotesize\ttfamily \label{structvulkan__context_ad0cd4ef188f905064d59bb918b69eb38} 
+Vk\+Surface\+KHR vulkan\+\_\+context\+::surface}
+
+\Hypertarget{structvulkan__context_a847e3b9f7c19d2dc9a623bc84403ee8e}\index{vulkan\_context@{vulkan\_context}!swapchain@{swapchain}}
+\index{swapchain@{swapchain}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{swapchain}{swapchain}}
+{\footnotesize\ttfamily \label{structvulkan__context_a847e3b9f7c19d2dc9a623bc84403ee8e} 
+\mbox{\hyperlink{structvulkan__swapchain}{vulkan\+\_\+swapchain}} vulkan\+\_\+context\+::swapchain}
+
+\Hypertarget{structvulkan__context_a3d3649c5e0be460c2554bccef014a96e}\index{vulkan\_context@{vulkan\_context}!ui\_renderpass@{ui\_renderpass}}
+\index{ui\_renderpass@{ui\_renderpass}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{ui\_renderpass}{ui\_renderpass}}
+{\footnotesize\ttfamily \label{structvulkan__context_a3d3649c5e0be460c2554bccef014a96e} 
+\mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} vulkan\+\_\+context\+::ui\+\_\+renderpass}
+
+\Hypertarget{structvulkan__context_acd75fbe8660e13050c01861b80b5e17a}\index{vulkan\_context@{vulkan\_context}!ui\_shader@{ui\_shader}}
+\index{ui\_shader@{ui\_shader}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{ui\_shader}{ui\_shader}}
+{\footnotesize\ttfamily \label{structvulkan__context_acd75fbe8660e13050c01861b80b5e17a} 
+\mbox{\hyperlink{structvulkan__ui__shader}{vulkan\+\_\+ui\+\_\+shader}} vulkan\+\_\+context\+::ui\+\_\+shader}
+
+\Hypertarget{structvulkan__context_a20bab9417ffec615b656145b026f75f4}\index{vulkan\_context@{vulkan\_context}!world\_framebuffers@{world\_framebuffers}}
+\index{world\_framebuffers@{world\_framebuffers}!vulkan\_context@{vulkan\_context}}
+\doxysubsubsection{\texorpdfstring{world\_framebuffers}{world\_framebuffers}}
+{\footnotesize\ttfamily \label{structvulkan__context_a20bab9417ffec615b656145b026f75f4} 
+Vk\+Framebuffer vulkan\+\_\+context\+::world\+\_\+framebuffers\mbox{[}3\mbox{]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+engine/src/renderer/vulkan/\mbox{\hyperlink{vulkan__types_8inl}{vulkan\+\_\+types.\+inl}}\end{DoxyCompactItemize}

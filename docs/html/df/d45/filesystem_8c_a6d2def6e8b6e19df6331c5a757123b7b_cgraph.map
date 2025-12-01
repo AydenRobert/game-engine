@@ -1,0 +1,5 @@
+<map id="filesystem_read_all_text" name="filesystem_read_all_text">
+<area shape="rect" id="Node000001" title="Reads all tect of a file." alt="" coords="5,5,187,33"/>
+<area shape="rect" id="Node000002" href="$df/d45/filesystem_8c.html#ab492be8141f382a58e52a81018eaecbc" title="Attempts to read the size of the file to which the handle is attatched." alt="" coords="235,5,357,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,17,221,19,216,19,187,22"/>
+</map>

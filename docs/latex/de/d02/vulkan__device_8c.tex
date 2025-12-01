@@ -1,0 +1,184 @@
+\doxysection{engine/src/renderer/vulkan/vulkan\+\_\+device.c File Reference}
+\hypertarget{vulkan__device_8c}{}\label{vulkan__device_8c}\index{engine/src/renderer/vulkan/vulkan\_device.c@{engine/src/renderer/vulkan/vulkan\_device.c}}
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+device.\+h"{}}\newline
+{\ttfamily \#include "{}containers/darray.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}core/kstring.\+h"{}}\newline
+{\ttfamily \#include "{}core/logger.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+types.\+inl"{}}\newline
+{\ttfamily \#include $<$vulkan/vulkan\+\_\+core.\+h$>$}\newline
+Include dependency graph for vulkan\+\_\+device.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/dae/vulkan__device_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvulkan__physical__device__requirements}{vulkan\+\_\+physical\+\_\+device\+\_\+requirements}}
+\item 
+struct \mbox{\hyperlink{structvulkan__physical__device__queue__family__info}{vulkan\+\_\+physical\+\_\+device\+\_\+queue\+\_\+family\+\_\+info}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct vulkan\+\_\+physical\+\_\+device\+\_\+requirements \mbox{\hyperlink{vulkan__device_8c_ae35736eeb9cd477d083058b34eaaff1b}{vulkan\+\_\+physical\+\_\+device\+\_\+requirements}}
+\item 
+typedef struct vulkan\+\_\+physical\+\_\+device\+\_\+queue\+\_\+family\+\_\+info \mbox{\hyperlink{vulkan__device_8c_acb18e09582f8abd414b8d4aef373ac3c}{vulkan\+\_\+physical\+\_\+device\+\_\+queue\+\_\+family\+\_\+info}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__device_8c_a9c7b8f8848ce3482b71e4aceecc5b8d9}{select\+\_\+physical\+\_\+device}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}})
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__device_8c_a29ca7a2c883d7e9f42c0485e17f6bc2e}{physical\+\_\+device\+\_\+meets\+\_\+requirements}} (Vk\+Physical\+Device device, Vk\+Surface\+KHR surface, const Vk\+Physical\+Device\+Properties \texorpdfstring{$\ast$}{*}properties, const Vk\+Physical\+Device\+Features \texorpdfstring{$\ast$}{*}features, const \mbox{\hyperlink{structvulkan__physical__device__requirements}{vulkan\+\_\+physical\+\_\+device\+\_\+requirements}} \texorpdfstring{$\ast$}{*}requirements, \mbox{\hyperlink{structvulkan__physical__device__queue__family__info}{vulkan\+\_\+physical\+\_\+device\+\_\+queue\+\_\+family\+\_\+info}} \texorpdfstring{$\ast$}{*}out\+\_\+queue\+\_\+info, \mbox{\hyperlink{structvulkan__swapchain__support__info}{vulkan\+\_\+swapchain\+\_\+support\+\_\+info}} \texorpdfstring{$\ast$}{*}out\+\_\+swapchain\+\_\+support)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__device_8c_abb07eb6d710c4e98364b57e42e4af4ac}{vulkan\+\_\+device\+\_\+create}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}})
+\item 
+void \mbox{\hyperlink{vulkan__device_8c_acb801f308c78e06ab4b730a49c07e37f}{vulkan\+\_\+device\+\_\+destroy}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}})
+\item 
+void \mbox{\hyperlink{vulkan__device_8c_ac4eb42eebcc937d35197f1b899668021}{vulkan\+\_\+device\+\_\+query\+\_\+swapchain\+\_\+support}} (Vk\+Physical\+Device physical\+\_\+device, Vk\+Surface\+KHR surface, \mbox{\hyperlink{structvulkan__swapchain__support__info}{vulkan\+\_\+swapchain\+\_\+support\+\_\+info}} \texorpdfstring{$\ast$}{*}out\+\_\+support\+\_\+info)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{vulkan__device_8c_a4af4291b3e9e0fc739c88bde97d74693}{vulkan\+\_\+device\+\_\+detect\+\_\+depth\+\_\+format}} (\mbox{\hyperlink{structvulkan__device}{vulkan\+\_\+device}} \texorpdfstring{$\ast$}{*}device)
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{vulkan__device_8c_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{vulkan__device_8c_acb18e09582f8abd414b8d4aef373ac3c}\index{vulkan\_device.c@{vulkan\_device.c}!vulkan\_physical\_device\_queue\_family\_info@{vulkan\_physical\_device\_queue\_family\_info}}
+\index{vulkan\_physical\_device\_queue\_family\_info@{vulkan\_physical\_device\_queue\_family\_info}!vulkan\_device.c@{vulkan\_device.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_physical\_device\_queue\_family\_info}{vulkan\_physical\_device\_queue\_family\_info}}
+{\footnotesize\ttfamily \label{vulkan__device_8c_acb18e09582f8abd414b8d4aef373ac3c} 
+typedef struct vulkan\+\_\+physical\+\_\+device\+\_\+queue\+\_\+family\+\_\+info vulkan\+\_\+physical\+\_\+device\+\_\+queue\+\_\+family\+\_\+info}
+
+\Hypertarget{vulkan__device_8c_ae35736eeb9cd477d083058b34eaaff1b}\index{vulkan\_device.c@{vulkan\_device.c}!vulkan\_physical\_device\_requirements@{vulkan\_physical\_device\_requirements}}
+\index{vulkan\_physical\_device\_requirements@{vulkan\_physical\_device\_requirements}!vulkan\_device.c@{vulkan\_device.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_physical\_device\_requirements}{vulkan\_physical\_device\_requirements}}
+{\footnotesize\ttfamily \label{vulkan__device_8c_ae35736eeb9cd477d083058b34eaaff1b} 
+typedef struct vulkan\+\_\+physical\+\_\+device\+\_\+requirements vulkan\+\_\+physical\+\_\+device\+\_\+requirements}
+
+
+
+\label{doc-func-members}
+\Hypertarget{vulkan__device_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{vulkan__device_8c_a29ca7a2c883d7e9f42c0485e17f6bc2e}\index{vulkan\_device.c@{vulkan\_device.c}!physical\_device\_meets\_requirements@{physical\_device\_meets\_requirements}}
+\index{physical\_device\_meets\_requirements@{physical\_device\_meets\_requirements}!vulkan\_device.c@{vulkan\_device.c}}
+\doxysubsubsection{\texorpdfstring{physical\_device\_meets\_requirements()}{physical\_device\_meets\_requirements()}}
+{\footnotesize\ttfamily \label{vulkan__device_8c_a29ca7a2c883d7e9f42c0485e17f6bc2e} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} physical\+\_\+device\+\_\+meets\+\_\+requirements (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{device}{, }\item[{Vk\+Surface\+KHR}]{surface}{, }\item[{const Vk\+Physical\+Device\+Properties \texorpdfstring{$\ast$}{*}}]{properties}{, }\item[{const Vk\+Physical\+Device\+Features \texorpdfstring{$\ast$}{*}}]{features}{, }\item[{const \mbox{\hyperlink{structvulkan__physical__device__requirements}{vulkan\+\_\+physical\+\_\+device\+\_\+requirements}} \texorpdfstring{$\ast$}{*}}]{requirements}{, }\item[{\mbox{\hyperlink{structvulkan__physical__device__queue__family__info}{vulkan\+\_\+physical\+\_\+device\+\_\+queue\+\_\+family\+\_\+info}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+queue\+\_\+info}{, }\item[{\mbox{\hyperlink{structvulkan__swapchain__support__info}{vulkan\+\_\+swapchain\+\_\+support\+\_\+info}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+swapchain\+\_\+support}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d02/vulkan__device_8c_a29ca7a2c883d7e9f42c0485e17f6bc2e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d02/vulkan__device_8c_a29ca7a2c883d7e9f42c0485e17f6bc2e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__device_8c_a9c7b8f8848ce3482b71e4aceecc5b8d9}\index{vulkan\_device.c@{vulkan\_device.c}!select\_physical\_device@{select\_physical\_device}}
+\index{select\_physical\_device@{select\_physical\_device}!vulkan\_device.c@{vulkan\_device.c}}
+\doxysubsubsection{\texorpdfstring{select\_physical\_device()}{select\_physical\_device()}}
+{\footnotesize\ttfamily \label{vulkan__device_8c_a9c7b8f8848ce3482b71e4aceecc5b8d9} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} select\+\_\+physical\+\_\+device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d02/vulkan__device_8c_a9c7b8f8848ce3482b71e4aceecc5b8d9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d02/vulkan__device_8c_a9c7b8f8848ce3482b71e4aceecc5b8d9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__device_8c_abb07eb6d710c4e98364b57e42e4af4ac}\index{vulkan\_device.c@{vulkan\_device.c}!vulkan\_device\_create@{vulkan\_device\_create}}
+\index{vulkan\_device\_create@{vulkan\_device\_create}!vulkan\_device.c@{vulkan\_device.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_device\_create()}{vulkan\_device\_create()}}
+{\footnotesize\ttfamily \label{vulkan__device_8c_abb07eb6d710c4e98364b57e42e4af4ac} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vulkan\+\_\+device\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d02/vulkan__device_8c_abb07eb6d710c4e98364b57e42e4af4ac_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d02/vulkan__device_8c_abb07eb6d710c4e98364b57e42e4af4ac_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__device_8c_acb801f308c78e06ab4b730a49c07e37f}\index{vulkan\_device.c@{vulkan\_device.c}!vulkan\_device\_destroy@{vulkan\_device\_destroy}}
+\index{vulkan\_device\_destroy@{vulkan\_device\_destroy}!vulkan\_device.c@{vulkan\_device.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_device\_destroy()}{vulkan\_device\_destroy()}}
+{\footnotesize\ttfamily \label{vulkan__device_8c_acb801f308c78e06ab4b730a49c07e37f} 
+void vulkan\+\_\+device\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d02/vulkan__device_8c_acb801f308c78e06ab4b730a49c07e37f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d02/vulkan__device_8c_acb801f308c78e06ab4b730a49c07e37f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__device_8c_a4af4291b3e9e0fc739c88bde97d74693}\index{vulkan\_device.c@{vulkan\_device.c}!vulkan\_device\_detect\_depth\_format@{vulkan\_device\_detect\_depth\_format}}
+\index{vulkan\_device\_detect\_depth\_format@{vulkan\_device\_detect\_depth\_format}!vulkan\_device.c@{vulkan\_device.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_device\_detect\_depth\_format()}{vulkan\_device\_detect\_depth\_format()}}
+{\footnotesize\ttfamily \label{vulkan__device_8c_a4af4291b3e9e0fc739c88bde97d74693} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vulkan\+\_\+device\+\_\+detect\+\_\+depth\+\_\+format (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__device}{vulkan\+\_\+device}} \texorpdfstring{$\ast$}{*}}]{device}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d02/vulkan__device_8c_a4af4291b3e9e0fc739c88bde97d74693_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__device_8c_ac4eb42eebcc937d35197f1b899668021}\index{vulkan\_device.c@{vulkan\_device.c}!vulkan\_device\_query\_swapchain\_support@{vulkan\_device\_query\_swapchain\_support}}
+\index{vulkan\_device\_query\_swapchain\_support@{vulkan\_device\_query\_swapchain\_support}!vulkan\_device.c@{vulkan\_device.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_device\_query\_swapchain\_support()}{vulkan\_device\_query\_swapchain\_support()}}
+{\footnotesize\ttfamily \label{vulkan__device_8c_ac4eb42eebcc937d35197f1b899668021} 
+void vulkan\+\_\+device\+\_\+query\+\_\+swapchain\+\_\+support (\begin{DoxyParamCaption}\item[{Vk\+Physical\+Device}]{physical\+\_\+device}{, }\item[{Vk\+Surface\+KHR}]{surface}{, }\item[{\mbox{\hyperlink{structvulkan__swapchain__support__info}{vulkan\+\_\+swapchain\+\_\+support\+\_\+info}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+support\+\_\+info}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d02/vulkan__device_8c_ac4eb42eebcc937d35197f1b899668021_icgraph}
+\end{center}
+\end{figure}

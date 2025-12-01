@@ -1,0 +1,99 @@
+\doxysection{engine/src/resources/loaders/binary\+\_\+loader.c File Reference}
+\hypertarget{binary__loader_8c}{}\label{binary__loader_8c}\index{engine/src/resources/loaders/binary\_loader.c@{engine/src/resources/loaders/binary\_loader.c}}
+{\ttfamily \#include "{}resources/loaders/binary\+\_\+loader.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}core/kstring.\+h"{}}\newline
+{\ttfamily \#include "{}core/logger.\+h"{}}\newline
+{\ttfamily \#include "{}math/kmath.\+h"{}}\newline
+{\ttfamily \#include "{}resources/loaders/loader\+\_\+utils.\+h"{}}\newline
+{\ttfamily \#include "{}resources/resource\+\_\+types.\+h"{}}\newline
+{\ttfamily \#include "{}systems/resource\+\_\+system.\+h"{}}\newline
+{\ttfamily \#include "{}platform/filesystem.\+h"{}}\newline
+Include dependency graph for binary\+\_\+loader.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d7e/binary__loader_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{binary__loader_8c_a6234e4d4aa32055857962d0b032cc32c}{binary\+\_\+loader\+\_\+load}} (struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}self, const char \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}out\+\_\+resource)
+\item 
+void \mbox{\hyperlink{binary__loader_8c_ae4064f67c751c8552cb796af5b19d57f}{binary\+\_\+loader\+\_\+unload}} (struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}self, \mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structresource}{resource}})
+\item 
+\mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \mbox{\hyperlink{binary__loader_8c_a3f654b66807ff89405aec73e75e42268}{binary\+\_\+resource\+\_\+loader\+\_\+create}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{binary__loader_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{binary__loader_8c_a6234e4d4aa32055857962d0b032cc32c}\index{binary\_loader.c@{binary\_loader.c}!binary\_loader\_load@{binary\_loader\_load}}
+\index{binary\_loader\_load@{binary\_loader\_load}!binary\_loader.c@{binary\_loader.c}}
+\doxysubsubsection{\texorpdfstring{binary\_loader\_load()}{binary\_loader\_load()}}
+{\footnotesize\ttfamily \label{binary__loader_8c_a6234e4d4aa32055857962d0b032cc32c} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} binary\+\_\+loader\+\_\+load (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+resource}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d5e/binary__loader_8c_a6234e4d4aa32055857962d0b032cc32c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d5e/binary__loader_8c_a6234e4d4aa32055857962d0b032cc32c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{binary__loader_8c_ae4064f67c751c8552cb796af5b19d57f}\index{binary\_loader.c@{binary\_loader.c}!binary\_loader\_unload@{binary\_loader\_unload}}
+\index{binary\_loader\_unload@{binary\_loader\_unload}!binary\_loader.c@{binary\_loader.c}}
+\doxysubsubsection{\texorpdfstring{binary\_loader\_unload()}{binary\_loader\_unload()}}
+{\footnotesize\ttfamily \label{binary__loader_8c_ae4064f67c751c8552cb796af5b19d57f} 
+void binary\+\_\+loader\+\_\+unload (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{\mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}}]{resource}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d5e/binary__loader_8c_ae4064f67c751c8552cb796af5b19d57f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d5e/binary__loader_8c_ae4064f67c751c8552cb796af5b19d57f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{binary__loader_8c_a3f654b66807ff89405aec73e75e42268}\index{binary\_loader.c@{binary\_loader.c}!binary\_resource\_loader\_create@{binary\_resource\_loader\_create}}
+\index{binary\_resource\_loader\_create@{binary\_resource\_loader\_create}!binary\_loader.c@{binary\_loader.c}}
+\doxysubsubsection{\texorpdfstring{binary\_resource\_loader\_create()}{binary\_resource\_loader\_create()}}
+{\footnotesize\ttfamily \label{binary__loader_8c_a3f654b66807ff89405aec73e75e42268} 
+\mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} binary\+\_\+resource\+\_\+loader\+\_\+create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d5e/binary__loader_8c_a3f654b66807ff89405aec73e75e42268_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d5e/binary__loader_8c_a3f654b66807ff89405aec73e75e42268_icgraph}
+\end{center}
+\end{figure}

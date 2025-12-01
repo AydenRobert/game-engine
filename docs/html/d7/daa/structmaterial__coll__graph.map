@@ -1,0 +1,9 @@
+<map id="material" name="material">
+<area shape="rect" id="Node000001" title=" " alt="" coords="65,207,141,234"/>
+<area shape="rect" id="Node000002" href="$df/dbe/unionvec4__u.html" title=" " alt="" coords="5,106,73,134"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="34,146,37,166,42,181,53,194,69,206,64,207,50,198,38,184,32,167,33,151"/>
+<area shape="rect" id="Node000003" href="$dc/d86/structtexture__map.html" title=" " alt="" coords="116,106,220,134"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,146,141,184,119,208,116,204,137,181,156,149"/>
+<area shape="rect" id="Node000004" href="$dd/db6/structtexture.html" title=" " alt="" coords="134,5,202,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="170,46,171,106,166,105,167,51"/>
+</map>

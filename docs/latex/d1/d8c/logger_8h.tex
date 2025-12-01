@@ -1,0 +1,289 @@
+\doxysection{engine/src/core/logger.h File Reference}
+\hypertarget{logger_8h}{}\label{logger_8h}\index{engine/src/core/logger.h@{engine/src/core/logger.h}}
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+Include dependency graph for logger.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{d6/db3/logger_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/dcf/logger_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{logger_8h_a2613df29c73e9a080ac48d350321f2aa}{LOG\+\_\+\+WARN\+\_\+\+ENABLED}}~1
+\item 
+\#define \mbox{\hyperlink{logger_8h_a4690d76db76927ae412ba4860e008b16}{LOG\+\_\+\+INFO\+\_\+\+ENABLED}}~1
+\item 
+\#define \mbox{\hyperlink{logger_8h_aebce09616e526858093c3252925bffe2}{LOG\+\_\+\+DEBUG\+\_\+\+ENABLED}}~1
+\item 
+\#define \mbox{\hyperlink{logger_8h_a04e549630a5d2b3b2631940bb029e24f}{LOG\+\_\+\+TRACE\+\_\+\+ENABLED}}~1
+\item 
+\#define \mbox{\hyperlink{logger_8h_a8eb60bd7b3dfc5cadc7364b06ce7bd07}{KFATAL}}(message, ...)
+\item 
+\#define \mbox{\hyperlink{logger_8h_a473bb2cc3b3bf3c93084eeca6cb19132}{KERROR}}(message, ...)
+\item 
+\#define \mbox{\hyperlink{logger_8h_a3e40140ad218fd4ef727b1a9009a1bea}{KWARN}}(message, ...)
+\item 
+\#define \mbox{\hyperlink{logger_8h_aaa79d2f465f4712163343e3d3052a200}{KINFO}}(message, ...)
+\item 
+\#define \mbox{\hyperlink{logger_8h_a23768ad708f2a648844bd09e15e52d1c}{KDEBUG}}(message, ...)
+\item 
+\#define \mbox{\hyperlink{logger_8h_a1871a1767ecd70d973893d36176a697f}{KTRACE}}(message, ...)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748e}{log\+\_\+level}} \mbox{\hyperlink{logger_8h_a073554067a9aac1790a5744efd4c22c6}{log\+\_\+level}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748e}{log\+\_\+level}} \{ \newline
+\mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748ea779dc8dd26898fb0f88cd5f6e02ba1e5}{LOG\+\_\+\+LEVEL\+\_\+\+FATAL}} = 0
+, \mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748ea5b40f003febbc3b535649d63f4b8a44f}{LOG\+\_\+\+LEVEL\+\_\+\+ERROR}} = 1
+, \mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748ea99c1e5c8e6d557f3993b9ab54a0107f4}{LOG\+\_\+\+LEVEL\+\_\+\+WARN}} = 2
+, \mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748eaedee1e3159bfe7d918b6e29873c5aee4}{LOG\+\_\+\+LEVEL\+\_\+\+INFO}} = 3
+, \newline
+\mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748ea538b2b6e011479d408ecd2be0f6d6177}{LOG\+\_\+\+LEVEL\+\_\+\+DEBUG}} = 4
+, \mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748ea8fa9f12103da446ab4f3d3dc2fcf7f5d}{LOG\+\_\+\+LEVEL\+\_\+\+TRACE}} = 5
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{logger_8h_a124a9e558949da0e8f11f6929992a5c8}{initialize\+\_\+logging}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}memory\+\_\+requirement, void \texorpdfstring{$\ast$}{*}state)
+\begin{DoxyCompactList}\small\item\em Initialises logging system. Call first with state = 0 to get memory size. The second time, pass the memory to the state;. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logger_8h_aa19340b3c2c2f8f90a5c40d08b7919c7}{shutdown\+\_\+logging}} (void \texorpdfstring{$\ast$}{*}state)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \mbox{\hyperlink{logger_8h_a5decc6aae3a906f7e1ece459070b0cf5}{log\+\_\+output}} (\mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748e}{log\+\_\+level}} level, const char \texorpdfstring{$\ast$}{*},...)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{logger_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{logger_8h_a23768ad708f2a648844bd09e15e52d1c}\index{logger.h@{logger.h}!KDEBUG@{KDEBUG}}
+\index{KDEBUG@{KDEBUG}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{KDEBUG}{KDEBUG}}
+{\footnotesize\ttfamily \label{logger_8h_a23768ad708f2a648844bd09e15e52d1c} 
+\#define KDEBUG(\begin{DoxyParamCaption}\item[{}]{message}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{logger_8c_abdf99acf6ecc4a6fd2277e74ed3fd8c6}{log\_output}}(\mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748ea538b2b6e011479d408ecd2be0f6d6177}{LOG\_LEVEL\_DEBUG}},\ message,\ \#\#\_\_VA\_ARGS\_\_);}
+
+\end{DoxyCode}
+\Hypertarget{logger_8h_a473bb2cc3b3bf3c93084eeca6cb19132}\index{logger.h@{logger.h}!KERROR@{KERROR}}
+\index{KERROR@{KERROR}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{KERROR}{KERROR}}
+{\footnotesize\ttfamily \label{logger_8h_a473bb2cc3b3bf3c93084eeca6cb19132} 
+\#define KERROR(\begin{DoxyParamCaption}\item[{}]{message}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{logger_8c_abdf99acf6ecc4a6fd2277e74ed3fd8c6}{log\_output}}(\mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748ea5b40f003febbc3b535649d63f4b8a44f}{LOG\_LEVEL\_ERROR}},\ message,\ \#\#\_\_VA\_ARGS\_\_);}
+
+\end{DoxyCode}
+\Hypertarget{logger_8h_a8eb60bd7b3dfc5cadc7364b06ce7bd07}\index{logger.h@{logger.h}!KFATAL@{KFATAL}}
+\index{KFATAL@{KFATAL}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{KFATAL}{KFATAL}}
+{\footnotesize\ttfamily \label{logger_8h_a8eb60bd7b3dfc5cadc7364b06ce7bd07} 
+\#define KFATAL(\begin{DoxyParamCaption}\item[{}]{message}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{logger_8c_abdf99acf6ecc4a6fd2277e74ed3fd8c6}{log\_output}}(\mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748ea779dc8dd26898fb0f88cd5f6e02ba1e5}{LOG\_LEVEL\_FATAL}},\ message,\ \#\#\_\_VA\_ARGS\_\_);}
+
+\end{DoxyCode}
+\Hypertarget{logger_8h_aaa79d2f465f4712163343e3d3052a200}\index{logger.h@{logger.h}!KINFO@{KINFO}}
+\index{KINFO@{KINFO}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{KINFO}{KINFO}}
+{\footnotesize\ttfamily \label{logger_8h_aaa79d2f465f4712163343e3d3052a200} 
+\#define KINFO(\begin{DoxyParamCaption}\item[{}]{message}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{logger_8c_abdf99acf6ecc4a6fd2277e74ed3fd8c6}{log\_output}}(\mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748eaedee1e3159bfe7d918b6e29873c5aee4}{LOG\_LEVEL\_INFO}},\ message,\ \#\#\_\_VA\_ARGS\_\_);}
+
+\end{DoxyCode}
+\Hypertarget{logger_8h_a1871a1767ecd70d973893d36176a697f}\index{logger.h@{logger.h}!KTRACE@{KTRACE}}
+\index{KTRACE@{KTRACE}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{KTRACE}{KTRACE}}
+{\footnotesize\ttfamily \label{logger_8h_a1871a1767ecd70d973893d36176a697f} 
+\#define KTRACE(\begin{DoxyParamCaption}\item[{}]{message}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{logger_8c_abdf99acf6ecc4a6fd2277e74ed3fd8c6}{log\_output}}(\mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748ea8fa9f12103da446ab4f3d3dc2fcf7f5d}{LOG\_LEVEL\_TRACE}},\ message,\ \#\#\_\_VA\_ARGS\_\_);}
+
+\end{DoxyCode}
+\Hypertarget{logger_8h_a3e40140ad218fd4ef727b1a9009a1bea}\index{logger.h@{logger.h}!KWARN@{KWARN}}
+\index{KWARN@{KWARN}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{KWARN}{KWARN}}
+{\footnotesize\ttfamily \label{logger_8h_a3e40140ad218fd4ef727b1a9009a1bea} 
+\#define KWARN(\begin{DoxyParamCaption}\item[{}]{message}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{logger_8c_abdf99acf6ecc4a6fd2277e74ed3fd8c6}{log\_output}}(\mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748ea99c1e5c8e6d557f3993b9ab54a0107f4}{LOG\_LEVEL\_WARN}},\ message,\ \#\#\_\_VA\_ARGS\_\_);}
+
+\end{DoxyCode}
+\Hypertarget{logger_8h_aebce09616e526858093c3252925bffe2}\index{logger.h@{logger.h}!LOG\_DEBUG\_ENABLED@{LOG\_DEBUG\_ENABLED}}
+\index{LOG\_DEBUG\_ENABLED@{LOG\_DEBUG\_ENABLED}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_DEBUG\_ENABLED}{LOG\_DEBUG\_ENABLED}}
+{\footnotesize\ttfamily \label{logger_8h_aebce09616e526858093c3252925bffe2} 
+\#define LOG\+\_\+\+DEBUG\+\_\+\+ENABLED~1}
+
+\Hypertarget{logger_8h_a4690d76db76927ae412ba4860e008b16}\index{logger.h@{logger.h}!LOG\_INFO\_ENABLED@{LOG\_INFO\_ENABLED}}
+\index{LOG\_INFO\_ENABLED@{LOG\_INFO\_ENABLED}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_INFO\_ENABLED}{LOG\_INFO\_ENABLED}}
+{\footnotesize\ttfamily \label{logger_8h_a4690d76db76927ae412ba4860e008b16} 
+\#define LOG\+\_\+\+INFO\+\_\+\+ENABLED~1}
+
+\Hypertarget{logger_8h_a04e549630a5d2b3b2631940bb029e24f}\index{logger.h@{logger.h}!LOG\_TRACE\_ENABLED@{LOG\_TRACE\_ENABLED}}
+\index{LOG\_TRACE\_ENABLED@{LOG\_TRACE\_ENABLED}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_TRACE\_ENABLED}{LOG\_TRACE\_ENABLED}}
+{\footnotesize\ttfamily \label{logger_8h_a04e549630a5d2b3b2631940bb029e24f} 
+\#define LOG\+\_\+\+TRACE\+\_\+\+ENABLED~1}
+
+\Hypertarget{logger_8h_a2613df29c73e9a080ac48d350321f2aa}\index{logger.h@{logger.h}!LOG\_WARN\_ENABLED@{LOG\_WARN\_ENABLED}}
+\index{LOG\_WARN\_ENABLED@{LOG\_WARN\_ENABLED}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_WARN\_ENABLED}{LOG\_WARN\_ENABLED}}
+{\footnotesize\ttfamily \label{logger_8h_a2613df29c73e9a080ac48d350321f2aa} 
+\#define LOG\+\_\+\+WARN\+\_\+\+ENABLED~1}
+
+
+
+\label{doc-typedef-members}
+\Hypertarget{logger_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{logger_8h_a073554067a9aac1790a5744efd4c22c6}\index{logger.h@{logger.h}!log\_level@{log\_level}}
+\index{log\_level@{log\_level}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{log\_level}{log\_level}}
+{\footnotesize\ttfamily \label{logger_8h_a073554067a9aac1790a5744efd4c22c6} 
+typedef enum \mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748e}{log\+\_\+level}} \mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748e}{log\+\_\+level}}}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{logger_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{logger_8h_ac91d55174d383848b976a34de843748e}\index{logger.h@{logger.h}!log\_level@{log\_level}}
+\index{log\_level@{log\_level}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{log\_level}{log\_level}}
+{\footnotesize\ttfamily \label{logger_8h_ac91d55174d383848b976a34de843748e} 
+enum \mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748e}{log\+\_\+level}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_LEVEL\_FATAL@{LOG\_LEVEL\_FATAL}!logger.h@{logger.h}}\index{logger.h@{logger.h}!LOG\_LEVEL\_FATAL@{LOG\_LEVEL\_FATAL}}}\Hypertarget{logger_8h_ac91d55174d383848b976a34de843748ea779dc8dd26898fb0f88cd5f6e02ba1e5}\label{logger_8h_ac91d55174d383848b976a34de843748ea779dc8dd26898fb0f88cd5f6e02ba1e5} 
+LOG\+\_\+\+LEVEL\+\_\+\+FATAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_LEVEL\_ERROR@{LOG\_LEVEL\_ERROR}!logger.h@{logger.h}}\index{logger.h@{logger.h}!LOG\_LEVEL\_ERROR@{LOG\_LEVEL\_ERROR}}}\Hypertarget{logger_8h_ac91d55174d383848b976a34de843748ea5b40f003febbc3b535649d63f4b8a44f}\label{logger_8h_ac91d55174d383848b976a34de843748ea5b40f003febbc3b535649d63f4b8a44f} 
+LOG\+\_\+\+LEVEL\+\_\+\+ERROR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_LEVEL\_WARN@{LOG\_LEVEL\_WARN}!logger.h@{logger.h}}\index{logger.h@{logger.h}!LOG\_LEVEL\_WARN@{LOG\_LEVEL\_WARN}}}\Hypertarget{logger_8h_ac91d55174d383848b976a34de843748ea99c1e5c8e6d557f3993b9ab54a0107f4}\label{logger_8h_ac91d55174d383848b976a34de843748ea99c1e5c8e6d557f3993b9ab54a0107f4} 
+LOG\+\_\+\+LEVEL\+\_\+\+WARN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_LEVEL\_INFO@{LOG\_LEVEL\_INFO}!logger.h@{logger.h}}\index{logger.h@{logger.h}!LOG\_LEVEL\_INFO@{LOG\_LEVEL\_INFO}}}\Hypertarget{logger_8h_ac91d55174d383848b976a34de843748eaedee1e3159bfe7d918b6e29873c5aee4}\label{logger_8h_ac91d55174d383848b976a34de843748eaedee1e3159bfe7d918b6e29873c5aee4} 
+LOG\+\_\+\+LEVEL\+\_\+\+INFO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_LEVEL\_DEBUG@{LOG\_LEVEL\_DEBUG}!logger.h@{logger.h}}\index{logger.h@{logger.h}!LOG\_LEVEL\_DEBUG@{LOG\_LEVEL\_DEBUG}}}\Hypertarget{logger_8h_ac91d55174d383848b976a34de843748ea538b2b6e011479d408ecd2be0f6d6177}\label{logger_8h_ac91d55174d383848b976a34de843748ea538b2b6e011479d408ecd2be0f6d6177} 
+LOG\+\_\+\+LEVEL\+\_\+\+DEBUG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOG\_LEVEL\_TRACE@{LOG\_LEVEL\_TRACE}!logger.h@{logger.h}}\index{logger.h@{logger.h}!LOG\_LEVEL\_TRACE@{LOG\_LEVEL\_TRACE}}}\Hypertarget{logger_8h_ac91d55174d383848b976a34de843748ea8fa9f12103da446ab4f3d3dc2fcf7f5d}\label{logger_8h_ac91d55174d383848b976a34de843748ea8fa9f12103da446ab4f3d3dc2fcf7f5d} 
+LOG\+\_\+\+LEVEL\+\_\+\+TRACE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{logger_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{logger_8h_a124a9e558949da0e8f11f6929992a5c8}\index{logger.h@{logger.h}!initialize\_logging@{initialize\_logging}}
+\index{initialize\_logging@{initialize\_logging}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{initialize\_logging()}{initialize\_logging()}}
+{\footnotesize\ttfamily \label{logger_8h_a124a9e558949da0e8f11f6929992a5c8} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} initialize\+\_\+logging (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{memory\+\_\+requirement}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Initialises logging system. Call first with state = 0 to get memory size. The second time, pass the memory to the state;. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memory\+\_\+requirement} & A pointer to hold the required memory size of the internal state struct. \\
+\hline
+{\em state} & 0 if just requesting memory requirments, otherwise, allocated block of memory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success; otherwise false. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{d1/d8c/logger_8h_a124a9e558949da0e8f11f6929992a5c8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d8c/logger_8h_a124a9e558949da0e8f11f6929992a5c8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logger_8h_a5decc6aae3a906f7e1ece459070b0cf5}\index{logger.h@{logger.h}!log\_output@{log\_output}}
+\index{log\_output@{log\_output}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{log\_output()}{log\_output()}}
+{\footnotesize\ttfamily \label{logger_8h_a5decc6aae3a906f7e1ece459070b0cf5} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void log\+\_\+output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748e}{log\+\_\+level}}}]{level}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d8c/logger_8h_a5decc6aae3a906f7e1ece459070b0cf5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{d1/d8c/logger_8h_a5decc6aae3a906f7e1ece459070b0cf5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logger_8h_aa19340b3c2c2f8f90a5c40d08b7919c7}\index{logger.h@{logger.h}!shutdown\_logging@{shutdown\_logging}}
+\index{shutdown\_logging@{shutdown\_logging}!logger.h@{logger.h}}
+\doxysubsubsection{\texorpdfstring{shutdown\_logging()}{shutdown\_logging()}}
+{\footnotesize\ttfamily \label{logger_8h_aa19340b3c2c2f8f90a5c40d08b7919c7} 
+void shutdown\+\_\+logging (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{d1/d8c/logger_8h_aa19340b3c2c2f8f90a5c40d08b7919c7_cgraph}
+\end{center}
+\end{figure}

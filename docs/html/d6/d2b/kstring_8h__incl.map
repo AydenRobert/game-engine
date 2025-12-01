@@ -1,0 +1,12 @@
+<map id="engine/src/core/kstring.h" name="engine/src/core/kstring.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,187,33"/>
+<area shape="rect" id="Node000002" href="$d8/db0/defines_8h.html" title=" " alt="" coords="33,157,114,184"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,36,67,56,53,82,51,97,52,113,62,143,56,143,47,114,45,97,48,80,63,53,84,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="63,81,129,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="97,31,99,66,93,65,95,36"/>
+<area shape="rect" id="Node000004" href="$d4/d7e/math__types_8h.html" title=" " alt="" coords="152,81,301,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="120,31,193,72,188,74,119,36"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="202,109,115,152,113,147,197,109"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="184,157,269,184"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="229,107,229,142,224,140,225,111"/>
+</map>

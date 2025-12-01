@@ -1,0 +1,19 @@
+<map id="vulkan_buffer_copy_to" name="vulkan_buffer_copy_to">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,115,173,143"/>
+<area shape="rect" id="Node000002" href="$d4/d8c/vulkan__command__buffer_8c.html#a9e829f593db51d6e99e6030a68e07976" title=" " alt="" coords="221,72,451,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,115,208,112,203,114,174,120"/>
+<area shape="rect" id="Node000007" href="$d4/d8c/vulkan__command__buffer_8c.html#aa8a73bb91861b477161430027abfdb54" title=" " alt="" coords="245,141,426,186"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="173,138,232,148,227,150,173,143"/>
+<area shape="rect" id="Node000003" href="$d4/d8c/vulkan__command__buffer_8c.html#a174f0a4daec13ac82dbddd7d8d957950" title=" " alt="" coords="516,5,697,50"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="429,69,503,53,498,54,430,74"/>
+<area shape="rect" id="Node000006" href="$d4/d8c/vulkan__command__buffer_8c.html#a953bb97410e7ac3fb6bcb885111b076a" title=" " alt="" coords="516,75,697,119"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="451,93,503,96,497,96,452,98"/>
+<area shape="rect" id="Node000004" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="761,14,881,42"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="697,25,748,27,743,28,698,30"/>
+<area shape="rect" id="Node000005" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="929,14,1103,42"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="881,25,916,27,911,28,881,30"/>
+<area shape="rect" id="Node000008" href="$d4/d8c/vulkan__command__buffer_8c.html#aedec1e6180808de057ff8ef5b802a5dd" title=" " alt="" coords="500,147,712,175"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="427,160,487,162,482,162,427,165"/>
+<area shape="rect" id="Node000009" href="$d4/d8c/vulkan__command__buffer_8c.html#afd9ae4003a9b698f447b74d43944bb93" title=" " alt="" coords="499,199,713,227"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="427,178,514,196,509,196,427,183"/>
+</map>

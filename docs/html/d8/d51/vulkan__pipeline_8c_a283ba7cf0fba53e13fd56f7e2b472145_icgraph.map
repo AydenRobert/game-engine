@@ -1,0 +1,18 @@
+<map id="vulkan_pipeline_destroy" name="vulkan_pipeline_destroy">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1191,44,1371,72"/>
+<area shape="rect" id="Node000002" href="$d2/d8c/vulkan__material__shader_8c.html#aa17bb04ba44366702187713853ea005a" title=" " alt="" coords="960,5,1137,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1173,44,1137,42,1138,37,1178,45"/>
+<area shape="rect" id="Node000008" href="$da/d35/vulkan__ui__shader_8c.html#ad9846b7e3ee019c14d34155f7b520d35" title=" " alt="" coords="953,74,1143,102"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1178,71,1144,78,1144,73,1173,72"/>
+<area shape="rect" id="Node000003" href="$d1/da5/vulkan__backend_8c.html#aaf5c03bd71d214149e0e3e97b0d0fbca" title=" " alt="" coords="718,36,905,81"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="947,41,906,49,905,44,941,41"/>
+<area shape="rect" id="Node000004" href="$d4/d7f/renderer__backend_8c.html#ae259faf752d8672193dc31ec72ab2754" title=" " alt="" coords="484,44,670,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="699,58,670,61,670,56,705,58"/>
+<area shape="rect" id="Node000005" href="$d0/dcc/renderer__frontend_8c.html#a389fec0dabe6589332ed60bb427aaaef" title=" " alt="" coords="297,44,436,72"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="466,58,437,61,437,56,471,58"/>
+<area shape="rect" id="Node000006" href="$d4/d8b/application_8c.html#a2ce02f6d4bd01f2d130aef9cd460cf6a" title=" " alt="" coords="108,44,249,72"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="279,59,249,61,249,56,284,58"/>
+<area shape="rect" id="Node000007" href="$d1/dc6/entry_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,44,60,72"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="90,60,61,61,60,56,94,57"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="935,74,905,73,906,67,940,74"/>
+</map>

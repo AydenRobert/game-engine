@@ -1,0 +1,9 @@
+<map id="memory_system_state" name="memory_system_state">
+<area shape="rect" id="Node000001" title=" " alt="" coords="225,106,396,134"/>
+<area shape="rect" id="Node000002" href="$df/d6f/structmemory__system__configuration.html" title=" " alt="" coords="5,5,229,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,38,287,104,282,107,156,43"/>
+<area shape="rect" id="Node000003" href="$d8/d84/structmemory__stats.html" title=" " alt="" coords="253,5,368,33"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="312,47,313,107,308,104,308,50"/>
+<area shape="rect" id="Node000004" href="$d6/db1/structdynamic__allocator.html" title="The dynamic allocator struct." alt="" coords="392,5,533,33"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="432,41,332,108,330,103,427,42"/>
+</map>

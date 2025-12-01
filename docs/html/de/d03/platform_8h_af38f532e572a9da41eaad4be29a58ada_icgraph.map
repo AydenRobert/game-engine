@@ -1,0 +1,21 @@
+<map id="platform_get_absolute_time" name="platform_get_absolute_time">
+<area shape="rect" id="Node000001" title=" " alt="" coords="493,77,699,105"/>
+<area shape="rect" id="Node000002" href="$d4/d8b/application_8c.html#ad6aaa3596896dacf8de1439cc34a264b" title=" " alt="" coords="121,25,242,53"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="559,68,508,40,477,27,445,16,389,9,332,10,278,18,233,27,231,22,277,12,331,5,389,4,446,11,479,22,510,36,565,69"/>
+<area shape="rect" id="Node000004" href="$dc/d54/clock_8c.html#a824107240a85b26523e51012294accbd" title=" " alt="" coords="328,25,420,53"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="516,74,421,53,421,47,522,73"/>
+<area shape="rect" id="Node000005" href="$dc/d54/clock_8c.html#a4abbdac65212baafffa5d8332a519a16" title=" " alt="" coords="320,77,428,105"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="475,92,428,94,428,89,480,91"/>
+<area shape="rect" id="Node000006" href="$df/dc5/kmath_8c.html#ac54ae2728db0c39d2ccdea1e7c4029e9" title=" " alt="" coords="334,129,414,157"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="521,109,415,137,414,131,516,110"/>
+<area shape="rect" id="Node000009" href="$df/dc5/kmath_8c.html#a1a4d8b8004d8fc7a55f7f73af084ca71" title=" " alt="" coords="303,181,445,209"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="559,112,446,171,416,183,415,178,444,166,553,113"/>
+<area shape="rect" id="Node000003" href="$d1/dc6/entry_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,25,60,53"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,41,61,42,59,37,107,37"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="310,40,243,42,242,37,315,38"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="303,73,235,56,235,51,308,72"/>
+<area shape="rect" id="Node000007" href="$df/dc5/kmath_8c.html#a33c8bf2ec771d7e80f00b743fea5eee3" title=" " alt="" coords="139,103,224,130"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="316,136,224,125,224,120,321,135"/>
+<area shape="rect" id="Node000008" href="$df/dc5/kmath_8c.html#a9a3fb3ff33bed50622e745a131a7b8f3" title=" " alt="" coords="108,155,255,182"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="316,151,256,161,255,156,321,150"/>
+</map>

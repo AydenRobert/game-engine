@@ -1,0 +1,9 @@
+<map id="freelist_resize" name="freelist_resize">
+<area shape="rect" id="Node000001" title="Attempts to resize the provided freelist. Call twice, first to get the new memory requirement,..." alt="" coords="5,32,119,60"/>
+<area shape="rect" id="Node000002" href="$da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df" title=" " alt="" coords="186,5,267,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,34,173,27,168,29,120,39"/>
+<area shape="rect" id="Node000003" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="167,57,286,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="119,52,154,59,149,60,119,57"/>
+<area shape="rect" id="Node000004" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="334,57,508,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="286,69,321,71,316,71,286,74"/>
+</map>

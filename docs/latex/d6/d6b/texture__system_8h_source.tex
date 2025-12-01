@@ -1,0 +1,24 @@
+\doxysection{texture\+\_\+system.\+h}
+\hypertarget{texture__system_8h_source}{}\label{texture__system_8h_source}\index{engine/src/systems/texture\_system.h@{engine/src/systems/texture\_system.h}}
+\mbox{\hyperlink{texture__system_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{renderer__types_8inl}{renderer/renderer\_types.inl}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtexture__system__config}{texture\_system\_config}}\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structtexture__system__config_a05af1afa542a4a872f02fa356001effb}{max\_texture\_count}};}
+\DoxyCodeLine{00007\ \}\ \mbox{\hyperlink{structtexture__system__config}{texture\_system\_config}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ DEFAULT\_TEXTURE\_NAME\ "{}default"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{texture__system_8h_a5311316a2adfccd1ecadf29aea704cf0}{texture\_system\_initialize}}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ *memory\_requirement,\ \textcolor{keywordtype}{void}\ *state,}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structtexture__system__config}{texture\_system\_config}}\ config);}
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{texture__system_8h_a3170cfd4c3f2bbf15a69e6a965a39a03}{texture\_system\_shutdown}}(\textcolor{keywordtype}{void}\ *state);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \mbox{\hyperlink{structtexture}{texture}}\ *\mbox{\hyperlink{texture__system_8h_a94229d7d8c2e06fabb2d9e3c2296599e}{texture\_system\_acquire}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name,\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ auto\_release);}
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{texture__system_8h_ab454daecfb4133cbca5559dd84db3ac4}{texture\_system\_release}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \mbox{\hyperlink{structtexture}{texture}}\ *\mbox{\hyperlink{texture__system_8h_ae9e13f5483fd272b9430ca11719164e4}{texture\_system\_get\_default\_texture}}();}
+
+\end{DoxyCode}

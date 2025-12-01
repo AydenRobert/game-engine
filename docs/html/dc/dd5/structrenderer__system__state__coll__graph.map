@@ -1,0 +1,9 @@
+<map id="renderer_system_state" name="renderer_system_state">
+<area shape="rect" id="Node000001" title=" " alt="" coords="16,274,188,301"/>
+<area shape="rect" id="Node000002" href="$d6/d3a/unionmat4__u.html" title=" " alt="" coords="5,106,76,134"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="35,147,34,198,37,224,47,248,57,261,72,273,67,274,54,265,42,251,32,226,28,198,34,152"/>
+<area shape="rect" id="Node000003" href="$df/d02/structrenderer__backend.html" title=" " alt="" coords="100,106,237,134"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,147,159,198,139,251,119,275,116,271,134,248,154,197,164,151"/>
+<area shape="rect" id="Node000004" href="$d4/d3a/structplatform__state.html" title=" " alt="" coords="110,5,227,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="170,46,171,106,166,105,167,51"/>
+</map>

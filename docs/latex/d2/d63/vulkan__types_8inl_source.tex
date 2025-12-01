@@ -1,0 +1,365 @@
+\doxysection{vulkan\+\_\+types.\+inl}
+\hypertarget{vulkan__types_8inl_source}{}\label{vulkan__types_8inl_source}\index{engine/src/renderer/vulkan/vulkan\_types.inl@{engine/src/renderer/vulkan/vulkan\_types.inl}}
+\mbox{\hyperlink{vulkan__types_8inl}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{freelist_8h}{containers/freelist.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{asserts_8h}{core/asserts.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{renderer__types_8inl}{renderer/renderer\_types.inl}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{resource__types_8h}{resources/resource\_types.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.h>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ VK\_CHECK(expr)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ KASSERT(expr\ ==\ VK\_SUCCESS);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__buffer}{vulkan\_buffer}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{structvulkan__buffer_a265ed958c5b87294476f0a332b6ec4b3}{total\_size}};}
+\DoxyCodeLine{00018\ \ \ \ \ VkBuffer\ \mbox{\hyperlink{structvulkan__buffer_aef238a6badcd0f522a2ac9eebe5e6acf}{handle}};}
+\DoxyCodeLine{00019\ \ \ \ \ VkBufferUsageFlagBits\ \mbox{\hyperlink{structvulkan__buffer_ad20c2ee2a4e3ff17ff30ed5c2ec9d99a}{usage}};}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{structvulkan__buffer_a36ecf49f62a41c58115355afef1d92a2}{is\_locked}};}
+\DoxyCodeLine{00021\ \ \ \ \ VkDeviceMemory\ \mbox{\hyperlink{structvulkan__buffer_aa1f7ce1464340d2c7cd8310c58ad9842}{memory}};}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ \mbox{\hyperlink{structvulkan__buffer_a0e3926c2b3bccaf6ed0eb268d91468c2}{memory\_index}};}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__buffer_a18e8c25dbd8260fcef29da92f174bbef}{memory\_property\_flags}};}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{structvulkan__buffer_a135d3091483d81da380071846ac81d6f}{freelist\_memory\_requirement}};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structvulkan__buffer_a7f732a3b4d46f783b81814bb3529dbcb}{freelist\_block}};}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{structfreelist}{freelist}}\ \mbox{\hyperlink{structvulkan__buffer_a70b2eadbb17480d2598bee39180b67db}{buffer\_freelist}};}
+\DoxyCodeLine{00027\ \}\ \mbox{\hyperlink{structvulkan__buffer}{vulkan\_buffer}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__swapchain__support__info}{vulkan\_swapchain\_support\_info}}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ VkSurfaceCapabilitiesKHR\ \mbox{\hyperlink{structvulkan__swapchain__support__info_ad3006631a80270a562902aedf5c08720}{capabilities}};}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__swapchain__support__info_a061c8b2ed6e128a3d80b776199097d5a}{format\_count}};}
+\DoxyCodeLine{00032\ \ \ \ \ VkSurfaceFormatKHR\ *\mbox{\hyperlink{structvulkan__swapchain__support__info_ac7bbc18106f56bf56b4079105c3bf4fc}{formats}};}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__swapchain__support__info_a65bfa24b47652e92c2c430e8f693e68f}{present\_mode\_count}};}
+\DoxyCodeLine{00034\ \ \ \ \ VkPresentModeKHR\ *\mbox{\hyperlink{structvulkan__swapchain__support__info_ad60786489912cdff5281e6e590e3de5e}{present\_modes}};}
+\DoxyCodeLine{00035\ \}\ \mbox{\hyperlink{structvulkan__swapchain__support__info}{vulkan\_swapchain\_support\_info}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__device}{vulkan\_device}}\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ VkPhysicalDevice\ \mbox{\hyperlink{structvulkan__device_afc7615a2081656e84136dc7cf4a5b875}{physical\_device}};}
+\DoxyCodeLine{00039\ \ \ \ \ VkDevice\ \mbox{\hyperlink{structvulkan__device_add6a635fab52939b4fe92aefb9712d88}{logical\_device}};}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{structvulkan__swapchain__support__info}{vulkan\_swapchain\_support\_info}}\ \mbox{\hyperlink{structvulkan__device_ac69198592baf1a03fe628b88b1774193}{swapchain\_support}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{structvulkan__device_ab3db73fd7d9ff6fe6e7df065f5950745}{supports\_device\_local\_host\_visible}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__device_ab97ca99bede93710b388835cb5bcd524}{graphics\_queue\_index}};}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__device_a22475a4f1b1682e06acc1667b36445af}{present\_queue\_index}};}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__device_af4c29ffbded80b609ce8d11cd9d954f2}{transfer\_queue\_index}};}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__device_ae72cb24a18d99a87c2fcabd7a1e6895a}{compute\_queue\_index}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ VkQueue\ \mbox{\hyperlink{structvulkan__device_a32d7146222dd894f4d4ddaf43238e588}{graphics\_queue}};}
+\DoxyCodeLine{00050\ \ \ \ \ VkQueue\ \mbox{\hyperlink{structvulkan__device_a1f3222a8df689be9f596282bf73e1d54}{present\_queue}};}
+\DoxyCodeLine{00051\ \ \ \ \ VkQueue\ \mbox{\hyperlink{structvulkan__device_add6bf0d6ef991a180017b07bacc8f0c7}{transfer\_queue}};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ VkCommandPool\ \mbox{\hyperlink{structvulkan__device_a07e54130446cbf987c768bd47ce48c1c}{graphics\_command\_pool}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ VkPhysicalDeviceProperties\ \mbox{\hyperlink{structvulkan__device_a968a7f405c1ec7cc7893561f61b0241a}{properties}};}
+\DoxyCodeLine{00056\ \ \ \ \ VkPhysicalDeviceFeatures\ \mbox{\hyperlink{structvulkan__device_aa3babaca56942fe90f103dc9c8be40d0}{features}};}
+\DoxyCodeLine{00057\ \ \ \ \ VkPhysicalDeviceMemoryProperties\ \mbox{\hyperlink{structvulkan__device_a6e10364c6be4466351b7ba07a1363564}{memory}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ VkFormat\ \mbox{\hyperlink{structvulkan__device_a766151b1f51198f642ac13c171f0f3e8}{depth\_format}};}
+\DoxyCodeLine{00060\ \}\ \mbox{\hyperlink{structvulkan__device}{vulkan\_device}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__image}{vulkan\_image}}\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ VkImage\ \mbox{\hyperlink{structvulkan__image_afbdef565b0b32e09f8b95d12135e1b6d}{handle}};}
+\DoxyCodeLine{00064\ \ \ \ \ VkDeviceMemory\ \mbox{\hyperlink{structvulkan__image_ac0ea6ad0bc0812a5eb5188f98ec2af1b}{memory}};}
+\DoxyCodeLine{00065\ \ \ \ \ VkImageView\ \mbox{\hyperlink{structvulkan__image_a16800ce7ba7c781b7b8d2e6c796a9e78}{view}};}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__image_a26a7f4b5d7298fa2ef6125bc47140204}{width}};}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__image_aa006d746b8e67bd2f078957e5e66e54f}{height}};}
+\DoxyCodeLine{00068\ \}\ \mbox{\hyperlink{structvulkan__image}{vulkan\_image}};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{vulkan__types_8inl_ac54d6bfaa63c5a5972d32717883b4b7b}{vulkan\_renderpass\_state}}\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{vulkan__types_8inl_ac54d6bfaa63c5a5972d32717883b4b7ba6564f2f3e15be06b670547bbcaaf0798}{READY}},}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{vulkan__types_8inl_ac54d6bfaa63c5a5972d32717883b4b7ba875fadf1437508cebb97bb5c3445cbdc}{RECORDING}},}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{vulkan__types_8inl_ac54d6bfaa63c5a5972d32717883b4b7ba40058ccafa06c8efa5c1aea6056881b2}{IN\_RENDER\_PASS}},}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{vulkan__types_8inl_ac54d6bfaa63c5a5972d32717883b4b7ba6f7315a0e16ca0763733755f82ce5a9c}{RECORDING\_ENDED}},}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{vulkan__types_8inl_ac54d6bfaa63c5a5972d32717883b4b7ba50cef52d778210eed22594237c887d66}{SUBMITTED}},}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{vulkan__types_8inl_ac54d6bfaa63c5a5972d32717883b4b7bac00a4acd3eec0687d536de556c139166}{NOT\_ALLOCATED}}}
+\DoxyCodeLine{00077\ \}\ \mbox{\hyperlink{vulkan__types_8inl_ac54d6bfaa63c5a5972d32717883b4b7b}{vulkan\_renderpass\_state}};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__renderpass}{vulkan\_renderpass}}\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ VkRenderPass\ \mbox{\hyperlink{structvulkan__renderpass_ab086fa086505fa7a9e860e324dc68f5b}{handle}};}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ \mbox{\hyperlink{structvulkan__renderpass_a09c9be9380bb06a6d2a1d2da981c4598}{render\_area}};}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ \mbox{\hyperlink{structvulkan__renderpass_a3259cc0e1463dba00c545532138ed47c}{clear\_colour}};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ \mbox{\hyperlink{structvulkan__renderpass_a26f267ee8a233712e967f07efc76a1e2}{depth}};}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__renderpass_a58060b19ec2e550c27aaa934c66639cf}{stencil}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ \mbox{\hyperlink{structvulkan__renderpass_a3a885691960caba44ed254b473095b25}{clear\_flags}};}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{structvulkan__renderpass_ada056bae4e7227e9f56dc8e76a28befd}{has\_prev\_pass}};}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{structvulkan__renderpass_a0e9b9a63cf7615b9b881558b8ed90cd9}{has\_next\_pass}};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{vulkan__types_8inl_ac54d6bfaa63c5a5972d32717883b4b7b}{vulkan\_renderpass\_state}}\ \mbox{\hyperlink{structvulkan__renderpass_a9dab3298cc6e83038e4b21bccd1fe8f0}{state}};}
+\DoxyCodeLine{00092\ \}\ \mbox{\hyperlink{structvulkan__renderpass}{vulkan\_renderpass}};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__swapchain}{vulkan\_swapchain}}\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ VkSurfaceFormatKHR\ \mbox{\hyperlink{structvulkan__swapchain_af3fe0932b272203467d455b9b28e388f}{image\_format}};}
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ \mbox{\hyperlink{structvulkan__swapchain_a104f78842180bfaa5a1b902f105a95bd}{max\_frames\_in\_flight}};}
+\DoxyCodeLine{00097\ \ \ \ \ VkSwapchainKHR\ \mbox{\hyperlink{structvulkan__swapchain_a2046bc9ebabd89eed752861e1a16f6e2}{handle}};}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__swapchain_a28ddf97149aa479a7f4aa6ca6db16673}{image\_count}};}
+\DoxyCodeLine{00099\ \ \ \ \ VkImage\ *\mbox{\hyperlink{structvulkan__swapchain_aeeb53b817379b14610d0dc392648a022}{images}};}
+\DoxyCodeLine{00100\ \ \ \ \ VkImageView\ *\mbox{\hyperlink{structvulkan__swapchain_aa594b1c6214c7b307655a03705120151}{views}};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{structvulkan__image}{vulkan\_image}}\ \mbox{\hyperlink{structvulkan__swapchain_ac68489dfc155f848fc1371204e2bc55e}{depth\_attachment}};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//\ one\ per\ frame}}
+\DoxyCodeLine{00105\ \ \ \ \ VkFramebuffer\ \mbox{\hyperlink{structvulkan__swapchain_ab6f629181eb84203ef4d1d093d5a8634}{framebuffers}}[3];}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ VkSemaphore\ *\mbox{\hyperlink{structvulkan__swapchain_ae3bc4c336ea7eef7dd47951d7abe7870}{render\_finished\_per\_image}};}
+\DoxyCodeLine{00108\ \}\ \mbox{\hyperlink{structvulkan__swapchain}{vulkan\_swapchain}};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{vulkan__types_8inl_ab5b3310268a8d6ca8fd711df0c67d1c9}{vulkan\_command\_buffer\_state}}\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{vulkan__types_8inl_ab5b3310268a8d6ca8fd711df0c67d1c9a82390d8d38821dad4d7e49e27e54a115}{COMMAND\_BUFFER\_STATE\_READY}},}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{vulkan__types_8inl_ab5b3310268a8d6ca8fd711df0c67d1c9abc477c5326849bd82764a39e7ef91609}{COMMAND\_BUFFER\_STATE\_RECORDING}},}
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{vulkan__types_8inl_ab5b3310268a8d6ca8fd711df0c67d1c9a0c8f726a719148aa5fa738d50a0391a1}{COMMAND\_BUFFER\_STATE\_IN\_RENDER\_PASS}},}
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{vulkan__types_8inl_ab5b3310268a8d6ca8fd711df0c67d1c9a58e46cb5d8e373889a6995593d6a712d}{COMMAND\_BUFFER\_STATE\_RECORDING\_ENDED}},}
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{vulkan__types_8inl_ab5b3310268a8d6ca8fd711df0c67d1c9a394eebd2d4bbff3059cf5f8cf3d576d1}{COMMAND\_BUFFER\_STATE\_SUBMITTED}},}
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{vulkan__types_8inl_ab5b3310268a8d6ca8fd711df0c67d1c9aea501035a8d8648c15721a006ff65731}{COMMAND\_BUFFER\_STATE\_NOT\_ALLOCATED}}}
+\DoxyCodeLine{00117\ \}\ \mbox{\hyperlink{vulkan__types_8inl_ab5b3310268a8d6ca8fd711df0c67d1c9}{vulkan\_command\_buffer\_state}};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__command__buffer}{vulkan\_command\_buffer}}\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ VkCommandBuffer\ \mbox{\hyperlink{structvulkan__command__buffer_a590a8f43c4828b2c5e5b43f134d0ae88}{handle}};}
+\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{vulkan__types_8inl_ab5b3310268a8d6ca8fd711df0c67d1c9}{vulkan\_command\_buffer\_state}}\ \mbox{\hyperlink{structvulkan__command__buffer_ae5f14e0e69c6df7a2c7405c7adc1bd60}{state}};}
+\DoxyCodeLine{00122\ \}\ \mbox{\hyperlink{structvulkan__command__buffer}{vulkan\_command\_buffer}};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__shader__stage}{vulkan\_shader\_stage}}\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ VkShaderModuleCreateInfo\ \mbox{\hyperlink{structvulkan__shader__stage_aa038d9e249371f17f04b613cd205ef5e}{create\_info}};}
+\DoxyCodeLine{00126\ \ \ \ \ VkShaderModule\ \mbox{\hyperlink{structvulkan__shader__stage_a5ad1225efc44a12554b51f39fc51b354}{handle}};}
+\DoxyCodeLine{00127\ \ \ \ \ VkPipelineShaderStageCreateInfo\ \mbox{\hyperlink{structvulkan__shader__stage_a8fd95ae69efdd2a0d0e9a55642ad8204}{shader\_stage\_create\_info}};}
+\DoxyCodeLine{00128\ \}\ \mbox{\hyperlink{structvulkan__shader__stage}{vulkan\_shader\_stage}};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__pipeline}{vulkan\_pipeline}}\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ VkPipeline\ \mbox{\hyperlink{structvulkan__pipeline_a761b1f2cc269521208f54996f2d2470d}{handle}};}
+\DoxyCodeLine{00132\ \ \ \ \ VkPipelineLayout\ \mbox{\hyperlink{structvulkan__pipeline_af090d423b87355d518c5a0ce8a3821de}{pipeline\_layout}};}
+\DoxyCodeLine{00133\ \}\ \mbox{\hyperlink{structvulkan__pipeline}{vulkan\_pipeline}};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ MATERIAL\_SHADER\_STAGE\_COUNT\ 2}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__descriptor__state}{vulkan\_descriptor\_state}}\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//\ One\ per\ frame}}
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__descriptor__state_a23a6f33aad226b703f3b57fbec15e653}{generations}}[3];}
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__descriptor__state_a06272c8f461945dc10a381eb02ad3299}{ids}}[3];}
+\DoxyCodeLine{00141\ \}\ \mbox{\hyperlink{structvulkan__descriptor__state}{vulkan\_descriptor\_state}};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#define\ VULKAN\_MATERIAL\_SHADER\_DESCRIPTOR\_COUNT\ 2}}
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#define\ VULKAN\_MATERIAL\_SHADER\_SAMPLER\_COUNT\ 1}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__material__shader__instance__state}{vulkan\_material\_shader\_instance\_state}}\ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{comment}{//\ Per\ frame}}
+\DoxyCodeLine{00148\ \ \ \ \ VkDescriptorSet\ \mbox{\hyperlink{structvulkan__material__shader__instance__state_a61c8fc58d3ad0d0afb1db8511acf29fd}{descriptor\_sets}}[3];}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{comment}{//\ Per\ descriptor}}
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{structvulkan__descriptor__state}{vulkan\_descriptor\_state}}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__material__shader__instance__state_af3ff794339f7ede9e5570292675621ff}{descriptor\_states}}[\mbox{\hyperlink{vulkan__types_8inl_af8c1e7ac26c2b4baf62deba2f4f8eb44}{VULKAN\_MATERIAL\_SHADER\_DESCRIPTOR\_COUNT}}];}
+\DoxyCodeLine{00153\ \}\ \mbox{\hyperlink{structvulkan__material__shader__instance__state}{vulkan\_material\_shader\_instance\_state}};}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{comment}{//\ Max\ number\ of\ material\ instances}}
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#define\ VULKAN\_MAX\_MATERIAL\_COUNT\ 1024}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \textcolor{comment}{//\ Maximum\ amount\ of\ uploaded\ geometries}}
+\DoxyCodeLine{00159\ \textcolor{comment}{//\ TODO:\ Make\ configurable}}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#define\ VULKAN\_MAX\_GEOMETRY\_COUNT\ 4096}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00166\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__geometry__data}{vulkan\_geometry\_data}}\ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__geometry__data_ae55c724a21cb12348c8430178ee6f859}{id}};}
+\DoxyCodeLine{00168\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__geometry__data_a91702aabf5a1b9384610a442585f59d1}{generation}};}
+\DoxyCodeLine{00169\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__geometry__data_a7a421d6b8eafb5f58fec6504111397ad}{vertex\_count}};}
+\DoxyCodeLine{00170\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__geometry__data_adcf5f145442475e1f1d747152c09b803}{vertex\_element\_size}};}
+\DoxyCodeLine{00171\ \ \ \ \ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{structvulkan__geometry__data_ada20449a6710034d0e56c68e1dab4448}{vertex\_buffer\_offset}};}
+\DoxyCodeLine{00172\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__geometry__data_a8c04f2302734af3f7e4c8c340a05ec1f}{index\_count}};}
+\DoxyCodeLine{00173\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__geometry__data_a07ea04cb1096d3d12283c79b0949d2d7}{index\_element\_size}};}
+\DoxyCodeLine{00174\ \ \ \ \ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{structvulkan__geometry__data_a2d04dc127432a151eef04f2a5dfc3125}{index\_buffer\_offset}};}
+\DoxyCodeLine{00175\ \}\ \mbox{\hyperlink{structvulkan__geometry__data}{vulkan\_geometry\_data}};}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \textcolor{comment}{//\ Required\ to\ be\ 256\ bytes}}
+\DoxyCodeLine{00178\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__material__shader__global__ubo}{vulkan\_material\_shader\_global\_ubo}}\ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ \mbox{\hyperlink{structvulkan__material__shader__global__ubo_a5bea6cd96d11e95e2e585b6875d491cd}{projection}};\ \ \textcolor{comment}{//\ 64\ bytes}}
+\DoxyCodeLine{00180\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ \mbox{\hyperlink{structvulkan__material__shader__global__ubo_a622fd948e9bb325b6633364eca4c470a}{view}};\ \ \ \ \ \ \ \ \textcolor{comment}{//\ 64\ bytes}}
+\DoxyCodeLine{00181\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ \mbox{\hyperlink{structvulkan__material__shader__global__ubo_af8b037c9dd8bae8dd6dbb09e48120c88}{m\_reserved0}};\ \textcolor{comment}{//\ 64\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ \mbox{\hyperlink{structvulkan__material__shader__global__ubo_ace1da9a6794b5fad17c60dff1b5660f6}{m\_reserved1}};\ \textcolor{comment}{//\ 64\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00183\ \}\ \mbox{\hyperlink{structvulkan__material__shader__global__ubo}{vulkan\_material\_shader\_global\_ubo}};}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__material__shader__instance__ubo}{vulkan\_material\_shader\_instance\_ubo}}\ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ \mbox{\hyperlink{structvulkan__material__shader__instance__ubo_a54074855c06467912505619b89c5becb}{diffuse\_color}};\ \textcolor{comment}{//\ 16\ bytes}}
+\DoxyCodeLine{00187\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ \mbox{\hyperlink{structvulkan__material__shader__instance__ubo_a2ab501bea77b089965cdf035526c7fd5}{v\_reserved0}};\ \ \ \textcolor{comment}{//\ 16\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00188\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ \mbox{\hyperlink{structvulkan__material__shader__instance__ubo_ac26c45b56d848d015a9e27227ba5e53a}{v\_reserved1}};\ \ \ \textcolor{comment}{//\ 16\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00189\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ \mbox{\hyperlink{structvulkan__material__shader__instance__ubo_a9bc4eba2666c6dce97b7c46927a87a38}{v\_reserved2}};\ \ \ \textcolor{comment}{//\ 16\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00190\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ \mbox{\hyperlink{structvulkan__material__shader__instance__ubo_adca9d6481c0cbbf996fa0b19b5fe4118}{m\_reserved0}};\ \ \ \textcolor{comment}{//\ 64\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00191\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ \mbox{\hyperlink{structvulkan__material__shader__instance__ubo_a1e52d454f8efdfce8c7aeabd1076c7fa}{m\_reserved1}};\ \ \ \textcolor{comment}{//\ 64\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00192\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ \mbox{\hyperlink{structvulkan__material__shader__instance__ubo_a159800deff2712d3640ff35062fe5078}{m\_reserved2}};\ \ \ \textcolor{comment}{//\ 64\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00193\ \}\ \mbox{\hyperlink{structvulkan__material__shader__instance__ubo}{vulkan\_material\_shader\_instance\_ubo}};}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__material__shader}{vulkan\_material\_shader}}\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{comment}{//\ vertex,\ fragment}}
+\DoxyCodeLine{00197\ \ \ \ \ \mbox{\hyperlink{structvulkan__shader__stage}{vulkan\_shader\_stage}}\ \mbox{\hyperlink{structvulkan__material__shader_a4371a6d5449eaf38eebf8b1d4c0afff2}{stages}}[\mbox{\hyperlink{vulkan__types_8inl_a603f7d3444d15256687a0ecaeaa1da76}{MATERIAL\_SHADER\_STAGE\_COUNT}}];}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ VkDescriptorPool\ \mbox{\hyperlink{structvulkan__material__shader_a9923a04fd6b0764b4a806fe206ee5918}{global\_descriptor\_pool}};}
+\DoxyCodeLine{00200\ \ \ \ \ VkDescriptorSetLayout\ \mbox{\hyperlink{structvulkan__material__shader_a41009b44592c2795f3060718b847eefa}{global\_descriptor\_set\_layout}};}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{comment}{//\ One\ descriptor\ set\ per\ frame}}
+\DoxyCodeLine{00203\ \ \ \ \ VkDescriptorSet\ \mbox{\hyperlink{structvulkan__material__shader_aff59556404f4115a0016ea653f58a146}{global\_descriptor\_sets}}[3];}
+\DoxyCodeLine{00204\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{structvulkan__material__shader_abf9bdb6fff0acc5b5e44b8f01c4168bd}{descriptor\_updated}}[3];}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{comment}{//\ Global\ uniform\ object}}
+\DoxyCodeLine{00207\ \ \ \ \ \mbox{\hyperlink{structvulkan__material__shader__global__ubo}{vulkan\_material\_shader\_global\_ubo}}\ \mbox{\hyperlink{structvulkan__material__shader_a63d0af53dae2f58617b579f09b70208e}{global\_ubo}};}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{comment}{//\ Global\ uniform\ buffer}}
+\DoxyCodeLine{00210\ \ \ \ \ \mbox{\hyperlink{structvulkan__buffer}{vulkan\_buffer}}\ \mbox{\hyperlink{structvulkan__material__shader_ac713c05fbfee746f5f9807039465e5fc}{global\_uniform\_buffer}};}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ VkDescriptorPool\ \mbox{\hyperlink{structvulkan__material__shader_a6a2c891ee243f916670518825a6149c4}{object\_descriptor\_pool}};}
+\DoxyCodeLine{00213\ \ \ \ \ VkDescriptorSetLayout\ \mbox{\hyperlink{structvulkan__material__shader_a936eb0a2b656c36cd3fd42580e7d0b85}{object\_descriptor\_set\_layout}};}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{comment}{//\ One\ buffer\ for\ all\ objects}}
+\DoxyCodeLine{00216\ \ \ \ \ \mbox{\hyperlink{structvulkan__buffer}{vulkan\_buffer}}\ \mbox{\hyperlink{structvulkan__material__shader_a6d920617340f0ae6b6a643b3f60edc0f}{object\_uniform\_buffer}};}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{comment}{//\ TODO:\ manage\ a\ free\ list\ of\ some\ kind\ here}}
+\DoxyCodeLine{00218\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__material__shader_a0031ebdcbc206c66243c9e29bbc7a42d}{object\_uniform\_buffer\_index}};}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147}{texture\_use}}\ \mbox{\hyperlink{structvulkan__material__shader_a7c37fe6eba74e0ff1a3147e488c5d076}{sampler\_uses}}[\mbox{\hyperlink{vulkan__types_8inl_af24433c557a18223b0b3d15a8556da3d}{VULKAN\_MATERIAL\_SHADER\_SAMPLER\_COUNT}}];}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{comment}{//\ TODO:\ make\ dynamic}}
+\DoxyCodeLine{00223\ \ \ \ \ \mbox{\hyperlink{structvulkan__material__shader__instance__state}{vulkan\_material\_shader\_instance\_state}}}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__material__shader_a5329161a640d2605dd291cb9600f2cfb}{instance\_states}}[\mbox{\hyperlink{vulkan__types_8inl_aba878367a90ee05d4e17e086bb7b529c}{VULKAN\_MAX\_MATERIAL\_COUNT}}];}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \ \ \ \ \mbox{\hyperlink{structvulkan__pipeline}{vulkan\_pipeline}}\ \mbox{\hyperlink{structvulkan__material__shader_adf46660e3eb98c0bee60c782f501f128}{pipeline}};}
+\DoxyCodeLine{00227\ \}\ \mbox{\hyperlink{structvulkan__material__shader}{vulkan\_material\_shader}};}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\#define\ UI\_SHADER\_STAGE\_COUNT\ 2}}
+\DoxyCodeLine{00230\ \textcolor{preprocessor}{\#define\ VULKAN\_UI\_SHADER\_DESCRIPTOR\_COUNT\ 2}}
+\DoxyCodeLine{00231\ \textcolor{preprocessor}{\#define\ VULKAN\_UI\_SHADER\_SAMPLER\_COUNT\ 1}}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \textcolor{comment}{//\ Max\ number\ of\ UI\ control\ instances}}
+\DoxyCodeLine{00234\ \textcolor{comment}{//\ TODO:\ make\ configurable}}
+\DoxyCodeLine{00235\ \textcolor{preprocessor}{\#define\ VULKAN\_MAX\_UI\_COUNT\ 1024}}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__ui__shader__instance__state}{vulkan\_ui\_shader\_instance\_state}}\ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{comment}{//\ Per\ frame}}
+\DoxyCodeLine{00239\ \ \ \ \ VkDescriptorSet\ \mbox{\hyperlink{structvulkan__ui__shader__instance__state_ab9da8aee5bd7048713d8ca5cc97481a9}{descriptor\_sets}}[3];}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{comment}{//\ Per\ descriptor}}
+\DoxyCodeLine{00242\ \ \ \ \ \mbox{\hyperlink{structvulkan__descriptor__state}{vulkan\_descriptor\_state}}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__ui__shader__instance__state_ac837d614bfbd18830143ae622fd18c25}{descriptor\_states}}[\mbox{\hyperlink{vulkan__types_8inl_a8cdc89d99e5a5b7b259c4423b47c28d2}{VULKAN\_UI\_SHADER\_DESCRIPTOR\_COUNT}}];}
+\DoxyCodeLine{00244\ \}\ \mbox{\hyperlink{structvulkan__ui__shader__instance__state}{vulkan\_ui\_shader\_instance\_state}};}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \textcolor{comment}{//\ Required\ to\ be\ 256\ bytes}}
+\DoxyCodeLine{00247\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__ui__shader__global__ubo}{vulkan\_ui\_shader\_global\_ubo}}\ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ \mbox{\hyperlink{structvulkan__ui__shader__global__ubo_a0c66319b3c24d51ff53a4dc351a8ef67}{projection}};\ \ \textcolor{comment}{//\ 64\ bytes}}
+\DoxyCodeLine{00249\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ \mbox{\hyperlink{structvulkan__ui__shader__global__ubo_a1a460d1b2dcf3a1173d1c708e4eac152}{view}};\ \ \ \ \ \ \ \ \textcolor{comment}{//\ 64\ bytes}}
+\DoxyCodeLine{00250\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ \mbox{\hyperlink{structvulkan__ui__shader__global__ubo_a0a04bf54a534c223f77184f67b6a9060}{m\_reserved0}};\ \textcolor{comment}{//\ 64\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00251\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ \mbox{\hyperlink{structvulkan__ui__shader__global__ubo_a6200f771a99a29b3bffd364f3f31d048}{m\_reserved1}};\ \textcolor{comment}{//\ 64\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00252\ \}\ \mbox{\hyperlink{structvulkan__ui__shader__global__ubo}{vulkan\_ui\_shader\_global\_ubo}};}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__ui__shader__instance__ubo}{vulkan\_ui\_shader\_instance\_ubo}}\ \{}
+\DoxyCodeLine{00255\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ \mbox{\hyperlink{structvulkan__ui__shader__instance__ubo_a4481767d57618e230c3bad19aa7b3e5a}{diffuse\_color}};\ \textcolor{comment}{//\ 16\ bytes}}
+\DoxyCodeLine{00256\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ \mbox{\hyperlink{structvulkan__ui__shader__instance__ubo_a28c5a1a76a652b86d7c6af18b8395568}{v\_reserved0}};\ \ \ \textcolor{comment}{//\ 16\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00257\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ \mbox{\hyperlink{structvulkan__ui__shader__instance__ubo_a95c2874474aac17515f159ae5c1bd317}{v\_reserved1}};\ \ \ \textcolor{comment}{//\ 16\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00258\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ \mbox{\hyperlink{structvulkan__ui__shader__instance__ubo_acd025ff591b8fdb3f5d74ff22d6b7ca4}{v\_reserved2}};\ \ \ \textcolor{comment}{//\ 16\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00259\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ \mbox{\hyperlink{structvulkan__ui__shader__instance__ubo_abeb98a2555fb1ac904d62dc4a9f6cfdb}{m\_reserved0}};\ \ \ \textcolor{comment}{//\ 64\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00260\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ \mbox{\hyperlink{structvulkan__ui__shader__instance__ubo_a8d4ccc48a18b1b2d0f704902fa5a0b08}{m\_reserved1}};\ \ \ \textcolor{comment}{//\ 64\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00261\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ \mbox{\hyperlink{structvulkan__ui__shader__instance__ubo_ad3bdde453f0e6f5466660f0c71e06675}{m\_reserved2}};\ \ \ \textcolor{comment}{//\ 64\ bytes,\ reserved\ for\ future}}
+\DoxyCodeLine{00262\ \}\ \mbox{\hyperlink{structvulkan__ui__shader__instance__ubo}{vulkan\_ui\_shader\_instance\_ubo}};}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00264\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__ui__shader}{vulkan\_ui\_shader}}\ \{}
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{comment}{//\ vertex,\ fragment}}
+\DoxyCodeLine{00266\ \ \ \ \ \mbox{\hyperlink{structvulkan__shader__stage}{vulkan\_shader\_stage}}\ \mbox{\hyperlink{structvulkan__ui__shader_a3050faac760fc750f86eb33da4ad2f49}{stages}}[\mbox{\hyperlink{vulkan__types_8inl_a603f7d3444d15256687a0ecaeaa1da76}{MATERIAL\_SHADER\_STAGE\_COUNT}}];}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ VkDescriptorPool\ \mbox{\hyperlink{structvulkan__ui__shader_a7fbdddef211d4fe0a6a5d1d4dcf1ee80}{global\_descriptor\_pool}};}
+\DoxyCodeLine{00269\ \ \ \ \ VkDescriptorSetLayout\ \mbox{\hyperlink{structvulkan__ui__shader_ad7eeef3edbb6292d5dfb7f3904ee89d9}{global\_descriptor\_set\_layout}};}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{comment}{//\ One\ descriptor\ set\ per\ frame}}
+\DoxyCodeLine{00272\ \ \ \ \ VkDescriptorSet\ \mbox{\hyperlink{structvulkan__ui__shader_a2a20b2ff011d7838bbb84e7a7d8a81b9}{global\_descriptor\_sets}}[3];}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{comment}{//\ Global\ uniform\ object}}
+\DoxyCodeLine{00275\ \ \ \ \ \mbox{\hyperlink{structvulkan__ui__shader__global__ubo}{vulkan\_ui\_shader\_global\_ubo}}\ \mbox{\hyperlink{structvulkan__ui__shader_ac5a2626f68dd34cd28b4d0f1a490c469}{global\_ubo}};}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{comment}{//\ Global\ uniform\ buffer}}
+\DoxyCodeLine{00278\ \ \ \ \ \mbox{\hyperlink{structvulkan__buffer}{vulkan\_buffer}}\ \mbox{\hyperlink{structvulkan__ui__shader_ac38f0eaed67666e34f89169a092f864f}{global\_uniform\_buffer}};}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \ \ \ \ VkDescriptorPool\ \mbox{\hyperlink{structvulkan__ui__shader_a19b1cde144452662f12699d92489ab4f}{object\_descriptor\_pool}};}
+\DoxyCodeLine{00281\ \ \ \ \ VkDescriptorSetLayout\ \mbox{\hyperlink{structvulkan__ui__shader_a9cb9bb65e120f69f3a3909d8fcbc19a4}{object\_descriptor\_set\_layout}};}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{comment}{//\ One\ buffer\ for\ all\ objects}}
+\DoxyCodeLine{00284\ \ \ \ \ \mbox{\hyperlink{structvulkan__buffer}{vulkan\_buffer}}\ \mbox{\hyperlink{structvulkan__ui__shader_aea2605fc1253203177115974c79cc9c9}{object\_uniform\_buffer}};}
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{comment}{//\ TODO:\ manage\ a\ free\ list\ of\ some\ kind\ here}}
+\DoxyCodeLine{00286\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__ui__shader_aa5f5d7e8fe6fad70fdd832b63cc7116f}{object\_uniform\_buffer\_index}};}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147}{texture\_use}}\ \mbox{\hyperlink{structvulkan__ui__shader_aa33cacf8086a4f2011a86125cff31c54}{sampler\_uses}}[\mbox{\hyperlink{vulkan__types_8inl_aae4697b953b7eca68b5c7a21c790ecd1}{VULKAN\_UI\_SHADER\_SAMPLER\_COUNT}}];}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{comment}{//\ TODO:\ make\ dynamic}}
+\DoxyCodeLine{00291\ \ \ \ \ \mbox{\hyperlink{structvulkan__ui__shader__instance__state}{vulkan\_ui\_shader\_instance\_state}}\ \mbox{\hyperlink{structvulkan__ui__shader_a4d522e3060deca773de0d8f305aabe51}{instance\_states}}[\mbox{\hyperlink{vulkan__types_8inl_a2239eab24f2b9d7f7b4815be6b8e82a4}{VULKAN\_MAX\_UI\_COUNT}}];}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \ \ \ \ \mbox{\hyperlink{structvulkan__pipeline}{vulkan\_pipeline}}\ \mbox{\hyperlink{structvulkan__ui__shader_a413d0a1e94a01cf8fb374da8c17741e8}{pipeline}};}
+\DoxyCodeLine{00294\ \}\ \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\_ui\_shader}};}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ \{}
+\DoxyCodeLine{00297\ \ \ \ \ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ \mbox{\hyperlink{structvulkan__context_a9704bbb6aa2aa202ded1e8b8b2b225d8}{frame\_delta\_time}};}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__context_ada8eb7300aedfc6bbdc6e9a01a10b0ca}{framebuffer\_width}};}
+\DoxyCodeLine{00300\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__context_a0369e76bf85701ba2cf8b7f0134a2a6e}{framebuffer\_height}};}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \ \ \ \ \textcolor{comment}{//\ Current\ generation\ of\ framebuffer\ size.\ If\ it\ does\ not\ match}}
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{comment}{//\ framebuffer\_size\_last\_generation,\ a\ new\ one\ should\ be\ generated.}}
+\DoxyCodeLine{00304\ \ \ \ \ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{structvulkan__context_a09568b52b351488c26c1309a0918ac69}{framebuffer\_size\_generation}};}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \textcolor{comment}{//\ The\ generation\ of\ the\ size\ buffer\ when\ it\ was\ last\ created.\ Set\ the}}
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{comment}{//\ framebuffer\_size\_generation\ when\ updated.}}
+\DoxyCodeLine{00308\ \ \ \ \ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{structvulkan__context_aa1edc2a3352ce6bc0751aa8bb6d84631}{framebuffer\_size\_last\_generation}};}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00310\ \ \ \ \ VkInstance\ \mbox{\hyperlink{structvulkan__context_a71e13564f2111dafcda6c332918c196f}{instance}};}
+\DoxyCodeLine{00311\ \ \ \ \ VkAllocationCallbacks\ *\mbox{\hyperlink{structvulkan__context_a8922bfe5172973875c0420bc010344cc}{allocator}};}
+\DoxyCodeLine{00312\ \ \ \ \ VkSurfaceKHR\ \mbox{\hyperlink{structvulkan__context_ad0cd4ef188f905064d59bb918b69eb38}{surface}};}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \textcolor{preprocessor}{\#if\ defined(\_DEBUG)}}
+\DoxyCodeLine{00315\ \ \ \ \ VkDebugUtilsMessengerEXT\ debug\_messenger;}
+\DoxyCodeLine{00316\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ defined(\_DEBUG)}}
+\DoxyCodeLine{00317\ }
+\DoxyCodeLine{00318\ \ \ \ \ \mbox{\hyperlink{structvulkan__device}{vulkan\_device}}\ \mbox{\hyperlink{structvulkan__context_a125a2b961a4805e2eefc3ad2ab4f709a}{device}};}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \ \ \ \ \mbox{\hyperlink{structvulkan__swapchain}{vulkan\_swapchain}}\ \mbox{\hyperlink{structvulkan__context_a847e3b9f7c19d2dc9a623bc84403ee8e}{swapchain}};}
+\DoxyCodeLine{00321\ \ \ \ \ \mbox{\hyperlink{structvulkan__renderpass}{vulkan\_renderpass}}\ \mbox{\hyperlink{structvulkan__context_a35b6a0b0b1424b05c15e93298f69f26e}{main\_renderpass}};}
+\DoxyCodeLine{00322\ \ \ \ \ \mbox{\hyperlink{structvulkan__renderpass}{vulkan\_renderpass}}\ \mbox{\hyperlink{structvulkan__context_a3d3649c5e0be460c2554bccef014a96e}{ui\_renderpass}};}
+\DoxyCodeLine{00323\ }
+\DoxyCodeLine{00324\ \ \ \ \ \mbox{\hyperlink{structvulkan__buffer}{vulkan\_buffer}}\ \mbox{\hyperlink{structvulkan__context_a668bba584e42365c13d9f5664ca217b8}{object\_vertex\_buffer}};}
+\DoxyCodeLine{00325\ \ \ \ \ \mbox{\hyperlink{structvulkan__buffer}{vulkan\_buffer}}\ \mbox{\hyperlink{structvulkan__context_a036b1378d111274567245bd286d290d3}{object\_index\_buffer}};}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00327\ \ \ \ \ \textcolor{comment}{//\ darray}}
+\DoxyCodeLine{00328\ \ \ \ \ \mbox{\hyperlink{structvulkan__command__buffer}{vulkan\_command\_buffer}}\ *\mbox{\hyperlink{structvulkan__context_ada97681614808238c130037d71d38dca}{graphics\_command\_buffers}};}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \ \ \ \ \textcolor{comment}{//\ darray}}
+\DoxyCodeLine{00331\ \ \ \ \ VkSemaphore\ *\mbox{\hyperlink{structvulkan__context_a8c5785218cb8df87943aa9392f895350}{image\_available\_semaphores}};}
+\DoxyCodeLine{00332\ }
+\DoxyCodeLine{00333\ \ \ \ \ \textcolor{comment}{//\ darray}}
+\DoxyCodeLine{00334\ \ \ \ \ VkSemaphore\ *\mbox{\hyperlink{structvulkan__context_a64c9d883d2534b9cc6b7b47890efdf36}{queue\_complete\_semaphores}};}
+\DoxyCodeLine{00335\ }
+\DoxyCodeLine{00336\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__context_a0f57ba68ce37990bdfde83b351c45747}{in\_flight\_fence\_count}};}
+\DoxyCodeLine{00337\ \ \ \ \ VkFence\ \mbox{\hyperlink{structvulkan__context_a8112e981decf4df4525dc372e62f82c8}{in\_flight\_fences}}[2];}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00339\ \ \ \ \ \textcolor{comment}{//\ holds\ pointers\ to\ fences\ which\ exist\ and\ are\ owned\ elsewhere,\ one\ per}}
+\DoxyCodeLine{00340\ \ \ \ \ \textcolor{comment}{//\ frame}}
+\DoxyCodeLine{00341\ \ \ \ \ VkFence\ *\mbox{\hyperlink{structvulkan__context_a7ad2a385f67a5e1a261b7ad6176c1a4c}{images\_in\_flight}}[3];}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00343\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__context_aa6a4941f42c210b9972650276df61972}{image\_index}};}
+\DoxyCodeLine{00344\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__context_acf8f27c63fbac8a561ce15d22f016157}{current\_frame}};}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00346\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{structvulkan__context_ae2293aefe9b568ce7222268489f041b8}{recreating\_swapchain}};}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00348\ \ \ \ \ \mbox{\hyperlink{structvulkan__material__shader}{vulkan\_material\_shader}}\ \mbox{\hyperlink{structvulkan__context_a010e151c3fe4f524195d131eda4f7ac2}{material\_shader}};}
+\DoxyCodeLine{00349\ \ \ \ \ \mbox{\hyperlink{structvulkan__ui__shader}{vulkan\_ui\_shader}}\ \mbox{\hyperlink{structvulkan__context_acd75fbe8660e13050c01861b80b5e17a}{ui\_shader}};}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \ \ \ \ \textcolor{comment}{//\ TODO:\ Make\ dynamic}}
+\DoxyCodeLine{00352\ \ \ \ \ \mbox{\hyperlink{structvulkan__geometry__data}{vulkan\_geometry\_data}}\ \mbox{\hyperlink{structvulkan__context_a04574de8371d67ff15bed1c645585cc5}{geometries}}[\mbox{\hyperlink{vulkan__types_8inl_a1816dd90401e0fa385296483b24de2be}{VULKAN\_MAX\_GEOMETRY\_COUNT}}];}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00354\ \ \ \ \ \textcolor{comment}{//\ One\ per\ frame}}
+\DoxyCodeLine{00355\ \ \ \ \ VkFramebuffer\ \mbox{\hyperlink{structvulkan__context_a20bab9417ffec615b656145b026f75f4}{world\_framebuffers}}[3];}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \ \ \ \ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ (*\mbox{\hyperlink{structvulkan__context_a4c078acb6ec1a93e3d0bef27b83354c8}{find\_memory\_index}})(\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ type\_filter,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ property\_flags);}
+\DoxyCodeLine{00358\ \}\ \mbox{\hyperlink{structvulkan__context}{vulkan\_context}};}
+\DoxyCodeLine{00359\ }
+\DoxyCodeLine{00360\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__texture__data}{vulkan\_texture\_data}}\ \{}
+\DoxyCodeLine{00361\ \ \ \ \ \mbox{\hyperlink{structvulkan__image}{vulkan\_image}}\ \mbox{\hyperlink{structvulkan__texture__data_a1c078092f7886da81b35b98155df91f1}{image}};}
+\DoxyCodeLine{00362\ \ \ \ \ VkSampler\ \mbox{\hyperlink{structvulkan__texture__data_a71b1bac3abe1fcd78504d46ccf1dde56}{sampler}};}
+\DoxyCodeLine{00363\ \}\ \mbox{\hyperlink{structvulkan__texture__data}{vulkan\_texture\_data}};}
+
+\end{DoxyCode}

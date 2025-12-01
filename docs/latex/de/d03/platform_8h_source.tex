@@ -1,0 +1,33 @@
+\doxysection{platform.\+h}
+\hypertarget{platform_8h_source}{}\label{platform_8h_source}\index{engine/src/platform/platform.h@{engine/src/platform/platform.h}}
+\mbox{\hyperlink{platform_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structplatform__state}{platform\_state}}\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structplatform__state_ac902a69fe12cf6868862aad5a57b15d5}{internal\_state}};}
+\DoxyCodeLine{00007\ \}\ \mbox{\hyperlink{structplatform__state}{platform\_state}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{platform_8h_a1557f29064029f8b437d0fbcc587ebbd}{platform\_startup}}(\mbox{\hyperlink{structplatform__state}{platform\_state}}\ *plat\_state,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *application\_name,}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ x,\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ y,\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ width,\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ height);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{platform_8h_a7fe7553c63bc948e2ee04d15597d6ccd}{platform\_shutdown}}(\mbox{\hyperlink{structplatform__state}{platform\_state}}\ *plat\_state);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{platform_8h_af47d0fad6d6e686e1e0f668c95b1c201}{platform\_pump\_messages}}(\mbox{\hyperlink{structplatform__state}{platform\_state}}\ *plat\_state);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{platform_8h_a19df473ff145c8579c4c838d5bc67372}{platform\_allocate}}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ size,\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ aligned);}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{platform_8h_a0b638fcfa31e0704eb976a8662c095f2}{platform\_free}}(\textcolor{keywordtype}{void}\ *block,\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ aligned);}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{platform_8h_a59e03b207e95523b84692ea7f68e4654}{platform\_zero\_memory}}(\textcolor{keywordtype}{void}\ *block,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ size);}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{platform_8h_a15258bb22b902725b1fbf405463ed07d}{platform\_copy\_memory}}(\textcolor{keywordtype}{void}\ *dest,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *source,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ size);}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{platform_8h_aa65146de20a7fd23870d3809834021b7}{platform\_set\_memory}}(\textcolor{keywordtype}{void}\ *dest,\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ value,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ size);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{platform_8h_ac352c68fed21ee19eff9a165d1648c4c}{platform\_console\_write}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *message,\ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ colour);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{platform_8h_adee3e77de1e3374a118e9ebc150c9800}{platform\_console\_write\_error}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *message,\ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ colour);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}}\ \mbox{\hyperlink{platform_8h_af38f532e572a9da41eaad4be29a58ada}{platform\_get\_absolute\_time}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{platform_8h_ae21676dfd997b1c6dd9c06f69b5618e4}{platform\_sleep}}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ ms);}
+
+\end{DoxyCode}

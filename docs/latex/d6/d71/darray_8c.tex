@@ -1,0 +1,206 @@
+\doxysection{engine/src/containers/darray.c File Reference}
+\hypertarget{darray_8c}{}\label{darray_8c}\index{engine/src/containers/darray.c@{engine/src/containers/darray.c}}
+{\ttfamily \#include "{}containers/darray.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}core/logger.\+h"{}}\newline
+{\ttfamily \#include "{}core/utils.\+h"{}}\newline
+Include dependency graph for darray.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d9a/darray_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{darray_8c_afeedbfc73b73afde4c0bf2a889305108}{\+\_\+darray\+\_\+create}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} length, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} stride)
+\item 
+void \mbox{\hyperlink{darray_8c_a2fe5e3c2494168523cb08a62a1cef3f0}{\+\_\+darray\+\_\+destroy}} (void \texorpdfstring{$\ast$}{*}array)
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{darray_8c_a3458495487a9f5e51f624d66a5f16c4d}{\+\_\+darray\+\_\+field\+\_\+get}} (void \texorpdfstring{$\ast$}{*}array, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} field)
+\item 
+void \mbox{\hyperlink{darray_8c_a9a04e308cbc0cb796826f971f77af0b5}{\+\_\+darray\+\_\+field\+\_\+set}} (void \texorpdfstring{$\ast$}{*}array, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} field, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} value)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{darray_8c_a32f03c35518f90b8cc0ba0f4127d6bd7}{\+\_\+darray\+\_\+resize}} (void \texorpdfstring{$\ast$}{*}array)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{darray_8c_ad0d43d106169b005a03bd36f0ac6a740}{\+\_\+darray\+\_\+push}} (void \texorpdfstring{$\ast$}{*}array, const void \texorpdfstring{$\ast$}{*}value\+\_\+ptr)
+\item 
+void \mbox{\hyperlink{darray_8c_a3a7dbd27efedf1cd383a5c8cb5740998}{\+\_\+darray\+\_\+pop}} (void \texorpdfstring{$\ast$}{*}array, void \texorpdfstring{$\ast$}{*}dest)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{darray_8c_ac54164054897a40203bab67d2d3a9250}{\+\_\+darray\+\_\+pop\+\_\+at}} (void \texorpdfstring{$\ast$}{*}array, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} index, void \texorpdfstring{$\ast$}{*}dest)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{darray_8c_abfb21e49debe3371395864fa7f3d0b6e}{\+\_\+darray\+\_\+insert\+\_\+at}} (void \texorpdfstring{$\ast$}{*}array, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} index, void \texorpdfstring{$\ast$}{*}value\+\_\+ptr)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{darray_8c_a85eb6a56de2ecc3ad7ac9854406ee9db}{\+\_\+darray\+\_\+reserve\+\_\+on}} (void \texorpdfstring{$\ast$}{*}array, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} count\+\_\+to\+\_\+add)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{darray_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{darray_8c_afeedbfc73b73afde4c0bf2a889305108}\index{darray.c@{darray.c}!\_darray\_create@{\_darray\_create}}
+\index{\_darray\_create@{\_darray\_create}!darray.c@{darray.c}}
+\doxysubsubsection{\texorpdfstring{\_darray\_create()}{\_darray\_create()}}
+{\footnotesize\ttfamily \label{darray_8c_afeedbfc73b73afde4c0bf2a889305108} 
+void \texorpdfstring{$\ast$}{*} \+\_\+darray\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{length}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{stride}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d71/darray_8c_afeedbfc73b73afde4c0bf2a889305108_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d71/darray_8c_afeedbfc73b73afde4c0bf2a889305108_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{darray_8c_a2fe5e3c2494168523cb08a62a1cef3f0}\index{darray.c@{darray.c}!\_darray\_destroy@{\_darray\_destroy}}
+\index{\_darray\_destroy@{\_darray\_destroy}!darray.c@{darray.c}}
+\doxysubsubsection{\texorpdfstring{\_darray\_destroy()}{\_darray\_destroy()}}
+{\footnotesize\ttfamily \label{darray_8c_a2fe5e3c2494168523cb08a62a1cef3f0} 
+void \+\_\+darray\+\_\+destroy (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{array}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d71/darray_8c_a2fe5e3c2494168523cb08a62a1cef3f0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d71/darray_8c_a2fe5e3c2494168523cb08a62a1cef3f0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{darray_8c_a3458495487a9f5e51f624d66a5f16c4d}\index{darray.c@{darray.c}!\_darray\_field\_get@{\_darray\_field\_get}}
+\index{\_darray\_field\_get@{\_darray\_field\_get}!darray.c@{darray.c}}
+\doxysubsubsection{\texorpdfstring{\_darray\_field\_get()}{\_darray\_field\_get()}}
+{\footnotesize\ttfamily \label{darray_8c_a3458495487a9f5e51f624d66a5f16c4d} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \+\_\+darray\+\_\+field\+\_\+get (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{array}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{field}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{d6/d71/darray_8c_a3458495487a9f5e51f624d66a5f16c4d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{darray_8c_a9a04e308cbc0cb796826f971f77af0b5}\index{darray.c@{darray.c}!\_darray\_field\_set@{\_darray\_field\_set}}
+\index{\_darray\_field\_set@{\_darray\_field\_set}!darray.c@{darray.c}}
+\doxysubsubsection{\texorpdfstring{\_darray\_field\_set()}{\_darray\_field\_set()}}
+{\footnotesize\ttfamily \label{darray_8c_a9a04e308cbc0cb796826f971f77af0b5} 
+void \+\_\+darray\+\_\+field\+\_\+set (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{array}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{field}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{value}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d71/darray_8c_a9a04e308cbc0cb796826f971f77af0b5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{darray_8c_abfb21e49debe3371395864fa7f3d0b6e}\index{darray.c@{darray.c}!\_darray\_insert\_at@{\_darray\_insert\_at}}
+\index{\_darray\_insert\_at@{\_darray\_insert\_at}!darray.c@{darray.c}}
+\doxysubsubsection{\texorpdfstring{\_darray\_insert\_at()}{\_darray\_insert\_at()}}
+{\footnotesize\ttfamily \label{darray_8c_abfb21e49debe3371395864fa7f3d0b6e} 
+void \texorpdfstring{$\ast$}{*} \+\_\+darray\+\_\+insert\+\_\+at (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{array}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{index}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{value\+\_\+ptr}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d71/darray_8c_abfb21e49debe3371395864fa7f3d0b6e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{darray_8c_a3a7dbd27efedf1cd383a5c8cb5740998}\index{darray.c@{darray.c}!\_darray\_pop@{\_darray\_pop}}
+\index{\_darray\_pop@{\_darray\_pop}!darray.c@{darray.c}}
+\doxysubsubsection{\texorpdfstring{\_darray\_pop()}{\_darray\_pop()}}
+{\footnotesize\ttfamily \label{darray_8c_a3a7dbd27efedf1cd383a5c8cb5740998} 
+void \+\_\+darray\+\_\+pop (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{array}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{dest}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d71/darray_8c_a3a7dbd27efedf1cd383a5c8cb5740998_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{darray_8c_ac54164054897a40203bab67d2d3a9250}\index{darray.c@{darray.c}!\_darray\_pop\_at@{\_darray\_pop\_at}}
+\index{\_darray\_pop\_at@{\_darray\_pop\_at}!darray.c@{darray.c}}
+\doxysubsubsection{\texorpdfstring{\_darray\_pop\_at()}{\_darray\_pop\_at()}}
+{\footnotesize\ttfamily \label{darray_8c_ac54164054897a40203bab67d2d3a9250} 
+void \texorpdfstring{$\ast$}{*} \+\_\+darray\+\_\+pop\+\_\+at (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{array}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{index}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{dest}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d71/darray_8c_ac54164054897a40203bab67d2d3a9250_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{darray_8c_ad0d43d106169b005a03bd36f0ac6a740}\index{darray.c@{darray.c}!\_darray\_push@{\_darray\_push}}
+\index{\_darray\_push@{\_darray\_push}!darray.c@{darray.c}}
+\doxysubsubsection{\texorpdfstring{\_darray\_push()}{\_darray\_push()}}
+{\footnotesize\ttfamily \label{darray_8c_ad0d43d106169b005a03bd36f0ac6a740} 
+void \texorpdfstring{$\ast$}{*} \+\_\+darray\+\_\+push (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{array}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{value\+\_\+ptr}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d71/darray_8c_ad0d43d106169b005a03bd36f0ac6a740_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{darray_8c_a85eb6a56de2ecc3ad7ac9854406ee9db}\index{darray.c@{darray.c}!\_darray\_reserve\_on@{\_darray\_reserve\_on}}
+\index{\_darray\_reserve\_on@{\_darray\_reserve\_on}!darray.c@{darray.c}}
+\doxysubsubsection{\texorpdfstring{\_darray\_reserve\_on()}{\_darray\_reserve\_on()}}
+{\footnotesize\ttfamily \label{darray_8c_a85eb6a56de2ecc3ad7ac9854406ee9db} 
+void \texorpdfstring{$\ast$}{*} \+\_\+darray\+\_\+reserve\+\_\+on (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{array}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{count\+\_\+to\+\_\+add}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d71/darray_8c_a85eb6a56de2ecc3ad7ac9854406ee9db_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{darray_8c_a32f03c35518f90b8cc0ba0f4127d6bd7}\index{darray.c@{darray.c}!\_darray\_resize@{\_darray\_resize}}
+\index{\_darray\_resize@{\_darray\_resize}!darray.c@{darray.c}}
+\doxysubsubsection{\texorpdfstring{\_darray\_resize()}{\_darray\_resize()}}
+{\footnotesize\ttfamily \label{darray_8c_a32f03c35518f90b8cc0ba0f4127d6bd7} 
+void \texorpdfstring{$\ast$}{*} \+\_\+darray\+\_\+resize (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{array}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d71/darray_8c_a32f03c35518f90b8cc0ba0f4127d6bd7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{d6/d71/darray_8c_a32f03c35518f90b8cc0ba0f4127d6bd7_icgraph}
+\end{center}
+\end{figure}

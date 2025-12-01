@@ -1,0 +1,7 @@
+<map id="freelist_allocate_block" name="freelist_allocate_block">
+<area shape="rect" id="Node000001" title="Attempts to find a allocate block of memory given the size." alt="" coords="5,32,174,60"/>
+<area shape="rect" id="Node000002" href="$da/d3f/freelist_8c.html#a1ce834d1bd9f9caf272e6d63aa00deb8" title="Obtains the amount of free space within the freelist." alt="" coords="222,5,367,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,32,209,30,204,31,175,37"/>
+<area shape="rect" id="Node000003" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="245,57,344,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,54,232,63,227,63,174,59"/>
+</map>

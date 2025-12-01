@@ -1,0 +1,11 @@
+<map id="vulkan_renderer_destroy_material" name="vulkan_renderer_destroy_material">
+<area shape="rect" id="Node000001" title=" " alt="" coords="718,5,900,50"/>
+<area shape="rect" id="Node000002" href="$d4/d7f/renderer__backend_8c.html#ae259faf752d8672193dc31ec72ab2754" title=" " alt="" coords="484,14,670,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="700,28,670,30,670,25,705,28"/>
+<area shape="rect" id="Node000003" href="$d0/dcc/renderer__frontend_8c.html#a389fec0dabe6589332ed60bb427aaaef" title=" " alt="" coords="297,14,436,42"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="466,28,437,30,437,25,471,28"/>
+<area shape="rect" id="Node000004" href="$d4/d8b/application_8c.html#a2ce02f6d4bd01f2d130aef9cd460cf6a" title=" " alt="" coords="108,14,249,42"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="279,28,249,30,249,25,284,28"/>
+<area shape="rect" id="Node000005" href="$d1/dc6/entry_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,14,60,42"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="89,29,60,30,60,25,94,27"/>
+</map>

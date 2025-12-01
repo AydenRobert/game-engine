@@ -1,0 +1,1648 @@
+\doxysection{engine/src/math/kmath.h File Reference}
+\hypertarget{kmath_8h}{}\label{kmath_8h}\index{engine/src/math/kmath.h@{engine/src/math/kmath.h}}
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}math/math\+\_\+types.\+h"{}}\newline
+Include dependency graph for kmath.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{da/dd7/kmath_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d45/kmath_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{kmath_8h_a7f5d931d5fbaeacdfc2efacf4175b298}{K\+\_\+\+PI}}~3.\+14159265358979323846f
+\item 
+\#define \mbox{\hyperlink{kmath_8h_a45f622ca30303f8ed862638d57fedf0a}{K\+\_\+\+PI\+\_\+2}}~2.\+0f \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kmath_8h_a7f5d931d5fbaeacdfc2efacf4175b298}{K\+\_\+\+PI}}
+\item 
+\#define \mbox{\hyperlink{kmath_8h_a02134672035233d95f1edd0bb0c382ae}{K\+\_\+\+HALF\+\_\+\+PI}}~0.\+5f \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kmath_8h_a7f5d931d5fbaeacdfc2efacf4175b298}{K\+\_\+\+PI}}
+\item 
+\#define \mbox{\hyperlink{kmath_8h_aeac36df1b0a06da7676d6e6224cbc009}{K\+\_\+\+QUATER\+\_\+\+PI}}~0.\+25f \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kmath_8h_a7f5d931d5fbaeacdfc2efacf4175b298}{K\+\_\+\+PI}}
+\item 
+\#define \mbox{\hyperlink{kmath_8h_a5d2c3c88aa7f872a07fd6f099acaf89a}{K\+\_\+\+ONE\+\_\+\+ON\+\_\+\+PI}}~1.\+0f / \mbox{\hyperlink{kmath_8h_a7f5d931d5fbaeacdfc2efacf4175b298}{K\+\_\+\+PI}}
+\item 
+\#define \mbox{\hyperlink{kmath_8h_a20a587e19e29b511c0b52bfba1cbfc26}{K\+\_\+\+ONE\+\_\+\+ON\+\_\+\+TWO\+\_\+\+PI}}~1.\+0f / \mbox{\hyperlink{kmath_8h_a45f622ca30303f8ed862638d57fedf0a}{K\+\_\+\+PI\+\_\+2}}
+\item 
+\#define \mbox{\hyperlink{kmath_8h_a9d923338da950759eb18cc4c9a39faab}{K\+\_\+\+SQRT\+\_\+\+TWO}}~1.\+41421356237309504880f
+\item 
+\#define \mbox{\hyperlink{kmath_8h_a3e6e381628a2f54a84e8f5787d7971f0}{K\+\_\+\+SQRT\+\_\+\+THREE}}~1.\+73205080756887729352f
+\item 
+\#define \mbox{\hyperlink{kmath_8h_a7c5417c8f8e6db5d7dd01f60e990d9d5}{K\+\_\+\+ONE\+\_\+\+ON\+\_\+\+SQRT\+\_\+\+TWO}}~0.\+70710678118654752440f
+\item 
+\#define \mbox{\hyperlink{kmath_8h_a3e37678592d0d822ef060ee9f1b8759c}{K\+\_\+\+ONE\+\_\+\+ON\+\_\+\+SQRT\+\_\+\+THREE}}~0.\+70710678118654752440f
+\item 
+\#define \mbox{\hyperlink{kmath_8h_af73c861aee209d7a51976054ed95c728}{K\+\_\+\+DEG2\+RAD\+\_\+\+MULTIPLIER}}~\mbox{\hyperlink{kmath_8h_a7f5d931d5fbaeacdfc2efacf4175b298}{K\+\_\+\+PI}} / 180.\+0f
+\item 
+\#define \mbox{\hyperlink{kmath_8h_a6fff701491f7e004d35e934bc9989dfc}{K\+\_\+\+RAD2\+DEG\+\_\+\+MULTIPLIER}}~180.\+0f / \mbox{\hyperlink{kmath_8h_a7f5d931d5fbaeacdfc2efacf4175b298}{K\+\_\+\+PI}}
+\item 
+\#define \mbox{\hyperlink{kmath_8h_a1b538e8681dbbbc88380448a4218f487}{K\+\_\+\+SEC\+\_\+\+TO\+\_\+\+MS\+\_\+\+MULTIPLIER}}~1000.\+0f
+\item 
+\#define \mbox{\hyperlink{kmath_8h_a53a16ca764ffe90416d3508503cd5dcc}{K\+\_\+\+MS\+\_\+\+TO\+\_\+\+SEC\+\_\+\+MULTIPLIER}}~0.\+001f
+\item 
+\#define \mbox{\hyperlink{kmath_8h_a49ab2dae67aa42d2c428ed546a956fad}{K\+\_\+\+INFINITY}}~1e30f
+\item 
+\#define \mbox{\hyperlink{kmath_8h_aab9335b299111e8e7b143806fc9aff1b}{K\+\_\+\+FLOAT\+\_\+\+EPSILON}}~1.\+192092896e-\/07f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a4a89f4dff6daae5dd77b89ba6a3ecea2}{ksin}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} x)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a8cf427c73ea32b031ff5a5143d12c2f6}{kcos}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} x)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a2e33ecd9e2f3ccc5d27beab90460aa68}{ktan}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} x)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a1e60b4d5894e0d3d0d5146f3fc34f74c}{kacos}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} x)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a44537c51868208d3bcfec4fe46db9bf4}{ksqrt}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} x)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a4b012fd8b1c6c54b70711ebaa00fd313}{kabs}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} x)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kmath_8h_a1ec4cdc2796ca68caff6f8cbbbbfb943}{is\+\_\+power\+\_\+of\+\_\+two}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} value)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \mbox{\hyperlink{kmath_8h_ac54ae2728db0c39d2ccdea1e7c4029e9}{krandom}} ()
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \mbox{\hyperlink{kmath_8h_a1a4d8b8004d8fc7a55f7f73af084ca71}{krandom\+\_\+in\+\_\+range}} (\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} min, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} max)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a33c8bf2ec771d7e80f00b743fea5eee3}{fkrandom}} ()
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a9a3fb3ff33bed50622e745a131a7b8f3}{fkrandom\+\_\+in\+\_\+range}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} min, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} max)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \mbox{\hyperlink{kmath_8h_a6f29d371788f0220f0b6c56846007060}{vec2\+\_\+create}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} x, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} y)
+\begin{DoxyCompactList}\small\item\em Creates and returns a new 2-\/element vector using the supplied values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \mbox{\hyperlink{kmath_8h_a120d0a402b1f804936f6ff2990d33977}{vec2\+\_\+zero}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \mbox{\hyperlink{kmath_8h_a6c033661c0b130a5b6581a9485ce46c6}{vec2\+\_\+one}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \mbox{\hyperlink{kmath_8h_a909f620dd55a39706629c807d95a07fe}{vec2\+\_\+up}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \mbox{\hyperlink{kmath_8h_a420ab6e09304c682098a0b8b4be0fd46}{vec2\+\_\+down}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \mbox{\hyperlink{kmath_8h_aa4983bb0ed9c3478c3816c54ff548d78}{vec2\+\_\+left}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \mbox{\hyperlink{kmath_8h_a09c8c5126889a8eb45a41feb562bc557}{vec2\+\_\+right}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \mbox{\hyperlink{kmath_8h_a9e871c9751334834a6a25838de7899ef}{vec2\+\_\+add}} (\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \mbox{\hyperlink{kmath_8h_a4a30dd577dc66941481a9baa1ab96762}{vec2\+\_\+sub}} (\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \mbox{\hyperlink{kmath_8h_a0a083799fc999c95a48f147c03bbc9dd}{vec2\+\_\+mul}} (\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \mbox{\hyperlink{kmath_8h_a96adbc3440fca4699b1682f957c84b81}{vec2\+\_\+div}} (\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a6c4712a477c5647ec154bb80d2c9da56}{vec2\+\_\+len\+\_\+squared}} (\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vector)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_abf4a0114d66be7ae157ab037bf033136}{vec2\+\_\+len}} (\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vector)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} void \mbox{\hyperlink{kmath_8h_a584b3deab3dad909b4d3eb5b48e1330b}{vec2\+\_\+normalize}} (\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \texorpdfstring{$\ast$}{*}vector)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \mbox{\hyperlink{kmath_8h_a877c74c4bca40f8e6f8d5f543fb8ab8d}{vec2\+\_\+normalized}} (\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vector)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kmath_8h_abfad392b89bf545b932681273bcedb93}{vec2\+\_\+compare}} (\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vector\+\_\+1, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} tolerance)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a3ae2118c4d684b5c2783010cce5d88eb}{vec2\+\_\+distance}} (\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_a8d6cf2e1120a73e329873a0b74e77762}{vec3\+\_\+create}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} x, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} y, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} z)
+\begin{DoxyCompactList}\small\item\em Creates and returns a new 2-\/element vector using the supplied values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \mbox{\hyperlink{kmath_8h_a2aa8360104549585394c7346ddb5280e}{vec3\+\_\+to\+\_\+vec4}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} w)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_a396247a1d1147edbade06360f4559ac9}{vec3\+\_\+zero}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_addaff49488443ab38ec8c6a7ee79cdca}{vec3\+\_\+one}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_a1f7b5fa8b8d6785dbd6d0de6b495b163}{vec3\+\_\+up}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_aa06a1e58a9bbaa0225177126b9ec2b83}{vec3\+\_\+down}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_a364fe49aca271df4e2e5d64a8dd24695}{vec3\+\_\+left}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_a05eb2a8005d1aebb1e3826d6e8288da5}{vec3\+\_\+right}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_a6047e365b7b8b00aead49ca23faf8aa6}{vec3\+\_\+forward}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_ab0816e07e66ef8b76e02beceb12b2c42}{vec3\+\_\+backward}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_af5ba7bfb8431051fed6d59cd8a2815b6}{vec3\+\_\+add}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_a5e6a1233b235e6a2b3475ae4d11487f6}{vec3\+\_\+sub}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_a58692264e7e4d1d381017777e6b1e564}{vec3\+\_\+mul}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_aef4556b55423de586900d6ff2a9c2d4a}{vec3\+\_\+div}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_a81ba3ed9043287a8d285b773fbbd0eda}{vec3\+\_\+mul\+\_\+scalar}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+0, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} value)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_ac7825b4b417b34eccaf811fd737ee052}{vec3\+\_\+len\+\_\+squared}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_acbdb6afe5697ca4833089800c0ac7376}{vec3\+\_\+len}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} void \mbox{\hyperlink{kmath_8h_a913dca8151840c5998928a08cc62ede8}{vec3\+\_\+normalize}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \texorpdfstring{$\ast$}{*}vector)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_afa02e969b26ee5ec59dfdb940cbe59a1}{vec3\+\_\+normalized}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_aeb170789dffdc30aac43810bb2ba6285}{vec3\+\_\+dot}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_a0774bf6691b0034bae06d4ccd916666f}{vec3\+\_\+cross}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kmath_8h_adac3f96c683ee15e2e7b7656db9ea1b3}{vec3\+\_\+compare}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+1, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} tolerance)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_aec3419c4f157e67ef4ec0401afc78995}{vec3\+\_\+distance}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \mbox{\hyperlink{kmath_8h_ab198faa792ecd191daeec7438afc3d1e}{vec4\+\_\+create}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} x, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} y, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} z, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} w)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_acfbdb50c55d21d3805c75cd7e43a1f7a}{vec4\+\_\+to\+\_\+vec3}} (\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vector)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \mbox{\hyperlink{kmath_8h_a0d0477623bcf0cd6972386e8cdc6555a}{vec4\+\_\+zero}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \mbox{\hyperlink{kmath_8h_a4b54896480357d67259f94d532e050dd}{vec4\+\_\+one}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \mbox{\hyperlink{kmath_8h_a7dbcee31ab2e7b1d6cdd530424d1c9da}{vec4\+\_\+add}} (\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \mbox{\hyperlink{kmath_8h_ad8d77f05491babcef8aab13dd4379048}{vec4\+\_\+sub}} (\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \mbox{\hyperlink{kmath_8h_a7c7c4c944dc7b6933a55831bf4cb86c3}{vec4\+\_\+mul}} (\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \mbox{\hyperlink{kmath_8h_a191991839d113a3e246519940cbd6a4b}{vec4\+\_\+div}} (\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vector\+\_\+0, \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vector\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_ab4362549c51f7c871d8ba6b639cc3a96}{vec4\+\_\+len\+\_\+squared}} (\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vector)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a40e8e2e66089ce2b25a0def6b3b6c5bf}{vec4\+\_\+len}} (\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vector)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} void \mbox{\hyperlink{kmath_8h_a4790d435ea6da1e159455e328e16106c}{vec4\+\_\+normalize}} (\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \texorpdfstring{$\ast$}{*}vector)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \mbox{\hyperlink{kmath_8h_a877b390488cdca316999ee4519348cfb}{vec4\+\_\+normalized}} (\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vector)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a46b41e60e81425ee0f14e0089bc95cc5}{vec4\+\_\+dot\+\_\+f32}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} a0, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} a1, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} a2, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} a3, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} b0, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} b1, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} b2, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} b3)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{kmath_8h_a2675d196b9d5b9b2c0b72c5f0c2fdf5c}{mat4\+\_\+identity}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{kmath_8h_a0d06fd21ae39e16bc48de99578328188}{mat4\+\_\+mul}} (\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} matrix\+\_\+0, \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} matrix\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{kmath_8h_a5b39e299ada558fde3b8d8af028a20df}{mat4\+\_\+orthographic}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} left, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} right, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} bottom, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} top, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} near\+\_\+clip, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} far\+\_\+clip)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{kmath_8h_a30c4e8b0b3a75b70a4a8efb9a51f80ed}{mat4\+\_\+perspective}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} fov\+\_\+radians, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} aspect\+\_\+ratio, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} near\+\_\+clip, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} far\+\_\+clip)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{kmath_8h_a418ca422b663a75a98608a4ffa4dec90}{mat4\+\_\+look\+\_\+at}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} position, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} target, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} up)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{kmath_8h_aa6eaf974256cb040ca82bf256a1069d8}{mat4\+\_\+transposed}} (\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} matrix)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{kmath_8h_a02adc5ee631689aa95583db1b76a3f56}{mat4\+\_\+inverse}} (\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} matrix)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{kmath_8h_a209b073522143126e4b91d7b524b54f8}{mat4\+\_\+translation}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} position)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{kmath_8h_a4b36f4568d28ccdb865d067ff1516f34}{mat4\+\_\+scale}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} scale)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{kmath_8h_a848df656ed8ecaed76f7036c18455809}{mat4\+\_\+euler\+\_\+x}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} angle\+\_\+radians)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{kmath_8h_a9e917d00193efed2fe4288325cb737e2}{mat4\+\_\+euler\+\_\+y}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} angle\+\_\+radians)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{kmath_8h_aafeeb5341c5a2734d85d3f0a8c23c64d}{mat4\+\_\+euler\+\_\+z}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} angle\+\_\+radians)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{kmath_8h_ac5bcb54687a6d3d95078c9f29a7e057d}{mat4\+\_\+euler\+\_\+xyz}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} x\+\_\+radians, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} y\+\_\+radians, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} z\+\_\+radians)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_abb2c360e549e1b2cffcb5f6853eddada}{mat4\+\_\+forward}} (\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} matrix)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_a5462f2644541bc3a7a600ca6a036b40c}{mat4\+\_\+backward}} (\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} matrix)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_ac9b253d8bb55821c81b4a97b6bf9216a}{mat4\+\_\+up}} (\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} matrix)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_a928424d34db0f688d8ae97f779062326}{mat4\+\_\+down}} (\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} matrix)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_a761e98470ad456f3a58231c2dd6e8169}{mat4\+\_\+left}} (\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} matrix)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{kmath_8h_a447e7a652833758d115184953454a016}{mat4\+\_\+right}} (\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} matrix)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} \mbox{\hyperlink{kmath_8h_a6edab62f710b9718c0590664774b1845}{quat\+\_\+identity}} ()
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a988ae268cd1fcd9e3cf6f37425e396ae}{quat\+\_\+normal}} (\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} q)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} \mbox{\hyperlink{kmath_8h_a80f41015fc07b514f4fedc2d76157e11}{quat\+\_\+normalize}} (\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} q)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} \mbox{\hyperlink{kmath_8h_a07c8b0a7152d96143691ca040b8c0d23}{quat\+\_\+conjugate}} (\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} q)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} \mbox{\hyperlink{kmath_8h_a5c05ed1e69ca8563590cc8718fca5435}{quat\+\_\+inverse}} (\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} q)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} \mbox{\hyperlink{kmath_8h_aac6db5c9028952d279408093822b4cbd}{quat\+\_\+mul}} (\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} q\+\_\+0, \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} q\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a8a93afbc27ca642569857bd4a766f27b}{quat\+\_\+dot}} (\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} q\+\_\+0, \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} q\+\_\+1)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{kmath_8h_ac84936abc187f178a2228f699a5b5a9d}{quat\+\_\+to\+\_\+mat4}} (\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} q)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{kmath_8h_a70c81ca5e2bcb020031dc593c9969609}{quat\+\_\+to\+\_\+rotation\+\_\+matrix}} (\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} q, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} center)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} \mbox{\hyperlink{kmath_8h_adfcab382a3cbf4493982e93fda95e257}{quat\+\_\+from\+\_\+axis\+\_\+angle}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} axis, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} angle, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} normalize)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} \mbox{\hyperlink{kmath_8h_aef737c7e466f76a8e93d4a8ee72d9b3a}{quat\+\_\+slerp}} (\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} q\+\_\+0, \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} q\+\_\+1, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} percentage)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a76ea75291e734d0f411531c2edabef88}{deg\+\_\+to\+\_\+rad}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} degrees)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{kmath_8h_a41bbafc6f8b506c632942fb30e1175c0}{rad\+\_\+to\+\_\+deg}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} degrees)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{kmath_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{kmath_8h_af73c861aee209d7a51976054ed95c728}\index{kmath.h@{kmath.h}!K\_DEG2RAD\_MULTIPLIER@{K\_DEG2RAD\_MULTIPLIER}}
+\index{K\_DEG2RAD\_MULTIPLIER@{K\_DEG2RAD\_MULTIPLIER}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_DEG2RAD\_MULTIPLIER}{K\_DEG2RAD\_MULTIPLIER}}
+{\footnotesize\ttfamily \label{kmath_8h_af73c861aee209d7a51976054ed95c728} 
+\#define K\+\_\+\+DEG2\+RAD\+\_\+\+MULTIPLIER~\mbox{\hyperlink{kmath_8h_a7f5d931d5fbaeacdfc2efacf4175b298}{K\+\_\+\+PI}} / 180.\+0f}
+
+\Hypertarget{kmath_8h_aab9335b299111e8e7b143806fc9aff1b}\index{kmath.h@{kmath.h}!K\_FLOAT\_EPSILON@{K\_FLOAT\_EPSILON}}
+\index{K\_FLOAT\_EPSILON@{K\_FLOAT\_EPSILON}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_FLOAT\_EPSILON}{K\_FLOAT\_EPSILON}}
+{\footnotesize\ttfamily \label{kmath_8h_aab9335b299111e8e7b143806fc9aff1b} 
+\#define K\+\_\+\+FLOAT\+\_\+\+EPSILON~1.\+192092896e-\/07f}
+
+\Hypertarget{kmath_8h_a02134672035233d95f1edd0bb0c382ae}\index{kmath.h@{kmath.h}!K\_HALF\_PI@{K\_HALF\_PI}}
+\index{K\_HALF\_PI@{K\_HALF\_PI}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_HALF\_PI}{K\_HALF\_PI}}
+{\footnotesize\ttfamily \label{kmath_8h_a02134672035233d95f1edd0bb0c382ae} 
+\#define K\+\_\+\+HALF\+\_\+\+PI~0.\+5f \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kmath_8h_a7f5d931d5fbaeacdfc2efacf4175b298}{K\+\_\+\+PI}}}
+
+\Hypertarget{kmath_8h_a49ab2dae67aa42d2c428ed546a956fad}\index{kmath.h@{kmath.h}!K\_INFINITY@{K\_INFINITY}}
+\index{K\_INFINITY@{K\_INFINITY}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_INFINITY}{K\_INFINITY}}
+{\footnotesize\ttfamily \label{kmath_8h_a49ab2dae67aa42d2c428ed546a956fad} 
+\#define K\+\_\+\+INFINITY~1e30f}
+
+\Hypertarget{kmath_8h_a53a16ca764ffe90416d3508503cd5dcc}\index{kmath.h@{kmath.h}!K\_MS\_TO\_SEC\_MULTIPLIER@{K\_MS\_TO\_SEC\_MULTIPLIER}}
+\index{K\_MS\_TO\_SEC\_MULTIPLIER@{K\_MS\_TO\_SEC\_MULTIPLIER}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_MS\_TO\_SEC\_MULTIPLIER}{K\_MS\_TO\_SEC\_MULTIPLIER}}
+{\footnotesize\ttfamily \label{kmath_8h_a53a16ca764ffe90416d3508503cd5dcc} 
+\#define K\+\_\+\+MS\+\_\+\+TO\+\_\+\+SEC\+\_\+\+MULTIPLIER~0.\+001f}
+
+\Hypertarget{kmath_8h_a5d2c3c88aa7f872a07fd6f099acaf89a}\index{kmath.h@{kmath.h}!K\_ONE\_ON\_PI@{K\_ONE\_ON\_PI}}
+\index{K\_ONE\_ON\_PI@{K\_ONE\_ON\_PI}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_ONE\_ON\_PI}{K\_ONE\_ON\_PI}}
+{\footnotesize\ttfamily \label{kmath_8h_a5d2c3c88aa7f872a07fd6f099acaf89a} 
+\#define K\+\_\+\+ONE\+\_\+\+ON\+\_\+\+PI~1.\+0f / \mbox{\hyperlink{kmath_8h_a7f5d931d5fbaeacdfc2efacf4175b298}{K\+\_\+\+PI}}}
+
+\Hypertarget{kmath_8h_a3e37678592d0d822ef060ee9f1b8759c}\index{kmath.h@{kmath.h}!K\_ONE\_ON\_SQRT\_THREE@{K\_ONE\_ON\_SQRT\_THREE}}
+\index{K\_ONE\_ON\_SQRT\_THREE@{K\_ONE\_ON\_SQRT\_THREE}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_ONE\_ON\_SQRT\_THREE}{K\_ONE\_ON\_SQRT\_THREE}}
+{\footnotesize\ttfamily \label{kmath_8h_a3e37678592d0d822ef060ee9f1b8759c} 
+\#define K\+\_\+\+ONE\+\_\+\+ON\+\_\+\+SQRT\+\_\+\+THREE~0.\+70710678118654752440f}
+
+\Hypertarget{kmath_8h_a7c5417c8f8e6db5d7dd01f60e990d9d5}\index{kmath.h@{kmath.h}!K\_ONE\_ON\_SQRT\_TWO@{K\_ONE\_ON\_SQRT\_TWO}}
+\index{K\_ONE\_ON\_SQRT\_TWO@{K\_ONE\_ON\_SQRT\_TWO}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_ONE\_ON\_SQRT\_TWO}{K\_ONE\_ON\_SQRT\_TWO}}
+{\footnotesize\ttfamily \label{kmath_8h_a7c5417c8f8e6db5d7dd01f60e990d9d5} 
+\#define K\+\_\+\+ONE\+\_\+\+ON\+\_\+\+SQRT\+\_\+\+TWO~0.\+70710678118654752440f}
+
+\Hypertarget{kmath_8h_a20a587e19e29b511c0b52bfba1cbfc26}\index{kmath.h@{kmath.h}!K\_ONE\_ON\_TWO\_PI@{K\_ONE\_ON\_TWO\_PI}}
+\index{K\_ONE\_ON\_TWO\_PI@{K\_ONE\_ON\_TWO\_PI}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_ONE\_ON\_TWO\_PI}{K\_ONE\_ON\_TWO\_PI}}
+{\footnotesize\ttfamily \label{kmath_8h_a20a587e19e29b511c0b52bfba1cbfc26} 
+\#define K\+\_\+\+ONE\+\_\+\+ON\+\_\+\+TWO\+\_\+\+PI~1.\+0f / \mbox{\hyperlink{kmath_8h_a45f622ca30303f8ed862638d57fedf0a}{K\+\_\+\+PI\+\_\+2}}}
+
+\Hypertarget{kmath_8h_a7f5d931d5fbaeacdfc2efacf4175b298}\index{kmath.h@{kmath.h}!K\_PI@{K\_PI}}
+\index{K\_PI@{K\_PI}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_PI}{K\_PI}}
+{\footnotesize\ttfamily \label{kmath_8h_a7f5d931d5fbaeacdfc2efacf4175b298} 
+\#define K\+\_\+\+PI~3.\+14159265358979323846f}
+
+\Hypertarget{kmath_8h_a45f622ca30303f8ed862638d57fedf0a}\index{kmath.h@{kmath.h}!K\_PI\_2@{K\_PI\_2}}
+\index{K\_PI\_2@{K\_PI\_2}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_PI\_2}{K\_PI\_2}}
+{\footnotesize\ttfamily \label{kmath_8h_a45f622ca30303f8ed862638d57fedf0a} 
+\#define K\+\_\+\+PI\+\_\+2~2.\+0f \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kmath_8h_a7f5d931d5fbaeacdfc2efacf4175b298}{K\+\_\+\+PI}}}
+
+\Hypertarget{kmath_8h_aeac36df1b0a06da7676d6e6224cbc009}\index{kmath.h@{kmath.h}!K\_QUATER\_PI@{K\_QUATER\_PI}}
+\index{K\_QUATER\_PI@{K\_QUATER\_PI}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_QUATER\_PI}{K\_QUATER\_PI}}
+{\footnotesize\ttfamily \label{kmath_8h_aeac36df1b0a06da7676d6e6224cbc009} 
+\#define K\+\_\+\+QUATER\+\_\+\+PI~0.\+25f \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kmath_8h_a7f5d931d5fbaeacdfc2efacf4175b298}{K\+\_\+\+PI}}}
+
+\Hypertarget{kmath_8h_a6fff701491f7e004d35e934bc9989dfc}\index{kmath.h@{kmath.h}!K\_RAD2DEG\_MULTIPLIER@{K\_RAD2DEG\_MULTIPLIER}}
+\index{K\_RAD2DEG\_MULTIPLIER@{K\_RAD2DEG\_MULTIPLIER}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_RAD2DEG\_MULTIPLIER}{K\_RAD2DEG\_MULTIPLIER}}
+{\footnotesize\ttfamily \label{kmath_8h_a6fff701491f7e004d35e934bc9989dfc} 
+\#define K\+\_\+\+RAD2\+DEG\+\_\+\+MULTIPLIER~180.\+0f / \mbox{\hyperlink{kmath_8h_a7f5d931d5fbaeacdfc2efacf4175b298}{K\+\_\+\+PI}}}
+
+\Hypertarget{kmath_8h_a1b538e8681dbbbc88380448a4218f487}\index{kmath.h@{kmath.h}!K\_SEC\_TO\_MS\_MULTIPLIER@{K\_SEC\_TO\_MS\_MULTIPLIER}}
+\index{K\_SEC\_TO\_MS\_MULTIPLIER@{K\_SEC\_TO\_MS\_MULTIPLIER}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_SEC\_TO\_MS\_MULTIPLIER}{K\_SEC\_TO\_MS\_MULTIPLIER}}
+{\footnotesize\ttfamily \label{kmath_8h_a1b538e8681dbbbc88380448a4218f487} 
+\#define K\+\_\+\+SEC\+\_\+\+TO\+\_\+\+MS\+\_\+\+MULTIPLIER~1000.\+0f}
+
+\Hypertarget{kmath_8h_a3e6e381628a2f54a84e8f5787d7971f0}\index{kmath.h@{kmath.h}!K\_SQRT\_THREE@{K\_SQRT\_THREE}}
+\index{K\_SQRT\_THREE@{K\_SQRT\_THREE}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_SQRT\_THREE}{K\_SQRT\_THREE}}
+{\footnotesize\ttfamily \label{kmath_8h_a3e6e381628a2f54a84e8f5787d7971f0} 
+\#define K\+\_\+\+SQRT\+\_\+\+THREE~1.\+73205080756887729352f}
+
+\Hypertarget{kmath_8h_a9d923338da950759eb18cc4c9a39faab}\index{kmath.h@{kmath.h}!K\_SQRT\_TWO@{K\_SQRT\_TWO}}
+\index{K\_SQRT\_TWO@{K\_SQRT\_TWO}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{K\_SQRT\_TWO}{K\_SQRT\_TWO}}
+{\footnotesize\ttfamily \label{kmath_8h_a9d923338da950759eb18cc4c9a39faab} 
+\#define K\+\_\+\+SQRT\+\_\+\+TWO~1.\+41421356237309504880f}
+
+
+
+\label{doc-func-members}
+\Hypertarget{kmath_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{kmath_8h_a76ea75291e734d0f411531c2edabef88}\index{kmath.h@{kmath.h}!deg\_to\_rad@{deg\_to\_rad}}
+\index{deg\_to\_rad@{deg\_to\_rad}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{deg\_to\_rad()}{deg\_to\_rad()}}
+{\footnotesize\ttfamily \label{kmath_8h_a76ea75291e734d0f411531c2edabef88} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} deg\+\_\+to\+\_\+rad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{degrees}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a76ea75291e734d0f411531c2edabef88_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a33c8bf2ec771d7e80f00b743fea5eee3}\index{kmath.h@{kmath.h}!fkrandom@{fkrandom}}
+\index{fkrandom@{fkrandom}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{fkrandom()}{fkrandom()}}
+{\footnotesize\ttfamily \label{kmath_8h_a33c8bf2ec771d7e80f00b743fea5eee3} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} fkrandom (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a33c8bf2ec771d7e80f00b743fea5eee3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a9a3fb3ff33bed50622e745a131a7b8f3}\index{kmath.h@{kmath.h}!fkrandom\_in\_range@{fkrandom\_in\_range}}
+\index{fkrandom\_in\_range@{fkrandom\_in\_range}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{fkrandom\_in\_range()}{fkrandom\_in\_range()}}
+{\footnotesize\ttfamily \label{kmath_8h_a9a3fb3ff33bed50622e745a131a7b8f3} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} fkrandom\+\_\+in\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{min}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{max}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a9a3fb3ff33bed50622e745a131a7b8f3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a1ec4cdc2796ca68caff6f8cbbbbfb943}\index{kmath.h@{kmath.h}!is\_power\_of\_two@{is\_power\_of\_two}}
+\index{is\_power\_of\_two@{is\_power\_of\_two}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{is\_power\_of\_two()}{is\_power\_of\_two()}}
+{\footnotesize\ttfamily \label{kmath_8h_a1ec4cdc2796ca68caff6f8cbbbbfb943} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} is\+\_\+power\+\_\+of\+\_\+two (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{value}{}\end{DoxyParamCaption})}
+
+Indicates if the value is a power of 2. 0 indicates that it\textquotesingle{}s not. 
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to be interpreted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a power of 2, otherwise, false. 
+\end{DoxyReturn}
+\Hypertarget{kmath_8h_a4b012fd8b1c6c54b70711ebaa00fd313}\index{kmath.h@{kmath.h}!kabs@{kabs}}
+\index{kabs@{kabs}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{kabs()}{kabs()}}
+{\footnotesize\ttfamily \label{kmath_8h_a4b012fd8b1c6c54b70711ebaa00fd313} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} kabs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{x}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a4b012fd8b1c6c54b70711ebaa00fd313_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a1e60b4d5894e0d3d0d5146f3fc34f74c}\index{kmath.h@{kmath.h}!kacos@{kacos}}
+\index{kacos@{kacos}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{kacos()}{kacos()}}
+{\footnotesize\ttfamily \label{kmath_8h_a1e60b4d5894e0d3d0d5146f3fc34f74c} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} kacos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{x}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{dc/dd0/kmath_8h_a1e60b4d5894e0d3d0d5146f3fc34f74c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a8cf427c73ea32b031ff5a5143d12c2f6}\index{kmath.h@{kmath.h}!kcos@{kcos}}
+\index{kcos@{kcos}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{kcos()}{kcos()}}
+{\footnotesize\ttfamily \label{kmath_8h_a8cf427c73ea32b031ff5a5143d12c2f6} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} kcos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{x}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a8cf427c73ea32b031ff5a5143d12c2f6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_ac54ae2728db0c39d2ccdea1e7c4029e9}\index{kmath.h@{kmath.h}!krandom@{krandom}}
+\index{krandom@{krandom}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{krandom()}{krandom()}}
+{\footnotesize\ttfamily \label{kmath_8h_ac54ae2728db0c39d2ccdea1e7c4029e9} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} krandom (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{dc/dd0/kmath_8h_ac54ae2728db0c39d2ccdea1e7c4029e9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{dc/dd0/kmath_8h_ac54ae2728db0c39d2ccdea1e7c4029e9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a1a4d8b8004d8fc7a55f7f73af084ca71}\index{kmath.h@{kmath.h}!krandom\_in\_range@{krandom\_in\_range}}
+\index{krandom\_in\_range@{krandom\_in\_range}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{krandom\_in\_range()}{krandom\_in\_range()}}
+{\footnotesize\ttfamily \label{kmath_8h_a1a4d8b8004d8fc7a55f7f73af084ca71} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} krandom\+\_\+in\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{min}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{max}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a1a4d8b8004d8fc7a55f7f73af084ca71_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a4a89f4dff6daae5dd77b89ba6a3ecea2}\index{kmath.h@{kmath.h}!ksin@{ksin}}
+\index{ksin@{ksin}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{ksin()}{ksin()}}
+{\footnotesize\ttfamily \label{kmath_8h_a4a89f4dff6daae5dd77b89ba6a3ecea2} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} ksin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{x}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a4a89f4dff6daae5dd77b89ba6a3ecea2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a44537c51868208d3bcfec4fe46db9bf4}\index{kmath.h@{kmath.h}!ksqrt@{ksqrt}}
+\index{ksqrt@{ksqrt}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{ksqrt()}{ksqrt()}}
+{\footnotesize\ttfamily \label{kmath_8h_a44537c51868208d3bcfec4fe46db9bf4} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} ksqrt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{x}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a44537c51868208d3bcfec4fe46db9bf4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a2e33ecd9e2f3ccc5d27beab90460aa68}\index{kmath.h@{kmath.h}!ktan@{ktan}}
+\index{ktan@{ktan}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{ktan()}{ktan()}}
+{\footnotesize\ttfamily \label{kmath_8h_a2e33ecd9e2f3ccc5d27beab90460aa68} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} ktan (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{x}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a2e33ecd9e2f3ccc5d27beab90460aa68_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a5462f2644541bc3a7a600ca6a036b40c}\index{kmath.h@{kmath.h}!mat4\_backward@{mat4\_backward}}
+\index{mat4\_backward@{mat4\_backward}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_backward()}{mat4\_backward()}}
+{\footnotesize\ttfamily \label{kmath_8h_a5462f2644541bc3a7a600ca6a036b40c} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} mat4\+\_\+backward (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{matrix}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a5462f2644541bc3a7a600ca6a036b40c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a5462f2644541bc3a7a600ca6a036b40c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a928424d34db0f688d8ae97f779062326}\index{kmath.h@{kmath.h}!mat4\_down@{mat4\_down}}
+\index{mat4\_down@{mat4\_down}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_down()}{mat4\_down()}}
+{\footnotesize\ttfamily \label{kmath_8h_a928424d34db0f688d8ae97f779062326} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} mat4\+\_\+down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{matrix}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a928424d34db0f688d8ae97f779062326_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a848df656ed8ecaed76f7036c18455809}\index{kmath.h@{kmath.h}!mat4\_euler\_x@{mat4\_euler\_x}}
+\index{mat4\_euler\_x@{mat4\_euler\_x}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_euler\_x()}{mat4\_euler\_x()}}
+{\footnotesize\ttfamily \label{kmath_8h_a848df656ed8ecaed76f7036c18455809} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} mat4\+\_\+euler\+\_\+x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{angle\+\_\+radians}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a848df656ed8ecaed76f7036c18455809_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a848df656ed8ecaed76f7036c18455809_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_ac5bcb54687a6d3d95078c9f29a7e057d}\index{kmath.h@{kmath.h}!mat4\_euler\_xyz@{mat4\_euler\_xyz}}
+\index{mat4\_euler\_xyz@{mat4\_euler\_xyz}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_euler\_xyz()}{mat4\_euler\_xyz()}}
+{\footnotesize\ttfamily \label{kmath_8h_ac5bcb54687a6d3d95078c9f29a7e057d} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} mat4\+\_\+euler\+\_\+xyz (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{x\+\_\+radians}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{y\+\_\+radians}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{z\+\_\+radians}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_ac5bcb54687a6d3d95078c9f29a7e057d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_ac5bcb54687a6d3d95078c9f29a7e057d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a9e917d00193efed2fe4288325cb737e2}\index{kmath.h@{kmath.h}!mat4\_euler\_y@{mat4\_euler\_y}}
+\index{mat4\_euler\_y@{mat4\_euler\_y}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_euler\_y()}{mat4\_euler\_y()}}
+{\footnotesize\ttfamily \label{kmath_8h_a9e917d00193efed2fe4288325cb737e2} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} mat4\+\_\+euler\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{angle\+\_\+radians}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a9e917d00193efed2fe4288325cb737e2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a9e917d00193efed2fe4288325cb737e2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_aafeeb5341c5a2734d85d3f0a8c23c64d}\index{kmath.h@{kmath.h}!mat4\_euler\_z@{mat4\_euler\_z}}
+\index{mat4\_euler\_z@{mat4\_euler\_z}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_euler\_z()}{mat4\_euler\_z()}}
+{\footnotesize\ttfamily \label{kmath_8h_aafeeb5341c5a2734d85d3f0a8c23c64d} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} mat4\+\_\+euler\+\_\+z (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{angle\+\_\+radians}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_aafeeb5341c5a2734d85d3f0a8c23c64d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_aafeeb5341c5a2734d85d3f0a8c23c64d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_abb2c360e549e1b2cffcb5f6853eddada}\index{kmath.h@{kmath.h}!mat4\_forward@{mat4\_forward}}
+\index{mat4\_forward@{mat4\_forward}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_forward()}{mat4\_forward()}}
+{\footnotesize\ttfamily \label{kmath_8h_abb2c360e549e1b2cffcb5f6853eddada} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} mat4\+\_\+forward (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{matrix}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_abb2c360e549e1b2cffcb5f6853eddada_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_abb2c360e549e1b2cffcb5f6853eddada_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a2675d196b9d5b9b2c0b72c5f0c2fdf5c}\index{kmath.h@{kmath.h}!mat4\_identity@{mat4\_identity}}
+\index{mat4\_identity@{mat4\_identity}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_identity()}{mat4\_identity()}}
+{\footnotesize\ttfamily \label{kmath_8h_a2675d196b9d5b9b2c0b72c5f0c2fdf5c} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} mat4\+\_\+identity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a2675d196b9d5b9b2c0b72c5f0c2fdf5c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a2675d196b9d5b9b2c0b72c5f0c2fdf5c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a02adc5ee631689aa95583db1b76a3f56}\index{kmath.h@{kmath.h}!mat4\_inverse@{mat4\_inverse}}
+\index{mat4\_inverse@{mat4\_inverse}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_inverse()}{mat4\_inverse()}}
+{\footnotesize\ttfamily \label{kmath_8h_a02adc5ee631689aa95583db1b76a3f56} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} mat4\+\_\+inverse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{matrix}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a02adc5ee631689aa95583db1b76a3f56_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a761e98470ad456f3a58231c2dd6e8169}\index{kmath.h@{kmath.h}!mat4\_left@{mat4\_left}}
+\index{mat4\_left@{mat4\_left}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_left()}{mat4\_left()}}
+{\footnotesize\ttfamily \label{kmath_8h_a761e98470ad456f3a58231c2dd6e8169} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} mat4\+\_\+left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{matrix}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a761e98470ad456f3a58231c2dd6e8169_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a761e98470ad456f3a58231c2dd6e8169_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a418ca422b663a75a98608a4ffa4dec90}\index{kmath.h@{kmath.h}!mat4\_look\_at@{mat4\_look\_at}}
+\index{mat4\_look\_at@{mat4\_look\_at}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_look\_at()}{mat4\_look\_at()}}
+{\footnotesize\ttfamily \label{kmath_8h_a418ca422b663a75a98608a4ffa4dec90} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} mat4\+\_\+look\+\_\+at (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{position}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{target}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{up}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a418ca422b663a75a98608a4ffa4dec90_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a0d06fd21ae39e16bc48de99578328188}\index{kmath.h@{kmath.h}!mat4\_mul@{mat4\_mul}}
+\index{mat4\_mul@{mat4\_mul}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_mul()}{mat4\_mul()}}
+{\footnotesize\ttfamily \label{kmath_8h_a0d06fd21ae39e16bc48de99578328188} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} mat4\+\_\+mul (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{matrix\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{matrix\+\_\+1}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a0d06fd21ae39e16bc48de99578328188_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a0d06fd21ae39e16bc48de99578328188_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a5b39e299ada558fde3b8d8af028a20df}\index{kmath.h@{kmath.h}!mat4\_orthographic@{mat4\_orthographic}}
+\index{mat4\_orthographic@{mat4\_orthographic}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_orthographic()}{mat4\_orthographic()}}
+{\footnotesize\ttfamily \label{kmath_8h_a5b39e299ada558fde3b8d8af028a20df} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} mat4\+\_\+orthographic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{left}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{right}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{bottom}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{top}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{near\+\_\+clip}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{far\+\_\+clip}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a5b39e299ada558fde3b8d8af028a20df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a5b39e299ada558fde3b8d8af028a20df_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a30c4e8b0b3a75b70a4a8efb9a51f80ed}\index{kmath.h@{kmath.h}!mat4\_perspective@{mat4\_perspective}}
+\index{mat4\_perspective@{mat4\_perspective}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_perspective()}{mat4\_perspective()}}
+{\footnotesize\ttfamily \label{kmath_8h_a30c4e8b0b3a75b70a4a8efb9a51f80ed} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} mat4\+\_\+perspective (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{fov\+\_\+radians}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{aspect\+\_\+ratio}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{near\+\_\+clip}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{far\+\_\+clip}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a30c4e8b0b3a75b70a4a8efb9a51f80ed_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a30c4e8b0b3a75b70a4a8efb9a51f80ed_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a447e7a652833758d115184953454a016}\index{kmath.h@{kmath.h}!mat4\_right@{mat4\_right}}
+\index{mat4\_right@{mat4\_right}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_right()}{mat4\_right()}}
+{\footnotesize\ttfamily \label{kmath_8h_a447e7a652833758d115184953454a016} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} mat4\+\_\+right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{matrix}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a447e7a652833758d115184953454a016_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a447e7a652833758d115184953454a016_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a4b36f4568d28ccdb865d067ff1516f34}\index{kmath.h@{kmath.h}!mat4\_scale@{mat4\_scale}}
+\index{mat4\_scale@{mat4\_scale}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_scale()}{mat4\_scale()}}
+{\footnotesize\ttfamily \label{kmath_8h_a4b36f4568d28ccdb865d067ff1516f34} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} mat4\+\_\+scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{scale}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a4b36f4568d28ccdb865d067ff1516f34_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a209b073522143126e4b91d7b524b54f8}\index{kmath.h@{kmath.h}!mat4\_translation@{mat4\_translation}}
+\index{mat4\_translation@{mat4\_translation}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_translation()}{mat4\_translation()}}
+{\footnotesize\ttfamily \label{kmath_8h_a209b073522143126e4b91d7b524b54f8} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} mat4\+\_\+translation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{position}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a209b073522143126e4b91d7b524b54f8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a209b073522143126e4b91d7b524b54f8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_aa6eaf974256cb040ca82bf256a1069d8}\index{kmath.h@{kmath.h}!mat4\_transposed@{mat4\_transposed}}
+\index{mat4\_transposed@{mat4\_transposed}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_transposed()}{mat4\_transposed()}}
+{\footnotesize\ttfamily \label{kmath_8h_aa6eaf974256cb040ca82bf256a1069d8} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} mat4\+\_\+transposed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{matrix}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_aa6eaf974256cb040ca82bf256a1069d8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_ac9b253d8bb55821c81b4a97b6bf9216a}\index{kmath.h@{kmath.h}!mat4\_up@{mat4\_up}}
+\index{mat4\_up@{mat4\_up}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{mat4\_up()}{mat4\_up()}}
+{\footnotesize\ttfamily \label{kmath_8h_ac9b253d8bb55821c81b4a97b6bf9216a} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} mat4\+\_\+up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{matrix}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_ac9b253d8bb55821c81b4a97b6bf9216a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a07c8b0a7152d96143691ca040b8c0d23}\index{kmath.h@{kmath.h}!quat\_conjugate@{quat\_conjugate}}
+\index{quat\_conjugate@{quat\_conjugate}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{quat\_conjugate()}{quat\_conjugate()}}
+{\footnotesize\ttfamily \label{kmath_8h_a07c8b0a7152d96143691ca040b8c0d23} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} quat\+\_\+conjugate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{q}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{dc/dd0/kmath_8h_a07c8b0a7152d96143691ca040b8c0d23_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a8a93afbc27ca642569857bd4a766f27b}\index{kmath.h@{kmath.h}!quat\_dot@{quat\_dot}}
+\index{quat\_dot@{quat\_dot}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{quat\_dot()}{quat\_dot()}}
+{\footnotesize\ttfamily \label{kmath_8h_a8a93afbc27ca642569857bd4a766f27b} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} quat\+\_\+dot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{q\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{q\+\_\+1}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{dc/dd0/kmath_8h_a8a93afbc27ca642569857bd4a766f27b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_adfcab382a3cbf4493982e93fda95e257}\index{kmath.h@{kmath.h}!quat\_from\_axis\_angle@{quat\_from\_axis\_angle}}
+\index{quat\_from\_axis\_angle@{quat\_from\_axis\_angle}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{quat\_from\_axis\_angle()}{quat\_from\_axis\_angle()}}
+{\footnotesize\ttfamily \label{kmath_8h_adfcab382a3cbf4493982e93fda95e257} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} quat\+\_\+from\+\_\+axis\+\_\+angle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{axis}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{angle}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{normalize}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_adfcab382a3cbf4493982e93fda95e257_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a6edab62f710b9718c0590664774b1845}\index{kmath.h@{kmath.h}!quat\_identity@{quat\_identity}}
+\index{quat\_identity@{quat\_identity}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{quat\_identity()}{quat\_identity()}}
+{\footnotesize\ttfamily \label{kmath_8h_a6edab62f710b9718c0590664774b1845} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} quat\+\_\+identity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a5c05ed1e69ca8563590cc8718fca5435}\index{kmath.h@{kmath.h}!quat\_inverse@{quat\_inverse}}
+\index{quat\_inverse@{quat\_inverse}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{quat\_inverse()}{quat\_inverse()}}
+{\footnotesize\ttfamily \label{kmath_8h_a5c05ed1e69ca8563590cc8718fca5435} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} quat\+\_\+inverse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{q}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a5c05ed1e69ca8563590cc8718fca5435_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_aac6db5c9028952d279408093822b4cbd}\index{kmath.h@{kmath.h}!quat\_mul@{quat\_mul}}
+\index{quat\_mul@{quat\_mul}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{quat\_mul()}{quat\_mul()}}
+{\footnotesize\ttfamily \label{kmath_8h_aac6db5c9028952d279408093822b4cbd} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} quat\+\_\+mul (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{q\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{q\+\_\+1}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a988ae268cd1fcd9e3cf6f37425e396ae}\index{kmath.h@{kmath.h}!quat\_normal@{quat\_normal}}
+\index{quat\_normal@{quat\_normal}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{quat\_normal()}{quat\_normal()}}
+{\footnotesize\ttfamily \label{kmath_8h_a988ae268cd1fcd9e3cf6f37425e396ae} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} quat\+\_\+normal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{q}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{dc/dd0/kmath_8h_a988ae268cd1fcd9e3cf6f37425e396ae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a988ae268cd1fcd9e3cf6f37425e396ae_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a80f41015fc07b514f4fedc2d76157e11}\index{kmath.h@{kmath.h}!quat\_normalize@{quat\_normalize}}
+\index{quat\_normalize@{quat\_normalize}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{quat\_normalize()}{quat\_normalize()}}
+{\footnotesize\ttfamily \label{kmath_8h_a80f41015fc07b514f4fedc2d76157e11} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} quat\+\_\+normalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{q}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a80f41015fc07b514f4fedc2d76157e11_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{dc/dd0/kmath_8h_a80f41015fc07b514f4fedc2d76157e11_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_aef737c7e466f76a8e93d4a8ee72d9b3a}\index{kmath.h@{kmath.h}!quat\_slerp@{quat\_slerp}}
+\index{quat\_slerp@{quat\_slerp}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{quat\_slerp()}{quat\_slerp()}}
+{\footnotesize\ttfamily \label{kmath_8h_aef737c7e466f76a8e93d4a8ee72d9b3a} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} quat\+\_\+slerp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{q\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{q\+\_\+1}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{percentage}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_aef737c7e466f76a8e93d4a8ee72d9b3a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_ac84936abc187f178a2228f699a5b5a9d}\index{kmath.h@{kmath.h}!quat\_to\_mat4@{quat\_to\_mat4}}
+\index{quat\_to\_mat4@{quat\_to\_mat4}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{quat\_to\_mat4()}{quat\_to\_mat4()}}
+{\footnotesize\ttfamily \label{kmath_8h_ac84936abc187f178a2228f699a5b5a9d} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} quat\+\_\+to\+\_\+mat4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{q}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_ac84936abc187f178a2228f699a5b5a9d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a70c81ca5e2bcb020031dc593c9969609}\index{kmath.h@{kmath.h}!quat\_to\_rotation\_matrix@{quat\_to\_rotation\_matrix}}
+\index{quat\_to\_rotation\_matrix@{quat\_to\_rotation\_matrix}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{quat\_to\_rotation\_matrix()}{quat\_to\_rotation\_matrix()}}
+{\footnotesize\ttfamily \label{kmath_8h_a70c81ca5e2bcb020031dc593c9969609} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} quat\+\_\+to\+\_\+rotation\+\_\+matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{q}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{center}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a41bbafc6f8b506c632942fb30e1175c0}\index{kmath.h@{kmath.h}!rad\_to\_deg@{rad\_to\_deg}}
+\index{rad\_to\_deg@{rad\_to\_deg}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{rad\_to\_deg()}{rad\_to\_deg()}}
+{\footnotesize\ttfamily \label{kmath_8h_a41bbafc6f8b506c632942fb30e1175c0} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} rad\+\_\+to\+\_\+deg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{degrees}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a9e871c9751334834a6a25838de7899ef}\index{kmath.h@{kmath.h}!vec2\_add@{vec2\_add}}
+\index{vec2\_add@{vec2\_add}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_add()}{vec2\_add()}}
+{\footnotesize\ttfamily \label{kmath_8h_a9e871c9751334834a6a25838de7899ef} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vec2\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_abfad392b89bf545b932681273bcedb93}\index{kmath.h@{kmath.h}!vec2\_compare@{vec2\_compare}}
+\index{vec2\_compare@{vec2\_compare}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_compare()}{vec2\_compare()}}
+{\footnotesize\ttfamily \label{kmath_8h_abfad392b89bf545b932681273bcedb93} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vec2\+\_\+compare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}}]{vector\+\_\+1}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{tolerance}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{dc/dd0/kmath_8h_abfad392b89bf545b932681273bcedb93_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a6f29d371788f0220f0b6c56846007060}\index{kmath.h@{kmath.h}!vec2\_create@{vec2\_create}}
+\index{vec2\_create@{vec2\_create}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_create()}{vec2\_create()}}
+{\footnotesize\ttfamily \label{kmath_8h_a6f29d371788f0220f0b6c56846007060} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vec2\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{x}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Creates and returns a new 2-\/element vector using the supplied values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x value. \\
+\hline
+{\em y} & The y value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new 2-\/element vector. 
+\end{DoxyReturn}
+\Hypertarget{kmath_8h_a3ae2118c4d684b5c2783010cce5d88eb}\index{kmath.h@{kmath.h}!vec2\_distance@{vec2\_distance}}
+\index{vec2\_distance@{vec2\_distance}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_distance()}{vec2\_distance()}}
+{\footnotesize\ttfamily \label{kmath_8h_a3ae2118c4d684b5c2783010cce5d88eb} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} vec2\+\_\+distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a3ae2118c4d684b5c2783010cce5d88eb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a96adbc3440fca4699b1682f957c84b81}\index{kmath.h@{kmath.h}!vec2\_div@{vec2\_div}}
+\index{vec2\_div@{vec2\_div}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_div()}{vec2\_div()}}
+{\footnotesize\ttfamily \label{kmath_8h_a96adbc3440fca4699b1682f957c84b81} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vec2\+\_\+div (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a420ab6e09304c682098a0b8b4be0fd46}\index{kmath.h@{kmath.h}!vec2\_down@{vec2\_down}}
+\index{vec2\_down@{vec2\_down}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_down()}{vec2\_down()}}
+{\footnotesize\ttfamily \label{kmath_8h_a420ab6e09304c682098a0b8b4be0fd46} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vec2\+\_\+down (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_aa4983bb0ed9c3478c3816c54ff548d78}\index{kmath.h@{kmath.h}!vec2\_left@{vec2\_left}}
+\index{vec2\_left@{vec2\_left}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_left()}{vec2\_left()}}
+{\footnotesize\ttfamily \label{kmath_8h_aa4983bb0ed9c3478c3816c54ff548d78} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vec2\+\_\+left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_abf4a0114d66be7ae157ab037bf033136}\index{kmath.h@{kmath.h}!vec2\_len@{vec2\_len}}
+\index{vec2\_len@{vec2\_len}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_len()}{vec2\_len()}}
+{\footnotesize\ttfamily \label{kmath_8h_abf4a0114d66be7ae157ab037bf033136} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} vec2\+\_\+len (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}}]{vector}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{dc/dd0/kmath_8h_abf4a0114d66be7ae157ab037bf033136_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_abf4a0114d66be7ae157ab037bf033136_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a6c4712a477c5647ec154bb80d2c9da56}\index{kmath.h@{kmath.h}!vec2\_len\_squared@{vec2\_len\_squared}}
+\index{vec2\_len\_squared@{vec2\_len\_squared}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_len\_squared()}{vec2\_len\_squared()}}
+{\footnotesize\ttfamily \label{kmath_8h_a6c4712a477c5647ec154bb80d2c9da56} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} vec2\+\_\+len\+\_\+squared (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}}]{vector}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a6c4712a477c5647ec154bb80d2c9da56_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a0a083799fc999c95a48f147c03bbc9dd}\index{kmath.h@{kmath.h}!vec2\_mul@{vec2\_mul}}
+\index{vec2\_mul@{vec2\_mul}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_mul()}{vec2\_mul()}}
+{\footnotesize\ttfamily \label{kmath_8h_a0a083799fc999c95a48f147c03bbc9dd} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vec2\+\_\+mul (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a584b3deab3dad909b4d3eb5b48e1330b}\index{kmath.h@{kmath.h}!vec2\_normalize@{vec2\_normalize}}
+\index{vec2\_normalize@{vec2\_normalize}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_normalize()}{vec2\_normalize()}}
+{\footnotesize\ttfamily \label{kmath_8h_a584b3deab3dad909b4d3eb5b48e1330b} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} void vec2\+\_\+normalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \texorpdfstring{$\ast$}{*}}]{vector}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a584b3deab3dad909b4d3eb5b48e1330b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{dc/dd0/kmath_8h_a584b3deab3dad909b4d3eb5b48e1330b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a877c74c4bca40f8e6f8d5f543fb8ab8d}\index{kmath.h@{kmath.h}!vec2\_normalized@{vec2\_normalized}}
+\index{vec2\_normalized@{vec2\_normalized}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_normalized()}{vec2\_normalized()}}
+{\footnotesize\ttfamily \label{kmath_8h_a877c74c4bca40f8e6f8d5f543fb8ab8d} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vec2\+\_\+normalized (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}}]{vector}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a877c74c4bca40f8e6f8d5f543fb8ab8d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a6c033661c0b130a5b6581a9485ce46c6}\index{kmath.h@{kmath.h}!vec2\_one@{vec2\_one}}
+\index{vec2\_one@{vec2\_one}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_one()}{vec2\_one()}}
+{\footnotesize\ttfamily \label{kmath_8h_a6c033661c0b130a5b6581a9485ce46c6} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vec2\+\_\+one (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a09c8c5126889a8eb45a41feb562bc557}\index{kmath.h@{kmath.h}!vec2\_right@{vec2\_right}}
+\index{vec2\_right@{vec2\_right}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_right()}{vec2\_right()}}
+{\footnotesize\ttfamily \label{kmath_8h_a09c8c5126889a8eb45a41feb562bc557} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vec2\+\_\+right (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a4a30dd577dc66941481a9baa1ab96762}\index{kmath.h@{kmath.h}!vec2\_sub@{vec2\_sub}}
+\index{vec2\_sub@{vec2\_sub}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_sub()}{vec2\_sub()}}
+{\footnotesize\ttfamily \label{kmath_8h_a4a30dd577dc66941481a9baa1ab96762} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vec2\+\_\+sub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{dc/dd0/kmath_8h_a4a30dd577dc66941481a9baa1ab96762_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a909f620dd55a39706629c807d95a07fe}\index{kmath.h@{kmath.h}!vec2\_up@{vec2\_up}}
+\index{vec2\_up@{vec2\_up}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_up()}{vec2\_up()}}
+{\footnotesize\ttfamily \label{kmath_8h_a909f620dd55a39706629c807d95a07fe} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vec2\+\_\+up (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a120d0a402b1f804936f6ff2990d33977}\index{kmath.h@{kmath.h}!vec2\_zero@{vec2\_zero}}
+\index{vec2\_zero@{vec2\_zero}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec2\_zero()}{vec2\_zero()}}
+{\footnotesize\ttfamily \label{kmath_8h_a120d0a402b1f804936f6ff2990d33977} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} vec2\+\_\+zero (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_af5ba7bfb8431051fed6d59cd8a2815b6}\index{kmath.h@{kmath.h}!vec3\_add@{vec3\_add}}
+\index{vec3\_add@{vec3\_add}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_add()}{vec3\_add()}}
+{\footnotesize\ttfamily \label{kmath_8h_af5ba7bfb8431051fed6d59cd8a2815b6} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_af5ba7bfb8431051fed6d59cd8a2815b6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_ab0816e07e66ef8b76e02beceb12b2c42}\index{kmath.h@{kmath.h}!vec3\_backward@{vec3\_backward}}
+\index{vec3\_backward@{vec3\_backward}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_backward()}{vec3\_backward()}}
+{\footnotesize\ttfamily \label{kmath_8h_ab0816e07e66ef8b76e02beceb12b2c42} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+backward (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_adac3f96c683ee15e2e7b7656db9ea1b3}\index{kmath.h@{kmath.h}!vec3\_compare@{vec3\_compare}}
+\index{vec3\_compare@{vec3\_compare}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_compare()}{vec3\_compare()}}
+{\footnotesize\ttfamily \label{kmath_8h_adac3f96c683ee15e2e7b7656db9ea1b3} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vec3\+\_\+compare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+1}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{tolerance}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{dc/dd0/kmath_8h_adac3f96c683ee15e2e7b7656db9ea1b3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_adac3f96c683ee15e2e7b7656db9ea1b3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a8d6cf2e1120a73e329873a0b74e77762}\index{kmath.h@{kmath.h}!vec3\_create@{vec3\_create}}
+\index{vec3\_create@{vec3\_create}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_create()}{vec3\_create()}}
+{\footnotesize\ttfamily \label{kmath_8h_a8d6cf2e1120a73e329873a0b74e77762} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{x}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{y}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{z}{}\end{DoxyParamCaption})}
+
+
+
+Creates and returns a new 2-\/element vector using the supplied values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x value. \\
+\hline
+{\em y} & The y value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new 2-\/element vector. 
+\end{DoxyReturn}
+\Hypertarget{kmath_8h_a0774bf6691b0034bae06d4ccd916666f}\index{kmath.h@{kmath.h}!vec3\_cross@{vec3\_cross}}
+\index{vec3\_cross@{vec3\_cross}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_cross()}{vec3\_cross()}}
+{\footnotesize\ttfamily \label{kmath_8h_a0774bf6691b0034bae06d4ccd916666f} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+cross (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{dc/dd0/kmath_8h_a0774bf6691b0034bae06d4ccd916666f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_aec3419c4f157e67ef4ec0401afc78995}\index{kmath.h@{kmath.h}!vec3\_distance@{vec3\_distance}}
+\index{vec3\_distance@{vec3\_distance}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_distance()}{vec3\_distance()}}
+{\footnotesize\ttfamily \label{kmath_8h_aec3419c4f157e67ef4ec0401afc78995} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} vec3\+\_\+distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_aec3419c4f157e67ef4ec0401afc78995_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_aef4556b55423de586900d6ff2a9c2d4a}\index{kmath.h@{kmath.h}!vec3\_div@{vec3\_div}}
+\index{vec3\_div@{vec3\_div}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_div()}{vec3\_div()}}
+{\footnotesize\ttfamily \label{kmath_8h_aef4556b55423de586900d6ff2a9c2d4a} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+div (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_aeb170789dffdc30aac43810bb2ba6285}\index{kmath.h@{kmath.h}!vec3\_dot@{vec3\_dot}}
+\index{vec3\_dot@{vec3\_dot}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_dot()}{vec3\_dot()}}
+{\footnotesize\ttfamily \label{kmath_8h_aeb170789dffdc30aac43810bb2ba6285} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} vec3\+\_\+dot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{dc/dd0/kmath_8h_aeb170789dffdc30aac43810bb2ba6285_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_aa06a1e58a9bbaa0225177126b9ec2b83}\index{kmath.h@{kmath.h}!vec3\_down@{vec3\_down}}
+\index{vec3\_down@{vec3\_down}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_down()}{vec3\_down()}}
+{\footnotesize\ttfamily \label{kmath_8h_aa06a1e58a9bbaa0225177126b9ec2b83} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+down (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a6047e365b7b8b00aead49ca23faf8aa6}\index{kmath.h@{kmath.h}!vec3\_forward@{vec3\_forward}}
+\index{vec3\_forward@{vec3\_forward}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_forward()}{vec3\_forward()}}
+{\footnotesize\ttfamily \label{kmath_8h_a6047e365b7b8b00aead49ca23faf8aa6} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+forward (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a364fe49aca271df4e2e5d64a8dd24695}\index{kmath.h@{kmath.h}!vec3\_left@{vec3\_left}}
+\index{vec3\_left@{vec3\_left}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_left()}{vec3\_left()}}
+{\footnotesize\ttfamily \label{kmath_8h_a364fe49aca271df4e2e5d64a8dd24695} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+left (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_acbdb6afe5697ca4833089800c0ac7376}\index{kmath.h@{kmath.h}!vec3\_len@{vec3\_len}}
+\index{vec3\_len@{vec3\_len}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_len()}{vec3\_len()}}
+{\footnotesize\ttfamily \label{kmath_8h_acbdb6afe5697ca4833089800c0ac7376} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} vec3\+\_\+len (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{dc/dd0/kmath_8h_acbdb6afe5697ca4833089800c0ac7376_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_acbdb6afe5697ca4833089800c0ac7376_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_ac7825b4b417b34eccaf811fd737ee052}\index{kmath.h@{kmath.h}!vec3\_len\_squared@{vec3\_len\_squared}}
+\index{vec3\_len\_squared@{vec3\_len\_squared}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_len\_squared()}{vec3\_len\_squared()}}
+{\footnotesize\ttfamily \label{kmath_8h_ac7825b4b417b34eccaf811fd737ee052} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} vec3\+\_\+len\+\_\+squared (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_ac7825b4b417b34eccaf811fd737ee052_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a58692264e7e4d1d381017777e6b1e564}\index{kmath.h@{kmath.h}!vec3\_mul@{vec3\_mul}}
+\index{vec3\_mul@{vec3\_mul}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_mul()}{vec3\_mul()}}
+{\footnotesize\ttfamily \label{kmath_8h_a58692264e7e4d1d381017777e6b1e564} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+mul (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a81ba3ed9043287a8d285b773fbbd0eda}\index{kmath.h@{kmath.h}!vec3\_mul\_scalar@{vec3\_mul\_scalar}}
+\index{vec3\_mul\_scalar@{vec3\_mul\_scalar}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_mul\_scalar()}{vec3\_mul\_scalar()}}
+{\footnotesize\ttfamily \label{kmath_8h_a81ba3ed9043287a8d285b773fbbd0eda} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+mul\+\_\+scalar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a913dca8151840c5998928a08cc62ede8}\index{kmath.h@{kmath.h}!vec3\_normalize@{vec3\_normalize}}
+\index{vec3\_normalize@{vec3\_normalize}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_normalize()}{vec3\_normalize()}}
+{\footnotesize\ttfamily \label{kmath_8h_a913dca8151840c5998928a08cc62ede8} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} void vec3\+\_\+normalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \texorpdfstring{$\ast$}{*}}]{vector}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a913dca8151840c5998928a08cc62ede8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a913dca8151840c5998928a08cc62ede8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_afa02e969b26ee5ec59dfdb940cbe59a1}\index{kmath.h@{kmath.h}!vec3\_normalized@{vec3\_normalized}}
+\index{vec3\_normalized@{vec3\_normalized}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_normalized()}{vec3\_normalized()}}
+{\footnotesize\ttfamily \label{kmath_8h_afa02e969b26ee5ec59dfdb940cbe59a1} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+normalized (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_afa02e969b26ee5ec59dfdb940cbe59a1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{dc/dd0/kmath_8h_afa02e969b26ee5ec59dfdb940cbe59a1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_addaff49488443ab38ec8c6a7ee79cdca}\index{kmath.h@{kmath.h}!vec3\_one@{vec3\_one}}
+\index{vec3\_one@{vec3\_one}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_one()}{vec3\_one()}}
+{\footnotesize\ttfamily \label{kmath_8h_addaff49488443ab38ec8c6a7ee79cdca} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+one (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a05eb2a8005d1aebb1e3826d6e8288da5}\index{kmath.h@{kmath.h}!vec3\_right@{vec3\_right}}
+\index{vec3\_right@{vec3\_right}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_right()}{vec3\_right()}}
+{\footnotesize\ttfamily \label{kmath_8h_a05eb2a8005d1aebb1e3826d6e8288da5} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+right (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a5e6a1233b235e6a2b3475ae4d11487f6}\index{kmath.h@{kmath.h}!vec3\_sub@{vec3\_sub}}
+\index{vec3\_sub@{vec3\_sub}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_sub()}{vec3\_sub()}}
+{\footnotesize\ttfamily \label{kmath_8h_a5e6a1233b235e6a2b3475ae4d11487f6} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+sub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{dc/dd0/kmath_8h_a5e6a1233b235e6a2b3475ae4d11487f6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a2aa8360104549585394c7346ddb5280e}\index{kmath.h@{kmath.h}!vec3\_to\_vec4@{vec3\_to\_vec4}}
+\index{vec3\_to\_vec4@{vec3\_to\_vec4}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_to\_vec4()}{vec3\_to\_vec4()}}
+{\footnotesize\ttfamily \label{kmath_8h_a2aa8360104549585394c7346ddb5280e} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vec3\+\_\+to\+\_\+vec4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{vector}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{w}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a1f7b5fa8b8d6785dbd6d0de6b495b163}\index{kmath.h@{kmath.h}!vec3\_up@{vec3\_up}}
+\index{vec3\_up@{vec3\_up}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_up()}{vec3\_up()}}
+{\footnotesize\ttfamily \label{kmath_8h_a1f7b5fa8b8d6785dbd6d0de6b495b163} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+up (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a396247a1d1147edbade06360f4559ac9}\index{kmath.h@{kmath.h}!vec3\_zero@{vec3\_zero}}
+\index{vec3\_zero@{vec3\_zero}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec3\_zero()}{vec3\_zero()}}
+{\footnotesize\ttfamily \label{kmath_8h_a396247a1d1147edbade06360f4559ac9} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec3\+\_\+zero (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a396247a1d1147edbade06360f4559ac9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a7dbcee31ab2e7b1d6cdd530424d1c9da}\index{kmath.h@{kmath.h}!vec4\_add@{vec4\_add}}
+\index{vec4\_add@{vec4\_add}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec4\_add()}{vec4\_add()}}
+{\footnotesize\ttfamily \label{kmath_8h_a7dbcee31ab2e7b1d6cdd530424d1c9da} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vec4\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_ab198faa792ecd191daeec7438afc3d1e}\index{kmath.h@{kmath.h}!vec4\_create@{vec4\_create}}
+\index{vec4\_create@{vec4\_create}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec4\_create()}{vec4\_create()}}
+{\footnotesize\ttfamily \label{kmath_8h_ab198faa792ecd191daeec7438afc3d1e} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vec4\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{x}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{y}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{z}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{w}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a191991839d113a3e246519940cbd6a4b}\index{kmath.h@{kmath.h}!vec4\_div@{vec4\_div}}
+\index{vec4\_div@{vec4\_div}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec4\_div()}{vec4\_div()}}
+{\footnotesize\ttfamily \label{kmath_8h_a191991839d113a3e246519940cbd6a4b} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vec4\+\_\+div (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a46b41e60e81425ee0f14e0089bc95cc5}\index{kmath.h@{kmath.h}!vec4\_dot\_f32@{vec4\_dot\_f32}}
+\index{vec4\_dot\_f32@{vec4\_dot\_f32}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec4\_dot\_f32()}{vec4\_dot\_f32()}}
+{\footnotesize\ttfamily \label{kmath_8h_a46b41e60e81425ee0f14e0089bc95cc5} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} vec4\+\_\+dot\+\_\+f32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{a0}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{a1}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{a2}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{a3}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{b0}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{b1}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{b2}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{b3}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a40e8e2e66089ce2b25a0def6b3b6c5bf}\index{kmath.h@{kmath.h}!vec4\_len@{vec4\_len}}
+\index{vec4\_len@{vec4\_len}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec4\_len()}{vec4\_len()}}
+{\footnotesize\ttfamily \label{kmath_8h_a40e8e2e66089ce2b25a0def6b3b6c5bf} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} vec4\+\_\+len (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{vector}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{dc/dd0/kmath_8h_a40e8e2e66089ce2b25a0def6b3b6c5bf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a40e8e2e66089ce2b25a0def6b3b6c5bf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_ab4362549c51f7c871d8ba6b639cc3a96}\index{kmath.h@{kmath.h}!vec4\_len\_squared@{vec4\_len\_squared}}
+\index{vec4\_len\_squared@{vec4\_len\_squared}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec4\_len\_squared()}{vec4\_len\_squared()}}
+{\footnotesize\ttfamily \label{kmath_8h_ab4362549c51f7c871d8ba6b639cc3a96} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} vec4\+\_\+len\+\_\+squared (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{vector}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_ab4362549c51f7c871d8ba6b639cc3a96_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a7c7c4c944dc7b6933a55831bf4cb86c3}\index{kmath.h@{kmath.h}!vec4\_mul@{vec4\_mul}}
+\index{vec4\_mul@{vec4\_mul}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec4\_mul()}{vec4\_mul()}}
+{\footnotesize\ttfamily \label{kmath_8h_a7c7c4c944dc7b6933a55831bf4cb86c3} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vec4\+\_\+mul (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a4790d435ea6da1e159455e328e16106c}\index{kmath.h@{kmath.h}!vec4\_normalize@{vec4\_normalize}}
+\index{vec4\_normalize@{vec4\_normalize}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec4\_normalize()}{vec4\_normalize()}}
+{\footnotesize\ttfamily \label{kmath_8h_a4790d435ea6da1e159455e328e16106c} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} void vec4\+\_\+normalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \texorpdfstring{$\ast$}{*}}]{vector}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a4790d435ea6da1e159455e328e16106c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{dc/dd0/kmath_8h_a4790d435ea6da1e159455e328e16106c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a877b390488cdca316999ee4519348cfb}\index{kmath.h@{kmath.h}!vec4\_normalized@{vec4\_normalized}}
+\index{vec4\_normalized@{vec4\_normalized}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec4\_normalized()}{vec4\_normalized()}}
+{\footnotesize\ttfamily \label{kmath_8h_a877b390488cdca316999ee4519348cfb} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vec4\+\_\+normalized (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{vector}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a877b390488cdca316999ee4519348cfb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_a4b54896480357d67259f94d532e050dd}\index{kmath.h@{kmath.h}!vec4\_one@{vec4\_one}}
+\index{vec4\_one@{vec4\_one}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec4\_one()}{vec4\_one()}}
+{\footnotesize\ttfamily \label{kmath_8h_a4b54896480357d67259f94d532e050dd} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vec4\+\_\+one (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd0/kmath_8h_a4b54896480357d67259f94d532e050dd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmath_8h_ad8d77f05491babcef8aab13dd4379048}\index{kmath.h@{kmath.h}!vec4\_sub@{vec4\_sub}}
+\index{vec4\_sub@{vec4\_sub}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec4\_sub()}{vec4\_sub()}}
+{\footnotesize\ttfamily \label{kmath_8h_ad8d77f05491babcef8aab13dd4379048} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vec4\+\_\+sub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{vector\+\_\+0}{, }\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{vector\+\_\+1}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_acfbdb50c55d21d3805c75cd7e43a1f7a}\index{kmath.h@{kmath.h}!vec4\_to\_vec3@{vec4\_to\_vec3}}
+\index{vec4\_to\_vec3@{vec4\_to\_vec3}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec4\_to\_vec3()}{vec4\_to\_vec3()}}
+{\footnotesize\ttfamily \label{kmath_8h_acfbdb50c55d21d3805c75cd7e43a1f7a} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} vec4\+\_\+to\+\_\+vec3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{vector}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kmath_8h_a0d0477623bcf0cd6972386e8cdc6555a}\index{kmath.h@{kmath.h}!vec4\_zero@{vec4\_zero}}
+\index{vec4\_zero@{vec4\_zero}!kmath.h@{kmath.h}}
+\doxysubsubsection{\texorpdfstring{vec4\_zero()}{vec4\_zero()}}
+{\footnotesize\ttfamily \label{kmath_8h_a0d0477623bcf0cd6972386e8cdc6555a} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} vec4\+\_\+zero (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+

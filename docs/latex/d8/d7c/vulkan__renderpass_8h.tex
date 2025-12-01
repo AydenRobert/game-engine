@@ -1,0 +1,161 @@
+\doxysection{engine/src/renderer/vulkan/vulkan\+\_\+renderpass.h File Reference}
+\hypertarget{vulkan__renderpass_8h}{}\label{vulkan__renderpass_8h}\index{engine/src/renderer/vulkan/vulkan\_renderpass.h@{engine/src/renderer/vulkan/vulkan\_renderpass.h}}
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+types.\+inl"{}}\newline
+Include dependency graph for vulkan\+\_\+renderpass.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/df8/vulkan__renderpass_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dde/vulkan__renderpass_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5a}{renderpass\+\_\+clear\+\_\+flag}} \mbox{\hyperlink{vulkan__renderpass_8h_aa93344ffeef886cfdb73b816fd2bf526}{renderpass\+\_\+clear\+\_\+flag}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5a}{renderpass\+\_\+clear\+\_\+flag}} \{ \mbox{\hyperlink{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5aa01d66d9b8db5b3108dbd9ce6d462349b}{RENDERPASS\+\_\+\+CLEAR\+\_\+\+FLAG\+\_\+\+NONE}} = 0x00
+, \mbox{\hyperlink{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5aadeeec2ddf4e840b00292e4c9bddaec31}{RENDERPASS\+\_\+\+CLEAR\+\_\+\+FLAG\+\_\+\+COLOUR\+\_\+\+BUFFER}} = 0x01
+, \mbox{\hyperlink{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5aa28e0eb2babb1a53c2c2197d7bac54748}{RENDERPASS\+\_\+\+CLEAR\+\_\+\+FLAG\+\_\+\+DEPTH\+\_\+\+BUFFER}} = 0x02
+, \mbox{\hyperlink{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5aab6857a1932357971b5bdd8ed6a300c7d}{RENDERPASS\+\_\+\+CLEAR\+\_\+\+FLAG\+\_\+\+STENCIL\+\_\+\+BUFFER}} = 0x04
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{vulkan__renderpass_8h_a4eb11b756d9eeffab554d19810470b0b}{vulkan\+\_\+renderpass\+\_\+create}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}out\+\_\+renderpass, \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} render\+\_\+area, \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} clear\+\_\+colour, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} depth, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} stencil, \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} clear\+\_\+flags, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} has\+\_\+prev\+\_\+pass, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} has\+\_\+next\+\_\+pass)
+\item 
+void \mbox{\hyperlink{vulkan__renderpass_8h_a2656c53811b44888152b5a19f7ece679}{vulkan\+\_\+renderpass\+\_\+destroy}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}renderpass)
+\item 
+void \mbox{\hyperlink{vulkan__renderpass_8h_ad41d3572b06fd3a6973d84b7362243e9}{vulkan\+\_\+renderpass\+\_\+begin}} (\mbox{\hyperlink{structvulkan__command__buffer}{vulkan\+\_\+command\+\_\+buffer}} \texorpdfstring{$\ast$}{*}command\+\_\+buffer, \mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}renderpass, Vk\+Framebuffer frame\+\_\+buffer)
+\item 
+void \mbox{\hyperlink{vulkan__renderpass_8h_afc8178f17adfad94842efd1ec0f74d83}{vulkan\+\_\+renderpass\+\_\+end}} (\mbox{\hyperlink{structvulkan__command__buffer}{vulkan\+\_\+command\+\_\+buffer}} \texorpdfstring{$\ast$}{*}command\+\_\+buffer, \mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}renderpass)
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{vulkan__renderpass_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{vulkan__renderpass_8h_aa93344ffeef886cfdb73b816fd2bf526}\index{vulkan\_renderpass.h@{vulkan\_renderpass.h}!renderpass\_clear\_flag@{renderpass\_clear\_flag}}
+\index{renderpass\_clear\_flag@{renderpass\_clear\_flag}!vulkan\_renderpass.h@{vulkan\_renderpass.h}}
+\doxysubsubsection{\texorpdfstring{renderpass\_clear\_flag}{renderpass\_clear\_flag}}
+{\footnotesize\ttfamily \label{vulkan__renderpass_8h_aa93344ffeef886cfdb73b816fd2bf526} 
+typedef enum \mbox{\hyperlink{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5a}{renderpass\+\_\+clear\+\_\+flag}} \mbox{\hyperlink{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5a}{renderpass\+\_\+clear\+\_\+flag}}}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{vulkan__renderpass_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5a}\index{vulkan\_renderpass.h@{vulkan\_renderpass.h}!renderpass\_clear\_flag@{renderpass\_clear\_flag}}
+\index{renderpass\_clear\_flag@{renderpass\_clear\_flag}!vulkan\_renderpass.h@{vulkan\_renderpass.h}}
+\doxysubsubsection{\texorpdfstring{renderpass\_clear\_flag}{renderpass\_clear\_flag}}
+{\footnotesize\ttfamily \label{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5a} 
+enum \mbox{\hyperlink{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5a}{renderpass\+\_\+clear\+\_\+flag}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RENDERPASS\_CLEAR\_FLAG\_NONE@{RENDERPASS\_CLEAR\_FLAG\_NONE}!vulkan\_renderpass.h@{vulkan\_renderpass.h}}\index{vulkan\_renderpass.h@{vulkan\_renderpass.h}!RENDERPASS\_CLEAR\_FLAG\_NONE@{RENDERPASS\_CLEAR\_FLAG\_NONE}}}\Hypertarget{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5aa01d66d9b8db5b3108dbd9ce6d462349b}\label{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5aa01d66d9b8db5b3108dbd9ce6d462349b} 
+RENDERPASS\+\_\+\+CLEAR\+\_\+\+FLAG\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RENDERPASS\_CLEAR\_FLAG\_COLOUR\_BUFFER@{RENDERPASS\_CLEAR\_FLAG\_COLOUR\_BUFFER}!vulkan\_renderpass.h@{vulkan\_renderpass.h}}\index{vulkan\_renderpass.h@{vulkan\_renderpass.h}!RENDERPASS\_CLEAR\_FLAG\_COLOUR\_BUFFER@{RENDERPASS\_CLEAR\_FLAG\_COLOUR\_BUFFER}}}\Hypertarget{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5aadeeec2ddf4e840b00292e4c9bddaec31}\label{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5aadeeec2ddf4e840b00292e4c9bddaec31} 
+RENDERPASS\+\_\+\+CLEAR\+\_\+\+FLAG\+\_\+\+COLOUR\+\_\+\+BUFFER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RENDERPASS\_CLEAR\_FLAG\_DEPTH\_BUFFER@{RENDERPASS\_CLEAR\_FLAG\_DEPTH\_BUFFER}!vulkan\_renderpass.h@{vulkan\_renderpass.h}}\index{vulkan\_renderpass.h@{vulkan\_renderpass.h}!RENDERPASS\_CLEAR\_FLAG\_DEPTH\_BUFFER@{RENDERPASS\_CLEAR\_FLAG\_DEPTH\_BUFFER}}}\Hypertarget{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5aa28e0eb2babb1a53c2c2197d7bac54748}\label{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5aa28e0eb2babb1a53c2c2197d7bac54748} 
+RENDERPASS\+\_\+\+CLEAR\+\_\+\+FLAG\+\_\+\+DEPTH\+\_\+\+BUFFER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RENDERPASS\_CLEAR\_FLAG\_STENCIL\_BUFFER@{RENDERPASS\_CLEAR\_FLAG\_STENCIL\_BUFFER}!vulkan\_renderpass.h@{vulkan\_renderpass.h}}\index{vulkan\_renderpass.h@{vulkan\_renderpass.h}!RENDERPASS\_CLEAR\_FLAG\_STENCIL\_BUFFER@{RENDERPASS\_CLEAR\_FLAG\_STENCIL\_BUFFER}}}\Hypertarget{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5aab6857a1932357971b5bdd8ed6a300c7d}\label{vulkan__renderpass_8h_a4859022bb68ecb2379375eb80b5c7a5aab6857a1932357971b5bdd8ed6a300c7d} 
+RENDERPASS\+\_\+\+CLEAR\+\_\+\+FLAG\+\_\+\+STENCIL\+\_\+\+BUFFER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{vulkan__renderpass_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{vulkan__renderpass_8h_ad41d3572b06fd3a6973d84b7362243e9}\index{vulkan\_renderpass.h@{vulkan\_renderpass.h}!vulkan\_renderpass\_begin@{vulkan\_renderpass\_begin}}
+\index{vulkan\_renderpass\_begin@{vulkan\_renderpass\_begin}!vulkan\_renderpass.h@{vulkan\_renderpass.h}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderpass\_begin()}{vulkan\_renderpass\_begin()}}
+{\footnotesize\ttfamily \label{vulkan__renderpass_8h_ad41d3572b06fd3a6973d84b7362243e9} 
+void vulkan\+\_\+renderpass\+\_\+begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__command__buffer}{vulkan\+\_\+command\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{command\+\_\+buffer}{, }\item[{\mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}}]{renderpass}{, }\item[{Vk\+Framebuffer}]{frame\+\_\+buffer}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d7c/vulkan__renderpass_8h_ad41d3572b06fd3a6973d84b7362243e9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d7c/vulkan__renderpass_8h_ad41d3572b06fd3a6973d84b7362243e9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__renderpass_8h_a4eb11b756d9eeffab554d19810470b0b}\index{vulkan\_renderpass.h@{vulkan\_renderpass.h}!vulkan\_renderpass\_create@{vulkan\_renderpass\_create}}
+\index{vulkan\_renderpass\_create@{vulkan\_renderpass\_create}!vulkan\_renderpass.h@{vulkan\_renderpass.h}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderpass\_create()}{vulkan\_renderpass\_create()}}
+{\footnotesize\ttfamily \label{vulkan__renderpass_8h_a4eb11b756d9eeffab554d19810470b0b} 
+void vulkan\+\_\+renderpass\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+renderpass}{, }\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{render\+\_\+area}{, }\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{clear\+\_\+colour}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{depth}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{stencil}{, }\item[{\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}}]{clear\+\_\+flags}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{has\+\_\+prev\+\_\+pass}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{has\+\_\+next\+\_\+pass}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d7c/vulkan__renderpass_8h_a4eb11b756d9eeffab554d19810470b0b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d7c/vulkan__renderpass_8h_a4eb11b756d9eeffab554d19810470b0b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__renderpass_8h_a2656c53811b44888152b5a19f7ece679}\index{vulkan\_renderpass.h@{vulkan\_renderpass.h}!vulkan\_renderpass\_destroy@{vulkan\_renderpass\_destroy}}
+\index{vulkan\_renderpass\_destroy@{vulkan\_renderpass\_destroy}!vulkan\_renderpass.h@{vulkan\_renderpass.h}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderpass\_destroy()}{vulkan\_renderpass\_destroy()}}
+{\footnotesize\ttfamily \label{vulkan__renderpass_8h_a2656c53811b44888152b5a19f7ece679} 
+void vulkan\+\_\+renderpass\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}}]{renderpass}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d7c/vulkan__renderpass_8h_a2656c53811b44888152b5a19f7ece679_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__renderpass_8h_afc8178f17adfad94842efd1ec0f74d83}\index{vulkan\_renderpass.h@{vulkan\_renderpass.h}!vulkan\_renderpass\_end@{vulkan\_renderpass\_end}}
+\index{vulkan\_renderpass\_end@{vulkan\_renderpass\_end}!vulkan\_renderpass.h@{vulkan\_renderpass.h}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderpass\_end()}{vulkan\_renderpass\_end()}}
+{\footnotesize\ttfamily \label{vulkan__renderpass_8h_afc8178f17adfad94842efd1ec0f74d83} 
+void vulkan\+\_\+renderpass\+\_\+end (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__command__buffer}{vulkan\+\_\+command\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{command\+\_\+buffer}{, }\item[{\mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}}]{renderpass}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d7c/vulkan__renderpass_8h_afc8178f17adfad94842efd1ec0f74d83_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,24 @@
+<map id="vulkan_buffer_create" name="vulkan_buffer_create">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1170,117,1328,145"/>
+<area shape="rect" id="Node000002" href="$d1/da5/vulkan__backend_8c.html#af518f3f8b226671c0e27aec52faec49b" title=" " alt="" coords="974,5,1088,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1216,107,1173,78,1121,48,1088,36,1089,30,1123,43,1176,74,1221,108"/>
+<area shape="rect" id="Node000003" href="$d1/da5/vulkan__backend_8c.html#a5e1bd4cf15ecec24c982ccd79a58a94d" title=" " alt="" coords="958,57,1104,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1179,113,1084,88,1085,83,1184,113"/>
+<area shape="rect" id="Node000009" href="$d2/d8c/vulkan__material__shader_8c.html#a25ec4d4e764205648b31034e4b978197" title=" " alt="" coords="942,109,1120,154"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1152,131,1120,134,1120,129,1158,131"/>
+<area shape="rect" id="Node000010" href="$d1/da5/vulkan__backend_8c.html#acb133c3efb85bf8cd0029ceeb6f287a8" title=" " alt="" coords="718,144,892,188"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1195,150,1123,168,1002,177,893,175,892,169,1002,171,1122,163,1190,150"/>
+<area shape="rect" id="Node000011" href="$da/d35/vulkan__ui__shader_8c.html#a012c2b7ad2f6fb9c9013e35220e860a6" title=" " alt="" coords="940,228,1122,256"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="1218,153,1173,185,1123,212,1080,230,1078,225,1121,207,1171,180,1213,155"/>
+<area shape="rect" id="Node000004" href="$d1/da5/vulkan__backend_8c.html#a58fed7c35e4d38f94c14ecb0203ebbe1" title=" " alt="" coords="718,62,892,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="941,77,893,82,892,77,946,76"/>
+<area shape="rect" id="Node000005" href="$d4/d7f/renderer__backend_8c.html#ae259faf752d8672193dc31ec72ab2754" title=" " alt="" coords="484,117,670,145"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="700,106,649,119,648,114,705,105"/>
+<area shape="rect" id="Node000006" href="$d0/dcc/renderer__frontend_8c.html#a389fec0dabe6589332ed60bb427aaaef" title=" " alt="" coords="297,117,436,145"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="466,132,437,134,436,129,471,131"/>
+<area shape="rect" id="Node000007" href="$d4/d8b/application_8c.html#a2ce02f6d4bd01f2d130aef9cd460cf6a" title=" " alt="" coords="108,117,249,145"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="279,132,250,134,249,129,284,130"/>
+<area shape="rect" id="Node000008" href="$d1/dc6/entry_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,117,60,145"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="90,133,61,134,59,129,94,129"/>
+<area shape="poly" id="edge10_Node000010_Node000005" title=" " alt="" coords="699,150,670,148,670,143,705,150"/>
+</map>

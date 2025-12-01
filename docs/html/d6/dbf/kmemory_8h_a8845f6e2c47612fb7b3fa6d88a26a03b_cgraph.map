@@ -1,0 +1,13 @@
+<map id="memory_system_shutdown" name="memory_system_shutdown">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,32,207,60"/>
+<area shape="rect" id="Node000002" href="$dd/d44/dynamic__allocator_8c.html#ae3b3914e65437a13b8988bd0c7848cb0" title="Destroys a dynamic allocator." alt="" coords="255,5,452,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,32,242,31,236,32,208,38"/>
+<area shape="rect" id="Node000006" href="$de/d03/platform_8h.html#a0b638fcfa31e0704eb976a8662c095f2" title=" " alt="" coords="298,57,408,85"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="207,54,285,64,280,64,207,59"/>
+<area shape="rect" id="Node000003" href="$da/d3f/freelist_8c.html#a8f4503d5fe7cfab1e90e20fe32801eff" title="Destroys the provided freelist." alt="" coords="500,5,623,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="452,17,487,19,482,19,452,22"/>
+<area shape="rect" id="Node000004" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="671,5,791,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="624,17,659,19,653,19,624,22"/>
+<area shape="rect" id="Node000005" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="839,5,1013,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="791,17,826,19,821,19,791,22"/>
+</map>

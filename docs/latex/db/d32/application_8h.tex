@@ -1,0 +1,120 @@
+\doxysection{engine/src/core/application.h File Reference}
+\hypertarget{application_8h}{}\label{application_8h}\index{engine/src/core/application.h@{engine/src/core/application.h}}
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+Include dependency graph for application.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{d8/de8/application_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d0b/application_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structapplication__config}{application\+\_\+config}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct game \mbox{\hyperlink{application_8h_a6b088197c03368f264f33c989d4f271b}{game}}
+\item 
+typedef struct application\+\_\+config \mbox{\hyperlink{application_8h_a0d5601d102f2aa559126417368531828}{application\+\_\+config}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{application_8h_a2ce02f6d4bd01f2d130aef9cd460cf6a}{application\+\_\+create}} (\mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}game\+\_\+inst)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{application_8h_ad6aaa3596896dacf8de1439cc34a264b}{application\+\_\+run}} ()
+\item 
+void \mbox{\hyperlink{application_8h_a8b27580c0175a587af977c52f49cb92f}{application\+\_\+get\+\_\+framebuffer\+\_\+size}} (\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}width, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}height)
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{application_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{application_8h_a0d5601d102f2aa559126417368531828}\index{application.h@{application.h}!application\_config@{application\_config}}
+\index{application\_config@{application\_config}!application.h@{application.h}}
+\doxysubsubsection{\texorpdfstring{application\_config}{application\_config}}
+{\footnotesize\ttfamily \label{application_8h_a0d5601d102f2aa559126417368531828} 
+typedef struct application\+\_\+config application\+\_\+config}
+
+\Hypertarget{application_8h_a6b088197c03368f264f33c989d4f271b}\index{application.h@{application.h}!game@{game}}
+\index{game@{game}!application.h@{application.h}}
+\doxysubsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily \label{application_8h_a6b088197c03368f264f33c989d4f271b} 
+typedef struct game game}
+
+
+
+\label{doc-func-members}
+\Hypertarget{application_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{application_8h_a2ce02f6d4bd01f2d130aef9cd460cf6a}\index{application.h@{application.h}!application\_create@{application\_create}}
+\index{application\_create@{application\_create}!application.h@{application.h}}
+\doxysubsubsection{\texorpdfstring{application\_create()}{application\_create()}}
+{\footnotesize\ttfamily \label{application_8h_a2ce02f6d4bd01f2d130aef9cd460cf6a} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} application\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+inst}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d32/application_8h_a2ce02f6d4bd01f2d130aef9cd460cf6a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{db/d32/application_8h_a2ce02f6d4bd01f2d130aef9cd460cf6a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{application_8h_a8b27580c0175a587af977c52f49cb92f}\index{application.h@{application.h}!application\_get\_framebuffer\_size@{application\_get\_framebuffer\_size}}
+\index{application\_get\_framebuffer\_size@{application\_get\_framebuffer\_size}!application.h@{application.h}}
+\doxysubsubsection{\texorpdfstring{application\_get\_framebuffer\_size()}{application\_get\_framebuffer\_size()}}
+{\footnotesize\ttfamily \label{application_8h_a8b27580c0175a587af977c52f49cb92f} 
+void application\+\_\+get\+\_\+framebuffer\+\_\+size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}}]{width}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}}]{height}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d32/application_8h_a8b27580c0175a587af977c52f49cb92f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{application_8h_ad6aaa3596896dacf8de1439cc34a264b}\index{application.h@{application.h}!application\_run@{application\_run}}
+\index{application\_run@{application\_run}!application.h@{application.h}}
+\doxysubsubsection{\texorpdfstring{application\_run()}{application\_run()}}
+{\footnotesize\ttfamily \label{application_8h_ad6aaa3596896dacf8de1439cc34a264b} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} application\+\_\+run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d32/application_8h_ad6aaa3596896dacf8de1439cc34a264b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{db/d32/application_8h_ad6aaa3596896dacf8de1439cc34a264b_icgraph}
+\end{center}
+\end{figure}

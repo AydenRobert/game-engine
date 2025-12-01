@@ -1,0 +1,42 @@
+<map id="_darray_resize" name="_darray_resize">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,240,122,268"/>
+<area shape="rect" id="Node000002" href="$d6/d71/darray_8c.html#afeedbfc73b73afde4c0bf2a889305108" title=" " alt="" coords="177,161,295,189"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,237,169,199,187,194,182,197,171,204,94,242"/>
+<area shape="rect" id="Node000012" href="$d6/d71/darray_8c.html#a2fe5e3c2494168523cb08a62a1cef3f0" title=" " alt="" coords="173,213,299,241"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="121,242,160,238,155,241,123,247"/>
+<area shape="rect" id="Node000018" href="$d6/d71/darray_8c.html#a9a04e308cbc0cb796826f971f77af0b5" title=" " alt="" coords="170,265,302,293"/>
+<area shape="poly" id="edge18_Node000001_Node000018" title=" " alt="" coords="122,260,157,266,152,268,123,265"/>
+<area shape="rect" id="Node000019" href="$d3/d3c/kmemory_8c.html#ae88e143a36677919fee16bdf0f11bc79" title=" " alt="" coords="175,317,297,345"/>
+<area shape="poly" id="edge19_Node000001_Node000019" title=" " alt="" coords="94,266,171,302,187,311,182,311,169,307,93,271"/>
+<area shape="rect" id="Node000003" href="$d3/d3c/kmemory_8c.html#a35f22575c2b4fcbda423b6108e352b15" title=" " alt="" coords="398,84,479,112"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="273,158,388,116,384,119,275,163"/>
+<area shape="rect" id="Node000010" href="$d3/d3c/kmemory_8c.html#a9b0af42158bf4d4a8db3d25d284b83f4" title=" " alt="" coords="383,161,494,189"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="295,173,370,174,365,176,296,178"/>
+<area shape="rect" id="Node000004" href="$dd/d44/dynamic__allocator_8c.html#aeef3ef902c20758ce4e52fd3ce7c3112" title="Allocates an amount of memory and returns the given block." alt="" coords="575,5,776,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="474,81,574,43,605,37,600,39,576,48,476,86"/>
+<area shape="rect" id="Node000008" href="$de/d03/platform_8h.html#a19df473ff145c8579c4c838d5bc67372" title=" " alt="" coords="607,57,744,85"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="479,91,594,80,589,81,480,96"/>
+<area shape="rect" id="Node000009" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="588,109,763,137"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="479,99,576,112,570,113,479,105"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#ae855f01b88cfd86e3ff8ae7682bbd06c" title="Attempts to find a allocate block of memory given the size." alt="" coords="824,19,992,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="776,22,811,26,805,27,777,28"/>
+<area shape="rect" id="Node000006" href="$da/d3f/freelist_8c.html#a1ce834d1bd9f9caf272e6d63aa00deb8" title="Obtains the amount of free space within the freelist." alt="" coords="1040,19,1185,46"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="992,30,1027,32,1022,33,993,35"/>
+<area shape="rect" id="Node000007" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="1063,84,1162,112"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="954,44,1055,79,1050,79,954,50"/>
+<area shape="rect" id="Node000011" href="$de/d03/platform_8h.html#aa65146de20a7fd23870d3809834021b7" title=" " alt="" coords="592,161,759,189"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="495,173,579,175,574,176,495,178"/>
+<area shape="rect" id="Node000013" href="$d3/d3c/kmemory_8c.html#a6b55b65a2f2d473dac0d8ff4605a44fb" title=" " alt="" coords="411,213,466,241"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="299,225,398,226,393,228,300,230"/>
+<area shape="rect" id="Node000014" href="$dd/d44/dynamic__allocator_8c.html#a10c3c742d3900e743f85fe47c11be3e5" title="Frees a block of memory that was allocated by the allocator." alt="" coords="588,213,763,241"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="467,225,575,227,570,228,467,230"/>
+<area shape="rect" id="Node000017" href="$de/d03/platform_8h.html#a0b638fcfa31e0704eb976a8662c095f2" title=" " alt="" coords="620,265,731,293"/>
+<area shape="poly" id="edge17_Node000013_Node000017" title=" " alt="" coords="467,230,608,264,603,264,467,236"/>
+<area shape="rect" id="Node000015" href="$da/d3f/freelist_8c.html#a8af32093da394b6cfa1a3436b8e84283" title="Attempts to find a free block of memory given the size." alt="" coords="837,161,979,189"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="740,210,825,194,830,193,741,215"/>
+<area shape="poly" id="edge16_Node000015_Node000007" title=" " alt="" coords="946,158,1057,118,1062,117,947,163"/>
+<area shape="rect" id="Node000016" href="$da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df" title=" " alt="" coords="1072,161,1153,189"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="979,173,1059,175,1053,175,980,178"/>
+<area shape="rect" id="Node000020" href="$de/d03/platform_8h.html#a15258bb22b902725b1fbf405463ed07d" title=" " alt="" coords="350,317,527,345"/>
+<area shape="poly" id="edge20_Node000019_Node000020" title=" " alt="" coords="297,329,337,331,332,331,297,334"/>
+</map>

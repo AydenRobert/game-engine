@@ -1,0 +1,13 @@
+<map id="engine/src/platform/platform_linux.h" name="engine/src/platform/platform_linux.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="201,5,350,50"/>
+<area shape="rect" id="Node000002" href="$d4/db7/platform__linux_8c.html" title=" " alt="" coords="5,98,154,143"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,59,128,100,125,95,216,55"/>
+<area shape="rect" id="Node000003" href="$dc/d29/platform__linux__wayland_8h.html" title=" " alt="" coords="178,98,373,143"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="277,63,278,99,273,97,274,68"/>
+<area shape="rect" id="Node000005" href="$de/df2/platform__linux__x11_8h.html" title=" " alt="" coords="396,98,560,143"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="338,54,432,97,427,98,338,59"/>
+<area shape="rect" id="Node000004" href="$da/d6a/platform__linux__wayland_8c.html" title=" " alt="" coords="179,191,372,235"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="277,156,278,192,273,189,274,160"/>
+<area shape="rect" id="Node000006" href="$d3/daa/platform__linux__x11_8c.html" title=" " alt="" coords="397,191,559,235"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="480,156,480,192,476,189,476,160"/>
+</map>

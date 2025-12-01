@@ -1,0 +1,16 @@
+<map id="engine/src/platform/platform_linux_wayland.c" name="engine/src/platform/platform_linux_wayland.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="82,5,275,50"/>
+<area shape="rect" id="Node000002" href="$dc/d29/platform__linux__wayland_8h.html" title=" " alt="" coords="28,98,204,143"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,53,142,87,137,84,165,48"/>
+<area shape="rect" id="Node000006" href="$dd/d20/event_8h.html" title=" " alt="" coords="234,191,336,218"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="193,48,272,177,267,177,191,53"/>
+<area shape="rect" id="Node000003" href="$d8/db0/defines_8h.html" title=" " alt="" coords="76,342,156,370"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="60,146,34,165,12,192,8,204,12,217,27,250,48,281,92,330,87,332,43,284,22,253,7,219,3,204,7,189,30,161,63,141"/>
+<area shape="rect" id="Node000004" href="$db/dae/platform__linux_8h.html" title=" " alt="" coords="22,191,210,218"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="117,141,119,176,113,175,115,146"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="113,216,101,267,101,294,109,328,104,327,96,294,96,266,110,221"/>
+<area shape="rect" id="Node000005" href="$de/ded/input_8h.html" title=" " alt="" coords="111,266,209,294"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="125,216,147,253,142,253,123,221"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="154,293,133,330,130,327,150,296"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="280,217,258,256,223,296,192,319,160,337,158,333,189,315,219,292,253,253,276,220"/>
+</map>

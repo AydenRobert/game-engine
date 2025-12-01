@@ -1,0 +1,65 @@
+\doxysection{kstring.\+h}
+\hypertarget{kstring_8h_source}{}\label{kstring_8h_source}\index{engine/src/core/kstring.h@{engine/src/core/kstring.h}}
+\mbox{\hyperlink{kstring_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{math__types_8h}{math/math\_types.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{kstring_8h_ab7a013ae84adad0a807d921d9e38d424}{string\_length}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str);}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{kstring_8h_a6313f0a692f28c80f3016a5f77f31bec}{string\_duplicate}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_a3ffc35591464c532cf94a5bcb6adb2bc}{strings\_equal}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str0,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str1);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ Case-\/insensitive}}
+\DoxyCodeLine{00015\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_a148b565b9af89efb432a895868c1e4d1}{strings\_equali}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str0,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str1);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ \mbox{\hyperlink{kstring_8h_a7fec1c1563d0862f70d82a917db33b1d}{string\_format}}(\textcolor{keywordtype}{char}\ *dest,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *format,\ ...);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ \mbox{\hyperlink{kstring_8h_aa518371ea23e9607d8e3510ec32dac25}{string\_format\_v}}(\textcolor{keywordtype}{char}\ *dest,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *format,\ va\_list\ arg\_ptr);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{kstring_8h_ab683baecc9c29380d81c9b0fafe27738}{string\_empty}}(\textcolor{keywordtype}{char}\ *str);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{kstring_8h_a2e2721cb0d6afa4ac7bde71a51f5d7f0}{string\_copy}}(\textcolor{keywordtype}{char}\ *dest,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *source);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{kstring_8h_abf110e83cbf21d0e9939b1a1960d26cc}{string\_ncopy}}(\textcolor{keywordtype}{char}\ *dest,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *source,\ \mbox{\hyperlink{defines_8h_ada59a0de67c44384c6faa924ca63c2aa}{i64}}\ length);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{kstring_8h_ae12f9761e86ff49b94e2d88d138a362a}{string\_trim}}(\textcolor{keywordtype}{char}\ *str);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{kstring_8h_a3a6fea23341068d71be26ed6a01c7291}{string\_mid}}(\textcolor{keywordtype}{char}\ *dest,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *source,\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ start,\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ length);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ \mbox{\hyperlink{kstring_8h_af800a91db82019d4d323836568b98d4c}{string\_index\_of\_char}}(\textcolor{keywordtype}{char}\ *str,\ \textcolor{keywordtype}{char}\ c);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00045\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_ad7c955132fe8f53aaeaff69fc8b77703}{string\_to\_vec4}}(\textcolor{keywordtype}{char}\ *str,\ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ *out\_vec);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00056\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_ab85549c7a979de03e0f70c89b26fdf80}{string\_to\_vec3}}(\textcolor{keywordtype}{char}\ *str,\ \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}\ *out\_vec);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00067\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_aec206451753e0fa3c3a50b85b1eb5c00}{string\_to\_vec2}}(\textcolor{keywordtype}{char}\ *str,\ \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}}\ *out\_vec);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00076\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_ab2a8d90ecf93ac366cab2c087e5490d8}{string\_to\_f32}}(\textcolor{keywordtype}{char}\ *str,\ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ *out\_float);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00085\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_ae1132e637fab0793f6187364ecb24538}{string\_to\_f64}}(\textcolor{keywordtype}{char}\ *str,\ \mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}}\ *out\_float);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00094\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_a5f8db4d0998ac09a9132907ce94ed465}{string\_to\_i8}}(\textcolor{keywordtype}{char}\ *str,\ \mbox{\hyperlink{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729}{i8}}\ *out\_int);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00103\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_a37a9f3b2c3679b281ca0a69261d153de}{string\_to\_i16}}(\textcolor{keywordtype}{char}\ *str,\ \mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}}\ *out\_int);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00112\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_a9a8ecd9afe9747ffb2ca053af704e115}{string\_to\_i32}}(\textcolor{keywordtype}{char}\ *str,\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ *out\_int);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00121\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_ab476d5e1133f5819187a510f770436e0}{string\_to\_i64}}(\textcolor{keywordtype}{char}\ *str,\ \mbox{\hyperlink{defines_8h_ada59a0de67c44384c6faa924ca63c2aa}{i64}}\ *out\_int);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00130\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_a068b64c2ffb16dad36e3f38e70e2cc9b}{string\_to\_u8}}(\textcolor{keywordtype}{char}\ *str,\ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ *out\_int);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00139\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_afeafe4ee9063d058b4dab8804a260297}{string\_to\_u16}}(\textcolor{keywordtype}{char}\ *str,\ \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}\ *out\_int);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00148\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_a9c86848ed37369106d5764610b9bea69}{string\_to\_u32}}(\textcolor{keywordtype}{char}\ *str,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ *out\_int);}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00157\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_aa4fb0ad12002261fefbc176ff04b390d}{string\_to\_u64}}(\textcolor{keywordtype}{char}\ *str,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ *out\_int);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00167\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{kstring_8h_a77921b5fcfceb091641bddc64e9cb552}{string\_to\_b8}}(\textcolor{keywordtype}{char}\ *str,\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ *out\_bool);}
+
+\end{DoxyCode}

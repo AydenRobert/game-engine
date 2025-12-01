@@ -1,0 +1,35 @@
+\doxysection{game\+\_\+types.\+h}
+\hypertarget{game__types_8h_source}{}\label{game__types_8h_source}\index{engine/src/game\_types.h@{engine/src/game\_types.h}}
+\mbox{\hyperlink{game__types_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{application_8h}{core/application.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structgame}{game}}\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//\ The\ application\ configuration.}}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{structapplication__config}{application\_config}}\ \mbox{\hyperlink{structgame_a12c0bdd534b736ca685c7ef91b17c80d}{app\_config}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ Function\ pointer\ to\ game's\ initialize\ function.}}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ (*\mbox{\hyperlink{structgame_a5466af7e15d158c9a30a2c733514bc13}{initialize}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structgame}{game}}\ *game\_inst);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Function\ pointer\ to\ game's\ update\ function.}}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ (*\mbox{\hyperlink{structgame_afe7bfadc01e08def3e7cae0019151d1b}{update}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structgame}{game}}\ *game\_inst,\ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ delta\_time);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Function\ pointer\ to\ game's\ render\ function.}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ (*\mbox{\hyperlink{structgame_ac2c261fc48169dc53096929654c51bfe}{render}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structgame}{game}}\ *game\_inst,\ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ delta\_time);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Function\ pointer\ to\ handle\ resizes,\ if\ applicable}}
+\DoxyCodeLine{00023\ \ \ \ \ void\ (*\mbox{\hyperlink{structgame_a320793f814af5f889a43b7ab25d75b67}{on\_resize}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structgame}{game}}\ *game\_inst,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ width,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ height);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ Game-\/specific\ game\ state.}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structgame_aa77684f4c43b2aafcaa57421159f5d03}{state}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Size\ of\ the\ Game-\/specific\ state.}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{structgame_a48de9a59262433d6d4d2277252e78708}{state\_memory\_requirement}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ application\ state}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structgame_abbde50654ea1c9e81c5eb9611b0dc7ee}{application\_state}};}
+\DoxyCodeLine{00033\ \}\ \mbox{\hyperlink{structgame}{game}};}
+
+\end{DoxyCode}

@@ -1,0 +1,45 @@
+\doxysection{vulkan\+\_\+backend.\+h}
+\hypertarget{vulkan__backend_8h_source}{}\label{vulkan__backend_8h_source}\index{engine/src/renderer/vulkan/vulkan\_backend.h@{engine/src/renderer/vulkan/vulkan\_backend.h}}
+\mbox{\hyperlink{vulkan__backend_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{renderer__backend_8h}{renderer/renderer\_backend.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{resource__types_8h}{resources/resource\_types.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{vulkan__backend_8h_a0b90ec94f78aae6814140d684323d8d2}{vulkan\_renderer\_backend\_initialize}}(\mbox{\hyperlink{structrenderer__backend}{renderer\_backend}}\ *backend,}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *application\_name,}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structplatform__state}{platform\_state}}\ *plat\_state);}
+\DoxyCodeLine{00009\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__backend_8h_aaf5c03bd71d214149e0e3e97b0d0fbca}{vulkan\_renderer\_backend\_shutdown}}(\mbox{\hyperlink{structrenderer__backend}{renderer\_backend}}\ *backend);}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__backend_8h_a8eae56297e3b34f9dd52a04c24fd9730}{vulkan\_renderer\_backend\_on\_resized}}(\mbox{\hyperlink{structrenderer__backend}{renderer\_backend}}\ *backend,\ \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}\ width,}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}\ height);}
+\DoxyCodeLine{00013\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{vulkan__backend_8h_af88b430f0e8f76ff7224c6d65ff7ce14}{vulkan\_renderer\_backend\_begin\_frame}}(\mbox{\hyperlink{structrenderer__backend}{renderer\_backend}}\ *backend,}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ delta\_time);}
+\DoxyCodeLine{00015\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{vulkan__backend_8h_aa4147f264f03182a1ae88ce189d6810d}{vulkan\_renderer\_backend\_end\_frame}}(\mbox{\hyperlink{structrenderer__backend}{renderer\_backend}}\ *backend,\ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ delta\_time);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{vulkan__backend_8h_a8ff5edfb594f4171710eb0e5ec3897a5}{vulkan\_renderer\_begin\_renderpass}}(\mbox{\hyperlink{structrenderer__backend}{renderer\_backend}}\ *backend,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ renderpass\_id);}
+\DoxyCodeLine{00019\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{vulkan__backend_8h_a3f4765d046f40fb3e61e8a6705723b39}{vulkan\_renderer\_end\_renderpass}}(\mbox{\hyperlink{structrenderer__backend}{renderer\_backend}}\ *backend,\ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ renderpass\_id);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__backend_8h_a4c1bce5a99480fe239e0920a92d471ea}{vulkan\_renderer\_update\_global\_world\_state}}(\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ projection,\ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ view,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}\ view\_position,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ ambient\_colour,\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ mode);}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__backend_8h_ae8bcf3f950621f7ad986865960c2f538}{vulkan\_renderer\_update\_global\_ui\_state}}(\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ projection,\ \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}\ view,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ mode);}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__backend_8h_afb2953d737e09a76a30a16ed380d3a10}{vulkan\_renderer\_draw\_geometry}}(\mbox{\hyperlink{structrenderer__backend}{renderer\_backend}}\ *backend,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structgeometry__render__data}{geometry\_render\_data}}\ data);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__backend_8h_acb133c3efb85bf8cd0029ceeb6f287a8}{vulkan\_renderer\_create\_texture}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ *pixels,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structtexture}{texture}}\ *\mbox{\hyperlink{structtexture}{texture}});}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__backend_8h_a960741cefcbdc168f758b46407bcc9ec}{vulkan\_renderer\_destroy\_texture}}(\mbox{\hyperlink{structtexture}{texture}}\ *\mbox{\hyperlink{structtexture}{texture}});}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{vulkan__backend_8h_aae87f32cda6dae5a302e4c7c23eeccb1}{vulkan\_renderer\_create\_material}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structmaterial}{material}}\ *\mbox{\hyperlink{structmaterial}{material}});}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__backend_8h_a897d4b85115557425812030916e8cc56}{vulkan\_renderer\_destroy\_material}}(\textcolor{keyword}{struct}\ \mbox{\hyperlink{structmaterial}{material}}\ *\mbox{\hyperlink{structmaterial}{material}});}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{vulkan__backend_8h_a58fed7c35e4d38f94c14ecb0203ebbe1}{vulkan\_renderer\_create\_geometry}}(\mbox{\hyperlink{structgeometry}{geometry}}\ *\mbox{\hyperlink{structgeometry}{geometry}},\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ vertex\_size,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ vertex\_count,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *vertices,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ index\_size,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ index\_count,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *indices);}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__backend_8h_a798b85a7a54f19a9dfc5a3a7e05827a7}{vulkan\_renderer\_destroy\_geometry}}(\mbox{\hyperlink{structgeometry}{geometry}}\ *\mbox{\hyperlink{structgeometry}{geometry}});}
+
+\end{DoxyCode}

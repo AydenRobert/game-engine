@@ -1,0 +1,280 @@
+\doxysection{engine/src/core/event.h File Reference}
+\hypertarget{event_8h}{}\label{event_8h}\index{engine/src/core/event.h@{engine/src/core/event.h}}
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+Include dependency graph for event.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{d9/d06/event_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d41/event_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structevent__context}{event\+\_\+context}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct event\+\_\+context \mbox{\hyperlink{event_8h_a6f265c5acd97e3c89ad3a77b5eda27ec}{event\+\_\+context}}
+\item 
+typedef \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{event_8h_ac694dc305b9660134b170d9560b0563a}{PFN\+\_\+on\+\_\+event}}) (\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} code, void \texorpdfstring{$\ast$}{*}sender, void \texorpdfstring{$\ast$}{*}listener\+\_\+inst, \mbox{\hyperlink{structevent__context}{event\+\_\+context}} data)
+\item 
+typedef enum \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226}{system\+\_\+event\+\_\+code}} \mbox{\hyperlink{event_8h_aeb3aa7dc1a87db9aae0a5f0b3df676b9}{system\+\_\+event\+\_\+code}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226}{system\+\_\+event\+\_\+code}} \{ \newline
+\mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226aebab55ac2635b49a369eaa4c17dc2677}{EVENT\+\_\+\+CODE\+\_\+\+APPLICATION\+\_\+\+QUIT}} = 0x01
+, \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226aaf5d469683c442daf841f01c831344c1}{EVENT\+\_\+\+CODE\+\_\+\+KEY\+\_\+\+PRESSED}} = 0x02
+, \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226aa723c6cbe37568fcc035a890e380fb4f}{EVENT\+\_\+\+CODE\+\_\+\+KEY\+\_\+\+RELEASED}} = 0x03
+, \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226a013204a5d0b77a55a4701ac7161d1e97}{EVENT\+\_\+\+CODE\+\_\+\+BUTTON\+\_\+\+PRESSED}} = 0x04
+, \newline
+\mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226a85f06d8f0da4cdadb792e2e2f18979d2}{EVENT\+\_\+\+CODE\+\_\+\+BUTTON\+\_\+\+RELEASED}} = 0x05
+, \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226a681a38e19124eb42a25ab1551fa2a878}{EVENT\+\_\+\+CODE\+\_\+\+MOUSE\+\_\+\+MOVED}} = 0x06
+, \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226a923e40874ed01a63929ab78f31f1637d}{EVENT\+\_\+\+CODE\+\_\+\+MOUSE\+\_\+\+WHEEL}} = 0x07
+, \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226a6ed0f7b648dad406c17f0dfdd37ce656}{EVENT\+\_\+\+CODE\+\_\+\+RESIZED}} = 0x08
+, \newline
+\mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226adc91f9e55d1d7deb4a022e6e1cdebf6a}{EVENT\+\_\+\+CODE\+\_\+\+DEBUG0}} = 0x10
+, \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226ab117003cd03a50a871af56359135c212}{EVENT\+\_\+\+CODE\+\_\+\+DEBUG1}} = 0x11
+, \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226adc02622f68824378583610fcc2f2920f}{EVENT\+\_\+\+CODE\+\_\+\+DEBUG2}} = 0x12
+, \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226aab95ada4a3c3fce11c89b5e04289f205}{EVENT\+\_\+\+CODE\+\_\+\+DEBUG3}} = 0x13
+, \newline
+\mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226ac7fd2202a34af1a3ad71273bfbc21ea4}{EVENT\+\_\+\+CODE\+\_\+\+DEBUG4}} = 0x14
+, \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226a6f8c37abc1b165817660320b56d197cb}{MAX\+\_\+\+EVENT\+\_\+\+CODE}} = 0x\+FF
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{event_8h_a57f2384d2b1404b8cc887ccb9432da50}{event\+\_\+initialize}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}memory\+\_\+requirement, void \texorpdfstring{$\ast$}{*}state)
+\item 
+void \mbox{\hyperlink{event_8h_ae014ad101930547bce61ff7ebf93be23}{event\+\_\+shutdown}} (void \texorpdfstring{$\ast$}{*}state)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{event_8h_a8ef51b7c38c54169c57b45bb8e55047a}{event\+\_\+register}} (\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} code, void \texorpdfstring{$\ast$}{*}listener, \mbox{\hyperlink{event_8h_ac694dc305b9660134b170d9560b0563a}{PFN\+\_\+on\+\_\+event}} on\+\_\+event)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{event_8h_ae6b9afa0e8bc3c94752e7b2c0b9c17f8}{event\+\_\+unregister}} (\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} code, void \texorpdfstring{$\ast$}{*}listener, \mbox{\hyperlink{event_8h_ac694dc305b9660134b170d9560b0563a}{PFN\+\_\+on\+\_\+event}} on\+\_\+event)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{event_8h_a4174710cacb6cab063e91e0f0f02d63f}{event\+\_\+fire}} (\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} code, void \texorpdfstring{$\ast$}{*}sender, \mbox{\hyperlink{structevent__context}{event\+\_\+context}} \mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}})
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{event_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{event_8h_a6f265c5acd97e3c89ad3a77b5eda27ec}\index{event.h@{event.h}!event\_context@{event\_context}}
+\index{event\_context@{event\_context}!event.h@{event.h}}
+\doxysubsubsection{\texorpdfstring{event\_context}{event\_context}}
+{\footnotesize\ttfamily \label{event_8h_a6f265c5acd97e3c89ad3a77b5eda27ec} 
+typedef struct event\+\_\+context event\+\_\+context}
+
+\Hypertarget{event_8h_ac694dc305b9660134b170d9560b0563a}\index{event.h@{event.h}!PFN\_on\_event@{PFN\_on\_event}}
+\index{PFN\_on\_event@{PFN\_on\_event}!event.h@{event.h}}
+\doxysubsubsection{\texorpdfstring{PFN\_on\_event}{PFN\_on\_event}}
+{\footnotesize\ttfamily \label{event_8h_ac694dc305b9660134b170d9560b0563a} 
+typedef \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} PFN\+\_\+on\+\_\+event) (\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} code, void \texorpdfstring{$\ast$}{*}sender, void \texorpdfstring{$\ast$}{*}listener\+\_\+inst, \mbox{\hyperlink{structevent__context}{event\+\_\+context}} data)}
+
+\Hypertarget{event_8h_aeb3aa7dc1a87db9aae0a5f0b3df676b9}\index{event.h@{event.h}!system\_event\_code@{system\_event\_code}}
+\index{system\_event\_code@{system\_event\_code}!event.h@{event.h}}
+\doxysubsubsection{\texorpdfstring{system\_event\_code}{system\_event\_code}}
+{\footnotesize\ttfamily \label{event_8h_aeb3aa7dc1a87db9aae0a5f0b3df676b9} 
+typedef enum \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226}{system\+\_\+event\+\_\+code}} \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226}{system\+\_\+event\+\_\+code}}}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{event_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226}\index{event.h@{event.h}!system\_event\_code@{system\_event\_code}}
+\index{system\_event\_code@{system\_event\_code}!event.h@{event.h}}
+\doxysubsubsection{\texorpdfstring{system\_event\_code}{system\_event\_code}}
+{\footnotesize\ttfamily \label{event_8h_a6779f338629229430f8974f2f86d7226} 
+enum \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226}{system\+\_\+event\+\_\+code}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_APPLICATION\_QUIT@{EVENT\_CODE\_APPLICATION\_QUIT}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_APPLICATION\_QUIT@{EVENT\_CODE\_APPLICATION\_QUIT}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226aebab55ac2635b49a369eaa4c17dc2677}\label{event_8h_a6779f338629229430f8974f2f86d7226aebab55ac2635b49a369eaa4c17dc2677} 
+EVENT\+\_\+\+CODE\+\_\+\+APPLICATION\+\_\+\+QUIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_KEY\_PRESSED@{EVENT\_CODE\_KEY\_PRESSED}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_KEY\_PRESSED@{EVENT\_CODE\_KEY\_PRESSED}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226aaf5d469683c442daf841f01c831344c1}\label{event_8h_a6779f338629229430f8974f2f86d7226aaf5d469683c442daf841f01c831344c1} 
+EVENT\+\_\+\+CODE\+\_\+\+KEY\+\_\+\+PRESSED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_KEY\_RELEASED@{EVENT\_CODE\_KEY\_RELEASED}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_KEY\_RELEASED@{EVENT\_CODE\_KEY\_RELEASED}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226aa723c6cbe37568fcc035a890e380fb4f}\label{event_8h_a6779f338629229430f8974f2f86d7226aa723c6cbe37568fcc035a890e380fb4f} 
+EVENT\+\_\+\+CODE\+\_\+\+KEY\+\_\+\+RELEASED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_BUTTON\_PRESSED@{EVENT\_CODE\_BUTTON\_PRESSED}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_BUTTON\_PRESSED@{EVENT\_CODE\_BUTTON\_PRESSED}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226a013204a5d0b77a55a4701ac7161d1e97}\label{event_8h_a6779f338629229430f8974f2f86d7226a013204a5d0b77a55a4701ac7161d1e97} 
+EVENT\+\_\+\+CODE\+\_\+\+BUTTON\+\_\+\+PRESSED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_BUTTON\_RELEASED@{EVENT\_CODE\_BUTTON\_RELEASED}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_BUTTON\_RELEASED@{EVENT\_CODE\_BUTTON\_RELEASED}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226a85f06d8f0da4cdadb792e2e2f18979d2}\label{event_8h_a6779f338629229430f8974f2f86d7226a85f06d8f0da4cdadb792e2e2f18979d2} 
+EVENT\+\_\+\+CODE\+\_\+\+BUTTON\+\_\+\+RELEASED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_MOUSE\_MOVED@{EVENT\_CODE\_MOUSE\_MOVED}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_MOUSE\_MOVED@{EVENT\_CODE\_MOUSE\_MOVED}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226a681a38e19124eb42a25ab1551fa2a878}\label{event_8h_a6779f338629229430f8974f2f86d7226a681a38e19124eb42a25ab1551fa2a878} 
+EVENT\+\_\+\+CODE\+\_\+\+MOUSE\+\_\+\+MOVED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_MOUSE\_WHEEL@{EVENT\_CODE\_MOUSE\_WHEEL}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_MOUSE\_WHEEL@{EVENT\_CODE\_MOUSE\_WHEEL}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226a923e40874ed01a63929ab78f31f1637d}\label{event_8h_a6779f338629229430f8974f2f86d7226a923e40874ed01a63929ab78f31f1637d} 
+EVENT\+\_\+\+CODE\+\_\+\+MOUSE\+\_\+\+WHEEL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_RESIZED@{EVENT\_CODE\_RESIZED}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_RESIZED@{EVENT\_CODE\_RESIZED}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226a6ed0f7b648dad406c17f0dfdd37ce656}\label{event_8h_a6779f338629229430f8974f2f86d7226a6ed0f7b648dad406c17f0dfdd37ce656} 
+EVENT\+\_\+\+CODE\+\_\+\+RESIZED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_DEBUG0@{EVENT\_CODE\_DEBUG0}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_DEBUG0@{EVENT\_CODE\_DEBUG0}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226adc91f9e55d1d7deb4a022e6e1cdebf6a}\label{event_8h_a6779f338629229430f8974f2f86d7226adc91f9e55d1d7deb4a022e6e1cdebf6a} 
+EVENT\+\_\+\+CODE\+\_\+\+DEBUG0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_DEBUG1@{EVENT\_CODE\_DEBUG1}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_DEBUG1@{EVENT\_CODE\_DEBUG1}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226ab117003cd03a50a871af56359135c212}\label{event_8h_a6779f338629229430f8974f2f86d7226ab117003cd03a50a871af56359135c212} 
+EVENT\+\_\+\+CODE\+\_\+\+DEBUG1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_DEBUG2@{EVENT\_CODE\_DEBUG2}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_DEBUG2@{EVENT\_CODE\_DEBUG2}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226adc02622f68824378583610fcc2f2920f}\label{event_8h_a6779f338629229430f8974f2f86d7226adc02622f68824378583610fcc2f2920f} 
+EVENT\+\_\+\+CODE\+\_\+\+DEBUG2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_DEBUG3@{EVENT\_CODE\_DEBUG3}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_DEBUG3@{EVENT\_CODE\_DEBUG3}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226aab95ada4a3c3fce11c89b5e04289f205}\label{event_8h_a6779f338629229430f8974f2f86d7226aab95ada4a3c3fce11c89b5e04289f205} 
+EVENT\+\_\+\+CODE\+\_\+\+DEBUG3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_DEBUG4@{EVENT\_CODE\_DEBUG4}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_DEBUG4@{EVENT\_CODE\_DEBUG4}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226ac7fd2202a34af1a3ad71273bfbc21ea4}\label{event_8h_a6779f338629229430f8974f2f86d7226ac7fd2202a34af1a3ad71273bfbc21ea4} 
+EVENT\+\_\+\+CODE\+\_\+\+DEBUG4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_EVENT\_CODE@{MAX\_EVENT\_CODE}!event.h@{event.h}}\index{event.h@{event.h}!MAX\_EVENT\_CODE@{MAX\_EVENT\_CODE}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226a6f8c37abc1b165817660320b56d197cb}\label{event_8h_a6779f338629229430f8974f2f86d7226a6f8c37abc1b165817660320b56d197cb} 
+MAX\+\_\+\+EVENT\+\_\+\+CODE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{event_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{event_8h_a4174710cacb6cab063e91e0f0f02d63f}\index{event.h@{event.h}!event\_fire@{event\_fire}}
+\index{event\_fire@{event\_fire}!event.h@{event.h}}
+\doxysubsubsection{\texorpdfstring{event\_fire()}{event\_fire()}}
+{\footnotesize\ttfamily \label{event_8h_a4174710cacb6cab063e91e0f0f02d63f} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} event\+\_\+fire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{code}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{sender}{, }\item[{\mbox{\hyperlink{structevent__context}{event\+\_\+context}}}]{context}{}\end{DoxyParamCaption})}
+
+Fires an event to listeners of the given code. If an event handler returns true, the event is considered handled and is not passed on to anymore listeners. 
+\begin{DoxyParams}{Parameters}
+{\em code} & The event code to fire. \\
+\hline
+{\em sender} & A pointer to the sender, can be 0/\+NULL. \\
+\hline
+{\em context} & The event data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if handled; otherwise false. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d20/event_8h_a4174710cacb6cab063e91e0f0f02d63f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{event_8h_a57f2384d2b1404b8cc887ccb9432da50}\index{event.h@{event.h}!event\_initialize@{event\_initialize}}
+\index{event\_initialize@{event\_initialize}!event.h@{event.h}}
+\doxysubsubsection{\texorpdfstring{event\_initialize()}{event\_initialize()}}
+{\footnotesize\ttfamily \label{event_8h_a57f2384d2b1404b8cc887ccb9432da50} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} event\+\_\+initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{memory\+\_\+requirement}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d20/event_8h_a57f2384d2b1404b8cc887ccb9432da50_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d20/event_8h_a57f2384d2b1404b8cc887ccb9432da50_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{event_8h_a8ef51b7c38c54169c57b45bb8e55047a}\index{event.h@{event.h}!event\_register@{event\_register}}
+\index{event\_register@{event\_register}!event.h@{event.h}}
+\doxysubsubsection{\texorpdfstring{event\_register()}{event\_register()}}
+{\footnotesize\ttfamily \label{event_8h_a8ef51b7c38c54169c57b45bb8e55047a} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} event\+\_\+register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{code}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{listener}{, }\item[{\mbox{\hyperlink{event_8h_ac694dc305b9660134b170d9560b0563a}{PFN\+\_\+on\+\_\+event}}}]{on\+\_\+event}{}\end{DoxyParamCaption})}
+
+Register to listen when events are sent with the provided code. Events with duplicate listener/callback combos will not register and cause this to return false. 
+\begin{DoxyParams}{Parameters}
+{\em code} & The event code to listen for. \\
+\hline
+{\em listener} & A pointer to a listener instance, can be 0/\+NULL. \\
+\hline
+{\em on\+\_\+event} & The callback function pointer to be invoked when the event code is fired. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the event is successfully registered; otherwise false. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d20/event_8h_a8ef51b7c38c54169c57b45bb8e55047a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{event_8h_ae014ad101930547bce61ff7ebf93be23}\index{event.h@{event.h}!event\_shutdown@{event\_shutdown}}
+\index{event\_shutdown@{event\_shutdown}!event.h@{event.h}}
+\doxysubsubsection{\texorpdfstring{event\_shutdown()}{event\_shutdown()}}
+{\footnotesize\ttfamily \label{event_8h_ae014ad101930547bce61ff7ebf93be23} 
+void event\+\_\+shutdown (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d20/event_8h_ae014ad101930547bce61ff7ebf93be23_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{event_8h_ae6b9afa0e8bc3c94752e7b2c0b9c17f8}\index{event.h@{event.h}!event\_unregister@{event\_unregister}}
+\index{event\_unregister@{event\_unregister}!event.h@{event.h}}
+\doxysubsubsection{\texorpdfstring{event\_unregister()}{event\_unregister()}}
+{\footnotesize\ttfamily \label{event_8h_ae6b9afa0e8bc3c94752e7b2c0b9c17f8} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} event\+\_\+unregister (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{code}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{listener}{, }\item[{\mbox{\hyperlink{event_8h_ac694dc305b9660134b170d9560b0563a}{PFN\+\_\+on\+\_\+event}}}]{on\+\_\+event}{}\end{DoxyParamCaption})}
+
+Unregister from listening for when events are sent with the provided code. If no matching registration is found, this will return false. 
+\begin{DoxyParams}{Parameters}
+{\em code} & The event code to stop listening for. \\
+\hline
+{\em listener} & A pointer to a listener instance, can be 0/\+NULL. \\
+\hline
+{\em on\+\_\+event} & The callback function pointer to be unregistered. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the event is successfully unregistered; otherwise false. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d20/event_8h_ae6b9afa0e8bc3c94752e7b2c0b9c17f8_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,9 @@
+<map id="texture_system_state" name="texture_system_state">
+<area shape="rect" id="Node000001" title=" " alt="" coords="151,128,314,156"/>
+<area shape="rect" id="Node000002" href="$db/d2f/structtexture__system__config.html" title=" " alt="" coords="5,5,175,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,41,182,102,215,128,210,128,179,106,112,46"/>
+<area shape="rect" id="Node000003" href="$dd/db6/structtexture.html" title=" " alt="" coords="198,5,267,33"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="235,47,235,129,230,127,231,50"/>
+<area shape="rect" id="Node000004" href="$d0/d99/structhashtable.html" title="Represents a simple hashtable. Members of this structure should not be modified outside the functions..." alt="" coords="355,5,441,33"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="397,47,389,79,371,106,345,124,315,135,314,130,342,119,367,102,384,77,393,50"/>
+</map>

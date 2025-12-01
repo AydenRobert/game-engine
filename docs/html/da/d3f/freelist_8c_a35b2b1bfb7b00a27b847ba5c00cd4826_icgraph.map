@@ -1,0 +1,31 @@
+<map id="freelist_create" name="freelist_create">
+<area shape="rect" id="Node000001" title="Creates a new freelist or gets the memory requirement for one. Call twice; first passing 0 to memory ..." alt="" coords="1428,92,1543,120"/>
+<area shape="rect" id="Node000002" href="$dd/d44/dynamic__allocator_8c.html#aecae34591274cba276c3e98bcc6d6943" title="Creates a dynamic allocator. Should be called twice; once to get the memory requirement,..." alt="" coords="1190,25,1380,53"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1424,86,1329,56,1329,51,1430,87"/>
+<area shape="rect" id="Node000006" href="$db/dab/vulkan__buffer_8c.html#adc1253645b021b8c8dd0ff5f001c1668" title=" " alt="" coords="1206,117,1364,145"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1415,115,1364,124,1364,119,1410,115"/>
+<area shape="rect" id="Node000003" href="$d3/d3c/kmemory_8c.html#a365fa0de016751708bc4c612d21285eb" title=" " alt="" coords="718,5,912,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1172,26,1142,26,1023,21,913,20,912,15,1023,16,1142,21,1178,26"/>
+<area shape="rect" id="Node000004" href="$d4/d8b/application_8c.html#a2ce02f6d4bd01f2d130aef9cd460cf6a" title=" " alt="" coords="108,47,249,74"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="701,29,250,59,249,53,703,24"/>
+<area shape="rect" id="Node000005" href="$d1/dc6/entry_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,47,60,74"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="90,62,62,63,59,58,94,59"/>
+<area shape="rect" id="Node000007" href="$d1/da5/vulkan__backend_8c.html#af518f3f8b226671c0e27aec52faec49b" title=" " alt="" coords="994,35,1108,62"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1233,111,1141,78,1104,66,1104,60,1143,73,1239,111"/>
+<area shape="rect" id="Node000008" href="$d1/da5/vulkan__backend_8c.html#a5e1bd4cf15ecec24c982ccd79a58a94d" title=" " alt="" coords="978,87,1124,114"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="1188,119,1124,113,1124,107,1194,119"/>
+<area shape="rect" id="Node000012" href="$d2/d8c/vulkan__material__shader_8c.html#a25ec4d4e764205648b31034e4b978197" title=" " alt="" coords="962,138,1140,183"/>
+<area shape="poly" id="edge12_Node000006_Node000012" title=" " alt="" coords="1194,143,1141,152,1140,147,1188,143"/>
+<area shape="rect" id="Node000013" href="$d1/da5/vulkan__backend_8c.html#acb133c3efb85bf8cd0029ceeb6f287a8" title=" " alt="" coords="728,173,902,218"/>
+<area shape="poly" id="edge13_Node000006_Node000013" title=" " alt="" coords="1249,152,1199,179,1143,198,1081,207,1017,211,902,208,902,202,1017,206,1080,202,1142,193,1197,174,1244,154"/>
+<area shape="rect" id="Node000014" href="$da/d35/vulkan__ui__shader_8c.html#a012c2b7ad2f6fb9c9013e35220e860a6" title=" " alt="" coords="960,257,1142,285"/>
+<area shape="poly" id="edge15_Node000006_Node000014" title=" " alt="" coords="1260,155,1207,200,1144,242,1102,259,1101,254,1141,237,1204,195,1255,157"/>
+<area shape="rect" id="Node000009" href="$d1/da5/vulkan__backend_8c.html#a58fed7c35e4d38f94c14ecb0203ebbe1" title=" " alt="" coords="728,78,902,123"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="961,101,903,103,902,98,966,100"/>
+<area shape="rect" id="Node000010" href="$d4/d7f/renderer__backend_8c.html#ae259faf752d8672193dc31ec72ab2754" title=" " alt="" coords="484,87,670,114"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="710,101,670,103,670,98,715,100"/>
+<area shape="rect" id="Node000011" href="$d0/dcc/renderer__frontend_8c.html#a389fec0dabe6589332ed60bb427aaaef" title=" " alt="" coords="297,72,436,100"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="466,93,437,93,436,88,471,92"/>
+<area shape="poly" id="edge11_Node000011_Node000004" title=" " alt="" coords="279,75,250,73,249,67,284,74"/>
+<area shape="poly" id="edge14_Node000013_Node000010" title=" " alt="" coords="740,167,614,118,615,112,745,167"/>
+</map>

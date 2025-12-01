@@ -1,0 +1,32 @@
+\doxysection{vulkan\+\_\+image.\+h}
+\hypertarget{vulkan__image_8h_source}{}\label{vulkan__image_8h_source}\index{engine/src/renderer/vulkan/vulkan\_image.h@{engine/src/renderer/vulkan/vulkan\_image.h}}
+\mbox{\hyperlink{vulkan__image_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vulkan__types_8inl}{renderer/vulkan/vulkan\_types.inl}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__image_8h_ae8efa06d320d8156f69f0c8352f37340}{vulkan\_image\_create}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},\ VkImageType\ image\_type,}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ width,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ height,\ VkFormat\ format,}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkImageTiling\ tiling,\ VkImageUsageFlags\ usage,}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkMemoryPropertyFlags\ memory\_flags,\ \mbox{\hyperlink{defines_8h_ac6baccc379c73d4e641ef847dbb08fa2}{b32}}\ create\_view,}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkImageAspectFlags\ view\_aspect\_flags,}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__image}{vulkan\_image}}\ *out\_image);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__image_8h_acac51c2be133dd1ff4bf11dbb613bf41}{vulkan\_image\_view\_create}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},\ VkFormat\ format,}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__image}{vulkan\_image}}\ *image,}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkImageAspectFlags\ aspect\_flags);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__image_8h_a00633d75f04d5a01f8e308fc286d1fee}{vulkan\_image\_transition\_layout}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__command__buffer}{vulkan\_command\_buffer}}\ *command\_buffer,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__image}{vulkan\_image}}\ *image,\ VkFormat\ format,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkImageLayout\ old\_layout,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkImageLayout\ new\_layout);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__image_8h_a271f9cd1a0b2aa94e6f0f48ad684a610}{vulkan\_image\_copy\_from\_buffer}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},\ \mbox{\hyperlink{structvulkan__image}{vulkan\_image}}\ *image,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkBuffer\ buffer,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__command__buffer}{vulkan\_command\_buffer}}\ *command\_buffer);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__image_8h_a7d1140c936aeeadb57f27f293db7674a}{vulkan\_image\_destroy}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},\ \mbox{\hyperlink{structvulkan__image}{vulkan\_image}}\ *image);}
+
+\end{DoxyCode}

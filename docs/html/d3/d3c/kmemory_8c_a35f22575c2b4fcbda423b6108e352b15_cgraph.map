@@ -1,0 +1,15 @@
+<map id="kallocate" name="kallocate">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,84,86,112"/>
+<area shape="rect" id="Node000002" href="$dd/d44/dynamic__allocator_8c.html#aeef3ef902c20758ce4e52fd3ce7c3112" title="Allocates an amount of memory and returns the given block." alt="" coords="134,32,334,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,84,133,70,166,63,161,65,134,75,87,89"/>
+<area shape="rect" id="Node000006" href="$de/d03/platform_8h.html#a19df473ff145c8579c4c838d5bc67372" title=" " alt="" coords="166,84,302,112"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="86,95,152,96,148,99,87,100"/>
+<area shape="rect" id="Node000007" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="147,136,321,164"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="86,107,134,121,166,131,161,132,133,126,86,112"/>
+<area shape="rect" id="Node000003" href="$da/d3f/freelist_8c.html#ae855f01b88cfd86e3ff8ae7682bbd06c" title="Attempts to find a allocate block of memory given the size." alt="" coords="382,32,550,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="334,43,369,45,364,46,335,48"/>
+<area shape="rect" id="Node000004" href="$da/d3f/freelist_8c.html#a1ce834d1bd9f9caf272e6d63aa00deb8" title="Obtains the amount of free space within the freelist." alt="" coords="598,5,744,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="550,32,586,30,581,31,551,37"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="621,57,721,85"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="551,54,609,63,604,63,551,59"/>
+</map>

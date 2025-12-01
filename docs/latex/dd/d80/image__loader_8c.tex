@@ -1,0 +1,114 @@
+\doxysection{engine/src/resources/loaders/image\+\_\+loader.c File Reference}
+\hypertarget{image__loader_8c}{}\label{image__loader_8c}\index{engine/src/resources/loaders/image\_loader.c@{engine/src/resources/loaders/image\_loader.c}}
+{\ttfamily \#include "{}resources/loaders/image\+\_\+loader.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}core/kstring.\+h"{}}\newline
+{\ttfamily \#include "{}core/logger.\+h"{}}\newline
+{\ttfamily \#include "{}resources/loaders/loader\+\_\+utils.\+h"{}}\newline
+{\ttfamily \#include "{}resources/resource\+\_\+types.\+h"{}}\newline
+{\ttfamily \#include "{}systems/resource\+\_\+system.\+h"{}}\newline
+{\ttfamily \#include "{}vendor/stb\+\_\+image.\+h"{}}\newline
+Include dependency graph for image\+\_\+loader.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dea/image__loader_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{image__loader_8c_a18372412ad2fc3ce1e3240b3cf0efe78}{STB\+\_\+\+IMAGE\+\_\+\+IMPLEMENTATION}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{image__loader_8c_a66da4252462c1386e4e5c9101e08b93d}{image\+\_\+loader\+\_\+load}} (struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}self, const char \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}out\+\_\+resource)
+\item 
+void \mbox{\hyperlink{image__loader_8c_a02e8bef5b7c6b12aa5317a6ea17d84bb}{image\+\_\+loader\+\_\+unload}} (struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}self, \mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structresource}{resource}})
+\item 
+\mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \mbox{\hyperlink{image__loader_8c_aa43f47baf41812728a2781e35d2bbadc}{image\+\_\+resource\+\_\+loader\+\_\+create}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{image__loader_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{image__loader_8c_a18372412ad2fc3ce1e3240b3cf0efe78}\index{image\_loader.c@{image\_loader.c}!STB\_IMAGE\_IMPLEMENTATION@{STB\_IMAGE\_IMPLEMENTATION}}
+\index{STB\_IMAGE\_IMPLEMENTATION@{STB\_IMAGE\_IMPLEMENTATION}!image\_loader.c@{image\_loader.c}}
+\doxysubsubsection{\texorpdfstring{STB\_IMAGE\_IMPLEMENTATION}{STB\_IMAGE\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \label{image__loader_8c_a18372412ad2fc3ce1e3240b3cf0efe78} 
+\#define STB\+\_\+\+IMAGE\+\_\+\+IMPLEMENTATION}
+
+
+
+\label{doc-func-members}
+\Hypertarget{image__loader_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{image__loader_8c_a66da4252462c1386e4e5c9101e08b93d}\index{image\_loader.c@{image\_loader.c}!image\_loader\_load@{image\_loader\_load}}
+\index{image\_loader\_load@{image\_loader\_load}!image\_loader.c@{image\_loader.c}}
+\doxysubsubsection{\texorpdfstring{image\_loader\_load()}{image\_loader\_load()}}
+{\footnotesize\ttfamily \label{image__loader_8c_a66da4252462c1386e4e5c9101e08b93d} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} image\+\_\+loader\+\_\+load (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+resource}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d80/image__loader_8c_a66da4252462c1386e4e5c9101e08b93d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d80/image__loader_8c_a66da4252462c1386e4e5c9101e08b93d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{image__loader_8c_a02e8bef5b7c6b12aa5317a6ea17d84bb}\index{image\_loader.c@{image\_loader.c}!image\_loader\_unload@{image\_loader\_unload}}
+\index{image\_loader\_unload@{image\_loader\_unload}!image\_loader.c@{image\_loader.c}}
+\doxysubsubsection{\texorpdfstring{image\_loader\_unload()}{image\_loader\_unload()}}
+{\footnotesize\ttfamily \label{image__loader_8c_a02e8bef5b7c6b12aa5317a6ea17d84bb} 
+void image\+\_\+loader\+\_\+unload (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{\mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}}]{resource}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d80/image__loader_8c_a02e8bef5b7c6b12aa5317a6ea17d84bb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d80/image__loader_8c_a02e8bef5b7c6b12aa5317a6ea17d84bb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{image__loader_8c_aa43f47baf41812728a2781e35d2bbadc}\index{image\_loader.c@{image\_loader.c}!image\_resource\_loader\_create@{image\_resource\_loader\_create}}
+\index{image\_resource\_loader\_create@{image\_resource\_loader\_create}!image\_loader.c@{image\_loader.c}}
+\doxysubsubsection{\texorpdfstring{image\_resource\_loader\_create()}{image\_resource\_loader\_create()}}
+{\footnotesize\ttfamily \label{image__loader_8c_aa43f47baf41812728a2781e35d2bbadc} 
+\mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} image\+\_\+resource\+\_\+loader\+\_\+create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d80/image__loader_8c_aa43f47baf41812728a2781e35d2bbadc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d80/image__loader_8c_aa43f47baf41812728a2781e35d2bbadc_icgraph}
+\end{center}
+\end{figure}

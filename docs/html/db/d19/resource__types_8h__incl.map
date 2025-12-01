@@ -1,0 +1,9 @@
+<map id="engine/src/resources/resource_types.h" name="engine/src/resources/resource_types.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="21,5,176,50"/>
+<area shape="rect" id="Node000002" href="$d4/d7e/math__types_8h.html" title=" " alt="" coords="25,98,173,126"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,48,101,83,96,82,98,53"/>
+<area shape="rect" id="Node000003" href="$d8/db0/defines_8h.html" title=" " alt="" coords="5,174,86,201"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="92,125,66,163,62,159,87,128"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="110,174,195,201"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="110,124,136,161,131,161,107,129"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="vec4_normalized" name="vec4_normalized">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,32,138,60"/>
+<area shape="rect" id="Node000002" href="$dc/dd0/kmath_8h.html#a4790d435ea6da1e159455e328e16106c" title=" " alt="" coords="186,32,310,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,43,173,45,168,46,138,48"/>
+<area shape="rect" id="Node000003" href="$dc/dd0/kmath_8h.html#a40e8e2e66089ce2b25a0def6b3b6c5bf" title=" " alt="" coords="358,32,437,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,43,345,46,340,46,310,48"/>
+<area shape="rect" id="Node000004" href="$df/dc5/kmath_8c.html#a44537c51868208d3bcfec4fe46db9bf4" title=" " alt="" coords="527,5,582,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="438,36,509,27,515,26,438,42"/>
+<area shape="rect" id="Node000005" href="$dc/dd0/kmath_8h.html#ab4362549c51f7c871d8ba6b639cc3a96" title=" " alt="" coords="485,57,624,85"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="438,50,473,58,467,57,438,55"/>
+</map>

@@ -1,0 +1,240 @@
+\doxysection{engine/src/platform/platform.h File Reference}
+\hypertarget{platform_8h}{}\label{platform_8h}\index{engine/src/platform/platform.h@{engine/src/platform/platform.h}}
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+Include dependency graph for platform.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{da/d88/platform_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d6c/platform_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structplatform__state}{platform\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct platform\+\_\+state \mbox{\hyperlink{platform_8h_a8c661bb1c0637f4277be66a5c2f18604}{platform\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{platform_8h_a1557f29064029f8b437d0fbcc587ebbd}{platform\+\_\+startup}} (\mbox{\hyperlink{structplatform__state}{platform\+\_\+state}} \texorpdfstring{$\ast$}{*}plat\+\_\+state, const char \texorpdfstring{$\ast$}{*}application\+\_\+name, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} x, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} y, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} width, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} height)
+\item 
+void \mbox{\hyperlink{platform_8h_a7fe7553c63bc948e2ee04d15597d6ccd}{platform\+\_\+shutdown}} (\mbox{\hyperlink{structplatform__state}{platform\+\_\+state}} \texorpdfstring{$\ast$}{*}plat\+\_\+state)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{platform_8h_af47d0fad6d6e686e1e0f668c95b1c201}{platform\+\_\+pump\+\_\+messages}} (\mbox{\hyperlink{structplatform__state}{platform\+\_\+state}} \texorpdfstring{$\ast$}{*}plat\+\_\+state)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{platform_8h_a19df473ff145c8579c4c838d5bc67372}{platform\+\_\+allocate}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} aligned)
+\item 
+void \mbox{\hyperlink{platform_8h_a0b638fcfa31e0704eb976a8662c095f2}{platform\+\_\+free}} (void \texorpdfstring{$\ast$}{*}block, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} aligned)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{platform_8h_a59e03b207e95523b84692ea7f68e4654}{platform\+\_\+zero\+\_\+memory}} (void \texorpdfstring{$\ast$}{*}block, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{platform_8h_a15258bb22b902725b1fbf405463ed07d}{platform\+\_\+copy\+\_\+memory}} (void \texorpdfstring{$\ast$}{*}dest, const void \texorpdfstring{$\ast$}{*}source, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{platform_8h_aa65146de20a7fd23870d3809834021b7}{platform\+\_\+set\+\_\+memory}} (void \texorpdfstring{$\ast$}{*}dest, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} value, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size)
+\item 
+void \mbox{\hyperlink{platform_8h_ac352c68fed21ee19eff9a165d1648c4c}{platform\+\_\+console\+\_\+write}} (const char \texorpdfstring{$\ast$}{*}message, \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} colour)
+\item 
+void \mbox{\hyperlink{platform_8h_adee3e77de1e3374a118e9ebc150c9800}{platform\+\_\+console\+\_\+write\+\_\+error}} (const char \texorpdfstring{$\ast$}{*}message, \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} colour)
+\item 
+\mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}} \mbox{\hyperlink{platform_8h_af38f532e572a9da41eaad4be29a58ada}{platform\+\_\+get\+\_\+absolute\+\_\+time}} ()
+\item 
+void \mbox{\hyperlink{platform_8h_ae21676dfd997b1c6dd9c06f69b5618e4}{platform\+\_\+sleep}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} ms)
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{platform_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{platform_8h_a8c661bb1c0637f4277be66a5c2f18604}\index{platform.h@{platform.h}!platform\_state@{platform\_state}}
+\index{platform\_state@{platform\_state}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{platform\_state}{platform\_state}}
+{\footnotesize\ttfamily \label{platform_8h_a8c661bb1c0637f4277be66a5c2f18604} 
+typedef struct platform\+\_\+state platform\+\_\+state}
+
+
+
+\label{doc-func-members}
+\Hypertarget{platform_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{platform_8h_a19df473ff145c8579c4c838d5bc67372}\index{platform.h@{platform.h}!platform\_allocate@{platform\_allocate}}
+\index{platform\_allocate@{platform\_allocate}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{platform\_allocate()}{platform\_allocate()}}
+{\footnotesize\ttfamily \label{platform_8h_a19df473ff145c8579c4c838d5bc67372} 
+void \texorpdfstring{$\ast$}{*} platform\+\_\+allocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{aligned}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d03/platform_8h_a19df473ff145c8579c4c838d5bc67372_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{platform_8h_ac352c68fed21ee19eff9a165d1648c4c}\index{platform.h@{platform.h}!platform\_console\_write@{platform\_console\_write}}
+\index{platform\_console\_write@{platform\_console\_write}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{platform\_console\_write()}{platform\_console\_write()}}
+{\footnotesize\ttfamily \label{platform_8h_ac352c68fed21ee19eff9a165d1648c4c} 
+void platform\+\_\+console\+\_\+write (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{, }\item[{\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}}]{colour}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d03/platform_8h_ac352c68fed21ee19eff9a165d1648c4c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{platform_8h_adee3e77de1e3374a118e9ebc150c9800}\index{platform.h@{platform.h}!platform\_console\_write\_error@{platform\_console\_write\_error}}
+\index{platform\_console\_write\_error@{platform\_console\_write\_error}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{platform\_console\_write\_error()}{platform\_console\_write\_error()}}
+{\footnotesize\ttfamily \label{platform_8h_adee3e77de1e3374a118e9ebc150c9800} 
+void platform\+\_\+console\+\_\+write\+\_\+error (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{, }\item[{\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}}]{colour}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d03/platform_8h_adee3e77de1e3374a118e9ebc150c9800_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{platform_8h_a15258bb22b902725b1fbf405463ed07d}\index{platform.h@{platform.h}!platform\_copy\_memory@{platform\_copy\_memory}}
+\index{platform\_copy\_memory@{platform\_copy\_memory}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{platform\_copy\_memory()}{platform\_copy\_memory()}}
+{\footnotesize\ttfamily \label{platform_8h_a15258bb22b902725b1fbf405463ed07d} 
+void \texorpdfstring{$\ast$}{*} platform\+\_\+copy\+\_\+memory (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{source}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d03/platform_8h_a15258bb22b902725b1fbf405463ed07d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{platform_8h_a0b638fcfa31e0704eb976a8662c095f2}\index{platform.h@{platform.h}!platform\_free@{platform\_free}}
+\index{platform\_free@{platform\_free}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{platform\_free()}{platform\_free()}}
+{\footnotesize\ttfamily \label{platform_8h_a0b638fcfa31e0704eb976a8662c095f2} 
+void platform\+\_\+free (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{block}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{aligned}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d03/platform_8h_a0b638fcfa31e0704eb976a8662c095f2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{platform_8h_af38f532e572a9da41eaad4be29a58ada}\index{platform.h@{platform.h}!platform\_get\_absolute\_time@{platform\_get\_absolute\_time}}
+\index{platform\_get\_absolute\_time@{platform\_get\_absolute\_time}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{platform\_get\_absolute\_time()}{platform\_get\_absolute\_time()}}
+{\footnotesize\ttfamily \label{platform_8h_af38f532e572a9da41eaad4be29a58ada} 
+\mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}} platform\+\_\+get\+\_\+absolute\+\_\+time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d03/platform_8h_af38f532e572a9da41eaad4be29a58ada_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{platform_8h_af47d0fad6d6e686e1e0f668c95b1c201}\index{platform.h@{platform.h}!platform\_pump\_messages@{platform\_pump\_messages}}
+\index{platform\_pump\_messages@{platform\_pump\_messages}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{platform\_pump\_messages()}{platform\_pump\_messages()}}
+{\footnotesize\ttfamily \label{platform_8h_af47d0fad6d6e686e1e0f668c95b1c201} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} platform\+\_\+pump\+\_\+messages (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplatform__state}{platform\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{plat\+\_\+state}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d03/platform_8h_af47d0fad6d6e686e1e0f668c95b1c201_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{platform_8h_aa65146de20a7fd23870d3809834021b7}\index{platform.h@{platform.h}!platform\_set\_memory@{platform\_set\_memory}}
+\index{platform\_set\_memory@{platform\_set\_memory}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{platform\_set\_memory()}{platform\_set\_memory()}}
+{\footnotesize\ttfamily \label{platform_8h_aa65146de20a7fd23870d3809834021b7} 
+void \texorpdfstring{$\ast$}{*} platform\+\_\+set\+\_\+memory (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{value}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d03/platform_8h_aa65146de20a7fd23870d3809834021b7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{platform_8h_a7fe7553c63bc948e2ee04d15597d6ccd}\index{platform.h@{platform.h}!platform\_shutdown@{platform\_shutdown}}
+\index{platform\_shutdown@{platform\_shutdown}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{platform\_shutdown()}{platform\_shutdown()}}
+{\footnotesize\ttfamily \label{platform_8h_a7fe7553c63bc948e2ee04d15597d6ccd} 
+void platform\+\_\+shutdown (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplatform__state}{platform\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{plat\+\_\+state}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d03/platform_8h_a7fe7553c63bc948e2ee04d15597d6ccd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{platform_8h_ae21676dfd997b1c6dd9c06f69b5618e4}\index{platform.h@{platform.h}!platform\_sleep@{platform\_sleep}}
+\index{platform\_sleep@{platform\_sleep}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{platform\_sleep()}{platform\_sleep()}}
+{\footnotesize\ttfamily \label{platform_8h_ae21676dfd997b1c6dd9c06f69b5618e4} 
+void platform\+\_\+sleep (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{ms}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d03/platform_8h_ae21676dfd997b1c6dd9c06f69b5618e4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{platform_8h_a1557f29064029f8b437d0fbcc587ebbd}\index{platform.h@{platform.h}!platform\_startup@{platform\_startup}}
+\index{platform\_startup@{platform\_startup}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{platform\_startup()}{platform\_startup()}}
+{\footnotesize\ttfamily \label{platform_8h_a1557f29064029f8b437d0fbcc587ebbd} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} platform\+\_\+startup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplatform__state}{platform\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{plat\+\_\+state}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{application\+\_\+name}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{x}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{y}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{width}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{height}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d03/platform_8h_a1557f29064029f8b437d0fbcc587ebbd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{platform_8h_a59e03b207e95523b84692ea7f68e4654}\index{platform.h@{platform.h}!platform\_zero\_memory@{platform\_zero\_memory}}
+\index{platform\_zero\_memory@{platform\_zero\_memory}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{platform\_zero\_memory()}{platform\_zero\_memory()}}
+{\footnotesize\ttfamily \label{platform_8h_a59e03b207e95523b84692ea7f68e4654} 
+void \texorpdfstring{$\ast$}{*} platform\+\_\+zero\+\_\+memory (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{block}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{de/d03/platform_8h_a59e03b207e95523b84692ea7f68e4654_icgraph}
+\end{center}
+\end{figure}

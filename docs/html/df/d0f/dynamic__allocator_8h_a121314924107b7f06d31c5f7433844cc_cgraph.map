@@ -1,0 +1,9 @@
+<map id="dynamic_allocator_free" name="dynamic_allocator_free">
+<area shape="rect" id="Node000001" title="Frees a block of memory that was allocated by the allocator." alt="" coords="5,32,180,60"/>
+<area shape="rect" id="Node000002" href="$da/d3f/freelist_8c.html#a8af32093da394b6cfa1a3436b8e84283" title="Attempts to find a free block of memory given the size." alt="" coords="228,32,370,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,43,215,45,209,46,180,48"/>
+<area shape="rect" id="Node000003" href="$da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df" title=" " alt="" coords="427,5,508,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="370,32,409,28,414,28,371,37"/>
+<area shape="rect" id="Node000004" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="418,57,517,85"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="371,54,405,62,400,61,370,59"/>
+</map>

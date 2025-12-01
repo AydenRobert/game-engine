@@ -1,0 +1,298 @@
+\doxysection{engine/src/systems/geometry\+\_\+system.c File Reference}
+\hypertarget{geometry__system_8c}{}\label{geometry__system_8c}\index{engine/src/systems/geometry\_system.c@{engine/src/systems/geometry\_system.c}}
+{\ttfamily \#include "{}systems/geometry\+\_\+system.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}core/kstring.\+h"{}}\newline
+{\ttfamily \#include "{}core/logger.\+h"{}}\newline
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+{\ttfamily \#include "{}systems/material\+\_\+system.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/renderer\+\_\+frontend.\+h"{}}\newline
+Include dependency graph for geometry\+\_\+system.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/daf/geometry__system_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgeometry__reference}{geometry\+\_\+reference}}
+\item 
+struct \mbox{\hyperlink{structgeometry__system__state}{geometry\+\_\+system\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct geometry\+\_\+reference \mbox{\hyperlink{geometry__system_8c_a2d15f2d9579b2b6ebe5631486fd707a5}{geometry\+\_\+reference}}
+\item 
+typedef struct geometry\+\_\+system\+\_\+state \mbox{\hyperlink{geometry__system_8c_a78bba04691517a4f6bd3d42025163636}{geometry\+\_\+system\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{geometry__system_8c_a60a2fb9c4c702ac8a72443805cd83229}{create\+\_\+default\+\_\+geometries}} ()
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{geometry__system_8c_af4729ef8ecb04a9f92781398e11b2525}{create\+\_\+geometry}} (\mbox{\hyperlink{structgeometry__config}{geometry\+\_\+config}} config, \mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*}geo)
+\item 
+void \mbox{\hyperlink{geometry__system_8c_a0077e027e5b66945cf87017946792504}{destroy\+\_\+geometry}} (\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*}geo)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{geometry__system_8c_a317d7b68bd7e7818e63bf582b2698b09}{geometry\+\_\+system\+\_\+initialize}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}memory\+\_\+requirement, void \texorpdfstring{$\ast$}{*}state, \mbox{\hyperlink{structgeometry__system__config}{geometry\+\_\+system\+\_\+config}} config)
+\item 
+void \mbox{\hyperlink{geometry__system_8c_a55191f79e172eccf0c6637e252f50797}{geometry\+\_\+system\+\_\+shutdown}} (void \texorpdfstring{$\ast$}{*}state)
+\item 
+\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{geometry__system_8c_ae0e4e5cb2d9716bfb256919854537738}{geometry\+\_\+system\+\_\+acquire\+\_\+by\+\_\+id}} (\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} id)
+\item 
+\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{geometry__system_8c_aa3992a52627669573968c86505792e5c}{geometry\+\_\+system\+\_\+acquire\+\_\+from\+\_\+config}} (\mbox{\hyperlink{structgeometry__config}{geometry\+\_\+config}} config, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} auto\+\_\+release)
+\item 
+void \mbox{\hyperlink{geometry__system_8c_a2f9fd1495f9f9903d9b1a8003cf5417d}{geometry\+\_\+system\+\_\+release}} (\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structgeometry}{geometry}})
+\item 
+\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{geometry__system_8c_a378ccb67bf20bf83f7217aeae226edf3}{geometry\+\_\+system\+\_\+get\+\_\+default\+\_\+geometry\+\_\+3d}} ()
+\item 
+\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{geometry__system_8c_aad8405f3d05faf23bdcff666935cb402}{geometry\+\_\+system\+\_\+get\+\_\+default\+\_\+geometry\+\_\+2d}} ()
+\item 
+\mbox{\hyperlink{structgeometry__config}{geometry\+\_\+config}} \mbox{\hyperlink{geometry__system_8c_af4df3267d03b54612f8a61a647fceaba}{geometry\+\_\+system\+\_\+generate\+\_\+plane\+\_\+config}} (\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} width, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} height, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} x\+\_\+segment\+\_\+count, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} y\+\_\+segment\+\_\+count, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} tile\+\_\+x, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} tile\+\_\+y, const char \texorpdfstring{$\ast$}{*}name, const char \texorpdfstring{$\ast$}{*}material\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Creates a configuration for plane geometries given the input parameters. NOTE\+: vertex and index array are dynamically allocated and should be freed by the caller, should not be used in production. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structgeometry__system__state}{geometry\+\_\+system\+\_\+state}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{geometry__system_8c_a52a436196578f8b60453f34643ad8094}{state\+\_\+ptr}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{geometry__system_8c_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{geometry__system_8c_a2d15f2d9579b2b6ebe5631486fd707a5}\index{geometry\_system.c@{geometry\_system.c}!geometry\_reference@{geometry\_reference}}
+\index{geometry\_reference@{geometry\_reference}!geometry\_system.c@{geometry\_system.c}}
+\doxysubsubsection{\texorpdfstring{geometry\_reference}{geometry\_reference}}
+{\footnotesize\ttfamily \label{geometry__system_8c_a2d15f2d9579b2b6ebe5631486fd707a5} 
+typedef struct geometry\+\_\+reference geometry\+\_\+reference}
+
+\Hypertarget{geometry__system_8c_a78bba04691517a4f6bd3d42025163636}\index{geometry\_system.c@{geometry\_system.c}!geometry\_system\_state@{geometry\_system\_state}}
+\index{geometry\_system\_state@{geometry\_system\_state}!geometry\_system.c@{geometry\_system.c}}
+\doxysubsubsection{\texorpdfstring{geometry\_system\_state}{geometry\_system\_state}}
+{\footnotesize\ttfamily \label{geometry__system_8c_a78bba04691517a4f6bd3d42025163636} 
+typedef struct geometry\+\_\+system\+\_\+state geometry\+\_\+system\+\_\+state}
+
+
+
+\label{doc-func-members}
+\Hypertarget{geometry__system_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{geometry__system_8c_a60a2fb9c4c702ac8a72443805cd83229}\index{geometry\_system.c@{geometry\_system.c}!create\_default\_geometries@{create\_default\_geometries}}
+\index{create\_default\_geometries@{create\_default\_geometries}!geometry\_system.c@{geometry\_system.c}}
+\doxysubsubsection{\texorpdfstring{create\_default\_geometries()}{create\_default\_geometries()}}
+{\footnotesize\ttfamily \label{geometry__system_8c_a60a2fb9c4c702ac8a72443805cd83229} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} create\+\_\+default\+\_\+geometries (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d80/geometry__system_8c_a60a2fb9c4c702ac8a72443805cd83229_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d80/geometry__system_8c_a60a2fb9c4c702ac8a72443805cd83229_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{geometry__system_8c_af4729ef8ecb04a9f92781398e11b2525}\index{geometry\_system.c@{geometry\_system.c}!create\_geometry@{create\_geometry}}
+\index{create\_geometry@{create\_geometry}!geometry\_system.c@{geometry\_system.c}}
+\doxysubsubsection{\texorpdfstring{create\_geometry()}{create\_geometry()}}
+{\footnotesize\ttfamily \label{geometry__system_8c_af4729ef8ecb04a9f92781398e11b2525} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} create\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeometry__config}{geometry\+\_\+config}}}]{config}{, }\item[{\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*}}]{geo}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d80/geometry__system_8c_af4729ef8ecb04a9f92781398e11b2525_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d80/geometry__system_8c_af4729ef8ecb04a9f92781398e11b2525_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{geometry__system_8c_a0077e027e5b66945cf87017946792504}\index{geometry\_system.c@{geometry\_system.c}!destroy\_geometry@{destroy\_geometry}}
+\index{destroy\_geometry@{destroy\_geometry}!geometry\_system.c@{geometry\_system.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_geometry()}{destroy\_geometry()}}
+{\footnotesize\ttfamily \label{geometry__system_8c_a0077e027e5b66945cf87017946792504} 
+void destroy\+\_\+geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*}}]{geo}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d80/geometry__system_8c_a0077e027e5b66945cf87017946792504_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d80/geometry__system_8c_a0077e027e5b66945cf87017946792504_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{geometry__system_8c_ae0e4e5cb2d9716bfb256919854537738}\index{geometry\_system.c@{geometry\_system.c}!geometry\_system\_acquire\_by\_id@{geometry\_system\_acquire\_by\_id}}
+\index{geometry\_system\_acquire\_by\_id@{geometry\_system\_acquire\_by\_id}!geometry\_system.c@{geometry\_system.c}}
+\doxysubsubsection{\texorpdfstring{geometry\_system\_acquire\_by\_id()}{geometry\_system\_acquire\_by\_id()}}
+{\footnotesize\ttfamily \label{geometry__system_8c_ae0e4e5cb2d9716bfb256919854537738} 
+\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*} geometry\+\_\+system\+\_\+acquire\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{id}{}\end{DoxyParamCaption})}
+
+\Hypertarget{geometry__system_8c_aa3992a52627669573968c86505792e5c}\index{geometry\_system.c@{geometry\_system.c}!geometry\_system\_acquire\_from\_config@{geometry\_system\_acquire\_from\_config}}
+\index{geometry\_system\_acquire\_from\_config@{geometry\_system\_acquire\_from\_config}!geometry\_system.c@{geometry\_system.c}}
+\doxysubsubsection{\texorpdfstring{geometry\_system\_acquire\_from\_config()}{geometry\_system\_acquire\_from\_config()}}
+{\footnotesize\ttfamily \label{geometry__system_8c_aa3992a52627669573968c86505792e5c} 
+\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*} geometry\+\_\+system\+\_\+acquire\+\_\+from\+\_\+config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeometry__config}{geometry\+\_\+config}}}]{config}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{auto\+\_\+release}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d80/geometry__system_8c_aa3992a52627669573968c86505792e5c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d80/geometry__system_8c_aa3992a52627669573968c86505792e5c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{geometry__system_8c_af4df3267d03b54612f8a61a647fceaba}\index{geometry\_system.c@{geometry\_system.c}!geometry\_system\_generate\_plane\_config@{geometry\_system\_generate\_plane\_config}}
+\index{geometry\_system\_generate\_plane\_config@{geometry\_system\_generate\_plane\_config}!geometry\_system.c@{geometry\_system.c}}
+\doxysubsubsection{\texorpdfstring{geometry\_system\_generate\_plane\_config()}{geometry\_system\_generate\_plane\_config()}}
+{\footnotesize\ttfamily \label{geometry__system_8c_af4df3267d03b54612f8a61a647fceaba} 
+\mbox{\hyperlink{structgeometry__config}{geometry\+\_\+config}} geometry\+\_\+system\+\_\+generate\+\_\+plane\+\_\+config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{width}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{height}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{x\+\_\+segment\+\_\+count}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{y\+\_\+segment\+\_\+count}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{tile\+\_\+x}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{tile\+\_\+y}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{material\+\_\+name}{}\end{DoxyParamCaption})}
+
+
+
+Creates a configuration for plane geometries given the input parameters. NOTE\+: vertex and index array are dynamically allocated and should be freed by the caller, should not be used in production. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Overall width, must be non-\/zero. \\
+\hline
+{\em height} & Overall height, must be non-\/zero. \\
+\hline
+{\em x\+\_\+segment\+\_\+count} & Number of segments on the x-\/axis, must be non-\/zero. \\
+\hline
+{\em y\+\_\+segment\+\_\+count} & Number of segments on the y-\/axis, must be non-\/zero. \\
+\hline
+{\em tile\+\_\+x} & Amount texture should tile across x-\/axis, must be non-\/zero. \\
+\hline
+{\em tile\+\_\+y} & Amount texture should tile across y-\/axis, must be non-\/zero. \\
+\hline
+{\em name} & The name of the generated geometry. \\
+\hline
+{\em material\+\_\+name} & The name of the material used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A geometry configuration, can be fed into \doxylink{geometry__system_8h_aa3992a52627669573968c86505792e5c}{geometry\+\_\+system\+\_\+acquire\+\_\+from\+\_\+config()}. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d80/geometry__system_8c_af4df3267d03b54612f8a61a647fceaba_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d80/geometry__system_8c_af4df3267d03b54612f8a61a647fceaba_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{geometry__system_8c_aad8405f3d05faf23bdcff666935cb402}\index{geometry\_system.c@{geometry\_system.c}!geometry\_system\_get\_default\_geometry\_2d@{geometry\_system\_get\_default\_geometry\_2d}}
+\index{geometry\_system\_get\_default\_geometry\_2d@{geometry\_system\_get\_default\_geometry\_2d}!geometry\_system.c@{geometry\_system.c}}
+\doxysubsubsection{\texorpdfstring{geometry\_system\_get\_default\_geometry\_2d()}{geometry\_system\_get\_default\_geometry\_2d()}}
+{\footnotesize\ttfamily \label{geometry__system_8c_aad8405f3d05faf23bdcff666935cb402} 
+\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*} geometry\+\_\+system\+\_\+get\+\_\+default\+\_\+geometry\+\_\+2d (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{geometry__system_8c_a378ccb67bf20bf83f7217aeae226edf3}\index{geometry\_system.c@{geometry\_system.c}!geometry\_system\_get\_default\_geometry\_3d@{geometry\_system\_get\_default\_geometry\_3d}}
+\index{geometry\_system\_get\_default\_geometry\_3d@{geometry\_system\_get\_default\_geometry\_3d}!geometry\_system.c@{geometry\_system.c}}
+\doxysubsubsection{\texorpdfstring{geometry\_system\_get\_default\_geometry\_3d()}{geometry\_system\_get\_default\_geometry\_3d()}}
+{\footnotesize\ttfamily \label{geometry__system_8c_a378ccb67bf20bf83f7217aeae226edf3} 
+\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*} geometry\+\_\+system\+\_\+get\+\_\+default\+\_\+geometry\+\_\+3d (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{geometry__system_8c_a317d7b68bd7e7818e63bf582b2698b09}\index{geometry\_system.c@{geometry\_system.c}!geometry\_system\_initialize@{geometry\_system\_initialize}}
+\index{geometry\_system\_initialize@{geometry\_system\_initialize}!geometry\_system.c@{geometry\_system.c}}
+\doxysubsubsection{\texorpdfstring{geometry\_system\_initialize()}{geometry\_system\_initialize()}}
+{\footnotesize\ttfamily \label{geometry__system_8c_a317d7b68bd7e7818e63bf582b2698b09} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} geometry\+\_\+system\+\_\+initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{memory\+\_\+requirement}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{state}{, }\item[{\mbox{\hyperlink{structgeometry__system__config}{geometry\+\_\+system\+\_\+config}}}]{config}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d80/geometry__system_8c_a317d7b68bd7e7818e63bf582b2698b09_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d80/geometry__system_8c_a317d7b68bd7e7818e63bf582b2698b09_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{geometry__system_8c_a2f9fd1495f9f9903d9b1a8003cf5417d}\index{geometry\_system.c@{geometry\_system.c}!geometry\_system\_release@{geometry\_system\_release}}
+\index{geometry\_system\_release@{geometry\_system\_release}!geometry\_system.c@{geometry\_system.c}}
+\doxysubsubsection{\texorpdfstring{geometry\_system\_release()}{geometry\_system\_release()}}
+{\footnotesize\ttfamily \label{geometry__system_8c_a2f9fd1495f9f9903d9b1a8003cf5417d} 
+void geometry\+\_\+system\+\_\+release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*}}]{geometry}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d80/geometry__system_8c_a2f9fd1495f9f9903d9b1a8003cf5417d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{geometry__system_8c_a55191f79e172eccf0c6637e252f50797}\index{geometry\_system.c@{geometry\_system.c}!geometry\_system\_shutdown@{geometry\_system\_shutdown}}
+\index{geometry\_system\_shutdown@{geometry\_system\_shutdown}!geometry\_system.c@{geometry\_system.c}}
+\doxysubsubsection{\texorpdfstring{geometry\_system\_shutdown()}{geometry\_system\_shutdown()}}
+{\footnotesize\ttfamily \label{geometry__system_8c_a55191f79e172eccf0c6637e252f50797} 
+void geometry\+\_\+system\+\_\+shutdown (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/d80/geometry__system_8c_a55191f79e172eccf0c6637e252f50797_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-var-members}
+\Hypertarget{geometry__system_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{geometry__system_8c_a52a436196578f8b60453f34643ad8094}\index{geometry\_system.c@{geometry\_system.c}!state\_ptr@{state\_ptr}}
+\index{state\_ptr@{state\_ptr}!geometry\_system.c@{geometry\_system.c}}
+\doxysubsubsection{\texorpdfstring{state\_ptr}{state\_ptr}}
+{\footnotesize\ttfamily \label{geometry__system_8c_a52a436196578f8b60453f34643ad8094} 
+\mbox{\hyperlink{structgeometry__system__state}{geometry\+\_\+system\+\_\+state}}\texorpdfstring{$\ast$}{*} state\+\_\+ptr = 0\hspace{0.3cm}{\ttfamily [static]}}
+

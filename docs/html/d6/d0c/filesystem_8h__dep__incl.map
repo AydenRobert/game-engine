@@ -1,0 +1,15 @@
+<map id="engine/src/platform/filesystem.h" name="engine/src/platform/filesystem.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="495,5,643,50"/>
+<area shape="rect" id="Node000002" href="$d1/d22/logger_8c.html" title=" " alt="" coords="5,106,181,134"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="480,47,192,101,154,108,153,103,191,95,479,42"/>
+<area shape="rect" id="Node000003" href="$df/d45/filesystem_8c.html" title=" " alt="" coords="204,98,352,143"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="488,55,349,100,347,95,482,55"/>
+<area shape="rect" id="Node000004" href="$df/d5e/binary__loader_8c.html" title=" " alt="" coords="377,98,553,143"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="535,59,491,100,489,95,530,61"/>
+<area shape="rect" id="Node000005" href="$d8/d41/material__loader_8c.html" title=" " alt="" coords="578,98,768,143"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="606,58,651,98,646,97,604,63"/>
+<area shape="rect" id="Node000006" href="$d9/d88/text__loader_8c.html" title=" " alt="" coords="792,98,954,143"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="657,52,803,98,798,97,656,57"/>
+<area shape="rect" id="Node000007" href="$da/dd6/material__system_8c.html" title=" " alt="" coords="978,98,1125,143"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="659,40,804,64,967,95,980,101,975,100,966,101,803,70,659,45"/>
+</map>

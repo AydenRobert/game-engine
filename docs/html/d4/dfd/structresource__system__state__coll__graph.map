@@ -1,0 +1,7 @@
+<map id="resource_system_state" name="resource_system_state">
+<area shape="rect" id="Node000001" title=" " alt="" coords="96,106,269,134"/>
+<area shape="rect" id="Node000002" href="$df/db5/structresource__system__config.html" title=" " alt="" coords="5,5,184,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,42,173,105,168,106,115,47"/>
+<area shape="rect" id="Node000003" href="$d0/db3/structresource__loader.html" title=" " alt="" coords="208,5,333,33"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="251,44,196,107,193,103,246,46"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="internal_state" name="internal_state">
+<area shape="rect" id="Node000001" title=" " alt="" coords="88,151,200,178"/>
+<area shape="rect" id="Node000002" href="$d1/d21/structfreelist__node.html" title=" " alt="" coords="5,5,112,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,46,73,87,91,125,104,138,120,150,114,150,100,142,87,128,68,88,60,51"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="127,6,135,11,138,19,130,31,114,35,111,30,127,26,133,19,131,15,127,11"/>
+<area shape="rect" id="Node000003" href="$df/d13/structfreelist.html" title=" " alt="" coords="197,5,264,33"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="230,47,222,89,203,128,190,142,174,153,172,148,186,138,199,125,217,87,226,51"/>
+</map>

@@ -1,0 +1,718 @@
+\doxysection{The xdg\+\_\+toplevel interface }
+\hypertarget{group__iface__xdg__toplevel}{}\label{group__iface__xdg__toplevel}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structxdg__toplevel__listener}{xdg\+\_\+toplevel\+\_\+listener}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_gac45a56bd702dfaae9773d8d8dbbb7e16}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+LEFT\+\_\+\+SINCE\+\_\+\+VERSION}}~2
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_gafb8582ef882e8b1e7ba5eb20c9472c6e}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+RIGHT\+\_\+\+SINCE\+\_\+\+VERSION}}~2
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga7d4a39e45726f32392004941f4e47823}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+TOP\+\_\+\+SINCE\+\_\+\+VERSION}}~2
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga747e66b4d53dc7e42c6dde65b985efa7}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+BOTTOM\+\_\+\+SINCE\+\_\+\+VERSION}}~2
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_gae92a3eee72fb31baaeb375a21ff78fd8}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+SUSPENDED\+\_\+\+SINCE\+\_\+\+VERSION}}~6
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga385a2ce43134d0ab0233e373c9a9dc0d}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+LEFT\+\_\+\+SINCE\+\_\+\+VERSION}}~7
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga7d8a230710302bc9090ee6e78985e74a}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+RIGHT\+\_\+\+SINCE\+\_\+\+VERSION}}~7
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga83b5fc57691e10923007baaaa266575a}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+TOP\+\_\+\+SINCE\+\_\+\+VERSION}}~7
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_gaf6bd744044daadf391a13650422c3523}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+BOTTOM\+\_\+\+SINCE\+\_\+\+VERSION}}~7
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga13a100390d36f55f75ace392b46717e1}{XDG\+\_\+\+TOPLEVEL\+\_\+\+CONFIGURE\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga6cef3a3371706ca308e8d020018b6356}{XDG\+\_\+\+TOPLEVEL\+\_\+\+CLOSE\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga367d4b727ad7f194d329392ee82125ca}{XDG\+\_\+\+TOPLEVEL\+\_\+\+CONFIGURE\+\_\+\+BOUNDS\+\_\+\+SINCE\+\_\+\+VERSION}}~4
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga0621e971d79b95bae8575216782c1d10}{XDG\+\_\+\+TOPLEVEL\+\_\+\+WM\+\_\+\+CAPABILITIES\+\_\+\+SINCE\+\_\+\+VERSION}}~5
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga9c6b62328e8f4bcf4293bf38709ecfdd}{XDG\+\_\+\+TOPLEVEL\+\_\+\+DESTROY\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga2b410ca3eac0cde15ae42b9efdb11952}{XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+PARENT\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga3bb009c35907a7b34b43ba35568a12aa}{XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+TITLE\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga0a36674ba5f26844efcfa87db6f5a635}{XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+APP\+\_\+\+ID\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_gadf24f5e5762ec352ac1f281a35bdf384}{XDG\+\_\+\+TOPLEVEL\+\_\+\+SHOW\+\_\+\+WINDOW\+\_\+\+MENU\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga59df868d37b3b53ce1f4b5116ea9133d}{XDG\+\_\+\+TOPLEVEL\+\_\+\+MOVE\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga5604c1919c3ff1a70e70a4c994845ef7}{XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga4fd693c1cbda47ef752cd350f693ab1b}{XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+MAX\+\_\+\+SIZE\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga41dd43acee348d6d58226cf0178442ad}{XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+MIN\+\_\+\+SIZE\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga4a40aa9b91a3117e1a60faf5cd7d9135}{XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+MAXIMIZED\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga20e9bacd149fa902a16349a00eb7c040}{XDG\+\_\+\+TOPLEVEL\+\_\+\+UNSET\+\_\+\+MAXIMIZED\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_ga2dc5aa3ce55c07560f477fbef65308c0}{XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+FULLSCREEN\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_gae4fc79bedad698b1ef70c37c2592e86d}{XDG\+\_\+\+TOPLEVEL\+\_\+\+UNSET\+\_\+\+FULLSCREEN\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__toplevel_gad9671448c09f887f44ecc9954cf4672f}{XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+MINIMIZED\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__iface__xdg__toplevel_ga9c5f29d74e9f5e730fe59ecdc397b116}{xdg\+\_\+toplevel\+\_\+resize\+\_\+edge}} \{ \newline
+\mbox{\hyperlink{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a8fb8eaed90c84f6ee349cf20dad13dc8}{XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+NONE}} = 0
+, \mbox{\hyperlink{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116ab6738334e5155a610ffae9ec11a6380b}{XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+TOP}} = 1
+, \mbox{\hyperlink{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a35b4b365f99c5d76ed3dcd8a15977853}{XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+BOTTOM}} = 2
+, \mbox{\hyperlink{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a905ab08631ed43116c424098dd28e473}{XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+LEFT}} = 4
+, \newline
+\mbox{\hyperlink{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a8bb02b53700283f3b179af4d8d33b735}{XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+TOP\+\_\+\+LEFT}} = 5
+, \mbox{\hyperlink{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116aecd33d2460b15a03ccb7cf099d7c4d4c}{XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+BOTTOM\+\_\+\+LEFT}} = 6
+, \mbox{\hyperlink{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a3acbd89082c2926e502f46d18e51d41e}{XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+RIGHT}} = 8
+, \mbox{\hyperlink{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a3b6bba269420a558d29b26011feb3d02}{XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+TOP\+\_\+\+RIGHT}} = 9
+, \newline
+\mbox{\hyperlink{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a7d3e52d640292d71d6f6f5019af95854}{XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+BOTTOM\+\_\+\+RIGHT}} = 10
+ \}
+\item 
+enum \mbox{\hyperlink{group__iface__xdg__toplevel_gabaca79a813c489200722457958c54b43}{xdg\+\_\+toplevel\+\_\+state}} \{ \newline
+\mbox{\hyperlink{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a35643da6bcb9f371b8d4e663787ff9df}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+MAXIMIZED}} = 1
+, \mbox{\hyperlink{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43ae18b9b46242f684a7f80cc6edcb11198}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+FULLSCREEN}} = 2
+, \mbox{\hyperlink{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43af34733ea6181003cfff4c51011b3fae5}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+RESIZING}} = 3
+, \mbox{\hyperlink{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43ada4cf2a15e69416ecdb506af0d34cd23}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+ACTIVATED}} = 4
+, \newline
+\mbox{\hyperlink{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a4c4946d03abc061ab82fb74f7c13544e}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+LEFT}} = 5
+, \mbox{\hyperlink{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a3c2df34cc493f00426a755ecda341358}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+RIGHT}} = 6
+, \mbox{\hyperlink{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43ac206f84cbaa6b2079e09b5d7fa4adafd}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+TOP}} = 7
+, \mbox{\hyperlink{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43ab647470484c8b655fafa57548b55795b}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+BOTTOM}} = 8
+, \newline
+\mbox{\hyperlink{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43aa871bb8aff75d079d5938db0b288173d}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+SUSPENDED}} = 9
+, \mbox{\hyperlink{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a4bacf3b1f4472bdfecd393eff2c17fe6}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+LEFT}} = 10
+, \mbox{\hyperlink{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a3a73ad1b28b5936bdd6dd3c89591a5dc}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+RIGHT}} = 11
+, \mbox{\hyperlink{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a3be877716d077e6321dca4284f98c2cd}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+TOP}} = 12
+, \newline
+\mbox{\hyperlink{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43aa951f0b3a96f41c9ce8acd98d294cf88}{XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+BOTTOM}} = 13
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{group__iface__xdg__toplevel_gabcfd5476f0190e3b4dc06437d3781278}{xdg\+\_\+toplevel\+\_\+add\+\_\+listener}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel, const struct \mbox{\hyperlink{structxdg__toplevel__listener}{xdg\+\_\+toplevel\+\_\+listener}} \texorpdfstring{$\ast$}{*}listener, void \texorpdfstring{$\ast$}{*}data)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__toplevel_gaba27052541991f19845d898ce5337865}{xdg\+\_\+toplevel\+\_\+set\+\_\+user\+\_\+data}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel, void \texorpdfstring{$\ast$}{*}user\+\_\+data)
+\item 
+static void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__iface__xdg__toplevel_ga47a2d3f90ab9763f1d91f854395fb6ec}{xdg\+\_\+toplevel\+\_\+get\+\_\+user\+\_\+data}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__toplevel_gafd000a1887269ac8046140009c4dbd20}{xdg\+\_\+toplevel\+\_\+destroy}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__toplevel_gae18f9f2a65028648a0640a3cb1b6e6c9}{xdg\+\_\+toplevel\+\_\+set\+\_\+parent}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel, struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}parent)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__toplevel_ga15de6dc9a28b7b62dc7e2b437762c3e8}{xdg\+\_\+toplevel\+\_\+set\+\_\+title}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel, const char \texorpdfstring{$\ast$}{*}title)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__toplevel_ga23645e8e4ad1754195ffdb354e1357c4}{xdg\+\_\+toplevel\+\_\+set\+\_\+app\+\_\+id}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel, const char \texorpdfstring{$\ast$}{*}app\+\_\+id)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__toplevel_gaf6701fc9dd6fdee4d1d254fc1087e4fc}{xdg\+\_\+toplevel\+\_\+show\+\_\+window\+\_\+menu}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel, struct wl\+\_\+seat \texorpdfstring{$\ast$}{*}seat, uint32\+\_\+t serial, int32\+\_\+t x, int32\+\_\+t y)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__toplevel_ga8540c65ec6571feea316b369518626d1}{xdg\+\_\+toplevel\+\_\+move}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel, struct wl\+\_\+seat \texorpdfstring{$\ast$}{*}seat, uint32\+\_\+t serial)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__toplevel_ga757f5f4723a09263054453d9744ff443}{xdg\+\_\+toplevel\+\_\+resize}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel, struct wl\+\_\+seat \texorpdfstring{$\ast$}{*}seat, uint32\+\_\+t serial, uint32\+\_\+t edges)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__toplevel_ga42b55dcba1d89d008650e3de51b9b09b}{xdg\+\_\+toplevel\+\_\+set\+\_\+max\+\_\+size}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel, int32\+\_\+t width, int32\+\_\+t height)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__toplevel_gac55835037874c9e0ec28d4463f267295}{xdg\+\_\+toplevel\+\_\+set\+\_\+min\+\_\+size}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel, int32\+\_\+t width, int32\+\_\+t height)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__toplevel_ga570d44f40ddbd082dbe0021a36c59a30}{xdg\+\_\+toplevel\+\_\+set\+\_\+maximized}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__toplevel_ga7a61c4552a8e1671d58fd76d7d76c954}{xdg\+\_\+toplevel\+\_\+unset\+\_\+maximized}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__toplevel_ga2edcee4aa536c21aef1db20b5df195d6}{xdg\+\_\+toplevel\+\_\+set\+\_\+fullscreen}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel, struct wl\+\_\+output \texorpdfstring{$\ast$}{*}output)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__toplevel_gafff1d69e3e484bea5bbc0b226eb50473}{xdg\+\_\+toplevel\+\_\+unset\+\_\+fullscreen}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__toplevel_ga813e6d50fcc67be73167510869a7e714}{xdg\+\_\+toplevel\+\_\+set\+\_\+minimized}} (struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}xdg\+\_\+toplevel)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This interface defines an xdg\+\_\+surface role which allows a surface to, among other things, set window-\/like properties such as maximize, fullscreen, and minimize, set application-\/specific metadata like title and id, and well as trigger user interactive operations such as interactive resize and move.
+
+A xdg\+\_\+toplevel by default is responsible for providing the full intended visual representation of the toplevel, which depending on the window state, may mean things like a title bar, window controls and drop shadow.
+
+Unmapping an xdg\+\_\+toplevel means that the surface cannot be shown by the compositor until it is explicitly mapped again. All active operations (e.\+g., move, resize) are canceled and all attributes (e.\+g. title, state, stacking, ...) are discarded for an xdg\+\_\+toplevel surface when it is unmapped. The xdg\+\_\+toplevel returns to the state it had right after xdg\+\_\+surface.\+get\+\_\+toplevel. The client can re-\/map the toplevel by performing a commit without any buffer attached, waiting for a configure event and handling it as usual (see xdg\+\_\+surface description).
+
+Attaching a null buffer to a toplevel unmaps the surface. 
+
+\label{doc-define-members}
+\Hypertarget{group__iface__xdg__toplevel_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{group__iface__xdg__toplevel_ga6cef3a3371706ca308e8d020018b6356}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_CLOSE\_SINCE\_VERSION@{XDG\_TOPLEVEL\_CLOSE\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_CLOSE\_SINCE\_VERSION@{XDG\_TOPLEVEL\_CLOSE\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_CLOSE\_SINCE\_VERSION}{XDG\_TOPLEVEL\_CLOSE\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga6cef3a3371706ca308e8d020018b6356} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+CLOSE\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_ga367d4b727ad7f194d329392ee82125ca}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_CONFIGURE\_BOUNDS\_SINCE\_VERSION@{XDG\_TOPLEVEL\_CONFIGURE\_BOUNDS\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_CONFIGURE\_BOUNDS\_SINCE\_VERSION@{XDG\_TOPLEVEL\_CONFIGURE\_BOUNDS\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_CONFIGURE\_BOUNDS\_SINCE\_VERSION}{XDG\_TOPLEVEL\_CONFIGURE\_BOUNDS\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga367d4b727ad7f194d329392ee82125ca} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+CONFIGURE\+\_\+\+BOUNDS\+\_\+\+SINCE\+\_\+\+VERSION~4}
+
+\Hypertarget{group__iface__xdg__toplevel_ga13a100390d36f55f75ace392b46717e1}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_CONFIGURE\_SINCE\_VERSION@{XDG\_TOPLEVEL\_CONFIGURE\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_CONFIGURE\_SINCE\_VERSION@{XDG\_TOPLEVEL\_CONFIGURE\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_CONFIGURE\_SINCE\_VERSION}{XDG\_TOPLEVEL\_CONFIGURE\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga13a100390d36f55f75ace392b46717e1} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+CONFIGURE\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_ga9c6b62328e8f4bcf4293bf38709ecfdd}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_DESTROY\_SINCE\_VERSION@{XDG\_TOPLEVEL\_DESTROY\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_DESTROY\_SINCE\_VERSION@{XDG\_TOPLEVEL\_DESTROY\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_DESTROY\_SINCE\_VERSION}{XDG\_TOPLEVEL\_DESTROY\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga9c6b62328e8f4bcf4293bf38709ecfdd} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+DESTROY\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_ga59df868d37b3b53ce1f4b5116ea9133d}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_MOVE\_SINCE\_VERSION@{XDG\_TOPLEVEL\_MOVE\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_MOVE\_SINCE\_VERSION@{XDG\_TOPLEVEL\_MOVE\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_MOVE\_SINCE\_VERSION}{XDG\_TOPLEVEL\_MOVE\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga59df868d37b3b53ce1f4b5116ea9133d} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+MOVE\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_ga5604c1919c3ff1a70e70a4c994845ef7}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_RESIZE\_SINCE\_VERSION@{XDG\_TOPLEVEL\_RESIZE\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_RESIZE\_SINCE\_VERSION@{XDG\_TOPLEVEL\_RESIZE\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_RESIZE\_SINCE\_VERSION}{XDG\_TOPLEVEL\_RESIZE\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga5604c1919c3ff1a70e70a4c994845ef7} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_ga0a36674ba5f26844efcfa87db6f5a635}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_SET\_APP\_ID\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_APP\_ID\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_SET\_APP\_ID\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_APP\_ID\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_SET\_APP\_ID\_SINCE\_VERSION}{XDG\_TOPLEVEL\_SET\_APP\_ID\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga0a36674ba5f26844efcfa87db6f5a635} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+APP\+\_\+\+ID\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_ga2dc5aa3ce55c07560f477fbef65308c0}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_SET\_FULLSCREEN\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_FULLSCREEN\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_SET\_FULLSCREEN\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_FULLSCREEN\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_SET\_FULLSCREEN\_SINCE\_VERSION}{XDG\_TOPLEVEL\_SET\_FULLSCREEN\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga2dc5aa3ce55c07560f477fbef65308c0} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+FULLSCREEN\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_ga4fd693c1cbda47ef752cd350f693ab1b}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_SET\_MAX\_SIZE\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_MAX\_SIZE\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_SET\_MAX\_SIZE\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_MAX\_SIZE\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_SET\_MAX\_SIZE\_SINCE\_VERSION}{XDG\_TOPLEVEL\_SET\_MAX\_SIZE\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga4fd693c1cbda47ef752cd350f693ab1b} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+MAX\+\_\+\+SIZE\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_ga4a40aa9b91a3117e1a60faf5cd7d9135}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_SET\_MAXIMIZED\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_MAXIMIZED\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_SET\_MAXIMIZED\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_MAXIMIZED\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_SET\_MAXIMIZED\_SINCE\_VERSION}{XDG\_TOPLEVEL\_SET\_MAXIMIZED\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga4a40aa9b91a3117e1a60faf5cd7d9135} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+MAXIMIZED\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_ga41dd43acee348d6d58226cf0178442ad}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_SET\_MIN\_SIZE\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_MIN\_SIZE\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_SET\_MIN\_SIZE\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_MIN\_SIZE\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_SET\_MIN\_SIZE\_SINCE\_VERSION}{XDG\_TOPLEVEL\_SET\_MIN\_SIZE\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga41dd43acee348d6d58226cf0178442ad} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+MIN\+\_\+\+SIZE\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_gad9671448c09f887f44ecc9954cf4672f}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_SET\_MINIMIZED\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_MINIMIZED\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_SET\_MINIMIZED\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_MINIMIZED\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_SET\_MINIMIZED\_SINCE\_VERSION}{XDG\_TOPLEVEL\_SET\_MINIMIZED\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_gad9671448c09f887f44ecc9954cf4672f} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+MINIMIZED\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_ga2b410ca3eac0cde15ae42b9efdb11952}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_SET\_PARENT\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_PARENT\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_SET\_PARENT\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_PARENT\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_SET\_PARENT\_SINCE\_VERSION}{XDG\_TOPLEVEL\_SET\_PARENT\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga2b410ca3eac0cde15ae42b9efdb11952} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+PARENT\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_ga3bb009c35907a7b34b43ba35568a12aa}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_SET\_TITLE\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_TITLE\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_SET\_TITLE\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SET\_TITLE\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_SET\_TITLE\_SINCE\_VERSION}{XDG\_TOPLEVEL\_SET\_TITLE\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga3bb009c35907a7b34b43ba35568a12aa} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+SET\+\_\+\+TITLE\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_gadf24f5e5762ec352ac1f281a35bdf384}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_SHOW\_WINDOW\_MENU\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SHOW\_WINDOW\_MENU\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_SHOW\_WINDOW\_MENU\_SINCE\_VERSION@{XDG\_TOPLEVEL\_SHOW\_WINDOW\_MENU\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_SHOW\_WINDOW\_MENU\_SINCE\_VERSION}{XDG\_TOPLEVEL\_SHOW\_WINDOW\_MENU\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_gadf24f5e5762ec352ac1f281a35bdf384} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+SHOW\+\_\+\+WINDOW\+\_\+\+MENU\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_gaf6bd744044daadf391a13650422c3523}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_BOTTOM\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_BOTTOM\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_BOTTOM\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_BOTTOM\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_BOTTOM\_SINCE\_VERSION}{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_BOTTOM\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_gaf6bd744044daadf391a13650422c3523} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+BOTTOM\+\_\+\+SINCE\+\_\+\+VERSION~7}
+
+\Hypertarget{group__iface__xdg__toplevel_ga385a2ce43134d0ab0233e373c9a9dc0d}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_LEFT\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_LEFT\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_LEFT\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_LEFT\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_LEFT\_SINCE\_VERSION}{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_LEFT\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga385a2ce43134d0ab0233e373c9a9dc0d} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+LEFT\+\_\+\+SINCE\+\_\+\+VERSION~7}
+
+\Hypertarget{group__iface__xdg__toplevel_ga7d8a230710302bc9090ee6e78985e74a}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_RIGHT\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_RIGHT\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_RIGHT\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_RIGHT\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_RIGHT\_SINCE\_VERSION}{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_RIGHT\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga7d8a230710302bc9090ee6e78985e74a} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+RIGHT\+\_\+\+SINCE\+\_\+\+VERSION~7}
+
+\Hypertarget{group__iface__xdg__toplevel_ga83b5fc57691e10923007baaaa266575a}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_TOP\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_TOP\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_TOP\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_TOP\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_TOP\_SINCE\_VERSION}{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_TOP\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga83b5fc57691e10923007baaaa266575a} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+TOP\+\_\+\+SINCE\+\_\+\+VERSION~7}
+
+\Hypertarget{group__iface__xdg__toplevel_gae92a3eee72fb31baaeb375a21ff78fd8}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_SUSPENDED\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_SUSPENDED\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_STATE\_SUSPENDED\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_SUSPENDED\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_STATE\_SUSPENDED\_SINCE\_VERSION}{XDG\_TOPLEVEL\_STATE\_SUSPENDED\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_gae92a3eee72fb31baaeb375a21ff78fd8} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+SUSPENDED\+\_\+\+SINCE\+\_\+\+VERSION~6}
+
+\Hypertarget{group__iface__xdg__toplevel_ga747e66b4d53dc7e42c6dde65b985efa7}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_TILED\_BOTTOM\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_TILED\_BOTTOM\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_STATE\_TILED\_BOTTOM\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_TILED\_BOTTOM\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_STATE\_TILED\_BOTTOM\_SINCE\_VERSION}{XDG\_TOPLEVEL\_STATE\_TILED\_BOTTOM\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga747e66b4d53dc7e42c6dde65b985efa7} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+BOTTOM\+\_\+\+SINCE\+\_\+\+VERSION~2}
+
+\Hypertarget{group__iface__xdg__toplevel_gac45a56bd702dfaae9773d8d8dbbb7e16}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_TILED\_LEFT\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_TILED\_LEFT\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_STATE\_TILED\_LEFT\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_TILED\_LEFT\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_STATE\_TILED\_LEFT\_SINCE\_VERSION}{XDG\_TOPLEVEL\_STATE\_TILED\_LEFT\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_gac45a56bd702dfaae9773d8d8dbbb7e16} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+LEFT\+\_\+\+SINCE\+\_\+\+VERSION~2}
+
+\Hypertarget{group__iface__xdg__toplevel_gafb8582ef882e8b1e7ba5eb20c9472c6e}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_TILED\_RIGHT\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_TILED\_RIGHT\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_STATE\_TILED\_RIGHT\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_TILED\_RIGHT\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_STATE\_TILED\_RIGHT\_SINCE\_VERSION}{XDG\_TOPLEVEL\_STATE\_TILED\_RIGHT\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_gafb8582ef882e8b1e7ba5eb20c9472c6e} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+RIGHT\+\_\+\+SINCE\+\_\+\+VERSION~2}
+
+\Hypertarget{group__iface__xdg__toplevel_ga7d4a39e45726f32392004941f4e47823}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_TILED\_TOP\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_TILED\_TOP\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_STATE\_TILED\_TOP\_SINCE\_VERSION@{XDG\_TOPLEVEL\_STATE\_TILED\_TOP\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_STATE\_TILED\_TOP\_SINCE\_VERSION}{XDG\_TOPLEVEL\_STATE\_TILED\_TOP\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga7d4a39e45726f32392004941f4e47823} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+TOP\+\_\+\+SINCE\+\_\+\+VERSION~2}
+
+\Hypertarget{group__iface__xdg__toplevel_gae4fc79bedad698b1ef70c37c2592e86d}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_UNSET\_FULLSCREEN\_SINCE\_VERSION@{XDG\_TOPLEVEL\_UNSET\_FULLSCREEN\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_UNSET\_FULLSCREEN\_SINCE\_VERSION@{XDG\_TOPLEVEL\_UNSET\_FULLSCREEN\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_UNSET\_FULLSCREEN\_SINCE\_VERSION}{XDG\_TOPLEVEL\_UNSET\_FULLSCREEN\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_gae4fc79bedad698b1ef70c37c2592e86d} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+UNSET\+\_\+\+FULLSCREEN\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_ga20e9bacd149fa902a16349a00eb7c040}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_UNSET\_MAXIMIZED\_SINCE\_VERSION@{XDG\_TOPLEVEL\_UNSET\_MAXIMIZED\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_UNSET\_MAXIMIZED\_SINCE\_VERSION@{XDG\_TOPLEVEL\_UNSET\_MAXIMIZED\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_UNSET\_MAXIMIZED\_SINCE\_VERSION}{XDG\_TOPLEVEL\_UNSET\_MAXIMIZED\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga20e9bacd149fa902a16349a00eb7c040} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+UNSET\+\_\+\+MAXIMIZED\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__toplevel_ga0621e971d79b95bae8575216782c1d10}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_WM\_CAPABILITIES\_SINCE\_VERSION@{XDG\_TOPLEVEL\_WM\_CAPABILITIES\_SINCE\_VERSION}}
+\index{XDG\_TOPLEVEL\_WM\_CAPABILITIES\_SINCE\_VERSION@{XDG\_TOPLEVEL\_WM\_CAPABILITIES\_SINCE\_VERSION}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_TOPLEVEL\_WM\_CAPABILITIES\_SINCE\_VERSION}{XDG\_TOPLEVEL\_WM\_CAPABILITIES\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga0621e971d79b95bae8575216782c1d10} 
+\#define XDG\+\_\+\+TOPLEVEL\+\_\+\+WM\+\_\+\+CAPABILITIES\+\_\+\+SINCE\+\_\+\+VERSION~5}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{group__iface__xdg__toplevel_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{group__iface__xdg__toplevel_ga9c5f29d74e9f5e730fe59ecdc397b116}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_resize\_edge@{xdg\_toplevel\_resize\_edge}}
+\index{xdg\_toplevel\_resize\_edge@{xdg\_toplevel\_resize\_edge}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_resize\_edge}{xdg\_toplevel\_resize\_edge}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga9c5f29d74e9f5e730fe59ecdc397b116} 
+enum \mbox{\hyperlink{group__iface__xdg__toplevel_ga9c5f29d74e9f5e730fe59ecdc397b116}{xdg\+\_\+toplevel\+\_\+resize\+\_\+edge}}}
+
+edge values for resizing
+
+These values are used to indicate which edge of a surface is being dragged in a resize operation. \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_RESIZE\_EDGE\_NONE@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_NONE}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_RESIZE\_EDGE\_NONE@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_NONE}}}\Hypertarget{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a8fb8eaed90c84f6ee349cf20dad13dc8}\label{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a8fb8eaed90c84f6ee349cf20dad13dc8} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_RESIZE\_EDGE\_TOP@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_TOP}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_RESIZE\_EDGE\_TOP@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_TOP}}}\Hypertarget{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116ab6738334e5155a610ffae9ec11a6380b}\label{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116ab6738334e5155a610ffae9ec11a6380b} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+TOP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_RESIZE\_EDGE\_BOTTOM@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_BOTTOM}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_RESIZE\_EDGE\_BOTTOM@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_BOTTOM}}}\Hypertarget{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a35b4b365f99c5d76ed3dcd8a15977853}\label{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a35b4b365f99c5d76ed3dcd8a15977853} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+BOTTOM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_RESIZE\_EDGE\_LEFT@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_LEFT}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_RESIZE\_EDGE\_LEFT@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_LEFT}}}\Hypertarget{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a905ab08631ed43116c424098dd28e473}\label{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a905ab08631ed43116c424098dd28e473} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_RESIZE\_EDGE\_TOP\_LEFT@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_TOP\_LEFT}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_RESIZE\_EDGE\_TOP\_LEFT@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_TOP\_LEFT}}}\Hypertarget{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a8bb02b53700283f3b179af4d8d33b735}\label{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a8bb02b53700283f3b179af4d8d33b735} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+TOP\+\_\+\+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_RESIZE\_EDGE\_BOTTOM\_LEFT@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_BOTTOM\_LEFT}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_RESIZE\_EDGE\_BOTTOM\_LEFT@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_BOTTOM\_LEFT}}}\Hypertarget{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116aecd33d2460b15a03ccb7cf099d7c4d4c}\label{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116aecd33d2460b15a03ccb7cf099d7c4d4c} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+BOTTOM\+\_\+\+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_RESIZE\_EDGE\_RIGHT@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_RIGHT}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_RESIZE\_EDGE\_RIGHT@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_RIGHT}}}\Hypertarget{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a3acbd89082c2926e502f46d18e51d41e}\label{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a3acbd89082c2926e502f46d18e51d41e} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+RIGHT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_RESIZE\_EDGE\_TOP\_RIGHT@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_TOP\_RIGHT}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_RESIZE\_EDGE\_TOP\_RIGHT@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_TOP\_RIGHT}}}\Hypertarget{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a3b6bba269420a558d29b26011feb3d02}\label{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a3b6bba269420a558d29b26011feb3d02} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+TOP\+\_\+\+RIGHT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_RESIZE\_EDGE\_BOTTOM\_RIGHT@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_BOTTOM\_RIGHT}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_RESIZE\_EDGE\_BOTTOM\_RIGHT@{XDG\_TOPLEVEL\_RESIZE\_EDGE\_BOTTOM\_RIGHT}}}\Hypertarget{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a7d3e52d640292d71d6f6f5019af95854}\label{group__iface__xdg__toplevel_gga9c5f29d74e9f5e730fe59ecdc397b116a7d3e52d640292d71d6f6f5019af95854} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+RESIZE\+\_\+\+EDGE\+\_\+\+BOTTOM\+\_\+\+RIGHT&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{group__iface__xdg__toplevel_gabaca79a813c489200722457958c54b43}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_state@{xdg\_toplevel\_state}}
+\index{xdg\_toplevel\_state@{xdg\_toplevel\_state}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_state}{xdg\_toplevel\_state}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_gabaca79a813c489200722457958c54b43} 
+enum \mbox{\hyperlink{group__iface__xdg__toplevel_gabaca79a813c489200722457958c54b43}{xdg\+\_\+toplevel\+\_\+state}}}
+
+types of state on the surface
+
+The different state values used on the surface. This is designed for state values like maximized, fullscreen. It is paired with the configure event to ensure that both the client and the compositor setting the state can be synchronized.
+
+States set in this way are double-\/buffered, see wl\+\_\+surface.\+commit. \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_STATE\_MAXIMIZED@{XDG\_TOPLEVEL\_STATE\_MAXIMIZED}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_MAXIMIZED@{XDG\_TOPLEVEL\_STATE\_MAXIMIZED}}}\Hypertarget{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a35643da6bcb9f371b8d4e663787ff9df}\label{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a35643da6bcb9f371b8d4e663787ff9df} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+MAXIMIZED&the surface is maximized the surface is maximized
+
+The surface is maximized. The window geometry specified in the configure event must be obeyed by the client, or the xdg\+\_\+wm\+\_\+base.\+invalid\+\_\+surface\+\_\+state error is raised.
+
+The client should draw without shadow or other decoration outside of the window geometry. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_STATE\_FULLSCREEN@{XDG\_TOPLEVEL\_STATE\_FULLSCREEN}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_FULLSCREEN@{XDG\_TOPLEVEL\_STATE\_FULLSCREEN}}}\Hypertarget{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43ae18b9b46242f684a7f80cc6edcb11198}\label{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43ae18b9b46242f684a7f80cc6edcb11198} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+FULLSCREEN&the surface is fullscreen the surface is fullscreen
+
+The surface is fullscreen. The window geometry specified in the configure event is a maximum; the client cannot resize beyond it. For a surface to cover the whole fullscreened area, the geometry dimensions must be obeyed by the client. For more details, see xdg\+\_\+toplevel.\+set\+\_\+fullscreen. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_STATE\_RESIZING@{XDG\_TOPLEVEL\_STATE\_RESIZING}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_RESIZING@{XDG\_TOPLEVEL\_STATE\_RESIZING}}}\Hypertarget{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43af34733ea6181003cfff4c51011b3fae5}\label{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43af34733ea6181003cfff4c51011b3fae5} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+RESIZING&the surface is being resized the surface is being resized
+
+The surface is being resized. The window geometry specified in the configure event is a maximum; the client cannot resize beyond it. Clients that have aspect ratio or cell sizing configuration can use a smaller size, however. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_STATE\_ACTIVATED@{XDG\_TOPLEVEL\_STATE\_ACTIVATED}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_ACTIVATED@{XDG\_TOPLEVEL\_STATE\_ACTIVATED}}}\Hypertarget{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43ada4cf2a15e69416ecdb506af0d34cd23}\label{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43ada4cf2a15e69416ecdb506af0d34cd23} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+ACTIVATED&the surface is now activated the surface is now activated
+
+Client window decorations should be painted as if the window is active. Do not assume this means that the window actually has keyboard or pointer focus. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_STATE\_TILED\_LEFT@{XDG\_TOPLEVEL\_STATE\_TILED\_LEFT}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_TILED\_LEFT@{XDG\_TOPLEVEL\_STATE\_TILED\_LEFT}}}\Hypertarget{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a4c4946d03abc061ab82fb74f7c13544e}\label{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a4c4946d03abc061ab82fb74f7c13544e} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+LEFT&the surface’s left edge is tiled
+
+The window is currently in a tiled layout and the left edge is considered to be adjacent to another part of the tiling grid.
+
+The client should draw without shadow or other decoration outside of the window geometry on the left edge. \begin{DoxySince}{Since}
+2 
+\end{DoxySince}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_STATE\_TILED\_RIGHT@{XDG\_TOPLEVEL\_STATE\_TILED\_RIGHT}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_TILED\_RIGHT@{XDG\_TOPLEVEL\_STATE\_TILED\_RIGHT}}}\Hypertarget{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a3c2df34cc493f00426a755ecda341358}\label{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a3c2df34cc493f00426a755ecda341358} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+RIGHT&the surface’s right edge is tiled
+
+The window is currently in a tiled layout and the right edge is considered to be adjacent to another part of the tiling grid.
+
+The client should draw without shadow or other decoration outside of the window geometry on the right edge. \begin{DoxySince}{Since}
+2 
+\end{DoxySince}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_STATE\_TILED\_TOP@{XDG\_TOPLEVEL\_STATE\_TILED\_TOP}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_TILED\_TOP@{XDG\_TOPLEVEL\_STATE\_TILED\_TOP}}}\Hypertarget{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43ac206f84cbaa6b2079e09b5d7fa4adafd}\label{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43ac206f84cbaa6b2079e09b5d7fa4adafd} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+TOP&the surface’s top edge is tiled
+
+The window is currently in a tiled layout and the top edge is considered to be adjacent to another part of the tiling grid.
+
+The client should draw without shadow or other decoration outside of the window geometry on the top edge. \begin{DoxySince}{Since}
+2 
+\end{DoxySince}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_STATE\_TILED\_BOTTOM@{XDG\_TOPLEVEL\_STATE\_TILED\_BOTTOM}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_TILED\_BOTTOM@{XDG\_TOPLEVEL\_STATE\_TILED\_BOTTOM}}}\Hypertarget{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43ab647470484c8b655fafa57548b55795b}\label{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43ab647470484c8b655fafa57548b55795b} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+TILED\+\_\+\+BOTTOM&the surface’s bottom edge is tiled
+
+The window is currently in a tiled layout and the bottom edge is considered to be adjacent to another part of the tiling grid.
+
+The client should draw without shadow or other decoration outside of the window geometry on the bottom edge. \begin{DoxySince}{Since}
+2 
+\end{DoxySince}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_STATE\_SUSPENDED@{XDG\_TOPLEVEL\_STATE\_SUSPENDED}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_SUSPENDED@{XDG\_TOPLEVEL\_STATE\_SUSPENDED}}}\Hypertarget{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43aa871bb8aff75d079d5938db0b288173d}\label{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43aa871bb8aff75d079d5938db0b288173d} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+SUSPENDED&surface repaint is suspended
+
+The surface is currently not ordinarily being repainted; for example because its content is occluded by another window, or its outputs are switched off due to screen locking. \begin{DoxySince}{Since}
+6 
+\end{DoxySince}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_LEFT@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_LEFT}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_LEFT@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_LEFT}}}\Hypertarget{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a4bacf3b1f4472bdfecd393eff2c17fe6}\label{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a4bacf3b1f4472bdfecd393eff2c17fe6} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+LEFT&the surface’s left edge is constrained
+
+The left edge of the window is currently constrained, meaning it shouldn\textquotesingle{}t attempt to resize from that edge. It can for example mean it\textquotesingle{}s tiled next to a monitor edge on the constrained side of the window. \begin{DoxySince}{Since}
+7 
+\end{DoxySince}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_RIGHT@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_RIGHT}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_RIGHT@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_RIGHT}}}\Hypertarget{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a3a73ad1b28b5936bdd6dd3c89591a5dc}\label{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a3a73ad1b28b5936bdd6dd3c89591a5dc} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+RIGHT&the surface’s right edge is constrained
+
+The right edge of the window is currently constrained, meaning it shouldn\textquotesingle{}t attempt to resize from that edge. It can for example mean it\textquotesingle{}s tiled next to a monitor edge on the constrained side of the window. \begin{DoxySince}{Since}
+7 
+\end{DoxySince}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_TOP@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_TOP}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_TOP@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_TOP}}}\Hypertarget{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a3be877716d077e6321dca4284f98c2cd}\label{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43a3be877716d077e6321dca4284f98c2cd} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+TOP&the surface’s top edge is constrained
+
+The top edge of the window is currently constrained, meaning it shouldn\textquotesingle{}t attempt to resize from that edge. It can for example mean it\textquotesingle{}s tiled next to a monitor edge on the constrained side of the window. \begin{DoxySince}{Since}
+7 
+\end{DoxySince}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_BOTTOM@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_BOTTOM}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_BOTTOM@{XDG\_TOPLEVEL\_STATE\_CONSTRAINED\_BOTTOM}}}\Hypertarget{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43aa951f0b3a96f41c9ce8acd98d294cf88}\label{group__iface__xdg__toplevel_ggabaca79a813c489200722457958c54b43aa951f0b3a96f41c9ce8acd98d294cf88} 
+XDG\+\_\+\+TOPLEVEL\+\_\+\+STATE\+\_\+\+CONSTRAINED\+\_\+\+BOTTOM&the surface’s bottom edge is tiled
+
+The bottom edge of the window is currently constrained, meaning it shouldn\textquotesingle{}t attempt to resize from that edge. It can for example mean it\textquotesingle{}s tiled next to a monitor edge on the constrained side of the window. \begin{DoxySince}{Since}
+7 
+\end{DoxySince}
+\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{group__iface__xdg__toplevel_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group__iface__xdg__toplevel_gabcfd5476f0190e3b4dc06437d3781278}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_add\_listener@{xdg\_toplevel\_add\_listener}}
+\index{xdg\_toplevel\_add\_listener@{xdg\_toplevel\_add\_listener}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_add\_listener()}{xdg\_toplevel\_add\_listener()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_gabcfd5476f0190e3b4dc06437d3781278} 
+int xdg\+\_\+toplevel\+\_\+add\+\_\+listener (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{, }\item[{const struct \mbox{\hyperlink{structxdg__toplevel__listener}{xdg\+\_\+toplevel\+\_\+listener}} \texorpdfstring{$\ast$}{*}}]{listener}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{group__iface__xdg__toplevel_gafd000a1887269ac8046140009c4dbd20}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_destroy@{xdg\_toplevel\_destroy}}
+\index{xdg\_toplevel\_destroy@{xdg\_toplevel\_destroy}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_destroy()}{xdg\_toplevel\_destroy()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_gafd000a1887269ac8046140009c4dbd20} 
+void xdg\+\_\+toplevel\+\_\+destroy (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This request destroys the role surface and unmaps the surface; see "{}\+Unmapping"{} behavior in interface section for details. \Hypertarget{group__iface__xdg__toplevel_ga47a2d3f90ab9763f1d91f854395fb6ec}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_get\_user\_data@{xdg\_toplevel\_get\_user\_data}}
+\index{xdg\_toplevel\_get\_user\_data@{xdg\_toplevel\_get\_user\_data}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_get\_user\_data()}{xdg\_toplevel\_get\_user\_data()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga47a2d3f90ab9763f1d91f854395fb6ec} 
+void \texorpdfstring{$\ast$}{*} xdg\+\_\+toplevel\+\_\+get\+\_\+user\+\_\+data (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{group__iface__xdg__toplevel_ga8540c65ec6571feea316b369518626d1}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_move@{xdg\_toplevel\_move}}
+\index{xdg\_toplevel\_move@{xdg\_toplevel\_move}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_move()}{xdg\_toplevel\_move()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga8540c65ec6571feea316b369518626d1} 
+void xdg\+\_\+toplevel\+\_\+move (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{, }\item[{struct wl\+\_\+seat \texorpdfstring{$\ast$}{*}}]{seat}{, }\item[{uint32\+\_\+t}]{serial}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Start an interactive, user-\/driven move of the surface.
+
+This request must be used in response to some sort of user action like a button press, key press, or touch down event. The passed serial is used to determine the type of interactive move (touch, pointer, etc).
+
+The server may ignore move requests depending on the state of the surface (e.\+g. fullscreen or maximized), or if the passed serial is no longer valid.
+
+If triggered, the surface will lose the focus of the device (wl\+\_\+pointer, wl\+\_\+touch, etc) used for the move. It is up to the compositor to visually indicate that the move is taking place, such as updating a pointer cursor, during the move. There is no guarantee that the device focus will return when the move is completed. \Hypertarget{group__iface__xdg__toplevel_ga757f5f4723a09263054453d9744ff443}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_resize@{xdg\_toplevel\_resize}}
+\index{xdg\_toplevel\_resize@{xdg\_toplevel\_resize}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_resize()}{xdg\_toplevel\_resize()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga757f5f4723a09263054453d9744ff443} 
+void xdg\+\_\+toplevel\+\_\+resize (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{, }\item[{struct wl\+\_\+seat \texorpdfstring{$\ast$}{*}}]{seat}{, }\item[{uint32\+\_\+t}]{serial}{, }\item[{uint32\+\_\+t}]{edges}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Start a user-\/driven, interactive resize of the surface.
+
+This request must be used in response to some sort of user action like a button press, key press, or touch down event. The passed serial is used to determine the type of interactive resize (touch, pointer, etc).
+
+The server may ignore resize requests depending on the state of the surface (e.\+g. fullscreen or maximized).
+
+If triggered, the client will receive configure events with the "{}resize"{} state enum value and the expected sizes. See the "{}resize"{} enum value for more details about what is required. The client must also acknowledge configure events using "{}ack\+\_\+configure"{}. After the resize is completed, the client will receive another "{}configure"{} event without the resize state.
+
+If triggered, the surface also will lose the focus of the device (wl\+\_\+pointer, wl\+\_\+touch, etc) used for the resize. It is up to the compositor to visually indicate that the resize is taking place, such as updating a pointer cursor, during the resize. There is no guarantee that the device focus will return when the resize is completed.
+
+The edges parameter specifies how the surface should be resized, and is one of the values of the resize\+\_\+edge enum. Values not matching a variant of the enum will cause the invalid\+\_\+resize\+\_\+edge protocol error. The compositor may use this information to update the surface position for example when dragging the top left corner. The compositor may also use this information to adapt its behavior, e.\+g. choose an appropriate cursor image. \Hypertarget{group__iface__xdg__toplevel_ga23645e8e4ad1754195ffdb354e1357c4}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_set\_app\_id@{xdg\_toplevel\_set\_app\_id}}
+\index{xdg\_toplevel\_set\_app\_id@{xdg\_toplevel\_set\_app\_id}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_set\_app\_id()}{xdg\_toplevel\_set\_app\_id()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga23645e8e4ad1754195ffdb354e1357c4} 
+void xdg\+\_\+toplevel\+\_\+set\+\_\+app\+\_\+id (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{app\+\_\+id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Set an application identifier for the surface.
+
+The app ID identifies the general class of applications to which the surface belongs. The compositor can use this to group multiple surfaces together, or to determine how to launch a new application.
+
+For D-\/\+Bus activatable applications, the app ID is used as the D-\/\+Bus service name.
+
+The compositor shell will try to group application surfaces together by their app ID. As a best practice, it is suggested to select app ID\textquotesingle{}s that match the basename of the application\textquotesingle{}s .desktop file. For example, "{}org.\+freedesktop.\+Foo\+Viewer"{} where the .desktop file is "{}org.\+freedesktop.\+Foo\+Viewer.\+desktop"{}.
+
+Like other properties, a set\+\_\+app\+\_\+id request can be sent after the xdg\+\_\+toplevel has been mapped to update the property.
+
+See the desktop-\/entry specification \mbox{[}0\mbox{]} for more details on application identifiers and how they relate to well-\/known D-\/\+Bus names and .desktop files.
+
+\mbox{[}0\mbox{]} \href{https://standards.freedesktop.org/desktop-entry-spec/}{\texttt{https\+://standards.\+freedesktop.\+org/desktop-\/entry-\/spec/}} \Hypertarget{group__iface__xdg__toplevel_ga2edcee4aa536c21aef1db20b5df195d6}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_set\_fullscreen@{xdg\_toplevel\_set\_fullscreen}}
+\index{xdg\_toplevel\_set\_fullscreen@{xdg\_toplevel\_set\_fullscreen}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_set\_fullscreen()}{xdg\_toplevel\_set\_fullscreen()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga2edcee4aa536c21aef1db20b5df195d6} 
+void xdg\+\_\+toplevel\+\_\+set\+\_\+fullscreen (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{, }\item[{struct wl\+\_\+output \texorpdfstring{$\ast$}{*}}]{output}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Make the surface fullscreen.
+
+After requesting that the surface should be fullscreened, the compositor will respond by emitting a configure event. Whether the client is actually put into a fullscreen state is subject to compositor policies. The client must also acknowledge the configure when committing the new content (see ack\+\_\+configure).
+
+The output passed by the request indicates the client\textquotesingle{}s preference as to which display it should be set fullscreen on. If this value is NULL, it\textquotesingle{}s up to the compositor to choose which display will be used to map this surface.
+
+If the surface doesn\textquotesingle{}t cover the whole output, the compositor will position the surface in the center of the output and compensate with with border fill covering the rest of the output. The content of the border fill is undefined, but should be assumed to be in some way that attempts to blend into the surrounding area (e.\+g. solid black).
+
+If the fullscreened surface is not opaque, the compositor must make sure that other screen content not part of the same surface tree (made up of subsurfaces, popups or similarly coupled surfaces) are not visible below the fullscreened surface. \Hypertarget{group__iface__xdg__toplevel_ga42b55dcba1d89d008650e3de51b9b09b}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_set\_max\_size@{xdg\_toplevel\_set\_max\_size}}
+\index{xdg\_toplevel\_set\_max\_size@{xdg\_toplevel\_set\_max\_size}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_set\_max\_size()}{xdg\_toplevel\_set\_max\_size()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga42b55dcba1d89d008650e3de51b9b09b} 
+void xdg\+\_\+toplevel\+\_\+set\+\_\+max\+\_\+size (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{, }\item[{int32\+\_\+t}]{width}{, }\item[{int32\+\_\+t}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Set a maximum size for the window.
+
+The client can specify a maximum size so that the compositor does not try to configure the window beyond this size.
+
+The width and height arguments are in window geometry coordinates. See xdg\+\_\+surface.\+set\+\_\+window\+\_\+geometry.
+
+Values set in this way are double-\/buffered, see wl\+\_\+surface.\+commit.
+
+The compositor can use this information to allow or disallow different states like maximize or fullscreen and draw accurate animations.
+
+Similarly, a tiling window manager may use this information to place and resize client windows in a more effective way.
+
+The client should not rely on the compositor to obey the maximum size. The compositor may decide to ignore the values set by the client and request a larger size.
+
+If never set, or a value of zero in the request, means that the client has no expected maximum size in the given dimension. As a result, a client wishing to reset the maximum size to an unspecified state can use zero for width and height in the request.
+
+Requesting a maximum size to be smaller than the minimum size of a surface is illegal and will result in an invalid\+\_\+size error.
+
+The width and height must be greater than or equal to zero. Using strictly negative values for width or height will result in a invalid\+\_\+size error. \Hypertarget{group__iface__xdg__toplevel_ga570d44f40ddbd082dbe0021a36c59a30}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_set\_maximized@{xdg\_toplevel\_set\_maximized}}
+\index{xdg\_toplevel\_set\_maximized@{xdg\_toplevel\_set\_maximized}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_set\_maximized()}{xdg\_toplevel\_set\_maximized()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga570d44f40ddbd082dbe0021a36c59a30} 
+void xdg\+\_\+toplevel\+\_\+set\+\_\+maximized (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Maximize the surface.
+
+After requesting that the surface should be maximized, the compositor will respond by emitting a configure event. Whether this configure actually sets the window maximized is subject to compositor policies. The client must then update its content, drawing in the configured state. The client must also acknowledge the configure when committing the new content (see ack\+\_\+configure).
+
+It is up to the compositor to decide how and where to maximize the surface, for example which output and what region of the screen should be used.
+
+If the surface was already maximized, the compositor will still emit a configure event with the "{}maximized"{} state.
+
+If the surface is in a fullscreen state, this request has no direct effect. It may alter the state the surface is returned to when unmaximized unless overridden by the compositor. \Hypertarget{group__iface__xdg__toplevel_gac55835037874c9e0ec28d4463f267295}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_set\_min\_size@{xdg\_toplevel\_set\_min\_size}}
+\index{xdg\_toplevel\_set\_min\_size@{xdg\_toplevel\_set\_min\_size}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_set\_min\_size()}{xdg\_toplevel\_set\_min\_size()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_gac55835037874c9e0ec28d4463f267295} 
+void xdg\+\_\+toplevel\+\_\+set\+\_\+min\+\_\+size (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{, }\item[{int32\+\_\+t}]{width}{, }\item[{int32\+\_\+t}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Set a minimum size for the window.
+
+The client can specify a minimum size so that the compositor does not try to configure the window below this size.
+
+The width and height arguments are in window geometry coordinates. See xdg\+\_\+surface.\+set\+\_\+window\+\_\+geometry.
+
+Values set in this way are double-\/buffered, see wl\+\_\+surface.\+commit.
+
+The compositor can use this information to allow or disallow different states like maximize or fullscreen and draw accurate animations.
+
+Similarly, a tiling window manager may use this information to place and resize client windows in a more effective way.
+
+The client should not rely on the compositor to obey the minimum size. The compositor may decide to ignore the values set by the client and request a smaller size.
+
+If never set, or a value of zero in the request, means that the client has no expected minimum size in the given dimension. As a result, a client wishing to reset the minimum size to an unspecified state can use zero for width and height in the request.
+
+Requesting a minimum size to be larger than the maximum size of a surface is illegal and will result in an invalid\+\_\+size error.
+
+The width and height must be greater than or equal to zero. Using strictly negative values for width and height will result in a invalid\+\_\+size error. \Hypertarget{group__iface__xdg__toplevel_ga813e6d50fcc67be73167510869a7e714}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_set\_minimized@{xdg\_toplevel\_set\_minimized}}
+\index{xdg\_toplevel\_set\_minimized@{xdg\_toplevel\_set\_minimized}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_set\_minimized()}{xdg\_toplevel\_set\_minimized()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga813e6d50fcc67be73167510869a7e714} 
+void xdg\+\_\+toplevel\+\_\+set\+\_\+minimized (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Request that the compositor minimize your surface. There is no way to know if the surface is currently minimized, nor is there any way to unset minimization on this surface.
+
+If you are looking to throttle redrawing when minimized, please instead use the wl\+\_\+surface.\+frame event for this, as this will also work with live previews on windows in Alt-\/\+Tab, Expose or similar compositor features. \Hypertarget{group__iface__xdg__toplevel_gae18f9f2a65028648a0640a3cb1b6e6c9}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_set\_parent@{xdg\_toplevel\_set\_parent}}
+\index{xdg\_toplevel\_set\_parent@{xdg\_toplevel\_set\_parent}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_set\_parent()}{xdg\_toplevel\_set\_parent()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_gae18f9f2a65028648a0640a3cb1b6e6c9} 
+void xdg\+\_\+toplevel\+\_\+set\+\_\+parent (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{, }\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{parent}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Set the "{}parent"{} of this surface. This surface should be stacked above the parent surface and all other ancestor surfaces.
+
+Parent surfaces should be set on dialogs, toolboxes, or other "{}auxiliary"{} surfaces, so that the parent is raised when the dialog is raised.
+
+Setting a null parent for a child surface unsets its parent. Setting a null parent for a surface which currently has no parent is a no-\/op.
+
+Only mapped surfaces can have child surfaces. Setting a parent which is not mapped is equivalent to setting a null parent. If a surface becomes unmapped, its children\textquotesingle{}s parent is set to the parent of the now-\/unmapped surface. If the now-\/unmapped surface has no parent, its children\textquotesingle{}s parent is unset. If the now-\/unmapped surface becomes mapped again, its parent-\/child relationship is not restored.
+
+The parent toplevel must not be one of the child toplevel\textquotesingle{}s descendants, and the parent must be different from the child toplevel, otherwise the invalid\+\_\+parent protocol error is raised. \Hypertarget{group__iface__xdg__toplevel_ga15de6dc9a28b7b62dc7e2b437762c3e8}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_set\_title@{xdg\_toplevel\_set\_title}}
+\index{xdg\_toplevel\_set\_title@{xdg\_toplevel\_set\_title}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_set\_title()}{xdg\_toplevel\_set\_title()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga15de6dc9a28b7b62dc7e2b437762c3e8} 
+void xdg\+\_\+toplevel\+\_\+set\+\_\+title (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Set a short title for the surface.
+
+This string may be used to identify the surface in a task bar, window list, or other user interface elements provided by the compositor.
+
+The string must be encoded in UTF-\/8. \Hypertarget{group__iface__xdg__toplevel_gaba27052541991f19845d898ce5337865}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_set\_user\_data@{xdg\_toplevel\_set\_user\_data}}
+\index{xdg\_toplevel\_set\_user\_data@{xdg\_toplevel\_set\_user\_data}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_set\_user\_data()}{xdg\_toplevel\_set\_user\_data()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_gaba27052541991f19845d898ce5337865} 
+void xdg\+\_\+toplevel\+\_\+set\+\_\+user\+\_\+data (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+\_\+data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{group__iface__xdg__toplevel_gaf6701fc9dd6fdee4d1d254fc1087e4fc}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_show\_window\_menu@{xdg\_toplevel\_show\_window\_menu}}
+\index{xdg\_toplevel\_show\_window\_menu@{xdg\_toplevel\_show\_window\_menu}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_show\_window\_menu()}{xdg\_toplevel\_show\_window\_menu()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_gaf6701fc9dd6fdee4d1d254fc1087e4fc} 
+void xdg\+\_\+toplevel\+\_\+show\+\_\+window\+\_\+menu (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{, }\item[{struct wl\+\_\+seat \texorpdfstring{$\ast$}{*}}]{seat}{, }\item[{uint32\+\_\+t}]{serial}{, }\item[{int32\+\_\+t}]{x}{, }\item[{int32\+\_\+t}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Clients implementing client-\/side decorations might want to show a context menu when right-\/clicking on the decorations, giving the user a menu that they can use to maximize or minimize the window.
+
+This request asks the compositor to pop up such a window menu at the given position, relative to the local surface coordinates of the parent surface. There are no guarantees as to what menu items the window menu contains, or even if a window menu will be drawn at all.
+
+This request must be used in response to some sort of user action like a button press, key press, or touch down event. \Hypertarget{group__iface__xdg__toplevel_gafff1d69e3e484bea5bbc0b226eb50473}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_unset\_fullscreen@{xdg\_toplevel\_unset\_fullscreen}}
+\index{xdg\_toplevel\_unset\_fullscreen@{xdg\_toplevel\_unset\_fullscreen}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_unset\_fullscreen()}{xdg\_toplevel\_unset\_fullscreen()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_gafff1d69e3e484bea5bbc0b226eb50473} 
+void xdg\+\_\+toplevel\+\_\+unset\+\_\+fullscreen (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Make the surface no longer fullscreen.
+
+After requesting that the surface should be unfullscreened, the compositor will respond by emitting a configure event. Whether this actually removes the fullscreen state of the client is subject to compositor policies.
+
+Making a surface unfullscreen sets states for the surface based on the following\+:
+\begin{DoxyItemize}
+\item the state(s) it may have had before becoming fullscreen
+\item any state(s) decided by the compositor
+\item any state(s) requested by the client while the surface was fullscreen
+\end{DoxyItemize}
+
+The compositor may include the previous window geometry dimensions in the configure event, if applicable.
+
+The client must also acknowledge the configure when committing the new content (see ack\+\_\+configure). \Hypertarget{group__iface__xdg__toplevel_ga7a61c4552a8e1671d58fd76d7d76c954}\index{The xdg\_toplevel interface@{The xdg\_toplevel interface}!xdg\_toplevel\_unset\_maximized@{xdg\_toplevel\_unset\_maximized}}
+\index{xdg\_toplevel\_unset\_maximized@{xdg\_toplevel\_unset\_maximized}!The xdg\_toplevel interface@{The xdg\_toplevel interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_toplevel\_unset\_maximized()}{xdg\_toplevel\_unset\_maximized()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__toplevel_ga7a61c4552a8e1671d58fd76d7d76c954} 
+void xdg\+\_\+toplevel\+\_\+unset\+\_\+maximized (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+toplevel \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+toplevel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Unmaximize the surface.
+
+After requesting that the surface should be unmaximized, the compositor will respond by emitting a configure event. Whether this actually un-\/maximizes the window is subject to compositor policies. If available and applicable, the compositor will include the window geometry dimensions the window had prior to being maximized in the configure event. The client must then update its content, drawing it in the configured state. The client must also acknowledge the configure when committing the new content (see ack\+\_\+configure).
+
+It is up to the compositor to position the surface after it was unmaximized; usually the position the surface had before maximizing, if applicable.
+
+If the surface was already not maximized, the compositor will still emit a configure event without the "{}maximized"{} state.
+
+If the surface is in a fullscreen state, this request has no direct effect. It may alter the state the surface is returned to when unmaximized unless overridden by the compositor. 

@@ -1,0 +1,28 @@
+\doxysection{vulkan\+\_\+swapchain.\+h}
+\hypertarget{vulkan__swapchain_8h_source}{}\label{vulkan__swapchain_8h_source}\index{engine/src/renderer/vulkan/vulkan\_swapchain.h@{engine/src/renderer/vulkan/vulkan\_swapchain.h}}
+\mbox{\hyperlink{vulkan__swapchain_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vulkan__types_8inl}{renderer/vulkan/vulkan\_types.inl}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__swapchain_8h_a3385e045032018c37ee427c2caa82bfb}{vulkan\_swapchain\_create}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ width,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ height,}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__swapchain}{vulkan\_swapchain}}\ *out\_swapchain);}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__swapchain_8h_a37945527d25893e83ecde0d83f11b550}{vulkan\_swapchain\_recreate}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ width,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ height,}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__swapchain}{vulkan\_swapchain}}\ *swapchain);}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__swapchain_8h_a6f1b2b14ddf48b8eb0877e9d1192352f}{vulkan\_swapchain\_destroy}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__swapchain}{vulkan\_swapchain}}\ *swapchain);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{vulkan__swapchain_8h_a559f69815dfb6ccb3a6776516d9025b7}{vulkan\_swapchain\_acquire\_next\_image\_index}}(}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},\ \mbox{\hyperlink{structvulkan__swapchain}{vulkan\_swapchain}}\ *swapchain,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ timeout\_ns,}
+\DoxyCodeLine{00016\ \ \ \ \ VkSemaphore\ image\_available\_semaphore,\ VkFence\ fence,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ *out\_image\_index);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__swapchain_8h_a401617aff019b05a923dcda96f83c958}{vulkan\_swapchain\_present}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__swapchain}{vulkan\_swapchain}}\ *swapchain,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkQueue\ graphics\_queue,\ VkQueue\ present\_queue,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkSemaphore\ render\_complete\_semaphore,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ present\_image\_index);}
+
+\end{DoxyCode}

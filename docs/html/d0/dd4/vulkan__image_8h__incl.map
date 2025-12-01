@@ -1,0 +1,27 @@
+<map id="engine/src/renderer/vulkan/vulkan_image.h" name="engine/src/renderer/vulkan/vulkan_image.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="249,5,425,50"/>
+<area shape="rect" id="Node000002" href="$d2/d63/vulkan__types_8inl.html" title=" " alt="" coords="252,98,422,143"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="338,48,340,83,334,82,336,53"/>
+<area shape="rect" id="Node000003" href="$de/d3c/freelist_8h.html" title="this file contains a free list, used for dynamic allocation tracking." alt="" coords="5,275,157,302"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="269,145,224,166,177,193,135,228,103,264,98,261,132,224,174,188,222,161,273,142"/>
+<area shape="rect" id="Node000004" href="$d8/db0/defines_8h.html" title=" " alt="" coords="248,435,328,462"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="319,141,285,192,244,272,232,310,222,360,220,373,222,386,236,406,255,426,250,425,232,410,217,388,214,373,217,358,227,309,239,270,280,189,316,145"/>
+<area shape="rect" id="Node000005" href="$da/d96/asserts_8h.html" title=" " alt="" coords="232,359,344,387"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="321,141,308,167,297,191,288,232,285,273,287,345,282,343,279,273,283,231,292,190,303,164,318,145"/>
+<area shape="rect" id="Node000006" href="$de/df8/renderer__types_8inl.html" title=" " alt="" coords="306,191,504,218"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="355,140,387,178,382,178,354,146"/>
+<area shape="rect" id="Node000009" href="$de/d9c/resource__types_8h.html" title=" " alt="" coords="469,266,613,311"/>
+<area shape="poly" id="edge14_Node000002_Node000009" title=" " alt="" coords="422,135,474,155,497,170,518,189,535,219,542,252,537,250,530,220,514,192,494,174,471,160,423,140"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="578,191,701,218"/>
+<area shape="poly" id="edge15_Node000002_Node000010" title=" " alt="" coords="417,141,579,185,574,187,417,146"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="92,300,129,341,177,385,211,407,247,428,242,427,208,411,174,389,125,345,91,306"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="290,385,290,420,285,417,286,389"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="406,217,394,294,380,342,358,388,341,409,321,427,319,422,337,406,353,385,375,340,389,293,402,221"/>
+<area shape="rect" id="Node000007" href="$d4/d7e/math__types_8h.html" title=" " alt="" coords="419,359,567,387"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="412,217,459,310,480,346,474,345,455,312,410,221"/>
+<area shape="poly" id="edge12_Node000006_Node000009" title=" " alt="" coords="427,216,495,258,489,258,427,222"/>
+<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="459,387,339,432,338,426,454,388"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="450,435,536,462"/>
+<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="495,385,495,421,491,417,491,389"/>
+<area shape="poly" id="edge13_Node000009_Node000007" title=" " alt="" coords="531,310,510,347,507,343,526,313"/>
+</map>

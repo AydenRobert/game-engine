@@ -1,0 +1,15 @@
+<map id="_darray_destroy" name="_darray_destroy">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,59,132,86"/>
+<area shape="rect" id="Node000002" href="$d3/d3c/kmemory_8c.html#a6b55b65a2f2d473dac0d8ff4605a44fb" title=" " alt="" coords="180,59,235,86"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,70,167,72,161,73,132,75"/>
+<area shape="rect" id="Node000003" href="$dd/d44/dynamic__allocator_8c.html#a10c3c742d3900e743f85fe47c11be3e5" title="Frees a block of memory that was allocated by the allocator." alt="" coords="283,32,457,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="235,65,270,62,265,63,236,71"/>
+<area shape="rect" id="Node000007" href="$de/d03/platform_8h.html#a0b638fcfa31e0704eb976a8662c095f2" title=" " alt="" coords="315,84,425,112"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="236,74,303,87,297,87,235,79"/>
+<area shape="rect" id="Node000004" href="$da/d3f/freelist_8c.html#a8af32093da394b6cfa1a3436b8e84283" title="Attempts to find a free block of memory given the size." alt="" coords="505,32,648,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="458,43,492,46,487,46,458,48"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df" title=" " alt="" coords="705,5,786,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="648,32,687,28,692,28,649,37"/>
+<area shape="rect" id="Node000006" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="696,57,795,85"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="648,54,683,62,678,61,648,59"/>
+</map>

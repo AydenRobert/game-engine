@@ -1,0 +1,17 @@
+<map id="destroy" name="destroy">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,84,76,112"/>
+<area shape="rect" id="Node000002" href="$d3/d3c/kmemory_8c.html#a6b55b65a2f2d473dac0d8ff4605a44fb" title=" " alt="" coords="180,57,236,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="75,90,166,75,164,80,77,95"/>
+<area shape="rect" id="Node000008" href="$da/d00/vulkan__image_8c.html#a7d1140c936aeeadb57f27f293db7674a" title=" " alt="" coords="124,109,292,137"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="76,100,111,107,106,109,76,106"/>
+<area shape="rect" id="Node000003" href="$dd/d44/dynamic__allocator_8c.html#a10c3c742d3900e743f85fe47c11be3e5" title="Frees a block of memory that was allocated by the allocator." alt="" coords="340,32,514,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="235,65,327,57,322,58,236,71"/>
+<area shape="rect" id="Node000007" href="$de/d03/platform_8h.html#a0b638fcfa31e0704eb976a8662c095f2" title=" " alt="" coords="372,84,482,112"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="236,72,359,89,354,90,236,77"/>
+<area shape="rect" id="Node000004" href="$da/d3f/freelist_8c.html#a8af32093da394b6cfa1a3436b8e84283" title="Attempts to find a free block of memory given the size." alt="" coords="562,32,705,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="515,43,549,46,544,46,515,48"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df" title=" " alt="" coords="762,5,843,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="705,32,744,28,749,28,706,37"/>
+<area shape="rect" id="Node000006" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="753,57,852,85"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="705,54,740,61,735,61,705,59"/>
+</map>

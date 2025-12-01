@@ -1,0 +1,249 @@
+\doxysection{engine/src/memory/dynamic\+\_\+allocator.h File Reference}
+\hypertarget{dynamic__allocator_8h}{}\label{dynamic__allocator_8h}\index{engine/src/memory/dynamic\_allocator.h@{engine/src/memory/dynamic\_allocator.h}}
+
+
+Contains the implementation of the dynamic allocator.  
+
+
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+Include dependency graph for dynamic\+\_\+allocator.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{d1/d02/dynamic__allocator_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d42/dynamic__allocator_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdynamic__allocator}{dynamic\+\_\+allocator}}
+\begin{DoxyCompactList}\small\item\em The dynamic allocator struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct dynamic\+\_\+allocator \mbox{\hyperlink{dynamic__allocator_8h_a31a7590768f7b351626e018a1ce3f1f4}{dynamic\+\_\+allocator}}
+\begin{DoxyCompactList}\small\item\em The dynamic allocator struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{dynamic__allocator_8h_abab35ff2360ba32d9765f5616a9ca5ef}{dynamic\+\_\+allocator\+\_\+create}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} total\+\_\+size, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}memory\+\_\+requirement, void \texorpdfstring{$\ast$}{*}memory, \mbox{\hyperlink{structdynamic__allocator}{dynamic\+\_\+allocator}} \texorpdfstring{$\ast$}{*}out\+\_\+allocator)
+\begin{DoxyCompactList}\small\item\em Creates a dynamic allocator. Should be called twice; once to get the memory requirement, twice to create the struct. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{dynamic__allocator_8h_a7b36e5dd77cd9841dfc2e58fa0cbaaac}{dynamic\+\_\+allocator\+\_\+destroy}} (\mbox{\hyperlink{structdynamic__allocator}{dynamic\+\_\+allocator}} \texorpdfstring{$\ast$}{*}allocator)
+\begin{DoxyCompactList}\small\item\em Destroys a dynamic allocator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{dynamic__allocator_8h_a5fef1d1a70b9955033b43f3025afa4fb}{dynamic\+\_\+allocator\+\_\+allocate}} (\mbox{\hyperlink{structdynamic__allocator}{dynamic\+\_\+allocator}} \texorpdfstring{$\ast$}{*}allocator, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size)
+\begin{DoxyCompactList}\small\item\em Allocates an amount of memory and returns the given block. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{dynamic__allocator_8h_a121314924107b7f06d31c5f7433844cc}{dynamic\+\_\+allocator\+\_\+free}} (\mbox{\hyperlink{structdynamic__allocator}{dynamic\+\_\+allocator}} \texorpdfstring{$\ast$}{*}allocator, void \texorpdfstring{$\ast$}{*}block, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size)
+\begin{DoxyCompactList}\small\item\em Frees a block of memory that was allocated by the allocator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{dynamic__allocator_8h_ad8c12386fc1052f977128713a035ff53}{dynamic\+\_\+allocator\+\_\+free\+\_\+space}} (\mbox{\hyperlink{structdynamic__allocator}{dynamic\+\_\+allocator}} \texorpdfstring{$\ast$}{*}allocator)
+\begin{DoxyCompactList}\small\item\em Gets the amount of free space left in the provided dynamic allocator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the implementation of the dynamic allocator. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/12-\/01 
+\end{DoxyDate}
+
+
+\label{doc-typedef-members}
+\Hypertarget{dynamic__allocator_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{dynamic__allocator_8h_a31a7590768f7b351626e018a1ce3f1f4}\index{dynamic\_allocator.h@{dynamic\_allocator.h}!dynamic\_allocator@{dynamic\_allocator}}
+\index{dynamic\_allocator@{dynamic\_allocator}!dynamic\_allocator.h@{dynamic\_allocator.h}}
+\doxysubsubsection{\texorpdfstring{dynamic\_allocator}{dynamic\_allocator}}
+{\footnotesize\ttfamily \label{dynamic__allocator_8h_a31a7590768f7b351626e018a1ce3f1f4} 
+typedef struct dynamic\+\_\+allocator dynamic\+\_\+allocator}
+
+
+
+The dynamic allocator struct. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{dynamic__allocator_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{dynamic__allocator_8h_a5fef1d1a70b9955033b43f3025afa4fb}\index{dynamic\_allocator.h@{dynamic\_allocator.h}!dynamic\_allocator\_allocate@{dynamic\_allocator\_allocate}}
+\index{dynamic\_allocator\_allocate@{dynamic\_allocator\_allocate}!dynamic\_allocator.h@{dynamic\_allocator.h}}
+\doxysubsubsection{\texorpdfstring{dynamic\_allocator\_allocate()}{dynamic\_allocator\_allocate()}}
+{\footnotesize\ttfamily \label{dynamic__allocator_8h_a5fef1d1a70b9955033b43f3025afa4fb} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \texorpdfstring{$\ast$}{*} dynamic\+\_\+allocator\+\_\+allocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdynamic__allocator}{dynamic\+\_\+allocator}} \texorpdfstring{$\ast$}{*}}]{allocator}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Allocates an amount of memory and returns the given block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & A pointer to the allocator struct. \\
+\hline
+{\em size} & The size to allocate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The block of memory if successful; otherwise Null; 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0f/dynamic__allocator_8h_a5fef1d1a70b9955033b43f3025afa4fb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0f/dynamic__allocator_8h_a5fef1d1a70b9955033b43f3025afa4fb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dynamic__allocator_8h_abab35ff2360ba32d9765f5616a9ca5ef}\index{dynamic\_allocator.h@{dynamic\_allocator.h}!dynamic\_allocator\_create@{dynamic\_allocator\_create}}
+\index{dynamic\_allocator\_create@{dynamic\_allocator\_create}!dynamic\_allocator.h@{dynamic\_allocator.h}}
+\doxysubsubsection{\texorpdfstring{dynamic\_allocator\_create()}{dynamic\_allocator\_create()}}
+{\footnotesize\ttfamily \label{dynamic__allocator_8h_abab35ff2360ba32d9765f5616a9ca5ef} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} dynamic\+\_\+allocator\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{total\+\_\+size}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{memory\+\_\+requirement}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{memory}{, }\item[{\mbox{\hyperlink{structdynamic__allocator}{dynamic\+\_\+allocator}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+allocator}{}\end{DoxyParamCaption})}
+
+
+
+Creates a dynamic allocator. Should be called twice; once to get the memory requirement, twice to create the struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+\_\+size} & The total\+\_\+size in bytes that the allocator should hold. This does not contain state of allocator. \\
+\hline
+{\em memory\+\_\+requirement} & A pointer to the amount of memory needed for the struct. \\
+\hline
+{\em memory} & A pointer to the memory for the allocator. \\
+\hline
+{\em out\+\_\+allocator} & A pointer to hold the allocator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful; other False. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0f/dynamic__allocator_8h_abab35ff2360ba32d9765f5616a9ca5ef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0f/dynamic__allocator_8h_abab35ff2360ba32d9765f5616a9ca5ef_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dynamic__allocator_8h_a7b36e5dd77cd9841dfc2e58fa0cbaaac}\index{dynamic\_allocator.h@{dynamic\_allocator.h}!dynamic\_allocator\_destroy@{dynamic\_allocator\_destroy}}
+\index{dynamic\_allocator\_destroy@{dynamic\_allocator\_destroy}!dynamic\_allocator.h@{dynamic\_allocator.h}}
+\doxysubsubsection{\texorpdfstring{dynamic\_allocator\_destroy()}{dynamic\_allocator\_destroy()}}
+{\footnotesize\ttfamily \label{dynamic__allocator_8h_a7b36e5dd77cd9841dfc2e58fa0cbaaac} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} dynamic\+\_\+allocator\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdynamic__allocator}{dynamic\+\_\+allocator}} \texorpdfstring{$\ast$}{*}}]{allocator}{}\end{DoxyParamCaption})}
+
+
+
+Destroys a dynamic allocator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & A pointer to the allocator to destroy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful; other False. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0f/dynamic__allocator_8h_a7b36e5dd77cd9841dfc2e58fa0cbaaac_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0f/dynamic__allocator_8h_a7b36e5dd77cd9841dfc2e58fa0cbaaac_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dynamic__allocator_8h_a121314924107b7f06d31c5f7433844cc}\index{dynamic\_allocator.h@{dynamic\_allocator.h}!dynamic\_allocator\_free@{dynamic\_allocator\_free}}
+\index{dynamic\_allocator\_free@{dynamic\_allocator\_free}!dynamic\_allocator.h@{dynamic\_allocator.h}}
+\doxysubsubsection{\texorpdfstring{dynamic\_allocator\_free()}{dynamic\_allocator\_free()}}
+{\footnotesize\ttfamily \label{dynamic__allocator_8h_a121314924107b7f06d31c5f7433844cc} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} dynamic\+\_\+allocator\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdynamic__allocator}{dynamic\+\_\+allocator}} \texorpdfstring{$\ast$}{*}}]{allocator}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{block}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Frees a block of memory that was allocated by the allocator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & The allocator struct. \\
+\hline
+{\em block} & The block to free. \\
+\hline
+{\em size} & The size of the block. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful; other False. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0f/dynamic__allocator_8h_a121314924107b7f06d31c5f7433844cc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0f/dynamic__allocator_8h_a121314924107b7f06d31c5f7433844cc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{dynamic__allocator_8h_ad8c12386fc1052f977128713a035ff53}\index{dynamic\_allocator.h@{dynamic\_allocator.h}!dynamic\_allocator\_free\_space@{dynamic\_allocator\_free\_space}}
+\index{dynamic\_allocator\_free\_space@{dynamic\_allocator\_free\_space}!dynamic\_allocator.h@{dynamic\_allocator.h}}
+\doxysubsubsection{\texorpdfstring{dynamic\_allocator\_free\_space()}{dynamic\_allocator\_free\_space()}}
+{\footnotesize\ttfamily \label{dynamic__allocator_8h_ad8c12386fc1052f977128713a035ff53} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} dynamic\+\_\+allocator\+\_\+free\+\_\+space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdynamic__allocator}{dynamic\+\_\+allocator}} \texorpdfstring{$\ast$}{*}}]{allocator}{}\end{DoxyParamCaption})}
+
+
+
+Gets the amount of free space left in the provided dynamic allocator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & A pointer to the allocator struct. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0f/dynamic__allocator_8h_ad8c12386fc1052f977128713a035ff53_cgraph}
+\end{center}
+\end{figure}

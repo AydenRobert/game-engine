@@ -1,0 +1,13 @@
+<map id="kfree" name="kfree">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,59,61,86"/>
+<area shape="rect" id="Node000002" href="$dd/d44/dynamic__allocator_8c.html#a10c3c742d3900e743f85fe47c11be3e5" title="Frees a block of memory that was allocated by the allocator." alt="" coords="109,32,283,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,65,95,61,91,64,62,71"/>
+<area shape="rect" id="Node000006" href="$de/d03/platform_8h.html#a0b638fcfa31e0704eb976a8662c095f2" title=" " alt="" coords="141,84,251,112"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="61,74,127,85,124,89,61,79"/>
+<area shape="rect" id="Node000003" href="$da/d3f/freelist_8c.html#a8af32093da394b6cfa1a3436b8e84283" title="Attempts to find a free block of memory given the size." alt="" coords="331,32,473,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="283,43,318,45,313,46,284,48"/>
+<area shape="rect" id="Node000004" href="$da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df" title=" " alt="" coords="530,5,612,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="474,32,518,28,512,28,474,37"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="521,57,621,85"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="474,54,509,61,503,61,474,59"/>
+</map>

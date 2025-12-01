@@ -1,0 +1,257 @@
+\doxysection{application\+\_\+state Struct Reference}
+\hypertarget{structapplication__state}{}\label{structapplication__state}\index{application\_state@{application\_state}}
+
+
+Collaboration diagram for application\+\_\+state\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d6d/structapplication__state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_ae224fcec4853d590c4068314f75196c2}{game\+\_\+inst}}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{structapplication__state_a7c10d54c29174a16313dfc1992ccabde}{is\+\_\+running}}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{structapplication__state_a4e7125d95754ef0c0166479931eafcd1}{is\+\_\+suspended}}
+\item 
+\mbox{\hyperlink{structplatform__state}{platform\+\_\+state}} \mbox{\hyperlink{structapplication__state_a14782a7e40b24efc8c814f786c6525ba}{platform}}
+\item 
+\mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}} \mbox{\hyperlink{structapplication__state_a5c49a4da818b7bae26b50df80c889279}{width}}
+\item 
+\mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}} \mbox{\hyperlink{structapplication__state_a4a01899027b7429dce0fa6290b927f9c}{height}}
+\item 
+\mbox{\hyperlink{structclock}{clock}} \mbox{\hyperlink{structapplication__state_aa930dcc46dfc1ad594320c1a313a26a2}{clock}}
+\item 
+\mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}} \mbox{\hyperlink{structapplication__state_a4fc952bc899881d85115730cf7da1c5a}{last\+\_\+time}}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structapplication__state_a6022877e2186c6e01b56ce48a99fae1e}{systems\+\_\+allocator\+\_\+memory\+\_\+requirement}}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_a53918da3d5f55e8c074ad4e364fa2b60}{systems\+\_\+allocator\+\_\+memory}}
+\item 
+\mbox{\hyperlink{structlinear__allocator}{linear\+\_\+allocator}} \mbox{\hyperlink{structapplication__state_a213ee353f6a3fbc499d583c79f369b9a}{systems\+\_\+allocator}}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structapplication__state_a7f3de38a5a5c937b28bce6620ebe8c48}{logging\+\_\+system\+\_\+memory\+\_\+requirement}}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_aca514d3246b5d5a1973c29df11550ea1}{logging\+\_\+system\+\_\+state}}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structapplication__state_a2a9175d2ced90985c4c30c8c75857cd9}{input\+\_\+system\+\_\+memory\+\_\+requirement}}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_a7949e6624c3ebfad501d54da232cc65b}{input\+\_\+system\+\_\+state}}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structapplication__state_af3589702e0777ec9177a0445495bf55c}{event\+\_\+system\+\_\+memory\+\_\+requirement}}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_ad9186745c2d8485ef0070a70a4b45688}{event\+\_\+system\+\_\+state}}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structapplication__state_a73a41404679c970a29cdd5fe48d51427}{resource\+\_\+system\+\_\+memory\+\_\+requirement}}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_ab3a3a22ba262b2167105e327e60879dd}{resource\+\_\+system\+\_\+state}}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structapplication__state_a00a59ff2c4530d84fcea3927994f1ee0}{renderer\+\_\+system\+\_\+memory\+\_\+requirement}}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_a9013e0f2cacc1dca598af239a280c24b}{renderer\+\_\+system\+\_\+state}}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structapplication__state_af90026c9302b5120c11d1fb6e4958326}{texture\+\_\+system\+\_\+memory\+\_\+requirement}}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_ab5df8d1707388e92f68069b396fc3acb}{texture\+\_\+system\+\_\+state}}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structapplication__state_ab06b897021622229d53576e38b7b2e9e}{material\+\_\+system\+\_\+memory\+\_\+requirement}}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_abae75067e6da999f61336e879549d701}{material\+\_\+system\+\_\+state}}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structapplication__state_a2f1a4ade88e31fd5c9d29e08a8f40a14}{geometry\+\_\+system\+\_\+memory\+\_\+requirement}}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_a19e0a2766f2b7ac0a27c624557d99349}{geometry\+\_\+system\+\_\+state}}
+\item 
+\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_a33e08a5827a5331065f15a2e92b30b19}{test\+\_\+world\+\_\+geometry}}
+\item 
+\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_ade3830b7bf1d089b5e563c1993be8d14}{test\+\_\+ui\+\_\+geometry}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-variable-members}
+\Hypertarget{structapplication__state_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{structapplication__state_aa930dcc46dfc1ad594320c1a313a26a2}\index{application\_state@{application\_state}!clock@{clock}}
+\index{clock@{clock}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{clock}{clock}}
+{\footnotesize\ttfamily \label{structapplication__state_aa930dcc46dfc1ad594320c1a313a26a2} 
+\mbox{\hyperlink{structclock}{clock}} application\+\_\+state\+::clock}
+
+\Hypertarget{structapplication__state_af3589702e0777ec9177a0445495bf55c}\index{application\_state@{application\_state}!event\_system\_memory\_requirement@{event\_system\_memory\_requirement}}
+\index{event\_system\_memory\_requirement@{event\_system\_memory\_requirement}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{event\_system\_memory\_requirement}{event\_system\_memory\_requirement}}
+{\footnotesize\ttfamily \label{structapplication__state_af3589702e0777ec9177a0445495bf55c} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} application\+\_\+state\+::event\+\_\+system\+\_\+memory\+\_\+requirement}
+
+\Hypertarget{structapplication__state_ad9186745c2d8485ef0070a70a4b45688}\index{application\_state@{application\_state}!event\_system\_state@{event\_system\_state}}
+\index{event\_system\_state@{event\_system\_state}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{event\_system\_state}{event\_system\_state}}
+{\footnotesize\ttfamily \label{structapplication__state_ad9186745c2d8485ef0070a70a4b45688} 
+void\texorpdfstring{$\ast$}{*} application\+\_\+state\+::event\+\_\+system\+\_\+state}
+
+\Hypertarget{structapplication__state_ae224fcec4853d590c4068314f75196c2}\index{application\_state@{application\_state}!game\_inst@{game\_inst}}
+\index{game\_inst@{game\_inst}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{game\_inst}{game\_inst}}
+{\footnotesize\ttfamily \label{structapplication__state_ae224fcec4853d590c4068314f75196c2} 
+\mbox{\hyperlink{structgame}{game}}\texorpdfstring{$\ast$}{*} application\+\_\+state\+::game\+\_\+inst}
+
+\Hypertarget{structapplication__state_a2f1a4ade88e31fd5c9d29e08a8f40a14}\index{application\_state@{application\_state}!geometry\_system\_memory\_requirement@{geometry\_system\_memory\_requirement}}
+\index{geometry\_system\_memory\_requirement@{geometry\_system\_memory\_requirement}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{geometry\_system\_memory\_requirement}{geometry\_system\_memory\_requirement}}
+{\footnotesize\ttfamily \label{structapplication__state_a2f1a4ade88e31fd5c9d29e08a8f40a14} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} application\+\_\+state\+::geometry\+\_\+system\+\_\+memory\+\_\+requirement}
+
+\Hypertarget{structapplication__state_a19e0a2766f2b7ac0a27c624557d99349}\index{application\_state@{application\_state}!geometry\_system\_state@{geometry\_system\_state}}
+\index{geometry\_system\_state@{geometry\_system\_state}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{geometry\_system\_state}{geometry\_system\_state}}
+{\footnotesize\ttfamily \label{structapplication__state_a19e0a2766f2b7ac0a27c624557d99349} 
+void\texorpdfstring{$\ast$}{*} application\+\_\+state\+::geometry\+\_\+system\+\_\+state}
+
+\Hypertarget{structapplication__state_a4a01899027b7429dce0fa6290b927f9c}\index{application\_state@{application\_state}!height@{height}}
+\index{height@{height}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily \label{structapplication__state_a4a01899027b7429dce0fa6290b927f9c} 
+\mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}} application\+\_\+state\+::height}
+
+\Hypertarget{structapplication__state_a2a9175d2ced90985c4c30c8c75857cd9}\index{application\_state@{application\_state}!input\_system\_memory\_requirement@{input\_system\_memory\_requirement}}
+\index{input\_system\_memory\_requirement@{input\_system\_memory\_requirement}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{input\_system\_memory\_requirement}{input\_system\_memory\_requirement}}
+{\footnotesize\ttfamily \label{structapplication__state_a2a9175d2ced90985c4c30c8c75857cd9} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} application\+\_\+state\+::input\+\_\+system\+\_\+memory\+\_\+requirement}
+
+\Hypertarget{structapplication__state_a7949e6624c3ebfad501d54da232cc65b}\index{application\_state@{application\_state}!input\_system\_state@{input\_system\_state}}
+\index{input\_system\_state@{input\_system\_state}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{input\_system\_state}{input\_system\_state}}
+{\footnotesize\ttfamily \label{structapplication__state_a7949e6624c3ebfad501d54da232cc65b} 
+void\texorpdfstring{$\ast$}{*} application\+\_\+state\+::input\+\_\+system\+\_\+state}
+
+\Hypertarget{structapplication__state_a7c10d54c29174a16313dfc1992ccabde}\index{application\_state@{application\_state}!is\_running@{is\_running}}
+\index{is\_running@{is\_running}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{is\_running}{is\_running}}
+{\footnotesize\ttfamily \label{structapplication__state_a7c10d54c29174a16313dfc1992ccabde} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} application\+\_\+state\+::is\+\_\+running}
+
+\Hypertarget{structapplication__state_a4e7125d95754ef0c0166479931eafcd1}\index{application\_state@{application\_state}!is\_suspended@{is\_suspended}}
+\index{is\_suspended@{is\_suspended}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{is\_suspended}{is\_suspended}}
+{\footnotesize\ttfamily \label{structapplication__state_a4e7125d95754ef0c0166479931eafcd1} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} application\+\_\+state\+::is\+\_\+suspended}
+
+\Hypertarget{structapplication__state_a4fc952bc899881d85115730cf7da1c5a}\index{application\_state@{application\_state}!last\_time@{last\_time}}
+\index{last\_time@{last\_time}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{last\_time}{last\_time}}
+{\footnotesize\ttfamily \label{structapplication__state_a4fc952bc899881d85115730cf7da1c5a} 
+\mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}} application\+\_\+state\+::last\+\_\+time}
+
+\Hypertarget{structapplication__state_a7f3de38a5a5c937b28bce6620ebe8c48}\index{application\_state@{application\_state}!logging\_system\_memory\_requirement@{logging\_system\_memory\_requirement}}
+\index{logging\_system\_memory\_requirement@{logging\_system\_memory\_requirement}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{logging\_system\_memory\_requirement}{logging\_system\_memory\_requirement}}
+{\footnotesize\ttfamily \label{structapplication__state_a7f3de38a5a5c937b28bce6620ebe8c48} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} application\+\_\+state\+::logging\+\_\+system\+\_\+memory\+\_\+requirement}
+
+\Hypertarget{structapplication__state_aca514d3246b5d5a1973c29df11550ea1}\index{application\_state@{application\_state}!logging\_system\_state@{logging\_system\_state}}
+\index{logging\_system\_state@{logging\_system\_state}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{logging\_system\_state}{logging\_system\_state}}
+{\footnotesize\ttfamily \label{structapplication__state_aca514d3246b5d5a1973c29df11550ea1} 
+void\texorpdfstring{$\ast$}{*} application\+\_\+state\+::logging\+\_\+system\+\_\+state}
+
+\Hypertarget{structapplication__state_ab06b897021622229d53576e38b7b2e9e}\index{application\_state@{application\_state}!material\_system\_memory\_requirement@{material\_system\_memory\_requirement}}
+\index{material\_system\_memory\_requirement@{material\_system\_memory\_requirement}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{material\_system\_memory\_requirement}{material\_system\_memory\_requirement}}
+{\footnotesize\ttfamily \label{structapplication__state_ab06b897021622229d53576e38b7b2e9e} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} application\+\_\+state\+::material\+\_\+system\+\_\+memory\+\_\+requirement}
+
+\Hypertarget{structapplication__state_abae75067e6da999f61336e879549d701}\index{application\_state@{application\_state}!material\_system\_state@{material\_system\_state}}
+\index{material\_system\_state@{material\_system\_state}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{material\_system\_state}{material\_system\_state}}
+{\footnotesize\ttfamily \label{structapplication__state_abae75067e6da999f61336e879549d701} 
+void\texorpdfstring{$\ast$}{*} application\+\_\+state\+::material\+\_\+system\+\_\+state}
+
+\Hypertarget{structapplication__state_a14782a7e40b24efc8c814f786c6525ba}\index{application\_state@{application\_state}!platform@{platform}}
+\index{platform@{platform}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{platform}{platform}}
+{\footnotesize\ttfamily \label{structapplication__state_a14782a7e40b24efc8c814f786c6525ba} 
+\mbox{\hyperlink{structplatform__state}{platform\+\_\+state}} application\+\_\+state\+::platform}
+
+\Hypertarget{structapplication__state_a00a59ff2c4530d84fcea3927994f1ee0}\index{application\_state@{application\_state}!renderer\_system\_memory\_requirement@{renderer\_system\_memory\_requirement}}
+\index{renderer\_system\_memory\_requirement@{renderer\_system\_memory\_requirement}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{renderer\_system\_memory\_requirement}{renderer\_system\_memory\_requirement}}
+{\footnotesize\ttfamily \label{structapplication__state_a00a59ff2c4530d84fcea3927994f1ee0} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} application\+\_\+state\+::renderer\+\_\+system\+\_\+memory\+\_\+requirement}
+
+\Hypertarget{structapplication__state_a9013e0f2cacc1dca598af239a280c24b}\index{application\_state@{application\_state}!renderer\_system\_state@{renderer\_system\_state}}
+\index{renderer\_system\_state@{renderer\_system\_state}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{renderer\_system\_state}{renderer\_system\_state}}
+{\footnotesize\ttfamily \label{structapplication__state_a9013e0f2cacc1dca598af239a280c24b} 
+void\texorpdfstring{$\ast$}{*} application\+\_\+state\+::renderer\+\_\+system\+\_\+state}
+
+\Hypertarget{structapplication__state_a73a41404679c970a29cdd5fe48d51427}\index{application\_state@{application\_state}!resource\_system\_memory\_requirement@{resource\_system\_memory\_requirement}}
+\index{resource\_system\_memory\_requirement@{resource\_system\_memory\_requirement}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{resource\_system\_memory\_requirement}{resource\_system\_memory\_requirement}}
+{\footnotesize\ttfamily \label{structapplication__state_a73a41404679c970a29cdd5fe48d51427} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} application\+\_\+state\+::resource\+\_\+system\+\_\+memory\+\_\+requirement}
+
+\Hypertarget{structapplication__state_ab3a3a22ba262b2167105e327e60879dd}\index{application\_state@{application\_state}!resource\_system\_state@{resource\_system\_state}}
+\index{resource\_system\_state@{resource\_system\_state}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{resource\_system\_state}{resource\_system\_state}}
+{\footnotesize\ttfamily \label{structapplication__state_ab3a3a22ba262b2167105e327e60879dd} 
+void\texorpdfstring{$\ast$}{*} application\+\_\+state\+::resource\+\_\+system\+\_\+state}
+
+\Hypertarget{structapplication__state_a213ee353f6a3fbc499d583c79f369b9a}\index{application\_state@{application\_state}!systems\_allocator@{systems\_allocator}}
+\index{systems\_allocator@{systems\_allocator}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{systems\_allocator}{systems\_allocator}}
+{\footnotesize\ttfamily \label{structapplication__state_a213ee353f6a3fbc499d583c79f369b9a} 
+\mbox{\hyperlink{structlinear__allocator}{linear\+\_\+allocator}} application\+\_\+state\+::systems\+\_\+allocator}
+
+\Hypertarget{structapplication__state_a53918da3d5f55e8c074ad4e364fa2b60}\index{application\_state@{application\_state}!systems\_allocator\_memory@{systems\_allocator\_memory}}
+\index{systems\_allocator\_memory@{systems\_allocator\_memory}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{systems\_allocator\_memory}{systems\_allocator\_memory}}
+{\footnotesize\ttfamily \label{structapplication__state_a53918da3d5f55e8c074ad4e364fa2b60} 
+void\texorpdfstring{$\ast$}{*} application\+\_\+state\+::systems\+\_\+allocator\+\_\+memory}
+
+\Hypertarget{structapplication__state_a6022877e2186c6e01b56ce48a99fae1e}\index{application\_state@{application\_state}!systems\_allocator\_memory\_requirement@{systems\_allocator\_memory\_requirement}}
+\index{systems\_allocator\_memory\_requirement@{systems\_allocator\_memory\_requirement}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{systems\_allocator\_memory\_requirement}{systems\_allocator\_memory\_requirement}}
+{\footnotesize\ttfamily \label{structapplication__state_a6022877e2186c6e01b56ce48a99fae1e} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} application\+\_\+state\+::systems\+\_\+allocator\+\_\+memory\+\_\+requirement}
+
+\Hypertarget{structapplication__state_ade3830b7bf1d089b5e563c1993be8d14}\index{application\_state@{application\_state}!test\_ui\_geometry@{test\_ui\_geometry}}
+\index{test\_ui\_geometry@{test\_ui\_geometry}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{test\_ui\_geometry}{test\_ui\_geometry}}
+{\footnotesize\ttfamily \label{structapplication__state_ade3830b7bf1d089b5e563c1993be8d14} 
+\mbox{\hyperlink{structgeometry}{geometry}}\texorpdfstring{$\ast$}{*} application\+\_\+state\+::test\+\_\+ui\+\_\+geometry}
+
+\Hypertarget{structapplication__state_a33e08a5827a5331065f15a2e92b30b19}\index{application\_state@{application\_state}!test\_world\_geometry@{test\_world\_geometry}}
+\index{test\_world\_geometry@{test\_world\_geometry}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{test\_world\_geometry}{test\_world\_geometry}}
+{\footnotesize\ttfamily \label{structapplication__state_a33e08a5827a5331065f15a2e92b30b19} 
+\mbox{\hyperlink{structgeometry}{geometry}}\texorpdfstring{$\ast$}{*} application\+\_\+state\+::test\+\_\+world\+\_\+geometry}
+
+\Hypertarget{structapplication__state_af90026c9302b5120c11d1fb6e4958326}\index{application\_state@{application\_state}!texture\_system\_memory\_requirement@{texture\_system\_memory\_requirement}}
+\index{texture\_system\_memory\_requirement@{texture\_system\_memory\_requirement}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{texture\_system\_memory\_requirement}{texture\_system\_memory\_requirement}}
+{\footnotesize\ttfamily \label{structapplication__state_af90026c9302b5120c11d1fb6e4958326} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} application\+\_\+state\+::texture\+\_\+system\+\_\+memory\+\_\+requirement}
+
+\Hypertarget{structapplication__state_ab5df8d1707388e92f68069b396fc3acb}\index{application\_state@{application\_state}!texture\_system\_state@{texture\_system\_state}}
+\index{texture\_system\_state@{texture\_system\_state}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{texture\_system\_state}{texture\_system\_state}}
+{\footnotesize\ttfamily \label{structapplication__state_ab5df8d1707388e92f68069b396fc3acb} 
+void\texorpdfstring{$\ast$}{*} application\+\_\+state\+::texture\+\_\+system\+\_\+state}
+
+\Hypertarget{structapplication__state_a5c49a4da818b7bae26b50df80c889279}\index{application\_state@{application\_state}!width@{width}}
+\index{width@{width}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily \label{structapplication__state_a5c49a4da818b7bae26b50df80c889279} 
+\mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}} application\+\_\+state\+::width}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+engine/src/core/\mbox{\hyperlink{application_8c}{application.\+c}}\end{DoxyCompactItemize}

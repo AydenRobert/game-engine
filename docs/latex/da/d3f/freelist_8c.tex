@@ -1,0 +1,325 @@
+\doxysection{engine/src/containers/freelist.c File Reference}
+\hypertarget{freelist_8c}{}\label{freelist_8c}\index{engine/src/containers/freelist.c@{engine/src/containers/freelist.c}}
+{\ttfamily \#include "{}containers/freelist.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}core/logger.\+h"{}}\newline
+Include dependency graph for freelist.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d22/freelist_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfreelist__node}{freelist\+\_\+node}}
+\item 
+struct \mbox{\hyperlink{structinternal__state}{internal\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct freelist\+\_\+node \mbox{\hyperlink{freelist_8c_a3f9385564646542fbdb8e06486fa1f2b}{freelist\+\_\+node}}
+\item 
+typedef struct internal\+\_\+state \mbox{\hyperlink{freelist_8c_ab35b1ac13b18e76e3d842850f13337cc}{internal\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structfreelist__node}{freelist\+\_\+node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{freelist_8c_ad39f732a3cda733b6877f9bd57efa0df}{get\+\_\+node}} (\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}list)
+\item 
+void \mbox{\hyperlink{freelist_8c_a9417519c6873a6840b346b2c907a2142}{return\+\_\+node}} (\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{structfreelist__node}{freelist\+\_\+node}} \texorpdfstring{$\ast$}{*}node)
+\item 
+void \mbox{\hyperlink{freelist_8c_a35b2b1bfb7b00a27b847ba5c00cd4826}{freelist\+\_\+create}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} total\+\_\+size, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}memory\+\_\+requirement, void \texorpdfstring{$\ast$}{*}memory, \mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}out\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Creates a new freelist or gets the memory requirement for one. Call twice; first passing 0 to memory to obtain the memory requirement, second to pass the allocated block. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{freelist_8c_a8f4503d5fe7cfab1e90e20fe32801eff}{freelist\+\_\+destroy}} (\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Destroys the provided freelist. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{freelist_8c_ae855f01b88cfd86e3ff8ae7682bbd06c}{freelist\+\_\+allocate\+\_\+block}} (\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}out\+\_\+offset)
+\begin{DoxyCompactList}\small\item\em Attempts to find a allocate block of memory given the size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{freelist_8c_a8af32093da394b6cfa1a3436b8e84283}{freelist\+\_\+free\+\_\+block}} (\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} offset)
+\begin{DoxyCompactList}\small\item\em Attempts to find a free block of memory given the size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{freelist_8c_a2a20fde443ef16390e47d2bafe41ea16}{freelist\+\_\+resize}} (\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}memory\+\_\+requirement, void \texorpdfstring{$\ast$}{*}new\+\_\+memory, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} new\+\_\+size, void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}out\+\_\+old\+\_\+memory)
+\begin{DoxyCompactList}\small\item\em Attempts to resize the provided freelist. Call twice, first to get the new memory requirement, second to resize the freelist. Old memory must be freed after calling resize. NOTE\+: New size must be greater than the old size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{freelist_8c_afec417842f44df7f85123533f18c3b46}{freelist\+\_\+clear}} (\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Clears the provided freelist. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{freelist_8c_a1ce834d1bd9f9caf272e6d63aa00deb8}{freelist\+\_\+free\+\_\+space}} (\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Obtains the amount of free space within the freelist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{freelist_8c_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{freelist_8c_a3f9385564646542fbdb8e06486fa1f2b}\index{freelist.c@{freelist.c}!freelist\_node@{freelist\_node}}
+\index{freelist\_node@{freelist\_node}!freelist.c@{freelist.c}}
+\doxysubsubsection{\texorpdfstring{freelist\_node}{freelist\_node}}
+{\footnotesize\ttfamily \label{freelist_8c_a3f9385564646542fbdb8e06486fa1f2b} 
+typedef struct freelist\+\_\+node freelist\+\_\+node}
+
+\Hypertarget{freelist_8c_ab35b1ac13b18e76e3d842850f13337cc}\index{freelist.c@{freelist.c}!internal\_state@{internal\_state}}
+\index{internal\_state@{internal\_state}!freelist.c@{freelist.c}}
+\doxysubsubsection{\texorpdfstring{internal\_state}{internal\_state}}
+{\footnotesize\ttfamily \label{freelist_8c_ab35b1ac13b18e76e3d842850f13337cc} 
+typedef struct internal\+\_\+state internal\+\_\+state}
+
+
+
+\label{doc-func-members}
+\Hypertarget{freelist_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{freelist_8c_ae855f01b88cfd86e3ff8ae7682bbd06c}\index{freelist.c@{freelist.c}!freelist\_allocate\_block@{freelist\_allocate\_block}}
+\index{freelist\_allocate\_block@{freelist\_allocate\_block}!freelist.c@{freelist.c}}
+\doxysubsubsection{\texorpdfstring{freelist\_allocate\_block()}{freelist\_allocate\_block()}}
+{\footnotesize\ttfamily \label{freelist_8c_ae855f01b88cfd86e3ff8ae7682bbd06c} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} freelist\+\_\+allocate\+\_\+block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+offset}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to find a allocate block of memory given the size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The freelist struct. \\
+\hline
+{\em size} & The size to allocate. \\
+\hline
+{\em out\+\_\+offset} & A pointer to write the offset of the allocation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful; otherwise False. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3f/freelist_8c_ae855f01b88cfd86e3ff8ae7682bbd06c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3f/freelist_8c_ae855f01b88cfd86e3ff8ae7682bbd06c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{freelist_8c_afec417842f44df7f85123533f18c3b46}\index{freelist.c@{freelist.c}!freelist\_clear@{freelist\_clear}}
+\index{freelist\_clear@{freelist\_clear}!freelist.c@{freelist.c}}
+\doxysubsubsection{\texorpdfstring{freelist\_clear()}{freelist\_clear()}}
+{\footnotesize\ttfamily \label{freelist_8c_afec417842f44df7f85123533f18c3b46} 
+void freelist\+\_\+clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Clears the provided freelist. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to be cleared. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{freelist_8c_a35b2b1bfb7b00a27b847ba5c00cd4826}\index{freelist.c@{freelist.c}!freelist\_create@{freelist\_create}}
+\index{freelist\_create@{freelist\_create}!freelist.c@{freelist.c}}
+\doxysubsubsection{\texorpdfstring{freelist\_create()}{freelist\_create()}}
+{\footnotesize\ttfamily \label{freelist_8c_a35b2b1bfb7b00a27b847ba5c00cd4826} 
+void freelist\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{total\+\_\+size}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{memory\+\_\+requirement}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{memory}{, }\item[{\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+list}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new freelist or gets the memory requirement for one. Call twice; first passing 0 to memory to obtain the memory requirement, second to pass the allocated block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+\_\+size} & Size that the free list should track, in bytes. \\
+\hline
+{\em memory\+\_\+requirement} & A pointer to get the memory requirement for the free\+\_\+list structure itself. \\
+\hline
+{\em memory} & 0, or a pre-\/allocated block of memory for the free-\/list to use. \\
+\hline
+{\em out\+\_\+list} & A pointer to hold the free list. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3f/freelist_8c_a35b2b1bfb7b00a27b847ba5c00cd4826_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3f/freelist_8c_a35b2b1bfb7b00a27b847ba5c00cd4826_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{freelist_8c_a8f4503d5fe7cfab1e90e20fe32801eff}\index{freelist.c@{freelist.c}!freelist\_destroy@{freelist\_destroy}}
+\index{freelist\_destroy@{freelist\_destroy}!freelist.c@{freelist.c}}
+\doxysubsubsection{\texorpdfstring{freelist\_destroy()}{freelist\_destroy()}}
+{\footnotesize\ttfamily \label{freelist_8c_a8f4503d5fe7cfab1e90e20fe32801eff} 
+void freelist\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Destroys the provided freelist. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to be destroyed. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3f/freelist_8c_a8f4503d5fe7cfab1e90e20fe32801eff_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3f/freelist_8c_a8f4503d5fe7cfab1e90e20fe32801eff_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{freelist_8c_a8af32093da394b6cfa1a3436b8e84283}\index{freelist.c@{freelist.c}!freelist\_free\_block@{freelist\_free\_block}}
+\index{freelist\_free\_block@{freelist\_free\_block}!freelist.c@{freelist.c}}
+\doxysubsubsection{\texorpdfstring{freelist\_free\_block()}{freelist\_free\_block()}}
+{\footnotesize\ttfamily \label{freelist_8c_a8af32093da394b6cfa1a3436b8e84283} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} freelist\+\_\+free\+\_\+block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{offset}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to find a free block of memory given the size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The freelist struct. \\
+\hline
+{\em size} & The size to free. \\
+\hline
+{\em out\+\_\+offset} & The offset of the allocation to free. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful; otherwise False. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{da/d3f/freelist_8c_a8af32093da394b6cfa1a3436b8e84283_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3f/freelist_8c_a8af32093da394b6cfa1a3436b8e84283_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{freelist_8c_a1ce834d1bd9f9caf272e6d63aa00deb8}\index{freelist.c@{freelist.c}!freelist\_free\_space@{freelist\_free\_space}}
+\index{freelist\_free\_space@{freelist\_free\_space}!freelist.c@{freelist.c}}
+\doxysubsubsection{\texorpdfstring{freelist\_free\_space()}{freelist\_free\_space()}}
+{\footnotesize\ttfamily \label{freelist_8c_a1ce834d1bd9f9caf272e6d63aa00deb8} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} freelist\+\_\+free\+\_\+space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Obtains the amount of free space within the freelist. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The freelist struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The amount of free space. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3f/freelist_8c_a1ce834d1bd9f9caf272e6d63aa00deb8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{freelist_8c_a2a20fde443ef16390e47d2bafe41ea16}\index{freelist.c@{freelist.c}!freelist\_resize@{freelist\_resize}}
+\index{freelist\_resize@{freelist\_resize}!freelist.c@{freelist.c}}
+\doxysubsubsection{\texorpdfstring{freelist\_resize()}{freelist\_resize()}}
+{\footnotesize\ttfamily \label{freelist_8c_a2a20fde443ef16390e47d2bafe41ea16} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} freelist\+\_\+resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{memory\+\_\+requirement}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{new\+\_\+memory}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{new\+\_\+size}{, }\item[{void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{out\+\_\+old\+\_\+memory}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to resize the provided freelist. Call twice, first to get the new memory requirement, second to resize the freelist. Old memory must be freed after calling resize. NOTE\+: New size must be greater than the old size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The freelist struct. \\
+\hline
+{\em memory\+\_\+requirement} & A pointer to store the new memory\+\_\+requirement. \\
+\hline
+{\em new\+\_\+memory} & A pointer to the block of new\+\_\+memory. \\
+\hline
+{\em new\+\_\+size} & The new total memory size. \\
+\hline
+{\em out\+\_\+old\+\_\+memory} & A pointer to which will be filled with a pointer to the old block of memory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful; otherwise False. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3f/freelist_8c_a2a20fde443ef16390e47d2bafe41ea16_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{da/d3f/freelist_8c_a2a20fde443ef16390e47d2bafe41ea16_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{freelist_8c_ad39f732a3cda733b6877f9bd57efa0df}\index{freelist.c@{freelist.c}!get\_node@{get\_node}}
+\index{get\_node@{get\_node}!freelist.c@{freelist.c}}
+\doxysubsubsection{\texorpdfstring{get\_node()}{get\_node()}}
+{\footnotesize\ttfamily \label{freelist_8c_ad39f732a3cda733b6877f9bd57efa0df} 
+\mbox{\hyperlink{structfreelist__node}{freelist\+\_\+node}} \texorpdfstring{$\ast$}{*} get\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3f/freelist_8c_ad39f732a3cda733b6877f9bd57efa0df_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{freelist_8c_a9417519c6873a6840b346b2c907a2142}\index{freelist.c@{freelist.c}!return\_node@{return\_node}}
+\index{return\_node@{return\_node}!freelist.c@{freelist.c}}
+\doxysubsubsection{\texorpdfstring{return\_node()}{return\_node()}}
+{\footnotesize\ttfamily \label{freelist_8c_a9417519c6873a6840b346b2c907a2142} 
+void return\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structfreelist}{freelist}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{\mbox{\hyperlink{structfreelist__node}{freelist\+\_\+node}} \texorpdfstring{$\ast$}{*}}]{node}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3f/freelist_8c_a9417519c6873a6840b346b2c907a2142_icgraph}
+\end{center}
+\end{figure}

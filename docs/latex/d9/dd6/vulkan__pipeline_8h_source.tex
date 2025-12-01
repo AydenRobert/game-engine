@@ -1,0 +1,25 @@
+\doxysection{vulkan\+\_\+pipeline.\+h}
+\hypertarget{vulkan__pipeline_8h_source}{}\label{vulkan__pipeline_8h_source}\index{engine/src/renderer/vulkan/vulkan\_pipeline.h@{engine/src/renderer/vulkan/vulkan\_pipeline.h}}
+\mbox{\hyperlink{vulkan__pipeline_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vulkan__types_8inl}{renderer/vulkan/vulkan\_types.inl}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{vulkan__pipeline_8h_ae447a2510e9e4ade3c5d7a0e1ebf0299}{vulkan\_graphics\_pipeline\_create}}(}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},\ \mbox{\hyperlink{structvulkan__renderpass}{vulkan\_renderpass}}\ *renderpass,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ stride,}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ attribute\_count,\ VkVertexInputAttributeDescription\ *attributes,}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ descriptor\_set\_layout\_count,}
+\DoxyCodeLine{00009\ \ \ \ \ VkDescriptorSetLayout\ *descriptor\_set\_layouts,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ stage\_count,}
+\DoxyCodeLine{00010\ \ \ \ \ VkPipelineShaderStageCreateInfo\ *stages,\ VkViewport\ viewport,}
+\DoxyCodeLine{00011\ \ \ \ \ VkRect2D\ scissor,\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ is\_wireframe,\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ depth\_test\_enabled,}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{structvulkan__pipeline}{vulkan\_pipeline}}\ *out\_pipeline);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__pipeline_8h_a283ba7cf0fba53e13fd56f7e2b472145}{vulkan\_pipeline\_destroy}}(\mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}},}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__pipeline}{vulkan\_pipeline}}\ *pipeline);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{vulkan__pipeline_8h_a9db9bf776b663de8df2847b1493319e6}{vulkan\_pipeline\_bind}}(\mbox{\hyperlink{structvulkan__command__buffer}{vulkan\_command\_buffer}}\ *command\_buffer,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkPipelineBindPoint\ bind\_point,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structvulkan__pipeline}{vulkan\_pipeline}}\ *pipeline);}
+
+\end{DoxyCode}

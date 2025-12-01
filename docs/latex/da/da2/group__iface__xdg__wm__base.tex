@@ -1,0 +1,128 @@
+\doxysection{The xdg\+\_\+wm\+\_\+base interface }
+\hypertarget{group__iface__xdg__wm__base}{}\label{group__iface__xdg__wm__base}\index{The xdg\_wm\_base interface@{The xdg\_wm\_base interface}}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structxdg__wm__base__listener}{xdg\+\_\+wm\+\_\+base\+\_\+listener}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__wm__base_ga418896ccb516abf4361755b94a3a503f}{XDG\+\_\+\+WM\+\_\+\+BASE\+\_\+\+PING\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__wm__base_ga6b425713c80443ceaf846d8c065ff133}{XDG\+\_\+\+WM\+\_\+\+BASE\+\_\+\+DESTROY\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__wm__base_ga11828b3dde2f34364cfc0a1423230aad}{XDG\+\_\+\+WM\+\_\+\+BASE\+\_\+\+CREATE\+\_\+\+POSITIONER\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__wm__base_ga123013ed24904a0e2e27fcf8e1ff7e68}{XDG\+\_\+\+WM\+\_\+\+BASE\+\_\+\+GET\+\_\+\+XDG\+\_\+\+SURFACE\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\item 
+\#define \mbox{\hyperlink{group__iface__xdg__wm__base_ga79767418b9f5d722e3418b9c193e4aa2}{XDG\+\_\+\+WM\+\_\+\+BASE\+\_\+\+PONG\+\_\+\+SINCE\+\_\+\+VERSION}}~1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{group__iface__xdg__wm__base_ga8f46ae46604ede327e8f69869875449f}{xdg\+\_\+wm\+\_\+base\+\_\+add\+\_\+listener}} (struct xdg\+\_\+wm\+\_\+base \texorpdfstring{$\ast$}{*}xdg\+\_\+wm\+\_\+base, const struct \mbox{\hyperlink{structxdg__wm__base__listener}{xdg\+\_\+wm\+\_\+base\+\_\+listener}} \texorpdfstring{$\ast$}{*}listener, void \texorpdfstring{$\ast$}{*}data)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__wm__base_ga39f0e05e8b647aeea30f08282b24439c}{xdg\+\_\+wm\+\_\+base\+\_\+set\+\_\+user\+\_\+data}} (struct xdg\+\_\+wm\+\_\+base \texorpdfstring{$\ast$}{*}xdg\+\_\+wm\+\_\+base, void \texorpdfstring{$\ast$}{*}user\+\_\+data)
+\item 
+static void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__iface__xdg__wm__base_gadc6e98af5c964385a17cbbdd8e389116}{xdg\+\_\+wm\+\_\+base\+\_\+get\+\_\+user\+\_\+data}} (struct xdg\+\_\+wm\+\_\+base \texorpdfstring{$\ast$}{*}xdg\+\_\+wm\+\_\+base)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__wm__base_ga22e80540ffc487720837e85a46834552}{xdg\+\_\+wm\+\_\+base\+\_\+destroy}} (struct xdg\+\_\+wm\+\_\+base \texorpdfstring{$\ast$}{*}xdg\+\_\+wm\+\_\+base)
+\item 
+static struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__iface__xdg__wm__base_ga0c549e7dc59346bd66e8408c946a89ec}{xdg\+\_\+wm\+\_\+base\+\_\+create\+\_\+positioner}} (struct xdg\+\_\+wm\+\_\+base \texorpdfstring{$\ast$}{*}xdg\+\_\+wm\+\_\+base)
+\item 
+static struct xdg\+\_\+surface \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__iface__xdg__wm__base_gae59d1896c5fb50124ebd8421aa967782}{xdg\+\_\+wm\+\_\+base\+\_\+get\+\_\+xdg\+\_\+surface}} (struct xdg\+\_\+wm\+\_\+base \texorpdfstring{$\ast$}{*}xdg\+\_\+wm\+\_\+base, struct wl\+\_\+surface \texorpdfstring{$\ast$}{*}surface)
+\item 
+static void \mbox{\hyperlink{group__iface__xdg__wm__base_gaf1105ebe9c99f0eb6bf2792fab28f742}{xdg\+\_\+wm\+\_\+base\+\_\+pong}} (struct xdg\+\_\+wm\+\_\+base \texorpdfstring{$\ast$}{*}xdg\+\_\+wm\+\_\+base, uint32\+\_\+t serial)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The xdg\+\_\+wm\+\_\+base interface is exposed as a global object enabling clients to turn their wl\+\_\+surfaces into windows in a desktop environment. It defines the basic functionality needed for clients and the compositor to create windows that can be dragged, resized, maximized, etc, as well as creating transient windows such as popup menus. 
+
+\label{doc-define-members}
+\Hypertarget{group__iface__xdg__wm__base_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{group__iface__xdg__wm__base_ga11828b3dde2f34364cfc0a1423230aad}\index{The xdg\_wm\_base interface@{The xdg\_wm\_base interface}!XDG\_WM\_BASE\_CREATE\_POSITIONER\_SINCE\_VERSION@{XDG\_WM\_BASE\_CREATE\_POSITIONER\_SINCE\_VERSION}}
+\index{XDG\_WM\_BASE\_CREATE\_POSITIONER\_SINCE\_VERSION@{XDG\_WM\_BASE\_CREATE\_POSITIONER\_SINCE\_VERSION}!The xdg\_wm\_base interface@{The xdg\_wm\_base interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_WM\_BASE\_CREATE\_POSITIONER\_SINCE\_VERSION}{XDG\_WM\_BASE\_CREATE\_POSITIONER\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__wm__base_ga11828b3dde2f34364cfc0a1423230aad} 
+\#define XDG\+\_\+\+WM\+\_\+\+BASE\+\_\+\+CREATE\+\_\+\+POSITIONER\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__wm__base_ga6b425713c80443ceaf846d8c065ff133}\index{The xdg\_wm\_base interface@{The xdg\_wm\_base interface}!XDG\_WM\_BASE\_DESTROY\_SINCE\_VERSION@{XDG\_WM\_BASE\_DESTROY\_SINCE\_VERSION}}
+\index{XDG\_WM\_BASE\_DESTROY\_SINCE\_VERSION@{XDG\_WM\_BASE\_DESTROY\_SINCE\_VERSION}!The xdg\_wm\_base interface@{The xdg\_wm\_base interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_WM\_BASE\_DESTROY\_SINCE\_VERSION}{XDG\_WM\_BASE\_DESTROY\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__wm__base_ga6b425713c80443ceaf846d8c065ff133} 
+\#define XDG\+\_\+\+WM\+\_\+\+BASE\+\_\+\+DESTROY\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__wm__base_ga123013ed24904a0e2e27fcf8e1ff7e68}\index{The xdg\_wm\_base interface@{The xdg\_wm\_base interface}!XDG\_WM\_BASE\_GET\_XDG\_SURFACE\_SINCE\_VERSION@{XDG\_WM\_BASE\_GET\_XDG\_SURFACE\_SINCE\_VERSION}}
+\index{XDG\_WM\_BASE\_GET\_XDG\_SURFACE\_SINCE\_VERSION@{XDG\_WM\_BASE\_GET\_XDG\_SURFACE\_SINCE\_VERSION}!The xdg\_wm\_base interface@{The xdg\_wm\_base interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_WM\_BASE\_GET\_XDG\_SURFACE\_SINCE\_VERSION}{XDG\_WM\_BASE\_GET\_XDG\_SURFACE\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__wm__base_ga123013ed24904a0e2e27fcf8e1ff7e68} 
+\#define XDG\+\_\+\+WM\+\_\+\+BASE\+\_\+\+GET\+\_\+\+XDG\+\_\+\+SURFACE\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__wm__base_ga418896ccb516abf4361755b94a3a503f}\index{The xdg\_wm\_base interface@{The xdg\_wm\_base interface}!XDG\_WM\_BASE\_PING\_SINCE\_VERSION@{XDG\_WM\_BASE\_PING\_SINCE\_VERSION}}
+\index{XDG\_WM\_BASE\_PING\_SINCE\_VERSION@{XDG\_WM\_BASE\_PING\_SINCE\_VERSION}!The xdg\_wm\_base interface@{The xdg\_wm\_base interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_WM\_BASE\_PING\_SINCE\_VERSION}{XDG\_WM\_BASE\_PING\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__wm__base_ga418896ccb516abf4361755b94a3a503f} 
+\#define XDG\+\_\+\+WM\+\_\+\+BASE\+\_\+\+PING\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+\Hypertarget{group__iface__xdg__wm__base_ga79767418b9f5d722e3418b9c193e4aa2}\index{The xdg\_wm\_base interface@{The xdg\_wm\_base interface}!XDG\_WM\_BASE\_PONG\_SINCE\_VERSION@{XDG\_WM\_BASE\_PONG\_SINCE\_VERSION}}
+\index{XDG\_WM\_BASE\_PONG\_SINCE\_VERSION@{XDG\_WM\_BASE\_PONG\_SINCE\_VERSION}!The xdg\_wm\_base interface@{The xdg\_wm\_base interface}}
+\doxysubsubsection{\texorpdfstring{XDG\_WM\_BASE\_PONG\_SINCE\_VERSION}{XDG\_WM\_BASE\_PONG\_SINCE\_VERSION}}
+{\footnotesize\ttfamily \label{group__iface__xdg__wm__base_ga79767418b9f5d722e3418b9c193e4aa2} 
+\#define XDG\+\_\+\+WM\+\_\+\+BASE\+\_\+\+PONG\+\_\+\+SINCE\+\_\+\+VERSION~1}
+
+
+
+\label{doc-func-members}
+\Hypertarget{group__iface__xdg__wm__base_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group__iface__xdg__wm__base_ga8f46ae46604ede327e8f69869875449f}\index{The xdg\_wm\_base interface@{The xdg\_wm\_base interface}!xdg\_wm\_base\_add\_listener@{xdg\_wm\_base\_add\_listener}}
+\index{xdg\_wm\_base\_add\_listener@{xdg\_wm\_base\_add\_listener}!The xdg\_wm\_base interface@{The xdg\_wm\_base interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_wm\_base\_add\_listener()}{xdg\_wm\_base\_add\_listener()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__wm__base_ga8f46ae46604ede327e8f69869875449f} 
+int xdg\+\_\+wm\+\_\+base\+\_\+add\+\_\+listener (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+wm\+\_\+base \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+wm\+\_\+base}{, }\item[{const struct \mbox{\hyperlink{structxdg__wm__base__listener}{xdg\+\_\+wm\+\_\+base\+\_\+listener}} \texorpdfstring{$\ast$}{*}}]{listener}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{group__iface__xdg__wm__base_ga0c549e7dc59346bd66e8408c946a89ec}\index{The xdg\_wm\_base interface@{The xdg\_wm\_base interface}!xdg\_wm\_base\_create\_positioner@{xdg\_wm\_base\_create\_positioner}}
+\index{xdg\_wm\_base\_create\_positioner@{xdg\_wm\_base\_create\_positioner}!The xdg\_wm\_base interface@{The xdg\_wm\_base interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_wm\_base\_create\_positioner()}{xdg\_wm\_base\_create\_positioner()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__wm__base_ga0c549e7dc59346bd66e8408c946a89ec} 
+struct xdg\+\_\+positioner \texorpdfstring{$\ast$}{*} xdg\+\_\+wm\+\_\+base\+\_\+create\+\_\+positioner (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+wm\+\_\+base \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+wm\+\_\+base}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Create a positioner object. A positioner object is used to position surfaces relative to some parent surface. See the interface description and xdg\+\_\+surface.\+get\+\_\+popup for details. \Hypertarget{group__iface__xdg__wm__base_ga22e80540ffc487720837e85a46834552}\index{The xdg\_wm\_base interface@{The xdg\_wm\_base interface}!xdg\_wm\_base\_destroy@{xdg\_wm\_base\_destroy}}
+\index{xdg\_wm\_base\_destroy@{xdg\_wm\_base\_destroy}!The xdg\_wm\_base interface@{The xdg\_wm\_base interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_wm\_base\_destroy()}{xdg\_wm\_base\_destroy()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__wm__base_ga22e80540ffc487720837e85a46834552} 
+void xdg\+\_\+wm\+\_\+base\+\_\+destroy (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+wm\+\_\+base \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+wm\+\_\+base}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Destroy this xdg\+\_\+wm\+\_\+base object.
+
+Destroying a bound xdg\+\_\+wm\+\_\+base object while there are surfaces still alive created by this xdg\+\_\+wm\+\_\+base object instance is illegal and will result in a defunct\+\_\+surfaces error. \Hypertarget{group__iface__xdg__wm__base_gadc6e98af5c964385a17cbbdd8e389116}\index{The xdg\_wm\_base interface@{The xdg\_wm\_base interface}!xdg\_wm\_base\_get\_user\_data@{xdg\_wm\_base\_get\_user\_data}}
+\index{xdg\_wm\_base\_get\_user\_data@{xdg\_wm\_base\_get\_user\_data}!The xdg\_wm\_base interface@{The xdg\_wm\_base interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_wm\_base\_get\_user\_data()}{xdg\_wm\_base\_get\_user\_data()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__wm__base_gadc6e98af5c964385a17cbbdd8e389116} 
+void \texorpdfstring{$\ast$}{*} xdg\+\_\+wm\+\_\+base\+\_\+get\+\_\+user\+\_\+data (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+wm\+\_\+base \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+wm\+\_\+base}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{group__iface__xdg__wm__base_gae59d1896c5fb50124ebd8421aa967782}\index{The xdg\_wm\_base interface@{The xdg\_wm\_base interface}!xdg\_wm\_base\_get\_xdg\_surface@{xdg\_wm\_base\_get\_xdg\_surface}}
+\index{xdg\_wm\_base\_get\_xdg\_surface@{xdg\_wm\_base\_get\_xdg\_surface}!The xdg\_wm\_base interface@{The xdg\_wm\_base interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_wm\_base\_get\_xdg\_surface()}{xdg\_wm\_base\_get\_xdg\_surface()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__wm__base_gae59d1896c5fb50124ebd8421aa967782} 
+struct xdg\+\_\+surface \texorpdfstring{$\ast$}{*} xdg\+\_\+wm\+\_\+base\+\_\+get\+\_\+xdg\+\_\+surface (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+wm\+\_\+base \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+wm\+\_\+base}{, }\item[{struct wl\+\_\+surface \texorpdfstring{$\ast$}{*}}]{surface}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This creates an xdg\+\_\+surface for the given surface. While xdg\+\_\+surface itself is not a role, the corresponding surface may only be assigned a role extending xdg\+\_\+surface, such as xdg\+\_\+toplevel or xdg\+\_\+popup. It is illegal to create an xdg\+\_\+surface for a wl\+\_\+surface which already has an assigned role and this will result in a role error.
+
+This creates an xdg\+\_\+surface for the given surface. An xdg\+\_\+surface is used as basis to define a role to a given surface, such as xdg\+\_\+toplevel or xdg\+\_\+popup. It also manages functionality shared between xdg\+\_\+surface based surface roles.
+
+See the documentation of xdg\+\_\+surface for more details about what an xdg\+\_\+surface is and how it is used. \Hypertarget{group__iface__xdg__wm__base_gaf1105ebe9c99f0eb6bf2792fab28f742}\index{The xdg\_wm\_base interface@{The xdg\_wm\_base interface}!xdg\_wm\_base\_pong@{xdg\_wm\_base\_pong}}
+\index{xdg\_wm\_base\_pong@{xdg\_wm\_base\_pong}!The xdg\_wm\_base interface@{The xdg\_wm\_base interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_wm\_base\_pong()}{xdg\_wm\_base\_pong()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__wm__base_gaf1105ebe9c99f0eb6bf2792fab28f742} 
+void xdg\+\_\+wm\+\_\+base\+\_\+pong (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+wm\+\_\+base \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+wm\+\_\+base}{, }\item[{uint32\+\_\+t}]{serial}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+A client must respond to a ping event with a pong request or the client may be deemed unresponsive. See xdg\+\_\+wm\+\_\+base.\+ping and xdg\+\_\+wm\+\_\+base.\+error.\+unresponsive. \Hypertarget{group__iface__xdg__wm__base_ga39f0e05e8b647aeea30f08282b24439c}\index{The xdg\_wm\_base interface@{The xdg\_wm\_base interface}!xdg\_wm\_base\_set\_user\_data@{xdg\_wm\_base\_set\_user\_data}}
+\index{xdg\_wm\_base\_set\_user\_data@{xdg\_wm\_base\_set\_user\_data}!The xdg\_wm\_base interface@{The xdg\_wm\_base interface}}
+\doxysubsubsection{\texorpdfstring{xdg\_wm\_base\_set\_user\_data()}{xdg\_wm\_base\_set\_user\_data()}}
+{\footnotesize\ttfamily \label{group__iface__xdg__wm__base_ga39f0e05e8b647aeea30f08282b24439c} 
+void xdg\+\_\+wm\+\_\+base\+\_\+set\+\_\+user\+\_\+data (\begin{DoxyParamCaption}\item[{struct xdg\+\_\+wm\+\_\+base \texorpdfstring{$\ast$}{*}}]{xdg\+\_\+wm\+\_\+base}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{user\+\_\+data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+

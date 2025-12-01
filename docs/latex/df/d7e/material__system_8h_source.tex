@@ -1,0 +1,27 @@
+\doxysection{material\+\_\+system.\+h}
+\hypertarget{material__system_8h_source}{}\label{material__system_8h_source}\index{engine/src/systems/material\_system.h@{engine/src/systems/material\_system.h}}
+\mbox{\hyperlink{material__system_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{renderer__types_8inl}{renderer/renderer\_types.inl}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{resource__types_8h}{resources/resource\_types.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmaterial__system__config}{material\_system\_config}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structmaterial__system__config_a68f497d5bae907a6377a9af52031ade8}{max\_material\_count}};}
+\DoxyCodeLine{00009\ \}\ \mbox{\hyperlink{structmaterial__system__config}{material\_system\_config}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ DEFAULT\_MATERIAL\_NAME\ "{}default"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{material__system_8h_acd96d4f865338dcf64ca455731b43718}{material\_system\_initialize}}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ *memory\_requirement,\ \textcolor{keywordtype}{void}\ *state,}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structmaterial__system__config}{material\_system\_config}}\ config);}
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{material__system_8h_ac54691336a811ff2d5c8dc06727fba89}{material\_system\_shutdown}}(\textcolor{keywordtype}{void}\ *state);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \mbox{\hyperlink{structmaterial}{material}}\ *\mbox{\hyperlink{material__system_8h_ae395c1f929cb52e4876eafa9b2398f66}{material\_system\_acquire}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name);}
+\DoxyCodeLine{00018\ \mbox{\hyperlink{structmaterial}{material}}\ *\mbox{\hyperlink{material__system_8h_ab4fc1dd5effa08830f4f91c5334f108e}{material\_system\_acquire\_from\_config}}(\mbox{\hyperlink{structmaterial__config}{material\_config}}\ config);}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{material__system_8h_a71642cf5861f603f7e1bf6c4d373b906}{material\_system\_release}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \mbox{\hyperlink{structmaterial}{material}}\ *\mbox{\hyperlink{material__system_8h_a4ba73bfbf0e5e2fe4c8b839449ea210b}{material\_system\_get\_default}}();}
+
+\end{DoxyCode}

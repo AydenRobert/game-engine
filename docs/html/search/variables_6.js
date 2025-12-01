@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['g_0',['g',['../db/d7b/unionvec2__u.html#aff0ae00bf7a12746b464e98aa9d13b72',1,'vec2_u::g'],['../d5/df1/unionvec3__u.html#acbca58fd977d801b8df9c5609d2874dd',1,'vec3_u::g'],['../df/dbe/unionvec4__u.html#a1357aa5045eab0c3a2d5703b9c418f91',1,'vec4_u::g']]],
+  ['game_5finst_1',['game_inst',['../dc/d7e/structapplication__state.html#ae224fcec4853d590c4068314f75196c2',1,'application_state']]],
+  ['generation_2',['generation',['../d4/d76/structvulkan__geometry__data.html#a91702aabf5a1b9384610a442585f59d1',1,'vulkan_geometry_data::generation'],['../dd/db6/structtexture.html#a86f5c2a9138ae4004bf1528c5365def0',1,'texture::generation'],['../da/d20/structmaterial.html#af48ce82f2bc1aa3f746d22d9bdd85ac1',1,'material::generation'],['../dd/ddc/structgeometry.html#abed43a9305450f0855b9d2f18ccf8953',1,'geometry::generation']]],
+  ['generations_3',['generations',['../df/d4d/structvulkan__descriptor__state.html#a23a6f33aad226b703f3b57fbec15e653',1,'vulkan_descriptor_state']]],
+  ['geometries_4',['geometries',['../dd/da5/structrender__packet.html#a526f5ec924e892afaa1d6f382c44b2e3',1,'render_packet::geometries'],['../d9/dc9/structvulkan__context.html#a04574de8371d67ff15bed1c645585cc5',1,'vulkan_context::geometries']]],
+  ['geometry_5',['geometry',['../df/d2b/structgeometry__render__data.html#af7a8efb15739045f7e246e6766597dc0',1,'geometry_render_data::geometry'],['../da/d73/structgeometry__reference.html#af878ed9d5b4f161bf795ef84ffa41246',1,'geometry_reference::geometry']]],
+  ['geometry_5fcount_6',['geometry_count',['../dd/da5/structrender__packet.html#aa17ed3b0a5739809ba2132f52e858f4b',1,'render_packet']]],
+  ['geometry_5fsystem_5fmemory_5frequirement_7',['geometry_system_memory_requirement',['../dc/d7e/structapplication__state.html#a2f1a4ade88e31fd5c9d29e08a8f40a14',1,'application_state']]],
+  ['geometry_5fsystem_5fstate_8',['geometry_system_state',['../dc/d7e/structapplication__state.html#a19e0a2766f2b7ac0a27c624557d99349',1,'application_state']]],
+  ['global_5fdescriptor_5fpool_9',['global_descriptor_pool',['../d0/d57/structvulkan__material__shader.html#a9923a04fd6b0764b4a806fe206ee5918',1,'vulkan_material_shader::global_descriptor_pool'],['../d5/ddd/structvulkan__ui__shader.html#a7fbdddef211d4fe0a6a5d1d4dcf1ee80',1,'vulkan_ui_shader::global_descriptor_pool']]],
+  ['global_5fdescriptor_5fset_5flayout_10',['global_descriptor_set_layout',['../d0/d57/structvulkan__material__shader.html#a41009b44592c2795f3060718b847eefa',1,'vulkan_material_shader::global_descriptor_set_layout'],['../d5/ddd/structvulkan__ui__shader.html#ad7eeef3edbb6292d5dfb7f3904ee89d9',1,'vulkan_ui_shader::global_descriptor_set_layout']]],
+  ['global_5fdescriptor_5fsets_11',['global_descriptor_sets',['../d0/d57/structvulkan__material__shader.html#aff59556404f4115a0016ea653f58a146',1,'vulkan_material_shader::global_descriptor_sets'],['../d5/ddd/structvulkan__ui__shader.html#a2a20b2ff011d7838bbb84e7a7d8a81b9',1,'vulkan_ui_shader::global_descriptor_sets']]],
+  ['global_5fubo_12',['global_ubo',['../d0/d57/structvulkan__material__shader.html#a63d0af53dae2f58617b579f09b70208e',1,'vulkan_material_shader::global_ubo'],['../d5/ddd/structvulkan__ui__shader.html#ac5a2626f68dd34cd28b4d0f1a490c469',1,'vulkan_ui_shader::global_ubo']]],
+  ['global_5funiform_5fbuffer_13',['global_uniform_buffer',['../d0/d57/structvulkan__material__shader.html#ac713c05fbfee746f5f9807039465e5fc',1,'vulkan_material_shader::global_uniform_buffer'],['../d5/ddd/structvulkan__ui__shader.html#ac38f0eaed67666e34f89169a092f864f',1,'vulkan_ui_shader::global_uniform_buffer']]],
+  ['graphics_14',['graphics',['../d4/d4a/structvulkan__physical__device__requirements.html#a0d60ecb3ea4f8cf40a7f31781785b867',1,'vulkan_physical_device_requirements']]],
+  ['graphics_5fcommand_5fbuffers_15',['graphics_command_buffers',['../d9/dc9/structvulkan__context.html#ada97681614808238c130037d71d38dca',1,'vulkan_context']]],
+  ['graphics_5fcommand_5fpool_16',['graphics_command_pool',['../d7/d6e/structvulkan__device.html#a07e54130446cbf987c768bd47ce48c1c',1,'vulkan_device']]],
+  ['graphics_5ffamily_5findex_17',['graphics_family_index',['../d5/da3/structvulkan__physical__device__queue__family__info.html#a3e0af6aee700c3bfa0c29b971272154d',1,'vulkan_physical_device_queue_family_info']]],
+  ['graphics_5fqueue_18',['graphics_queue',['../d7/d6e/structvulkan__device.html#a32d7146222dd894f4d4ddaf43238e588',1,'vulkan_device']]],
+  ['graphics_5fqueue_5findex_19',['graphics_queue_index',['../d7/d6e/structvulkan__device.html#ab97ca99bede93710b388835cb5bcd524',1,'vulkan_device']]]
+];

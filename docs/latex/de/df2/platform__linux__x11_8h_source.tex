@@ -1,0 +1,25 @@
+\doxysection{platform\+\_\+linux\+\_\+x11.\+h}
+\hypertarget{platform__linux__x11_8h_source}{}\label{platform__linux__x11_8h_source}\index{engine/src/platform/platform\_linux\_x11.h@{engine/src/platform/platform\_linux\_x11.h}}
+\mbox{\hyperlink{platform__linux__x11_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{platform__linux_8h}{platform/platform\_linux.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__context}{vulkan\_context}};}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{platform__linux__x11_8h_a2d7c7dcc96d86245789f8abdbab90eb9}{platform\_startup\_x11}}(\mbox{\hyperlink{structdisplay__state}{display\_state}}\ *disp\_state,}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *application\_name,\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ x,\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ y,\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ width,}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ height);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{platform__linux__x11_8h_ae7123209f7a18e85054ea703cbe141f0}{platform\_shutdown\_x11}}(\mbox{\hyperlink{structdisplay__state}{display\_state}}\ *disp\_state);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{platform__linux__x11_8h_a90034f534a75ed056a574a60667c585f}{platform\_pump\_messages\_x11}}(\mbox{\hyperlink{structdisplay__state}{display\_state}}\ *disp\_state);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{platform__linux__x11_8h_a961d9437b60b746c4c31af0cc17646e1}{platform\_get\_required\_extension\_names\_x11}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ ***names\_darray);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{platform__linux__x11_8h_a4b7e1c432bd7a9a4b23e3c486f6baa23}{platform\_create\_vulkan\_surface\_x11}}(\mbox{\hyperlink{structdisplay__state}{display\_state}}\ *disp\_state,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}});}
+
+\end{DoxyCode}

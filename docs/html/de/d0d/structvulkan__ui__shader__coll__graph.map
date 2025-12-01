@@ -1,0 +1,19 @@
+<map id="vulkan_ui_shader" name="vulkan_ui_shader">
+<area shape="rect" id="Node000001" title=" " alt="" coords="761,162,895,190"/>
+<area shape="rect" id="Node000002" href="$d8/da7/structvulkan__shader__stage.html" title=" " alt="" coords="377,28,535,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="550,32,596,33,644,38,693,50,738,68,767,88,790,114,822,163,817,161,786,117,763,92,736,73,691,55,643,44,595,38,551,37"/>
+<area shape="rect" id="Node000003" href="$d7/dcf/structvulkan__ui__shader__global__ubo.html" title=" " alt="" coords="350,84,562,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="577,97,657,106,738,124,776,140,809,162,804,161,774,145,736,129,657,111,578,102"/>
+<area shape="rect" id="Node000004" href="$d6/d3a/unionmat4__u.html" title=" " alt="" coords="58,84,129,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="144,95,351,95,348,99,145,100"/>
+<area shape="rect" id="Node000005" href="$d5/def/structvulkan__buffer.html" title=" " alt="" coords="401,158,510,186"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="526,171,586,171,763,175,758,176,586,177,526,176"/>
+<area shape="rect" id="Node000006" href="$df/d13/structfreelist.html" title=" " alt="" coords="60,158,127,186"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="142,169,402,170,400,174,143,175"/>
+<area shape="rect" id="Node000007" href="$d9/d85/structvulkan__ui__shader__instance__state.html" title=" " alt="" coords="358,210,554,254"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="569,225,652,217,736,204,788,191,793,190,738,209,652,223,570,230"/>
+<area shape="rect" id="Node000008" href="$df/d4d/structvulkan__descriptor__state.html" title=" " alt="" coords="5,218,182,246"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="197,229,360,231,355,233,197,235"/>
+<area shape="rect" id="Node000009" href="$dc/d85/structvulkan__pipeline.html" title=" " alt="" coords="394,278,518,306"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="533,291,580,289,632,283,685,271,736,253,760,239,781,222,813,191,818,189,785,226,763,244,738,258,687,276,633,288,580,294,533,297"/>
+</map>

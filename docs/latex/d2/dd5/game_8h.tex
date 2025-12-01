@@ -1,0 +1,130 @@
+\doxysection{testbed/src/game.h File Reference}
+\hypertarget{game_8h}{}\label{game_8h}\index{testbed/src/game.h@{testbed/src/game.h}}
+{\ttfamily \#include "{}math/math\+\_\+types.\+h"{}}\newline
+{\ttfamily \#include $<$defines.\+h$>$}\newline
+{\ttfamily \#include $<$game\+\_\+types.\+h$>$}\newline
+Include dependency graph for game.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d10/game_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{df/dcc/game_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgame__state}{game\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct game\+\_\+state \mbox{\hyperlink{game_8h_ad5eb7fa5077146cd89323dc58e67621d}{game\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{game_8h_ab56d8511d5b55e40d88999e59fe8084e}{game\+\_\+initialize}} (\mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}game\+\_\+inst)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{game_8h_a1a612ae5a139848e80e1f7ddec49fdcf}{game\+\_\+update}} (\mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}game\+\_\+inst, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} delta\+\_\+time)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{game_8h_aaa5f574e90e6577a78fbe8f01902525b}{game\+\_\+render}} (\mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}game\+\_\+inst, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} delta\+\_\+time)
+\item 
+void \mbox{\hyperlink{game_8h_a5b4ce7177edb36b28a89471589432d17}{game\+\_\+on\+\_\+resize}} (\mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}game\+\_\+inst, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} width, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} height)
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{game_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{game_8h_ad5eb7fa5077146cd89323dc58e67621d}\index{game.h@{game.h}!game\_state@{game\_state}}
+\index{game\_state@{game\_state}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_state}{game\_state}}
+{\footnotesize\ttfamily \label{game_8h_ad5eb7fa5077146cd89323dc58e67621d} 
+typedef struct game\+\_\+state game\+\_\+state}
+
+
+
+\label{doc-func-members}
+\Hypertarget{game_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{game_8h_ab56d8511d5b55e40d88999e59fe8084e}\index{game.h@{game.h}!game\_initialize@{game\_initialize}}
+\index{game\_initialize@{game\_initialize}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_initialize()}{game\_initialize()}}
+{\footnotesize\ttfamily \label{game_8h_ab56d8511d5b55e40d88999e59fe8084e} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} game\+\_\+initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+inst}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dd5/game_8h_ab56d8511d5b55e40d88999e59fe8084e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dd5/game_8h_ab56d8511d5b55e40d88999e59fe8084e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8h_a5b4ce7177edb36b28a89471589432d17}\index{game.h@{game.h}!game\_on\_resize@{game\_on\_resize}}
+\index{game\_on\_resize@{game\_on\_resize}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_on\_resize()}{game\_on\_resize()}}
+{\footnotesize\ttfamily \label{game_8h_a5b4ce7177edb36b28a89471589432d17} 
+void game\+\_\+on\+\_\+resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+inst}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{width}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{height}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dd5/game_8h_a5b4ce7177edb36b28a89471589432d17_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8h_aaa5f574e90e6577a78fbe8f01902525b}\index{game.h@{game.h}!game\_render@{game\_render}}
+\index{game\_render@{game\_render}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_render()}{game\_render()}}
+{\footnotesize\ttfamily \label{game_8h_aaa5f574e90e6577a78fbe8f01902525b} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} game\+\_\+render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+inst}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{delta\+\_\+time}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dd5/game_8h_aaa5f574e90e6577a78fbe8f01902525b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{game_8h_a1a612ae5a139848e80e1f7ddec49fdcf}\index{game.h@{game.h}!game\_update@{game\_update}}
+\index{game\_update@{game\_update}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{game\_update()}{game\_update()}}
+{\footnotesize\ttfamily \label{game_8h_a1a612ae5a139848e80e1f7ddec49fdcf} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} game\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}}]{game\+\_\+inst}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{delta\+\_\+time}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dd5/game_8h_a1a612ae5a139848e80e1f7ddec49fdcf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dd5/game_8h_a1a612ae5a139848e80e1f7ddec49fdcf_icgraph}
+\end{center}
+\end{figure}

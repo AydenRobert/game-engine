@@ -1,0 +1,285 @@
+\doxysection{engine/src/containers/hashtable.c File Reference}
+\hypertarget{hashtable_8c}{}\label{hashtable_8c}\index{engine/src/containers/hashtable.c@{engine/src/containers/hashtable.c}}
+{\ttfamily \#include "{}containers/hashtable.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}core/logger.\+h"{}}\newline
+Include dependency graph for hashtable.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/df4/hashtable_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{hashtable_8c_a69977851e8a85a621f7bd49b66405f3c}{hash\+\_\+name}} (const char \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} element\+\_\+count)
+\item 
+void \mbox{\hyperlink{hashtable_8c_a448eebcc124b3704e519a7d063554fe3}{hashtable\+\_\+create}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} element\+\_\+size, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} element\+\_\+count, void \texorpdfstring{$\ast$}{*}memory, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} is\+\_\+pointer\+\_\+type, \mbox{\hyperlink{structhashtable}{hashtable}} \texorpdfstring{$\ast$}{*}out\+\_\+hashtable)
+\begin{DoxyCompactList}\small\item\em Creates a hashtable and stores it in out\+\_\+hashtable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hashtable_8c_a572ba261e91f243e5e5735e303bc5a71}{hashtable\+\_\+destroy}} (\mbox{\hyperlink{structhashtable}{hashtable}} \texorpdfstring{$\ast$}{*}table)
+\begin{DoxyCompactList}\small\item\em Destroys the provided hashtable. Does not release memory for pointer types. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{hashtable_8c_a33773f5004b2ecc9a3af543ba2e52c60}{hashtable\+\_\+set}} (\mbox{\hyperlink{structhashtable}{hashtable}} \texorpdfstring{$\ast$}{*}table, const char \texorpdfstring{$\ast$}{*}name, void \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em Stores a copy of the data in value into the provided hashtable. Only use for tables which were {\itshape NOT} created with is\+\_\+pointer\+\_\+type = true;. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{hashtable_8c_a11e09b05fdf60d6993f5b487584fa718}{hashtable\+\_\+set\+\_\+ptr}} (\mbox{\hyperlink{structhashtable}{hashtable}} \texorpdfstring{$\ast$}{*}table, const char \texorpdfstring{$\ast$}{*}name, void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em Stores a pointer as provided in value into the provided hashtable. Only use for tables which were created with is\+\_\+pointer\+\_\+type = true;. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{hashtable_8c_abc39f8ea1cbed6f616ea660f9f00b876}{hashtable\+\_\+get}} (\mbox{\hyperlink{structhashtable}{hashtable}} \texorpdfstring{$\ast$}{*}table, const char \texorpdfstring{$\ast$}{*}name, void \texorpdfstring{$\ast$}{*}out\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Obtains a copy of data present in the hashtable. Only use for tables which were {\itshape NOT} created with is\+\_\+pointer\+\_\+type = true;. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{hashtable_8c_a167be3a4da6e13ab6b9b2f464aa397f5}{hashtable\+\_\+get\+\_\+ptr}} (\mbox{\hyperlink{structhashtable}{hashtable}} \texorpdfstring{$\ast$}{*}table, const char \texorpdfstring{$\ast$}{*}name, void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}out\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Obtains a pointer to data present in the hashtable. Only use for tables which were created with is\+\_\+pointer\+\_\+type = true;. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{hashtable_8c_a82c34fd5fb438571847414f35e744b6e}{hashtable\+\_\+fill}} (\mbox{\hyperlink{structhashtable}{hashtable}} \texorpdfstring{$\ast$}{*}table, void \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em Fills all entries with the given value. Useful when non-\/existent \textquotesingle{}names\textquotesingle{} should retrieve a default value. Should {\itshape NOT} be used with tables which were created with is\+\_\+pointer\+\_\+type = true;. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{hashtable_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{hashtable_8c_a69977851e8a85a621f7bd49b66405f3c}\index{hashtable.c@{hashtable.c}!hash\_name@{hash\_name}}
+\index{hash\_name@{hash\_name}!hashtable.c@{hashtable.c}}
+\doxysubsubsection{\texorpdfstring{hash\_name()}{hash\_name()}}
+{\footnotesize\ttfamily \label{hashtable_8c_a69977851e8a85a621f7bd49b66405f3c} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} hash\+\_\+name (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{element\+\_\+count}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/de9/hashtable_8c_a69977851e8a85a621f7bd49b66405f3c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hashtable_8c_a448eebcc124b3704e519a7d063554fe3}\index{hashtable.c@{hashtable.c}!hashtable\_create@{hashtable\_create}}
+\index{hashtable\_create@{hashtable\_create}!hashtable.c@{hashtable.c}}
+\doxysubsubsection{\texorpdfstring{hashtable\_create()}{hashtable\_create()}}
+{\footnotesize\ttfamily \label{hashtable_8c_a448eebcc124b3704e519a7d063554fe3} 
+void hashtable\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{element\+\_\+size}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{element\+\_\+count}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{memory}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{is\+\_\+pointer\+\_\+type}{, }\item[{\mbox{\hyperlink{structhashtable}{hashtable}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+hashtable}{}\end{DoxyParamCaption})}
+
+
+
+Creates a hashtable and stores it in out\+\_\+hashtable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element\+\_\+size} & The size of each element in bytes. \\
+\hline
+{\em element\+\_\+count} & The maximum number of elements, cannot be resized. \\
+\hline
+{\em memory} & A block of memory to be used. Should be equal to element\+\_\+size \texorpdfstring{$\ast$}{*} element\+\_\+count. \\
+\hline
+{\em is\+\_\+pointer\+\_\+type} & Indicates if this hashtable will hold pointer types. \\
+\hline
+{\em out\+\_\+hashtable} & A pointer to a hashtable in which to hold the relevant data. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/de9/hashtable_8c_a448eebcc124b3704e519a7d063554fe3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/de9/hashtable_8c_a448eebcc124b3704e519a7d063554fe3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hashtable_8c_a572ba261e91f243e5e5735e303bc5a71}\index{hashtable.c@{hashtable.c}!hashtable\_destroy@{hashtable\_destroy}}
+\index{hashtable\_destroy@{hashtable\_destroy}!hashtable.c@{hashtable.c}}
+\doxysubsubsection{\texorpdfstring{hashtable\_destroy()}{hashtable\_destroy()}}
+{\footnotesize\ttfamily \label{hashtable_8c_a572ba261e91f243e5e5735e303bc5a71} 
+void hashtable\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhashtable}{hashtable}} \texorpdfstring{$\ast$}{*}}]{table}{}\end{DoxyParamCaption})}
+
+
+
+Destroys the provided hashtable. Does not release memory for pointer types. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & A pointer to the table to be destroyed. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/de9/hashtable_8c_a572ba261e91f243e5e5735e303bc5a71_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hashtable_8c_a82c34fd5fb438571847414f35e744b6e}\index{hashtable.c@{hashtable.c}!hashtable\_fill@{hashtable\_fill}}
+\index{hashtable\_fill@{hashtable\_fill}!hashtable.c@{hashtable.c}}
+\doxysubsubsection{\texorpdfstring{hashtable\_fill()}{hashtable\_fill()}}
+{\footnotesize\ttfamily \label{hashtable_8c_a82c34fd5fb438571847414f35e744b6e} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} hashtable\+\_\+fill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhashtable}{hashtable}} \texorpdfstring{$\ast$}{*}}]{table}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Fills all entries with the given value. Useful when non-\/existent \textquotesingle{}names\textquotesingle{} should retrieve a default value. Should {\itshape NOT} be used with tables which were created with is\+\_\+pointer\+\_\+type = true;. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & A pointer to the table to be filled. Required. \\
+\hline
+{\em value} & The value to be filled with. Required. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful; otherwise False; 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/de9/hashtable_8c_a82c34fd5fb438571847414f35e744b6e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/de9/hashtable_8c_a82c34fd5fb438571847414f35e744b6e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hashtable_8c_abc39f8ea1cbed6f616ea660f9f00b876}\index{hashtable.c@{hashtable.c}!hashtable\_get@{hashtable\_get}}
+\index{hashtable\_get@{hashtable\_get}!hashtable.c@{hashtable.c}}
+\doxysubsubsection{\texorpdfstring{hashtable\_get()}{hashtable\_get()}}
+{\footnotesize\ttfamily \label{hashtable_8c_abc39f8ea1cbed6f616ea660f9f00b876} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} hashtable\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhashtable}{hashtable}} \texorpdfstring{$\ast$}{*}}]{table}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{out\+\_\+value}{}\end{DoxyParamCaption})}
+
+
+
+Obtains a copy of data present in the hashtable. Only use for tables which were {\itshape NOT} created with is\+\_\+pointer\+\_\+type = true;. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & A pointer to the table. Required. \\
+\hline
+{\em name} & The name of the entry to be retrieved. Required. \\
+\hline
+{\em out\+\_\+value} & A pointer to store the retrieved value. Required. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True; False if a null pointer is passed. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/de9/hashtable_8c_abc39f8ea1cbed6f616ea660f9f00b876_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/de9/hashtable_8c_abc39f8ea1cbed6f616ea660f9f00b876_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hashtable_8c_a167be3a4da6e13ab6b9b2f464aa397f5}\index{hashtable.c@{hashtable.c}!hashtable\_get\_ptr@{hashtable\_get\_ptr}}
+\index{hashtable\_get\_ptr@{hashtable\_get\_ptr}!hashtable.c@{hashtable.c}}
+\doxysubsubsection{\texorpdfstring{hashtable\_get\_ptr()}{hashtable\_get\_ptr()}}
+{\footnotesize\ttfamily \label{hashtable_8c_a167be3a4da6e13ab6b9b2f464aa397f5} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} hashtable\+\_\+get\+\_\+ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhashtable}{hashtable}} \texorpdfstring{$\ast$}{*}}]{table}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{out\+\_\+value}{}\end{DoxyParamCaption})}
+
+
+
+Obtains a pointer to data present in the hashtable. Only use for tables which were created with is\+\_\+pointer\+\_\+type = true;. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & A pointer to the table. Required. \\
+\hline
+{\em name} & The name of the entry to be retrieved. Required. \\
+\hline
+{\em out\+\_\+value} & A pointer to store the retrieved value. Required. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True; False if a null pointer is passed or if \texorpdfstring{$\ast$}{*}out\+\_\+value = 0; 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{d8/de9/hashtable_8c_a167be3a4da6e13ab6b9b2f464aa397f5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hashtable_8c_a33773f5004b2ecc9a3af543ba2e52c60}\index{hashtable.c@{hashtable.c}!hashtable\_set@{hashtable\_set}}
+\index{hashtable\_set@{hashtable\_set}!hashtable.c@{hashtable.c}}
+\doxysubsubsection{\texorpdfstring{hashtable\_set()}{hashtable\_set()}}
+{\footnotesize\ttfamily \label{hashtable_8c_a33773f5004b2ecc9a3af543ba2e52c60} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} hashtable\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhashtable}{hashtable}} \texorpdfstring{$\ast$}{*}}]{table}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Stores a copy of the data in value into the provided hashtable. Only use for tables which were {\itshape NOT} created with is\+\_\+pointer\+\_\+type = true;. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & A pointer to the table. Required. \\
+\hline
+{\em name} & The name of the entry to be set. Required. \\
+\hline
+{\em value} & A pointer to the value to be copied. Required. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True; False if a null pointer is passed. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/de9/hashtable_8c_a33773f5004b2ecc9a3af543ba2e52c60_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/de9/hashtable_8c_a33773f5004b2ecc9a3af543ba2e52c60_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{hashtable_8c_a11e09b05fdf60d6993f5b487584fa718}\index{hashtable.c@{hashtable.c}!hashtable\_set\_ptr@{hashtable\_set\_ptr}}
+\index{hashtable\_set\_ptr@{hashtable\_set\_ptr}!hashtable.c@{hashtable.c}}
+\doxysubsubsection{\texorpdfstring{hashtable\_set\_ptr()}{hashtable\_set\_ptr()}}
+{\footnotesize\ttfamily \label{hashtable_8c_a11e09b05fdf60d6993f5b487584fa718} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} hashtable\+\_\+set\+\_\+ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structhashtable}{hashtable}} \texorpdfstring{$\ast$}{*}}]{table}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Stores a pointer as provided in value into the provided hashtable. Only use for tables which were created with is\+\_\+pointer\+\_\+type = true;. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & A pointer to the table. Required. \\
+\hline
+{\em name} & The name of the entry to be set. Required. \\
+\hline
+{\em value} & A pointer to the pointer to the data. Can pass 0 to unset an entry. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True; False if a null pointer is passed or if \texorpdfstring{$\ast$}{*}value = 0. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{d8/de9/hashtable_8c_a11e09b05fdf60d6993f5b487584fa718_cgraph}
+\end{center}
+\end{figure}

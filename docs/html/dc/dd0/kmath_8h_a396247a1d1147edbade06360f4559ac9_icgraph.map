@@ -1,0 +1,17 @@
+<map id="vec3_zero" name="vec3_zero">
+<area shape="rect" id="Node000001" title=" " alt="" coords="486,57,574,85"/>
+<area shape="rect" id="Node000002" href="$d1/dcb/game_8c.html#ab56d8511d5b55e40d88999e59fe8084e" title=" " alt="" coords="297,5,418,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="469,54,406,36,406,31,474,54"/>
+<area shape="rect" id="Node000005" href="$d1/dcb/game_8c.html#a1a612ae5a139848e80e1f7ddec49fdcf" title=" " alt="" coords="302,57,413,85"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="468,71,414,74,413,69,473,71"/>
+<area shape="rect" id="Node000006" href="$d0/dcc/renderer__frontend_8c.html#aa1a64974ce989cb8a822d5910e45eeec" title=" " alt="" coords="277,109,438,137"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="474,88,407,111,405,106,469,89"/>
+<area shape="rect" id="Node000003" href="$d0/dc1/entry_8c.html#ac1205073da2ce08a82ead459fc8b39cb" title=" " alt="" coords="115,57,222,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="287,39,222,59,221,54,292,37"/>
+<area shape="rect" id="Node000004" href="$d1/dc6/entry_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,84,60,112"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="98,86,61,95,59,90,102,83"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="284,72,222,74,222,69,289,71"/>
+<area shape="rect" id="Node000007" href="$d4/d8b/application_8c.html#ad6aaa3596896dacf8de1439cc34a264b" title=" " alt="" coords="108,109,229,137"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="259,123,229,126,229,121,264,123"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="90,110,60,106,60,100,94,108"/>
+</map>

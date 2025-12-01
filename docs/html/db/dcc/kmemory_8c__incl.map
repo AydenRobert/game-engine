@@ -1,0 +1,27 @@
+<map id="engine/src/core/kmemory.c" name="engine/src/core/kmemory.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="302,5,499,33"/>
+<area shape="rect" id="Node000002" href="$d6/dbf/kmemory_8h.html" title=" " alt="" coords="295,157,389,184"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="413,31,434,67,438,89,434,110,415,134,390,152,387,147,411,130,429,108,433,89,429,69,411,36"/>
+<area shape="rect" id="Node000004" href="$d7/d63/kstring_8h.html" title=" " alt="" coords="494,81,604,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="427,31,512,74,506,74,427,36"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="636,157,701,184"/>
+<area shape="poly" id="edge15_Node000001_Node000005" title=" " alt="" coords="499,30,560,48,590,62,617,79,644,108,661,143,656,141,639,112,614,83,587,66,558,53,499,35"/>
+<area shape="rect" id="Node000008" href="$d1/d8c/logger_8h.html" title=" " alt="" coords="5,157,111,184"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="300,24,222,30,139,40,69,58,43,69,25,83,19,97,21,112,39,144,34,146,16,114,14,96,21,79,40,65,67,52,138,35,221,25,305,21"/>
+<area shape="rect" id="Node000009" href="$df/d0f/dynamic__allocator_8h.html" title="Contains the implementation of the dynamic allocator." alt="" coords="35,81,246,109"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="352,35,203,79,201,74,356,32"/>
+<area shape="rect" id="Node000010" href="$de/d03/platform_8h.html" title=" " alt="" coords="270,81,419,109"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="393,32,365,71,362,67,389,35"/>
+<area shape="rect" id="Node000003" href="$d8/db0/defines_8h.html" title=" " alt="" coords="260,232,341,260"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="337,184,317,221,314,216,332,186"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="530,109,336,227,334,222,524,109"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="571,107,637,149,632,148,570,112"/>
+<area shape="rect" id="Node000006" href="$d4/d7e/math__types_8h.html" title=" " alt="" coords="464,157,612,184"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="549,107,544,143,540,140,545,111"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="498,185,356,231,355,225,493,185"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="495,232,581,260"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="540,183,540,218,536,215,536,187"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="102,182,248,226,244,230,101,188"/>
+<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="156,106,278,221,273,223,153,111"/>
+<area shape="poly" id="edge14_Node000010_Node000003" title=" " alt="" coords="327,108,304,131,286,158,282,172,282,188,290,219,285,217,277,188,277,172,281,156,300,128,323,110"/>
+</map>

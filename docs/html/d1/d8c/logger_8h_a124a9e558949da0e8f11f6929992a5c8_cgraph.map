@@ -1,0 +1,7 @@
+<map id="initialize_logging" name="initialize_logging">
+<area shape="rect" id="Node000001" title="Initialises logging system. Call first with state = 0 to get memory size. The second time,..." alt="" coords="5,36,138,64"/>
+<area shape="rect" id="Node000002" href="$df/d45/filesystem_8c.html#a86cbb9441406d6469d0216cd372c9125" title="Attemp to open file located at this path." alt="" coords="209,5,337,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,37,196,30,191,32,139,42"/>
+<area shape="rect" id="Node000003" href="$de/d03/platform_8h.html#adee3e77de1e3374a118e9ebc150c9800" title=" " alt="" coords="186,57,360,102"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,57,173,64,168,65,138,62"/>
+</map>

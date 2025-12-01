@@ -1,0 +1,182 @@
+\doxysection{engine/src/core/logger.c File Reference}
+\hypertarget{logger_8c}{}\label{logger_8c}\index{engine/src/core/logger.c@{engine/src/core/logger.c}}
+{\ttfamily \#include "{}logger.\+h"{}}\newline
+{\ttfamily \#include "{}asserts.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}core/kstring.\+h"{}}\newline
+{\ttfamily \#include "{}platform/filesystem.\+h"{}}\newline
+{\ttfamily \#include "{}platform/platform.\+h"{}}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for logger.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d30/logger_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlogger__system__state}{logger\+\_\+system\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct logger\+\_\+system\+\_\+state \mbox{\hyperlink{logger_8c_ae29328f40e5eace9aeffeebfc1b93c09}{logger\+\_\+system\+\_\+state}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{logger_8c_ac215142da536869ac02894d0198bb88f}{append\+\_\+to\+\_\+log\+\_\+file}} (const char \texorpdfstring{$\ast$}{*}message)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{logger_8c_a124a9e558949da0e8f11f6929992a5c8}{initialize\+\_\+logging}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}memory\+\_\+requirement, void \texorpdfstring{$\ast$}{*}state)
+\begin{DoxyCompactList}\small\item\em Initialises logging system. Call first with state = 0 to get memory size. The second time, pass the memory to the state;. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logger_8c_aa19340b3c2c2f8f90a5c40d08b7919c7}{shutdown\+\_\+logging}} (void \texorpdfstring{$\ast$}{*}state)
+\item 
+void \mbox{\hyperlink{logger_8c_abdf99acf6ecc4a6fd2277e74ed3fd8c6}{log\+\_\+output}} (\mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748e}{log\+\_\+level}} level, const char \texorpdfstring{$\ast$}{*}message,...)
+\item 
+void \mbox{\hyperlink{logger_8c_a89ca11b6142a42bebac099dfacf57f59}{report\+\_\+assertion\+\_\+failure}} (const char \texorpdfstring{$\ast$}{*}expression, const char \texorpdfstring{$\ast$}{*}message, const char \texorpdfstring{$\ast$}{*}file, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} line)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structlogger__system__state}{logger\+\_\+system\+\_\+state}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{logger_8c_a78fb062cf70ff40ec53ede87b44ebb48}{state\+\_\+ptr}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{logger_8c_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{logger_8c_ae29328f40e5eace9aeffeebfc1b93c09}\index{logger.c@{logger.c}!logger\_system\_state@{logger\_system\_state}}
+\index{logger\_system\_state@{logger\_system\_state}!logger.c@{logger.c}}
+\doxysubsubsection{\texorpdfstring{logger\_system\_state}{logger\_system\_state}}
+{\footnotesize\ttfamily \label{logger_8c_ae29328f40e5eace9aeffeebfc1b93c09} 
+typedef struct logger\+\_\+system\+\_\+state logger\+\_\+system\+\_\+state}
+
+
+
+\label{doc-func-members}
+\Hypertarget{logger_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{logger_8c_ac215142da536869ac02894d0198bb88f}\index{logger.c@{logger.c}!append\_to\_log\_file@{append\_to\_log\_file}}
+\index{append\_to\_log\_file@{append\_to\_log\_file}!logger.c@{logger.c}}
+\doxysubsubsection{\texorpdfstring{append\_to\_log\_file()}{append\_to\_log\_file()}}
+{\footnotesize\ttfamily \label{logger_8c_ac215142da536869ac02894d0198bb88f} 
+void append\+\_\+to\+\_\+log\+\_\+file (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d22/logger_8c_ac215142da536869ac02894d0198bb88f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d22/logger_8c_ac215142da536869ac02894d0198bb88f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logger_8c_a124a9e558949da0e8f11f6929992a5c8}\index{logger.c@{logger.c}!initialize\_logging@{initialize\_logging}}
+\index{initialize\_logging@{initialize\_logging}!logger.c@{logger.c}}
+\doxysubsubsection{\texorpdfstring{initialize\_logging()}{initialize\_logging()}}
+{\footnotesize\ttfamily \label{logger_8c_a124a9e558949da0e8f11f6929992a5c8} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} initialize\+\_\+logging (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{memory\+\_\+requirement}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Initialises logging system. Call first with state = 0 to get memory size. The second time, pass the memory to the state;. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memory\+\_\+requirement} & A pointer to hold the required memory size of the internal state struct. \\
+\hline
+{\em state} & 0 if just requesting memory requirments, otherwise, allocated block of memory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success; otherwise false. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{d1/d22/logger_8c_a124a9e558949da0e8f11f6929992a5c8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d22/logger_8c_a124a9e558949da0e8f11f6929992a5c8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logger_8c_abdf99acf6ecc4a6fd2277e74ed3fd8c6}\index{logger.c@{logger.c}!log\_output@{log\_output}}
+\index{log\_output@{log\_output}!logger.c@{logger.c}}
+\doxysubsubsection{\texorpdfstring{log\_output()}{log\_output()}}
+{\footnotesize\ttfamily \label{logger_8c_abdf99acf6ecc4a6fd2277e74ed3fd8c6} 
+void log\+\_\+output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{logger_8h_ac91d55174d383848b976a34de843748e}{log\+\_\+level}}}]{level}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d22/logger_8c_abdf99acf6ecc4a6fd2277e74ed3fd8c6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{d1/d22/logger_8c_abdf99acf6ecc4a6fd2277e74ed3fd8c6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logger_8c_a89ca11b6142a42bebac099dfacf57f59}\index{logger.c@{logger.c}!report\_assertion\_failure@{report\_assertion\_failure}}
+\index{report\_assertion\_failure@{report\_assertion\_failure}!logger.c@{logger.c}}
+\doxysubsubsection{\texorpdfstring{report\_assertion\_failure()}{report\_assertion\_failure()}}
+{\footnotesize\ttfamily \label{logger_8c_a89ca11b6142a42bebac099dfacf57f59} 
+void report\+\_\+assertion\+\_\+failure (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{expression}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{message}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{file}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{line}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d22/logger_8c_a89ca11b6142a42bebac099dfacf57f59_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{logger_8c_aa19340b3c2c2f8f90a5c40d08b7919c7}\index{logger.c@{logger.c}!shutdown\_logging@{shutdown\_logging}}
+\index{shutdown\_logging@{shutdown\_logging}!logger.c@{logger.c}}
+\doxysubsubsection{\texorpdfstring{shutdown\_logging()}{shutdown\_logging()}}
+{\footnotesize\ttfamily \label{logger_8c_aa19340b3c2c2f8f90a5c40d08b7919c7} 
+void shutdown\+\_\+logging (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{d1/d22/logger_8c_aa19340b3c2c2f8f90a5c40d08b7919c7_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-var-members}
+\Hypertarget{logger_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{logger_8c_a78fb062cf70ff40ec53ede87b44ebb48}\index{logger.c@{logger.c}!state\_ptr@{state\_ptr}}
+\index{state\_ptr@{state\_ptr}!logger.c@{logger.c}}
+\doxysubsubsection{\texorpdfstring{state\_ptr}{state\_ptr}}
+{\footnotesize\ttfamily \label{logger_8c_a78fb062cf70ff40ec53ede87b44ebb48} 
+\mbox{\hyperlink{structlogger__system__state}{logger\+\_\+system\+\_\+state}}\texorpdfstring{$\ast$}{*} state\+\_\+ptr\hspace{0.3cm}{\ttfamily [static]}}
+

@@ -1,0 +1,601 @@
+\doxysection{engine/src/core/kstring.c File Reference}
+\hypertarget{kstring_8c}{}\label{kstring_8c}\index{engine/src/core/kstring.c@{engine/src/core/kstring.c}}
+{\ttfamily \#include "{}core/kstring.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$strings.\+h$>$}\newline
+Include dependency graph for kstring.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/ddc/kstring_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{kstring_8c_a3ac8f7f54a3429135da71637d268e6c9}{string\+\_\+length}} (const char \texorpdfstring{$\ast$}{*}str)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kstring_8c_ae4d2c3111ca8e06cce31d32a7928f320}{string\+\_\+duplicate}} (const char \texorpdfstring{$\ast$}{*}str)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_a4088fb073177638c470fee72f8f2180a}{strings\+\_\+equal}} (const char \texorpdfstring{$\ast$}{*}str0, const char \texorpdfstring{$\ast$}{*}str1)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_a148b565b9af89efb432a895868c1e4d1}{strings\+\_\+equali}} (const char \texorpdfstring{$\ast$}{*}str0, const char \texorpdfstring{$\ast$}{*}str1)
+\item 
+\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \mbox{\hyperlink{kstring_8c_a86babd936b82eaf4229e77406968f74d}{string\+\_\+format}} (char \texorpdfstring{$\ast$}{*}dest, const char \texorpdfstring{$\ast$}{*}format,...)
+\item 
+\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \mbox{\hyperlink{kstring_8c_a7d32c70521c217a716c586f145dbb4d9}{string\+\_\+format\+\_\+v}} (char \texorpdfstring{$\ast$}{*}dest, const char \texorpdfstring{$\ast$}{*}format, va\+\_\+list arg\+\_\+ptr)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kstring_8c_ab683baecc9c29380d81c9b0fafe27738}{string\+\_\+empty}} (char \texorpdfstring{$\ast$}{*}str)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kstring_8c_af43aa079f60bc11dd7da697df920fece}{string\+\_\+copy}} (char \texorpdfstring{$\ast$}{*}dest, const char \texorpdfstring{$\ast$}{*}source)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kstring_8c_a9e48021ce5b39920715bfaa5d92613bc}{string\+\_\+ncopy}} (char \texorpdfstring{$\ast$}{*}dest, const char \texorpdfstring{$\ast$}{*}source, \mbox{\hyperlink{defines_8h_ada59a0de67c44384c6faa924ca63c2aa}{i64}} length)
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kstring_8c_a4dd30c30bb3f8bd5e2a051c22b04317e}{string\+\_\+trim}} (char \texorpdfstring{$\ast$}{*}str)
+\item 
+void \mbox{\hyperlink{kstring_8c_a97b33c831523752f0adff22f80beaec5}{string\+\_\+mid}} (char \texorpdfstring{$\ast$}{*}dest, const char \texorpdfstring{$\ast$}{*}source, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} start, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} length)
+\item 
+\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \mbox{\hyperlink{kstring_8c_af929be4747d22249aa7adc3379fd583a}{string\+\_\+index\+\_\+of\+\_\+char}} (char \texorpdfstring{$\ast$}{*}str, char c)
+\begin{DoxyCompactList}\small\item\em Returns the index of the first occurance of c; otherwise returns -\/1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_ae69fd9f5a95697acc5db20176c382b04}{string\+\_\+to\+\_\+vec4}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \texorpdfstring{$\ast$}{*}out\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Attemps to parse a vector from the provided string. Zeros out memory before attempting to parse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_a3439497b567534f888a0a312d9218f1c}{string\+\_\+to\+\_\+vec3}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \texorpdfstring{$\ast$}{*}out\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Attemps to parse a vector from the provided string. Zeros out memory before attempting to parse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_ac10091f1e64f81edcfb84ecb76ac9927}{string\+\_\+to\+\_\+vec2}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \texorpdfstring{$\ast$}{*}out\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Attemps to parse a vector from the provided string. Zeros out memory before attempting to parse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_aa415b4bf6b684a0e26fc83e80e9a11e1}{string\+\_\+to\+\_\+f32}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \texorpdfstring{$\ast$}{*}out\+\_\+float)
+\begin{DoxyCompactList}\small\item\em Attempts to parse a 32-\/bit floating point number from a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_a75741d37efcde799a7871c4910fc8401}{string\+\_\+to\+\_\+f64}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}} \texorpdfstring{$\ast$}{*}out\+\_\+float)
+\begin{DoxyCompactList}\small\item\em Attempts to parse a 64-\/bit floating point number from a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_a7f4cf6b1b6e792762d1b160b2f1377d8}{string\+\_\+to\+\_\+i8}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729}{i8}} \texorpdfstring{$\ast$}{*}out\+\_\+int)
+\begin{DoxyCompactList}\small\item\em Attempts to parse a 8-\/bit signed integer from a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_aed11c79322f573441b58b63ec6304a52}{string\+\_\+to\+\_\+i16}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}} \texorpdfstring{$\ast$}{*}out\+\_\+int)
+\begin{DoxyCompactList}\small\item\em Attempts to parse a 16-\/bit signed integer from a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_a73b98c26820a5974156f9f3f70bc365f}{string\+\_\+to\+\_\+i32}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \texorpdfstring{$\ast$}{*}out\+\_\+int)
+\begin{DoxyCompactList}\small\item\em Attempts to parse a 32-\/bit signed integer from a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_a16ad07869e6f9ca652929a7506a3672b}{string\+\_\+to\+\_\+i64}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{defines_8h_ada59a0de67c44384c6faa924ca63c2aa}{i64}} \texorpdfstring{$\ast$}{*}out\+\_\+int)
+\begin{DoxyCompactList}\small\item\em Attempts to parse a 64-\/bit signed integer from a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_a1efc98dc4e5f97aa315c2e462c7006c6}{string\+\_\+to\+\_\+u8}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \texorpdfstring{$\ast$}{*}out\+\_\+int)
+\begin{DoxyCompactList}\small\item\em Attempts to parse a 8-\/bit unsigned integer from a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_aaf071fc11cd5fbcc0fb17ca1ddf19899}{string\+\_\+to\+\_\+u16}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \texorpdfstring{$\ast$}{*}out\+\_\+int)
+\begin{DoxyCompactList}\small\item\em Attempts to parse a 16-\/bit unsigned integer from a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_ac3e10187a9709e4a0f02f8fc2ac85334}{string\+\_\+to\+\_\+u32}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}out\+\_\+int)
+\begin{DoxyCompactList}\small\item\em Attempts to parse a 32-\/bit unsigned integer from a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_a38118156c23f81a3ec22e92c0aafc705}{string\+\_\+to\+\_\+u64}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}out\+\_\+int)
+\begin{DoxyCompactList}\small\item\em Attempts to parse a 64-\/bit unsigned integer from a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8c_a1e6bde61bb46f6f8092ed7b71633aad7}{string\+\_\+to\+\_\+b8}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \texorpdfstring{$\ast$}{*}out\+\_\+bool)
+\begin{DoxyCompactList}\small\item\em Attempts to parse a boolean from a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{kstring_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{kstring_8c_af43aa079f60bc11dd7da697df920fece}\index{kstring.c@{kstring.c}!string\_copy@{string\_copy}}
+\index{string\_copy@{string\_copy}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_copy()}{string\_copy()}}
+{\footnotesize\ttfamily \label{kstring_8c_af43aa079f60bc11dd7da697df920fece} 
+char \texorpdfstring{$\ast$}{*} string\+\_\+copy (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{source}{}\end{DoxyParamCaption})}
+
+\Hypertarget{kstring_8c_ae4d2c3111ca8e06cce31d32a7928f320}\index{kstring.c@{kstring.c}!string\_duplicate@{string\_duplicate}}
+\index{string\_duplicate@{string\_duplicate}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_duplicate()}{string\_duplicate()}}
+{\footnotesize\ttfamily \label{kstring_8c_ae4d2c3111ca8e06cce31d32a7928f320} 
+char \texorpdfstring{$\ast$}{*} string\+\_\+duplicate (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_ae4d2c3111ca8e06cce31d32a7928f320_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_ae4d2c3111ca8e06cce31d32a7928f320_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kstring_8c_ab683baecc9c29380d81c9b0fafe27738}\index{kstring.c@{kstring.c}!string\_empty@{string\_empty}}
+\index{string\_empty@{string\_empty}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_empty()}{string\_empty()}}
+{\footnotesize\ttfamily \label{kstring_8c_ab683baecc9c29380d81c9b0fafe27738} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} char \texorpdfstring{$\ast$}{*} string\+\_\+empty (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_ab683baecc9c29380d81c9b0fafe27738_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kstring_8c_a86babd936b82eaf4229e77406968f74d}\index{kstring.c@{kstring.c}!string\_format@{string\_format}}
+\index{string\_format@{string\_format}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_format()}{string\_format()}}
+{\footnotesize\ttfamily \label{kstring_8c_a86babd936b82eaf4229e77406968f74d} 
+\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} string\+\_\+format (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_a86babd936b82eaf4229e77406968f74d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_a86babd936b82eaf4229e77406968f74d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kstring_8c_a7d32c70521c217a716c586f145dbb4d9}\index{kstring.c@{kstring.c}!string\_format\_v@{string\_format\_v}}
+\index{string\_format\_v@{string\_format\_v}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_format\_v()}{string\_format\_v()}}
+{\footnotesize\ttfamily \label{kstring_8c_a7d32c70521c217a716c586f145dbb4d9} 
+\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} string\+\_\+format\+\_\+v (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{format}{, }\item[{va\+\_\+list}]{arg\+\_\+ptr}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_a7d32c70521c217a716c586f145dbb4d9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_a7d32c70521c217a716c586f145dbb4d9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kstring_8c_af929be4747d22249aa7adc3379fd583a}\index{kstring.c@{kstring.c}!string\_index\_of\_char@{string\_index\_of\_char}}
+\index{string\_index\_of\_char@{string\_index\_of\_char}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_index\_of\_char()}{string\_index\_of\_char()}}
+{\footnotesize\ttfamily \label{kstring_8c_af929be4747d22249aa7adc3379fd583a} 
+\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} string\+\_\+index\+\_\+of\+\_\+char (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{char}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Returns the index of the first occurance of c; otherwise returns -\/1. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{d6/d19/kstring_8c_af929be4747d22249aa7adc3379fd583a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_af929be4747d22249aa7adc3379fd583a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kstring_8c_a3ac8f7f54a3429135da71637d268e6c9}\index{kstring.c@{kstring.c}!string\_length@{string\_length}}
+\index{string\_length@{string\_length}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_length()}{string\_length()}}
+{\footnotesize\ttfamily \label{kstring_8c_a3ac8f7f54a3429135da71637d268e6c9} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} string\+\_\+length (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_a3ac8f7f54a3429135da71637d268e6c9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kstring_8c_a97b33c831523752f0adff22f80beaec5}\index{kstring.c@{kstring.c}!string\_mid@{string\_mid}}
+\index{string\_mid@{string\_mid}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_mid()}{string\_mid()}}
+{\footnotesize\ttfamily \label{kstring_8c_a97b33c831523752f0adff22f80beaec5} 
+void string\+\_\+mid (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{source}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{start}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{length}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{d6/d19/kstring_8c_a97b33c831523752f0adff22f80beaec5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_a97b33c831523752f0adff22f80beaec5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kstring_8c_a9e48021ce5b39920715bfaa5d92613bc}\index{kstring.c@{kstring.c}!string\_ncopy@{string\_ncopy}}
+\index{string\_ncopy@{string\_ncopy}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_ncopy()}{string\_ncopy()}}
+{\footnotesize\ttfamily \label{kstring_8c_a9e48021ce5b39920715bfaa5d92613bc} 
+char \texorpdfstring{$\ast$}{*} string\+\_\+ncopy (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{source}{, }\item[{\mbox{\hyperlink{defines_8h_ada59a0de67c44384c6faa924ca63c2aa}{i64}}}]{length}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_a9e48021ce5b39920715bfaa5d92613bc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kstring_8c_a1e6bde61bb46f6f8092ed7b71633aad7}\index{kstring.c@{kstring.c}!string\_to\_b8@{string\_to\_b8}}
+\index{string\_to\_b8@{string\_to\_b8}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_b8()}{string\_to\_b8()}}
+{\footnotesize\ttfamily \label{kstring_8c_a1e6bde61bb46f6f8092ed7b71633aad7} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} string\+\_\+to\+\_\+b8 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+bool}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to parse a boolean from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to parse. "{}true"{} or "{}1"{} is considered true; otherwise is considered false. \\
+\hline
+{\em out\+\_\+bool} & A pointer to the bool to write to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsed successfully; otherwise false. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{d6/d19/kstring_8c_a1e6bde61bb46f6f8092ed7b71633aad7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kstring_8c_aa415b4bf6b684a0e26fc83e80e9a11e1}\index{kstring.c@{kstring.c}!string\_to\_f32@{string\_to\_f32}}
+\index{string\_to\_f32@{string\_to\_f32}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_f32()}{string\_to\_f32()}}
+{\footnotesize\ttfamily \label{kstring_8c_aa415b4bf6b684a0e26fc83e80e9a11e1} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} string\+\_\+to\+\_\+f32 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+float}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to parse a 32-\/bit floating point number from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to parse. Should {\itshape NOT} be postfixed with \textquotesingle{}f\textquotesingle{}. \\
+\hline
+{\em out\+\_\+float} & A pointer to the float to write to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsed successfully; otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{kstring_8c_a75741d37efcde799a7871c4910fc8401}\index{kstring.c@{kstring.c}!string\_to\_f64@{string\_to\_f64}}
+\index{string\_to\_f64@{string\_to\_f64}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_f64()}{string\_to\_f64()}}
+{\footnotesize\ttfamily \label{kstring_8c_a75741d37efcde799a7871c4910fc8401} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} string\+\_\+to\+\_\+f64 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{\mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+float}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to parse a 64-\/bit floating point number from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to parse. \\
+\hline
+{\em out\+\_\+float} & A pointer to the float to write to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsed successfully; otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{kstring_8c_aed11c79322f573441b58b63ec6304a52}\index{kstring.c@{kstring.c}!string\_to\_i16@{string\_to\_i16}}
+\index{string\_to\_i16@{string\_to\_i16}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_i16()}{string\_to\_i16()}}
+{\footnotesize\ttfamily \label{kstring_8c_aed11c79322f573441b58b63ec6304a52} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} string\+\_\+to\+\_\+i16 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{\mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+int}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to parse a 16-\/bit signed integer from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to parse. \\
+\hline
+{\em out\+\_\+float} & A pointer to the int to write to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsed successfully; otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{kstring_8c_a73b98c26820a5974156f9f3f70bc365f}\index{kstring.c@{kstring.c}!string\_to\_i32@{string\_to\_i32}}
+\index{string\_to\_i32@{string\_to\_i32}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_i32()}{string\_to\_i32()}}
+{\footnotesize\ttfamily \label{kstring_8c_a73b98c26820a5974156f9f3f70bc365f} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} string\+\_\+to\+\_\+i32 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+int}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to parse a 32-\/bit signed integer from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to parse. \\
+\hline
+{\em out\+\_\+float} & A pointer to the int to write to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsed successfully; otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{kstring_8c_a16ad07869e6f9ca652929a7506a3672b}\index{kstring.c@{kstring.c}!string\_to\_i64@{string\_to\_i64}}
+\index{string\_to\_i64@{string\_to\_i64}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_i64()}{string\_to\_i64()}}
+{\footnotesize\ttfamily \label{kstring_8c_a16ad07869e6f9ca652929a7506a3672b} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} string\+\_\+to\+\_\+i64 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{\mbox{\hyperlink{defines_8h_ada59a0de67c44384c6faa924ca63c2aa}{i64}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+int}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to parse a 64-\/bit signed integer from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to parse. \\
+\hline
+{\em out\+\_\+float} & A pointer to the int to write to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsed successfully; otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{kstring_8c_a7f4cf6b1b6e792762d1b160b2f1377d8}\index{kstring.c@{kstring.c}!string\_to\_i8@{string\_to\_i8}}
+\index{string\_to\_i8@{string\_to\_i8}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_i8()}{string\_to\_i8()}}
+{\footnotesize\ttfamily \label{kstring_8c_a7f4cf6b1b6e792762d1b160b2f1377d8} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} string\+\_\+to\+\_\+i8 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{\mbox{\hyperlink{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729}{i8}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+int}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to parse a 8-\/bit signed integer from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to parse. \\
+\hline
+{\em out\+\_\+float} & A pointer to the int to write to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsed successfully; otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{kstring_8c_aaf071fc11cd5fbcc0fb17ca1ddf19899}\index{kstring.c@{kstring.c}!string\_to\_u16@{string\_to\_u16}}
+\index{string\_to\_u16@{string\_to\_u16}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_u16()}{string\_to\_u16()}}
+{\footnotesize\ttfamily \label{kstring_8c_aaf071fc11cd5fbcc0fb17ca1ddf19899} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} string\+\_\+to\+\_\+u16 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+int}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to parse a 16-\/bit unsigned integer from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to parse. \\
+\hline
+{\em out\+\_\+float} & A pointer to the int to write to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsed successfully; otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{kstring_8c_ac3e10187a9709e4a0f02f8fc2ac85334}\index{kstring.c@{kstring.c}!string\_to\_u32@{string\_to\_u32}}
+\index{string\_to\_u32@{string\_to\_u32}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_u32()}{string\_to\_u32()}}
+{\footnotesize\ttfamily \label{kstring_8c_ac3e10187a9709e4a0f02f8fc2ac85334} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} string\+\_\+to\+\_\+u32 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+int}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to parse a 32-\/bit unsigned integer from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to parse. \\
+\hline
+{\em out\+\_\+float} & A pointer to the int to write to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsed successfully; otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{kstring_8c_a38118156c23f81a3ec22e92c0aafc705}\index{kstring.c@{kstring.c}!string\_to\_u64@{string\_to\_u64}}
+\index{string\_to\_u64@{string\_to\_u64}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_u64()}{string\_to\_u64()}}
+{\footnotesize\ttfamily \label{kstring_8c_a38118156c23f81a3ec22e92c0aafc705} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} string\+\_\+to\+\_\+u64 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+int}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to parse a 64-\/bit unsigned integer from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to parse. \\
+\hline
+{\em out\+\_\+float} & A pointer to the int to write to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsed successfully; otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{kstring_8c_a1efc98dc4e5f97aa315c2e462c7006c6}\index{kstring.c@{kstring.c}!string\_to\_u8@{string\_to\_u8}}
+\index{string\_to\_u8@{string\_to\_u8}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_u8()}{string\_to\_u8()}}
+{\footnotesize\ttfamily \label{kstring_8c_a1efc98dc4e5f97aa315c2e462c7006c6} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} string\+\_\+to\+\_\+u8 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+int}{}\end{DoxyParamCaption})}
+
+
+
+Attempts to parse a 8-\/bit unsigned integer from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to parse. \\
+\hline
+{\em out\+\_\+float} & A pointer to the int to write to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsed successfully; otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{kstring_8c_ac10091f1e64f81edcfb84ecb76ac9927}\index{kstring.c@{kstring.c}!string\_to\_vec2@{string\_to\_vec2}}
+\index{string\_to\_vec2@{string\_to\_vec2}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_vec2()}{string\_to\_vec2()}}
+{\footnotesize\ttfamily \label{kstring_8c_ac10091f1e64f81edcfb84ecb76ac9927} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} string\+\_\+to\+\_\+vec2 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{\mbox{\hyperlink{math__types_8h_a4403515b5f13a3b84dafb1667a1f9d88}{vec2}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+vec}{}\end{DoxyParamCaption})}
+
+
+
+Attemps to parse a vector from the provided string. Zeros out memory before attempting to parse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to parse, should be space-\/delimited. (ie. "{}1.\+0 2.\+0"{}) \\
+\hline
+{\em out\+\_\+vec} & A pointer to the vector to write to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsed successfully; otherwise false. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_ac10091f1e64f81edcfb84ecb76ac9927_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kstring_8c_a3439497b567534f888a0a312d9218f1c}\index{kstring.c@{kstring.c}!string\_to\_vec3@{string\_to\_vec3}}
+\index{string\_to\_vec3@{string\_to\_vec3}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_vec3()}{string\_to\_vec3()}}
+{\footnotesize\ttfamily \label{kstring_8c_a3439497b567534f888a0a312d9218f1c} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} string\+\_\+to\+\_\+vec3 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+vec}{}\end{DoxyParamCaption})}
+
+
+
+Attemps to parse a vector from the provided string. Zeros out memory before attempting to parse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to parse, should be space-\/delimited. (ie. "{}1.\+0 2.\+0 3.\+0"{}) \\
+\hline
+{\em out\+\_\+vec} & A pointer to the vector to write to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsed successfully; otherwise false. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_a3439497b567534f888a0a312d9218f1c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kstring_8c_ae69fd9f5a95697acc5db20176c382b04}\index{kstring.c@{kstring.c}!string\_to\_vec4@{string\_to\_vec4}}
+\index{string\_to\_vec4@{string\_to\_vec4}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_to\_vec4()}{string\_to\_vec4()}}
+{\footnotesize\ttfamily \label{kstring_8c_ae69fd9f5a95697acc5db20176c382b04} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} string\+\_\+to\+\_\+vec4 (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+vec}{}\end{DoxyParamCaption})}
+
+
+
+Attemps to parse a vector from the provided string. Zeros out memory before attempting to parse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to parse, should be space-\/delimited. (ie. "{}1.\+0 2.\+0 3.\+0 4.\+0"{}) \\
+\hline
+{\em out\+\_\+vec} & A pointer to the vector to write to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if parsed successfully; otherwise false. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_ae69fd9f5a95697acc5db20176c382b04_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_ae69fd9f5a95697acc5db20176c382b04_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kstring_8c_a4dd30c30bb3f8bd5e2a051c22b04317e}\index{kstring.c@{kstring.c}!string\_trim@{string\_trim}}
+\index{string\_trim@{string\_trim}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{string\_trim()}{string\_trim()}}
+{\footnotesize\ttfamily \label{kstring_8c_a4dd30c30bb3f8bd5e2a051c22b04317e} 
+char \texorpdfstring{$\ast$}{*} string\+\_\+trim (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_a4dd30c30bb3f8bd5e2a051c22b04317e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kstring_8c_a4088fb073177638c470fee72f8f2180a}\index{kstring.c@{kstring.c}!strings\_equal@{strings\_equal}}
+\index{strings\_equal@{strings\_equal}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{strings\_equal()}{strings\_equal()}}
+{\footnotesize\ttfamily \label{kstring_8c_a4088fb073177638c470fee72f8f2180a} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} strings\+\_\+equal (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str0}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{str1}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_a4088fb073177638c470fee72f8f2180a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kstring_8c_a148b565b9af89efb432a895868c1e4d1}\index{kstring.c@{kstring.c}!strings\_equali@{strings\_equali}}
+\index{strings\_equali@{strings\_equali}!kstring.c@{kstring.c}}
+\doxysubsubsection{\texorpdfstring{strings\_equali()}{strings\_equali()}}
+{\footnotesize\ttfamily \label{kstring_8c_a148b565b9af89efb432a895868c1e4d1} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} strings\+\_\+equali (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str0}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{str1}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d19/kstring_8c_a148b565b9af89efb432a895868c1e4d1_icgraph}
+\end{center}
+\end{figure}

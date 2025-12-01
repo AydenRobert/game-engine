@@ -1,0 +1,17 @@
+<map id="quat_slerp" name="quat_slerp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,109,95,137"/>
+<area shape="rect" id="Node000002" href="$df/dc5/kmath_8c.html#a1e60b4d5894e0d3d0d5146f3fc34f74c" title=" " alt="" coords="175,5,233,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,107,97,76,141,44,162,34,158,38,144,48,101,80,67,111"/>
+<area shape="rect" id="Node000003" href="$df/dc5/kmath_8c.html#a8cf427c73ea32b031ff5a5143d12c2f6" title=" " alt="" coords="178,57,230,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="92,106,165,82,162,87,95,111"/>
+<area shape="rect" id="Node000004" href="$df/dc5/kmath_8c.html#a4a89f4dff6daae5dd77b89ba6a3ecea2" title=" " alt="" coords="180,109,228,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="94,121,166,121,162,125,96,126"/>
+<area shape="rect" id="Node000005" href="$dc/dd0/kmath_8h.html#a8a93afbc27ca642569857bd4a766f27b" title=" " alt="" coords="165,161,243,189"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="93,135,152,156,148,158,93,140"/>
+<area shape="rect" id="Node000006" href="$dc/dd0/kmath_8h.html#a80f41015fc07b514f4fedc2d76157e11" title=" " alt="" coords="143,213,265,241"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="66,135,101,166,144,198,155,206,149,206,141,203,97,170,65,140"/>
+<area shape="rect" id="Node000007" href="$dc/dd0/kmath_8h.html#a988ae268cd1fcd9e3cf6f37425e396ae" title=" " alt="" coords="313,213,416,241"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="265,225,300,227,295,227,265,230"/>
+<area shape="rect" id="Node000008" href="$df/dc5/kmath_8c.html#a44537c51868208d3bcfec4fe46db9bf4" title=" " alt="" coords="464,213,519,241"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="417,225,451,227,446,227,417,230"/>
+</map>

@@ -1,0 +1,35 @@
+<map id="engine/src/systems/resource_system.c" name="engine/src/systems/resource_system.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="696,5,844,50"/>
+<area shape="rect" id="Node000002" href="$db/da6/resource__system_8h.html" title=" " alt="" coords="496,191,700,218"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="790,48,807,70,819,94,823,120,815,144,796,159,768,171,698,190,696,185,767,166,794,154,810,141,818,120,814,96,802,73,789,53"/>
+<area shape="rect" id="Node000003" href="$de/d9c/resource__types_8h.html" title=" " alt="" coords="710,266,854,311"/>
+<area shape="poly" id="edge12_Node000001_Node000003" title=" " alt="" coords="799,48,821,70,838,97,843,118,845,139,839,181,825,221,807,255,803,251,820,219,834,180,840,139,838,119,833,99,817,73,798,53"/>
+<area shape="rect" id="Node000007" href="$d7/d63/kstring_8h.html" title=" " alt="" coords="883,275,993,302"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="805,48,834,70,860,96,886,138,907,182,933,261,928,259,902,184,882,140,856,100,831,74,805,53"/>
+<area shape="rect" id="Node000009" href="$d1/d8c/logger_8h.html" title=" " alt="" coords="980,191,1085,218"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="844,42,903,64,933,78,959,96,979,114,996,135,1022,178,1017,176,992,138,975,118,956,100,930,83,901,68,844,48"/>
+<area shape="rect" id="Node000010" href="$d6/d81/text__loader_8h.html" title=" " alt="" coords="5,98,172,143"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="694,37,472,61,188,100,186,95,472,56,698,34"/>
+<area shape="rect" id="Node000011" href="$dd/df7/binary__loader_8h.html" title=" " alt="" coords="195,98,376,143"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="694,44,393,100,391,95,698,40"/>
+<area shape="rect" id="Node000012" href="$d6/d08/image__loader_8h.html" title=" " alt="" coords="400,98,582,143"/>
+<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="701,52,573,95,571,90,705,49"/>
+<area shape="rect" id="Node000013" href="$d9/db0/material__loader_8h.html" title=" " alt="" coords="606,98,801,143"/>
+<area shape="poly" id="edge19_Node000001_Node000013" title=" " alt="" coords="756,49,730,88,726,84,752,52"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="628,216,722,259,716,260,627,222"/>
+<area shape="rect" id="Node000004" href="$d4/d7e/math__types_8h.html" title=" " alt="" coords="708,359,856,387"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="784,309,784,345,780,342,780,313"/>
+<area shape="rect" id="Node000005" href="$d8/db0/defines_8h.html" title=" " alt="" coords="943,435,1023,462"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="818,385,936,429,930,429,817,390"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="739,435,824,462"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="784,385,784,421,780,417,780,389"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="915,302,821,354,819,349,910,304"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="943,301,960,358,977,421,973,418,955,360,940,305"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="880,359,945,387"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="936,301,923,346,919,342,932,305"/>
+<area shape="poly" id="edge11_Node000009_Node000005" title=" " alt="" coords="1032,217,991,421,987,417,1028,220"/>
+<area shape="poly" id="edge14_Node000010_Node000002" title=" " alt="" coords="171,138,184,140,338,166,483,187,478,190,338,171,183,145,173,143"/>
+<area shape="poly" id="edge16_Node000011_Node000002" title=" " alt="" coords="369,141,535,185,531,187,369,146"/>
+<area shape="poly" id="edge18_Node000012_Node000002" title=" " alt="" coords="520,140,571,181,566,181,519,146"/>
+<area shape="poly" id="edge20_Node000013_Node000002" title=" " alt="" coords="678,142,628,183,625,179,673,144"/>
+</map>

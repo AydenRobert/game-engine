@@ -1,0 +1,15 @@
+<map id="game_initialize" name="game_initialize">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,57,127,85"/>
+<area shape="rect" id="Node000002" href="$dc/dd0/kmath_8h.html#a02adc5ee631689aa95583db1b76a3f56" title=" " alt="" coords="186,5,296,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,54,180,36,175,39,116,59"/>
+<area shape="rect" id="Node000003" href="$dc/dd0/kmath_8h.html#a209b073522143126e4b91d7b524b54f8" title=" " alt="" coords="175,57,307,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,69,162,70,157,72,128,74"/>
+<area shape="rect" id="Node000007" href="$dc/dd0/kmath_8h.html#a396247a1d1147edbade06360f4559ac9" title=" " alt="" coords="197,109,284,137"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="116,83,185,105,180,107,115,88"/>
+<area shape="rect" id="Node000004" href="$dc/dd0/kmath_8h.html#a2675d196b9d5b9b2c0b72c5f0c2fdf5c" title=" " alt="" coords="355,57,467,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="307,69,342,71,337,71,308,74"/>
+<area shape="rect" id="Node000005" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="515,57,635,85"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="468,69,502,71,497,71,468,74"/>
+<area shape="rect" id="Node000006" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="683,57,857,85"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="635,69,670,71,665,71,635,74"/>
+</map>

@@ -1,0 +1,74 @@
+\doxysection{darray.\+h}
+\hypertarget{darray_8h_source}{}\label{darray_8h_source}\index{engine/src/containers/darray.h@{engine/src/containers/darray.h}}
+\mbox{\hyperlink{darray_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Memory\ Layout}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ u64\ capacity}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ u64\ length}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ u64\ stride}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ void\ *elements}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{enum}\ \{\ \mbox{\hyperlink{darray_8h_a386695e4f47fc78a4460a785aac8a5d0af47ac19f1dce8bc23a8db7789abdb3aa}{DARRAY\_CAPACITY}},\ \mbox{\hyperlink{darray_8h_a386695e4f47fc78a4460a785aac8a5d0a613d770c4de6f9c416cda32de2c1dbb9}{DARRAY\_LENGTH}},\ \mbox{\hyperlink{darray_8h_a386695e4f47fc78a4460a785aac8a5d0a22984e01177b1eb2695a4850727db127}{DARRAY\_STRIDE}},\ \mbox{\hyperlink{darray_8h_a386695e4f47fc78a4460a785aac8a5d0ae02a4792fc8b8805f66c1cc56a29625c}{DARRAY\_FIELD\_LENGTH}}\ \};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{darray_8h_a2a31fc1b919b7043ab60c5a5dfd799f2}{\_darray\_create}}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ length,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ stride);}
+\DoxyCodeLine{00016\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{darray_8h_a6b17a4fb11bc83a4441ad6061513b3b6}{\_darray\_destroy}}(\textcolor{keywordtype}{void}\ *array);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{darray_8h_a0c567bc6af05cb5a437059a54e575217}{\_darray\_field\_get}}(\textcolor{keywordtype}{void}\ *array,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ field);}
+\DoxyCodeLine{00019\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{darray_8h_a922890e0149ea34cbf209d48dca46648}{\_darray\_field\_set}}(\textcolor{keywordtype}{void}\ *array,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ field,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ value);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{darray_8h_abfacc09053f33a2dc045a2d6902c86b4}{\_darray\_resize}}(\textcolor{keywordtype}{void}\ *array);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{darray_8h_a39a4f08504e1fbf09955063acd1a25cc}{\_darray\_push}}(\textcolor{keywordtype}{void}\ *array,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *value\_ptr);}
+\DoxyCodeLine{00024\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{darray_8h_abab8c9be480d4034ee3024010bf2a3e8}{\_darray\_pop}}(\textcolor{keywordtype}{void}\ *array,\ \textcolor{keywordtype}{void}\ *dest);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{darray_8h_adfea4ba2d8630ce80abc78813f3ed39a}{\_darray\_pop\_at}}(\textcolor{keywordtype}{void}\ *array,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ index,\ \textcolor{keywordtype}{void}\ *dest);}
+\DoxyCodeLine{00027\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{darray_8h_ac0e818c822ca83511597a141efcf5bdb}{\_darray\_insert\_at}}(\textcolor{keywordtype}{void}\ *array,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ index,\ \textcolor{keywordtype}{void}\ *value\_ptr);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{darray_8h_ab5886c4ddfa061b472e545e897b2781c}{\_darray\_reserve\_on}}(\textcolor{keywordtype}{void}\ *array,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ count\_to\_add);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ DARRAY\_DEFAULT\_CAPACITY\ 1}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ DARRAY\_RESIZE\_FACTOR\ 2}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ darray\_create(type)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\ \ \ \ \_darray\_create(DARRAY\_DEFAULT\_CAPACITY,\ sizeof(type))}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ darray\_reserve(type,\ capacity)\ \_darray\_create(capacity,\ sizeof(type))}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ darray\_destroy(array)\ \_darray\_destroy(array)}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ darray\_push(array,\ value)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ typeof(value)\ temp\ =\ value;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ array\ =\ \_darray\_push(array,\ \&temp);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ darray\_pop(array,\ value\_ptr)\ \_darray\_pop(array,\ value\_ptr)}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ darray\_insert\_at(array,\ index,\ value)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ typeof(value)\ temp\ =\ value;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ array\ =\ \_darray\_insert\_at(array,\ index,\ \&temp);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ darray\_pop\_at(array,\ index,\ value\_ptr)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\ \ \ \ \_darray\_pop\_at(array,\ index,\ value\_ptr)}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ darray\_clear(array)\ \_darray\_field\_set(array,\ DARRAY\_LENGTH,\ 0)}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ darray\_capacity(array)\ \_darray\_field\_get(array,\ DARRAY\_CAPACITY)}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ darray\_length(array)\ \_darray\_field\_get(array,\ DARRAY\_LENGTH)}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ darray\_stride(array)\ \_darray\_field\_get(array,\ DARRAY\_STRIDE)}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ darray\_length\_set(array,\ value)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\ \ \ \ \_darray\_field\_set(array,\ DARRAY\_LENGTH,\ value)}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ darray\_reserve\_on(array,\ count\_to\_add)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\ \ \ \ array\ =\ \_darray\_reserve\_on(array,\ count\_to\_add);}}
+
+\end{DoxyCode}

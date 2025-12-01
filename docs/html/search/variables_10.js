@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['r_0',['r',['../db/d7b/unionvec2__u.html#a5e055d1f80e2b2f5d434ea6dadd3fdb1',1,'vec2_u::r'],['../d5/df1/unionvec3__u.html#a70230ce78edfd0ab4b6074dc58ae388d',1,'vec3_u::r'],['../df/dbe/unionvec4__u.html#a2af837bd6477ce84909765a1c1589330',1,'vec4_u::r']]],
+  ['rand_5fseeded_1',['rand_seeded',['../df/dc5/kmath_8c.html#a5437ccb0b0fb715b4ffffb0ee59babcb',1,'kmath.c']]],
+  ['read_2',['read',['../da/d02/structstbi__io__callbacks.html#a623e46b3a2a019611601409926283a88',1,'stbi_io_callbacks']]],
+  ['recreating_5fswapchain_3',['recreating_swapchain',['../d9/dc9/structvulkan__context.html#ae2293aefe9b568ce7222268489f041b8',1,'vulkan_context']]],
+  ['reference_5fcount_4',['reference_count',['../da/d73/structgeometry__reference.html#a66ce6d8adb39c54769ca3570941390c5',1,'geometry_reference::reference_count'],['../d1/d31/structmaterial__reference.html#a12d1bbf587c5ee5a81d7489c230d69fa',1,'material_reference::reference_count'],['../d2/d42/structtexture__reference.html#a2d5873d56c724c778ec3df1fe13be8da',1,'texture_reference::reference_count']]],
+  ['registered_5',['registered',['../d6/d61/structevent__system__state.html#a20a86f05bfac98ca3c7d82ab3a5d293a',1,'event_system_state']]],
+  ['registered_5fgeometries_6',['registered_geometries',['../d7/d9b/structgeometry__system__state.html#a8fc5474938dc8e6e6a247bb44726324b',1,'geometry_system_state']]],
+  ['registered_5floaders_7',['registered_loaders',['../d5/df4/structresource__system__state.html#a3b266078186b51ee5fa4cc02ddc587b2',1,'resource_system_state']]],
+  ['registered_5fmaterial_5ftable_8',['registered_material_table',['../d2/dc7/structmaterial__system__state.html#a82c1f222d2e2823c2921ae5feeddef55',1,'material_system_state']]],
+  ['registered_5fmaterials_9',['registered_materials',['../d2/dc7/structmaterial__system__state.html#a45c6dbab1f3a95fe87f3a1744fd10cae',1,'material_system_state']]],
+  ['registered_5ftexture_5ftable_10',['registered_texture_table',['../d2/df9/structtexture__system__state.html#aff3a2130097a5a4f7dc7b5e37b15a007',1,'texture_system_state']]],
+  ['registered_5ftextures_11',['registered_textures',['../d2/df9/structtexture__system__state.html#a9326ee4cbc1a21168ffb82171484cbfb',1,'texture_system_state']]],
+  ['render_12',['render',['../d9/db7/structgame.html#ac2c261fc48169dc53096929654c51bfe',1,'game']]],
+  ['render_5farea_13',['render_area',['../d0/d06/structvulkan__renderpass.html#a09c9be9380bb06a6d2a1d2da981c4598',1,'vulkan_renderpass']]],
+  ['render_5ffinished_5fper_5fimage_14',['render_finished_per_image',['../de/dc9/structvulkan__swapchain.html#ae3bc4c336ea7eef7dd47951d7abe7870',1,'vulkan_swapchain']]],
+  ['renderer_5fsystem_5fmemory_5frequirement_15',['renderer_system_memory_requirement',['../dc/d7e/structapplication__state.html#a00a59ff2c4530d84fcea3927994f1ee0',1,'application_state']]],
+  ['renderer_5fsystem_5fstate_16',['renderer_system_state',['../dc/d7e/structapplication__state.html#a9013e0f2cacc1dca598af239a280c24b',1,'application_state']]],
+  ['repositioned_17',['repositioned',['../de/dff/structxdg__popup__listener.html#a6e3f7f24ea625d8d11b99f4de878163b',1,'xdg_popup_listener']]],
+  ['resized_18',['resized',['../df/d02/structrenderer__backend.html#aa4d9ea4b9c236ff1ef1f9bb967deb18a',1,'renderer_backend']]],
+  ['resource_5fsystem_5fmemory_5frequirement_19',['resource_system_memory_requirement',['../dc/d7e/structapplication__state.html#a73a41404679c970a29cdd5fe48d51427',1,'application_state']]],
+  ['resource_5fsystem_5fstate_20',['resource_system_state',['../dc/d7e/structapplication__state.html#ab3a3a22ba262b2167105e327e60879dd',1,'application_state']]]
+];

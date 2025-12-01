@@ -1,0 +1,28 @@
+var darray_8h =
+[
+    [ "darray_capacity", "d1/d4e/darray_8h.html#ad9786b6f89a8a05d0edae80981539d7c", null ],
+    [ "darray_clear", "d1/d4e/darray_8h.html#ad027b54bb5ad4414cb9a739e84e7670f", null ],
+    [ "darray_create", "d1/d4e/darray_8h.html#ab9d093e09b642e0d480a7ae82bad3af5", null ],
+    [ "DARRAY_DEFAULT_CAPACITY", "d1/d4e/darray_8h.html#a9480f1a372af84bc03f4a55659188202", null ],
+    [ "darray_destroy", "d1/d4e/darray_8h.html#a276aa834ed16f81d63f16c13dfdbe67d", null ],
+    [ "darray_insert_at", "d1/d4e/darray_8h.html#a95581a1912c392d51125909802a239db", null ],
+    [ "darray_length", "d1/d4e/darray_8h.html#aa556263c163ffb9f29b40b29b7b25165", null ],
+    [ "darray_length_set", "d1/d4e/darray_8h.html#a5b702a1dc9d84a50dec3f965fbe4cc65", null ],
+    [ "darray_pop", "d1/d4e/darray_8h.html#a2b16ee33713a454fce146cc964d118c4", null ],
+    [ "darray_pop_at", "d1/d4e/darray_8h.html#a12977de60ecb8fec22dad4713e45ca27", null ],
+    [ "darray_push", "d1/d4e/darray_8h.html#a7ad89931e6589fa09b83ea99de2b32e6", null ],
+    [ "darray_reserve", "d1/d4e/darray_8h.html#a0805205fc6e4a577824396a03d82e951", null ],
+    [ "darray_reserve_on", "d1/d4e/darray_8h.html#aa68fdbbc62c9e811b9e533cef6d26d4f", null ],
+    [ "DARRAY_RESIZE_FACTOR", "d1/d4e/darray_8h.html#a95fc981d9c4e984fd55bb36a324617cc", null ],
+    [ "darray_stride", "d1/d4e/darray_8h.html#a93bfa9b817a0adc18e500581ffef8440", null ],
+    [ "_darray_create", "d1/d4e/darray_8h.html#a2a31fc1b919b7043ab60c5a5dfd799f2", null ],
+    [ "_darray_destroy", "d1/d4e/darray_8h.html#a6b17a4fb11bc83a4441ad6061513b3b6", null ],
+    [ "_darray_field_get", "d1/d4e/darray_8h.html#a0c567bc6af05cb5a437059a54e575217", null ],
+    [ "_darray_field_set", "d1/d4e/darray_8h.html#a922890e0149ea34cbf209d48dca46648", null ],
+    [ "_darray_insert_at", "d1/d4e/darray_8h.html#ac0e818c822ca83511597a141efcf5bdb", null ],
+    [ "_darray_pop", "d1/d4e/darray_8h.html#abab8c9be480d4034ee3024010bf2a3e8", null ],
+    [ "_darray_pop_at", "d1/d4e/darray_8h.html#adfea4ba2d8630ce80abc78813f3ed39a", null ],
+    [ "_darray_push", "d1/d4e/darray_8h.html#a39a4f08504e1fbf09955063acd1a25cc", null ],
+    [ "_darray_reserve_on", "d1/d4e/darray_8h.html#ab5886c4ddfa061b472e545e897b2781c", null ],
+    [ "_darray_resize", "d1/d4e/darray_8h.html#abfacc09053f33a2dc045a2d6902c86b4", null ]
+];

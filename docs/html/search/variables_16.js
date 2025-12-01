@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['x_0',['x',['../dc/d81/structmouse__state.html#a75fee6855683a29759e07dddd8abe84d',1,'mouse_state::x'],['../db/d7b/unionvec2__u.html#a8351557ed259ae82d0e97ad7f2be04c1',1,'vec2_u::x'],['../d5/df1/unionvec3__u.html#a813e68cfccc7810eb92e5237e182f05c',1,'vec3_u::x'],['../df/dbe/unionvec4__u.html#ae30e88d049711ba68bdfe005e450559d',1,'vec4_u::x']]],
+  ['x11_5fstate_1',['x11_state',['../d3/d7c/structdisplay__state.html#aa83ea3536fa941db1737c829500b9aea',1,'display_state']]],
+  ['xdg_5fpopup_5fevents_2',['xdg_popup_events',['../dc/d9b/xdg-shell-protocol_8c.html#afaf16d7a07b821dd9d76d83a28cc02e3',1,'xdg-shell-protocol.c']]],
+  ['xdg_5fpopup_5finterface_3',['xdg_popup_interface',['../db/d13/xdg-shell-client-protocol_8h.html#aa60edf2c19b40f7ba7e31b4aa1bf8d19',1,'xdg_popup_interface:&#160;xdg-shell-protocol.c'],['../dc/d9b/xdg-shell-protocol_8c.html#aa60edf2c19b40f7ba7e31b4aa1bf8d19',1,'xdg_popup_interface:&#160;xdg-shell-protocol.c']]],
+  ['xdg_5fpopup_5frequests_4',['xdg_popup_requests',['../dc/d9b/xdg-shell-protocol_8c.html#a3f4c4d0c81f6efddf1a337e488b3d999',1,'xdg-shell-protocol.c']]],
+  ['xdg_5fpositioner_5finterface_5',['xdg_positioner_interface',['../db/d13/xdg-shell-client-protocol_8h.html#a16a9be7454042fdc62e0418508a624d4',1,'xdg_positioner_interface:&#160;xdg-shell-protocol.c'],['../dc/d9b/xdg-shell-protocol_8c.html#a16a9be7454042fdc62e0418508a624d4',1,'xdg_positioner_interface:&#160;xdg-shell-protocol.c']]],
+  ['xdg_5fpositioner_5frequests_6',['xdg_positioner_requests',['../dc/d9b/xdg-shell-protocol_8c.html#a74d60c715e45804abbfb69a9e0716e23',1,'xdg-shell-protocol.c']]],
+  ['xdg_5fshell_5ftypes_7',['xdg_shell_types',['../dc/d9b/xdg-shell-protocol_8c.html#ac3d3d0075de2095881bfe2d9fd622d66',1,'xdg-shell-protocol.c']]],
+  ['xdg_5fsurface_5fevents_8',['xdg_surface_events',['../dc/d9b/xdg-shell-protocol_8c.html#a002ff434c94b3a9dd7a333d06a9df531',1,'xdg-shell-protocol.c']]],
+  ['xdg_5fsurface_5finterface_9',['xdg_surface_interface',['../db/d13/xdg-shell-client-protocol_8h.html#a5ac26be247039c7cdf4a5a26f613cfe6',1,'xdg_surface_interface:&#160;xdg-shell-protocol.c'],['../dc/d9b/xdg-shell-protocol_8c.html#a5ac26be247039c7cdf4a5a26f613cfe6',1,'xdg_surface_interface:&#160;xdg-shell-protocol.c']]],
+  ['xdg_5fsurface_5frequests_10',['xdg_surface_requests',['../dc/d9b/xdg-shell-protocol_8c.html#a822df53758e9616d29a1f8fade4108a2',1,'xdg-shell-protocol.c']]],
+  ['xdg_5ftoplevel_5fevents_11',['xdg_toplevel_events',['../dc/d9b/xdg-shell-protocol_8c.html#a438bc0a84d9f8032bc13b34feff2a3cd',1,'xdg-shell-protocol.c']]],
+  ['xdg_5ftoplevel_5finterface_12',['xdg_toplevel_interface',['../db/d13/xdg-shell-client-protocol_8h.html#a41eaf1ac12f3ef225df8b9f2f6559326',1,'xdg_toplevel_interface:&#160;xdg-shell-protocol.c'],['../dc/d9b/xdg-shell-protocol_8c.html#a41eaf1ac12f3ef225df8b9f2f6559326',1,'xdg_toplevel_interface:&#160;xdg-shell-protocol.c']]],
+  ['xdg_5ftoplevel_5frequests_13',['xdg_toplevel_requests',['../dc/d9b/xdg-shell-protocol_8c.html#ad5745b9472db2bfe53010f0a77e03e17',1,'xdg-shell-protocol.c']]],
+  ['xdg_5fwm_5fbase_5fevents_14',['xdg_wm_base_events',['../dc/d9b/xdg-shell-protocol_8c.html#a1f43f6e8f0a8519a6aeeb05080036d6d',1,'xdg-shell-protocol.c']]],
+  ['xdg_5fwm_5fbase_5finterface_15',['xdg_wm_base_interface',['../db/d13/xdg-shell-client-protocol_8h.html#a334a66fc154a4d8cb3f6ab5660a097ba',1,'xdg_wm_base_interface:&#160;xdg-shell-protocol.c'],['../dc/d9b/xdg-shell-protocol_8c.html#a23c96730741064951b7a6c714ebb9403',1,'xdg_wm_base_interface:&#160;xdg-shell-protocol.c']]],
+  ['xdg_5fwm_5fbase_5frequests_16',['xdg_wm_base_requests',['../dc/d9b/xdg-shell-protocol_8c.html#af554e1eb2989ab3a59118e4d038fceb1',1,'xdg-shell-protocol.c']]]
+];

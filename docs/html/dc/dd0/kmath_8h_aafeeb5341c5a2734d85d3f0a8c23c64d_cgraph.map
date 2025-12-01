@@ -1,0 +1,13 @@
+<map id="mat4_euler_z" name="mat4_euler_z">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,57,115,85"/>
+<area shape="rect" id="Node000002" href="$df/dc5/kmath_8c.html#a8cf427c73ea32b031ff5a5143d12c2f6" title=" " alt="" coords="193,5,244,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,54,180,30,176,34,106,59"/>
+<area shape="rect" id="Node000003" href="$df/dc5/kmath_8c.html#a4a89f4dff6daae5dd77b89ba6a3ecea2" title=" " alt="" coords="195,57,243,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="115,69,182,70,177,72,115,74"/>
+<area shape="rect" id="Node000004" href="$dc/dd0/kmath_8h.html#a2675d196b9d5b9b2c0b72c5f0c2fdf5c" title=" " alt="" coords="163,109,275,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="105,83,163,103,158,105,104,88"/>
+<area shape="rect" id="Node000005" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="323,109,442,137"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="276,121,310,123,304,123,276,126"/>
+<area shape="rect" id="Node000006" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="490,109,665,137"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="443,121,478,123,472,123,443,126"/>
+</map>

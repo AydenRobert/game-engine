@@ -1,0 +1,173 @@
+\chapter{🎮 Game Engine }
+\hypertarget{md_README}{}\label{md_README}\index{🎮 Game Engine@{🎮 Game Engine}}
+\label{md_README_autotoc_md0}%
+\Hypertarget{md_README_autotoc_md0}%
+
+
+A custom-\/built game engine written in C, originally inspired by \href{https://github.com/travisvroman/kohi}{\texttt{Travis Vroman’s {\itshape Kohi Engine}}} series. This project will eventually aim to provide a sandbox for me to experiment, nothing in particular is planned at the moment.
+
+\DoxyHorRuler{0}
+\hypertarget{md_README_autotoc_md2}{}\doxysection{\texorpdfstring{🚧 Current Status}{🚧 Current Status}}\label{md_README_autotoc_md2}
+The engine is under active development and currently implements\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Core Systems}}
+\begin{DoxyItemize}
+\item Logging, memory management, event handling, input, and general utilities
+\end{DoxyItemize}
+\item {\bfseries{Platform Layer}}
+\begin{DoxyItemize}
+\item Linux (X11 + Wayland), Win32 in-\/progress
+\end{DoxyItemize}
+\item {\bfseries{Renderer}}
+\begin{DoxyItemize}
+\item Vulkan backend and abstraction layers
+\item Command buffers, framebuffers, fences, swapchains, render passes
+\end{DoxyItemize}
+\item {\bfseries{Math Library}}
+\begin{DoxyItemize}
+\item Vectors, matrices, and math utilities
+\end{DoxyItemize}
+\item {\bfseries{Container System}}
+\begin{DoxyItemize}
+\item Dynamic arrays (with custom allocators)
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+The engine successfully builds a shared library ({\ttfamily libengine.\+so}) and a small {\bfseries{testbed}} executable for interactive experiments.
+
+\DoxyHorRuler{0}
+\hypertarget{md_README_autotoc_md4}{}\doxysection{\texorpdfstring{🗂️ Project Structure}{🗂️ Project Structure}}\label{md_README_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.}
+\DoxyCodeLine{├──\ engine/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Core\ engine\ source}
+\DoxyCodeLine{│\ \ \ ├──\ core/\ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Logging,\ memory,\ input,\ events,\ etc.}
+\DoxyCodeLine{│\ \ \ ├──\ platform/\ \ \ \ \ \ \ \ \ \#\ OS\ abstraction\ (Win32,\ Linux\ X11,\ Wayland)}
+\DoxyCodeLine{│\ \ \ ├──\ renderer/\ \ \ \ \ \ \ \ \ \#\ Renderer\ API\ +\ Vulkan\ backend}
+\DoxyCodeLine{│\ \ \ ├──\ math/\ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Math\ primitives\ (vec,\ mat,\ etc.)}
+\DoxyCodeLine{│\ \ \ ├──\ memory/\ \ \ \ \ \ \ \ \ \ \ \#\ Custom\ allocators}
+\DoxyCodeLine{│\ \ \ └──\ containers/\ \ \ \ \ \ \ \#\ Data\ structures\ (darray,\ etc.)}
+\DoxyCodeLine{│}
+\DoxyCodeLine{├──\ testbed/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Example\ client\ game/application}
+\DoxyCodeLine{│\ \ \ └──\ src/}
+\DoxyCodeLine{│\ \ \ \ \ \ \ ├──\ entry.c}
+\DoxyCodeLine{│\ \ \ \ \ \ \ ├──\ game.c}
+\DoxyCodeLine{│\ \ \ \ \ \ \ └──\ game.h}
+\DoxyCodeLine{│}
+\DoxyCodeLine{├──\ tests/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Unit\ tests\ with\ lightweight\ test\ runner}
+\DoxyCodeLine{│\ \ \ └──\ src/}
+\DoxyCodeLine{│\ \ \ \ \ \ \ ├──\ memory/}
+\DoxyCodeLine{│\ \ \ \ \ \ \ ├──\ test\_manager.c}
+\DoxyCodeLine{│\ \ \ \ \ \ \ └──\ main.c}
+\DoxyCodeLine{│}
+\DoxyCodeLine{├──\ assets/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Shaders,\ textures,\ etc.}
+\DoxyCodeLine{├──\ bin/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Compiled\ binaries\ and\ runtime\ output}
+\DoxyCodeLine{├──\ obj/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Object\ files}
+\DoxyCodeLine{├──\ makefile\ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Build\ system}
+\DoxyCodeLine{└──\ README.md}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_README_autotoc_md6}{}\doxysection{\texorpdfstring{🔧 Building}{🔧 Building}}\label{md_README_autotoc_md6}
+You’ll need\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{GCC or Clang}}
+\item {\bfseries{Make}}
+\item {\bfseries{Vulkan SDK}}
+\item {\bfseries{Wayland/\+X11 development libraries}} (on Linux)
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md7}{}\doxysubsection{\texorpdfstring{Build Commands}{Build Commands}}\label{md_README_autotoc_md7}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ Build\ both\ the\ engine\ and\ the\ testbed}
+\DoxyCodeLine{make}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Build\ only\ the\ engine}
+\DoxyCodeLine{make\ engine}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Build\ only\ the\ testbed}
+\DoxyCodeLine{make\ testbed}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Build\ only\ the\ tests}
+\DoxyCodeLine{make\ tests}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Run\ the\ tests}
+\DoxyCodeLine{make\ run-\/tests}
+
+\end{DoxyCode}
+
+
+Outputs\+:
+
+
+\begin{DoxyItemize}
+\item Shared library\+: {\ttfamily bin/libengine.\+so}
+\item Testbed executable\+: {\ttfamily bin/testbed}
+\item Unit tests\+: {\ttfamily bin/tests}
+\end{DoxyItemize}
+
+Run the testbed\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ bin}
+\DoxyCodeLine{./testbed}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md_README_autotoc_md9}{}\doxysection{\texorpdfstring{💡 Design Goals}{💡 Design Goals}}\label{md_README_autotoc_md9}
+
+\begin{DoxyItemize}
+\item {\bfseries{Learn-\/by-\/doing architecture}} -\/ staying close to metal.
+\item {\bfseries{Explicit memory management}} -\/ predictable allocations via linear allocators and custom memory zones.
+\item {\bfseries{Platform-\/abstraction-\/first}} -\/ engine doesn’t assume OS-\/level details at higher layers.
+\item {\bfseries{Renderer modularity}} -\/ backend/frontend separation allows future experimentation with other APIs.
+\item {\bfseries{C-\/first philosophy}} -\/ minimal dependencies, maximum clarity.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_README_autotoc_md11}{}\doxysection{\texorpdfstring{🧭 Roadmap}{🧭 Roadmap}}\label{md_README_autotoc_md11}
+
+\begin{DoxyItemize}
+\item[\DoxyChecked] Engine core + logger
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item[\DoxyChecked] Dynamic array container
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item[\DoxyChecked] Event system
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item[\DoxyChecked] Vulkan swapchain / renderpass setup
+\item[\DoxyUnchecked] Basic rendering abstraction layer
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item[\DoxyUnchecked] Input system improvements
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item[\DoxyUnchecked] Scene management
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item[\DoxyUnchecked] Asset pipeline
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item[\DoxyUnchecked] ECS integration
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item[\DoxyUnchecked] Editor (far future)
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md_README_autotoc_md13}{}\doxysection{\texorpdfstring{🧱 License}{🧱 License}}\label{md_README_autotoc_md13}
+This engine is an educational and experimental project.
+
+\DoxyHorRuler{0}
+\hypertarget{md_README_autotoc_md15}{}\doxysection{\texorpdfstring{🙏 Acknowledgements}{🙏 Acknowledgements}}\label{md_README_autotoc_md15}
+Thanks to {\bfseries{Travis Vroman}} and the {\itshape Kohi Engine} series for the inspiration (definitely not a strong enough word right now) and the clean architectural foundation. 

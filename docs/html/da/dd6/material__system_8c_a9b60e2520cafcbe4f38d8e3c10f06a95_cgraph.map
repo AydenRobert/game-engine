@@ -1,0 +1,32 @@
+<map id="destroy_material" name="destroy_material">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,101,138,128"/>
+<area shape="rect" id="Node000002" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="634,23,753,51"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,98,247,50,336,26,428,8,490,3,553,8,621,20,616,21,552,13,490,8,428,13,337,31,248,55,111,102"/>
+<area shape="rect" id="Node000004" href="$d0/dcc/renderer__frontend_8c.html#ad87ce9fe4eeb5fb97c77edec9ab84d7a" title=" " alt="" coords="186,153,380,180"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="131,126,211,147,206,150,131,132"/>
+<area shape="rect" id="Node000005" href="$d9/d0a/texture__system_8c.html#ab454daecfb4133cbca5559dd84db3ac4" title=" " alt="" coords="194,101,372,128"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="138,112,180,113,176,116,139,117"/>
+<area shape="rect" id="Node000003" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="836,23,1010,51"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="753,35,823,37,818,38,754,40"/>
+<area shape="rect" id="Node000006" href="$d9/d0a/texture__system_8c.html#aa476f8666968c3b8906989ac09b291a5" title=" " alt="" coords="428,126,552,154"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="372,123,415,130,410,131,372,128"/>
+<area shape="rect" id="Node000008" href="$d8/de9/hashtable_8c.html#abc39f8ea1cbed6f616ea660f9f00b876" title="Obtains a copy of data present in the hashtable. Only use for tables which were NOT created with is_p..." alt="" coords="434,178,547,206"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="343,126,381,139,429,163,444,172,439,171,427,168,379,144,343,132"/>
+<area shape="rect" id="Node000012" href="$d8/de9/hashtable_8c.html#a33773f5004b2ecc9a3af543ba2e52c60" title="Stores a copy of the data in value into the provided hashtable. Only use for tables which were NOT cr..." alt="" coords="434,230,546,258"/>
+<area shape="poly" id="edge12_Node000005_Node000012" title=" " alt="" coords="358,126,382,139,399,158,407,177,415,196,430,215,437,223,432,221,426,219,410,199,402,179,395,161,378,143,358,132"/>
+<area shape="rect" id="Node000013" href="$d6/d19/kstring_8c.html#a9e48021ce5b39920715bfaa5d92613bc" title=" " alt="" coords="438,22,542,50"/>
+<area shape="poly" id="edge15_Node000005_Node000013" title=" " alt="" coords="321,98,439,55,435,57,323,103"/>
+<area shape="rect" id="Node000014" href="$d6/d19/kstring_8c.html#a148b565b9af89efb432a895868c1e4d1" title=" " alt="" coords="434,74,546,102"/>
+<area shape="poly" id="edge16_Node000005_Node000014" title=" " alt="" coords="372,101,421,96,416,98,373,106"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="525,123,551,111,652,60,657,58,554,116,527,128"/>
+<area shape="rect" id="Node000007" href="$d0/dcc/renderer__frontend_8c.html#a07cb43f363df0240af713c483b72308f" title=" " alt="" coords="600,126,787,154"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="553,137,588,140,582,140,553,143"/>
+<area shape="rect" id="Node000009" href="$d8/de9/hashtable_8c.html#a69977851e8a85a621f7bd49b66405f3c" title=" " alt="" coords="645,178,742,206"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="547,189,632,192,627,192,548,195"/>
+<area shape="rect" id="Node000010" href="$d3/d3c/kmemory_8c.html#ae88e143a36677919fee16bdf0f11bc79" title=" " alt="" coords="632,230,755,258"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="548,204,624,226,619,225,547,209"/>
+<area shape="rect" id="Node000011" href="$de/d03/platform_8h.html#a15258bb22b902725b1fbf405463ed07d" title=" " alt="" coords="835,230,1012,258"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="755,241,822,244,816,244,755,247"/>
+<area shape="poly" id="edge13_Node000012_Node000009" title=" " alt="" coords="546,227,628,208,633,208,547,232"/>
+<area shape="poly" id="edge14_Node000012_Node000010" title=" " alt="" coords="547,241,619,244,614,244,547,247"/>
+</map>

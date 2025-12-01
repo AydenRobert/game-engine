@@ -1,0 +1,7 @@
+<map id="physical_device_meets_requirements" name="physical_device_meets_requirements">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,28,179,72"/>
+<area shape="rect" id="Node000002" href="$d6/d19/kstring_8c.html#a4088fb073177638c470fee72f8f2180a" title=" " alt="" coords="252,5,360,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,35,239,28,234,30,180,40"/>
+<area shape="rect" id="Node000003" href="$de/d02/vulkan__device_8c.html#ac4eb42eebcc937d35197f1b899668021" title=" " alt="" coords="227,57,385,102"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,59,214,66,209,66,179,64"/>
+</map>

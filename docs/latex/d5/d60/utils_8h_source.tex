@@ -1,0 +1,56 @@
+\doxysection{utils.\+h}
+\hypertarget{utils_8h_source}{}\label{utils_8h_source}\index{engine/src/core/utils.h@{engine/src/core/utils.h}}
+\mbox{\hyperlink{utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}}\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{utils_8h_aa58e20741f6693489bf1c36e01d94256}{kclz\_u64}}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ x)\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ ==\ 0)\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 64;}
+\DoxyCodeLine{00008\ \ \ \ \ \}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#if\ defined(\_\_GNUC\_\_)\ ||\ defined(\_\_clang\_\_)}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordflow}{return}\ \_\_builtin\_clzll(x);}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#elif\ defined(\_MSC\_VER)}}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ index;}
+\DoxyCodeLine{00013\ \ \ \ \ \_BitScanReverse64(\&index,\ x);}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{return}\ 63\ -\/\ index;}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(x\ \&\ 0xFFFFFFFF00000000))\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ count\ +=\ 32;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ x\ <<=\ 32;}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(x\ \&\ 0xFFFF000000000000))\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ count\ +=\ 16;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ x\ <<=\ 16;}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(x\ \&\ 0xFF00000000000000))\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ count\ +=\ 8;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ x\ <<=\ 8;}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(x\ \&\ 0xF000000000000000))\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ count\ +=\ 4;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ x\ <<=\ 4;}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(x\ \&\ 0xC000000000000000))\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ count\ +=\ 2;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ x\ <<=\ 2;}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{if}\ (!(n\ \&\ 0x8000000000000000))\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ count\ +=\ 1;}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{return}\ count;}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00042\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}}\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{utils_8h_ada60f72f6d27c600fe1ad551350979e1}{next\_pow2\_u64}}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ x)\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <=\ 1)\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}})1\ <<\ (64\ -\/\ \mbox{\hyperlink{utils_8h_aa58e20741f6693489bf1c36e01d94256}{kclz\_u64}}(x\ -\/\ 1));}
+\DoxyCodeLine{00050\ \}}
+
+\end{DoxyCode}

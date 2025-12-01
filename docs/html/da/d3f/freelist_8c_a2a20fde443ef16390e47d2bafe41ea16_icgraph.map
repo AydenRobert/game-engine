@@ -1,0 +1,5 @@
+<map id="freelist_resize" name="freelist_resize">
+<area shape="rect" id="Node000001" title="Attempts to resize the provided freelist. Call twice, first to get the new memory requirement,..." alt="" coords="209,5,322,33"/>
+<area shape="rect" id="Node000002" href="$db/dab/vulkan__buffer_8c.html#afbbdca32215c9687f38dc62bcb58a779" title=" " alt="" coords="5,5,161,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,19,161,22,161,17,196,19"/>
+</map>

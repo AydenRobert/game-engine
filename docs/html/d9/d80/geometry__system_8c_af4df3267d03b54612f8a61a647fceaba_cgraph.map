@@ -1,0 +1,21 @@
+<map id="geometry_system_generate_plane_config" name="geometry_system_generate_plane_config">
+<area shape="rect" id="Node000001" title="Creates a configuration for plane geometries given the input parameters. NOTE: vertex and index array..." alt="" coords="5,128,210,172"/>
+<area shape="rect" id="Node000002" href="$d3/d3c/kmemory_8c.html#a35f22575c2b4fcbda423b6108e352b15" title=" " alt="" coords="271,84,351,112"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,124,258,111,253,113,198,129"/>
+<area shape="rect" id="Node000009" href="$d6/d19/kstring_8c.html#a3ac8f7f54a3429135da71637d268e6c9" title=" " alt="" coords="258,136,364,164"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="209,147,245,149,239,150,210,152"/>
+<area shape="rect" id="Node000010" href="$d6/d19/kstring_8c.html#a9e48021ce5b39920715bfaa5d92613bc" title=" " alt="" coords="259,188,363,216"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="198,170,246,185,241,185,197,175"/>
+<area shape="rect" id="Node000003" href="$dd/d44/dynamic__allocator_8c.html#aeef3ef902c20758ce4e52fd3ce7c3112" title="Allocates an amount of memory and returns the given block." alt="" coords="412,32,612,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="351,85,443,63,438,65,352,90"/>
+<area shape="rect" id="Node000007" href="$de/d03/platform_8h.html#a19df473ff145c8579c4c838d5bc67372" title=" " alt="" coords="444,84,580,112"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="351,95,431,97,426,98,352,100"/>
+<area shape="rect" id="Node000008" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="425,136,599,164"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="352,105,443,131,438,132,351,111"/>
+<area shape="rect" id="Node000004" href="$da/d3f/freelist_8c.html#ae855f01b88cfd86e3ff8ae7682bbd06c" title="Attempts to find a allocate block of memory given the size." alt="" coords="660,32,829,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="613,43,647,45,642,46,613,48"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#a1ce834d1bd9f9caf272e6d63aa00deb8" title="Obtains the amount of free space within the freelist." alt="" coords="877,5,1022,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="829,32,864,30,859,31,830,37"/>
+<area shape="rect" id="Node000006" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="900,57,999,85"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="829,54,887,63,882,63,829,59"/>
+</map>

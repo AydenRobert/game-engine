@@ -1,0 +1,26 @@
+\doxysection{platform\+\_\+linux\+\_\+wayland.\+h}
+\hypertarget{platform__linux__wayland_8h_source}{}\label{platform__linux__wayland_8h_source}\index{engine/src/platform/platform\_linux\_wayland.h@{engine/src/platform/platform\_linux\_wayland.h}}
+\mbox{\hyperlink{platform__linux__wayland_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defines_8h}{defines.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{platform__linux_8h}{platform/platform\_linux.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structplatform__state}{platform\_state}};}
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__context}{vulkan\_context}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{platform__linux__wayland_8h_a723755eb812b292c0e89891dd0e082e9}{platform\_startup\_wayland}}(\mbox{\hyperlink{structdisplay__state}{display\_state}}\ *disp\_state,}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *application\_name,\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ x,\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ y,}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ width,\ \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}\ height);}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{platform__linux__wayland_8h_a99c6bdf47bedcd705fbaf90ac49cb970}{platform\_shutdown\_wayland}}(\mbox{\hyperlink{structdisplay__state}{display\_state}}\ *disp\_state);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{platform__linux__wayland_8h_a6b3e4f726713f5d5748d48581de7bbd8}{platform\_pump\_messages\_wayland}}(\mbox{\hyperlink{structdisplay__state}{display\_state}}\ *disp\_state);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{platform__linux__wayland_8h_acfa8e3d76b7c309ad6bcfcf6cf1e954f}{platform\_get\_required\_extension\_names\_wayland}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ ***names\_darray);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{platform__linux__wayland_8h_a23fcfdbd852abe6c3b23c19dbbf5896f}{platform\_create\_vulkan\_surface\_wayland}}(\mbox{\hyperlink{structdisplay__state}{display\_state}}\ *plat\_state,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structvulkan__context}{vulkan\_context}}\ *\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}});}
+
+\end{DoxyCode}

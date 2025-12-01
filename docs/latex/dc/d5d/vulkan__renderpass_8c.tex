@@ -1,0 +1,103 @@
+\doxysection{engine/src/renderer/vulkan/vulkan\+\_\+renderpass.c File Reference}
+\hypertarget{vulkan__renderpass_8c}{}\label{vulkan__renderpass_8c}\index{engine/src/renderer/vulkan/vulkan\_renderpass.c@{engine/src/renderer/vulkan/vulkan\_renderpass.c}}
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+renderpass.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+types.\+inl"{}}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$vulkan/vulkan\+\_\+core.\+h$>$}\newline
+Include dependency graph for vulkan\+\_\+renderpass.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d05/vulkan__renderpass_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{vulkan__renderpass_8c_a4eb11b756d9eeffab554d19810470b0b}{vulkan\+\_\+renderpass\+\_\+create}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}out\+\_\+renderpass, \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} render\+\_\+area, \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} clear\+\_\+colour, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} depth, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} stencil, \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} clear\+\_\+flags, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} has\+\_\+prev\+\_\+pass, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} has\+\_\+next\+\_\+pass)
+\item 
+void \mbox{\hyperlink{vulkan__renderpass_8c_a2656c53811b44888152b5a19f7ece679}{vulkan\+\_\+renderpass\+\_\+destroy}} (\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}}, \mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}renderpass)
+\item 
+void \mbox{\hyperlink{vulkan__renderpass_8c_ad41d3572b06fd3a6973d84b7362243e9}{vulkan\+\_\+renderpass\+\_\+begin}} (\mbox{\hyperlink{structvulkan__command__buffer}{vulkan\+\_\+command\+\_\+buffer}} \texorpdfstring{$\ast$}{*}command\+\_\+buffer, \mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}renderpass, Vk\+Framebuffer frame\+\_\+buffer)
+\item 
+void \mbox{\hyperlink{vulkan__renderpass_8c_afc8178f17adfad94842efd1ec0f74d83}{vulkan\+\_\+renderpass\+\_\+end}} (\mbox{\hyperlink{structvulkan__command__buffer}{vulkan\+\_\+command\+\_\+buffer}} \texorpdfstring{$\ast$}{*}command\+\_\+buffer, \mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}renderpass)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{vulkan__renderpass_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{vulkan__renderpass_8c_ad41d3572b06fd3a6973d84b7362243e9}\index{vulkan\_renderpass.c@{vulkan\_renderpass.c}!vulkan\_renderpass\_begin@{vulkan\_renderpass\_begin}}
+\index{vulkan\_renderpass\_begin@{vulkan\_renderpass\_begin}!vulkan\_renderpass.c@{vulkan\_renderpass.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderpass\_begin()}{vulkan\_renderpass\_begin()}}
+{\footnotesize\ttfamily \label{vulkan__renderpass_8c_ad41d3572b06fd3a6973d84b7362243e9} 
+void vulkan\+\_\+renderpass\+\_\+begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__command__buffer}{vulkan\+\_\+command\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{command\+\_\+buffer}{, }\item[{\mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}}]{renderpass}{, }\item[{Vk\+Framebuffer}]{frame\+\_\+buffer}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d5d/vulkan__renderpass_8c_ad41d3572b06fd3a6973d84b7362243e9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d5d/vulkan__renderpass_8c_ad41d3572b06fd3a6973d84b7362243e9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__renderpass_8c_a4eb11b756d9eeffab554d19810470b0b}\index{vulkan\_renderpass.c@{vulkan\_renderpass.c}!vulkan\_renderpass\_create@{vulkan\_renderpass\_create}}
+\index{vulkan\_renderpass\_create@{vulkan\_renderpass\_create}!vulkan\_renderpass.c@{vulkan\_renderpass.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderpass\_create()}{vulkan\_renderpass\_create()}}
+{\footnotesize\ttfamily \label{vulkan__renderpass_8c_a4eb11b756d9eeffab554d19810470b0b} 
+void vulkan\+\_\+renderpass\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+renderpass}{, }\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{render\+\_\+area}{, }\item[{\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}}]{clear\+\_\+colour}{, }\item[{\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}]{depth}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{stencil}{, }\item[{\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}}]{clear\+\_\+flags}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{has\+\_\+prev\+\_\+pass}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{has\+\_\+next\+\_\+pass}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d5d/vulkan__renderpass_8c_a4eb11b756d9eeffab554d19810470b0b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d5d/vulkan__renderpass_8c_a4eb11b756d9eeffab554d19810470b0b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__renderpass_8c_a2656c53811b44888152b5a19f7ece679}\index{vulkan\_renderpass.c@{vulkan\_renderpass.c}!vulkan\_renderpass\_destroy@{vulkan\_renderpass\_destroy}}
+\index{vulkan\_renderpass\_destroy@{vulkan\_renderpass\_destroy}!vulkan\_renderpass.c@{vulkan\_renderpass.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderpass\_destroy()}{vulkan\_renderpass\_destroy()}}
+{\footnotesize\ttfamily \label{vulkan__renderpass_8c_a2656c53811b44888152b5a19f7ece679} 
+void vulkan\+\_\+renderpass\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{, }\item[{\mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}}]{renderpass}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d5d/vulkan__renderpass_8c_a2656c53811b44888152b5a19f7ece679_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vulkan__renderpass_8c_afc8178f17adfad94842efd1ec0f74d83}\index{vulkan\_renderpass.c@{vulkan\_renderpass.c}!vulkan\_renderpass\_end@{vulkan\_renderpass\_end}}
+\index{vulkan\_renderpass\_end@{vulkan\_renderpass\_end}!vulkan\_renderpass.c@{vulkan\_renderpass.c}}
+\doxysubsubsection{\texorpdfstring{vulkan\_renderpass\_end()}{vulkan\_renderpass\_end()}}
+{\footnotesize\ttfamily \label{vulkan__renderpass_8c_afc8178f17adfad94842efd1ec0f74d83} 
+void vulkan\+\_\+renderpass\+\_\+end (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvulkan__command__buffer}{vulkan\+\_\+command\+\_\+buffer}} \texorpdfstring{$\ast$}{*}}]{command\+\_\+buffer}{, }\item[{\mbox{\hyperlink{structvulkan__renderpass}{vulkan\+\_\+renderpass}} \texorpdfstring{$\ast$}{*}}]{renderpass}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d5d/vulkan__renderpass_8c_afc8178f17adfad94842efd1ec0f74d83_icgraph}
+\end{center}
+\end{figure}

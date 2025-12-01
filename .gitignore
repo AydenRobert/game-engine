@@ -1,4 +1,5 @@
 .cache/
 oil:/
 bin/
+obj/
 *.spv

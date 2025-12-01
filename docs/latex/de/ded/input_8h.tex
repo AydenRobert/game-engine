@@ -1,0 +1,956 @@
+\doxysection{engine/src/core/input.h File Reference}
+\hypertarget{input_8h}{}\label{input_8h}\index{engine/src/core/input.h@{engine/src/core/input.h}}
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+Include dependency graph for input.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{df/d9b/input_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d01/input_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{input_8h_a545241bfccd86821b0187ee96e1f4c51}{DEFINE\+\_\+\+KEY}}(name,  code)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836}{buttons}} \mbox{\hyperlink{input_8h_a5aec323161d474e9086513582ae9e13c}{buttons}}
+\item 
+typedef enum \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}{keys}} \mbox{\hyperlink{input_8h_ae6367ba100b3406998db932c9fe0b0d3}{keys}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836}{buttons}} \{ \mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836a55dc0d53615e28ee8af66827bee48e4e}{BUTTON\+\_\+\+LEFT}}
+, \mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836a13046edd6d64a0de5821b5ff4c7581ce}{BUTTON\+\_\+\+RIGHT}}
+, \mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836adc5b6dc06792e0f36a19c74e9c77c6fb}{BUTTON\+\_\+\+MIDDLE}}
+, \mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836aec454ba81b583c1f98717cd9372683a7}{BUTTON\+\_\+\+MAX\+\_\+\+BUTTONS}}
+ \}
+\item 
+enum \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}{keys}} \{ \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \newline
+\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}{DEFINE\+\_\+\+KEY}} =(BACKSPACE, 0x08)
+, \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712afa1179db741cb68f2ffe7806175e544c}{KEYS\+\_\+\+MAX\+\_\+\+KEYS}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{input_8h_a0e554a7be3b23d981dcb7792a73abb2a}{input\+\_\+initialize}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}memory\+\_\+requirement, void \texorpdfstring{$\ast$}{*}state)
+\item 
+void \mbox{\hyperlink{input_8h_aca59b2d698832311156e9aaf03a8b6cc}{input\+\_\+shutdown}} (void \texorpdfstring{$\ast$}{*}state)
+\item 
+void \mbox{\hyperlink{input_8h_a85450297ce513c03fe70c80cdba41609}{input\+\_\+update}} (\mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}} delta\+\_\+time)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{input_8h_a5ddb7abdf49d3f4fdfae00112c50e14e}{input\+\_\+is\+\_\+key\+\_\+down}} (\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}{keys}} key)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{input_8h_aa3f06d2bbe94fa40aa9d12f2685783cb}{input\+\_\+is\+\_\+key\+\_\+up}} (\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}{keys}} key)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{input_8h_a0247347a29f6fbdc6bc523e0b81999f8}{input\+\_\+was\+\_\+key\+\_\+down}} (\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}{keys}} key)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{input_8h_a15f2db5046f21794f16d24dcefd6cd61}{input\+\_\+was\+\_\+key\+\_\+up}} (\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}{keys}} key)
+\item 
+void \mbox{\hyperlink{input_8h_aa50febeebd057f91a70704851a9b6300}{input\+\_\+process\+\_\+key}} (\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}{keys}} key, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} pressed)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{input_8h_a1cb18f9945283271dfaea87fa2520d7c}{input\+\_\+is\+\_\+button\+\_\+down}} (\mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836}{buttons}} button)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{input_8h_a530ad40d8d2e99ec04dff39922774f41}{input\+\_\+is\+\_\+button\+\_\+up}} (\mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836}{buttons}} button)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{input_8h_a6345fe3f4af808a3acfa8686b1fa6eef}{input\+\_\+was\+\_\+button\+\_\+down}} (\mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836}{buttons}} button)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{input_8h_ac75809be9ce0e6ec52b368ce9ee7dfe5}{input\+\_\+was\+\_\+button\+\_\+up}} (\mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836}{buttons}} button)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \mbox{\hyperlink{input_8h_afc6f79db4354bffcaa5341e3dd94e561}{input\+\_\+get\+\_\+mouse\+\_\+position}} (\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \texorpdfstring{$\ast$}{*}x, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \texorpdfstring{$\ast$}{*}y)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \mbox{\hyperlink{input_8h_a41ff32b5688dd414ca371c42262c55cb}{input\+\_\+get\+\_\+previous\+\_\+mouse\+\_\+position}} (\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \texorpdfstring{$\ast$}{*}x, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \texorpdfstring{$\ast$}{*}y)
+\item 
+void \mbox{\hyperlink{input_8h_a4b149b586e2e5e770ddd9ed63f4f5dd2}{input\+\_\+process\+\_\+button}} (\mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836}{buttons}} button, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} pressed)
+\item 
+void \mbox{\hyperlink{input_8h_a5d56afad3d78c1e177fa44cef3e7d19d}{input\+\_\+process\+\_\+mouse\+\_\+move}} (\mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}} x, \mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}} y)
+\item 
+void \mbox{\hyperlink{input_8h_af9d0e1b4ff7fce1972ba93c810bfbabc}{input\+\_\+process\+\_\+mouse\+\_\+wheel}} (\mbox{\hyperlink{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729}{i8}} z\+\_\+delta)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{input_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{input_8h_a545241bfccd86821b0187ee96e1f4c51}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}
+\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{DEFINE\_KEY}{DEFINE\_KEY}}
+{\footnotesize\ttfamily \label{input_8h_a545241bfccd86821b0187ee96e1f4c51} 
+\#define DEFINE\+\_\+\+KEY(\begin{DoxyParamCaption}\item[{}]{name}{, }\item[{}]{code}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{KEY\_\#\#name\ =\ code}
+
+\end{DoxyCode}
+
+
+\label{doc-typedef-members}
+\Hypertarget{input_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{input_8h_a5aec323161d474e9086513582ae9e13c}\index{input.h@{input.h}!buttons@{buttons}}
+\index{buttons@{buttons}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{buttons}{buttons}}
+{\footnotesize\ttfamily \label{input_8h_a5aec323161d474e9086513582ae9e13c} 
+typedef enum \mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836}{buttons}} \mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836}{buttons}}}
+
+\Hypertarget{input_8h_ae6367ba100b3406998db932c9fe0b0d3}\index{input.h@{input.h}!keys@{keys}}
+\index{keys@{keys}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{keys}{keys}}
+{\footnotesize\ttfamily \label{input_8h_ae6367ba100b3406998db932c9fe0b0d3} 
+typedef enum \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}{keys}} \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}{keys}}}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{input_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{input_8h_a3e08a16703943b810da7b8b2a915c836}\index{input.h@{input.h}!buttons@{buttons}}
+\index{buttons@{buttons}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{buttons}{buttons}}
+{\footnotesize\ttfamily \label{input_8h_a3e08a16703943b810da7b8b2a915c836} 
+enum \mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836}{buttons}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BUTTON\_LEFT@{BUTTON\_LEFT}!input.h@{input.h}}\index{input.h@{input.h}!BUTTON\_LEFT@{BUTTON\_LEFT}}}\Hypertarget{input_8h_a3e08a16703943b810da7b8b2a915c836a55dc0d53615e28ee8af66827bee48e4e}\label{input_8h_a3e08a16703943b810da7b8b2a915c836a55dc0d53615e28ee8af66827bee48e4e} 
+BUTTON\+\_\+\+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BUTTON\_RIGHT@{BUTTON\_RIGHT}!input.h@{input.h}}\index{input.h@{input.h}!BUTTON\_RIGHT@{BUTTON\_RIGHT}}}\Hypertarget{input_8h_a3e08a16703943b810da7b8b2a915c836a13046edd6d64a0de5821b5ff4c7581ce}\label{input_8h_a3e08a16703943b810da7b8b2a915c836a13046edd6d64a0de5821b5ff4c7581ce} 
+BUTTON\+\_\+\+RIGHT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BUTTON\_MIDDLE@{BUTTON\_MIDDLE}!input.h@{input.h}}\index{input.h@{input.h}!BUTTON\_MIDDLE@{BUTTON\_MIDDLE}}}\Hypertarget{input_8h_a3e08a16703943b810da7b8b2a915c836adc5b6dc06792e0f36a19c74e9c77c6fb}\label{input_8h_a3e08a16703943b810da7b8b2a915c836adc5b6dc06792e0f36a19c74e9c77c6fb} 
+BUTTON\+\_\+\+MIDDLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BUTTON\_MAX\_BUTTONS@{BUTTON\_MAX\_BUTTONS}!input.h@{input.h}}\index{input.h@{input.h}!BUTTON\_MAX\_BUTTONS@{BUTTON\_MAX\_BUTTONS}}}\Hypertarget{input_8h_a3e08a16703943b810da7b8b2a915c836aec454ba81b583c1f98717cd9372683a7}\label{input_8h_a3e08a16703943b810da7b8b2a915c836aec454ba81b583c1f98717cd9372683a7} 
+BUTTON\+\_\+\+MAX\+\_\+\+BUTTONS&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}\index{input.h@{input.h}!keys@{keys}}
+\index{keys@{keys}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{keys}{keys}}
+{\footnotesize\ttfamily \label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712} 
+enum \mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}{keys}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFINE\_KEY@{DEFINE\_KEY}!input.h@{input.h}}\index{input.h@{input.h}!DEFINE\_KEY@{DEFINE\_KEY}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712a1bc581eb932153853ea4b6fadf91cff8} 
+DEFINE\+\_\+\+KEY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEYS\_MAX\_KEYS@{KEYS\_MAX\_KEYS}!input.h@{input.h}}\index{input.h@{input.h}!KEYS\_MAX\_KEYS@{KEYS\_MAX\_KEYS}}}\Hypertarget{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712afa1179db741cb68f2ffe7806175e544c}\label{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712afa1179db741cb68f2ffe7806175e544c} 
+KEYS\+\_\+\+MAX\+\_\+\+KEYS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{input_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{input_8h_afc6f79db4354bffcaa5341e3dd94e561}\index{input.h@{input.h}!input\_get\_mouse\_position@{input\_get\_mouse\_position}}
+\index{input\_get\_mouse\_position@{input\_get\_mouse\_position}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_get\_mouse\_position()}{input\_get\_mouse\_position()}}
+{\footnotesize\ttfamily \label{input_8h_afc6f79db4354bffcaa5341e3dd94e561} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void input\+\_\+get\+\_\+mouse\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \texorpdfstring{$\ast$}{*}}]{x}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \texorpdfstring{$\ast$}{*}}]{y}{}\end{DoxyParamCaption})}
+
+\Hypertarget{input_8h_a41ff32b5688dd414ca371c42262c55cb}\index{input.h@{input.h}!input\_get\_previous\_mouse\_position@{input\_get\_previous\_mouse\_position}}
+\index{input\_get\_previous\_mouse\_position@{input\_get\_previous\_mouse\_position}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_get\_previous\_mouse\_position()}{input\_get\_previous\_mouse\_position()}}
+{\footnotesize\ttfamily \label{input_8h_a41ff32b5688dd414ca371c42262c55cb} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void input\+\_\+get\+\_\+previous\+\_\+mouse\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \texorpdfstring{$\ast$}{*}}]{x}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} \texorpdfstring{$\ast$}{*}}]{y}{}\end{DoxyParamCaption})}
+
+\Hypertarget{input_8h_a0e554a7be3b23d981dcb7792a73abb2a}\index{input.h@{input.h}!input\_initialize@{input\_initialize}}
+\index{input\_initialize@{input\_initialize}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_initialize()}{input\_initialize()}}
+{\footnotesize\ttfamily \label{input_8h_a0e554a7be3b23d981dcb7792a73abb2a} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} input\+\_\+initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{memory\+\_\+requirement}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/ded/input_8h_a0e554a7be3b23d981dcb7792a73abb2a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/ded/input_8h_a0e554a7be3b23d981dcb7792a73abb2a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8h_a1cb18f9945283271dfaea87fa2520d7c}\index{input.h@{input.h}!input\_is\_button\_down@{input\_is\_button\_down}}
+\index{input\_is\_button\_down@{input\_is\_button\_down}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_is\_button\_down()}{input\_is\_button\_down()}}
+{\footnotesize\ttfamily \label{input_8h_a1cb18f9945283271dfaea87fa2520d7c} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} input\+\_\+is\+\_\+button\+\_\+down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836}{buttons}}}]{button}{}\end{DoxyParamCaption})}
+
+\Hypertarget{input_8h_a530ad40d8d2e99ec04dff39922774f41}\index{input.h@{input.h}!input\_is\_button\_up@{input\_is\_button\_up}}
+\index{input\_is\_button\_up@{input\_is\_button\_up}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_is\_button\_up()}{input\_is\_button\_up()}}
+{\footnotesize\ttfamily \label{input_8h_a530ad40d8d2e99ec04dff39922774f41} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} input\+\_\+is\+\_\+button\+\_\+up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836}{buttons}}}]{button}{}\end{DoxyParamCaption})}
+
+\Hypertarget{input_8h_a5ddb7abdf49d3f4fdfae00112c50e14e}\index{input.h@{input.h}!input\_is\_key\_down@{input\_is\_key\_down}}
+\index{input\_is\_key\_down@{input\_is\_key\_down}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_is\_key\_down()}{input\_is\_key\_down()}}
+{\footnotesize\ttfamily \label{input_8h_a5ddb7abdf49d3f4fdfae00112c50e14e} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} input\+\_\+is\+\_\+key\+\_\+down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}{keys}}}]{key}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/ded/input_8h_a5ddb7abdf49d3f4fdfae00112c50e14e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8h_aa3f06d2bbe94fa40aa9d12f2685783cb}\index{input.h@{input.h}!input\_is\_key\_up@{input\_is\_key\_up}}
+\index{input\_is\_key\_up@{input\_is\_key\_up}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_is\_key\_up()}{input\_is\_key\_up()}}
+{\footnotesize\ttfamily \label{input_8h_aa3f06d2bbe94fa40aa9d12f2685783cb} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} input\+\_\+is\+\_\+key\+\_\+up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}{keys}}}]{key}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/ded/input_8h_aa3f06d2bbe94fa40aa9d12f2685783cb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8h_a4b149b586e2e5e770ddd9ed63f4f5dd2}\index{input.h@{input.h}!input\_process\_button@{input\_process\_button}}
+\index{input\_process\_button@{input\_process\_button}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_process\_button()}{input\_process\_button()}}
+{\footnotesize\ttfamily \label{input_8h_a4b149b586e2e5e770ddd9ed63f4f5dd2} 
+void input\+\_\+process\+\_\+button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836}{buttons}}}]{button}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{pressed}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{de/ded/input_8h_a4b149b586e2e5e770ddd9ed63f4f5dd2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8h_aa50febeebd057f91a70704851a9b6300}\index{input.h@{input.h}!input\_process\_key@{input\_process\_key}}
+\index{input\_process\_key@{input\_process\_key}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_process\_key()}{input\_process\_key()}}
+{\footnotesize\ttfamily \label{input_8h_aa50febeebd057f91a70704851a9b6300} 
+void input\+\_\+process\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}{keys}}}]{key}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{pressed}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{de/ded/input_8h_aa50febeebd057f91a70704851a9b6300_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8h_a5d56afad3d78c1e177fa44cef3e7d19d}\index{input.h@{input.h}!input\_process\_mouse\_move@{input\_process\_mouse\_move}}
+\index{input\_process\_mouse\_move@{input\_process\_mouse\_move}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_process\_mouse\_move()}{input\_process\_mouse\_move()}}
+{\footnotesize\ttfamily \label{input_8h_a5d56afad3d78c1e177fa44cef3e7d19d} 
+void input\+\_\+process\+\_\+mouse\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}}}]{x}{, }\item[{\mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}}}]{y}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{de/ded/input_8h_a5d56afad3d78c1e177fa44cef3e7d19d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8h_af9d0e1b4ff7fce1972ba93c810bfbabc}\index{input.h@{input.h}!input\_process\_mouse\_wheel@{input\_process\_mouse\_wheel}}
+\index{input\_process\_mouse\_wheel@{input\_process\_mouse\_wheel}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_process\_mouse\_wheel()}{input\_process\_mouse\_wheel()}}
+{\footnotesize\ttfamily \label{input_8h_af9d0e1b4ff7fce1972ba93c810bfbabc} 
+void input\+\_\+process\+\_\+mouse\+\_\+wheel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729}{i8}}}]{z\+\_\+delta}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{de/ded/input_8h_af9d0e1b4ff7fce1972ba93c810bfbabc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8h_aca59b2d698832311156e9aaf03a8b6cc}\index{input.h@{input.h}!input\_shutdown@{input\_shutdown}}
+\index{input\_shutdown@{input\_shutdown}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_shutdown()}{input\_shutdown()}}
+{\footnotesize\ttfamily \label{input_8h_aca59b2d698832311156e9aaf03a8b6cc} 
+void input\+\_\+shutdown (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/ded/input_8h_aca59b2d698832311156e9aaf03a8b6cc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8h_a85450297ce513c03fe70c80cdba41609}\index{input.h@{input.h}!input\_update@{input\_update}}
+\index{input\_update@{input\_update}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_update()}{input\_update()}}
+{\footnotesize\ttfamily \label{input_8h_a85450297ce513c03fe70c80cdba41609} 
+void input\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}}}]{delta\+\_\+time}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/ded/input_8h_a85450297ce513c03fe70c80cdba41609_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/ded/input_8h_a85450297ce513c03fe70c80cdba41609_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8h_a6345fe3f4af808a3acfa8686b1fa6eef}\index{input.h@{input.h}!input\_was\_button\_down@{input\_was\_button\_down}}
+\index{input\_was\_button\_down@{input\_was\_button\_down}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_was\_button\_down()}{input\_was\_button\_down()}}
+{\footnotesize\ttfamily \label{input_8h_a6345fe3f4af808a3acfa8686b1fa6eef} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} input\+\_\+was\+\_\+button\+\_\+down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836}{buttons}}}]{button}{}\end{DoxyParamCaption})}
+
+\Hypertarget{input_8h_ac75809be9ce0e6ec52b368ce9ee7dfe5}\index{input.h@{input.h}!input\_was\_button\_up@{input\_was\_button\_up}}
+\index{input\_was\_button\_up@{input\_was\_button\_up}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_was\_button\_up()}{input\_was\_button\_up()}}
+{\footnotesize\ttfamily \label{input_8h_ac75809be9ce0e6ec52b368ce9ee7dfe5} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} input\+\_\+was\+\_\+button\+\_\+up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8h_a3e08a16703943b810da7b8b2a915c836}{buttons}}}]{button}{}\end{DoxyParamCaption})}
+
+\Hypertarget{input_8h_a0247347a29f6fbdc6bc523e0b81999f8}\index{input.h@{input.h}!input\_was\_key\_down@{input\_was\_key\_down}}
+\index{input\_was\_key\_down@{input\_was\_key\_down}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_was\_key\_down()}{input\_was\_key\_down()}}
+{\footnotesize\ttfamily \label{input_8h_a0247347a29f6fbdc6bc523e0b81999f8} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} input\+\_\+was\+\_\+key\+\_\+down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}{keys}}}]{key}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/ded/input_8h_a0247347a29f6fbdc6bc523e0b81999f8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{input_8h_a15f2db5046f21794f16d24dcefd6cd61}\index{input.h@{input.h}!input\_was\_key\_up@{input\_was\_key\_up}}
+\index{input\_was\_key\_up@{input\_was\_key\_up}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{input\_was\_key\_up()}{input\_was\_key\_up()}}
+{\footnotesize\ttfamily \label{input_8h_a15f2db5046f21794f16d24dcefd6cd61} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} input\+\_\+was\+\_\+key\+\_\+up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input_8h_a3121b5e20cccb8e49edcbd3e9ac77712}{keys}}}]{key}{}\end{DoxyParamCaption})}
+

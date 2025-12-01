@@ -1,0 +1,13 @@
+<map id="quat_from_axis_angle" name="quat_from_axis_angle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,57,171,85"/>
+<area shape="rect" id="Node000002" href="$df/dc5/kmath_8c.html#a8cf427c73ea32b031ff5a5143d12c2f6" title=" " alt="" coords="254,5,306,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,54,241,28,237,31,143,59"/>
+<area shape="rect" id="Node000003" href="$df/dc5/kmath_8c.html#a4a89f4dff6daae5dd77b89ba6a3ecea2" title=" " alt="" coords="256,57,304,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,69,242,70,237,72,171,74"/>
+<area shape="rect" id="Node000004" href="$dc/dd0/kmath_8h.html#a80f41015fc07b514f4fedc2d76157e11" title=" " alt="" coords="219,109,341,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="142,83,214,104,209,105,142,88"/>
+<area shape="rect" id="Node000005" href="$dc/dd0/kmath_8h.html#a988ae268cd1fcd9e3cf6f37425e396ae" title=" " alt="" coords="389,109,492,137"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="341,121,376,123,371,123,341,126"/>
+<area shape="rect" id="Node000006" href="$df/dc5/kmath_8c.html#a44537c51868208d3bcfec4fe46db9bf4" title=" " alt="" coords="540,109,595,137"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="493,121,527,123,522,123,493,126"/>
+</map>

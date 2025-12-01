@@ -1,0 +1,9 @@
+<map id="event_system_state" name="event_system_state">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,307,159,335"/>
+<area shape="rect" id="Node000002" href="$db/d92/structevent__code__entry.html" title=" " alt="" coords="13,207,151,234"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,248,85,307,79,306,80,252"/>
+<area shape="rect" id="Node000003" href="$d8/d56/structregistered__event.html" title=" " alt="" coords="16,106,148,134"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="83,147,85,206,79,206,81,152"/>
+<area shape="rect" id="Node000004" href="$d8/d95/structevent__context.html" title=" " alt="" coords="25,5,139,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="83,46,85,106,79,105,81,51"/>
+</map>

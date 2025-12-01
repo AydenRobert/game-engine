@@ -1,0 +1,12 @@
+<map id="create_command_buffers" name="create_command_buffers">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,192,62"/>
+<area shape="rect" id="Node000002" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="502,5,621,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,32,190,20,239,11,300,6,347,6,454,11,489,15,484,15,454,16,347,11,300,11,240,16,192,25,147,37"/>
+<area shape="rect" id="Node000004" href="$d4/d8c/vulkan__command__buffer_8c.html#a174f0a4daec13ac82dbddd7d8d957950" title=" " alt="" coords="256,26,438,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="192,46,243,48,238,49,192,51"/>
+<area shape="rect" id="Node000005" href="$d4/d8c/vulkan__command__buffer_8c.html#afd9ae4003a9b698f447b74d43944bb93" title=" " alt="" coords="240,95,454,122"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="158,60,240,81,273,91,268,91,239,86,157,66"/>
+<area shape="rect" id="Node000003" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="669,5,844,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="622,17,657,19,651,19,622,22"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="438,33,489,29,484,30,439,39"/>
+</map>

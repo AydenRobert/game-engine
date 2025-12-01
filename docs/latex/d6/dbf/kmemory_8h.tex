@@ -1,0 +1,382 @@
+\doxysection{engine/src/core/kmemory.h File Reference}
+\hypertarget{kmemory_8h}{}\label{kmemory_8h}\index{engine/src/core/kmemory.h@{engine/src/core/kmemory.h}}
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+Include dependency graph for kmemory.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{d4/d76/kmemory_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc1/kmemory_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmemory__system__configuration}{memory\+\_\+system\+\_\+configuration}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct memory\+\_\+system\+\_\+configuration \mbox{\hyperlink{kmemory_8h_a5915b0addecd7820781d3323180bdaea}{memory\+\_\+system\+\_\+configuration}}
+\item 
+typedef enum \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942}{memory\+\_\+tag}} \mbox{\hyperlink{kmemory_8h_a69e3e71ce5a50648353639008c9e02e0}{memory\+\_\+tag}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942}{memory\+\_\+tag}} \{ \newline
+\mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942a81f0b69faa32aa334a658401d286752b}{MEMORY\+\_\+\+TAG\+\_\+\+UNKNOWN}}
+, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942a1134e739edef60742877641f494d4525}{MEMORY\+\_\+\+TAG\+\_\+\+ARRAY}}
+, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942ab81d2fb2b4b81e92373f3f6d51ea3f00}{MEMORY\+\_\+\+TAG\+\_\+\+LINEAR\+\_\+\+ALLOCATOR}}
+, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942a7abf6a78c081d5036466bd2b4264c69e}{MEMORY\+\_\+\+TAG\+\_\+\+DARRAY}}
+, \newline
+\mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942a4d71486f423a49db6e60b58b65f79340}{MEMORY\+\_\+\+TAG\+\_\+\+DICT}}
+, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942a6aed8fe38d265080aaf69095c2a5c497}{MEMORY\+\_\+\+TAG\+\_\+\+RING\+\_\+\+QUEUE}}
+, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942a6b6f409a865bf0decd2d570d6da91613}{MEMORY\+\_\+\+TAG\+\_\+\+BST}}
+, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942aae1f07552c5ef0e2c37261ef3d37c7e9}{MEMORY\+\_\+\+TAG\+\_\+\+STRING}}
+, \newline
+\mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942aeef2c46527926f73df4503d8d62eebb7}{MEMORY\+\_\+\+TAG\+\_\+\+APPLICATION}}
+, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942a9c030f90b7d843d4ac12636d429c6e49}{MEMORY\+\_\+\+TAG\+\_\+\+JOB}}
+, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942ae8c3a3ec7ac89336ae047b58ac5593a1}{MEMORY\+\_\+\+TAG\+\_\+\+TEXTURE}}
+, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942a708ec6d6308253f6fac9b47f934c57f3}{MEMORY\+\_\+\+TAG\+\_\+\+MATERIAL\+\_\+\+INSTANCE}}
+, \newline
+\mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942a7b4c1e90432c602af81107af1c9cf1b8}{MEMORY\+\_\+\+TAG\+\_\+\+RENDERER}}
+, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942ae67646a8d6a644c889a4a51cbf835b26}{MEMORY\+\_\+\+TAG\+\_\+\+GAME}}
+, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942ac92c941b0fd8366cc6f2acacdbe32c35}{MEMORY\+\_\+\+TAG\+\_\+\+TRANSFORM}}
+, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942ae5a66503c5643a2ece53a5e61217b37a}{MEMORY\+\_\+\+TAG\+\_\+\+ENTITY}}
+, \newline
+\mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942ac5c23deddfa1ce60e0b73d1bf99af20e}{MEMORY\+\_\+\+TAG\+\_\+\+ENTITY\+\_\+\+NODE}}
+, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942a5abbd9631a24805c5770e2c81b72bac5}{MEMORY\+\_\+\+TAG\+\_\+\+SCENE}}
+, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942ace51437c5832765c883cbae625e248b1}{MEMORY\+\_\+\+TAG\+\_\+\+MAX\+\_\+\+TAGS}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kmemory_8h_a365fa0de016751708bc4c612d21285eb}{memory\+\_\+system\+\_\+initialize}} (\mbox{\hyperlink{structmemory__system__configuration}{memory\+\_\+system\+\_\+configuration}} config)
+\item 
+void \mbox{\hyperlink{kmemory_8h_a8845f6e2c47612fb7b3fa6d88a26a03b}{memory\+\_\+system\+\_\+shutdown}} ()
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kmemory_8h_a35f22575c2b4fcbda423b6108e352b15}{kallocate}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942}{memory\+\_\+tag}} tag)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \mbox{\hyperlink{kmemory_8h_a6b55b65a2f2d473dac0d8ff4605a44fb}{kfree}} (void \texorpdfstring{$\ast$}{*}block, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size, \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942}{memory\+\_\+tag}} tag)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kmemory_8h_af7a3a9859ec3104c490238242dae4ed6}{kzero\+\_\+memory}} (void \texorpdfstring{$\ast$}{*}block, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kmemory_8h_ae88e143a36677919fee16bdf0f11bc79}{kcopy\+\_\+memory}} (void \texorpdfstring{$\ast$}{*}dest, const void \texorpdfstring{$\ast$}{*}source, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kmemory_8h_a9b0af42158bf4d4a8db3d25d284b83f4}{kset\+\_\+memory}} (void \texorpdfstring{$\ast$}{*}dest, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} value, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{kmemory_8h_afab51208fe57736ae8ff62918c8c3e69}{get\+\_\+memory\+\_\+usage\+\_\+str}} ()
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{kmemory_8h_ae08429b1ce06f06ef75ff0eafc823887}{get\+\_\+memory\+\_\+alloc\+\_\+count}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{kmemory_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{kmemory_8h_a5915b0addecd7820781d3323180bdaea}\index{kmemory.h@{kmemory.h}!memory\_system\_configuration@{memory\_system\_configuration}}
+\index{memory\_system\_configuration@{memory\_system\_configuration}!kmemory.h@{kmemory.h}}
+\doxysubsubsection{\texorpdfstring{memory\_system\_configuration}{memory\_system\_configuration}}
+{\footnotesize\ttfamily \label{kmemory_8h_a5915b0addecd7820781d3323180bdaea} 
+typedef struct memory\+\_\+system\+\_\+configuration memory\+\_\+system\+\_\+configuration}
+
+\Hypertarget{kmemory_8h_a69e3e71ce5a50648353639008c9e02e0}\index{kmemory.h@{kmemory.h}!memory\_tag@{memory\_tag}}
+\index{memory\_tag@{memory\_tag}!kmemory.h@{kmemory.h}}
+\doxysubsubsection{\texorpdfstring{memory\_tag}{memory\_tag}}
+{\footnotesize\ttfamily \label{kmemory_8h_a69e3e71ce5a50648353639008c9e02e0} 
+typedef enum \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942}{memory\+\_\+tag}} \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942}{memory\+\_\+tag}}}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{kmemory_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942}\index{kmemory.h@{kmemory.h}!memory\_tag@{memory\_tag}}
+\index{memory\_tag@{memory\_tag}!kmemory.h@{kmemory.h}}
+\doxysubsubsection{\texorpdfstring{memory\_tag}{memory\_tag}}
+{\footnotesize\ttfamily \label{kmemory_8h_a37d016888ad6b70195335004614d4942} 
+enum \mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942}{memory\+\_\+tag}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_UNKNOWN@{MEMORY\_TAG\_UNKNOWN}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_UNKNOWN@{MEMORY\_TAG\_UNKNOWN}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942a81f0b69faa32aa334a658401d286752b}\label{kmemory_8h_a37d016888ad6b70195335004614d4942a81f0b69faa32aa334a658401d286752b} 
+MEMORY\+\_\+\+TAG\+\_\+\+UNKNOWN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_ARRAY@{MEMORY\_TAG\_ARRAY}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_ARRAY@{MEMORY\_TAG\_ARRAY}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942a1134e739edef60742877641f494d4525}\label{kmemory_8h_a37d016888ad6b70195335004614d4942a1134e739edef60742877641f494d4525} 
+MEMORY\+\_\+\+TAG\+\_\+\+ARRAY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_LINEAR\_ALLOCATOR@{MEMORY\_TAG\_LINEAR\_ALLOCATOR}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_LINEAR\_ALLOCATOR@{MEMORY\_TAG\_LINEAR\_ALLOCATOR}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942ab81d2fb2b4b81e92373f3f6d51ea3f00}\label{kmemory_8h_a37d016888ad6b70195335004614d4942ab81d2fb2b4b81e92373f3f6d51ea3f00} 
+MEMORY\+\_\+\+TAG\+\_\+\+LINEAR\+\_\+\+ALLOCATOR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_DARRAY@{MEMORY\_TAG\_DARRAY}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_DARRAY@{MEMORY\_TAG\_DARRAY}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942a7abf6a78c081d5036466bd2b4264c69e}\label{kmemory_8h_a37d016888ad6b70195335004614d4942a7abf6a78c081d5036466bd2b4264c69e} 
+MEMORY\+\_\+\+TAG\+\_\+\+DARRAY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_DICT@{MEMORY\_TAG\_DICT}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_DICT@{MEMORY\_TAG\_DICT}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942a4d71486f423a49db6e60b58b65f79340}\label{kmemory_8h_a37d016888ad6b70195335004614d4942a4d71486f423a49db6e60b58b65f79340} 
+MEMORY\+\_\+\+TAG\+\_\+\+DICT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_RING\_QUEUE@{MEMORY\_TAG\_RING\_QUEUE}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_RING\_QUEUE@{MEMORY\_TAG\_RING\_QUEUE}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942a6aed8fe38d265080aaf69095c2a5c497}\label{kmemory_8h_a37d016888ad6b70195335004614d4942a6aed8fe38d265080aaf69095c2a5c497} 
+MEMORY\+\_\+\+TAG\+\_\+\+RING\+\_\+\+QUEUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_BST@{MEMORY\_TAG\_BST}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_BST@{MEMORY\_TAG\_BST}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942a6b6f409a865bf0decd2d570d6da91613}\label{kmemory_8h_a37d016888ad6b70195335004614d4942a6b6f409a865bf0decd2d570d6da91613} 
+MEMORY\+\_\+\+TAG\+\_\+\+BST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_STRING@{MEMORY\_TAG\_STRING}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_STRING@{MEMORY\_TAG\_STRING}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942aae1f07552c5ef0e2c37261ef3d37c7e9}\label{kmemory_8h_a37d016888ad6b70195335004614d4942aae1f07552c5ef0e2c37261ef3d37c7e9} 
+MEMORY\+\_\+\+TAG\+\_\+\+STRING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_APPLICATION@{MEMORY\_TAG\_APPLICATION}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_APPLICATION@{MEMORY\_TAG\_APPLICATION}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942aeef2c46527926f73df4503d8d62eebb7}\label{kmemory_8h_a37d016888ad6b70195335004614d4942aeef2c46527926f73df4503d8d62eebb7} 
+MEMORY\+\_\+\+TAG\+\_\+\+APPLICATION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_JOB@{MEMORY\_TAG\_JOB}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_JOB@{MEMORY\_TAG\_JOB}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942a9c030f90b7d843d4ac12636d429c6e49}\label{kmemory_8h_a37d016888ad6b70195335004614d4942a9c030f90b7d843d4ac12636d429c6e49} 
+MEMORY\+\_\+\+TAG\+\_\+\+JOB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_TEXTURE@{MEMORY\_TAG\_TEXTURE}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_TEXTURE@{MEMORY\_TAG\_TEXTURE}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942ae8c3a3ec7ac89336ae047b58ac5593a1}\label{kmemory_8h_a37d016888ad6b70195335004614d4942ae8c3a3ec7ac89336ae047b58ac5593a1} 
+MEMORY\+\_\+\+TAG\+\_\+\+TEXTURE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_MATERIAL\_INSTANCE@{MEMORY\_TAG\_MATERIAL\_INSTANCE}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_MATERIAL\_INSTANCE@{MEMORY\_TAG\_MATERIAL\_INSTANCE}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942a708ec6d6308253f6fac9b47f934c57f3}\label{kmemory_8h_a37d016888ad6b70195335004614d4942a708ec6d6308253f6fac9b47f934c57f3} 
+MEMORY\+\_\+\+TAG\+\_\+\+MATERIAL\+\_\+\+INSTANCE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_RENDERER@{MEMORY\_TAG\_RENDERER}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_RENDERER@{MEMORY\_TAG\_RENDERER}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942a7b4c1e90432c602af81107af1c9cf1b8}\label{kmemory_8h_a37d016888ad6b70195335004614d4942a7b4c1e90432c602af81107af1c9cf1b8} 
+MEMORY\+\_\+\+TAG\+\_\+\+RENDERER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_GAME@{MEMORY\_TAG\_GAME}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_GAME@{MEMORY\_TAG\_GAME}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942ae67646a8d6a644c889a4a51cbf835b26}\label{kmemory_8h_a37d016888ad6b70195335004614d4942ae67646a8d6a644c889a4a51cbf835b26} 
+MEMORY\+\_\+\+TAG\+\_\+\+GAME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_TRANSFORM@{MEMORY\_TAG\_TRANSFORM}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_TRANSFORM@{MEMORY\_TAG\_TRANSFORM}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942ac92c941b0fd8366cc6f2acacdbe32c35}\label{kmemory_8h_a37d016888ad6b70195335004614d4942ac92c941b0fd8366cc6f2acacdbe32c35} 
+MEMORY\+\_\+\+TAG\+\_\+\+TRANSFORM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_ENTITY@{MEMORY\_TAG\_ENTITY}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_ENTITY@{MEMORY\_TAG\_ENTITY}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942ae5a66503c5643a2ece53a5e61217b37a}\label{kmemory_8h_a37d016888ad6b70195335004614d4942ae5a66503c5643a2ece53a5e61217b37a} 
+MEMORY\+\_\+\+TAG\+\_\+\+ENTITY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_ENTITY\_NODE@{MEMORY\_TAG\_ENTITY\_NODE}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_ENTITY\_NODE@{MEMORY\_TAG\_ENTITY\_NODE}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942ac5c23deddfa1ce60e0b73d1bf99af20e}\label{kmemory_8h_a37d016888ad6b70195335004614d4942ac5c23deddfa1ce60e0b73d1bf99af20e} 
+MEMORY\+\_\+\+TAG\+\_\+\+ENTITY\+\_\+\+NODE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_SCENE@{MEMORY\_TAG\_SCENE}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_SCENE@{MEMORY\_TAG\_SCENE}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942a5abbd9631a24805c5770e2c81b72bac5}\label{kmemory_8h_a37d016888ad6b70195335004614d4942a5abbd9631a24805c5770e2c81b72bac5} 
+MEMORY\+\_\+\+TAG\+\_\+\+SCENE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMORY\_TAG\_MAX\_TAGS@{MEMORY\_TAG\_MAX\_TAGS}!kmemory.h@{kmemory.h}}\index{kmemory.h@{kmemory.h}!MEMORY\_TAG\_MAX\_TAGS@{MEMORY\_TAG\_MAX\_TAGS}}}\Hypertarget{kmemory_8h_a37d016888ad6b70195335004614d4942ace51437c5832765c883cbae625e248b1}\label{kmemory_8h_a37d016888ad6b70195335004614d4942ace51437c5832765c883cbae625e248b1} 
+MEMORY\+\_\+\+TAG\+\_\+\+MAX\+\_\+\+TAGS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{kmemory_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{kmemory_8h_ae08429b1ce06f06ef75ff0eafc823887}\index{kmemory.h@{kmemory.h}!get\_memory\_alloc\_count@{get\_memory\_alloc\_count}}
+\index{get\_memory\_alloc\_count@{get\_memory\_alloc\_count}!kmemory.h@{kmemory.h}}
+\doxysubsubsection{\texorpdfstring{get\_memory\_alloc\_count()}{get\_memory\_alloc\_count()}}
+{\footnotesize\ttfamily \label{kmemory_8h_ae08429b1ce06f06ef75ff0eafc823887} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} get\+\_\+memory\+\_\+alloc\+\_\+count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dbf/kmemory_8h_ae08429b1ce06f06ef75ff0eafc823887_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmemory_8h_afab51208fe57736ae8ff62918c8c3e69}\index{kmemory.h@{kmemory.h}!get\_memory\_usage\_str@{get\_memory\_usage\_str}}
+\index{get\_memory\_usage\_str@{get\_memory\_usage\_str}!kmemory.h@{kmemory.h}}
+\doxysubsubsection{\texorpdfstring{get\_memory\_usage\_str()}{get\_memory\_usage\_str()}}
+{\footnotesize\ttfamily \label{kmemory_8h_afab51208fe57736ae8ff62918c8c3e69} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} char \texorpdfstring{$\ast$}{*} get\+\_\+memory\+\_\+usage\+\_\+str (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dbf/kmemory_8h_afab51208fe57736ae8ff62918c8c3e69_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dbf/kmemory_8h_afab51208fe57736ae8ff62918c8c3e69_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmemory_8h_a35f22575c2b4fcbda423b6108e352b15}\index{kmemory.h@{kmemory.h}!kallocate@{kallocate}}
+\index{kallocate@{kallocate}!kmemory.h@{kmemory.h}}
+\doxysubsubsection{\texorpdfstring{kallocate()}{kallocate()}}
+{\footnotesize\ttfamily \label{kmemory_8h_a35f22575c2b4fcbda423b6108e352b15} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \texorpdfstring{$\ast$}{*} kallocate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{, }\item[{\mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942}{memory\+\_\+tag}}}]{tag}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dbf/kmemory_8h_a35f22575c2b4fcbda423b6108e352b15_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dbf/kmemory_8h_a35f22575c2b4fcbda423b6108e352b15_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmemory_8h_ae88e143a36677919fee16bdf0f11bc79}\index{kmemory.h@{kmemory.h}!kcopy\_memory@{kcopy\_memory}}
+\index{kcopy\_memory@{kcopy\_memory}!kmemory.h@{kmemory.h}}
+\doxysubsubsection{\texorpdfstring{kcopy\_memory()}{kcopy\_memory()}}
+{\footnotesize\ttfamily \label{kmemory_8h_ae88e143a36677919fee16bdf0f11bc79} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \texorpdfstring{$\ast$}{*} kcopy\+\_\+memory (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{source}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{d6/dbf/kmemory_8h_ae88e143a36677919fee16bdf0f11bc79_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dbf/kmemory_8h_ae88e143a36677919fee16bdf0f11bc79_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmemory_8h_a6b55b65a2f2d473dac0d8ff4605a44fb}\index{kmemory.h@{kmemory.h}!kfree@{kfree}}
+\index{kfree@{kfree}!kmemory.h@{kmemory.h}}
+\doxysubsubsection{\texorpdfstring{kfree()}{kfree()}}
+{\footnotesize\ttfamily \label{kmemory_8h_a6b55b65a2f2d473dac0d8ff4605a44fb} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void kfree (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{block}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{, }\item[{\mbox{\hyperlink{kmemory_8h_a37d016888ad6b70195335004614d4942}{memory\+\_\+tag}}}]{tag}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dbf/kmemory_8h_a6b55b65a2f2d473dac0d8ff4605a44fb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dbf/kmemory_8h_a6b55b65a2f2d473dac0d8ff4605a44fb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmemory_8h_a9b0af42158bf4d4a8db3d25d284b83f4}\index{kmemory.h@{kmemory.h}!kset\_memory@{kset\_memory}}
+\index{kset\_memory@{kset\_memory}!kmemory.h@{kmemory.h}}
+\doxysubsubsection{\texorpdfstring{kset\_memory()}{kset\_memory()}}
+{\footnotesize\ttfamily \label{kmemory_8h_a9b0af42158bf4d4a8db3d25d284b83f4} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \texorpdfstring{$\ast$}{*} kset\+\_\+memory (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{dest}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{value}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{d6/dbf/kmemory_8h_a9b0af42158bf4d4a8db3d25d284b83f4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dbf/kmemory_8h_a9b0af42158bf4d4a8db3d25d284b83f4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmemory_8h_af7a3a9859ec3104c490238242dae4ed6}\index{kmemory.h@{kmemory.h}!kzero\_memory@{kzero\_memory}}
+\index{kzero\_memory@{kzero\_memory}!kmemory.h@{kmemory.h}}
+\doxysubsubsection{\texorpdfstring{kzero\_memory()}{kzero\_memory()}}
+{\footnotesize\ttfamily \label{kmemory_8h_af7a3a9859ec3104c490238242dae4ed6} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \texorpdfstring{$\ast$}{*} kzero\+\_\+memory (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{block}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{d6/dbf/kmemory_8h_af7a3a9859ec3104c490238242dae4ed6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d6/dbf/kmemory_8h_af7a3a9859ec3104c490238242dae4ed6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmemory_8h_a365fa0de016751708bc4c612d21285eb}\index{kmemory.h@{kmemory.h}!memory\_system\_initialize@{memory\_system\_initialize}}
+\index{memory\_system\_initialize@{memory\_system\_initialize}!kmemory.h@{kmemory.h}}
+\doxysubsubsection{\texorpdfstring{memory\_system\_initialize()}{memory\_system\_initialize()}}
+{\footnotesize\ttfamily \label{kmemory_8h_a365fa0de016751708bc4c612d21285eb} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} memory\+\_\+system\+\_\+initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmemory__system__configuration}{memory\+\_\+system\+\_\+configuration}}}]{config}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dbf/kmemory_8h_a365fa0de016751708bc4c612d21285eb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dbf/kmemory_8h_a365fa0de016751708bc4c612d21285eb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{kmemory_8h_a8845f6e2c47612fb7b3fa6d88a26a03b}\index{kmemory.h@{kmemory.h}!memory\_system\_shutdown@{memory\_system\_shutdown}}
+\index{memory\_system\_shutdown@{memory\_system\_shutdown}!kmemory.h@{kmemory.h}}
+\doxysubsubsection{\texorpdfstring{memory\_system\_shutdown()}{memory\_system\_shutdown()}}
+{\footnotesize\ttfamily \label{kmemory_8h_a8845f6e2c47612fb7b3fa6d88a26a03b} 
+void memory\+\_\+system\+\_\+shutdown (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dbf/kmemory_8h_a8845f6e2c47612fb7b3fa6d88a26a03b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dbf/kmemory_8h_a8845f6e2c47612fb7b3fa6d88a26a03b_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,14 @@
+var searchData=
+[
+  ['quat_5fconjugate_0',['quat_conjugate',['../dc/dd0/kmath_8h.html#a07c8b0a7152d96143691ca040b8c0d23',1,'kmath.h']]],
+  ['quat_5fdot_1',['quat_dot',['../dc/dd0/kmath_8h.html#a8a93afbc27ca642569857bd4a766f27b',1,'kmath.h']]],
+  ['quat_5ffrom_5faxis_5fangle_2',['quat_from_axis_angle',['../dc/dd0/kmath_8h.html#adfcab382a3cbf4493982e93fda95e257',1,'kmath.h']]],
+  ['quat_5fidentity_3',['quat_identity',['../dc/dd0/kmath_8h.html#a6edab62f710b9718c0590664774b1845',1,'kmath.h']]],
+  ['quat_5finverse_4',['quat_inverse',['../dc/dd0/kmath_8h.html#a5c05ed1e69ca8563590cc8718fca5435',1,'kmath.h']]],
+  ['quat_5fmul_5',['quat_mul',['../dc/dd0/kmath_8h.html#aac6db5c9028952d279408093822b4cbd',1,'kmath.h']]],
+  ['quat_5fnormal_6',['quat_normal',['../dc/dd0/kmath_8h.html#a988ae268cd1fcd9e3cf6f37425e396ae',1,'kmath.h']]],
+  ['quat_5fnormalize_7',['quat_normalize',['../dc/dd0/kmath_8h.html#a80f41015fc07b514f4fedc2d76157e11',1,'kmath.h']]],
+  ['quat_5fslerp_8',['quat_slerp',['../dc/dd0/kmath_8h.html#aef737c7e466f76a8e93d4a8ee72d9b3a',1,'kmath.h']]],
+  ['quat_5fto_5fmat4_9',['quat_to_mat4',['../dc/dd0/kmath_8h.html#ac84936abc187f178a2228f699a5b5a9d',1,'kmath.h']]],
+  ['quat_5fto_5frotation_5fmatrix_10',['quat_to_rotation_matrix',['../dc/dd0/kmath_8h.html#a70c81ca5e2bcb020031dc593c9969609',1,'kmath.h']]]
+];

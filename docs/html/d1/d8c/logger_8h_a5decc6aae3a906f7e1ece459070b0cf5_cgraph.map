@@ -1,0 +1,27 @@
+<map id="log_output" name="log_output">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,195,96,222"/>
+<area shape="rect" id="Node000002" href="$d1/d22/logger_8c.html#ac215142da536869ac02894d0198bb88f" title=" " alt="" coords="159,61,302,89"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,193,94,153,142,110,175,94,172,98,145,115,98,156,65,196"/>
+<area shape="rect" id="Node000004" href="$de/d03/platform_8h.html#adee3e77de1e3374a118e9ebc150c9800" title=" " alt="" coords="366,109,540,154"/>
+<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="70,192,103,171,143,154,195,141,249,133,353,127,348,130,250,138,196,146,145,159,105,176,73,196"/>
+<area shape="rect" id="Node000006" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="171,168,290,196"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="95,199,158,191,154,195,97,204"/>
+<area shape="rect" id="Node000008" href="$de/d03/platform_8h.html#ac352c68fed21ee19eff9a165d1648c4c" title=" " alt="" coords="144,220,318,248"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="96,212,130,218,126,221,97,217"/>
+<area shape="rect" id="Node000009" href="$d6/d19/kstring_8c.html#a86babd936b82eaf4229e77406968f74d" title=" " alt="" coords="176,272,286,300"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="75,220,145,257,165,266,160,267,143,262,75,226"/>
+<area shape="rect" id="Node000010" href="$d6/d19/kstring_8c.html#a7d32c70521c217a716c586f145dbb4d9" title=" " alt="" coords="391,297,515,325"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="60,220,93,267,117,291,145,309,202,327,263,333,323,332,373,328,379,328,323,337,263,338,201,332,143,314,113,295,89,271,58,225"/>
+<area shape="rect" id="Node000003" href="$df/d45/filesystem_8c.html#a6c1efae6bddf1748d47fdc18bdd8fd18" title="Writes provided data to a file." alt="" coords="388,5,518,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="288,58,383,36,378,39,290,63"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="288,87,353,105,348,106,289,92"/>
+<area shape="rect" id="Node000005" href="$d6/d19/kstring_8c.html#a3ac8f7f54a3429135da71637d268e6c9" title=" " alt="" coords="400,57,506,85"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="302,71,387,71,382,74,304,76"/>
+<area shape="rect" id="Node000007" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="366,177,540,205"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="291,182,353,186,348,188,291,187"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="286,289,378,302,373,303,286,295"/>
+<area shape="rect" id="Node000011" href="$d3/d3c/kmemory_8c.html#ae88e143a36677919fee16bdf0f11bc79" title=" " alt="" coords="588,297,711,325"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="516,309,576,311,570,311,516,314"/>
+<area shape="rect" id="Node000012" href="$de/d03/platform_8h.html#a15258bb22b902725b1fbf405463ed07d" title=" " alt="" coords="759,297,936,325"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="711,309,745,311,740,311,711,314"/>
+</map>

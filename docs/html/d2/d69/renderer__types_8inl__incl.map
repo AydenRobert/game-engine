@@ -1,0 +1,13 @@
+<map id="engine/src/renderer/renderer_types.inl" name="engine/src/renderer/renderer_types.inl">
+<area shape="rect" id="Node000001" title=" " alt="" coords="20,5,167,50"/>
+<area shape="rect" id="Node000002" href="$d8/db0/defines_8h.html" title=" " alt="" coords="5,266,86,294"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,50,53,252,48,251,87,50"/>
+<area shape="rect" id="Node000003" href="$d4/d7e/math__types_8h.html" title=" " alt="" coords="81,191,229,218"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="97,48,107,93,121,142,140,178,134,178,116,144,102,94,96,53"/>
+<area shape="rect" id="Node000005" href="$de/d9c/resource__types_8h.html" title=" " alt="" coords="131,98,275,143"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="119,48,168,87,163,89,119,53"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="138,218,79,260,76,255,133,219"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="112,266,198,294"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="157,217,157,252,152,249,153,221"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="192,141,172,179,168,175,188,145"/>
+</map>

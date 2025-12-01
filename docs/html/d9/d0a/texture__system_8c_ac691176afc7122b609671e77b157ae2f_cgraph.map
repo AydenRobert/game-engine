@@ -1,0 +1,15 @@
+<map id="load_texture" name="load_texture">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,109,109,137"/>
+<area shape="rect" id="Node000002" href="$d0/dcc/renderer__frontend_8c.html#a576891b6b0f8e2de38a5c6def3823db9" title=" " alt="" coords="161,5,339,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,107,107,75,155,43,174,37,170,41,158,48,110,80,74,111"/>
+<area shape="rect" id="Node000003" href="$d0/dcc/renderer__frontend_8c.html#a07cb43f363df0240af713c483b72308f" title=" " alt="" coords="157,57,343,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,107,183,88,179,91,110,112"/>
+<area shape="rect" id="Node000004" href="$d2/d8b/resource__system_8c.html#a6ca971dda0f7cd6545a27e30ae63e46d" title=" " alt="" coords="166,109,334,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="109,121,153,122,149,125,110,126"/>
+<area shape="rect" id="Node000006" href="$d2/d8b/resource__system_8c.html#af2ee144059d829688ff5cfe7806ddeac" title=" " alt="" coords="158,161,342,189"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="109,134,184,155,179,158,109,140"/>
+<area shape="rect" id="Node000007" href="$d6/d19/kstring_8c.html#a9e48021ce5b39920715bfaa5d92613bc" title=" " alt="" coords="198,213,302,241"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="73,135,110,167,158,198,186,212,180,212,155,203,107,171,72,140"/>
+<area shape="rect" id="Node000005" href="$d2/d8b/resource__system_8c.html#add0733bf358721495904be57107031d6" title=" " alt="" coords="391,109,440,137"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="333,121,378,123,373,124,334,126"/>
+</map>

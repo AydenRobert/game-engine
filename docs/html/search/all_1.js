@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['a_0',['a',['../df/dbe/unionvec4__u.html#a1cdd7ac041888304efc9c84618594a97',1,'vec4_u']]],
+  ['acknowledgements_1',['🙏 Acknowledgements',['../d0/d30/md_README.html#autotoc_md15',1,'']]],
+  ['alloc_5fcount_2',['alloc_count',['../d3/d11/structmemory__system__state.html#abcab7554a6b06b2f7ed8ee758ef417cb',1,'memory_system_state::alloc_count'],['../d1/dcb/game_8c.html#ad3787aec5f4cc39ed611ae8d3157ee6c',1,'alloc_count:&#160;game.c']]],
+  ['allocated_3',['allocated',['../d3/d8d/structinternal__state.html#aae47d2cf24d82c4d8d78e5830b25137a',1,'internal_state']]],
+  ['allocator_4',['allocator',['../d3/d11/structmemory__system__state.html#aa68790118a68fd31245cbd99830b108d',1,'memory_system_state::allocator'],['../d9/dc9/structvulkan__context.html#a8922bfe5172973875c0420bc010344cc',1,'vulkan_context::allocator']]],
+  ['allocator_5fblock_5',['allocator_block',['../d3/d11/structmemory__system__state.html#a6238b0db6347cc1a9cd1b54133de38c4',1,'memory_system_state']]],
+  ['allocator_5fmemory_5frequirement_6',['allocator_memory_requirement',['../d3/d11/structmemory__system__state.html#a0f203075eb41c0e3f034f37bb5ccce87',1,'memory_system_state']]],
+  ['api_7',['API',['../d7/dc3/page_iface_xdg_wm_base.html#page_iface_xdg_wm_base_api',1,'API'],['../dd/df7/page_iface_xdg_positioner.html#page_iface_xdg_positioner_api',1,'API'],['../dc/da6/page_iface_xdg_surface.html#page_iface_xdg_surface_api',1,'API'],['../d0/deb/page_iface_xdg_toplevel.html#page_iface_xdg_toplevel_api',1,'API'],['../dd/d85/page_iface_xdg_popup.html#page_iface_xdg_popup_api',1,'API']]],
+  ['app_5fconfig_8',['app_config',['../d9/db7/structgame.html#a12c0bdd534b736ca685c7ef91b17c80d',1,'game']]],
+  ['app_5fstate_9',['app_state',['../d4/d8b/application_8c.html#aa1db732285c87eacb6563955bff04a73',1,'application.c']]],
+  ['append_5fto_5flog_5ffile_10',['append_to_log_file',['../d1/d22/logger_8c.html#ac215142da536869ac02894d0198bb88f',1,'logger.c']]],
+  ['application_2ec_11',['application.c',['../d4/d8b/application_8c.html',1,'']]],
+  ['application_2eh_12',['application.h',['../db/d32/application_8h.html',1,'']]],
+  ['application_5fconfig_13',['application_config',['../de/db0/structapplication__config.html',1,'application_config'],['../db/d32/application_8h.html#a0d5601d102f2aa559126417368531828',1,'application_config:&#160;application.h']]],
+  ['application_5fcreate_14',['application_create',['../d4/d8b/application_8c.html#a2ce02f6d4bd01f2d130aef9cd460cf6a',1,'application_create(game *game_inst):&#160;application.c'],['../db/d32/application_8h.html#a2ce02f6d4bd01f2d130aef9cd460cf6a',1,'application_create(game *game_inst):&#160;application.c']]],
+  ['application_5fget_5fframebuffer_5fsize_15',['application_get_framebuffer_size',['../d4/d8b/application_8c.html#a8b27580c0175a587af977c52f49cb92f',1,'application_get_framebuffer_size(u32 *width, u32 *height):&#160;application.c'],['../db/d32/application_8h.html#a8b27580c0175a587af977c52f49cb92f',1,'application_get_framebuffer_size(u32 *width, u32 *height):&#160;application.c']]],
+  ['application_5fon_5fevent_16',['application_on_event',['../d4/d8b/application_8c.html#a464af30d5e798df5a25d3c211d5c120f',1,'application.c']]],
+  ['application_5fon_5fkey_17',['application_on_key',['../d4/d8b/application_8c.html#a193a750e12452924346788eb62a3a327',1,'application.c']]],
+  ['application_5fon_5fresized_18',['application_on_resized',['../d4/d8b/application_8c.html#a0aadbf7eebc34521742f68cbcc97e4c6',1,'application.c']]],
+  ['application_5frun_19',['application_run',['../d4/d8b/application_8c.html#ad6aaa3596896dacf8de1439cc34a264b',1,'application_run():&#160;application.c'],['../db/d32/application_8h.html#ad6aaa3596896dacf8de1439cc34a264b',1,'application_run():&#160;application.c']]],
+  ['application_5fstate_20',['application_state',['../dc/d7e/structapplication__state.html',1,'application_state'],['../d9/db7/structgame.html#abbde50654ea1c9e81c5eb9611b0dc7ee',1,'game::application_state'],['../d4/d8b/application_8c.html#a25603a9a2e5d3bf9c73d2bd2c3428655',1,'application_state:&#160;application.c']]],
+  ['asserts_2eh_21',['asserts.h',['../da/d96/asserts_8h.html',1,'']]],
+  ['asset_5fbase_5fpath_22',['asset_base_path',['../df/db5/structresource__system__config.html#a4c3842faae9f647923a1c60e79809239',1,'resource_system_config']]],
+  ['attribute_5fcount_23',['ATTRIBUTE_COUNT',['../d2/d8c/vulkan__material__shader_8c.html#a56289c7c829da6e2f4716327dd9352b2',1,'ATTRIBUTE_COUNT:&#160;vulkan_material_shader.c'],['../da/d35/vulkan__ui__shader_8c.html#a56289c7c829da6e2f4716327dd9352b2',1,'ATTRIBUTE_COUNT:&#160;vulkan_ui_shader.c']]],
+  ['auto_5frelease_24',['auto_release',['../dc/d5f/structmaterial__config.html#aac5176ac81b536e3069286a49ebc09be',1,'material_config::auto_release'],['../da/d73/structgeometry__reference.html#ae33c8ac2b76a6acc215b706f48d639ba',1,'geometry_reference::auto_release'],['../d1/d31/structmaterial__reference.html#ae286fcd2cae0e228aef7b853ea089e72',1,'material_reference::auto_release'],['../d2/d42/structtexture__reference.html#a45e8f00d28d2e0caa1bdd185b564fb99',1,'texture_reference::auto_release']]]
+];

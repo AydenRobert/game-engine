@@ -1,0 +1,68 @@
+\doxysection{engine/src/platform/platform\+\_\+linux\+\_\+x11.h File Reference}
+\hypertarget{platform__linux__x11_8h}{}\label{platform__linux__x11_8h}\index{engine/src/platform/platform\_linux\_x11.h@{engine/src/platform/platform\_linux\_x11.h}}
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+{\ttfamily \#include "{}platform/platform\+\_\+linux.\+h"{}}\newline
+Include dependency graph for platform\+\_\+linux\+\_\+x11.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{d0/d61/platform__linux__x11_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{d8/d10/platform__linux__x11_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{platform__linux__x11_8h_a2d7c7dcc96d86245789f8abdbab90eb9}{platform\+\_\+startup\+\_\+x11}} (\mbox{\hyperlink{structdisplay__state}{display\+\_\+state}} \texorpdfstring{$\ast$}{*}disp\+\_\+state, const char \texorpdfstring{$\ast$}{*}application\+\_\+name, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} x, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} y, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} width, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} height)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \mbox{\hyperlink{platform__linux__x11_8h_ae7123209f7a18e85054ea703cbe141f0}{platform\+\_\+shutdown\+\_\+x11}} (\mbox{\hyperlink{structdisplay__state}{display\+\_\+state}} \texorpdfstring{$\ast$}{*}disp\+\_\+state)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{platform__linux__x11_8h_a90034f534a75ed056a574a60667c585f}{platform\+\_\+pump\+\_\+messages\+\_\+x11}} (\mbox{\hyperlink{structdisplay__state}{display\+\_\+state}} \texorpdfstring{$\ast$}{*}disp\+\_\+state)
+\item 
+void \mbox{\hyperlink{platform__linux__x11_8h_a961d9437b60b746c4c31af0cc17646e1}{platform\+\_\+get\+\_\+required\+\_\+extension\+\_\+names\+\_\+x11}} (const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}names\+\_\+darray)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{platform__linux__x11_8h_a4b7e1c432bd7a9a4b23e3c486f6baa23}{platform\+\_\+create\+\_\+vulkan\+\_\+surface\+\_\+x11}} (\mbox{\hyperlink{structdisplay__state}{display\+\_\+state}} \texorpdfstring{$\ast$}{*}disp\+\_\+state, struct \mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}})
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{platform__linux__x11_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{platform__linux__x11_8h_a4b7e1c432bd7a9a4b23e3c486f6baa23}\index{platform\_linux\_x11.h@{platform\_linux\_x11.h}!platform\_create\_vulkan\_surface\_x11@{platform\_create\_vulkan\_surface\_x11}}
+\index{platform\_create\_vulkan\_surface\_x11@{platform\_create\_vulkan\_surface\_x11}!platform\_linux\_x11.h@{platform\_linux\_x11.h}}
+\doxysubsubsection{\texorpdfstring{platform\_create\_vulkan\_surface\_x11()}{platform\_create\_vulkan\_surface\_x11()}}
+{\footnotesize\ttfamily \label{platform__linux__x11_8h_a4b7e1c432bd7a9a4b23e3c486f6baa23} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} platform\+\_\+create\+\_\+vulkan\+\_\+surface\+\_\+x11 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdisplay__state}{display\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{disp\+\_\+state}{, }\item[{struct \mbox{\hyperlink{structvulkan__context}{vulkan\+\_\+context}} \texorpdfstring{$\ast$}{*}}]{context}{}\end{DoxyParamCaption})}
+
+\Hypertarget{platform__linux__x11_8h_a961d9437b60b746c4c31af0cc17646e1}\index{platform\_linux\_x11.h@{platform\_linux\_x11.h}!platform\_get\_required\_extension\_names\_x11@{platform\_get\_required\_extension\_names\_x11}}
+\index{platform\_get\_required\_extension\_names\_x11@{platform\_get\_required\_extension\_names\_x11}!platform\_linux\_x11.h@{platform\_linux\_x11.h}}
+\doxysubsubsection{\texorpdfstring{platform\_get\_required\_extension\_names\_x11()}{platform\_get\_required\_extension\_names\_x11()}}
+{\footnotesize\ttfamily \label{platform__linux__x11_8h_a961d9437b60b746c4c31af0cc17646e1} 
+void platform\+\_\+get\+\_\+required\+\_\+extension\+\_\+names\+\_\+x11 (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{names\+\_\+darray}{}\end{DoxyParamCaption})}
+
+\Hypertarget{platform__linux__x11_8h_a90034f534a75ed056a574a60667c585f}\index{platform\_linux\_x11.h@{platform\_linux\_x11.h}!platform\_pump\_messages\_x11@{platform\_pump\_messages\_x11}}
+\index{platform\_pump\_messages\_x11@{platform\_pump\_messages\_x11}!platform\_linux\_x11.h@{platform\_linux\_x11.h}}
+\doxysubsubsection{\texorpdfstring{platform\_pump\_messages\_x11()}{platform\_pump\_messages\_x11()}}
+{\footnotesize\ttfamily \label{platform__linux__x11_8h_a90034f534a75ed056a574a60667c585f} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} platform\+\_\+pump\+\_\+messages\+\_\+x11 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdisplay__state}{display\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{disp\+\_\+state}{}\end{DoxyParamCaption})}
+
+\Hypertarget{platform__linux__x11_8h_ae7123209f7a18e85054ea703cbe141f0}\index{platform\_linux\_x11.h@{platform\_linux\_x11.h}!platform\_shutdown\_x11@{platform\_shutdown\_x11}}
+\index{platform\_shutdown\_x11@{platform\_shutdown\_x11}!platform\_linux\_x11.h@{platform\_linux\_x11.h}}
+\doxysubsubsection{\texorpdfstring{platform\_shutdown\_x11()}{platform\_shutdown\_x11()}}
+{\footnotesize\ttfamily \label{platform__linux__x11_8h_ae7123209f7a18e85054ea703cbe141f0} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void platform\+\_\+shutdown\+\_\+x11 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdisplay__state}{display\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{disp\+\_\+state}{}\end{DoxyParamCaption})}
+
+\Hypertarget{platform__linux__x11_8h_a2d7c7dcc96d86245789f8abdbab90eb9}\index{platform\_linux\_x11.h@{platform\_linux\_x11.h}!platform\_startup\_x11@{platform\_startup\_x11}}
+\index{platform\_startup\_x11@{platform\_startup\_x11}!platform\_linux\_x11.h@{platform\_linux\_x11.h}}
+\doxysubsubsection{\texorpdfstring{platform\_startup\_x11()}{platform\_startup\_x11()}}
+{\footnotesize\ttfamily \label{platform__linux__x11_8h_a2d7c7dcc96d86245789f8abdbab90eb9} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} platform\+\_\+startup\+\_\+x11 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdisplay__state}{display\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{disp\+\_\+state}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{application\+\_\+name}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{x}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{y}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{width}{, }\item[{\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}]{height}{}\end{DoxyParamCaption})}
+

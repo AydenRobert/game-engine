@@ -1,0 +1,96 @@
+\doxysection{game Struct Reference}
+\hypertarget{structgame}{}\label{structgame}\index{game@{game}}
+
+
+{\ttfamily \#include $<$game\+\_\+types.\+h$>$}
+
+
+
+Collaboration diagram for game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{d2/d40/structgame__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structapplication__config}{application\+\_\+config}} \mbox{\hyperlink{structgame_a12c0bdd534b736ca685c7ef91b17c80d}{app\+\_\+config}}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structgame_a5466af7e15d158c9a30a2c733514bc13}{initialize}} )(struct \mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}game\+\_\+inst)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structgame_afe7bfadc01e08def3e7cae0019151d1b}{update}} )(struct \mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}game\+\_\+inst, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} delta\+\_\+time)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structgame_ac2c261fc48169dc53096929654c51bfe}{render}} )(struct \mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}game\+\_\+inst, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} delta\+\_\+time)
+\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structgame_a320793f814af5f889a43b7ab25d75b67}{on\+\_\+resize}} )(struct \mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}game\+\_\+inst, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} width, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} height)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structgame_aa77684f4c43b2aafcaa57421159f5d03}{state}}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structgame_a48de9a59262433d6d4d2277252e78708}{state\+\_\+memory\+\_\+requirement}}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structgame_abbde50654ea1c9e81c5eb9611b0dc7ee}{application\+\_\+state}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the basic game state in a game Called for creation by the application 
+
+\label{doc-variable-members}
+\Hypertarget{structgame_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{structgame_a12c0bdd534b736ca685c7ef91b17c80d}\index{game@{game}!app\_config@{app\_config}}
+\index{app\_config@{app\_config}!game@{game}}
+\doxysubsubsection{\texorpdfstring{app\_config}{app\_config}}
+{\footnotesize\ttfamily \label{structgame_a12c0bdd534b736ca685c7ef91b17c80d} 
+\mbox{\hyperlink{structapplication__config}{application\+\_\+config}} game\+::app\+\_\+config}
+
+\Hypertarget{structgame_abbde50654ea1c9e81c5eb9611b0dc7ee}\index{game@{game}!application\_state@{application\_state}}
+\index{application\_state@{application\_state}!game@{game}}
+\doxysubsubsection{\texorpdfstring{application\_state}{application\_state}}
+{\footnotesize\ttfamily \label{structgame_abbde50654ea1c9e81c5eb9611b0dc7ee} 
+void\texorpdfstring{$\ast$}{*} game\+::application\+\_\+state}
+
+\Hypertarget{structgame_a5466af7e15d158c9a30a2c733514bc13}\index{game@{game}!initialize@{initialize}}
+\index{initialize@{initialize}!game@{game}}
+\doxysubsubsection{\texorpdfstring{initialize}{initialize}}
+{\footnotesize\ttfamily \label{structgame_a5466af7e15d158c9a30a2c733514bc13} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} game\+::initialize) (struct \mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}game\+\_\+inst)}
+
+\Hypertarget{structgame_a320793f814af5f889a43b7ab25d75b67}\index{game@{game}!on\_resize@{on\_resize}}
+\index{on\_resize@{on\_resize}!game@{game}}
+\doxysubsubsection{\texorpdfstring{on\_resize}{on\_resize}}
+{\footnotesize\ttfamily \label{structgame_a320793f814af5f889a43b7ab25d75b67} 
+void(\texorpdfstring{$\ast$}{*} game\+::on\+\_\+resize) (struct \mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}game\+\_\+inst, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} width, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} height)}
+
+\Hypertarget{structgame_ac2c261fc48169dc53096929654c51bfe}\index{game@{game}!render@{render}}
+\index{render@{render}!game@{game}}
+\doxysubsubsection{\texorpdfstring{render}{render}}
+{\footnotesize\ttfamily \label{structgame_ac2c261fc48169dc53096929654c51bfe} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} game\+::render) (struct \mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}game\+\_\+inst, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} delta\+\_\+time)}
+
+\Hypertarget{structgame_aa77684f4c43b2aafcaa57421159f5d03}\index{game@{game}!state@{state}}
+\index{state@{state}!game@{game}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \label{structgame_aa77684f4c43b2aafcaa57421159f5d03} 
+void\texorpdfstring{$\ast$}{*} game\+::state}
+
+\Hypertarget{structgame_a48de9a59262433d6d4d2277252e78708}\index{game@{game}!state\_memory\_requirement@{state\_memory\_requirement}}
+\index{state\_memory\_requirement@{state\_memory\_requirement}!game@{game}}
+\doxysubsubsection{\texorpdfstring{state\_memory\_requirement}{state\_memory\_requirement}}
+{\footnotesize\ttfamily \label{structgame_a48de9a59262433d6d4d2277252e78708} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} game\+::state\+\_\+memory\+\_\+requirement}
+
+\Hypertarget{structgame_afe7bfadc01e08def3e7cae0019151d1b}\index{game@{game}!update@{update}}
+\index{update@{update}!game@{game}}
+\doxysubsubsection{\texorpdfstring{update}{update}}
+{\footnotesize\ttfamily \label{structgame_afe7bfadc01e08def3e7cae0019151d1b} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} game\+::update) (struct \mbox{\hyperlink{structgame}{game}} \texorpdfstring{$\ast$}{*}game\+\_\+inst, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} delta\+\_\+time)}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+engine/src/\mbox{\hyperlink{game__types_8h}{game\+\_\+types.\+h}}\end{DoxyCompactItemize}

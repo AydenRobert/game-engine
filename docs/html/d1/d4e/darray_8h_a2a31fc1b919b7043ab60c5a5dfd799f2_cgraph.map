@@ -1,0 +1,21 @@
+<map id="_darray_create" name="_darray_create">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,137,124,165"/>
+<area shape="rect" id="Node000002" href="$d3/d3c/kmemory_8c.html#a35f22575c2b4fcbda423b6108e352b15" title=" " alt="" coords="187,111,268,138"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,139,174,132,169,135,125,144"/>
+<area shape="rect" id="Node000009" href="$d3/d3c/kmemory_8c.html#a9b0af42158bf4d4a8db3d25d284b83f4" title=" " alt="" coords="172,163,283,190"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="124,158,159,165,154,166,124,163"/>
+<area shape="rect" id="Node000003" href="$dd/d44/dynamic__allocator_8c.html#aeef3ef902c20758ce4e52fd3ce7c3112" title="Allocates an amount of memory and returns the given block." alt="" coords="331,32,531,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="252,108,330,70,357,63,352,65,332,75,254,113"/>
+<area shape="rect" id="Node000007" href="$de/d03/platform_8h.html#a19df473ff145c8579c4c838d5bc67372" title=" " alt="" coords="363,84,499,112"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="267,117,350,108,345,109,268,122"/>
+<area shape="rect" id="Node000008" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="344,136,518,164"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="268,127,331,137,326,138,268,132"/>
+<area shape="rect" id="Node000004" href="$da/d3f/freelist_8c.html#ae855f01b88cfd86e3ff8ae7682bbd06c" title="Attempts to find a allocate block of memory given the size." alt="" coords="579,32,748,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="532,43,566,45,561,46,532,48"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#a1ce834d1bd9f9caf272e6d63aa00deb8" title="Obtains the amount of free space within the freelist." alt="" coords="796,5,941,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="748,32,783,30,778,31,749,37"/>
+<area shape="rect" id="Node000006" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="819,57,918,85"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="748,54,806,63,801,63,748,59"/>
+<area shape="rect" id="Node000010" href="$de/d03/platform_8h.html#aa65146de20a7fd23870d3809834021b7" title=" " alt="" coords="348,188,514,216"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="284,181,335,190,330,190,284,186"/>
+</map>

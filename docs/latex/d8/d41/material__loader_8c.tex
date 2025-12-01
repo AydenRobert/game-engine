@@ -1,0 +1,99 @@
+\doxysection{engine/src/resources/loaders/material\+\_\+loader.c File Reference}
+\hypertarget{material__loader_8c}{}\label{material__loader_8c}\index{engine/src/resources/loaders/material\_loader.c@{engine/src/resources/loaders/material\_loader.c}}
+{\ttfamily \#include "{}resources/loaders/material\+\_\+loader.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}core/kstring.\+h"{}}\newline
+{\ttfamily \#include "{}core/logger.\+h"{}}\newline
+{\ttfamily \#include "{}math/kmath.\+h"{}}\newline
+{\ttfamily \#include "{}resources/loaders/loader\+\_\+utils.\+h"{}}\newline
+{\ttfamily \#include "{}resources/resource\+\_\+types.\+h"{}}\newline
+{\ttfamily \#include "{}systems/resource\+\_\+system.\+h"{}}\newline
+{\ttfamily \#include "{}platform/filesystem.\+h"{}}\newline
+Include dependency graph for material\+\_\+loader.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d66/material__loader_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{material__loader_8c_a6ef39aeaf3320ab7a27fad9be7ee418f}{material\+\_\+loader\+\_\+load}} (struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}self, const char \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}out\+\_\+resource)
+\item 
+void \mbox{\hyperlink{material__loader_8c_a2285348ec33505d2bd2bd2d0daa6d3a4}{material\+\_\+loader\+\_\+unload}} (struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}self, \mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structresource}{resource}})
+\item 
+\mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \mbox{\hyperlink{material__loader_8c_a20a5d1ed1337d2559602b05ab8bc3893}{material\+\_\+resource\+\_\+loader\+\_\+create}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{material__loader_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{material__loader_8c_a6ef39aeaf3320ab7a27fad9be7ee418f}\index{material\_loader.c@{material\_loader.c}!material\_loader\_load@{material\_loader\_load}}
+\index{material\_loader\_load@{material\_loader\_load}!material\_loader.c@{material\_loader.c}}
+\doxysubsubsection{\texorpdfstring{material\_loader\_load()}{material\_loader\_load()}}
+{\footnotesize\ttfamily \label{material__loader_8c_a6ef39aeaf3320ab7a27fad9be7ee418f} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} material\+\_\+loader\+\_\+load (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+resource}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d41/material__loader_8c_a6ef39aeaf3320ab7a27fad9be7ee418f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d41/material__loader_8c_a6ef39aeaf3320ab7a27fad9be7ee418f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{material__loader_8c_a2285348ec33505d2bd2bd2d0daa6d3a4}\index{material\_loader.c@{material\_loader.c}!material\_loader\_unload@{material\_loader\_unload}}
+\index{material\_loader\_unload@{material\_loader\_unload}!material\_loader.c@{material\_loader.c}}
+\doxysubsubsection{\texorpdfstring{material\_loader\_unload()}{material\_loader\_unload()}}
+{\footnotesize\ttfamily \label{material__loader_8c_a2285348ec33505d2bd2bd2d0daa6d3a4} 
+void material\+\_\+loader\+\_\+unload (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{\mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}}]{resource}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d41/material__loader_8c_a2285348ec33505d2bd2bd2d0daa6d3a4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d41/material__loader_8c_a2285348ec33505d2bd2bd2d0daa6d3a4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{material__loader_8c_a20a5d1ed1337d2559602b05ab8bc3893}\index{material\_loader.c@{material\_loader.c}!material\_resource\_loader\_create@{material\_resource\_loader\_create}}
+\index{material\_resource\_loader\_create@{material\_resource\_loader\_create}!material\_loader.c@{material\_loader.c}}
+\doxysubsubsection{\texorpdfstring{material\_resource\_loader\_create()}{material\_resource\_loader\_create()}}
+{\footnotesize\ttfamily \label{material__loader_8c_a20a5d1ed1337d2559602b05ab8bc3893} 
+\mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} material\+\_\+resource\+\_\+loader\+\_\+create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d41/material__loader_8c_a20a5d1ed1337d2559602b05ab8bc3893_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d41/material__loader_8c_a20a5d1ed1337d2559602b05ab8bc3893_icgraph}
+\end{center}
+\end{figure}

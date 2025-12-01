@@ -1,0 +1,11 @@
+<map id="vulkan_device_create" name="vulkan_device_create">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,36,168,64"/>
+<area shape="rect" id="Node000002" href="$de/d02/vulkan__device_8c.html#a9c7b8f8848ce3482b71e4aceecc5b8d9" title=" " alt="" coords="216,36,387,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,47,203,49,197,50,168,52"/>
+<area shape="rect" id="Node000003" href="$de/d02/vulkan__device_8c.html#a29ca7a2c883d7e9f42c0485e17f6bc2e" title=" " alt="" coords="435,28,608,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="387,47,422,50,417,50,388,52"/>
+<area shape="rect" id="Node000004" href="$d6/d19/kstring_8c.html#a4088fb073177638c470fee72f8f2180a" title=" " alt="" coords="681,5,790,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="609,35,664,29,669,29,609,40"/>
+<area shape="rect" id="Node000005" href="$de/d02/vulkan__device_8c.html#ac4eb42eebcc937d35197f1b899668021" title=" " alt="" coords="656,57,815,102"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="609,59,644,66,638,66,609,64"/>
+</map>

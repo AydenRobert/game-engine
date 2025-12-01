@@ -1,0 +1,59 @@
+<map id="image_resource_loader_create" name="image_resource_loader_create">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,196,179,240"/>
+<area shape="rect" id="Node000002" href="$dd/d80/image__loader_8c.html#a66da4252462c1386e4e5c9101e08b93d" title=" " alt="" coords="235,229,380,257"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,226,221,232,217,234,180,231"/>
+<area shape="rect" id="Node000021" href="$dd/d80/image__loader_8c.html#a02e8bef5b7c6b12aa5317a6ea17d84bb" title=" " alt="" coords="227,92,388,120"/>
+<area shape="poly" id="edge22_Node000001_Node000021" title=" " alt="" coords="135,193,267,125,264,129,138,197"/>
+<area shape="rect" id="Node000003" href="$d3/d3c/kmemory_8c.html#a35f22575c2b4fcbda423b6108e352b15" title=" " alt="" coords="712,332,793,360"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="327,255,375,288,405,305,437,318,505,335,575,343,641,347,699,349,694,349,641,352,575,349,504,340,435,323,403,310,372,293,326,260"/>
+<area shape="rect" id="Node000010" href="$d2/d8b/resource__system_8c.html#a7a3f276c88408bbae1a47b2c8f68dd50" title=" " alt="" coords="436,383,642,410"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="321,255,369,307,401,337,437,362,465,377,459,377,435,367,398,341,365,311,319,260"/>
+<area shape="rect" id="Node000011" href="$d6/d40/stb__image_8h.html#ac72f312f610a7df1519ea0f2a2f94be9" title=" " alt="" coords="466,435,612,462"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="316,255,333,290,359,334,394,381,438,420,454,431,449,430,434,424,390,384,355,337,329,292,314,260"/>
+<area shape="rect" id="Node000012" href="$d6/d40/stb__image_8h.html#ad3e11bb44412a7ba348acfbad09caacb" title=" " alt="" coords="476,57,602,85"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="315,227,360,164,394,127,435,96,464,84,459,87,437,100,398,131,364,167,319,231"/>
+<area shape="rect" id="Node000013" href="$d6/d40/stb__image_8h.html#ad3fc296ba0778df0a8094e20da82deab" title=" " alt="" coords="499,109,579,137"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="322,227,370,187,401,165,435,146,486,131,481,134,437,151,404,169,373,191,325,231"/>
+<area shape="rect" id="Node000014" href="$d6/d40/stb__image_8h.html#ab89c177fc52f1bb2dc1c05e48129a0a4" title=" " alt="" coords="456,161,623,206"/>
+<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="363,226,443,208,438,210,365,231"/>
+<area shape="rect" id="Node000015" href="$d6/d19/kstring_8c.html#ae4d2c3111ca8e06cce31d32a7928f320" title=" " alt="" coords="476,229,602,257"/>
+<area shape="poly" id="edge14_Node000002_Node000015" title=" " alt="" coords="380,241,463,242,458,244,381,246"/>
+<area shape="rect" id="Node000019" href="$d6/d19/kstring_8c.html#a86babd936b82eaf4229e77406968f74d" title=" " alt="" coords="484,281,594,309"/>
+<area shape="poly" id="edge19_Node000002_Node000019" title=" " alt="" coords="372,255,472,279,467,280,373,260"/>
+<area shape="rect" id="Node000004" href="$dd/d44/dynamic__allocator_8c.html#aeef3ef902c20758ce4e52fd3ce7c3112" title="Allocates an amount of memory and returns the given block." alt="" coords="863,385,1063,413"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="793,353,893,381,888,381,793,359"/>
+<area shape="rect" id="Node000008" href="$de/d03/platform_8h.html#a19df473ff145c8579c4c838d5bc67372" title=" " alt="" coords="895,281,1031,309"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="792,334,885,314,890,313,793,339"/>
+<area shape="rect" id="Node000009" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="876,333,1050,361"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="793,343,863,346,857,347,793,349"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#ae855f01b88cfd86e3ff8ae7682bbd06c" title="Attempts to find a allocate block of memory given the size." alt="" coords="1116,333,1284,361"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1029,382,1116,365,1121,365,1030,387"/>
+<area shape="rect" id="Node000006" href="$da/d3f/freelist_8c.html#a1ce834d1bd9f9caf272e6d63aa00deb8" title="Obtains the amount of free space within the freelist." alt="" coords="1336,333,1482,361"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1284,345,1323,347,1318,347,1285,350"/>
+<area shape="rect" id="Node000007" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="1359,229,1459,257"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="1229,330,1363,265,1368,264,1231,335"/>
+<area shape="poly" id="edge15_Node000015_Node000003" title=" " alt="" coords="603,251,644,268,659,280,669,292,678,304,692,317,701,325,696,324,689,321,674,308,665,295,656,283,641,272,602,256"/>
+<area shape="rect" id="Node000016" href="$d3/d3c/kmemory_8c.html#ae88e143a36677919fee16bdf0f11bc79" title=" " alt="" coords="902,229,1024,257"/>
+<area shape="poly" id="edge16_Node000015_Node000016" title=" " alt="" coords="602,241,888,242,883,244,602,246"/>
+<area shape="rect" id="Node000018" href="$d6/d19/kstring_8c.html#a3ac8f7f54a3429135da71637d268e6c9" title=" " alt="" coords="699,148,806,176"/>
+<area shape="poly" id="edge18_Node000015_Node000018" title=" " alt="" coords="601,228,641,215,712,185,716,183,643,220,603,233"/>
+<area shape="rect" id="Node000017" href="$de/d03/platform_8h.html#a15258bb22b902725b1fbf405463ed07d" title=" " alt="" coords="1111,229,1288,257"/>
+<area shape="poly" id="edge17_Node000016_Node000017" title=" " alt="" coords="1024,241,1098,243,1092,243,1025,246"/>
+<area shape="rect" id="Node000020" href="$d6/d19/kstring_8c.html#a7d32c70521c217a716c586f145dbb4d9" title=" " alt="" coords="690,280,815,308"/>
+<area shape="poly" id="edge20_Node000019_Node000020" title=" " alt="" coords="594,292,677,294,672,295,595,297"/>
+<area shape="poly" id="edge21_Node000020_Node000016" title=" " alt="" coords="812,277,885,262,890,261,813,282"/>
+<area shape="rect" id="Node000022" href="$dc/dfb/loader__utils_8c.html#a11867f22fab9baa82abfc58defcbffc2" title=" " alt="" coords="475,5,603,33"/>
+<area shape="poly" id="edge23_Node000021_Node000022" title=" " alt="" coords="334,89,381,66,435,43,463,36,459,39,437,48,383,71,337,94"/>
+<area shape="poly" id="edge30_Node000022_Node000018" title=" " alt="" coords="604,27,644,44,661,57,671,71,692,103,726,138,721,137,688,106,666,74,657,61,641,48,604,32"/>
+<area shape="rect" id="Node000023" href="$d3/d3c/kmemory_8c.html#a6b55b65a2f2d473dac0d8ff4605a44fb" title=" " alt="" coords="725,65,780,93"/>
+<area shape="poly" id="edge24_Node000022_Node000023" title=" " alt="" coords="597,31,643,43,713,66,707,67,642,48,598,36"/>
+<area shape="rect" id="Node000024" href="$dd/d44/dynamic__allocator_8c.html#a10c3c742d3900e743f85fe47c11be3e5" title="Frees a block of memory that was allocated by the allocator." alt="" coords="876,65,1050,93"/>
+<area shape="poly" id="edge25_Node000023_Node000024" title=" " alt="" coords="780,77,862,79,857,80,781,82"/>
+<area shape="rect" id="Node000027" href="$de/d03/platform_8h.html#a0b638fcfa31e0704eb976a8662c095f2" title=" " alt="" coords="908,117,1018,145"/>
+<area shape="poly" id="edge29_Node000023_Node000027" title=" " alt="" coords="780,83,895,113,890,114,781,89"/>
+<area shape="rect" id="Node000025" href="$da/d3f/freelist_8c.html#a8af32093da394b6cfa1a3436b8e84283" title="Attempts to find a free block of memory given the size." alt="" coords="1128,152,1271,180"/>
+<area shape="poly" id="edge26_Node000024_Node000025" title=" " alt="" coords="1024,91,1064,103,1158,145,1153,145,1062,108,1024,96"/>
+<area shape="poly" id="edge28_Node000025_Node000007" title=" " alt="" coords="1240,178,1358,224,1352,223,1239,183"/>
+<area shape="rect" id="Node000026" href="$da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df" title=" " alt="" coords="1368,152,1450,180"/>
+<area shape="poly" id="edge27_Node000025_Node000026" title=" " alt="" coords="1271,163,1355,166,1350,166,1271,168"/>
+</map>

@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['physical_5fdevice_5fmeets_5frequirements_0',['physical_device_meets_requirements',['../de/d02/vulkan__device_8c.html#a29ca7a2c883d7e9f42c0485e17f6bc2e',1,'vulkan_device.c']]],
+  ['platform_5fallocate_1',['platform_allocate',['../de/d03/platform_8h.html#a19df473ff145c8579c4c838d5bc67372',1,'platform.h']]],
+  ['platform_5fconsole_5fwrite_2',['platform_console_write',['../de/d03/platform_8h.html#ac352c68fed21ee19eff9a165d1648c4c',1,'platform.h']]],
+  ['platform_5fconsole_5fwrite_5ferror_3',['platform_console_write_error',['../de/d03/platform_8h.html#adee3e77de1e3374a118e9ebc150c9800',1,'platform.h']]],
+  ['platform_5fcopy_5fmemory_4',['platform_copy_memory',['../de/d03/platform_8h.html#a15258bb22b902725b1fbf405463ed07d',1,'platform.h']]],
+  ['platform_5fcreate_5fvulkan_5fsurface_5',['platform_create_vulkan_surface',['../d9/df0/vulkan__platform_8h.html#a48932cc1b8761ab4af6627a36ba06548',1,'vulkan_platform.h']]],
+  ['platform_5fcreate_5fvulkan_5fsurface_5fwayland_6',['platform_create_vulkan_surface_wayland',['../dc/d29/platform__linux__wayland_8h.html#a23fcfdbd852abe6c3b23c19dbbf5896f',1,'platform_linux_wayland.h']]],
+  ['platform_5fcreate_5fvulkan_5fsurface_5fx11_7',['platform_create_vulkan_surface_x11',['../de/df2/platform__linux__x11_8h.html#a4b7e1c432bd7a9a4b23e3c486f6baa23',1,'platform_linux_x11.h']]],
+  ['platform_5ffree_8',['platform_free',['../de/d03/platform_8h.html#a0b638fcfa31e0704eb976a8662c095f2',1,'platform.h']]],
+  ['platform_5fget_5fabsolute_5ftime_9',['platform_get_absolute_time',['../de/d03/platform_8h.html#af38f532e572a9da41eaad4be29a58ada',1,'platform.h']]],
+  ['platform_5fget_5frequired_5fextension_5fnames_10',['platform_get_required_extension_names',['../d9/df0/vulkan__platform_8h.html#ac6f33d791e5445db00300cfd71d88702',1,'vulkan_platform.h']]],
+  ['platform_5fget_5frequired_5fextension_5fnames_5fwayland_11',['platform_get_required_extension_names_wayland',['../dc/d29/platform__linux__wayland_8h.html#acfa8e3d76b7c309ad6bcfcf6cf1e954f',1,'platform_linux_wayland.h']]],
+  ['platform_5fget_5frequired_5fextension_5fnames_5fx11_12',['platform_get_required_extension_names_x11',['../de/df2/platform__linux__x11_8h.html#a961d9437b60b746c4c31af0cc17646e1',1,'platform_linux_x11.h']]],
+  ['platform_5fpump_5fmessages_13',['platform_pump_messages',['../de/d03/platform_8h.html#af47d0fad6d6e686e1e0f668c95b1c201',1,'platform.h']]],
+  ['platform_5fpump_5fmessages_5fwayland_14',['platform_pump_messages_wayland',['../dc/d29/platform__linux__wayland_8h.html#a6b3e4f726713f5d5748d48581de7bbd8',1,'platform_linux_wayland.h']]],
+  ['platform_5fpump_5fmessages_5fx11_15',['platform_pump_messages_x11',['../de/df2/platform__linux__x11_8h.html#a90034f534a75ed056a574a60667c585f',1,'platform_linux_x11.h']]],
+  ['platform_5fset_5fmemory_16',['platform_set_memory',['../de/d03/platform_8h.html#aa65146de20a7fd23870d3809834021b7',1,'platform.h']]],
+  ['platform_5fshutdown_17',['platform_shutdown',['../de/d03/platform_8h.html#a7fe7553c63bc948e2ee04d15597d6ccd',1,'platform.h']]],
+  ['platform_5fshutdown_5fwayland_18',['platform_shutdown_wayland',['../dc/d29/platform__linux__wayland_8h.html#a99c6bdf47bedcd705fbaf90ac49cb970',1,'platform_linux_wayland.h']]],
+  ['platform_5fshutdown_5fx11_19',['platform_shutdown_x11',['../de/df2/platform__linux__x11_8h.html#ae7123209f7a18e85054ea703cbe141f0',1,'platform_linux_x11.h']]],
+  ['platform_5fsleep_20',['platform_sleep',['../de/d03/platform_8h.html#ae21676dfd997b1c6dd9c06f69b5618e4',1,'platform.h']]],
+  ['platform_5fstartup_21',['platform_startup',['../de/d03/platform_8h.html#a1557f29064029f8b437d0fbcc587ebbd',1,'platform.h']]],
+  ['platform_5fstartup_5fwayland_22',['platform_startup_wayland',['../dc/d29/platform__linux__wayland_8h.html#a723755eb812b292c0e89891dd0e082e9',1,'platform_linux_wayland.h']]],
+  ['platform_5fstartup_5fx11_23',['platform_startup_x11',['../de/df2/platform__linux__x11_8h.html#a2d7c7dcc96d86245789f8abdbab90eb9',1,'platform_linux_x11.h']]],
+  ['platform_5fzero_5fmemory_24',['platform_zero_memory',['../de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654',1,'platform.h']]]
+];

@@ -1,0 +1,9 @@
+<map id="mat4_mul" name="mat4_mul">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,93,33"/>
+<area shape="rect" id="Node000002" href="$dc/dd0/kmath_8h.html#a2675d196b9d5b9b2c0b72c5f0c2fdf5c" title=" " alt="" coords="141,5,253,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,17,128,19,122,19,93,22"/>
+<area shape="rect" id="Node000003" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="301,5,420,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="254,17,288,19,282,19,254,22"/>
+<area shape="rect" id="Node000004" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="468,5,643,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="421,17,456,19,450,19,421,22"/>
+</map>

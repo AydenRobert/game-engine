@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['file_5fmodes_0',['file_modes',['../dd/dd8/filesystem_8h.html#a65ff8d4f12985f7d5210a0688be998dc',1,'filesystem.h']]]
+];

@@ -1,0 +1,361 @@
+\doxysection{engine/src/defines.h File Reference}
+\hypertarget{defines_8h}{}\label{defines_8h}\index{engine/src/defines.h@{engine/src/defines.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d65/defines_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\+\_\+\+ASSERT}}~static\+\_\+assert
+\item 
+\#define \mbox{\hyperlink{defines_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}~1
+\item 
+\#define \mbox{\hyperlink{defines_8h_a65e9886d74aaee76545e83dd09011727}{false}}~0
+\item 
+\#define \mbox{\hyperlink{defines_8h_a483b0a38edf0c10ef4a7cb633dc8a9fc}{INVALID\+\_\+\+ID}}~4294967295U
+\begin{DoxyCompactList}\small\item\em any ID set to this should be considered invalid, therefore, not pointing to anything. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ac007fb317c156d98a91628a86b3c9c0e}{KCLAMP}}(value,  min,  max)
+\item 
+\#define \mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}}~static inline
+\item 
+\#define \mbox{\hyperlink{defines_8h_afc8c390e62fe367aaf65e4b3a8e9d64c}{KNOINLINE}}
+\item 
+\#define \mbox{\hyperlink{defines_8h_acb39342a6d484da1ffc0ac4893309be4}{GIBIBYTES}}(amount)
+\item 
+\#define \mbox{\hyperlink{defines_8h_af9b433687761bfc5d19c9d72b0b37d4c}{MEBIBYTES}}(amount)
+\item 
+\#define \mbox{\hyperlink{defines_8h_a6d2716f9382777bbbb48201373249974}{KIBIBYTES}}(amount)
+\item 
+\#define \mbox{\hyperlink{defines_8h_a19138fcdc83c10d33f2c076344ca7686}{GIGABYTES}}(amount)
+\item 
+\#define \mbox{\hyperlink{defines_8h_a16a05dd1ee59ce4fc5aa7343bb227e97}{MEGABYTES}}(amount)
+\item 
+\#define \mbox{\hyperlink{defines_8h_ab45c9b185ca38d7f25aa3387e881f2d4}{KILOBYTES}}(amount)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}
+\item 
+typedef unsigned short \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}
+\item 
+typedef unsigned int \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}
+\item 
+typedef unsigned long long \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}
+\item 
+typedef signed char \mbox{\hyperlink{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729}{i8}}
+\item 
+typedef signed short \mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}}
+\item 
+typedef signed int \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}
+\item 
+typedef signed long long \mbox{\hyperlink{defines_8h_ada59a0de67c44384c6faa924ca63c2aa}{i64}}
+\item 
+typedef float \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}
+\item 
+typedef double \mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}}
+\item 
+typedef int \mbox{\hyperlink{defines_8h_ac6baccc379c73d4e641ef847dbb08fa2}{b32}}
+\item 
+typedef \+\_\+\+Bool \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_add18c34828e9ab4d2b752b7dab7c0b05}{STATIC\+\_\+\+ASSERT}} (sizeof(\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}})==1, "{}Expected \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} to be 1 byte."{})
+\item 
+\mbox{\hyperlink{defines_8h_a3c844fbbc6ae946aaeb7668f741a1798}{STATIC\+\_\+\+ASSERT}} (sizeof(\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}})==2, "{}Expected \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} to be 2 bytes."{})
+\item 
+\mbox{\hyperlink{defines_8h_a75d42d37e452c57b03d7e6fdef8163ba}{STATIC\+\_\+\+ASSERT}} (sizeof(\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})==4, "{}Expected \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} to be 4 bytes."{})
+\item 
+\mbox{\hyperlink{defines_8h_a8a4887eb6790973929488951816d597b}{STATIC\+\_\+\+ASSERT}} (sizeof(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}})==8, "{}Expected \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} to be 8 bytes."{})
+\item 
+\mbox{\hyperlink{defines_8h_a1a9cf909648dbd5e4232f6fee291a43e}{STATIC\+\_\+\+ASSERT}} (sizeof(\mbox{\hyperlink{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729}{i8}})==1, "{}Expected \mbox{\hyperlink{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729}{i8}} to be 1 byte."{})
+\item 
+\mbox{\hyperlink{defines_8h_af88c31fbd635f4423f15065c79ecf99f}{STATIC\+\_\+\+ASSERT}} (sizeof(\mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}})==2, "{}Expected \mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}} to be 2 bytes."{})
+\item 
+\mbox{\hyperlink{defines_8h_acbbd6ebcb78f866f341b5b7fe36fc812}{STATIC\+\_\+\+ASSERT}} (sizeof(\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}})==4, "{}Expected \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} to be 4 bytes."{})
+\item 
+\mbox{\hyperlink{defines_8h_a8bc5c1b4d9570c272f874de2989f9b3e}{STATIC\+\_\+\+ASSERT}} (sizeof(\mbox{\hyperlink{defines_8h_ada59a0de67c44384c6faa924ca63c2aa}{i64}})==8, "{}Expected \mbox{\hyperlink{defines_8h_ada59a0de67c44384c6faa924ca63c2aa}{i64}} to be 8 bytes."{})
+\item 
+\mbox{\hyperlink{defines_8h_a9864ac51060117e5bfbb49a4a211c41b}{STATIC\+\_\+\+ASSERT}} (sizeof(\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}})==4, "{}Expected \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} to be 4 bytes."{})
+\item 
+\mbox{\hyperlink{defines_8h_a1e6b73ddb58819ce321fc06954dd592f}{STATIC\+\_\+\+ASSERT}} (sizeof(\mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}})==8, "{}Expected \mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}} to be 8 bytes."{})
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{defines_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{defines_8h_a65e9886d74aaee76545e83dd09011727}\index{defines.h@{defines.h}!false@{false}}
+\index{false@{false}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{false}{false}}
+{\footnotesize\ttfamily \label{defines_8h_a65e9886d74aaee76545e83dd09011727} 
+\#define false~0}
+
+\Hypertarget{defines_8h_acb39342a6d484da1ffc0ac4893309be4}\index{defines.h@{defines.h}!GIBIBYTES@{GIBIBYTES}}
+\index{GIBIBYTES@{GIBIBYTES}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{GIBIBYTES}{GIBIBYTES}}
+{\footnotesize\ttfamily \label{defines_8h_acb39342a6d484da1ffc0ac4893309be4} 
+\#define GIBIBYTES(\begin{DoxyParamCaption}\item[{}]{amount}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{amount\ *\ 1024\ *\ 1024\ *\ 1024}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_a19138fcdc83c10d33f2c076344ca7686}\index{defines.h@{defines.h}!GIGABYTES@{GIGABYTES}}
+\index{GIGABYTES@{GIGABYTES}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{GIGABYTES}{GIGABYTES}}
+{\footnotesize\ttfamily \label{defines_8h_a19138fcdc83c10d33f2c076344ca7686} 
+\#define GIGABYTES(\begin{DoxyParamCaption}\item[{}]{amount}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{amount\ *\ 1000\ *\ 1000\ *\ 1000}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_a483b0a38edf0c10ef4a7cb633dc8a9fc}\index{defines.h@{defines.h}!INVALID\_ID@{INVALID\_ID}}
+\index{INVALID\_ID@{INVALID\_ID}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_ID}{INVALID\_ID}}
+{\footnotesize\ttfamily \label{defines_8h_a483b0a38edf0c10ef4a7cb633dc8a9fc} 
+\#define INVALID\+\_\+\+ID~4294967295U}
+
+
+
+any ID set to this should be considered invalid, therefore, not pointing to anything. 
+
+\Hypertarget{defines_8h_a0dc00ea56793277f556f072353318f35}\index{defines.h@{defines.h}!KAPI@{KAPI}}
+\index{KAPI@{KAPI}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{KAPI}{KAPI}}
+{\footnotesize\ttfamily \label{defines_8h_a0dc00ea56793277f556f072353318f35} 
+\#define KAPI}
+
+\Hypertarget{defines_8h_ac007fb317c156d98a91628a86b3c9c0e}\index{defines.h@{defines.h}!KCLAMP@{KCLAMP}}
+\index{KCLAMP@{KCLAMP}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{KCLAMP}{KCLAMP}}
+{\footnotesize\ttfamily \label{defines_8h_ac007fb317c156d98a91628a86b3c9c0e} 
+\#define KCLAMP(\begin{DoxyParamCaption}\item[{}]{value}{, }\item[{}]{min}{, }\item[{}]{max}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ (value\ <=\ min)\ ?\ min\ :\ (value\ >=\ max)\ ?\ max\ :\ value;}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_a6d2716f9382777bbbb48201373249974}\index{defines.h@{defines.h}!KIBIBYTES@{KIBIBYTES}}
+\index{KIBIBYTES@{KIBIBYTES}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{KIBIBYTES}{KIBIBYTES}}
+{\footnotesize\ttfamily \label{defines_8h_a6d2716f9382777bbbb48201373249974} 
+\#define KIBIBYTES(\begin{DoxyParamCaption}\item[{}]{amount}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{amount\ *\ 1024}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_ab45c9b185ca38d7f25aa3387e881f2d4}\index{defines.h@{defines.h}!KILOBYTES@{KILOBYTES}}
+\index{KILOBYTES@{KILOBYTES}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{KILOBYTES}{KILOBYTES}}
+{\footnotesize\ttfamily \label{defines_8h_ab45c9b185ca38d7f25aa3387e881f2d4} 
+\#define KILOBYTES(\begin{DoxyParamCaption}\item[{}]{amount}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{amount\ *\ 1000}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}\index{defines.h@{defines.h}!KINLINE@{KINLINE}}
+\index{KINLINE@{KINLINE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{KINLINE}{KINLINE}}
+{\footnotesize\ttfamily \label{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9} 
+\#define KINLINE~static inline}
+
+\Hypertarget{defines_8h_afc8c390e62fe367aaf65e4b3a8e9d64c}\index{defines.h@{defines.h}!KNOINLINE@{KNOINLINE}}
+\index{KNOINLINE@{KNOINLINE}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{KNOINLINE}{KNOINLINE}}
+{\footnotesize\ttfamily \label{defines_8h_afc8c390e62fe367aaf65e4b3a8e9d64c} 
+\#define KNOINLINE}
+
+\Hypertarget{defines_8h_af9b433687761bfc5d19c9d72b0b37d4c}\index{defines.h@{defines.h}!MEBIBYTES@{MEBIBYTES}}
+\index{MEBIBYTES@{MEBIBYTES}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{MEBIBYTES}{MEBIBYTES}}
+{\footnotesize\ttfamily \label{defines_8h_af9b433687761bfc5d19c9d72b0b37d4c} 
+\#define MEBIBYTES(\begin{DoxyParamCaption}\item[{}]{amount}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{amount\ *\ 1024\ *\ 1024}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_a16a05dd1ee59ce4fc5aa7343bb227e97}\index{defines.h@{defines.h}!MEGABYTES@{MEGABYTES}}
+\index{MEGABYTES@{MEGABYTES}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{MEGABYTES}{MEGABYTES}}
+{\footnotesize\ttfamily \label{defines_8h_a16a05dd1ee59ce4fc5aa7343bb227e97} 
+\#define MEGABYTES(\begin{DoxyParamCaption}\item[{}]{amount}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{amount\ *\ 1000\ *\ 1000}
+
+\end{DoxyCode}
+\Hypertarget{defines_8h_a24df254ec81fc13256ad54cfe955d229}\index{defines.h@{defines.h}!STATIC\_ASSERT@{STATIC\_ASSERT}}
+\index{STATIC\_ASSERT@{STATIC\_ASSERT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_ASSERT}{STATIC\_ASSERT}}
+{\footnotesize\ttfamily \label{defines_8h_a24df254ec81fc13256ad54cfe955d229} 
+\#define STATIC\+\_\+\+ASSERT~static\+\_\+assert}
+
+\Hypertarget{defines_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7}\index{defines.h@{defines.h}!true@{true}}
+\index{true@{true}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{true}{true}}
+{\footnotesize\ttfamily \label{defines_8h_a41f9c5fb8b08eb5dc3edce4dcb37fee7} 
+\#define true~1}
+
+
+
+\label{doc-typedef-members}
+\Hypertarget{defines_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{defines_8h_ac6baccc379c73d4e641ef847dbb08fa2}\index{defines.h@{defines.h}!b32@{b32}}
+\index{b32@{b32}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{b32}{b32}}
+{\footnotesize\ttfamily \label{defines_8h_ac6baccc379c73d4e641ef847dbb08fa2} 
+typedef int \mbox{\hyperlink{defines_8h_ac6baccc379c73d4e641ef847dbb08fa2}{b32}}}
+
+\Hypertarget{defines_8h_a3a58feb08f4f45ee137ec358217c3270}\index{defines.h@{defines.h}!b8@{b8}}
+\index{b8@{b8}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{b8}{b8}}
+{\footnotesize\ttfamily \label{defines_8h_a3a58feb08f4f45ee137ec358217c3270} 
+typedef \+\_\+\+Bool \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}
+
+\Hypertarget{defines_8h_a5f6906312a689f27d70e9d086649d3fd}\index{defines.h@{defines.h}!f32@{f32}}
+\index{f32@{f32}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{f32}{f32}}
+{\footnotesize\ttfamily \label{defines_8h_a5f6906312a689f27d70e9d086649d3fd} 
+typedef float \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}}
+
+\Hypertarget{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}\index{defines.h@{defines.h}!f64@{f64}}
+\index{f64@{f64}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{f64}{f64}}
+{\footnotesize\ttfamily \label{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5} 
+typedef double \mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}}}
+
+\Hypertarget{defines_8h_ac12585a6def54773148d7fb2c72a59c5}\index{defines.h@{defines.h}!i16@{i16}}
+\index{i16@{i16}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{i16}{i16}}
+{\footnotesize\ttfamily \label{defines_8h_ac12585a6def54773148d7fb2c72a59c5} 
+typedef signed short \mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}}}
+
+\Hypertarget{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}\index{defines.h@{defines.h}!i32@{i32}}
+\index{i32@{i32}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{i32}{i32}}
+{\footnotesize\ttfamily \label{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e} 
+typedef signed int \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}}}
+
+\Hypertarget{defines_8h_ada59a0de67c44384c6faa924ca63c2aa}\index{defines.h@{defines.h}!i64@{i64}}
+\index{i64@{i64}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{i64}{i64}}
+{\footnotesize\ttfamily \label{defines_8h_ada59a0de67c44384c6faa924ca63c2aa} 
+typedef signed long long \mbox{\hyperlink{defines_8h_ada59a0de67c44384c6faa924ca63c2aa}{i64}}}
+
+\Hypertarget{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729}\index{defines.h@{defines.h}!i8@{i8}}
+\index{i8@{i8}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{i8}{i8}}
+{\footnotesize\ttfamily \label{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729} 
+typedef signed char \mbox{\hyperlink{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729}{i8}}}
+
+\Hypertarget{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}\index{defines.h@{defines.h}!u16@{u16}}
+\index{u16@{u16}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{u16}{u16}}
+{\footnotesize\ttfamily \label{defines_8h_a9e6c91d77e24643b888dbd1a1a590054} 
+typedef unsigned short \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}
+
+\Hypertarget{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}\index{defines.h@{defines.h}!u32@{u32}}
+\index{u32@{u32}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{u32}{u32}}
+{\footnotesize\ttfamily \label{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049} 
+typedef unsigned int \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}
+
+\Hypertarget{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}\index{defines.h@{defines.h}!u64@{u64}}
+\index{u64@{u64}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{u64}{u64}}
+{\footnotesize\ttfamily \label{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357} 
+typedef unsigned long long \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}
+
+\Hypertarget{defines_8h_aed742c436da53c1080638ce6ef7d13de}\index{defines.h@{defines.h}!u8@{u8}}
+\index{u8@{u8}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{u8}{u8}}
+{\footnotesize\ttfamily \label{defines_8h_aed742c436da53c1080638ce6ef7d13de} 
+typedef unsigned char \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{defines_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{defines_8h_a9864ac51060117e5bfbb49a4a211c41b}\index{defines.h@{defines.h}!STATIC\_ASSERT@{STATIC\_ASSERT}}
+\index{STATIC\_ASSERT@{STATIC\_ASSERT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_ASSERT()}{STATIC\_ASSERT()}\hspace{0.1cm}{\footnotesize\ttfamily [1/10]}}
+{\footnotesize\ttfamily \label{defines_8h_a9864ac51060117e5bfbb49a4a211c41b} 
+STATIC\+\_\+\+ASSERT (\begin{DoxyParamCaption}\item[{sizeof(\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}})}]{}{ = {\ttfamily =4}, }\item[{"{}Expected \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} to be 4 bytes."{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{defines_8h_a1e6b73ddb58819ce321fc06954dd592f}\index{defines.h@{defines.h}!STATIC\_ASSERT@{STATIC\_ASSERT}}
+\index{STATIC\_ASSERT@{STATIC\_ASSERT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_ASSERT()}{STATIC\_ASSERT()}\hspace{0.1cm}{\footnotesize\ttfamily [2/10]}}
+{\footnotesize\ttfamily \label{defines_8h_a1e6b73ddb58819ce321fc06954dd592f} 
+STATIC\+\_\+\+ASSERT (\begin{DoxyParamCaption}\item[{sizeof(\mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}})}]{}{ = {\ttfamily =8}, }\item[{"{}Expected \mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}} to be 8 bytes."{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{defines_8h_af88c31fbd635f4423f15065c79ecf99f}\index{defines.h@{defines.h}!STATIC\_ASSERT@{STATIC\_ASSERT}}
+\index{STATIC\_ASSERT@{STATIC\_ASSERT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_ASSERT()}{STATIC\_ASSERT()}\hspace{0.1cm}{\footnotesize\ttfamily [3/10]}}
+{\footnotesize\ttfamily \label{defines_8h_af88c31fbd635f4423f15065c79ecf99f} 
+STATIC\+\_\+\+ASSERT (\begin{DoxyParamCaption}\item[{sizeof(\mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}})}]{}{ = {\ttfamily =2}, }\item[{"{}Expected \mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}} to be 2 bytes."{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{defines_8h_acbbd6ebcb78f866f341b5b7fe36fc812}\index{defines.h@{defines.h}!STATIC\_ASSERT@{STATIC\_ASSERT}}
+\index{STATIC\_ASSERT@{STATIC\_ASSERT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_ASSERT()}{STATIC\_ASSERT()}\hspace{0.1cm}{\footnotesize\ttfamily [4/10]}}
+{\footnotesize\ttfamily \label{defines_8h_acbbd6ebcb78f866f341b5b7fe36fc812} 
+STATIC\+\_\+\+ASSERT (\begin{DoxyParamCaption}\item[{sizeof(\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}})}]{}{ = {\ttfamily =4}, }\item[{"{}Expected \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} to be 4 bytes."{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{defines_8h_a8bc5c1b4d9570c272f874de2989f9b3e}\index{defines.h@{defines.h}!STATIC\_ASSERT@{STATIC\_ASSERT}}
+\index{STATIC\_ASSERT@{STATIC\_ASSERT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_ASSERT()}{STATIC\_ASSERT()}\hspace{0.1cm}{\footnotesize\ttfamily [5/10]}}
+{\footnotesize\ttfamily \label{defines_8h_a8bc5c1b4d9570c272f874de2989f9b3e} 
+STATIC\+\_\+\+ASSERT (\begin{DoxyParamCaption}\item[{sizeof(\mbox{\hyperlink{defines_8h_ada59a0de67c44384c6faa924ca63c2aa}{i64}})}]{}{ = {\ttfamily =8}, }\item[{"{}Expected \mbox{\hyperlink{defines_8h_ada59a0de67c44384c6faa924ca63c2aa}{i64}} to be 8 bytes."{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{defines_8h_a1a9cf909648dbd5e4232f6fee291a43e}\index{defines.h@{defines.h}!STATIC\_ASSERT@{STATIC\_ASSERT}}
+\index{STATIC\_ASSERT@{STATIC\_ASSERT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_ASSERT()}{STATIC\_ASSERT()}\hspace{0.1cm}{\footnotesize\ttfamily [6/10]}}
+{\footnotesize\ttfamily \label{defines_8h_a1a9cf909648dbd5e4232f6fee291a43e} 
+STATIC\+\_\+\+ASSERT (\begin{DoxyParamCaption}\item[{sizeof(\mbox{\hyperlink{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729}{i8}})}]{}{ = {\ttfamily =1}, }\item[{"{}Expected \mbox{\hyperlink{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729}{i8}} to be 1 byte."{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{defines_8h_a3c844fbbc6ae946aaeb7668f741a1798}\index{defines.h@{defines.h}!STATIC\_ASSERT@{STATIC\_ASSERT}}
+\index{STATIC\_ASSERT@{STATIC\_ASSERT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_ASSERT()}{STATIC\_ASSERT()}\hspace{0.1cm}{\footnotesize\ttfamily [7/10]}}
+{\footnotesize\ttfamily \label{defines_8h_a3c844fbbc6ae946aaeb7668f741a1798} 
+STATIC\+\_\+\+ASSERT (\begin{DoxyParamCaption}\item[{sizeof(\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}})}]{}{ = {\ttfamily =2}, }\item[{"{}Expected \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} to be 2 bytes."{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{defines_8h_a75d42d37e452c57b03d7e6fdef8163ba}\index{defines.h@{defines.h}!STATIC\_ASSERT@{STATIC\_ASSERT}}
+\index{STATIC\_ASSERT@{STATIC\_ASSERT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_ASSERT()}{STATIC\_ASSERT()}\hspace{0.1cm}{\footnotesize\ttfamily [8/10]}}
+{\footnotesize\ttfamily \label{defines_8h_a75d42d37e452c57b03d7e6fdef8163ba} 
+STATIC\+\_\+\+ASSERT (\begin{DoxyParamCaption}\item[{sizeof(\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})}]{}{ = {\ttfamily =4}, }\item[{"{}Expected \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} to be 4 bytes."{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{defines_8h_a8a4887eb6790973929488951816d597b}\index{defines.h@{defines.h}!STATIC\_ASSERT@{STATIC\_ASSERT}}
+\index{STATIC\_ASSERT@{STATIC\_ASSERT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_ASSERT()}{STATIC\_ASSERT()}\hspace{0.1cm}{\footnotesize\ttfamily [9/10]}}
+{\footnotesize\ttfamily \label{defines_8h_a8a4887eb6790973929488951816d597b} 
+STATIC\+\_\+\+ASSERT (\begin{DoxyParamCaption}\item[{sizeof(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}})}]{}{ = {\ttfamily =8}, }\item[{"{}Expected \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} to be 8 bytes."{}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{defines_8h_add18c34828e9ab4d2b752b7dab7c0b05}\index{defines.h@{defines.h}!STATIC\_ASSERT@{STATIC\_ASSERT}}
+\index{STATIC\_ASSERT@{STATIC\_ASSERT}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{STATIC\_ASSERT()}{STATIC\_ASSERT()}\hspace{0.1cm}{\footnotesize\ttfamily [10/10]}}
+{\footnotesize\ttfamily \label{defines_8h_add18c34828e9ab4d2b752b7dab7c0b05} 
+STATIC\+\_\+\+ASSERT (\begin{DoxyParamCaption}\item[{sizeof(\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}})}]{}{ = {\ttfamily =1}, }\item[{"{}Expected \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} to be 1 byte."{}}]{}{}\end{DoxyParamCaption})}
+

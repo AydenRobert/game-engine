@@ -1,0 +1,17 @@
+<map id="vulkan_renderer_destroy_geometry" name="vulkan_renderer_destroy_geometry">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,50,188,95"/>
+<area shape="rect" id="Node000002" href="$d1/da5/vulkan__backend_8c.html#a288cad964ce221ad161813fb504a7fbd" title=" " alt="" coords="236,32,363,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,58,223,56,218,57,188,63"/>
+<area shape="rect" id="Node000007" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="240,84,359,112"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="188,81,227,88,222,89,188,87"/>
+<area shape="rect" id="Node000003" href="$db/dab/vulkan__buffer_8c.html#a6c3e7f58859f0ce58ff89d052c58fc8b" title=" " alt="" coords="427,32,569,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,43,414,46,409,46,363,48"/>
+<area shape="rect" id="Node000004" href="$da/d3f/freelist_8c.html#a8af32093da394b6cfa1a3436b8e84283" title="Attempts to find a free block of memory given the size." alt="" coords="633,32,776,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="569,43,620,46,615,46,570,48"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df" title=" " alt="" coords="833,5,914,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="776,32,815,28,820,28,777,37"/>
+<area shape="rect" id="Node000006" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="824,57,923,85"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="776,54,811,62,806,61,776,59"/>
+<area shape="rect" id="Node000008" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="411,84,585,112"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="359,95,398,98,393,98,360,100"/>
+</map>

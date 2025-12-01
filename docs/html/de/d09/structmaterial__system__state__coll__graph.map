@@ -1,0 +1,15 @@
+<map id="material_system_state" name="material_system_state">
+<area shape="rect" id="Node000001" title=" " alt="" coords="124,330,296,357"/>
+<area shape="rect" id="Node000002" href="$df/d3d/structmaterial__system__config.html" title=" " alt="" coords="5,207,183,234"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,245,130,275,154,304,188,329,182,329,151,308,125,279,107,250"/>
+<area shape="rect" id="Node000003" href="$da/d20/structmaterial.html" title=" " alt="" coords="206,207,283,234"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="220,245,214,259,207,296,210,330,205,328,202,296,208,257,216,248"/>
+<area shape="rect" id="Node000004" href="$df/dbe/unionvec4__u.html" title=" " alt="" coords="146,106,213,134"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="172,146,173,166,177,181,190,195,209,208,203,208,187,200,173,184,167,166,170,151"/>
+<area shape="rect" id="Node000005" href="$dc/d86/structtexture__map.html" title=" " alt="" coords="256,106,361,134"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="300,146,282,184,261,208,257,204,277,181,296,150"/>
+<area shape="rect" id="Node000006" href="$dd/db6/structtexture.html" title=" " alt="" coords="274,5,343,33"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="310,46,311,106,306,104,307,51"/>
+<area shape="rect" id="Node000007" href="$d0/d99/structhashtable.html" title="Represents a simple hashtable. Members of this structure should not be modified outside the functions..." alt="" coords="341,207,426,234"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="382,248,374,280,356,308,328,326,297,337,295,332,326,321,352,304,369,278,378,252"/>
+</map>

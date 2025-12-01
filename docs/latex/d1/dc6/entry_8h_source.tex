@@ -1,0 +1,44 @@
+\doxysection{entry.\+h}
+\hypertarget{entry_8h_source}{}\label{entry_8h_source}\index{engine/src/entry.h@{engine/src/entry.h}}
+\mbox{\hyperlink{entry_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{application_8h}{core/application.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{logger_8h}{core/logger.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game__types_8h}{game\_types.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Externally-\/defined\ function\ to\ create\ a\ game}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{entry_8h_ac1205073da2ce08a82ead459fc8b39cb}{create\_game}}(\mbox{\hyperlink{structgame}{game}}\ *out\_game);}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{entry_8h_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ Request\ the\ game\ instance\ from\ the\ application}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{structgame}{game}}\ game\_inst;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{entry_8h_ac1205073da2ce08a82ead459fc8b39cb}{create\_game}}(\&game\_inst))\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{logger_8h_a8eb60bd7b3dfc5cadc7364b06ce7bd07}{KFATAL}}(\textcolor{stringliteral}{"{}Could\ not\ create\ game!"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Ensure\ the\ function\ pointers\ exist}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{if}\ (!game\_inst.\mbox{\hyperlink{structgame_a5466af7e15d158c9a30a2c733514bc13}{initialize}}\ ||\ !game\_inst.\mbox{\hyperlink{structgame_afe7bfadc01e08def3e7cae0019151d1b}{update}}\ ||\ !game\_inst.\mbox{\hyperlink{structgame_ac2c261fc48169dc53096929654c51bfe}{render}}\ ||}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ !game\_inst.\mbox{\hyperlink{structgame_a320793f814af5f889a43b7ab25d75b67}{on\_resize}})\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{logger_8h_a8eb60bd7b3dfc5cadc7364b06ce7bd07}{KFATAL}}(\textcolor{stringliteral}{"{}The\ game's\ function\ pointers\ must\ be\ assigned!"{}});}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/2;}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Initialization}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{application_8c_a2ce02f6d4bd01f2d130aef9cd460cf6a}{application\_create}}(\&game\_inst))\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{logger_8h_aaa79d2f465f4712163343e3d3052a200}{KINFO}}(\textcolor{stringliteral}{"{}Application\ failed\ to\ create!"{}});}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ Begin\ the\ game\ loop}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{application_8c_ad6aaa3596896dacf8de1439cc34a264b}{application\_run}}())\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{logger_8h_aaa79d2f465f4712163343e3d3052a200}{KINFO}}(\textcolor{stringliteral}{"{}Application\ did\ not\ shutdown\ gracefully."{}});}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 2;}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00041\ \}}
+
+\end{DoxyCode}

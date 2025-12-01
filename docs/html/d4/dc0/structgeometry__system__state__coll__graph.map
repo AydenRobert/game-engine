@@ -1,0 +1,18 @@
+<map id="geometry_system_state" name="geometry_system_state">
+<area shape="rect" id="Node000001" title=" " alt="" coords="150,528,329,556"/>
+<area shape="rect" id="Node000002" href="$de/d96/structgeometry__system__config.html" title=" " alt="" coords="5,418,191,446"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,454,175,502,215,528,210,528,172,506,119,459"/>
+<area shape="rect" id="Node000003" href="$dd/ddc/structgeometry.html" title=" " alt="" coords="218,307,303,335"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="260,349,243,529,238,527,256,351"/>
+<area shape="rect" id="Node000008" href="$da/d73/structgeometry__reference.html" title=" " alt="" coords="411,418,564,446"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="302,339,462,416,457,418,301,344"/>
+<area shape="rect" id="Node000004" href="$da/d20/structmaterial.html" title=" " alt="" coords="222,207,299,234"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="262,248,263,308,258,306,259,252"/>
+<area shape="rect" id="Node000005" href="$df/dbe/unionvec4__u.html" title=" " alt="" coords="163,106,230,134"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="192,146,195,166,200,181,211,194,227,205,222,207,208,198,195,184,189,167,191,151"/>
+<area shape="rect" id="Node000006" href="$dc/d86/structtexture__map.html" title=" " alt="" coords="274,106,378,134"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="317,146,299,184,278,208,273,205,294,181,314,150"/>
+<area shape="rect" id="Node000007" href="$dd/db6/structtexture.html" title=" " alt="" coords="292,5,360,33"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="327,46,329,106,323,105,325,51"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="446,452,270,530,268,525,441,452"/>
+</map>

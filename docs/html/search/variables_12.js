@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['t_0',['t',['../db/d7b/unionvec2__u.html#a480b918bed0b2bd88f55c397ac98b06d',1,'vec2_u::t'],['../d5/df1/unionvec3__u.html#a03ef21aa7c84fa44d0ad1591a948d2a4',1,'vec3_u::t'],['../df/dbe/unionvec4__u.html#a460b0af7f20b8eae0cff6c2321e133ae',1,'vec4_u::t']]],
+  ['tagged_5fallocations_1',['tagged_allocations',['../d8/d84/structmemory__stats.html#a9790428695ec487d59f0a3cad2b94227',1,'memory_stats']]],
+  ['test_5fui_5fgeometry_2',['test_ui_geometry',['../dc/d7e/structapplication__state.html#ade3830b7bf1d089b5e563c1993be8d14',1,'application_state']]],
+  ['test_5fworld_5fgeometry_3',['test_world_geometry',['../dc/d7e/structapplication__state.html#a33e08a5827a5331065f15a2e92b30b19',1,'application_state']]],
+  ['texcoord_4',['texcoord',['../d7/ddb/structvertex__3d.html#a0546a19a2f6ce6bdcd5f1f058058f6af',1,'vertex_3d::texcoord'],['../de/dba/structvertex__2d.html#a90753ae43beb45e6b43be99ca906eac0',1,'vertex_2d::texcoord']]],
+  ['texture_5',['texture',['../dc/d86/structtexture__map.html#a33ddcc4ba1d3f0148c5632a468b1e693',1,'texture_map']]],
+  ['texture_5fsystem_5fmemory_5frequirement_6',['texture_system_memory_requirement',['../dc/d7e/structapplication__state.html#af90026c9302b5120c11d1fb6e4958326',1,'application_state']]],
+  ['texture_5fsystem_5fstate_7',['texture_system_state',['../dc/d7e/structapplication__state.html#ab5df8d1707388e92f68069b396fc3acb',1,'application_state']]],
+  ['total_5falloc_5fcount_8',['total_alloc_count',['../df/d6f/structmemory__system__configuration.html#ab89887a289e8d3cc6d35088f3299cbd4',1,'memory_system_configuration']]],
+  ['total_5fallocated_9',['total_allocated',['../d8/d84/structmemory__stats.html#ad0e7709d178700a389b85f6b677d2f5c',1,'memory_stats']]],
+  ['total_5fsize_10',['total_size',['../d3/d8d/structinternal__state.html#a566a1e636dd85fbf081cb682757be8b6',1,'internal_state::total_size'],['../d3/d8d/structinternal__state.html#a49a1309562a0d09cfca120add81a77c3',1,'internal_state::total_size'],['../d5/def/structvulkan__buffer.html#a265ed958c5b87294476f0a332b6ec4b3',1,'vulkan_buffer::total_size']]],
+  ['transfer_11',['transfer',['../d4/d4a/structvulkan__physical__device__requirements.html#a9e9b7a70d589971a1596c953d43da2ae',1,'vulkan_physical_device_requirements']]],
+  ['transfer_5ffamily_5findex_12',['transfer_family_index',['../d5/da3/structvulkan__physical__device__queue__family__info.html#a28f1191238998f94992757a1168c40b9',1,'vulkan_physical_device_queue_family_info']]],
+  ['transfer_5fqueue_13',['transfer_queue',['../d7/d6e/structvulkan__device.html#add6bf0d6ef991a180017b07bacc8f0c7',1,'vulkan_device']]],
+  ['transfer_5fqueue_5findex_14',['transfer_queue_index',['../d7/d6e/structvulkan__device.html#af4c29ffbded80b609ce8d11cd9d954f2',1,'vulkan_device']]],
+  ['type_15',['type',['../dc/d5f/structmaterial__config.html#a574ec7a70b7cc37b589bc92d1cacab78',1,'material_config::type'],['../da/d20/structmaterial.html#a94a57f53ac5e7b7407f4d2c85c14a644',1,'material::type'],['../d0/db3/structresource__loader.html#a3df752869b0d3aacfc8854c18d0ea8ae',1,'resource_loader::type']]],
+  ['type_5fpath_16',['type_path',['../d0/db3/structresource__loader.html#ace11aa1fadbc7cd48d55b6acfca29bd3',1,'resource_loader']]]
+];

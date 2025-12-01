@@ -1,0 +1,5 @@
+<map id="dynamic_allocator_free_space" name="dynamic_allocator_free_space">
+<area shape="rect" id="Node000001" title="Gets the amount of free space left in the provided dynamic allocator." alt="" coords="5,5,180,50"/>
+<area shape="rect" id="Node000002" href="$da/d3f/freelist_8c.html#a1ce834d1bd9f9caf272e6d63aa00deb8" title="Obtains the amount of free space within the freelist." alt="" coords="228,14,373,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,25,215,27,210,28,180,30"/>
+</map>

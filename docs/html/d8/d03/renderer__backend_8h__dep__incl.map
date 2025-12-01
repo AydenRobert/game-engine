@@ -1,0 +1,12 @@
+<map id="engine/src/renderer/renderer_backend.h" name="engine/src/renderer/renderer_backend.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="61,5,214,50"/>
+<area shape="rect" id="Node000002" href="$d4/d7f/renderer__backend_8c.html" title=" " alt="" coords="5,191,158,235"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,62,65,79,51,99,45,122,49,146,57,169,69,190,64,190,53,171,43,147,40,122,46,97,61,75,83,57"/>
+<area shape="rect" id="Node000003" href="$d0/dcc/renderer__frontend_8c.html" title=" " alt="" coords="61,98,214,143"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,63,140,99,135,97,136,68"/>
+<area shape="rect" id="Node000004" href="$dc/d64/vulkan__backend_8h.html" title=" " alt="" coords="238,98,426,143"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="198,54,288,97,283,98,198,60"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="260,148,142,193,141,188,255,149"/>
+<area shape="rect" id="Node000005" href="$d1/da5/vulkan__backend_8c.html" title=" " alt="" coords="238,191,426,235"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="334,156,334,192,330,189,330,160"/>
+</map>

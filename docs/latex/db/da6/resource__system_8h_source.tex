@@ -1,0 +1,40 @@
+\doxysection{resource\+\_\+system.\+h}
+\hypertarget{resource__system_8h_source}{}\label{resource__system_8h_source}\index{engine/src/systems/resource\_system.h@{engine/src/systems/resource\_system.h}}
+\mbox{\hyperlink{resource__system_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{resource__types_8h}{resources/resource\_types.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structresource__system__config}{resource\_system\_config}}\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structresource__system__config_ae7285f8c9c33e2fb11392c24a2bf4d8f}{max\_loader\_count}};}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{//\ The\ relative\ base\ path}}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structresource__system__config_a4c3842faae9f647923a1c60e79809239}{asset\_base\_path}};}
+\DoxyCodeLine{00009\ \}\ \mbox{\hyperlink{structresource__system__config}{resource\_system\_config}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structresource__loader}{resource\_loader}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structresource__loader_a538973bb0bd38f52a813e34ca5c1b145}{id}};}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83a}{resource\_type}}\ \mbox{\hyperlink{structresource__loader_a3df752869b0d3aacfc8854c18d0ea8ae}{type}};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structresource__loader_ac1950fdaa6746115b77e0d0c92694535}{custom\_type}};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structresource__loader_ace11aa1fadbc7cd48d55b6acfca29bd3}{type\_path}};}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ (*\mbox{\hyperlink{structresource__loader_a19713a0ee281f93c50c7528f1f2eeb64}{load}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structresource__loader}{resource\_loader}}\ *self,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structresource}{resource}}\ *out\_resource);}
+\DoxyCodeLine{00018\ \ \ \ \ void\ (*\mbox{\hyperlink{structresource__loader_a5642ca98a1ec4a8c56d9d2621bcdd3e0}{unload}})(\textcolor{keyword}{struct\ }\mbox{\hyperlink{structresource__loader}{resource\_loader}}\ *self,\ \mbox{\hyperlink{structresource}{resource}}\ *\mbox{\hyperlink{structresource}{resource}});}
+\DoxyCodeLine{00019\ \}\ \mbox{\hyperlink{structresource__loader}{resource\_loader}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{resource__system_8h_a2c939af8fbfc3b7030cb84054ae7fdd4}{resource\_system\_initialize}}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ *memory\_requirement,\ \textcolor{keywordtype}{void}\ *state,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structresource__system__config}{resource\_system\_config}}\ config);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{resource__system_8h_aaff0d948585cf36fda9c519242c2396d}{resource\_system\_shutdown}}(\textcolor{keywordtype}{void}\ *state);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{resource__system_8h_a676773f140eea73c494c821253d5798c}{resource\_system\_register\_loader}}(\mbox{\hyperlink{structresource__loader}{resource\_loader}}\ loader);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{resource__system_8h_ac627d2fbb6048c3ee6e3422cc9c0a3ee}{resource\_system\_load}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name,\ \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83a}{resource\_type}}\ \mbox{\hyperlink{structresource__loader_a3df752869b0d3aacfc8854c18d0ea8ae}{type}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structresource}{resource}}\ *out\_resource);}
+\DoxyCodeLine{00029\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{resource__system_8h_af26532ee603069b81577a773aa409b8d}{resource\_system\_load\_custom}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structresource__loader_ac1950fdaa6746115b77e0d0c92694535}{custom\_type}},}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structresource}{resource}}\ *out\_resource);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{resource__system_8h_a4412d7a0cae5991373ec4ffd852d9ef0}{resource\_system\_unload}}(\mbox{\hyperlink{structresource}{resource}}\ *\mbox{\hyperlink{structresource}{resource}});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{resource__system_8h_a0a02f3c387d9986e895e13bca9ebf80e}{resource\_system\_base\_path}}();}
+
+\end{DoxyCode}
