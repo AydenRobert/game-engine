@@ -224,6 +224,98 @@ b8 freelist_free_block(freelist *list, u64 size, u64 offset) {
     return true;
 }
 
+KAPI b8 freelist_resize(freelist *list, u64 *memory_requirement,
+                        void *new_memory, u64 new_size, void **out_old_memory) {
+    if (!list || !list->memory) {
+        KERROR("freelist_resize - passed invalid freelist.");
+        return false;
+    }
+
+    if (!memory_requirement) {
+        KERROR("freelist_resize - didn't pass memory_requirement.");
+        return false;
+    }
+
+    internal_state *old_state = (internal_state *)list->memory;
+
+    if (old_state->total_size >= new_size) {
+        KERROR("freelist_resize - new_size needs to be greater than old size.");
+        return false;
+    }
+
+    u32 max_entries = (new_size / sizeof(void *));
+    *memory_requirement =
+        sizeof(internal_state) + (sizeof(freelist_node) * max_entries);
+
+    if (!new_memory) {
+        return true;
+    }
+
+    *out_old_memory = list->memory;
+
+    u64 size_diff = new_size - old_state->total_size;
+
+    list->memory = new_memory;
+
+    kzero_memory(list->memory, *memory_requirement);
+
+    internal_state *state = (internal_state *)list->memory;
+    state->total_size = new_size;
+    state->nodes = (void *)((u64)list->memory + sizeof(internal_state));
+    state->max_entries = max_entries;
+
+    state->head = &state->nodes[0];
+    state->free_node_head = &state->nodes[1];
+
+    // Invalidate other nodes
+    for (u32 i = 1; i < state->max_entries - 1; i++) {
+        state->nodes[i].offset = INVALID_ID;
+        state->nodes[i].size = INVALID_ID;
+        state->nodes[i].next = &state->nodes[i + 1];
+    }
+
+    state->nodes[state->max_entries - 1].offset = INVALID_ID;
+    state->nodes[state->max_entries - 1].size = INVALID_ID;
+    state->nodes[state->max_entries - 1].next = 0;
+
+    // Copy over nodes
+    freelist_node *new_node = state->head;
+    freelist_node *old_node = old_state->head;
+
+    if (!old_node) {
+        // Case: entire old list was allocated
+        new_node->offset = old_state->total_size;
+        new_node->size = size_diff;
+        new_node->next = 0;
+    } else {
+        while (old_node) {
+            new_node->size = old_node->size;
+            new_node->offset = old_node->offset;
+            new_node->next = 0;
+
+            if (old_node->next) {
+                old_node = old_node->next;
+                new_node->next = get_node(list);
+                new_node = new_node->next;
+                continue;
+            }
+
+            if (old_node->offset + old_node->size == old_state->total_size) {
+                new_node->size += size_diff;
+            } else {
+                new_node->next = get_node(list);
+                new_node = new_node->next;
+                new_node->offset = old_state->total_size;
+                new_node->size = size_diff;
+                new_node->next = 0;
+            }
+            old_node = old_node->next;
+        }
+    }
+
+    return true;
+}
+
 void freelist_clear(freelist *list) {
     internal_state *state = (internal_state *)list->memory;
 
@@ -234,10 +326,15 @@ void freelist_clear(freelist *list) {
     state->head->next = 0;
 
     // Invalidate other nodes
-    for (u32 i = 1; i < state->max_entries; i++) {
+    for (u32 i = 1; i < state->max_entries - 1; i++) {
         state->nodes[i].offset = INVALID_ID;
         state->nodes[i].size = INVALID_ID;
+        state->nodes[i].next = &state->nodes[i + 1];
     }
+
+    state->nodes[state->max_entries - 1].offset = INVALID_ID;
+    state->nodes[state->max_entries - 1].size = INVALID_ID;
+    state->nodes[state->max_entries - 1].next = 0;
 }
 
 u64 freelist_free_space(freelist *list) {

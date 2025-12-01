@@ -265,6 +265,146 @@ u8 freelist_should_allocate_all_space() {
     return failed ? false : true;
 }
 
+u8 freelist_should_resize_successfully() {
+    u8 failed = false;
+
+    freelist list;
+    u64 initial_size = 512;
+    u64 new_total_size = 1024;
+    u64 initial_req = 0;
+
+    // 1. Setup initial list
+    freelist_create(initial_size, &initial_req, 0, 0);
+    void *initial_memory = kallocate(initial_req, MEMORY_TAG_ARRAY);
+    freelist_create(initial_size, &initial_req, initial_memory, &list);
+
+    // 2. Fill the list completely (Free space = 0)
+    u64 offset = 0;
+    freelist_allocate_block(&list, initial_size, &offset);
+    expect_should_be(0, freelist_free_space(&list));
+
+    // 3. Prepare for resize
+    u64 new_req = 0;
+    // Get new requirement
+    freelist_resize(&list, &new_req, 0, new_total_size, 0);
+    expect_should_not_be(0, new_req);
+
+    void *new_memory = kallocate(new_req, MEMORY_TAG_ARRAY);
+    void *old_memory_ptr = 0;
+
+    // 4. Perform Resize
+    b8 result = freelist_resize(&list, &new_req, new_memory, new_total_size,
+                                &old_memory_ptr);
+
+    expect_to_be_true(result);
+    // The pointer returned should match the one we created initially
+    expect_should_be((u64)initial_memory, (u64)old_memory_ptr);
+
+    // 5. Verify logic: Old size was 512 (used), New is 1024.
+    // We should have 512 bytes of NEW free space available.
+    expect_should_be(new_total_size - initial_size, freelist_free_space(&list));
+
+    // 6. Cleanup
+    // Important: Free the OLD memory returned by resize using the OLD
+    // requirement
+    kfree(old_memory_ptr, initial_req, MEMORY_TAG_ARRAY);
+
+    // Destroy the list (which is now using new_memory)
+    freelist_destroy(&list);
+    // Free the NEW memory
+    kfree(new_memory, new_req, MEMORY_TAG_ARRAY);
+
+    return failed ? false : true;
+}
+
+u8 freelist_should_fail_resize_to_smaller() {
+    u8 failed = false;
+
+    freelist list;
+    u64 initial_size = 1024;
+    u64 req = 0;
+
+    freelist_create(initial_size, &req, 0, 0);
+    void *memory = kallocate(req, MEMORY_TAG_ARRAY);
+    freelist_create(initial_size, &req, memory, &list);
+
+    // Prepare invalid resize (smaller than initial)
+    u64 new_size = 512;
+    u64 new_req = 0;
+    void *old_memory_ptr = 0;
+
+    // Even getting the requirement might fail or return 0, but the resize call
+    // definitely should. Let's assume we allocate a dummy block just to pass a
+    // valid pointer
+    void *dummy_mem = kallocate(req, MEMORY_TAG_ARRAY);
+
+    b8 result =
+        freelist_resize(&list, &new_req, dummy_mem, new_size, &old_memory_ptr);
+
+    expect_to_be_false(result);
+
+    // Cleanup
+    kfree(dummy_mem, req, MEMORY_TAG_ARRAY);
+    freelist_destroy(&list);
+    kfree(memory, req, MEMORY_TAG_ARRAY);
+
+    return failed ? false : true;
+}
+
+u8 freelist_should_resize_and_allocate_new_space() {
+    u8 failed = false;
+
+    freelist list;
+    u64 initial_size = 512;
+    u64 new_total_size = 1024;
+    u64 initial_req = 0;
+
+    // 1. Setup initial list
+    freelist_create(initial_size, &initial_req, 0, 0);
+    void *initial_memory = kallocate(initial_req, MEMORY_TAG_ARRAY);
+    freelist_create(initial_size, &initial_req, initial_memory, &list);
+
+    // 2. Allocate the entire initial space
+    u64 offset1 = 0;
+    b8 result = freelist_allocate_block(&list, initial_size, &offset1);
+    expect_to_be_true(result);
+    expect_should_be(0, freelist_free_space(&list));
+
+    // 3. Prepare for resize
+    u64 new_req = 0;
+    freelist_resize(&list, &new_req, 0, new_total_size,
+                    0); // Get new requirement
+
+    void *new_memory = kallocate(new_req, MEMORY_TAG_ARRAY);
+    void *old_memory_ptr = 0;
+
+    // 4. Resize
+    result = freelist_resize(&list, &new_req, new_memory, new_total_size,
+                             &old_memory_ptr);
+    expect_to_be_true(result);
+
+    // 5. Verify we have exactly the difference available (512 bytes)
+    expect_should_be(new_total_size - initial_size, freelist_free_space(&list));
+
+    // 6. Attempt to allocate into the NEW space
+    // We try to allocate the remaining 512 bytes.
+    u64 offset2 = 0;
+    result = freelist_allocate_block(&list, 512, &offset2);
+
+    expect_to_be_true(result);
+    // The new block should start exactly where the old size ended
+    expect_should_be(initial_size, offset2);
+    // The list should now be totally full again
+    expect_should_be(0, freelist_free_space(&list));
+
+    // 7. Cleanup
+    kfree(old_memory_ptr, initial_req, MEMORY_TAG_ARRAY);
+    freelist_destroy(&list);
+    kfree(new_memory, new_req, MEMORY_TAG_ARRAY);
+
+    return failed ? false : true;
+}
+
 void freelist_register_tests() {
     test_manager_register_test(
         freelist_should_create_and_destroy,
@@ -295,4 +435,16 @@ void freelist_register_tests() {
     test_manager_register_test(
         freelist_should_allocate_all_space,
         "Freelist should allocate and free the entire available space.");
+
+    test_manager_register_test(
+        freelist_should_resize_successfully,
+        "Freelist should resize and preserve state successfully.");
+
+    test_manager_register_test(
+        freelist_should_fail_resize_to_smaller,
+        "Freelist should fail to resize to a smaller capacity.");
+
+    test_manager_register_test(
+        freelist_should_resize_and_allocate_new_space,
+        "Freelist should allow allocation in new space after resize.");
 }

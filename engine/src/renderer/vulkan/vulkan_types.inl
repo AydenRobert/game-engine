@@ -1,5 +1,6 @@
 #pragma once
 
+#include "containers/freelist.h"
 #include "defines.h"
 
 #include "core/asserts.h"
@@ -20,6 +21,9 @@ typedef struct vulkan_buffer {
     VkDeviceMemory memory;
     i32 memory_index;
     u32 memory_property_flags;
+    u64 freelist_memory_requirement;
+    void *freelist_block;
+    freelist buffer_freelist;
 } vulkan_buffer;
 
 typedef struct vulkan_swapchain_support_info {
@@ -164,10 +168,10 @@ typedef struct vulkan_geometry_data {
     u32 generation;
     u32 vertex_count;
     u32 vertex_element_size;
-    u32 vertex_buffer_offset;
+    u64 vertex_buffer_offset;
     u32 index_count;
     u32 index_element_size;
-    u32 index_buffer_offset;
+    u64 index_buffer_offset;
 } vulkan_geometry_data;
 
 // Required to be 256 bytes
