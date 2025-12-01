@@ -226,6 +226,44 @@ u8 freelist_should_reuse_freed_space() {
 
     return failed ? false : true;
 }
+u8 freelist_should_allocate_all_space() {
+    u8 failed = false;
+
+    freelist list;
+    u64 total_size = 512;
+    u64 memory_requirement = 0;
+
+    // Setup
+    freelist_create(total_size, &memory_requirement, 0, 0);
+    void *memory = kallocate(memory_requirement, MEMORY_TAG_ARRAY);
+    freelist_create(total_size, &memory_requirement, memory, &list);
+
+    u64 offset = 0;
+
+    // 1. Attempt to allocate the exact total size of the freelist
+    b8 result = freelist_allocate_block(&list, total_size, &offset);
+
+    // Verify allocation succeeded
+    expect_to_be_true(result);
+    // Offset should be at the very start
+    expect_should_be(0, offset);
+    // Free space should be exactly 0
+    expect_should_be(0, freelist_free_space(&list));
+
+    // 2. Free the whole block
+    result = freelist_free_block(&list, total_size, offset);
+
+    // Verify free succeeded
+    expect_to_be_true(result);
+    // Free space should return to full capacity
+    expect_should_be(total_size, freelist_free_space(&list));
+
+    // Cleanup
+    freelist_destroy(&list);
+    kfree(memory, memory_requirement, MEMORY_TAG_ARRAY);
+
+    return failed ? false : true;
+}
 
 void freelist_register_tests() {
     test_manager_register_test(
@@ -253,4 +291,8 @@ void freelist_register_tests() {
     test_manager_register_test(
         freelist_should_reuse_freed_space,
         "Freelist should reuse freed space (fragmentation check).");
+
+    test_manager_register_test(
+        freelist_should_allocate_all_space,
+        "Freelist should allocate and free the entire available space.");
 }

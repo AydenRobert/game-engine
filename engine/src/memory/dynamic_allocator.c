@@ -3,6 +3,8 @@
 #include "core/kmemory.h"
 #include "core/logger.h"
 
+// TODO: support memory alignment
+
 typedef struct internal_state {
     freelist freelist;
     void *memory;

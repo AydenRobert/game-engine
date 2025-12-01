@@ -1,149 +1,246 @@
 #include "linear_allocator_test.h"
 
-#include "../expect.h"
-#include "../test_manager.h"
-
-#include <defines.h>
 #include <memory/linear_allocator.h>
 
+#include "../expect.h"
+#include "../test_manager.h"
+#include "core/kmemory.h"
+#include "core/logger.h"
+#include <defines.h>
+
+// Struct used for data integrity tests
+typedef struct test_data {
+    u32 id;
+    u64 timestamp;
+    f32 value;
+} test_data;
+
 u8 linear_allocator_should_create_and_destroy() {
-    linear_allocator alloc;
-    linear_allocator_create(sizeof(u64), 0, &alloc);
+    u8 failed = false;
 
-    u8 failed = 0;
+    linear_allocator allocator;
+    u64 total_size = 1024;
+    u64 memory_requirement = 0;
 
-    expect_should_not_be(0, alloc.memory);
-    expect_should_be(sizeof(u64), alloc.total_size);
-    expect_should_be(0, alloc.allocated);
-    expect_should_be(true, alloc.owns_memory);
+    // 1. Get memory requirement
+    linear_allocator_create(total_size, &memory_requirement, 0, 0);
+    expect_should_not_be(0, memory_requirement);
 
-    linear_allocator_destroy(&alloc);
+    // 2. Allocate state memory and create
+    void *memory = kallocate(memory_requirement, MEMORY_TAG_ARRAY);
+    linear_allocator_create(total_size, &memory_requirement, memory,
+                            &allocator);
 
-    expect_should_be(0, alloc.memory);
-    expect_should_be(0, alloc.total_size);
-    expect_should_be(0, alloc.allocated);
-    expect_should_be(0, alloc.owns_memory);
+    expect_should_not_be(0, allocator.memory);
 
-    return failed ? 0 : 1;
+    linear_allocator_destroy(&allocator);
+
+    // Clean up the backing memory
+    kfree(memory, memory_requirement, MEMORY_TAG_ARRAY);
+
+    return failed ? false : true;
 }
 
-u8 linear_allocator_single_allocation_all_space() {
-    linear_allocator alloc;
-    u64 max_allocs = 1024;
-    linear_allocator_create(sizeof(u64) * max_allocs, 0, &alloc);
+u8 linear_allocator_should_allocate_with_alignment() {
+    u8 failed = false;
 
-    u8 failed = 0;
+    linear_allocator allocator;
+    u64 total_size = 512;
+    u64 memory_requirement = 0;
 
-    void *block;
-    block = linear_allocator_allocate(&alloc, sizeof(u64) * max_allocs);
-    expect_should_not_be(0, block);
-    expect_should_be(sizeof(u64) * max_allocs, alloc.allocated);
+    linear_allocator_create(total_size, &memory_requirement, 0, 0);
+    void *memory = kallocate(memory_requirement, MEMORY_TAG_ARRAY);
+    linear_allocator_create(total_size, &memory_requirement, memory,
+                            &allocator);
 
-    linear_allocator_destroy(&alloc);
+    // 1. Allocate a small chunk with 1-byte alignment (essentially no
+    // alignment) This pushes the internal offset forward by 1 byte.
+    void *block1 = linear_allocator_allocate(&allocator, 1, 1);
+    expect_should_not_be(0, block1);
 
-    return failed ? 0 : 1;
+    // 2. Allocate with 8-byte alignment.
+    // Since we are currently at offset 1, the allocator must pad bytes 2-7
+    // and give us a pointer starting at 8 (relative to start).
+    u64 alignment = 8;
+    void *block2 = linear_allocator_allocate(&allocator, 64, alignment);
+
+    expect_should_not_be(0, block2);
+
+    // Check that the returned pointer is actually aligned
+    expect_should_be(0, (u64)block2 % alignment);
+
+    // Ensure blocks do not overlap (block2 > block1)
+    expect_to_be_true(((u64)block2 > (u64)block1));
+
+    linear_allocator_destroy(&allocator);
+    kfree(memory, memory_requirement, MEMORY_TAG_ARRAY);
+
+    return failed ? false : true;
 }
 
-u8 linear_allocator_muli_allocate_all_space() {
-    linear_allocator alloc;
-    u64 max_allocs = 1024;
-    linear_allocator_create(sizeof(u64) * max_allocs, 0, &alloc);
+u8 linear_allocator_should_handle_multiple_allocations() {
+    u8 failed = false;
 
-    u8 failed = 0;
+    linear_allocator allocator;
+    u64 total_size = 1024;
+    u64 memory_requirement = 0;
 
-    void *block;
-    for (u64 i = 0; i < max_allocs; i++) {
-        block = linear_allocator_allocate(&alloc, sizeof(u64));
+    linear_allocator_create(total_size, &memory_requirement, 0, 0);
+    void *memory = kallocate(memory_requirement, MEMORY_TAG_ARRAY);
+    linear_allocator_create(total_size, &memory_requirement, memory,
+                            &allocator);
 
-        expect_should_not_be(0, block);
-        expect_should_be(sizeof(u64) * (i + 1), alloc.allocated);
-    }
+    // Alloc 1
+    void *block1 = linear_allocator_allocate(&allocator, 100, 1);
+    expect_should_not_be(0, block1);
 
-    linear_allocator_destroy(&alloc);
+    // Alloc 2
+    void *block2 = linear_allocator_allocate(&allocator, 200, 1);
+    expect_should_not_be(0, block2);
 
-    return failed ? 0 : 1;
+    // Alloc 3
+    void *block3 = linear_allocator_allocate(&allocator, 300, 1);
+    expect_should_not_be(0, block3);
+
+    // Ensure pointers are distinct and sequential (assuming flat memory)
+    expect_should_not_be(block1, block2);
+    expect_should_not_be(block2, block3);
+
+    // Check strict linear progression
+    expect_to_be_true(((u64)block2 >= (u64)block1 + 100));
+    expect_to_be_true(((u64)block3 >= (u64)block2 + 200));
+
+    linear_allocator_destroy(&allocator);
+    kfree(memory, memory_requirement, MEMORY_TAG_ARRAY);
+
+    return failed ? false : true;
 }
 
-u8 linear_allocator_multi_allocate_over_allocate() {
-    linear_allocator alloc;
-    u64 max_allocs = 64;
-    linear_allocator_create(sizeof(u64) * max_allocs, 0, &alloc);
+u8 linear_allocator_should_fail_oversized_allocation() {
+    u8 failed = false;
 
-    u8 failed = 0;
+    linear_allocator allocator;
+    u64 total_size = 100;
+    u64 memory_requirement = 0;
 
-    void *block;
-    for (u64 i = 0; i < max_allocs; i++) {
-        block = linear_allocator_allocate(&alloc, sizeof(u64));
+    linear_allocator_create(total_size, &memory_requirement, 0, 0);
+    void *memory = kallocate(memory_requirement, MEMORY_TAG_ARRAY);
+    linear_allocator_create(total_size, &memory_requirement, memory,
+                            &allocator);
 
-        expect_should_not_be(0, block);
-        expect_should_be(sizeof(u64) * (i + 1), alloc.allocated);
-    }
+    // 1. Fill most of the buffer
+    void *block1 = linear_allocator_allocate(&allocator, 80, 1);
+    expect_should_not_be(0, block1);
 
-    KDEBUG("Note: the following error is intentially caused by this test.");
-    block = linear_allocator_allocate(&alloc, sizeof(u64));
+    // 2. Try to allocate more than remains (Remaining: ~20, Request: 30)
+    void *block2 = linear_allocator_allocate(&allocator, 30, 1);
+    expect_should_be(0, block2);
 
-    expect_should_be(0, block);
+    // 3. Try to allocate way more than total size
+    void *block3 = linear_allocator_allocate(&allocator, 200, 1);
+    expect_should_be(0, block3);
 
-    linear_allocator_destroy(&alloc);
+    linear_allocator_destroy(&allocator);
+    kfree(memory, memory_requirement, MEMORY_TAG_ARRAY);
 
-    return failed ? 0 : 1;
+    return failed ? false : true;
 }
 
-u8 linear_allocator_multi_allocate_then_free() {
-    linear_allocator alloc;
-    u64 max_allocs = 64;
-    linear_allocator_create(sizeof(u64) * max_allocs, 0, &alloc);
+u8 linear_allocator_should_reset_on_free_all() {
+    u8 failed = false;
 
-    u8 failed = 0;
+    linear_allocator allocator;
+    u64 total_size = 1024;
+    u64 memory_requirement = 0;
 
-    void *block;
-    for (u64 i = 0; i < max_allocs; i++) {
-        block = linear_allocator_allocate(&alloc, sizeof(u64));
+    linear_allocator_create(total_size, &memory_requirement, 0, 0);
+    void *memory = kallocate(memory_requirement, MEMORY_TAG_ARRAY);
+    linear_allocator_create(total_size, &memory_requirement, memory,
+                            &allocator);
 
-        expect_should_not_be(0, block);
-        expect_should_be(sizeof(u64) * (i + 1), alloc.allocated);
-    }
+    // 1. Allocate something
+    void *block1 = linear_allocator_allocate(&allocator, 512, 1);
+    expect_should_not_be(0, block1);
 
-    linear_allocator_free_all(&alloc);
-    expect_should_be(0, alloc.allocated);
+    // 2. Free all (reset)
+    linear_allocator_free_all(&allocator);
 
-    linear_allocator_destroy(&alloc);
+    // 3. Allocate again
+    void *block2 = linear_allocator_allocate(&allocator, 512, 1);
+    expect_should_not_be(0, block2);
 
-    return failed ? 0 : 1;
+    // Since we reset, block2 should point to the same location as block1
+    // (assuming the implementation resets the internal offset to 0)
+    expect_should_be(block1, block2);
+
+    linear_allocator_destroy(&allocator);
+    kfree(memory, memory_requirement, MEMORY_TAG_ARRAY);
+
+    return failed ? false : true;
 }
 
-// NOTE: stack memory alloc sits on is not zeroed out.
-// Need to decide whether to add extra _allocate tests
-// u8 linear_allocator_attempt_allocate_without_create() {
-//     linear_allocator alloc;
-//
-//     u8 failed = 0;
-//
-//     void *block = linear_allocator_allocate(&alloc, sizeof(u64));
-//     expect_should_be(0, block);
-//
-//     linear_allocator_destroy(&alloc);
-//
-//     return failed ? 0 : 1;
-// }
+u8 linear_allocator_should_preserve_data() {
+    u8 failed = false;
+
+    linear_allocator allocator;
+    u64 total_size = 1024;
+    u64 memory_requirement = 0;
+
+    linear_allocator_create(total_size, &memory_requirement, 0, 0);
+    void *memory = kallocate(memory_requirement, MEMORY_TAG_ARRAY);
+    linear_allocator_create(total_size, &memory_requirement, memory,
+                            &allocator);
+
+    // 1. Allocate struct
+    test_data *obj1 =
+        linear_allocator_allocate(&allocator, sizeof(test_data), 8);
+    expect_should_not_be(0, obj1);
+
+    // 2. Write data
+    obj1->id = 0xAA;
+    obj1->timestamp = 12345;
+    obj1->value = 1.23f;
+
+    // 3. Allocate more memory to advance pointer
+    test_data *obj2 =
+        linear_allocator_allocate(&allocator, sizeof(test_data), 8);
+    expect_should_not_be(0, obj2);
+
+    obj2->id = 0xBB; // Write to new block to ensure no overlap
+
+    // 4. Check integrity of first block
+    expect_should_be(0xAA, obj1->id);
+    expect_should_be(12345, obj1->timestamp);
+    expect_float_to_be(1.23f, obj1->value);
+
+    linear_allocator_destroy(&allocator);
+    kfree(memory, memory_requirement, MEMORY_TAG_ARRAY);
+
+    return failed ? false : true;
+}
 
 void linear_allocator_register_tests() {
-    test_manager_register_test(linear_allocator_should_create_and_destroy,
-                               "Linear allocator should create and destroy.");
     test_manager_register_test(
-        linear_allocator_single_allocation_all_space,
-        "Linear allocator, allocating one time, max size.");
+        linear_allocator_should_create_and_destroy,
+        "Linear allocator should create and destroy successfully.");
+
     test_manager_register_test(
-        linear_allocator_muli_allocate_all_space,
-        "Linear allocator, allocating multiple times, to max size.");
-    test_manager_register_test(linear_allocator_multi_allocate_over_allocate,
-                               "Linear allocator, multiple allocations, over "
-                               "allocation on last allocation.");
-    // TODO: decide to delete or keep test
-    // test_manager_register_test(
-    //     linear_allocator_attempt_allocate_without_create,
-    //     "Attempting an allocation without initialising the allocator.");
+        linear_allocator_should_allocate_with_alignment,
+        "Linear allocator should allocate with correct memory alignment.");
+
     test_manager_register_test(
-        linear_allocator_multi_allocate_then_free,
-        "Linear allocate, multiple allocations followed by a free all.");
+        linear_allocator_should_handle_multiple_allocations,
+        "Linear allocator should allocate multiple contiguous blocks.");
+
+    test_manager_register_test(
+        linear_allocator_should_fail_oversized_allocation,
+        "Linear allocator should return 0 when out of memory.");
+
+    test_manager_register_test(
+        linear_allocator_should_reset_on_free_all,
+        "Linear allocator should reuse memory range after free_all.");
+
+    test_manager_register_test(
+        linear_allocator_should_preserve_data,
+        "Linear allocator should preserve data integrity across allocations.");
 }

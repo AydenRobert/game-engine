@@ -30,6 +30,9 @@ typedef struct application_state {
     i16 height;
     clock clock;
     f64 last_time;
+
+    u64 systems_allocator_memory_requirement;
+    void *systems_allocator_memory;
     linear_allocator systems_allocator;
 
     u64 logging_system_memory_requirement;
@@ -113,14 +116,22 @@ KAPI b8 application_create(game *game_inst) {
     app_state->game_inst = game_inst;
 
     u64 systems_allocator_total_size = 64 * 1024 * 1024; // 64 mb
-    linear_allocator_create(systems_allocator_total_size, 0,
+    linear_allocator_create(systems_allocator_total_size,
+                            &app_state->systems_allocator_memory_requirement, 0,
+                            &app_state->systems_allocator);
+    app_state->systems_allocator_memory =
+        kallocate(app_state->systems_allocator_memory_requirement,
+                  MEMORY_TAG_LINEAR_ALLOCATOR);
+    linear_allocator_create(systems_allocator_total_size,
+                            &app_state->systems_allocator_memory_requirement,
+                            app_state->systems_allocator_memory,
                             &app_state->systems_allocator);
 
     // memory
     initialize_memory(&app_state->memory_system_memory_requirement, 0);
-    app_state->memory_system_state =
-        linear_allocator_allocate(&app_state->systems_allocator,
-                                  app_state->memory_system_memory_requirement);
+    app_state->memory_system_state = linear_allocator_allocate(
+        &app_state->systems_allocator,
+        app_state->memory_system_memory_requirement, 64);
     if (!initialize_memory(&app_state->memory_system_memory_requirement,
                            app_state->memory_system_state)) {
         KERROR("Failed to initialize memory system, shutting down.");
@@ -130,9 +141,9 @@ KAPI b8 application_create(game *game_inst) {
     // Initialize subsystems
     // logging
     initialize_logging(&app_state->logging_system_memory_requirement, 0);
-    app_state->logging_system_state =
-        linear_allocator_allocate(&app_state->systems_allocator,
-                                  app_state->logging_system_memory_requirement);
+    app_state->logging_system_state = linear_allocator_allocate(
+        &app_state->systems_allocator,
+        app_state->logging_system_memory_requirement, 64);
     if (!initialize_logging(&app_state->logging_system_memory_requirement,
                             app_state->logging_system_state)) {
         KERROR("Failed to initialize logging system, shutting down.");
@@ -140,9 +151,9 @@ KAPI b8 application_create(game *game_inst) {
     }
     // input
     input_initialize(&app_state->input_system_memory_requirement, 0);
-    app_state->input_system_state =
-        linear_allocator_allocate(&app_state->systems_allocator,
-                                  app_state->input_system_memory_requirement);
+    app_state->input_system_state = linear_allocator_allocate(
+        &app_state->systems_allocator,
+        app_state->input_system_memory_requirement, 64);
     if (!input_initialize(&app_state->input_system_memory_requirement,
                           app_state->input_system_state)) {
         KERROR("Failed to initialize input system, shutting down.");
@@ -156,9 +167,9 @@ KAPI b8 application_create(game *game_inst) {
 
     // event
     event_initialize(&app_state->event_system_memory_requirement, 0);
-    app_state->event_system_state =
-        linear_allocator_allocate(&app_state->systems_allocator,
-                                  app_state->event_system_memory_requirement);
+    app_state->event_system_state = linear_allocator_allocate(
+        &app_state->systems_allocator,
+        app_state->event_system_memory_requirement, 64);
     if (!event_initialize(&app_state->event_system_memory_requirement,
                           app_state->event_system_state)) {
         KERROR("Failed to initialize event system, shutting down.");
@@ -188,7 +199,7 @@ KAPI b8 application_create(game *game_inst) {
                                0, resource_system_config);
     app_state->resource_system_state = linear_allocator_allocate(
         &app_state->systems_allocator,
-        app_state->resource_system_memory_requirement);
+        app_state->resource_system_memory_requirement, 64);
     if (!resource_system_initialize(
             &app_state->resource_system_memory_requirement,
             app_state->resource_system_state, resource_system_config)) {
@@ -201,7 +212,7 @@ KAPI b8 application_create(game *game_inst) {
                         &app_state->renderer_system_memory_requirement, 0);
     app_state->renderer_system_state = linear_allocator_allocate(
         &app_state->systems_allocator,
-        app_state->renderer_system_memory_requirement);
+        app_state->renderer_system_memory_requirement, 64);
     if (!renderer_initialize(game_inst->app_config.name, &app_state->platform,
                              &app_state->renderer_system_memory_requirement,
                              app_state->renderer_system_state)) {
@@ -214,9 +225,9 @@ KAPI b8 application_create(game *game_inst) {
     texture_system_config.max_texture_count = 65536;
     texture_system_initialize(&app_state->texture_system_memory_requirement, 0,
                               texture_system_config);
-    app_state->texture_system_state =
-        linear_allocator_allocate(&app_state->systems_allocator,
-                                  app_state->texture_system_memory_requirement);
+    app_state->texture_system_state = linear_allocator_allocate(
+        &app_state->systems_allocator,
+        app_state->texture_system_memory_requirement, 64);
     if (!texture_system_initialize(
             &app_state->texture_system_memory_requirement,
             app_state->texture_system_state, texture_system_config)) {
@@ -231,7 +242,7 @@ KAPI b8 application_create(game *game_inst) {
                                0, material_system_config);
     app_state->material_system_state = linear_allocator_allocate(
         &app_state->systems_allocator,
-        app_state->material_system_memory_requirement);
+        app_state->material_system_memory_requirement, 64);
     if (!material_system_initialize(
             &app_state->material_system_memory_requirement,
             app_state->material_system_state, material_system_config)) {
@@ -246,7 +257,7 @@ KAPI b8 application_create(game *game_inst) {
                                0, geometry_system_config);
     app_state->geometry_system_state = linear_allocator_allocate(
         &app_state->systems_allocator,
-        app_state->geometry_system_memory_requirement);
+        app_state->geometry_system_memory_requirement, 64);
     if (!geometry_system_initialize(
             &app_state->geometry_system_memory_requirement,
             app_state->geometry_system_state, geometry_system_config)) {
@@ -423,7 +434,11 @@ KAPI b8 application_run() {
     resource_system_shutdown(app_state->resource_system_state);
     event_shutdown(app_state->event_system_state);
 
+    // Destroy and free linear allocator
     linear_allocator_destroy(&app_state->systems_allocator);
+    kfree(app_state->systems_allocator_memory,
+          app_state->systems_allocator_memory_requirement,
+          MEMORY_TAG_LINEAR_ALLOCATOR);
 
     platform_shutdown(&app_state->platform);
     shutdown_memory(app_state->memory_system_state);
