@@ -3,11 +3,11 @@
 
 #include "../expect.h"
 #include "../test_manager.h"
+#include "core/kmemory.h"
 #include "core/logger.h"
 
 #include <containers/freelist.h>
 #include <defines.h>
-#include <stdlib.h> // for malloc/free in test harness
 
 u8 freelist_should_create_and_destroy() {
     u8 failed = false;
@@ -21,7 +21,7 @@ u8 freelist_should_create_and_destroy() {
     expect_should_not_be(0, memory_requirement);
 
     // 2. Allocate state memory and create
-    void *memory = malloc(memory_requirement);
+    void *memory = kallocate(memory_requirement, MEMORY_TAG_ARRAY);
     freelist_create(total_size, &memory_requirement, memory, &list);
 
     expect_should_not_be(0, list.memory);
@@ -31,7 +31,7 @@ u8 freelist_should_create_and_destroy() {
 
     expect_should_not_be(0, list.memory);
 
-    free(memory);
+    kfree(memory, memory_requirement, MEMORY_TAG_ARRAY);
 
     return failed ? false : true;
 }
@@ -44,7 +44,7 @@ u8 freelist_should_allocate_successfully() {
     u64 memory_requirement = 0;
 
     freelist_create(total_size, &memory_requirement, 0, 0);
-    void *memory = malloc(memory_requirement);
+    void *memory = kallocate(memory_requirement, MEMORY_TAG_ARRAY);
     freelist_create(total_size, &memory_requirement, memory, &list);
 
     u32 offset = 0;
@@ -59,7 +59,7 @@ u8 freelist_should_allocate_successfully() {
     expect_should_be(total_size - alloc_size, freelist_free_space(&list));
 
     freelist_destroy(&list);
-    free(memory);
+    kfree(memory, memory_requirement, MEMORY_TAG_ARRAY);
 
     return failed ? false : true;
 }
@@ -72,7 +72,7 @@ u8 freelist_should_allocate_and_free_successfully() {
     u64 memory_requirement = 0;
 
     freelist_create(total_size, &memory_requirement, 0, 0);
-    void *memory = malloc(memory_requirement);
+    void *memory = kallocate(memory_requirement, MEMORY_TAG_ARRAY);
     freelist_create(total_size, &memory_requirement, memory, &list);
 
     u32 offset = 0;
@@ -91,7 +91,7 @@ u8 freelist_should_allocate_and_free_successfully() {
     expect_should_be(total_size, freelist_free_space(&list));
 
     freelist_destroy(&list);
-    free(memory);
+    kfree(memory, memory_requirement, MEMORY_TAG_ARRAY);
 
     return failed ? false : true;
 }
@@ -104,7 +104,7 @@ u8 freelist_should_handle_multiple_allocations() {
     u64 memory_requirement = 0;
 
     freelist_create(total_size, &memory_requirement, 0, 0);
-    void *memory = malloc(memory_requirement);
+    void *memory = kallocate(memory_requirement, MEMORY_TAG_ARRAY);
     freelist_create(total_size, &memory_requirement, memory, &list);
 
     u32 offset1 = 0, offset2 = 0, offset3 = 0;
@@ -126,7 +126,7 @@ u8 freelist_should_handle_multiple_allocations() {
     expect_should_be(expected_free, freelist_free_space(&list));
 
     freelist_destroy(&list);
-    free(memory);
+    kfree(memory, memory_requirement, MEMORY_TAG_ARRAY);
 
     return failed ? false : true;
 }
@@ -139,7 +139,7 @@ u8 freelist_should_fail_oversized_allocation() {
     u64 memory_requirement = 0;
 
     freelist_create(total_size, &memory_requirement, 0, 0);
-    void *memory = malloc(memory_requirement);
+    void *memory = kallocate(memory_requirement, MEMORY_TAG_ARRAY);
     freelist_create(total_size, &memory_requirement, memory, &list);
 
     u32 offset = 0;
@@ -151,7 +151,7 @@ u8 freelist_should_fail_oversized_allocation() {
     expect_should_be(total_size, freelist_free_space(&list));
 
     freelist_destroy(&list);
-    free(memory);
+    kfree(memory, memory_requirement, MEMORY_TAG_ARRAY);
 
     return failed ? false : true;
 }
@@ -164,7 +164,7 @@ u8 freelist_should_clear_successfully() {
     u64 memory_requirement = 0;
 
     freelist_create(total_size, &memory_requirement, 0, 0);
-    void *memory = malloc(memory_requirement);
+    void *memory = kallocate(memory_requirement, MEMORY_TAG_ARRAY);
     freelist_create(total_size, &memory_requirement, memory, &list);
 
     u32 offset = 0;
@@ -183,7 +183,7 @@ u8 freelist_should_clear_successfully() {
     expect_to_be_true(freelist_allocate_block(&list, 512, &offset));
 
     freelist_destroy(&list);
-    free(memory);
+    kfree(memory, memory_requirement, MEMORY_TAG_ARRAY);
 
     return failed ? false : true;
 }
@@ -196,7 +196,7 @@ u8 freelist_should_reuse_freed_space() {
     u64 memory_requirement = 0;
 
     freelist_create(total_size, &memory_requirement, 0, 0);
-    void *memory = malloc(memory_requirement);
+    void *memory = kallocate(memory_requirement, MEMORY_TAG_ARRAY);
     freelist_create(total_size, &memory_requirement, memory, &list);
 
     u32 offset1 = 0, offset2 = 0, offset3 = 0;
@@ -222,7 +222,7 @@ u8 freelist_should_reuse_freed_space() {
     expect_should_be(total_size - 300, freelist_free_space(&list));
 
     freelist_destroy(&list);
-    free(memory);
+    kfree(memory, memory_requirement, MEMORY_TAG_ARRAY);
 
     return failed ? false : true;
 }
