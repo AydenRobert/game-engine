@@ -63,7 +63,7 @@ void *dynamic_allocator_allocate(dynamic_allocator *allocator, u64 size) {
 
     internal_state *state = (internal_state *)allocator->memory;
 
-    u32 offset = 0;
+    u64 offset = 0;
 
     if (!freelist_allocate_block(&state->freelist, size, &offset)) {
         KERROR("dynamic_allocator_allocate - cannot allocate block, returning "

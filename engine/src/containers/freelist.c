@@ -19,7 +19,7 @@ typedef struct internal_state {
 freelist_node *get_node(freelist *list);
 void return_node(freelist *list, freelist_node *node);
 
-void freelist_create(u32 total_size, u64 *memory_requirement, void *memory,
+void freelist_create(u64 total_size, u64 *memory_requirement, void *memory,
                      freelist *out_list) {
     // Enough space to hold state and all nodes
     u32 max_entries = (total_size / sizeof(void *));
@@ -31,7 +31,7 @@ void freelist_create(u32 total_size, u64 *memory_requirement, void *memory,
     }
 
     // Warn about wasteful memory usage
-    u32 memory_minimum = (sizeof(internal_state) + sizeof(freelist_node)) * 8;
+    u64 memory_minimum = (sizeof(internal_state) + sizeof(freelist_node)) * 8;
     if (total_size < memory_minimum) {
         KWARN("Freelists are inefficient for small amounts of memory.");
     }
@@ -77,7 +77,7 @@ void freelist_destroy(freelist *list) {
     kzero_memory(list->memory, memory_size);
 }
 
-b8 freelist_allocate_block(freelist *list, u32 size, u32 *out_offset) {
+b8 freelist_allocate_block(freelist *list, u64 size, u64 *out_offset) {
     if (!list || !list->memory) {
         KERROR("freelist_allocate_block - passed invalid freelist.");
         return false;
@@ -122,7 +122,7 @@ b8 freelist_allocate_block(freelist *list, u32 size, u32 *out_offset) {
     return false;
 }
 
-b8 freelist_free_block(freelist *list, u32 size, u32 offset) {
+b8 freelist_free_block(freelist *list, u64 size, u64 offset) {
     if (!list || !list->memory) {
         KERROR("freelist_free_block - passed invalid freelist.");
         return false;
