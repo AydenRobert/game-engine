@@ -13,6 +13,8 @@
         KASSERT(expr == VK_SUCCESS);                                           \
     }
 
+typedef struct vulkan_context vulkan_context;
+
 typedef struct vulkan_buffer {
     u64 total_size;
     VkBuffer handle;
@@ -120,6 +122,11 @@ typedef struct vulkan_command_buffer {
     VkCommandBuffer handle;
     vulkan_command_buffer_state state;
 } vulkan_command_buffer;
+
+typedef enum vulkan_shader_scope {
+    VULKAN_SHADER_SCOPE_GLOBAL,
+    VULKAN_SHADER_SCOPE_INSTANCE,
+} vulkan_shader_scope;
 
 typedef struct vulkan_shader_stage {
     VkShaderModuleCreateInfo create_info;
@@ -334,6 +341,10 @@ typedef enum shader_attribute_type {
     SHADER_ATTRIB_TYPE_UINT32_4,
 } shader_attribute_type;
 
+typedef enum vulkan_shader_state {
+    VULKAN_SHADER_STATE_NOT_CREATED,
+} vulkan_shader_state;
+
 typedef struct vulkan_shader_stage_config {
     VkShaderStageFlagBits stage;
     char file_name[255];
@@ -352,6 +363,9 @@ typedef struct vulkan_shader_config {
     u8 descriptor_set_count;
     vulkan_descriptor_set_config descriptor_sets[2];
     VkVertexInputAttributeDescription attributes[VULKAN_SHADER_MAX_ATTRIBUTES];
+
+    u32 attribute_stride;
+    u32 push_constant_range_count;
 } vulkan_shader_config;
 
 typedef struct vulkan_shader_descriptor_set_state {
@@ -369,6 +383,9 @@ typedef struct vulkan_shader_instance_state {
 typedef struct vulkan_shader {
     void *mapped_uniform_buffer_block;
     u32 id;
+    vulkan_shader_state state;
+    vulkan_context *context;
+    char *name;
     vulkan_shader_config config;
     vulkan_renderpass *renderpass;
     vulkan_shader_stage stages[VULKAN_SHADER_MAX_STAGES];
@@ -377,11 +394,15 @@ typedef struct vulkan_shader {
     VkDescriptorSet global_descriptor_sets[3];
     vulkan_buffer uniform_buffer;
     vulkan_pipeline pipeline;
+    u32 bound_instance_id;
     u32 instance_count;
     vulkan_shader_instance_state instance_states[VULKAN_MAX_MATERIAL_COUNT];
+
+    b8 use_instances;
+    b8 use_push_constants;
 } vulkan_shader;
 
-typedef struct vulkan_context {
+struct vulkan_context {
     f32 frame_delta_time;
 
     u32 framebuffer_width;
@@ -443,7 +464,7 @@ typedef struct vulkan_context {
     VkFramebuffer world_framebuffers[3];
 
     i32 (*find_memory_index)(u32 type_filter, u32 property_flags);
-} vulkan_context;
+};
 
 typedef struct vulkan_texture_data {
     vulkan_image image;
