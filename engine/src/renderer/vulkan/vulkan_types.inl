@@ -348,6 +348,7 @@ typedef enum vulkan_shader_state {
 typedef struct vulkan_shader_stage_config {
     VkShaderStageFlagBits stage;
     char file_name[255];
+    char stage_str[255];
 } vulkan_shader_stage_config;
 
 typedef struct vulkan_descriptor_set_config {
@@ -362,10 +363,12 @@ typedef struct vulkan_shader_config {
     u16 max_descriptor_set_count;
     u8 descriptor_set_count;
     vulkan_descriptor_set_config descriptor_sets[2];
+    u32 attribute_count;
+    u32 attribute_stride;
     VkVertexInputAttributeDescription attributes[VULKAN_SHADER_MAX_ATTRIBUTES];
 
-    u32 attribute_stride;
     u32 push_constant_range_count;
+    krange push_constant_ranges[VULKAN_SHADER_MAX_PUSH_CONST_RANGES];
 } vulkan_shader_config;
 
 typedef struct vulkan_shader_descriptor_set_state {
@@ -392,6 +395,8 @@ typedef struct vulkan_shader {
     VkDescriptorPool descriptor_pool;
     VkDescriptorSetLayout descriptor_set_layouts[2];
     VkDescriptorSet global_descriptor_sets[3];
+    u32 global_texture_count;
+    texture global_textures[VULKAN_SHADER_MAX_GLOBAL_TEXTURES];
     vulkan_buffer uniform_buffer;
     vulkan_pipeline pipeline;
     u32 bound_instance_id;

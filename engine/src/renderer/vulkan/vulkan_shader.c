@@ -2,6 +2,7 @@
 
 #include "renderer/vulkan/vulkan_buffer.h"
 #include "renderer/vulkan/vulkan_pipeline.h"
+#include "renderer/vulkan/vulkan_types.inl"
 #include "renderer/vulkan/vulkan_utils.h"
 
 #include "core/kmemory.h"
@@ -9,6 +10,7 @@
 #include "core/logger.h"
 #include "systems/resource_system.h"
 #include "systems/texture_system.h"
+#include <vulkan/vulkan_core.h>
 
 const u32 DESC_SET_INDEX_GLOBAL = 0;
 const u32 DESC_SET_INDEX_INSTANCE = 1;
@@ -55,8 +57,53 @@ b8 vulkan_shader_create(vulkan_context *context, const char *name,
     out_shader->config.push_constant_range_count = 0;
     out_shader->bound_instance_id = INVALID_ID;
     kzero_memory(out_shader->config.push_constant_ranges,
-                 sizeof(range) * VULKAN_SHADER_MAX_PUSH_CONST_RANGES);
+                 sizeof(krange) * VULKAN_SHADER_MAX_PUSH_CONST_RANGES);
     out_shader->config.max_descriptor_set_count = max_descriptor_set_count;
+
+    // Set shader stages
+    kzero_memory(out_shader->config.stages,
+                 sizeof(vulkan_shader_stage_config) * VULKAN_SHADER_MAX_STAGES);
+    out_shader->config.stage_count = 0;
+    for (u32 i = VK_SHADER_STAGE_VERTEX_BIT;
+         i < VK_SHADER_STAGE_FLAG_BITS_MAX_ENUM; i++) {
+        if ((stages & i) == i) {
+            vulkan_shader_stage_config stage_config;
+            switch (i) {
+            case VK_SHADER_STAGE_VERTEX_BIT:
+                string_ncopy(stage_config.stage_str, "vert", 7);
+                break;
+            case VK_SHADER_STAGE_FRAGMENT_BIT:
+                string_ncopy(stage_config.stage_str, "vert", 7);
+                break;
+            default:
+                KERROR("vulkan_shader_create - Unsupported shader stage flag "
+                       "'%d', ignoring stage.",
+                       i);
+                continue;
+            }
+            stage_config.stage = i;
+            if (out_shader->config.stage_count + 1 > VULKAN_SHADER_MAX_STAGES) {
+                KERROR("vulkan_shader_create - shaders must have a maximum "
+                       "shader count of: '%d'.",
+                       VULKAN_SHADER_MAX_STAGES);
+                return false;
+            }
+            out_shader->config.stages[out_shader->config.stage_count] =
+                stage_config;
+            out_shader->config.stage_count++;
+        }
+    }
+
+    kzero_memory(out_shader->config.descriptor_sets,
+                 sizeof(vulkan_descriptor_set_config) * 2);
+    kzero_memory(out_shader->global_textures,
+                 sizeof(texture *) * VULKAN_SHADER_MAX_GLOBAL_TEXTURES);
+    out_shader->global_texture_count = 0;
+    kzero_memory(out_shader->config.attributes,
+                 sizeof(VkVertexInputAttributeDescription) *
+                     VULKAN_SHADER_MAX_ATTRIBUTES);
+    out_shader->config.attribute_count = 0;
+    kzero_memory(out_shader->uniforms, sizeof(vulkan_uniform_lookup_entry) * VULKAN_SHADER_MAX_UNIFORMS);
 }
 
 b8 vulkan_shader_destroy(vulkan_shader *shader);

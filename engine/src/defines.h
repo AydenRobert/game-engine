@@ -20,6 +20,11 @@ typedef double f64;
 typedef int b32;
 typedef _Bool b8;
 
+typedef struct krange {
+    u64 offset;
+    u64 size;
+} krange;
+
 // Static assertions
 #if defined(__clang__) || defined(__gcc__)
 #define STATIC_ASSERT _Static_assert
