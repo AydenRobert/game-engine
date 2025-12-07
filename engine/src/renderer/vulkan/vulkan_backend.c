@@ -9,6 +9,7 @@
 #include "renderer/vulkan/vulkan_image.h"
 #include "renderer/vulkan/vulkan_platform.h"
 #include "renderer/vulkan/vulkan_renderpass.h"
+#include "renderer/vulkan/vulkan_shader_types.inl"
 #include "renderer/vulkan/vulkan_swapchain.h"
 #include "renderer/vulkan/vulkan_types.inl"
 #include "renderer/vulkan/vulkan_utils.h"
@@ -22,6 +23,7 @@
 
 #include "containers/darray.h"
 #include "systems/material_system.h"
+#include "systems/shader_system.h"
 
 #include <limits.h>
 #include <vulkan/vulkan_core.h>
@@ -1226,3 +1228,158 @@ void vulkan_renderer_draw_geometry(renderer_backend *backend,
         vkCmdDraw(command_buffer->handle, buffer_data->vertex_count, 1, 0, 0);
     }
 }
+
+// The index of the global descriptor set
+const u32 DESC_SET_INDEX_GLOBAL = 0;
+// The index of the instance descriptor set
+const u32 DESC_SET_INDEX_INSTANCE = 1;
+// The index of the UBO binding
+const u32 BINDING_INDEX_UBO = 0;
+// The index of the image sampler binding
+const u32 BINDING_INDEX_SAMPLER = 1;
+
+b8 vulkan_renderer_shader_create(struct shader *shader, u8 renderpass_id,
+                                 u8 stage_count, const char **stage_filenames,
+                                 shader_stage *stages) {
+    shader->internal_data =
+        kallocate(sizeof(vulkan_shader), MEMORY_TAG_RENDERER);
+
+    // TODO: dynamic renderpass
+    vulkan_renderpass *renderpass =
+        renderpass_id == 1 ? &context.main_renderpass : &context.ui_renderpass;
+
+    // Translate stages
+    VkShaderStageFlags vk_stages[VULKAN_SHADER_MAX_STAGES];
+    for (u8 i = 0; i < stage_count; i++) {
+        switch (stages[i]) {
+        case SHADER_STAGE_FRAGMENT:
+            vk_stages[i] = VK_SHADER_STAGE_FRAGMENT_BIT;
+            break;
+        case SHADER_STAGE_VERTEX:
+            vk_stages[i] = VK_SHADER_STAGE_VERTEX_BIT;
+            break;
+        case SHADER_STAGE_GEOMETRY:
+            KWARN("vulkan_renderer_shader_create - Geometry flag set but not "
+                  "supported yet.");
+            vk_stages[i] = VK_SHADER_STAGE_GEOMETRY_BIT;
+            break;
+        case SHADER_STAGE_COMPUTE:
+            KWARN("vulkan_renderer_shader_create - Compute flag set but not "
+                  "supported yet.");
+            vk_stages[i] = VK_SHADER_STAGE_COMPUTE_BIT;
+            break;
+        default:
+            KERROR("vulkan_renderer_shader_create - Unsupported stage type %d.",
+                   stages[i]);
+            break;
+        }
+    }
+
+    // TODO: make configurable
+    u32 max_descriptor_allocate_count = 1024;
+
+    vulkan_shader *out_shader = (vulkan_shader *)shader->internal_data;
+    out_shader->renderpass = renderpass;
+    out_shader->config.max_descriptor_set_count = max_descriptor_allocate_count;
+
+    kzero_memory(out_shader->config.stages,
+                 sizeof(vulkan_shader_stage_config) * VULKAN_SHADER_MAX_STAGES);
+    out_shader->config.stage_count = 0;
+    for (u8 i = 0; i < stage_count; i++) {
+        if (out_shader->config.stage_count + 1 > VULKAN_SHADER_MAX_STAGES) {
+            KERROR("vulkan_renderer_shader_create - shader surpass maximum of "
+                   "'%d'.",
+                   VULKAN_SHADER_MAX_STAGES);
+            return false;
+        }
+
+        VkShaderStageFlagBits stage_flag;
+        switch (stages[i]) {
+        case SHADER_STAGE_FRAGMENT:
+            stage_flag = VK_SHADER_STAGE_FRAGMENT_BIT;
+            break;
+        case SHADER_STAGE_VERTEX:
+            stage_flag = VK_SHADER_STAGE_VERTEX_BIT;
+            break;
+        default:
+            KERROR("vulkan_renderer_shader_create - Unsupported stage flag %d. "
+                   "Stage is being ignored.",
+                   stages[i]);
+            continue;
+        }
+
+        out_shader->config.stages[out_shader->config.stage_count].stage =
+            stage_flag;
+        string_ncopy(out_shader->config.stages[out_shader->config.stage_count++]
+                         .file_name,
+                     stage_filenames[i], 255);
+    }
+
+    kzero_memory(out_shader->config.descriptor_sets,
+                 sizeof(vulkan_descriptor_set_config) * 2);
+    kzero_memory(out_shader->config.attributes,
+                 sizeof(VkVertexInputAttributeDescription) *
+                     VULKAN_SHADER_MAX_ATTRIBUTES);
+
+    // For now, shaders will only have two types of descriptor pools
+    out_shader->config.pool_sizes[0] =
+        (VkDescriptorPoolSize){VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, 1024};
+    out_shader->config.pool_sizes[1] =
+        (VkDescriptorPoolSize){VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, 4096};
+
+    vulkan_descriptor_set_config global_descriptor_set_config = {};
+    global_descriptor_set_config.bindings[BINDING_INDEX_UBO].binding =
+        BINDING_INDEX_UBO;
+    global_descriptor_set_config.bindings[BINDING_INDEX_UBO].descriptorCount =
+        1;
+    global_descriptor_set_config.bindings[BINDING_INDEX_UBO].descriptorType =
+        VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+    global_descriptor_set_config.bindings[BINDING_INDEX_UBO].stageFlags =
+        VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_VERTEX_BIT;
+    global_descriptor_set_config.binding_count++;
+
+    out_shader->config.descriptor_sets[DESC_SET_INDEX_GLOBAL] =
+        global_descriptor_set_config;
+    out_shader->config.descriptor_set_count++;
+
+    if (shader->use_instances) {
+        vulkan_descriptor_set_config instance_descriptor_set_config = {};
+        instance_descriptor_set_config.bindings[BINDING_INDEX_UBO].binding =
+            BINDING_INDEX_UBO;
+        instance_descriptor_set_config.bindings[BINDING_INDEX_UBO]
+            .descriptorCount = 1;
+        instance_descriptor_set_config.bindings[BINDING_INDEX_UBO]
+            .descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+        instance_descriptor_set_config.bindings[BINDING_INDEX_UBO].stageFlags =
+            VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_VERTEX_BIT;
+        instance_descriptor_set_config.binding_count++;
+
+        out_shader->config.descriptor_sets[DESC_SET_INDEX_INSTANCE] =
+            instance_descriptor_set_config;
+        out_shader->config.descriptor_set_count++;
+    }
+
+    // Invalidate instance states
+    // TODO: make dynamic
+    for (u32 i = 0; i < 1024; i++) {
+        out_shader->instance_states[i].id = INVALID_ID;
+    }
+
+    return true;
+}
+
+void vulkan_renderer_shader_destroy(struct shader *shader);
+
+b8 vulkan_renderer_shader_initialize(struct shader *s);
+b8 vulkan_renderer_shader_use(struct shader *s);
+b8 vulkan_renderer_shader_bind_globals(struct shader *s);
+b8 vulkan_renderer_shader_bind_instance(struct shader *s, u32 instance_id);
+b8 vulkan_renderer_shader_apply_globals(struct shader *s);
+b8 vulkan_renderer_shader_apply_instance(struct shader *s);
+b8 vulkan_renderer_shader_acquire_instance_resources(struct shader *s,
+                                                     u32 *out_instance_id);
+b8 vulkan_renderer_shader_release_instnace_resources(struct shader *s,
+                                                     u32 instance_id);
+b8 vulkan_renderer_shader_set_uniform(struct shader *s,
+                                      struct shader_uniform *uniform,
+                                      const void *value);
