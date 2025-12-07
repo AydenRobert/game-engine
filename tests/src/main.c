@@ -1,4 +1,5 @@
 #include "containers/freelist_tests.h"
+#include "containers/linkedlist_tests.h"
 #include "core/kmemory.h"
 #include "memory/dynamic_allocator_test.h"
 #include "test_manager.h"
@@ -24,6 +25,7 @@ int main() {
     hashtable_register_tests();
     freelist_register_tests();
     dynamic_allocator_register_tests();
+    linkedlist_register_tests();
 
     KDEBUG("Starting tests...");
 

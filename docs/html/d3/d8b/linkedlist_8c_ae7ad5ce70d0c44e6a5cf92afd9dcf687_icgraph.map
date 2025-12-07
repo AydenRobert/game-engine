@@ -1,0 +1,9 @@
+<map id="return_node" name="return_node">
+<area shape="rect" id="Node000001" title=" " alt="" coords="211,57,310,85"/>
+<area shape="rect" id="Node000002" href="$d3/d8b/linkedlist_8c.html#aa634a006a5bb8f9fac81bbc04b787124" title="Pops of a value off the start of the linked list." alt="" coords="9,5,159,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,53,133,36,133,31,198,51"/>
+<area shape="rect" id="Node000003" href="$d3/d8b/linkedlist_8c.html#ae7c0deaac5be876a6a1f582055f536a9" title="Pops of a value off the end of the linked list. NOTE: O(n)." alt="" coords="14,57,154,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,72,154,74,154,69,197,70"/>
+<area shape="rect" id="Node000004" href="$d3/d8b/linkedlist_8c.html#aa12cdf7f4ac46dee032163f4b0deaa6a" title="Removes a node at a specific index." alt="" coords="5,109,163,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="199,89,134,111,133,106,193,91"/>
+</map>

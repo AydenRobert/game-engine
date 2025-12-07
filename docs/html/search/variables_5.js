@@ -14,9 +14,10 @@ var searchData=
   ['framebuffer_5fsize_5flast_5fgeneration_11',['framebuffer_size_last_generation',['../d9/dc9/structvulkan__context.html#aa1edc2a3352ce6bc0751aa8bb6d84631',1,'vulkan_context']]],
   ['framebuffer_5fwidth_12',['framebuffer_width',['../d9/dc9/structvulkan__context.html#ada8eb7300aedfc6bbdc6e9a01a10b0ca',1,'vulkan_context']]],
   ['framebuffers_13',['framebuffers',['../de/dc9/structvulkan__swapchain.html#ab6f629181eb84203ef4d1d093d5a8634',1,'vulkan_swapchain']]],
-  ['free_5fnode_5fhead_14',['free_node_head',['../d3/d8d/structinternal__state.html#a8b96239ea3c9ecd7f24addf5e5a349dc',1,'internal_state']]],
-  ['freelist_15',['freelist',['../d3/d8d/structinternal__state.html#a822b33dfb278a00f71a31aae4f3c6310',1,'internal_state']]],
-  ['freelist_5fblock_16',['freelist_block',['../d5/def/structvulkan__buffer.html#a7f732a3b4d46f783b81814bb3529dbcb',1,'vulkan_buffer']]],
-  ['freelist_5fmemory_5frequirement_17',['freelist_memory_requirement',['../d5/def/structvulkan__buffer.html#a135d3091483d81da380071846ac81d6f',1,'vulkan_buffer']]],
-  ['full_5fpath_18',['full_path',['../db/dde/structresource.html#a70fd488eb9a63d8d98f73c8ccf7032ec',1,'resource']]]
+  ['free_14',['free',['../d3/d8d/structinternal__state.html#ad2f57049fe1f1f00768af7fc9d952bfd',1,'internal_state']]],
+  ['free_5fnode_5fhead_15',['free_node_head',['../d3/d8d/structinternal__state.html#a8b96239ea3c9ecd7f24addf5e5a349dc',1,'internal_state']]],
+  ['freelist_16',['freelist',['../d3/d8d/structinternal__state.html#a822b33dfb278a00f71a31aae4f3c6310',1,'internal_state']]],
+  ['freelist_5fblock_17',['freelist_block',['../d5/def/structvulkan__buffer.html#a7f732a3b4d46f783b81814bb3529dbcb',1,'vulkan_buffer']]],
+  ['freelist_5fmemory_5frequirement_18',['freelist_memory_requirement',['../d5/def/structvulkan__buffer.html#a135d3091483d81da380071846ac81d6f',1,'vulkan_buffer']]],
+  ['full_5fpath_19',['full_path',['../db/dde/structresource.html#a70fd488eb9a63d8d98f73c8ccf7032ec',1,'resource']]]
 ];

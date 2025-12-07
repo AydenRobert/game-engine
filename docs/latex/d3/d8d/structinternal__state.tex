@@ -7,7 +7,7 @@ Collaboration diagram for internal\+\_\+state\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=287pt]{d5/d5b/structinternal__state__coll__graph}
+\includegraphics[width=350pt]{d5/d5b/structinternal__state__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Data Fields}
@@ -22,6 +22,18 @@ Collaboration diagram for internal\+\_\+state\+:
 \mbox{\hyperlink{structfreelist__node}{freelist\+\_\+node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structinternal__state_ab2f2f3a8e2801f9583e06250024dca82}{head}}
 \item 
 \mbox{\hyperlink{structfreelist__node}{freelist\+\_\+node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structinternal__state_a9801ea7e5fea50f59621544e933ddbb3}{nodes}}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structinternal__state_a8ad4a9b55e7e8adc8ffbf8a0d1c9a243}{max\+\_\+nodes}}
+\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structinternal__state_ac56cbbd76d5ea3dd6f4b0cbb15c8d128}{length}}
+\item 
+\mbox{\hyperlink{structlinkedlist__node}{linkedlist\+\_\+node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structinternal__state_a06fc86638e50a67014afbfedbf06221c}{nodes}}
+\item 
+\mbox{\hyperlink{structlinkedlist__node}{linkedlist\+\_\+node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structinternal__state_af0ed5d55c3bc39b0c469952593cf122d}{head}}
+\item 
+\mbox{\hyperlink{structlinkedlist__node}{linkedlist\+\_\+node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structinternal__state_a271ccfa38441c3ae34dd8d7ef7e4d15c}{tail}}
+\item 
+\mbox{\hyperlink{structlinkedlist__node}{linkedlist\+\_\+node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structinternal__state_ad2f57049fe1f1f00768af7fc9d952bfd}{free}}
 \item 
 \mbox{\hyperlink{structfreelist}{freelist}} \mbox{\hyperlink{structinternal__state_a822b33dfb278a00f71a31aae4f3c6310}{freelist}}
 \item 
@@ -42,6 +54,12 @@ void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structinternal__state_aa4aa6eca
 {\footnotesize\ttfamily \label{structinternal__state_aae47d2cf24d82c4d8d78e5830b25137a} 
 \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} internal\+\_\+state\+::allocated}
 
+\Hypertarget{structinternal__state_ad2f57049fe1f1f00768af7fc9d952bfd}\index{internal\_state@{internal\_state}!free@{free}}
+\index{free@{free}!internal\_state@{internal\_state}}
+\doxysubsubsection{\texorpdfstring{free}{free}}
+{\footnotesize\ttfamily \label{structinternal__state_ad2f57049fe1f1f00768af7fc9d952bfd} 
+\mbox{\hyperlink{structlinkedlist__node}{linkedlist\+\_\+node}}\texorpdfstring{$\ast$}{*} internal\+\_\+state\+::free}
+
 \Hypertarget{structinternal__state_a8b96239ea3c9ecd7f24addf5e5a349dc}\index{internal\_state@{internal\_state}!free\_node\_head@{free\_node\_head}}
 \index{free\_node\_head@{free\_node\_head}!internal\_state@{internal\_state}}
 \doxysubsubsection{\texorpdfstring{free\_node\_head}{free\_node\_head}}
@@ -56,15 +74,33 @@ void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structinternal__state_aa4aa6eca
 
 \Hypertarget{structinternal__state_ab2f2f3a8e2801f9583e06250024dca82}\index{internal\_state@{internal\_state}!head@{head}}
 \index{head@{head}!internal\_state@{internal\_state}}
-\doxysubsubsection{\texorpdfstring{head}{head}}
+\doxysubsubsection{\texorpdfstring{head}{head}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \label{structinternal__state_ab2f2f3a8e2801f9583e06250024dca82} 
 \mbox{\hyperlink{structfreelist__node}{freelist\+\_\+node}}\texorpdfstring{$\ast$}{*} internal\+\_\+state\+::head}
+
+\Hypertarget{structinternal__state_af0ed5d55c3bc39b0c469952593cf122d}\index{internal\_state@{internal\_state}!head@{head}}
+\index{head@{head}!internal\_state@{internal\_state}}
+\doxysubsubsection{\texorpdfstring{head}{head}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structinternal__state_af0ed5d55c3bc39b0c469952593cf122d} 
+\mbox{\hyperlink{structlinkedlist__node}{linkedlist\+\_\+node}}\texorpdfstring{$\ast$}{*} internal\+\_\+state\+::head}
+
+\Hypertarget{structinternal__state_ac56cbbd76d5ea3dd6f4b0cbb15c8d128}\index{internal\_state@{internal\_state}!length@{length}}
+\index{length@{length}!internal\_state@{internal\_state}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily \label{structinternal__state_ac56cbbd76d5ea3dd6f4b0cbb15c8d128} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} internal\+\_\+state\+::length}
 
 \Hypertarget{structinternal__state_a0afb009dd310fbef54d84f059f7c628b}\index{internal\_state@{internal\_state}!max\_entries@{max\_entries}}
 \index{max\_entries@{max\_entries}!internal\_state@{internal\_state}}
 \doxysubsubsection{\texorpdfstring{max\_entries}{max\_entries}}
 {\footnotesize\ttfamily \label{structinternal__state_a0afb009dd310fbef54d84f059f7c628b} 
 \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} internal\+\_\+state\+::max\+\_\+entries}
+
+\Hypertarget{structinternal__state_a8ad4a9b55e7e8adc8ffbf8a0d1c9a243}\index{internal\_state@{internal\_state}!max\_nodes@{max\_nodes}}
+\index{max\_nodes@{max\_nodes}!internal\_state@{internal\_state}}
+\doxysubsubsection{\texorpdfstring{max\_nodes}{max\_nodes}}
+{\footnotesize\ttfamily \label{structinternal__state_a8ad4a9b55e7e8adc8ffbf8a0d1c9a243} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} internal\+\_\+state\+::max\+\_\+nodes}
 
 \Hypertarget{structinternal__state_aa4aa6ecabd2ef142aef08855222af8d8}\index{internal\_state@{internal\_state}!memory@{memory}}
 \index{memory@{memory}!internal\_state@{internal\_state}}
@@ -74,9 +110,21 @@ void \texorpdfstring{$\ast$}{*} internal\+\_\+state\+::memory}
 
 \Hypertarget{structinternal__state_a9801ea7e5fea50f59621544e933ddbb3}\index{internal\_state@{internal\_state}!nodes@{nodes}}
 \index{nodes@{nodes}!internal\_state@{internal\_state}}
-\doxysubsubsection{\texorpdfstring{nodes}{nodes}}
+\doxysubsubsection{\texorpdfstring{nodes}{nodes}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \label{structinternal__state_a9801ea7e5fea50f59621544e933ddbb3} 
 \mbox{\hyperlink{structfreelist__node}{freelist\+\_\+node}}\texorpdfstring{$\ast$}{*} internal\+\_\+state\+::nodes}
+
+\Hypertarget{structinternal__state_a06fc86638e50a67014afbfedbf06221c}\index{internal\_state@{internal\_state}!nodes@{nodes}}
+\index{nodes@{nodes}!internal\_state@{internal\_state}}
+\doxysubsubsection{\texorpdfstring{nodes}{nodes}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{structinternal__state_a06fc86638e50a67014afbfedbf06221c} 
+\mbox{\hyperlink{structlinkedlist__node}{linkedlist\+\_\+node}}\texorpdfstring{$\ast$}{*} internal\+\_\+state\+::nodes}
+
+\Hypertarget{structinternal__state_a271ccfa38441c3ae34dd8d7ef7e4d15c}\index{internal\_state@{internal\_state}!tail@{tail}}
+\index{tail@{tail}!internal\_state@{internal\_state}}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
+{\footnotesize\ttfamily \label{structinternal__state_a271ccfa38441c3ae34dd8d7ef7e4d15c} 
+\mbox{\hyperlink{structlinkedlist__node}{linkedlist\+\_\+node}}\texorpdfstring{$\ast$}{*} internal\+\_\+state\+::tail}
 
 \Hypertarget{structinternal__state_a566a1e636dd85fbf081cb682757be8b6}\index{internal\_state@{internal\_state}!total\_size@{total\_size}}
 \index{total\_size@{total\_size}!internal\_state@{internal\_state}}
@@ -95,5 +143,6 @@ void \texorpdfstring{$\ast$}{*} internal\+\_\+state\+::memory}
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 engine/src/containers/\mbox{\hyperlink{freelist_8c}{freelist.\+c}}\item 
+engine/src/containers/\mbox{\hyperlink{linkedlist_8c}{linkedlist.\+c}}\item 
 engine/src/memory/\mbox{\hyperlink{dynamic__allocator_8c}{dynamic\+\_\+allocator.\+c}}\item 
 engine/src/memory/\mbox{\hyperlink{linear__allocator_8c}{linear\+\_\+allocator.\+c}}\end{DoxyCompactItemize}

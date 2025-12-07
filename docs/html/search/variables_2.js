@@ -25,5 +25,6 @@ var searchData=
   ['create_5fmaterial_22',['create_material',['../df/d02/structrenderer__backend.html#ac8318cd1b851c53d605b893fed5214e2',1,'renderer_backend']]],
   ['create_5ftexture_23',['create_texture',['../df/d02/structrenderer__backend.html#aa59a591b491d1cf014f264bb3df0f347',1,'renderer_backend']]],
   ['current_5fframe_24',['current_frame',['../d9/dc9/structvulkan__context.html#acf8f27c63fbac8a561ce15d22f016157',1,'vulkan_context']]],
-  ['custom_5ftype_25',['custom_type',['../d0/db3/structresource__loader.html#ac1950fdaa6746115b77e0d0c92694535',1,'resource_loader']]]
+  ['current_5fnode_25',['current_node',['../da/d98/structlinkedlist__iterator.html#a491adb00874dd0c0f20ec7219c33f4af',1,'linkedlist_iterator']]],
+  ['custom_5ftype_26',['custom_type',['../d0/db3/structresource__loader.html#ac1950fdaa6746115b77e0d0c92694535',1,'resource_loader']]]
 ];

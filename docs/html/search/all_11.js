@@ -81,6 +81,6 @@ var searchData=
   ['resource_5ftype_5ftext_78',['RESOURCE_TYPE_TEXT',['../de/d9c/resource__types_8h.html#a509a729cba5db28cddc3c2ec18d0d83aaf8d67d5ff55fcd85fe562bbec7b9ca61',1,'resource_types.h']]],
   ['resource_5ftypes_2eh_79',['resource_types.h',['../de/d9c/resource__types_8h.html',1,'']]],
   ['resource_5funload_80',['resource_unload',['../dc/dfb/loader__utils_8c.html#a11867f22fab9baa82abfc58defcbffc2',1,'resource_unload(struct resource_loader *self, resource *resource, memory_tag tag):&#160;loader_utils.c'],['../d8/d81/loader__utils_8h.html#a11867f22fab9baa82abfc58defcbffc2',1,'resource_unload(struct resource_loader *self, resource *resource, memory_tag tag):&#160;loader_utils.c']]],
-  ['return_5fnode_81',['return_node',['../da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142',1,'freelist.c']]],
+  ['return_5fnode_81',['return_node',['../da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142',1,'return_node(freelist *list, freelist_node *node):&#160;freelist.c'],['../d3/d8b/linkedlist_8c.html#ae7ad5ce70d0c44e6a5cf92afd9dcf687',1,'return_node(linkedlist *list, linkedlist_node *node):&#160;linkedlist.c']]],
   ['roadmap_82',['🧭 Roadmap',['../d0/d30/md_README.html#autotoc_md11',1,'']]]
 ];
