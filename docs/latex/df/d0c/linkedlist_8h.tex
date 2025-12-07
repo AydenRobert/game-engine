@@ -1,0 +1,403 @@
+\doxysection{engine/src/containers/linkedlist.h File Reference}
+\hypertarget{linkedlist_8h}{}\label{linkedlist_8h}\index{engine/src/containers/linkedlist.h@{engine/src/containers/linkedlist.h}}
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+Include dependency graph for linkedlist.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{de/d45/linkedlist_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{d6/d72/linkedlist_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlinkedlist}{linkedlist}}
+\item 
+struct \mbox{\hyperlink{structlinkedlist__iterator}{linkedlist\+\_\+iterator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct linkedlist \mbox{\hyperlink{linkedlist_8h_a94334319e875af38030e9a94ca2a50d0}{linkedlist}}
+\item 
+typedef struct linkedlist\+\_\+iterator \mbox{\hyperlink{linkedlist_8h_a3a92bb5d7ef7283734b4bb276a8e4593}{linkedlist\+\_\+iterator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{linkedlist_8h_aaf5682ba7a75e9ee25f23c406cc677d9}{linkedlist\+\_\+create}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} max\+\_\+nodes, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}memory\+\_\+requirement, void \texorpdfstring{$\ast$}{*}memory, \mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}out\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Creates a linked list struct. Each node stores a void pointer. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linkedlist_8h_a421e0351ad71a54920a67ac3366d8268}{linkedlist\+\_\+destroy}} (\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Destroys a given linked list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{linkedlist_8h_ad33752e481bbfd0b78ac6861a2605e8e}{linkedlist\+\_\+reset}} (\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Resets the given linked list. Allows memory to easily be reused by a \textquotesingle{}new\textquotesingle{} linked list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{linkedlist_8h_a812cd5c3c8c86d2b136da308e39c5482}{linkedlist\+\_\+push\+\_\+tail}} (\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}list, void \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Pushes a new node to the tail of the linked list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{linkedlist_8h_a06f70585fa788aa7bca7db106327ec57}{linkedlist\+\_\+push\+\_\+head}} (\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}list, void \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Pushes a new node to the head of the linked list. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linkedlist_8h_ae7c0deaac5be876a6a1f582055f536a9}{linkedlist\+\_\+pop\+\_\+tail}} (\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Pops of a value off the end of the linked list. NOTE\+: O(n). \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linkedlist_8h_aa634a006a5bb8f9fac81bbc04b787124}{linkedlist\+\_\+pop\+\_\+head}} (\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Pops of a value off the start of the linked list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{linkedlist_8h_ab4d5e76eac9dbea7ebed3375de156afe}{linkedlist\+\_\+insert\+\_\+at}} (\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} index, void \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Inserts a node at a specific index. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linkedlist_8h_aa12cdf7f4ac46dee032163f4b0deaa6a}{linkedlist\+\_\+remove\+\_\+at}} (\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} index)
+\begin{DoxyCompactList}\small\item\em Removes a node at a specific index. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linkedlist_8h_a0480a63ed1e169d395931f211ec269f2}{linkedlist\+\_\+get\+\_\+at}} (\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} index)
+\begin{DoxyCompactList}\small\item\em Gets a value at a specific index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{linkedlist_8h_acc337ea8c08ab0b47b0194e7122ac5df}{linkedlist\+\_\+length}} (\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em Returns the current length of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{linkedlist_8h_a284d877a86bfe7778c56569894adf188}{linkedlist\+\_\+iterator\+\_\+begin}} (\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{structlinkedlist__iterator}{linkedlist\+\_\+iterator}} \texorpdfstring{$\ast$}{*}out\+\_\+iterator)
+\begin{DoxyCompactList}\small\item\em Populates an out\+\_\+iterator struct. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{linkedlist_8h_a8194080e3aa9df2f5de0350d8f0f9194}{linkedlist\+\_\+iterator\+\_\+next}} (\mbox{\hyperlink{structlinkedlist__iterator}{linkedlist\+\_\+iterator}} \texorpdfstring{$\ast$}{*}iterator)
+\begin{DoxyCompactList}\small\item\em Updates the iterator to get the node. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{linkedlist_8h_acd74cfb96edbc3e16a8950e52aa4423a}{linkedlist\+\_\+iterator\+\_\+get}} (\mbox{\hyperlink{structlinkedlist__iterator}{linkedlist\+\_\+iterator}} \texorpdfstring{$\ast$}{*}iterator)
+\begin{DoxyCompactList}\small\item\em Returns 0 or the value stored at a node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{linkedlist_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{linkedlist_8h_a94334319e875af38030e9a94ca2a50d0}\index{linkedlist.h@{linkedlist.h}!linkedlist@{linkedlist}}
+\index{linkedlist@{linkedlist}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist}{linkedlist}}
+{\footnotesize\ttfamily \label{linkedlist_8h_a94334319e875af38030e9a94ca2a50d0} 
+typedef struct linkedlist linkedlist}
+
+\Hypertarget{linkedlist_8h_a3a92bb5d7ef7283734b4bb276a8e4593}\index{linkedlist.h@{linkedlist.h}!linkedlist\_iterator@{linkedlist\_iterator}}
+\index{linkedlist\_iterator@{linkedlist\_iterator}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist\_iterator}{linkedlist\_iterator}}
+{\footnotesize\ttfamily \label{linkedlist_8h_a3a92bb5d7ef7283734b4bb276a8e4593} 
+typedef struct linkedlist\+\_\+iterator linkedlist\+\_\+iterator}
+
+
+
+\label{doc-func-members}
+\Hypertarget{linkedlist_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{linkedlist_8h_aaf5682ba7a75e9ee25f23c406cc677d9}\index{linkedlist.h@{linkedlist.h}!linkedlist\_create@{linkedlist\_create}}
+\index{linkedlist\_create@{linkedlist\_create}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist\_create()}{linkedlist\_create()}}
+{\footnotesize\ttfamily \label{linkedlist_8h_aaf5682ba7a75e9ee25f23c406cc677d9} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} linkedlist\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{max\+\_\+nodes}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{memory\+\_\+requirement}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{memory}{, }\item[{\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+list}{}\end{DoxyParamCaption})}
+
+
+
+Creates a linked list struct. Each node stores a void pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+nodes} & The maximum number of nodes for the list. \\
+\hline
+{\em memory\+\_\+requirement} & A pointer to store the memory requirement of the linked list in bytes. \\
+\hline
+{\em memory} & A pointer to the memory to store the linked list data. \\
+\hline
+{\em out\+\_\+list} & A pointer to the linkedlist struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successfully; otherwise False. 
+\end{DoxyReturn}
+\Hypertarget{linkedlist_8h_a421e0351ad71a54920a67ac3366d8268}\index{linkedlist.h@{linkedlist.h}!linkedlist\_destroy@{linkedlist\_destroy}}
+\index{linkedlist\_destroy@{linkedlist\_destroy}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist\_destroy()}{linkedlist\_destroy()}}
+{\footnotesize\ttfamily \label{linkedlist_8h_a421e0351ad71a54920a67ac3366d8268} 
+void \texorpdfstring{$\ast$}{*} linkedlist\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Destroys a given linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The linked list to destroy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The block of memory that was for the linked list. 
+\end{DoxyReturn}
+\Hypertarget{linkedlist_8h_a0480a63ed1e169d395931f211ec269f2}\index{linkedlist.h@{linkedlist.h}!linkedlist\_get\_at@{linkedlist\_get\_at}}
+\index{linkedlist\_get\_at@{linkedlist\_get\_at}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist\_get\_at()}{linkedlist\_get\_at()}}
+{\footnotesize\ttfamily \label{linkedlist_8h_a0480a63ed1e169d395931f211ec269f2} 
+void \texorpdfstring{$\ast$}{*} linkedlist\+\_\+get\+\_\+at (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Gets a value at a specific index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to use. \\
+\hline
+{\em index} & The index to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer stored in the node. 
+\end{DoxyReturn}
+\Hypertarget{linkedlist_8h_ab4d5e76eac9dbea7ebed3375de156afe}\index{linkedlist.h@{linkedlist.h}!linkedlist\_insert\_at@{linkedlist\_insert\_at}}
+\index{linkedlist\_insert\_at@{linkedlist\_insert\_at}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist\_insert\_at()}{linkedlist\_insert\_at()}}
+{\footnotesize\ttfamily \label{linkedlist_8h_ab4d5e76eac9dbea7ebed3375de156afe} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} linkedlist\+\_\+insert\+\_\+at (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{index}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Inserts a node at a specific index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to append. \\
+\hline
+{\em index} & The index to add. \\
+\hline
+{\em data} & The pointer to store in the node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successfully; otherwise False. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{df/d0c/linkedlist_8h_ab4d5e76eac9dbea7ebed3375de156afe_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linkedlist_8h_a284d877a86bfe7778c56569894adf188}\index{linkedlist.h@{linkedlist.h}!linkedlist\_iterator\_begin@{linkedlist\_iterator\_begin}}
+\index{linkedlist\_iterator\_begin@{linkedlist\_iterator\_begin}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist\_iterator\_begin()}{linkedlist\_iterator\_begin()}}
+{\footnotesize\ttfamily \label{linkedlist_8h_a284d877a86bfe7778c56569894adf188} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} linkedlist\+\_\+iterator\+\_\+begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{\mbox{\hyperlink{structlinkedlist__iterator}{linkedlist\+\_\+iterator}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+iterator}{}\end{DoxyParamCaption})}
+
+
+
+Populates an out\+\_\+iterator struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to use. \\
+\hline
+{\em out\+\_\+iterator} & A pointer to an iterator struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successfully; otherwise False. 
+\end{DoxyReturn}
+\Hypertarget{linkedlist_8h_acd74cfb96edbc3e16a8950e52aa4423a}\index{linkedlist.h@{linkedlist.h}!linkedlist\_iterator\_get@{linkedlist\_iterator\_get}}
+\index{linkedlist\_iterator\_get@{linkedlist\_iterator\_get}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist\_iterator\_get()}{linkedlist\_iterator\_get()}}
+{\footnotesize\ttfamily \label{linkedlist_8h_acd74cfb96edbc3e16a8950e52aa4423a} 
+void \texorpdfstring{$\ast$}{*} linkedlist\+\_\+iterator\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinkedlist__iterator}{linkedlist\+\_\+iterator}} \texorpdfstring{$\ast$}{*}}]{iterator}{}\end{DoxyParamCaption})}
+
+
+
+Returns 0 or the value stored at a node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iterator} & The iterator struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value stored in the node. 
+\end{DoxyReturn}
+\Hypertarget{linkedlist_8h_a8194080e3aa9df2f5de0350d8f0f9194}\index{linkedlist.h@{linkedlist.h}!linkedlist\_iterator\_next@{linkedlist\_iterator\_next}}
+\index{linkedlist\_iterator\_next@{linkedlist\_iterator\_next}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist\_iterator\_next()}{linkedlist\_iterator\_next()}}
+{\footnotesize\ttfamily \label{linkedlist_8h_a8194080e3aa9df2f5de0350d8f0f9194} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} linkedlist\+\_\+iterator\+\_\+next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinkedlist__iterator}{linkedlist\+\_\+iterator}} \texorpdfstring{$\ast$}{*}}]{iterator}{}\end{DoxyParamCaption})}
+
+
+
+Updates the iterator to get the node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iterator} & The iterator struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+False if at the end of the list or the iterator is invalid; otherwise True. 
+\end{DoxyReturn}
+\Hypertarget{linkedlist_8h_acc337ea8c08ab0b47b0194e7122ac5df}\index{linkedlist.h@{linkedlist.h}!linkedlist\_length@{linkedlist\_length}}
+\index{linkedlist\_length@{linkedlist\_length}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist\_length()}{linkedlist\_length()}}
+{\footnotesize\ttfamily \label{linkedlist_8h_acc337ea8c08ab0b47b0194e7122ac5df} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} linkedlist\+\_\+length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Returns the current length of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current length. 
+\end{DoxyReturn}
+\Hypertarget{linkedlist_8h_aa634a006a5bb8f9fac81bbc04b787124}\index{linkedlist.h@{linkedlist.h}!linkedlist\_pop\_head@{linkedlist\_pop\_head}}
+\index{linkedlist\_pop\_head@{linkedlist\_pop\_head}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist\_pop\_head()}{linkedlist\_pop\_head()}}
+{\footnotesize\ttfamily \label{linkedlist_8h_aa634a006a5bb8f9fac81bbc04b787124} 
+void \texorpdfstring{$\ast$}{*} linkedlist\+\_\+pop\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Pops of a value off the start of the linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to pop. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer stored in the node. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{df/d0c/linkedlist_8h_aa634a006a5bb8f9fac81bbc04b787124_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linkedlist_8h_ae7c0deaac5be876a6a1f582055f536a9}\index{linkedlist.h@{linkedlist.h}!linkedlist\_pop\_tail@{linkedlist\_pop\_tail}}
+\index{linkedlist\_pop\_tail@{linkedlist\_pop\_tail}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist\_pop\_tail()}{linkedlist\_pop\_tail()}}
+{\footnotesize\ttfamily \label{linkedlist_8h_ae7c0deaac5be876a6a1f582055f536a9} 
+void \texorpdfstring{$\ast$}{*} linkedlist\+\_\+pop\+\_\+tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Pops of a value off the end of the linked list. NOTE\+: O(n). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to pop. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer stored in the node. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{df/d0c/linkedlist_8h_ae7c0deaac5be876a6a1f582055f536a9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linkedlist_8h_a06f70585fa788aa7bca7db106327ec57}\index{linkedlist.h@{linkedlist.h}!linkedlist\_push\_head@{linkedlist\_push\_head}}
+\index{linkedlist\_push\_head@{linkedlist\_push\_head}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist\_push\_head()}{linkedlist\_push\_head()}}
+{\footnotesize\ttfamily \label{linkedlist_8h_a06f70585fa788aa7bca7db106327ec57} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} linkedlist\+\_\+push\+\_\+head (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Pushes a new node to the head of the linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to append. \\
+\hline
+{\em data} & The pointer to hold in the node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successfully; otherwise False. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{df/d0c/linkedlist_8h_a06f70585fa788aa7bca7db106327ec57_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linkedlist_8h_a812cd5c3c8c86d2b136da308e39c5482}\index{linkedlist.h@{linkedlist.h}!linkedlist\_push\_tail@{linkedlist\_push\_tail}}
+\index{linkedlist\_push\_tail@{linkedlist\_push\_tail}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist\_push\_tail()}{linkedlist\_push\_tail()}}
+{\footnotesize\ttfamily \label{linkedlist_8h_a812cd5c3c8c86d2b136da308e39c5482} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} linkedlist\+\_\+push\+\_\+tail (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Pushes a new node to the tail of the linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to append. \\
+\hline
+{\em data} & The pointer to hold in the node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successfully; otherwise False. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{df/d0c/linkedlist_8h_a812cd5c3c8c86d2b136da308e39c5482_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linkedlist_8h_aa12cdf7f4ac46dee032163f4b0deaa6a}\index{linkedlist.h@{linkedlist.h}!linkedlist\_remove\_at@{linkedlist\_remove\_at}}
+\index{linkedlist\_remove\_at@{linkedlist\_remove\_at}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist\_remove\_at()}{linkedlist\_remove\_at()}}
+{\footnotesize\ttfamily \label{linkedlist_8h_aa12cdf7f4ac46dee032163f4b0deaa6a} 
+void \texorpdfstring{$\ast$}{*} linkedlist\+\_\+remove\+\_\+at (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Removes a node at a specific index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to use. \\
+\hline
+{\em index} & The index to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pointer stored in the node. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{df/d0c/linkedlist_8h_aa12cdf7f4ac46dee032163f4b0deaa6a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{linkedlist_8h_ad33752e481bbfd0b78ac6861a2605e8e}\index{linkedlist.h@{linkedlist.h}!linkedlist\_reset@{linkedlist\_reset}}
+\index{linkedlist\_reset@{linkedlist\_reset}!linkedlist.h@{linkedlist.h}}
+\doxysubsubsection{\texorpdfstring{linkedlist\_reset()}{linkedlist\_reset()}}
+{\footnotesize\ttfamily \label{linkedlist_8h_ad33752e481bbfd0b78ac6861a2605e8e} 
+void linkedlist\+\_\+reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlinkedlist}{linkedlist}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Resets the given linked list. Allows memory to easily be reused by a \textquotesingle{}new\textquotesingle{} linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list to reset. \\
+\hline
+\end{DoxyParams}

@@ -64,14 +64,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d1/dcb/game_8c.html#afc59a90b0ff1463ae2ab8f62aaeba221",
-"d5/ddd/structvulkan__ui__shader.html#a9cb9bb65e120f69f3a3909d8fcbc19a4",
-"d6/dd8/group__iface__xdg__toplevel.html#gga9c5f29d74e9f5e730fe59ecdc397b116aecd33d2460b15a03ccb7cf099d7c4d4c",
-"d9/d0a/texture__system_8c.html",
-"db/d13/xdg-shell-client-protocol_8h.html#a5ac26be247039c7cdf4a5a26f613cfe6",
-"dc/dd0/kmath_8h.html#a05eb2a8005d1aebb1e3826d6e8288da5",
-"de/d3c/freelist_8h.html#af42df2c74093d0e5e017051079dc9c34",
-"df/d02/structrenderer__backend.html#ad9da44a8bb1fdc43db40189db8bb76ba"
+"d1/dcb/game_8c.html#ad3787aec5f4cc39ed611ae8d3157ee6c",
+"d4/df7/geometry__system_8h_source.html",
+"d6/dd8/group__iface__xdg__toplevel.html#ga83b5fc57691e10923007baaaa266575a",
+"d8/db4/structvulkan__swapchain__support__info.html#ad60786489912cdff5281e6e590e3de5e",
+"db/d13/xdg-shell-client-protocol_8h.html#a368b83186b38aa7a1d59ecc51541b4f6",
+"dc/d9b/xdg-shell-protocol_8c.html#aa60edf2c19b40f7ba7e31b4aa1bf8d19",
+"de/d02/vulkan__device_8c.html#ac4eb42eebcc937d35197f1b899668021",
+"de/df8/renderer__types_8inl.html#a658e02d116ec475ab634852cf2a38021",
+"globals_m.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

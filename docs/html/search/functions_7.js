@@ -14,5 +14,5 @@ var searchData=
   ['geometry_5fsystem_5fshutdown_11',['geometry_system_shutdown',['../d9/d80/geometry__system_8c.html#a55191f79e172eccf0c6637e252f50797',1,'geometry_system_shutdown(void *state):&#160;geometry_system.c'],['../d4/df7/geometry__system_8h.html#a55191f79e172eccf0c6637e252f50797',1,'geometry_system_shutdown(void *state):&#160;geometry_system.c']]],
   ['get_5fmemory_5falloc_5fcount_12',['get_memory_alloc_count',['../d3/d3c/kmemory_8c.html#a856be2ba72d23a3da0f6720e8e29f281',1,'get_memory_alloc_count():&#160;kmemory.c'],['../d6/dbf/kmemory_8h.html#ae08429b1ce06f06ef75ff0eafc823887',1,'get_memory_alloc_count():&#160;kmemory.c']]],
   ['get_5fmemory_5fusage_5fstr_13',['get_memory_usage_str',['../d3/d3c/kmemory_8c.html#afab51208fe57736ae8ff62918c8c3e69',1,'get_memory_usage_str():&#160;kmemory.c'],['../d6/dbf/kmemory_8h.html#afab51208fe57736ae8ff62918c8c3e69',1,'get_memory_usage_str():&#160;kmemory.c']]],
-  ['get_5fnode_14',['get_node',['../da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df',1,'freelist.c']]]
+  ['get_5fnode_14',['get_node',['../da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df',1,'get_node(freelist *list):&#160;freelist.c'],['../d3/d8b/linkedlist_8c.html#ab49c8cbca17232ed2b35fd6e14dc08f2',1,'get_node(linkedlist *list):&#160;linkedlist.c']]]
 ];
