@@ -1,5 +1,6 @@
 #include "platform/platform_linux.h"
 #include "renderer/vulkan/vulkan_platform.h"
+#include <sys/mman.h>
 
 #if KPLATFORM_LINUX
 
@@ -391,5 +392,50 @@ keys translate_keycode(u32 x_keycode) {
         return 0;
     }
 }
+
+b8 platform_memory_reserve(void *ptr, u64 size, void **memory) {
+    void *base_address =
+        mmap(ptr, size, PROT_NONE, MAP_PRIVATE | MAP_ANONYMOUS, -1, 0);
+
+    if (base_address == MAP_FAILED) {
+        *memory = 0;
+        return false;
+    }
+
+    *memory = base_address;
+    return true;
+}
+
+b8 platform_memory_commit(void *ptr, u64 size) {
+    if (mprotect(ptr, size, PROT_READ | PROT_WRITE) == -1) {
+        return false;
+    }
+
+    u64 page_size = platform_get_page_size();
+    u8 *byte_ptr = (u8 *)ptr;
+
+    for (u64 i = 0; i < size; i += page_size) {
+        *(volatile u8 *)(byte_ptr + i) = 0;
+    }
+
+    return true;
+}
+
+b8 platform_memory_decommit(void *ptr, u64 size) {
+    madvise(ptr, size, MADV_DONTNEED);
+    if (mprotect(ptr, size, PROT_NONE) == -1) {
+        return false;
+    }
+    return true;
+}
+
+b8 platform_memory_release(void *ptr, u64 size) {
+    if (munmap(ptr, size) == -1) {
+        return false;
+    }
+    return true;
+}
+
+u64 platform_get_page_size() { return sysconf(_SC_PAGESIZE); }
 
 #endif // KPLATFORM_LINUX
