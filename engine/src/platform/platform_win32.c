@@ -1,8 +1,4 @@
 #include "platform/platform.h"
-#include "renderer/vulkan/vulkan_platform.h"
-#include <memoryapi.h>
-#include <sysinfoapi.h>
-#include <winnt.h>
 
 #if KPLATFORM_WINDOWS
 
@@ -16,6 +12,11 @@
 
 #include <windows.h>
 #include <windowsx.h>
+
+#include "renderer/vulkan/vulkan_platform.h"
+#include <memoryapi.h>
+#include <sysinfoapi.h>
+#include <winnt.h>
 
 // For surface creation
 #include "renderer/vulkan/vulkan_types.inl"
