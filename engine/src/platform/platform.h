@@ -25,3 +25,9 @@ void platform_console_write_error(const char *message, u8 colour);
 f64 platform_get_absolute_time();
 
 void platform_sleep(u64 ms);
+
+b8 platform_memory_reserve(void *ptr, u64 size, void **memory);
+b8 platform_memory_commit(void *ptr, u64 size);
+b8 platform_memory_decommit(void *ptr, u64 size);
+b8 platform_memory_release(void *ptr, u64 size);
+u64 platform_get_page_size();

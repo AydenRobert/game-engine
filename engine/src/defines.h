@@ -114,3 +114,7 @@ STATIC_ASSERT(sizeof(f64) == 8, "Expected f64 to be 8 bytes.");
 #define GIGABYTES(amount) amount * 1000 * 1000 * 1000
 #define MEGABYTES(amount) amount * 1000 * 1000
 #define KILOBYTES(amount) amount * 1000
+
+KINLINE u64 get_aligned(u64 operand, u64 granularity) {
+    return ((operand + (granularity - 1)) & ~(granularity - 1));
+}

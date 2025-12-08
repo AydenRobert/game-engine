@@ -1,5 +1,8 @@
 #include "platform/platform.h"
 #include "renderer/vulkan/vulkan_platform.h"
+#include <memoryapi.h>
+#include <sysinfoapi.h>
+#include <winnt.h>
 
 #if KPLATFORM_WINDOWS
 
@@ -305,6 +308,44 @@ LRESULT CALLBACK win32_process_message(HWND hwnd, u32 msg, WPARAM w_param,
     }
 
     return DefWindowProcA(hwnd, msg, w_param, l_param);
+}
+
+b8 platform_memory_reserve(void *ptr, u64 size, void **memory) {
+    void *base_address = VirtualAlloc(ptr, size, MEM_RESERVE, PAGE_NOACCESS);
+
+    if (base_address == 0) {
+        return false;
+    }
+
+    *memory = base_address;
+    return true;
+}
+
+b8 platform_memory_commit(void *ptr, u64 size) {
+    if (VirtualAlloc(ptr, size, MEM_COMMIT, PAGE_READWRITE) == 0) {
+        return false;
+    }
+    return true;
+}
+
+b8 platform_memory_decommit(void *ptr, u64 size) {
+    if (VirtualFree(ptr, size, MEM_DECOMMIT) == 0) {
+        return false;
+    }
+    return true;
+}
+
+b8 platform_memory_unreserve(void *ptr, u64 size) {
+    if (VirtualFree(ptr, 0, MEM_RELEASE) == 0) {
+        return false;
+    }
+    return true;
+}
+
+u64 platform_get_page_size() {
+    SYSTEM_INFO si;
+    GetSystemInfo(&si);
+    return si.dwPageSize;
 }
 
 #endif // KPLATFORM_WINDOWS
