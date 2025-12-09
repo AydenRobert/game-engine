@@ -10,11 +10,15 @@ typedef struct vmm_config {
 } vmm_config;
 
 /**
- * @class memory_pool
  * @brief Represents a 'pool' of memory. Memory that is logically contiguous.
  */
 typedef struct memory_pool {
     void *base_address;
+
+    u32 array_size_bits;
+    void *array;
+
+    u32 system_pages;
     u32 pages_reserved;
     u32 pages_mapped;
     u64 memory_reserved;
@@ -52,8 +56,8 @@ memory_pool *vmm_new_page_pool(u64 size);
 
 /**
  * @brief Commits the amount of memory (rounded up to the nearest page).
- * NOTE: The Virtual Memory Manager does not garuentee that committed memory
- * won't be re-committed.
+ * NOTE: The Virtual Memory Manager does garuentee committed pages don't get
+ * recommited.
  *
  * @param pool The handle for the pool of memory.
  * @param start_index The start index of the memory within the pool wanting to
@@ -68,6 +72,8 @@ b8 vmm_commit_pages(memory_pool *pool, u64 start_index, u64 size,
 
 /**
  * @brief De-commits the amount of memory (rounded up to the nearest page).
+ * NOTE: The Virtual Memory Manager does garuentee committed pages don't get
+ * recommited.
  *
  * @param pool The handle for the pool of memory.
  * @param start_index The start index of the memory within the pool. This index
