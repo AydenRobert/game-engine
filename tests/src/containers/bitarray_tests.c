@@ -39,6 +39,26 @@ static b8 internal_bit_is_set(bitarray *array, u64 index) {
     return (array->array[chunk_index] >> bit_index) & 1;
 }
 
+// Naive implementation: Single loop, setting one bit at a time
+void bitarray_fill_range_naive(bitarray *array, b8 value, u64 start_index,
+                               u64 size) {
+    if (start_index + size > array->length) {
+        return; // Basic bounds check matching your API
+    }
+
+    for (u64 i = 0; i < size; ++i) {
+        u64 curr_index = start_index + i;
+        u64 chunk = curr_index / 64;
+        u64 offset = curr_index % 64;
+
+        if (value) {
+            array->array[chunk] |= (1ULL << offset);
+        } else {
+            array->array[chunk] &= ~(1ULL << offset);
+        }
+    }
+}
+
 // -----------------------------------------------------------------------------
 // Tests
 // -----------------------------------------------------------------------------
@@ -207,6 +227,51 @@ u8 bitarray_should_handle_out_of_bounds() {
     return failed ? false : true;
 }
 
+// -----------------------------------------------------------------------------
+// Performance Benchmarks
+// -----------------------------------------------------------------------------
+
+#define BENCH_SIZE_BITS (1024 * 1024 * 64) // 64 million bits (~8MB RAM)
+
+u8 bitarray_benchmark_optimized() {
+    KDEBUG("Optimised...");
+    bitarray array;
+    u64 mem_req = 0;
+
+    // Setup large array
+    void *memory = setup_bitarray(&array, BENCH_SIZE_BITS, &mem_req);
+
+    // Run the optimized fill (uses memset and bitmasks)
+    // We toggle it twice (fill true, then fill false) to ensure we measure
+    // write speed
+    bitarray_fill_range(&array, true, 0, BENCH_SIZE_BITS);
+    bitarray_fill_range(&array, false, 0, BENCH_SIZE_BITS);
+
+    bitarray_destroy(&array);
+    kfree(memory, mem_req, MEMORY_TAG_ARRAY);
+
+    return true;
+}
+
+u8 bitarray_benchmark_naive() {
+    KDEBUG("Naive...");
+    bitarray array;
+    u64 mem_req = 0;
+
+    // Setup large array
+    void *memory = setup_bitarray(&array, BENCH_SIZE_BITS, &mem_req);
+
+    // Run the naive fill (loop + bitshifts)
+    // Same workload: toggle twice
+    bitarray_fill_range_naive(&array, true, 0, BENCH_SIZE_BITS);
+    bitarray_fill_range_naive(&array, false, 0, BENCH_SIZE_BITS);
+
+    bitarray_destroy(&array);
+    kfree(memory, mem_req, MEMORY_TAG_ARRAY);
+
+    return true;
+}
+
 void bitarray_register_tests() {
     test_manager_register_test(
         bitarray_should_create_and_destroy,
@@ -225,4 +290,12 @@ void bitarray_register_tests() {
     test_manager_register_test(
         bitarray_should_handle_out_of_bounds,
         "Bitarray should fail gracefully on out of bounds access.");
+
+    test_manager_register_test(
+        bitarray_benchmark_optimized,
+        "BENCHMARK: Optimized bitarray_fill_range (Masks + Memset)");
+
+    test_manager_register_test(
+        bitarray_benchmark_naive,
+        "BENCHMARK: Naive bitarray_fill_range (Loop + Shifts)");
 }
