@@ -91,3 +91,6 @@ KAPI void freelist_clear(freelist *list);
  * @return The amount of free space.
  */
 KAPI u64 freelist_free_space(freelist *list);
+
+b8 freelist_state_from_bitboard(freelist *list, u64 bit_len, u64 *bits,
+                                u64 bit_size);

@@ -31,3 +31,6 @@ b8 platform_memory_commit(void *ptr, u64 size);
 b8 platform_memory_decommit(void *ptr, u64 size);
 b8 platform_memory_release(void *ptr, u64 size);
 u64 platform_get_page_size();
+
+u32 platform_ctz(u64 val);
+u32 platform_popcount64(u64 val);

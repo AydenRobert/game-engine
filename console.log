@@ -5,14 +5,13 @@
 [DEBUG]: A test message: 3.140000
 [TRACE]: A test message: 3.140000
 [INFO]:  Input subsystem initialized.
-[INFO]:  Event system initialized at 0x7fbc8a694580, size 131080
+[INFO]:  Event system initialized at 0x7fffb792f540, size 131080
 [DEBUG]: Window resize: 1280 1405
 [WARN]:  renderer_state_ptr->backend does not exist to accept resize.
 [TRACE]: Loader '0' registered.
 [TRACE]: Loader '1' registered.
 [TRACE]: Loader '2' registered.
 [TRACE]: Loader '3' registered.
-[TRACE]: Loader '5' registered.
 [INFO]:  Resource system loaded with base path: './assets'
 [DEBUG]: Required Extensions:
 [DEBUG]: VK_KHR_surface
@@ -80,11 +79,12 @@
 [INFO]:  Graphics command pool has been created.
 [INFO]:  Swapchain created successfully!
 [INFO]:  Vulkan command buffers created.
-[INFO]:  Vulkan renderer initialized successfully!
 [WARN]:  vkCreateGraphicsPipelines(): pCreateInfos[0] (SPIR-V Interface) VK_SHADER_STAGE_VERTEX_BIT declared to output location 0 Component 0 but is not an Input declared by VK_SHADER_STAGE_FRAGMENT_BIT.
 [DEBUG]: Graphics pipeline created.
 [DEBUG]: Graphics pipeline created.
+[INFO]:  Vulkan renderer initialized successfully!
 [TRACE]: Creating default texture...
+[TRACE]: Renderer: Material created.
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [WARN]:  Freelists are inefficient for small amounts of memory.
@@ -94,30 +94,31 @@
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [ERROR]: vulkan_buffer_allocate - required valid buffer and size.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Renderer: Material created.
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [WARN]:  Freelists are inefficient for small amounts of memory.
+[TRACE]: Renderer: Material created.
 [DEBUG]: game_initialize() called!
 [INFO]:  System memory use (tagged):
   UNKNOWN          : 0.00B
-  ARRAY            : 24.00B
+  ARRAY            : 0.00B
   LINEAR ALLOCATOR : 64.00MiB
-  DARRAY           : 7.02KiB
+  DARRAY           : 6.19KiB
   DICT             : 0.00B
   RING_QUEUE       : 0.00B
   BST              : 0.00B
-  STRING           : 228.00B
-  APPLICATION      : 240.00B
+  STRING           : 0.00B
+  APPLICATION      : 224.00B
   JOB              : 0.00B
   TEXTURE          : 120.00B
   MATERIAL_INSTANCE: 0.00B
-  RENDERER         : 49.35MiB
+  RENDERER         : 49.00MiB
   GAME             : 175.00B
   TRANSFORM        : 0.00B
   ENTITY           : 0.00B
   ENTITY_NODE      : 0.00B
   SCENE            : 0.00B
-  SHADER           : 4.16KiB
 
 [DEBUG]: Window resize: 1251 1361
 [INFO]:  Vulkan renderer backend->resize: w/h/gen: 1251/1361/1
@@ -126,10 +127,10 @@
 [INFO]:  Resized, booting.
 [INFO]:  EVENT_CODE_APPLICATION_QUIT has been recieved, shutting down.
 
-[DEBUG]: Frame count: 220, running time: 2.985470
+[DEBUG]: Frame count: 201, running time: 1.160624
 [INFO]:  after temp watch close
 [TRACE]: Destroying material 'test_material'...
-[TRACE]: Released texture 'paving'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Released texture 'cobblestone'. Texture is now unloaded as reference_count = 0 and auto_release = true.
 [TRACE]: Destroying material 'test_ui_material'...
 [TRACE]: Released texture 'orange_lines_512'. Texture is now unloaded as reference_count = 0 and auto_release = true.
 [TRACE]: Destroying material 'default'...
