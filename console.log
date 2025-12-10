@@ -5,7 +5,7 @@
 [DEBUG]: A test message: 3.140000
 [TRACE]: A test message: 3.140000
 [INFO]:  Input subsystem initialized.
-[INFO]:  Event system initialized at 0x7ff60c953540, size 131080
+[INFO]:  Event system initialized at 0x7fffb792f540, size 131080
 [DEBUG]: Window resize: 1280 1405
 [WARN]:  renderer_state_ptr->backend does not exist to accept resize.
 [TRACE]: Loader '0' registered.
@@ -127,7 +127,7 @@
 [INFO]:  Resized, booting.
 [INFO]:  EVENT_CODE_APPLICATION_QUIT has been recieved, shutting down.
 
-[DEBUG]: Frame count: 61, running time: 18.676969
+[DEBUG]: Frame count: 201, running time: 1.160624
 [INFO]:  after temp watch close
 [TRACE]: Destroying material 'test_material'...
 [TRACE]: Released texture 'cobblestone'. Texture is now unloaded as reference_count = 0 and auto_release = true.

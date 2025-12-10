@@ -1,3 +1,4 @@
+#include "containers/bitarray.h"
 #include "defines.h"
 #include "platform/platform.h"
 
@@ -122,8 +123,8 @@ memory_pool *vmm_new_page_pool(u64 size) {
     new_pool->memory_mapped = 0;
 
     new_pool->system_pages = system_page_amount;
-    new_pool->array_size_bits = page_amount;
-    new_pool->array = base_address;
+    new_pool->array.length = page_amount;
+    new_pool->array.array = base_address;
 
     return new_pool;
 }
@@ -221,88 +222,54 @@ u32 vmm_page_size() { return state->page_size; }
 
 b8 alter_pages(memory_pool *pool, u32 start_index, u32 count, b8 commit,
                b8 *changed) {
-    u64 *bit_array = (u64 *)pool->array;
+    u64 range_end = start_index + count;
+    u64 current = start_index;
 
-    if (!bit_array)
-        return false;
+    // If we are committing, we are targetting non_committed
+    b8 target_val = !commit;
 
-    u64 end_index = start_index + count;
-    u32 batch_start = 0;
-    b8 in_batch = false;
+    while (current < range_end) {
+        u64 batch_start =
+            bitarray_find_first(&pool->array, current, range_end, target_val);
 
-    for (u32 i = start_index; i <= end_index; i++) {
-        b8 needs_action = false;
-
-        if (i < end_index) {
-            u64 chunk_index = i / 64;
-            u64 bit_index = i % 64;
-            u64 is_set = (bit_array[chunk_index] >> bit_index) & 1ULL;
-
-            needs_action = (commit != (is_set != 0));
+        if (batch_start >= range_end) {
+            break;
         }
 
-        if (needs_action && !in_batch) {
-            batch_start = i;
-            in_batch = true;
-        } else if (!needs_action && in_batch) {
+        u64 batch_end = bitarray_find_first(&pool->array, batch_start + 1,
+                                            range_end, commit);
 
-            u64 batch_page_count = i - batch_start;
-            u64 batch_size_bytes = page_to_bytes(batch_page_count);
+        u64 batch_count = batch_end - batch_start;
+        void *batch_address =
+            (void *)((u64)pool->base_address + page_to_bytes(batch_start));
+        u64 batch_size = page_to_bytes(batch_count);
 
-            void *batch_address =
-                (u8 *)pool->base_address + ((u64)page_to_bytes(batch_start));
+        b8 result = commit
+                        ? platform_memory_commit(batch_address, batch_size)
+                        : platform_memory_decommit(batch_address, batch_size);
 
-            b8 result;
-            if (commit) {
-                result =
-                    platform_memory_commit(batch_address, batch_size_bytes);
-            } else {
-                result =
-                    platform_memory_decommit(batch_address, batch_size_bytes);
-            }
-
-            // TODO: rollback
-            if (!result) {
-                return false;
-            }
-
-            *changed = true;
-
-            for (u32 j = batch_start; j < i; j++) {
-                u64 chunk = j / 64;
-                u64 bit = j % 64;
-
-                if (commit) {
-                    bit_array[chunk] |= (1ULL << bit);
-                } else {
-                    bit_array[chunk] &= ~(1ULL << bit);
-                }
-            }
-
-            in_batch = false;
+        if (!result) {
+            return false;
         }
+
+        *changed = true;
+
+        bitarray_fill_range(&pool->array, commit, batch_start, batch_count);
+
+        current = batch_end;
     }
 
     return true;
 }
 
 void recalc_mapped_size(memory_pool *pool) {
-    u64 *bit_array = (u64 *)pool->array;
-    u32 prev_pages_mapped = pool->pages_mapped;
-    u32 pages_mapped = 0;
-    for (u32 i = 0; i < pool->array_size_bits; i++) {
-        u64 chunk_index = i / 64;
-        u64 bit_index = i % 64;
-        u64 is_set = (bit_array[chunk_index] >> bit_index) & 1ULL;
-        if (is_set) {
-            pages_mapped++;
-        }
-    }
+    u32 pages_mapped = (u32)bitarray_count_set(&pool->array);
+
+    u32 diff = pages_mapped - pool->pages_mapped;
+
     pool->pages_mapped = pages_mapped;
     pool->memory_mapped = page_to_bytes(pages_mapped);
-
-    i32 pages_mapped_change = pages_mapped - prev_pages_mapped;
-    state->pages_mapped += pages_mapped_change;
+    state->pages_mapped += diff;
 }
 
 u32 bytes_to_page(u64 bytes) {

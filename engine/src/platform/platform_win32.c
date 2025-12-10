@@ -23,6 +23,8 @@
 #include <vulkan/vulkan.h>
 #include <vulkan/vulkan_win32.h>
 
+#include <intrin.h>
+
 typedef struct internal_state {
     HINSTANCE h_instance;
     HWND hwnd;
@@ -348,5 +350,13 @@ u64 platform_get_page_size() {
     GetSystemInfo(&si);
     return si.dwPageSize;
 }
+
+u32 platform_ctz(u64 val) {
+    unsigned long index;
+    _BitScanForward64(&index, val);
+    return (u32)index;
+}
+
+u32 platform_popcount64(u64 val) { return __popcnt64(val); }
 
 #endif // KPLATFORM_WINDOWS

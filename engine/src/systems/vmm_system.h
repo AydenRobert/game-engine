@@ -1,11 +1,12 @@
 #pragma once
 
+#include "containers/bitarray.h"
 #include "defines.h"
 
 // memory given here get's rounded to the nearest page.
 typedef struct vmm_config {
-    u32 max_memory_reserved; // in bytes
-    u32 max_memory_mapped;   // in bytes
+    u64 max_memory_reserved; // in bytes
+    u64 max_memory_mapped;   // in bytes
     u32 max_pool_amount;
 } vmm_config;
 
@@ -15,8 +16,7 @@ typedef struct vmm_config {
 typedef struct memory_pool {
     void *base_address;
 
-    u32 array_size_bits;
-    void *array;
+    bitarray array;
 
     u32 system_pages;
     u32 pages_reserved;
@@ -29,8 +29,6 @@ typedef struct commit_info {
     u64 start_index; // relative index
     u64 size;
 } commit_info;
-
-typedef enum page_state { PAGE_STATE_RESERVED, PAGE_STATE_MAPPED } page_state;
 
 /**
  * @brief Initialises the virtual memory manager.

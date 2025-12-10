@@ -438,4 +438,8 @@ b8 platform_memory_release(void *ptr, u64 size) {
 
 u64 platform_get_page_size() { return sysconf(_SC_PAGESIZE); }
 
+u32 platform_ctz(u64 val) { return __builtin_ctzll(val); }
+
+u32 platform_popcount64(u64 val) { return __builtin_popcountll(val); }
+
 #endif // KPLATFORM_LINUX

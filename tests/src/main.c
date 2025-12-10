@@ -1,12 +1,17 @@
-#include "containers/freelist_tests.h"
-#include "containers/linkedlist_tests.h"
-#include "core/kmemory.h"
-#include "memory/dynamic_allocator_test.h"
-#include "systems/vmm_tests.h"
 #include "test_manager.h"
 
+#include "core/kmemory.h"
+
+#include "containers/bitarray.h"
+#include "containers/bitarray_tests.h"
+#include "containers/freelist_tests.h"
 #include "containers/hastable_tests.h"
+#include "containers/linkedlist_tests.h"
+
+#include "memory/dynamic_allocator_test.h"
 #include "memory/linear_allocator_test.h"
+
+#include "systems/vmm_tests.h"
 
 #include <core/logger.h>
 
@@ -28,6 +33,7 @@ int main() {
     dynamic_allocator_register_tests();
     linkedlist_register_tests();
     vmm_register_tests();
+    bitarray_register_tests();
 
     KDEBUG("Starting tests...");
 
