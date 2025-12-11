@@ -45,6 +45,30 @@ b8 renderer_backend_create(renderer_backend_type type,
         out_renderer_backend->destroy_geometry =
             vulkan_renderer_destroy_geometry;
 
+        out_renderer_backend->shader_create = vulkan_renderer_shader_create;
+        out_renderer_backend->shader_destroy = vulkan_renderer_shader_destroy;
+
+        out_renderer_backend->shader_initialize =
+            vulkan_renderer_shader_initialize;
+        out_renderer_backend->shader_use = vulkan_renderer_shader_use;
+
+        out_renderer_backend->shader_bind_globals =
+            vulkan_renderer_shader_bind_globals;
+        out_renderer_backend->shader_bind_instance =
+            vulkan_renderer_shader_bind_instance;
+
+        out_renderer_backend->shader_apply_globals =
+            vulkan_renderer_shader_apply_globals;
+        out_renderer_backend->shader_apply_instance =
+            vulkan_renderer_shader_apply_instance;
+
+        out_renderer_backend->shader_acquire_instance_resources =
+            vulkan_renderer_shader_acquire_instance_resources;
+        out_renderer_backend->shader_release_instance_resources =
+            vulkan_renderer_shader_release_instance_resources;
+
+        out_renderer_backend->set_uniform = vulkan_renderer_set_uniform;
+
         return true;
     }
 

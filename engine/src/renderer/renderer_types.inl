@@ -4,6 +4,11 @@
 
 #include "math/math_types.h"
 #include "resources/resource_types.h"
+#include "systems/shader_system.h"
+
+#define MAX_SHADER_STAGE_COUNT 5
+#define MAX_SHADER_ATTRIBUTE_COUNT 16
+#define MAX_SHADER_UNIFORM_COUNT 16
 
 typedef enum renderer_backend_type {
     RENDERER_BACKEND_TYPES_VULKAN,
@@ -53,9 +58,30 @@ typedef struct renderer_backend {
     void (*destroy_material)(struct material *material);
 
     b8 (*create_geometry)(geometry *geometry, u32 vertex_size, u32 vertex_count,
-                          const void *vertices, u32 index_size,
-                          u32 index_count, const void *indices);
+                          const void *vertices, u32 index_size, u32 index_count,
+                          const void *indices);
     void (*destroy_geometry)(geometry *geometry);
+
+    b8 (*shader_create)(struct shader *s, u8 renderpass_id, u8 stage_count,
+                        const char **stage_filenames, shader_stage *stages);
+    void (*shader_destroy)(struct shader *s);
+
+    b8 (*shader_initialize)(struct shader *s);
+    b8 (*shader_use)(struct shader *s);
+
+    b8 (*shader_bind_globals)(struct shader *s);
+    b8 (*shader_bind_instance)(struct shader *s, u32 *out_instance_id);
+
+    b8 (*shader_apply_globals)(struct shader *s);
+    b8 (*shader_apply_instance)(struct shader *s);
+
+    b8 (*shader_acquire_instance_resources)(struct shader *s,
+                                            u32 *out_instance_id);
+    b8 (*shader_release_instance_resources)(struct shader *s, u32 instance_id);
+
+    b8 (*set_uniform)(struct shader *s, struct shader_uniform *uniform,
+                      const void *value);
+
 } renderer_backend;
 
 typedef struct render_packet {

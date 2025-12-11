@@ -138,7 +138,7 @@ typedef struct vulkan_pipeline {
 
 typedef struct vulkan_descriptor_state {
     // One per frame
-    u32 generations[3];
+    u8 generations[3];
     u32 ids[3];
 } vulkan_descriptor_state;
 
