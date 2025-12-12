@@ -1,0 +1,869 @@
+\doxysection{engine/src/systems/shader\+\_\+system.h File Reference}
+\hypertarget{shader__system_8h}{}\label{shader__system_8h}\index{engine/src/systems/shader\_system.h@{engine/src/systems/shader\_system.h}}
+{\ttfamily \#include "{}containers/hashtable.\+h"{}}\newline
+{\ttfamily \#include "{}defines.\+h"{}}\newline
+{\ttfamily \#include "{}resources/resource\+\_\+types.\+h"{}}\newline
+Include dependency graph for shader\+\_\+system.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dc3/shader__system_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dda/shader__system_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structshader__system__config}{shader\+\_\+system\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Configuration for the shader system. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structshader__uniform__config}{shader\+\_\+uniform\+\_\+config}}
+\item 
+struct \mbox{\hyperlink{structshader__uniform}{shader\+\_\+uniform}}
+\item 
+struct \mbox{\hyperlink{structshader__attribute__config}{shader\+\_\+attribute\+\_\+config}}
+\item 
+struct \mbox{\hyperlink{structshader__attribute}{shader\+\_\+attribute}}
+\item 
+struct \mbox{\hyperlink{structshader__config}{shader\+\_\+config}}
+\item 
+struct \mbox{\hyperlink{structshader}{shader}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct shader\+\_\+system\+\_\+config \mbox{\hyperlink{shader__system_8h_a52f7bd391dc26f68715f110eb24e5d5b}{shader\+\_\+system\+\_\+config}}
+\begin{DoxyCompactList}\small\item\em Configuration for the shader system. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9}{shader\+\_\+state}} \mbox{\hyperlink{shader__system_8h_a31230a3d2743b8e758db0a522c319c57}{shader\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Represents the state of a shader. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25}{shader\+\_\+scope}} \mbox{\hyperlink{shader__system_8h_ad1144db5928d6e037db870ad6334a332}{shader\+\_\+scope}}
+\begin{DoxyCompactList}\small\item\em Represents the scope of a shader object. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400}{shader\+\_\+stage}} \mbox{\hyperlink{shader__system_8h_a9f8308fa9e1c03bb6468cd75773cb737}{shader\+\_\+stage}}
+\begin{DoxyCompactList}\small\item\em Stages available in the system. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252}{shader\+\_\+uniform\+\_\+type}} \mbox{\hyperlink{shader__system_8h_a840941254a8dba85e3950d8ec15b9e1a}{shader\+\_\+uniform\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Represents the type of a uniform. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8e}{shader\+\_\+attribute\+\_\+type}} \mbox{\hyperlink{shader__system_8h_a7fd6da2840cc420b4a49a3b7821aedc3}{shader\+\_\+attribute\+\_\+type}}
+\item 
+typedef struct shader\+\_\+uniform\+\_\+config \mbox{\hyperlink{shader__system_8h_a845c4a85d4a0c5717acd28a77aed8129}{shader\+\_\+uniform\+\_\+config}}
+\item 
+typedef struct shader\+\_\+uniform \mbox{\hyperlink{shader__system_8h_a6041646994f7f166d07c09739cfcff0b}{shader\+\_\+uniform}}
+\item 
+typedef struct shader\+\_\+attribute\+\_\+config \mbox{\hyperlink{shader__system_8h_ad88cfc0d80463995bc9aacb294545a12}{shader\+\_\+attribute\+\_\+config}}
+\item 
+typedef struct shader\+\_\+attribute \mbox{\hyperlink{shader__system_8h_aca848a5b48043f6c616f88ebf364678f}{shader\+\_\+attribute}}
+\item 
+typedef struct shader\+\_\+config \mbox{\hyperlink{shader__system_8h_a786450eeafbac8a70e3d09e2a26ca3c4}{shader\+\_\+config}}
+\item 
+typedef struct shader \mbox{\hyperlink{shader__system_8h_afd56fb2497dc7b38f742b3465024704f}{shader}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9}{shader\+\_\+state}} \{ \mbox{\hyperlink{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9acab31bea238b063d475c5c2cfcc08681}{SHADER\+\_\+\+STATE\+\_\+\+NOT\+\_\+\+CREATED}}
+, \mbox{\hyperlink{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9af4b782c853eb83c2522db9940db532b3}{SHADER\+\_\+\+STATE\+\_\+\+UNINITIALIZED}}
+, \mbox{\hyperlink{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9acfee8694de537d7e64d1a1f5abe2ce27}{SHADER\+\_\+\+STATE\+\_\+\+INITIALIZED}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the state of a shader. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25}{shader\+\_\+scope}} \{ \mbox{\hyperlink{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25aeef5136ac9ab3e032e8299b341044ff0}{SHADER\+\_\+\+SCOPE\+\_\+\+GLOBAL}}
+, \mbox{\hyperlink{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25af602da8a1528d74f35dd3e98d0a27a7b}{SHADER\+\_\+\+SCOPE\+\_\+\+INSTANCE}}
+, \mbox{\hyperlink{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25ae081ab8cf8559af102cc458ca4bd561b}{SHADER\+\_\+\+SCOPE\+\_\+\+LOCAL}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the scope of a shader object. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400}{shader\+\_\+stage}} \{ \mbox{\hyperlink{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400ab2afbff48fd225f6c90f227c244f2943}{SHADER\+\_\+\+STAGE\+\_\+\+VERTEX}} = 0x01
+, \mbox{\hyperlink{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400a5f4f7c05fc2347de82b3c107ae34db4f}{SHADER\+\_\+\+STAGE\+\_\+\+GEOMETRY}} = 0x02
+, \mbox{\hyperlink{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400aae882816d7a91c959abe661a86e939cc}{SHADER\+\_\+\+STAGE\+\_\+\+FRAGMENT}} = 0x04
+, \mbox{\hyperlink{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400a5df2acf1a843a06d6c5f89740eecb9e5}{SHADER\+\_\+\+STAGE\+\_\+\+COMPUTE}} = 0x08
+ \}
+\begin{DoxyCompactList}\small\item\em Stages available in the system. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252}{shader\+\_\+uniform\+\_\+type}} \{ \newline
+\mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a87af1e1dee5ff6450e4bc8bbdebc998f}{SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+FLOAT32}} = 0U
+, \mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a4166251e6b039e1204d3a9eefdd7f5bc}{SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+FLOAT32\+\_\+2}} = 1U
+, \mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a7efcd8cb8d5a6d30c923042432e52b89}{SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+FLOAT32\+\_\+3}} = 2U
+, \mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a6bbac66f073243c5157a0eebc8847c2e}{SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+FLOAT32\+\_\+4}} = 3U
+, \newline
+\mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252ad48bef0fe653521591c135ca0e051f6a}{SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+INT8}} = 4U
+, \mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a3e6a6e14d78357dfc26d7571bc2ae1f7}{SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+UINT8}} = 5U
+, \mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a60a91e6659a8ab66f75c0e102b1a8128}{SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+INT16}} = 6U
+, \mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a780b2a2ede2d6948e37678c7f65c3255}{SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+UINT16}} = 7U
+, \newline
+\mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a2ff69ee1ce3c96356e5b32fd7c28d570}{SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+INT32}} = 8U
+, \mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a5c53ff959a6462cdf0448e8eb2d6e3f2}{SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+UINT32}} = 9U
+, \mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a17a5ce82a1674a1d40e2bc596deaac32}{SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+MATRIX\+\_\+4}} = 10U
+, \mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252ac9692dd24b075cceb236adba6b30228d}{SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+SAMPLER}} = 11U
+, \newline
+\mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252aa7cc4f1771be894e002adee553a4f9f2}{SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+CUSTOM}} = 255U
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the type of a uniform. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8e}{shader\+\_\+attribute\+\_\+type}} \{ \newline
+\mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8eac419693b1c25ae6b78530bc3af277f0c}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+FLOAT32}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea86e94564f50c526dcc2fae4105a875ff}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+FLOAT32\+\_\+2}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea101b55a7d31c37622ca33fd6d2ed29fc}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+FLOAT32\+\_\+3}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea375027be263dcbaecc2a76de163d5ccd}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+FLOAT32\+\_\+4}}
+, \newline
+\mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8eac27ce0d1ebcb7b7b7ae199009728a141}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+MATRIX4}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8eaafb9c01ff830fd125e36e11d3d323986}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT8}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8eaef5b041a40ce228a85af9d659edd1fd9}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT8\+\_\+2}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea4f9245d9cf7c1fab29733697c476fd10}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT8\+\_\+3}}
+, \newline
+\mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea33b928668c371b977a4428beef2511b6}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT8\+\_\+4}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea6476092af49018287b655e8ec6c2ac42}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT8}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea5ca95293703dc88c5c589cfa8d330c44}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT8\+\_\+2}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8eafc38c4be13d8f3576f4ad786ccfafa33}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT8\+\_\+3}}
+, \newline
+\mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea6b0268fad3070c7bf5056f3bd7c4fa31}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT8\+\_\+4}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea09e40afbb6ea349913f21c22be064734}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT16}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8eab63c64bb306fa21ef89e1a057daa8794}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT16\+\_\+2}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8eaaa4ea14f5aff1684d7eaf56a8887c41c}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT16\+\_\+3}}
+, \newline
+\mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea5849a32f0c0195d56d79bb8829b8382e}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT16\+\_\+4}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea1cf2666e2bb1d372a6e76b0fee64be54}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT16}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea9e3070131f5e7705663d218bf98f87cf}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT16\+\_\+2}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea72b0befee06feba3784fe90a6c96092e}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT16\+\_\+3}}
+, \newline
+\mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea7d012454c26d51f3d799df8e48c37bb0}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT16\+\_\+4}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea2813eb0cdc4f7acfbed15dc89841924b}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT32}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea9c966d871b93e18a6f96f60c446cf0ce}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT32\+\_\+2}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8eacc1a7a0db2d00f41007e9513b60fd7c0}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT32\+\_\+3}}
+, \newline
+\mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8eafeb9921d746e1e4800064f89a1b97ac0}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT32\+\_\+4}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8eaff70873309a8760278f44ade2ca8b032}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT32}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea673ecc98a2dbc49ead479f2e15fa97e3}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT32\+\_\+2}}
+, \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8eab76ddb859ecf7ed0831113fb7550c396}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT32\+\_\+3}}
+, \newline
+\mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea1e81e49248f9f357699cdd4eee356b22}{SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT32\+\_\+4}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__system_8h_aca8d503d98443f6c89247ff0a25f28ca}{shader\+\_\+system\+\_\+initialize}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}memory\+\_\+requirement, void \texorpdfstring{$\ast$}{*}memory, \mbox{\hyperlink{structshader__system__config}{shader\+\_\+system\+\_\+config}} config)
+\begin{DoxyCompactList}\small\item\em Initialises the shader system. Call twice, first time for memory requirement, second to initialise. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{shader__system_8h_a36dd288e51eb5aad20794200051f573b}{shader\+\_\+system\+\_\+shutdown}} (void \texorpdfstring{$\ast$}{*}state)
+\begin{DoxyCompactList}\small\item\em Shutdowns the shader system. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__system_8h_a60fa71ea702dad92db16922240ef7e89}{shader\+\_\+system\+\_\+create}} (const \mbox{\hyperlink{structshader__config}{shader\+\_\+config}} \texorpdfstring{$\ast$}{*}config)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{shader__system_8h_ad20ef3b221e607c314cd41ae69fa37b1}{shader\+\_\+system\+\_\+get\+\_\+id}} (const char \texorpdfstring{$\ast$}{*}shader\+\_\+name)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{shader__system_8h_a0bc4a61254cf6f75948ad57d58f01537}{shader\+\_\+system\+\_\+get\+\_\+by\+\_\+id}} (\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} shader\+\_\+id)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{shader__system_8h_a5954b70c21adc82e32f202fff9e931fa}{shader\+\_\+system\+\_\+get}} (const char \texorpdfstring{$\ast$}{*}shader\+\_\+name)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__system_8h_af06cec5de5a66eed60f785e5cbfaa5fc}{shader\+\_\+system\+\_\+use}} (const char \texorpdfstring{$\ast$}{*}shader\+\_\+name)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__system_8h_a99fe4fcc13ab82cdd10e401a3cc8dd57}{shader\+\_\+system\+\_\+use\+\_\+by\+\_\+id}} (\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} shader\+\_\+id)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \mbox{\hyperlink{shader__system_8h_a219af249d9ae11c868c906e21b10afc3}{shader\+\_\+system\+\_\+uniform\+\_\+index}} (\mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, const char \texorpdfstring{$\ast$}{*}uniform\+\_\+name)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__system_8h_a3a68126857bd72bb214a55971077fcf2}{shader\+\_\+system\+\_\+uniform\+\_\+set}} (const char \texorpdfstring{$\ast$}{*}uniform\+\_\+name, const void \texorpdfstring{$\ast$}{*}value)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__system_8h_a1aa0155036574d686c03ee21b384083d}{shader\+\_\+system\+\_\+sampler\+\_\+set}} (const char \texorpdfstring{$\ast$}{*}uniform\+\_\+name, const \mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*}t)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__system_8h_ae6ded659d3e13b4de7a4821e6fc87548}{shader\+\_\+system\+\_\+uniform\+\_\+set\+\_\+by\+\_\+index}} (\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} index, const void \texorpdfstring{$\ast$}{*}value)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__system_8h_a0dc8f60566812cce08ceb45427bfbaa2}{shader\+\_\+system\+\_\+sampler\+\_\+set\+\_\+by\+\_\+index}} (\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} index, const \mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*}t)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__system_8h_a3723daed49d355ee186759a1c15d2a34}{shader\+\_\+system\+\_\+apply\+\_\+global}} ()
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__system_8h_a5d6a0ed1e93e9e08ba9cdf49fd4401cb}{shader\+\_\+system\+\_\+apply\+\_\+instance}} ()
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__system_8h_a6489e3b156e5001f2ce3d051b0d43aad}{shader\+\_\+system\+\_\+bind\+\_\+instance}} (\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} instance\+\_\+id)
+\end{DoxyCompactItemize}
+
+
+\label{doc-typedef-members}
+\Hypertarget{shader__system_8h_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{shader__system_8h_afd56fb2497dc7b38f742b3465024704f}\index{shader\_system.h@{shader\_system.h}!shader@{shader}}
+\index{shader@{shader}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader}{shader}}
+{\footnotesize\ttfamily \label{shader__system_8h_afd56fb2497dc7b38f742b3465024704f} 
+typedef struct shader shader}
+
+\Hypertarget{shader__system_8h_aca848a5b48043f6c616f88ebf364678f}\index{shader\_system.h@{shader\_system.h}!shader\_attribute@{shader\_attribute}}
+\index{shader\_attribute@{shader\_attribute}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_attribute}{shader\_attribute}}
+{\footnotesize\ttfamily \label{shader__system_8h_aca848a5b48043f6c616f88ebf364678f} 
+typedef struct shader\+\_\+attribute shader\+\_\+attribute}
+
+\Hypertarget{shader__system_8h_ad88cfc0d80463995bc9aacb294545a12}\index{shader\_system.h@{shader\_system.h}!shader\_attribute\_config@{shader\_attribute\_config}}
+\index{shader\_attribute\_config@{shader\_attribute\_config}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_attribute\_config}{shader\_attribute\_config}}
+{\footnotesize\ttfamily \label{shader__system_8h_ad88cfc0d80463995bc9aacb294545a12} 
+typedef struct shader\+\_\+attribute\+\_\+config shader\+\_\+attribute\+\_\+config}
+
+\Hypertarget{shader__system_8h_a7fd6da2840cc420b4a49a3b7821aedc3}\index{shader\_system.h@{shader\_system.h}!shader\_attribute\_type@{shader\_attribute\_type}}
+\index{shader\_attribute\_type@{shader\_attribute\_type}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_attribute\_type}{shader\_attribute\_type}}
+{\footnotesize\ttfamily \label{shader__system_8h_a7fd6da2840cc420b4a49a3b7821aedc3} 
+typedef enum \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8e}{shader\+\_\+attribute\+\_\+type}} \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8e}{shader\+\_\+attribute\+\_\+type}}}
+
+\Hypertarget{shader__system_8h_a786450eeafbac8a70e3d09e2a26ca3c4}\index{shader\_system.h@{shader\_system.h}!shader\_config@{shader\_config}}
+\index{shader\_config@{shader\_config}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_config}{shader\_config}}
+{\footnotesize\ttfamily \label{shader__system_8h_a786450eeafbac8a70e3d09e2a26ca3c4} 
+typedef struct shader\+\_\+config shader\+\_\+config}
+
+\Hypertarget{shader__system_8h_ad1144db5928d6e037db870ad6334a332}\index{shader\_system.h@{shader\_system.h}!shader\_scope@{shader\_scope}}
+\index{shader\_scope@{shader\_scope}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_scope}{shader\_scope}}
+{\footnotesize\ttfamily \label{shader__system_8h_ad1144db5928d6e037db870ad6334a332} 
+typedef enum \mbox{\hyperlink{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25}{shader\+\_\+scope}} \mbox{\hyperlink{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25}{shader\+\_\+scope}}}
+
+
+
+Represents the scope of a shader object. 
+
+\Hypertarget{shader__system_8h_a9f8308fa9e1c03bb6468cd75773cb737}\index{shader\_system.h@{shader\_system.h}!shader\_stage@{shader\_stage}}
+\index{shader\_stage@{shader\_stage}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_stage}{shader\_stage}}
+{\footnotesize\ttfamily \label{shader__system_8h_a9f8308fa9e1c03bb6468cd75773cb737} 
+typedef enum \mbox{\hyperlink{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400}{shader\+\_\+stage}} \mbox{\hyperlink{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400}{shader\+\_\+stage}}}
+
+
+
+Stages available in the system. 
+
+\Hypertarget{shader__system_8h_a31230a3d2743b8e758db0a522c319c57}\index{shader\_system.h@{shader\_system.h}!shader\_state@{shader\_state}}
+\index{shader\_state@{shader\_state}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_state}{shader\_state}}
+{\footnotesize\ttfamily \label{shader__system_8h_a31230a3d2743b8e758db0a522c319c57} 
+typedef enum \mbox{\hyperlink{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9}{shader\+\_\+state}} \mbox{\hyperlink{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9}{shader\+\_\+state}}}
+
+
+
+Represents the state of a shader. 
+
+\Hypertarget{shader__system_8h_a52f7bd391dc26f68715f110eb24e5d5b}\index{shader\_system.h@{shader\_system.h}!shader\_system\_config@{shader\_system\_config}}
+\index{shader\_system\_config@{shader\_system\_config}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_config}{shader\_system\_config}}
+{\footnotesize\ttfamily \label{shader__system_8h_a52f7bd391dc26f68715f110eb24e5d5b} 
+typedef struct shader\+\_\+system\+\_\+config shader\+\_\+system\+\_\+config}
+
+
+
+Configuration for the shader system. 
+
+\Hypertarget{shader__system_8h_a6041646994f7f166d07c09739cfcff0b}\index{shader\_system.h@{shader\_system.h}!shader\_uniform@{shader\_uniform}}
+\index{shader\_uniform@{shader\_uniform}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_uniform}{shader\_uniform}}
+{\footnotesize\ttfamily \label{shader__system_8h_a6041646994f7f166d07c09739cfcff0b} 
+typedef struct shader\+\_\+uniform shader\+\_\+uniform}
+
+\Hypertarget{shader__system_8h_a845c4a85d4a0c5717acd28a77aed8129}\index{shader\_system.h@{shader\_system.h}!shader\_uniform\_config@{shader\_uniform\_config}}
+\index{shader\_uniform\_config@{shader\_uniform\_config}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_uniform\_config}{shader\_uniform\_config}}
+{\footnotesize\ttfamily \label{shader__system_8h_a845c4a85d4a0c5717acd28a77aed8129} 
+typedef struct shader\+\_\+uniform\+\_\+config shader\+\_\+uniform\+\_\+config}
+
+\Hypertarget{shader__system_8h_a840941254a8dba85e3950d8ec15b9e1a}\index{shader\_system.h@{shader\_system.h}!shader\_uniform\_type@{shader\_uniform\_type}}
+\index{shader\_uniform\_type@{shader\_uniform\_type}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_uniform\_type}{shader\_uniform\_type}}
+{\footnotesize\ttfamily \label{shader__system_8h_a840941254a8dba85e3950d8ec15b9e1a} 
+typedef enum \mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252}{shader\+\_\+uniform\+\_\+type}} \mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252}{shader\+\_\+uniform\+\_\+type}}}
+
+
+
+Represents the type of a uniform. 
+
+
+
+\label{doc-enum-members}
+\Hypertarget{shader__system_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8e}\index{shader\_system.h@{shader\_system.h}!shader\_attribute\_type@{shader\_attribute\_type}}
+\index{shader\_attribute\_type@{shader\_attribute\_type}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_attribute\_type}{shader\_attribute\_type}}
+{\footnotesize\ttfamily \label{shader__system_8h_a8800768ab5481d8204161d20f3770e8e} 
+enum \mbox{\hyperlink{shader__system_8h_a8800768ab5481d8204161d20f3770e8e}{shader\+\_\+attribute\+\_\+type}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_FLOAT32@{SHADER\_ATTRIB\_TYPE\_FLOAT32}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_FLOAT32@{SHADER\_ATTRIB\_TYPE\_FLOAT32}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8eac419693b1c25ae6b78530bc3af277f0c}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8eac419693b1c25ae6b78530bc3af277f0c} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+FLOAT32&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_FLOAT32\_2@{SHADER\_ATTRIB\_TYPE\_FLOAT32\_2}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_FLOAT32\_2@{SHADER\_ATTRIB\_TYPE\_FLOAT32\_2}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea86e94564f50c526dcc2fae4105a875ff}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea86e94564f50c526dcc2fae4105a875ff} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+FLOAT32\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_FLOAT32\_3@{SHADER\_ATTRIB\_TYPE\_FLOAT32\_3}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_FLOAT32\_3@{SHADER\_ATTRIB\_TYPE\_FLOAT32\_3}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea101b55a7d31c37622ca33fd6d2ed29fc}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea101b55a7d31c37622ca33fd6d2ed29fc} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+FLOAT32\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_FLOAT32\_4@{SHADER\_ATTRIB\_TYPE\_FLOAT32\_4}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_FLOAT32\_4@{SHADER\_ATTRIB\_TYPE\_FLOAT32\_4}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea375027be263dcbaecc2a76de163d5ccd}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea375027be263dcbaecc2a76de163d5ccd} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+FLOAT32\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_MATRIX4@{SHADER\_ATTRIB\_TYPE\_MATRIX4}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_MATRIX4@{SHADER\_ATTRIB\_TYPE\_MATRIX4}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8eac27ce0d1ebcb7b7b7ae199009728a141}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8eac27ce0d1ebcb7b7b7ae199009728a141} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+MATRIX4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_INT8@{SHADER\_ATTRIB\_TYPE\_INT8}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_INT8@{SHADER\_ATTRIB\_TYPE\_INT8}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8eaafb9c01ff830fd125e36e11d3d323986}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8eaafb9c01ff830fd125e36e11d3d323986} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_INT8\_2@{SHADER\_ATTRIB\_TYPE\_INT8\_2}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_INT8\_2@{SHADER\_ATTRIB\_TYPE\_INT8\_2}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8eaef5b041a40ce228a85af9d659edd1fd9}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8eaef5b041a40ce228a85af9d659edd1fd9} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT8\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_INT8\_3@{SHADER\_ATTRIB\_TYPE\_INT8\_3}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_INT8\_3@{SHADER\_ATTRIB\_TYPE\_INT8\_3}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea4f9245d9cf7c1fab29733697c476fd10}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea4f9245d9cf7c1fab29733697c476fd10} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT8\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_INT8\_4@{SHADER\_ATTRIB\_TYPE\_INT8\_4}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_INT8\_4@{SHADER\_ATTRIB\_TYPE\_INT8\_4}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea33b928668c371b977a4428beef2511b6}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea33b928668c371b977a4428beef2511b6} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT8\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_UINT8@{SHADER\_ATTRIB\_TYPE\_UINT8}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_UINT8@{SHADER\_ATTRIB\_TYPE\_UINT8}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea6476092af49018287b655e8ec6c2ac42}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea6476092af49018287b655e8ec6c2ac42} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_UINT8\_2@{SHADER\_ATTRIB\_TYPE\_UINT8\_2}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_UINT8\_2@{SHADER\_ATTRIB\_TYPE\_UINT8\_2}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea5ca95293703dc88c5c589cfa8d330c44}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea5ca95293703dc88c5c589cfa8d330c44} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT8\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_UINT8\_3@{SHADER\_ATTRIB\_TYPE\_UINT8\_3}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_UINT8\_3@{SHADER\_ATTRIB\_TYPE\_UINT8\_3}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8eafc38c4be13d8f3576f4ad786ccfafa33}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8eafc38c4be13d8f3576f4ad786ccfafa33} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT8\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_UINT8\_4@{SHADER\_ATTRIB\_TYPE\_UINT8\_4}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_UINT8\_4@{SHADER\_ATTRIB\_TYPE\_UINT8\_4}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea6b0268fad3070c7bf5056f3bd7c4fa31}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea6b0268fad3070c7bf5056f3bd7c4fa31} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT8\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_INT16@{SHADER\_ATTRIB\_TYPE\_INT16}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_INT16@{SHADER\_ATTRIB\_TYPE\_INT16}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea09e40afbb6ea349913f21c22be064734}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea09e40afbb6ea349913f21c22be064734} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_INT16\_2@{SHADER\_ATTRIB\_TYPE\_INT16\_2}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_INT16\_2@{SHADER\_ATTRIB\_TYPE\_INT16\_2}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8eab63c64bb306fa21ef89e1a057daa8794}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8eab63c64bb306fa21ef89e1a057daa8794} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT16\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_INT16\_3@{SHADER\_ATTRIB\_TYPE\_INT16\_3}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_INT16\_3@{SHADER\_ATTRIB\_TYPE\_INT16\_3}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8eaaa4ea14f5aff1684d7eaf56a8887c41c}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8eaaa4ea14f5aff1684d7eaf56a8887c41c} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT16\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_INT16\_4@{SHADER\_ATTRIB\_TYPE\_INT16\_4}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_INT16\_4@{SHADER\_ATTRIB\_TYPE\_INT16\_4}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea5849a32f0c0195d56d79bb8829b8382e}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea5849a32f0c0195d56d79bb8829b8382e} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT16\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_UINT16@{SHADER\_ATTRIB\_TYPE\_UINT16}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_UINT16@{SHADER\_ATTRIB\_TYPE\_UINT16}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea1cf2666e2bb1d372a6e76b0fee64be54}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea1cf2666e2bb1d372a6e76b0fee64be54} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_UINT16\_2@{SHADER\_ATTRIB\_TYPE\_UINT16\_2}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_UINT16\_2@{SHADER\_ATTRIB\_TYPE\_UINT16\_2}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea9e3070131f5e7705663d218bf98f87cf}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea9e3070131f5e7705663d218bf98f87cf} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT16\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_UINT16\_3@{SHADER\_ATTRIB\_TYPE\_UINT16\_3}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_UINT16\_3@{SHADER\_ATTRIB\_TYPE\_UINT16\_3}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea72b0befee06feba3784fe90a6c96092e}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea72b0befee06feba3784fe90a6c96092e} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT16\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_UINT16\_4@{SHADER\_ATTRIB\_TYPE\_UINT16\_4}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_UINT16\_4@{SHADER\_ATTRIB\_TYPE\_UINT16\_4}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea7d012454c26d51f3d799df8e48c37bb0}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea7d012454c26d51f3d799df8e48c37bb0} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT16\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_INT32@{SHADER\_ATTRIB\_TYPE\_INT32}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_INT32@{SHADER\_ATTRIB\_TYPE\_INT32}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea2813eb0cdc4f7acfbed15dc89841924b}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea2813eb0cdc4f7acfbed15dc89841924b} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT32&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_INT32\_2@{SHADER\_ATTRIB\_TYPE\_INT32\_2}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_INT32\_2@{SHADER\_ATTRIB\_TYPE\_INT32\_2}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea9c966d871b93e18a6f96f60c446cf0ce}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea9c966d871b93e18a6f96f60c446cf0ce} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT32\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_INT32\_3@{SHADER\_ATTRIB\_TYPE\_INT32\_3}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_INT32\_3@{SHADER\_ATTRIB\_TYPE\_INT32\_3}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8eacc1a7a0db2d00f41007e9513b60fd7c0}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8eacc1a7a0db2d00f41007e9513b60fd7c0} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT32\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_INT32\_4@{SHADER\_ATTRIB\_TYPE\_INT32\_4}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_INT32\_4@{SHADER\_ATTRIB\_TYPE\_INT32\_4}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8eafeb9921d746e1e4800064f89a1b97ac0}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8eafeb9921d746e1e4800064f89a1b97ac0} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+INT32\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_UINT32@{SHADER\_ATTRIB\_TYPE\_UINT32}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_UINT32@{SHADER\_ATTRIB\_TYPE\_UINT32}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8eaff70873309a8760278f44ade2ca8b032}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8eaff70873309a8760278f44ade2ca8b032} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT32&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_UINT32\_2@{SHADER\_ATTRIB\_TYPE\_UINT32\_2}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_UINT32\_2@{SHADER\_ATTRIB\_TYPE\_UINT32\_2}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea673ecc98a2dbc49ead479f2e15fa97e3}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea673ecc98a2dbc49ead479f2e15fa97e3} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT32\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_UINT32\_3@{SHADER\_ATTRIB\_TYPE\_UINT32\_3}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_UINT32\_3@{SHADER\_ATTRIB\_TYPE\_UINT32\_3}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8eab76ddb859ecf7ed0831113fb7550c396}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8eab76ddb859ecf7ed0831113fb7550c396} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT32\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_ATTRIB\_TYPE\_UINT32\_4@{SHADER\_ATTRIB\_TYPE\_UINT32\_4}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_ATTRIB\_TYPE\_UINT32\_4@{SHADER\_ATTRIB\_TYPE\_UINT32\_4}}}\Hypertarget{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea1e81e49248f9f357699cdd4eee356b22}\label{shader__system_8h_a8800768ab5481d8204161d20f3770e8ea1e81e49248f9f357699cdd4eee356b22} 
+SHADER\+\_\+\+ATTRIB\+\_\+\+TYPE\+\_\+\+UINT32\+\_\+4&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25}\index{shader\_system.h@{shader\_system.h}!shader\_scope@{shader\_scope}}
+\index{shader\_scope@{shader\_scope}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_scope}{shader\_scope}}
+{\footnotesize\ttfamily \label{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25} 
+enum \mbox{\hyperlink{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25}{shader\+\_\+scope}}}
+
+
+
+Represents the scope of a shader object. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_SCOPE\_GLOBAL@{SHADER\_SCOPE\_GLOBAL}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_SCOPE\_GLOBAL@{SHADER\_SCOPE\_GLOBAL}}}\Hypertarget{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25aeef5136ac9ab3e032e8299b341044ff0}\label{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25aeef5136ac9ab3e032e8299b341044ff0} 
+SHADER\+\_\+\+SCOPE\+\_\+\+GLOBAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_SCOPE\_INSTANCE@{SHADER\_SCOPE\_INSTANCE}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_SCOPE\_INSTANCE@{SHADER\_SCOPE\_INSTANCE}}}\Hypertarget{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25af602da8a1528d74f35dd3e98d0a27a7b}\label{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25af602da8a1528d74f35dd3e98d0a27a7b} 
+SHADER\+\_\+\+SCOPE\+\_\+\+INSTANCE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_SCOPE\_LOCAL@{SHADER\_SCOPE\_LOCAL}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_SCOPE\_LOCAL@{SHADER\_SCOPE\_LOCAL}}}\Hypertarget{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25ae081ab8cf8559af102cc458ca4bd561b}\label{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25ae081ab8cf8559af102cc458ca4bd561b} 
+SHADER\+\_\+\+SCOPE\+\_\+\+LOCAL&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400}\index{shader\_system.h@{shader\_system.h}!shader\_stage@{shader\_stage}}
+\index{shader\_stage@{shader\_stage}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_stage}{shader\_stage}}
+{\footnotesize\ttfamily \label{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400} 
+enum \mbox{\hyperlink{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400}{shader\+\_\+stage}}}
+
+
+
+Stages available in the system. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_STAGE\_VERTEX@{SHADER\_STAGE\_VERTEX}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_STAGE\_VERTEX@{SHADER\_STAGE\_VERTEX}}}\Hypertarget{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400ab2afbff48fd225f6c90f227c244f2943}\label{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400ab2afbff48fd225f6c90f227c244f2943} 
+SHADER\+\_\+\+STAGE\+\_\+\+VERTEX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_STAGE\_GEOMETRY@{SHADER\_STAGE\_GEOMETRY}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_STAGE\_GEOMETRY@{SHADER\_STAGE\_GEOMETRY}}}\Hypertarget{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400a5f4f7c05fc2347de82b3c107ae34db4f}\label{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400a5f4f7c05fc2347de82b3c107ae34db4f} 
+SHADER\+\_\+\+STAGE\+\_\+\+GEOMETRY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_STAGE\_FRAGMENT@{SHADER\_STAGE\_FRAGMENT}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_STAGE\_FRAGMENT@{SHADER\_STAGE\_FRAGMENT}}}\Hypertarget{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400aae882816d7a91c959abe661a86e939cc}\label{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400aae882816d7a91c959abe661a86e939cc} 
+SHADER\+\_\+\+STAGE\+\_\+\+FRAGMENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_STAGE\_COMPUTE@{SHADER\_STAGE\_COMPUTE}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_STAGE\_COMPUTE@{SHADER\_STAGE\_COMPUTE}}}\Hypertarget{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400a5df2acf1a843a06d6c5f89740eecb9e5}\label{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400a5df2acf1a843a06d6c5f89740eecb9e5} 
+SHADER\+\_\+\+STAGE\+\_\+\+COMPUTE&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9}\index{shader\_system.h@{shader\_system.h}!shader\_state@{shader\_state}}
+\index{shader\_state@{shader\_state}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_state}{shader\_state}}
+{\footnotesize\ttfamily \label{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9} 
+enum \mbox{\hyperlink{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9}{shader\+\_\+state}}}
+
+
+
+Represents the state of a shader. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_STATE\_NOT\_CREATED@{SHADER\_STATE\_NOT\_CREATED}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_STATE\_NOT\_CREATED@{SHADER\_STATE\_NOT\_CREATED}}}\Hypertarget{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9acab31bea238b063d475c5c2cfcc08681}\label{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9acab31bea238b063d475c5c2cfcc08681} 
+SHADER\+\_\+\+STATE\+\_\+\+NOT\+\_\+\+CREATED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_STATE\_UNINITIALIZED@{SHADER\_STATE\_UNINITIALIZED}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_STATE\_UNINITIALIZED@{SHADER\_STATE\_UNINITIALIZED}}}\Hypertarget{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9af4b782c853eb83c2522db9940db532b3}\label{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9af4b782c853eb83c2522db9940db532b3} 
+SHADER\+\_\+\+STATE\+\_\+\+UNINITIALIZED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_STATE\_INITIALIZED@{SHADER\_STATE\_INITIALIZED}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_STATE\_INITIALIZED@{SHADER\_STATE\_INITIALIZED}}}\Hypertarget{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9acfee8694de537d7e64d1a1f5abe2ce27}\label{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9acfee8694de537d7e64d1a1f5abe2ce27} 
+SHADER\+\_\+\+STATE\+\_\+\+INITIALIZED&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252}\index{shader\_system.h@{shader\_system.h}!shader\_uniform\_type@{shader\_uniform\_type}}
+\index{shader\_uniform\_type@{shader\_uniform\_type}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_uniform\_type}{shader\_uniform\_type}}
+{\footnotesize\ttfamily \label{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252} 
+enum \mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252}{shader\+\_\+uniform\+\_\+type}}}
+
+
+
+Represents the type of a uniform. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_UNIFORM\_TYPE\_FLOAT32@{SHADER\_UNIFORM\_TYPE\_FLOAT32}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_UNIFORM\_TYPE\_FLOAT32@{SHADER\_UNIFORM\_TYPE\_FLOAT32}}}\Hypertarget{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a87af1e1dee5ff6450e4bc8bbdebc998f}\label{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a87af1e1dee5ff6450e4bc8bbdebc998f} 
+SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+FLOAT32&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_UNIFORM\_TYPE\_FLOAT32\_2@{SHADER\_UNIFORM\_TYPE\_FLOAT32\_2}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_UNIFORM\_TYPE\_FLOAT32\_2@{SHADER\_UNIFORM\_TYPE\_FLOAT32\_2}}}\Hypertarget{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a4166251e6b039e1204d3a9eefdd7f5bc}\label{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a4166251e6b039e1204d3a9eefdd7f5bc} 
+SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+FLOAT32\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_UNIFORM\_TYPE\_FLOAT32\_3@{SHADER\_UNIFORM\_TYPE\_FLOAT32\_3}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_UNIFORM\_TYPE\_FLOAT32\_3@{SHADER\_UNIFORM\_TYPE\_FLOAT32\_3}}}\Hypertarget{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a7efcd8cb8d5a6d30c923042432e52b89}\label{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a7efcd8cb8d5a6d30c923042432e52b89} 
+SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+FLOAT32\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_UNIFORM\_TYPE\_FLOAT32\_4@{SHADER\_UNIFORM\_TYPE\_FLOAT32\_4}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_UNIFORM\_TYPE\_FLOAT32\_4@{SHADER\_UNIFORM\_TYPE\_FLOAT32\_4}}}\Hypertarget{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a6bbac66f073243c5157a0eebc8847c2e}\label{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a6bbac66f073243c5157a0eebc8847c2e} 
+SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+FLOAT32\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_UNIFORM\_TYPE\_INT8@{SHADER\_UNIFORM\_TYPE\_INT8}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_UNIFORM\_TYPE\_INT8@{SHADER\_UNIFORM\_TYPE\_INT8}}}\Hypertarget{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252ad48bef0fe653521591c135ca0e051f6a}\label{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252ad48bef0fe653521591c135ca0e051f6a} 
+SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+INT8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_UNIFORM\_TYPE\_UINT8@{SHADER\_UNIFORM\_TYPE\_UINT8}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_UNIFORM\_TYPE\_UINT8@{SHADER\_UNIFORM\_TYPE\_UINT8}}}\Hypertarget{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a3e6a6e14d78357dfc26d7571bc2ae1f7}\label{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a3e6a6e14d78357dfc26d7571bc2ae1f7} 
+SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+UINT8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_UNIFORM\_TYPE\_INT16@{SHADER\_UNIFORM\_TYPE\_INT16}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_UNIFORM\_TYPE\_INT16@{SHADER\_UNIFORM\_TYPE\_INT16}}}\Hypertarget{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a60a91e6659a8ab66f75c0e102b1a8128}\label{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a60a91e6659a8ab66f75c0e102b1a8128} 
+SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+INT16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_UNIFORM\_TYPE\_UINT16@{SHADER\_UNIFORM\_TYPE\_UINT16}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_UNIFORM\_TYPE\_UINT16@{SHADER\_UNIFORM\_TYPE\_UINT16}}}\Hypertarget{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a780b2a2ede2d6948e37678c7f65c3255}\label{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a780b2a2ede2d6948e37678c7f65c3255} 
+SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+UINT16&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_UNIFORM\_TYPE\_INT32@{SHADER\_UNIFORM\_TYPE\_INT32}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_UNIFORM\_TYPE\_INT32@{SHADER\_UNIFORM\_TYPE\_INT32}}}\Hypertarget{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a2ff69ee1ce3c96356e5b32fd7c28d570}\label{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a2ff69ee1ce3c96356e5b32fd7c28d570} 
+SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+INT32&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_UNIFORM\_TYPE\_UINT32@{SHADER\_UNIFORM\_TYPE\_UINT32}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_UNIFORM\_TYPE\_UINT32@{SHADER\_UNIFORM\_TYPE\_UINT32}}}\Hypertarget{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a5c53ff959a6462cdf0448e8eb2d6e3f2}\label{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a5c53ff959a6462cdf0448e8eb2d6e3f2} 
+SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+UINT32&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_UNIFORM\_TYPE\_MATRIX\_4@{SHADER\_UNIFORM\_TYPE\_MATRIX\_4}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_UNIFORM\_TYPE\_MATRIX\_4@{SHADER\_UNIFORM\_TYPE\_MATRIX\_4}}}\Hypertarget{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a17a5ce82a1674a1d40e2bc596deaac32}\label{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252a17a5ce82a1674a1d40e2bc596deaac32} 
+SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+MATRIX\+\_\+4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_UNIFORM\_TYPE\_SAMPLER@{SHADER\_UNIFORM\_TYPE\_SAMPLER}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_UNIFORM\_TYPE\_SAMPLER@{SHADER\_UNIFORM\_TYPE\_SAMPLER}}}\Hypertarget{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252ac9692dd24b075cceb236adba6b30228d}\label{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252ac9692dd24b075cceb236adba6b30228d} 
+SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+SAMPLER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SHADER\_UNIFORM\_TYPE\_CUSTOM@{SHADER\_UNIFORM\_TYPE\_CUSTOM}!shader\_system.h@{shader\_system.h}}\index{shader\_system.h@{shader\_system.h}!SHADER\_UNIFORM\_TYPE\_CUSTOM@{SHADER\_UNIFORM\_TYPE\_CUSTOM}}}\Hypertarget{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252aa7cc4f1771be894e002adee553a4f9f2}\label{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252aa7cc4f1771be894e002adee553a4f9f2} 
+SHADER\+\_\+\+UNIFORM\+\_\+\+TYPE\+\_\+\+CUSTOM&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{shader__system_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{shader__system_8h_a3723daed49d355ee186759a1c15d2a34}\index{shader\_system.h@{shader\_system.h}!shader\_system\_apply\_global@{shader\_system\_apply\_global}}
+\index{shader\_system\_apply\_global@{shader\_system\_apply\_global}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_apply\_global()}{shader\_system\_apply\_global()}}
+{\footnotesize\ttfamily \label{shader__system_8h_a3723daed49d355ee186759a1c15d2a34} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+apply\+\_\+global (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a3723daed49d355ee186759a1c15d2a34_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a3723daed49d355ee186759a1c15d2a34_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__system_8h_a5d6a0ed1e93e9e08ba9cdf49fd4401cb}\index{shader\_system.h@{shader\_system.h}!shader\_system\_apply\_instance@{shader\_system\_apply\_instance}}
+\index{shader\_system\_apply\_instance@{shader\_system\_apply\_instance}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_apply\_instance()}{shader\_system\_apply\_instance()}}
+{\footnotesize\ttfamily \label{shader__system_8h_a5d6a0ed1e93e9e08ba9cdf49fd4401cb} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+apply\+\_\+instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a5d6a0ed1e93e9e08ba9cdf49fd4401cb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a5d6a0ed1e93e9e08ba9cdf49fd4401cb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__system_8h_a6489e3b156e5001f2ce3d051b0d43aad}\index{shader\_system.h@{shader\_system.h}!shader\_system\_bind\_instance@{shader\_system\_bind\_instance}}
+\index{shader\_system\_bind\_instance@{shader\_system\_bind\_instance}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_bind\_instance()}{shader\_system\_bind\_instance()}}
+{\footnotesize\ttfamily \label{shader__system_8h_a6489e3b156e5001f2ce3d051b0d43aad} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+bind\+\_\+instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{instance\+\_\+id}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a6489e3b156e5001f2ce3d051b0d43aad_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__system_8h_a60fa71ea702dad92db16922240ef7e89}\index{shader\_system.h@{shader\_system.h}!shader\_system\_create@{shader\_system\_create}}
+\index{shader\_system\_create@{shader\_system\_create}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_create()}{shader\_system\_create()}}
+{\footnotesize\ttfamily \label{shader__system_8h_a60fa71ea702dad92db16922240ef7e89} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+create (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structshader__config}{shader\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a60fa71ea702dad92db16922240ef7e89_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a60fa71ea702dad92db16922240ef7e89_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__system_8h_a5954b70c21adc82e32f202fff9e931fa}\index{shader\_system.h@{shader\_system.h}!shader\_system\_get@{shader\_system\_get}}
+\index{shader\_system\_get@{shader\_system\_get}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_get()}{shader\_system\_get()}}
+{\footnotesize\ttfamily \label{shader__system_8h_a5954b70c21adc82e32f202fff9e931fa} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*} shader\+\_\+system\+\_\+get (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{shader\+\_\+name}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a5954b70c21adc82e32f202fff9e931fa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a5954b70c21adc82e32f202fff9e931fa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__system_8h_a0bc4a61254cf6f75948ad57d58f01537}\index{shader\_system.h@{shader\_system.h}!shader\_system\_get\_by\_id@{shader\_system\_get\_by\_id}}
+\index{shader\_system\_get\_by\_id@{shader\_system\_get\_by\_id}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_get\_by\_id()}{shader\_system\_get\_by\_id()}}
+{\footnotesize\ttfamily \label{shader__system_8h_a0bc4a61254cf6f75948ad57d58f01537} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*} shader\+\_\+system\+\_\+get\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{shader\+\_\+id}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a0bc4a61254cf6f75948ad57d58f01537_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__system_8h_ad20ef3b221e607c314cd41ae69fa37b1}\index{shader\_system.h@{shader\_system.h}!shader\_system\_get\_id@{shader\_system\_get\_id}}
+\index{shader\_system\_get\_id@{shader\_system\_get\_id}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_get\_id()}{shader\_system\_get\_id()}}
+{\footnotesize\ttfamily \label{shader__system_8h_ad20ef3b221e607c314cd41ae69fa37b1} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} shader\+\_\+system\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{shader\+\_\+name}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_ad20ef3b221e607c314cd41ae69fa37b1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_ad20ef3b221e607c314cd41ae69fa37b1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__system_8h_aca8d503d98443f6c89247ff0a25f28ca}\index{shader\_system.h@{shader\_system.h}!shader\_system\_initialize@{shader\_system\_initialize}}
+\index{shader\_system\_initialize@{shader\_system\_initialize}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_initialize()}{shader\_system\_initialize()}}
+{\footnotesize\ttfamily \label{shader__system_8h_aca8d503d98443f6c89247ff0a25f28ca} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{memory\+\_\+requirement}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{memory}{, }\item[{\mbox{\hyperlink{structshader__system__config}{shader\+\_\+system\+\_\+config}}}]{config}{}\end{DoxyParamCaption})}
+
+
+
+Initialises the shader system. Call twice, first time for memory requirement, second to initialise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memory\+\_\+requirement} & A pointer to store the memory requirement. \\
+\hline
+{\em memory} & A pointer to the block of memory, or 0; \\
+\hline
+{\em config} & Config for the shader system. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful; otherwise False. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_aca8d503d98443f6c89247ff0a25f28ca_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__system_8h_a1aa0155036574d686c03ee21b384083d}\index{shader\_system.h@{shader\_system.h}!shader\_system\_sampler\_set@{shader\_system\_sampler\_set}}
+\index{shader\_system\_sampler\_set@{shader\_system\_sampler\_set}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_sampler\_set()}{shader\_system\_sampler\_set()}}
+{\footnotesize\ttfamily \label{shader__system_8h_a1aa0155036574d686c03ee21b384083d} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+sampler\+\_\+set (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{uniform\+\_\+name}{, }\item[{const \mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a1aa0155036574d686c03ee21b384083d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__system_8h_a0dc8f60566812cce08ceb45427bfbaa2}\index{shader\_system.h@{shader\_system.h}!shader\_system\_sampler\_set\_by\_index@{shader\_system\_sampler\_set\_by\_index}}
+\index{shader\_system\_sampler\_set\_by\_index@{shader\_system\_sampler\_set\_by\_index}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_sampler\_set\_by\_index()}{shader\_system\_sampler\_set\_by\_index()}}
+{\footnotesize\ttfamily \label{shader__system_8h_a0dc8f60566812cce08ceb45427bfbaa2} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+sampler\+\_\+set\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{index}{, }\item[{const \mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a0dc8f60566812cce08ceb45427bfbaa2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__system_8h_a36dd288e51eb5aad20794200051f573b}\index{shader\_system.h@{shader\_system.h}!shader\_system\_shutdown@{shader\_system\_shutdown}}
+\index{shader\_system\_shutdown@{shader\_system\_shutdown}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_shutdown()}{shader\_system\_shutdown()}}
+{\footnotesize\ttfamily \label{shader__system_8h_a36dd288e51eb5aad20794200051f573b} 
+void shader\+\_\+system\+\_\+shutdown (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Shutdowns the shader system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & A pointer to the system state. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a36dd288e51eb5aad20794200051f573b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__system_8h_a219af249d9ae11c868c906e21b10afc3}\index{shader\_system.h@{shader\_system.h}!shader\_system\_uniform\_index@{shader\_system\_uniform\_index}}
+\index{shader\_system\_uniform\_index@{shader\_system\_uniform\_index}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_uniform\_index()}{shader\_system\_uniform\_index()}}
+{\footnotesize\ttfamily \label{shader__system_8h_a219af249d9ae11c868c906e21b10afc3} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} shader\+\_\+system\+\_\+uniform\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{uniform\+\_\+name}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a219af249d9ae11c868c906e21b10afc3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a219af249d9ae11c868c906e21b10afc3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__system_8h_a3a68126857bd72bb214a55971077fcf2}\index{shader\_system.h@{shader\_system.h}!shader\_system\_uniform\_set@{shader\_system\_uniform\_set}}
+\index{shader\_system\_uniform\_set@{shader\_system\_uniform\_set}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_uniform\_set()}{shader\_system\_uniform\_set()}}
+{\footnotesize\ttfamily \label{shader__system_8h_a3a68126857bd72bb214a55971077fcf2} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+uniform\+\_\+set (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{uniform\+\_\+name}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a3a68126857bd72bb214a55971077fcf2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a3a68126857bd72bb214a55971077fcf2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__system_8h_ae6ded659d3e13b4de7a4821e6fc87548}\index{shader\_system.h@{shader\_system.h}!shader\_system\_uniform\_set\_by\_index@{shader\_system\_uniform\_set\_by\_index}}
+\index{shader\_system\_uniform\_set\_by\_index@{shader\_system\_uniform\_set\_by\_index}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_uniform\_set\_by\_index()}{shader\_system\_uniform\_set\_by\_index()}}
+{\footnotesize\ttfamily \label{shader__system_8h_ae6ded659d3e13b4de7a4821e6fc87548} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+uniform\+\_\+set\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{index}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_ae6ded659d3e13b4de7a4821e6fc87548_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_ae6ded659d3e13b4de7a4821e6fc87548_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__system_8h_af06cec5de5a66eed60f785e5cbfaa5fc}\index{shader\_system.h@{shader\_system.h}!shader\_system\_use@{shader\_system\_use}}
+\index{shader\_system\_use@{shader\_system\_use}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_use()}{shader\_system\_use()}}
+{\footnotesize\ttfamily \label{shader__system_8h_af06cec5de5a66eed60f785e5cbfaa5fc} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+use (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{shader\+\_\+name}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_af06cec5de5a66eed60f785e5cbfaa5fc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__system_8h_a99fe4fcc13ab82cdd10e401a3cc8dd57}\index{shader\_system.h@{shader\_system.h}!shader\_system\_use\_by\_id@{shader\_system\_use\_by\_id}}
+\index{shader\_system\_use\_by\_id@{shader\_system\_use\_by\_id}!shader\_system.h@{shader\_system.h}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_use\_by\_id()}{shader\_system\_use\_by\_id()}}
+{\footnotesize\ttfamily \label{shader__system_8h_a99fe4fcc13ab82cdd10e401a3cc8dd57} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+use\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{shader\+\_\+id}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a99fe4fcc13ab82cdd10e401a3cc8dd57_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d0f/shader__system_8h_a99fe4fcc13ab82cdd10e401a3cc8dd57_icgraph}
+\end{center}
+\end{figure}

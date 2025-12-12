@@ -42,6 +42,6 @@ var searchData=
   ['transfer_5fqueue_5findex_39',['transfer_queue_index',['../d7/d6e/structvulkan__device.html#af4c29ffbded80b609ce8d11cd9d954f2',1,'vulkan_device']]],
   ['translate_5fkeycode_40',['translate_keycode',['../db/dae/platform__linux_8h.html#a88e4d1d6b55121844aeae60ff4de20bc',1,'platform_linux.h']]],
   ['true_41',['true',['../d8/db0/defines_8h.html#a41f9c5fb8b08eb5dc3edce4dcb37fee7',1,'defines.h']]],
-  ['type_42',['type',['../dc/d5f/structmaterial__config.html#a574ec7a70b7cc37b589bc92d1cacab78',1,'material_config::type'],['../da/d20/structmaterial.html#a94a57f53ac5e7b7407f4d2c85c14a644',1,'material::type'],['../d0/db3/structresource__loader.html#a3df752869b0d3aacfc8854c18d0ea8ae',1,'resource_loader::type']]],
+  ['type_42',['type',['../d0/db3/structresource__loader.html#a3df752869b0d3aacfc8854c18d0ea8ae',1,'resource_loader::type'],['../d9/d94/structshader__uniform__config.html#ad53f71e139385713b6146d562e6c6872',1,'shader_uniform_config::type'],['../de/da7/structshader__uniform.html#ad52e5a65e7bf1bd3b150f003fe921294',1,'shader_uniform::type'],['../dd/d9f/structshader__attribute__config.html#a466d238fe3ce66f0cfb20335330f8521',1,'shader_attribute_config::type'],['../dc/d7c/structshader__attribute.html#a3fb288cc14b59f88e980d06d6e5b4615',1,'shader_attribute::type']]],
   ['type_5fpath_43',['type_path',['../d0/db3/structresource__loader.html#ace11aa1fadbc7cd48d55b6acfca29bd3',1,'resource_loader']]]
 ];

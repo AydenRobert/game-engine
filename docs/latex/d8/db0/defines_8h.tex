@@ -8,6 +8,11 @@ This graph shows which files directly or indirectly include this file\+:
 \includegraphics[width=350pt]{df/d65/defines_8h__dep__incl}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structkrange}{krange}}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,6 +24,10 @@ This graph shows which files directly or indirectly include this file\+:
 \item 
 \#define \mbox{\hyperlink{defines_8h_a483b0a38edf0c10ef4a7cb633dc8a9fc}{INVALID\+\_\+\+ID}}~4294967295U
 \begin{DoxyCompactList}\small\item\em any ID set to this should be considered invalid, therefore, not pointing to anything. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{defines_8h_af184a0442a40bbe1787bb234d3a8bfae}{INVALID\+\_\+\+ID\+\_\+\+U16}}~65535U
+\item 
+\#define \mbox{\hyperlink{defines_8h_a41fdc8d1e5968c92eb3b51a1ee1fc731}{INVALID\+\_\+\+ID\+\_\+\+U8}}~255U
+\item 
 \#define \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}}
 \item 
 \#define \mbox{\hyperlink{defines_8h_ac007fb317c156d98a91628a86b3c9c0e}{KCLAMP}}(value,  min,  max)
@@ -65,6 +74,8 @@ typedef double \mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f6
 typedef int \mbox{\hyperlink{defines_8h_ac6baccc379c73d4e641ef847dbb08fa2}{b32}}
 \item 
 typedef \+\_\+\+Bool \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}
+\item 
+typedef struct krange \mbox{\hyperlink{defines_8h_a0d37ef0b1a77903e7698337d2594035e}{krange}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -88,6 +99,10 @@ typedef \+\_\+\+Bool \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c32
 \mbox{\hyperlink{defines_8h_a9864ac51060117e5bfbb49a4a211c41b}{STATIC\+\_\+\+ASSERT}} (sizeof(\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}})==4, "{}Expected \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} to be 4 bytes."{})
 \item 
 \mbox{\hyperlink{defines_8h_a1e6b73ddb58819ce321fc06954dd592f}{STATIC\+\_\+\+ASSERT}} (sizeof(\mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}})==8, "{}Expected \mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}} to be 8 bytes."{})
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{defines_8h_abf0b958d00fe41b2f3b02d9ed263f780}{get\+\_\+aligned}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} operand, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} granularity)
+\item 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{structkrange}{krange}} \mbox{\hyperlink{defines_8h_a2f99ca6366e01a8ead4227cecbb8b67f}{get\+\_\+aligned\+\_\+range}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} offset, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} size, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} granularity)
 \end{DoxyCompactItemize}
 
 
@@ -131,6 +146,18 @@ typedef \+\_\+\+Bool \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c32
 
 
 any ID set to this should be considered invalid, therefore, not pointing to anything. 
+
+\Hypertarget{defines_8h_af184a0442a40bbe1787bb234d3a8bfae}\index{defines.h@{defines.h}!INVALID\_ID\_U16@{INVALID\_ID\_U16}}
+\index{INVALID\_ID\_U16@{INVALID\_ID\_U16}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_ID\_U16}{INVALID\_ID\_U16}}
+{\footnotesize\ttfamily \label{defines_8h_af184a0442a40bbe1787bb234d3a8bfae} 
+\#define INVALID\+\_\+\+ID\+\_\+\+U16~65535U}
+
+\Hypertarget{defines_8h_a41fdc8d1e5968c92eb3b51a1ee1fc731}\index{defines.h@{defines.h}!INVALID\_ID\_U8@{INVALID\_ID\_U8}}
+\index{INVALID\_ID\_U8@{INVALID\_ID\_U8}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_ID\_U8}{INVALID\_ID\_U8}}
+{\footnotesize\ttfamily \label{defines_8h_a41fdc8d1e5968c92eb3b51a1ee1fc731} 
+\#define INVALID\+\_\+\+ID\+\_\+\+U8~255U}
 
 \Hypertarget{defines_8h_a0dc00ea56793277f556f072353318f35}\index{defines.h@{defines.h}!KAPI@{KAPI}}
 \index{KAPI@{KAPI}!defines.h@{defines.h}}
@@ -270,6 +297,12 @@ typedef signed long long \mbox{\hyperlink{defines_8h_ada59a0de67c44384c6faa924ca
 {\footnotesize\ttfamily \label{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729} 
 typedef signed char \mbox{\hyperlink{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729}{i8}}}
 
+\Hypertarget{defines_8h_a0d37ef0b1a77903e7698337d2594035e}\index{defines.h@{defines.h}!krange@{krange}}
+\index{krange@{krange}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{krange}{krange}}
+{\footnotesize\ttfamily \label{defines_8h_a0d37ef0b1a77903e7698337d2594035e} 
+typedef struct krange krange}
+
 \Hypertarget{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}\index{defines.h@{defines.h}!u16@{u16}}
 \index{u16@{u16}!defines.h@{defines.h}}
 \doxysubsubsection{\texorpdfstring{u16}{u16}}
@@ -299,6 +332,42 @@ typedef unsigned char \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d1
 \label{doc-func-members}
 \Hypertarget{defines_8h_doc-func-members}
 \doxysubsection{Function Documentation}
+\Hypertarget{defines_8h_abf0b958d00fe41b2f3b02d9ed263f780}\index{defines.h@{defines.h}!get\_aligned@{get\_aligned}}
+\index{get\_aligned@{get\_aligned}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{get\_aligned()}{get\_aligned()}}
+{\footnotesize\ttfamily \label{defines_8h_abf0b958d00fe41b2f3b02d9ed263f780} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} get\+\_\+aligned (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{operand}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{granularity}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/db0/defines_8h_abf0b958d00fe41b2f3b02d9ed263f780_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{defines_8h_a2f99ca6366e01a8ead4227cecbb8b67f}\index{defines.h@{defines.h}!get\_aligned\_range@{get\_aligned\_range}}
+\index{get\_aligned\_range@{get\_aligned\_range}!defines.h@{defines.h}}
+\doxysubsubsection{\texorpdfstring{get\_aligned\_range()}{get\_aligned\_range()}}
+{\footnotesize\ttfamily \label{defines_8h_a2f99ca6366e01a8ead4227cecbb8b67f} 
+\mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}} \mbox{\hyperlink{structkrange}{krange}} get\+\_\+aligned\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{offset}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{size}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{granularity}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{d8/db0/defines_8h_a2f99ca6366e01a8ead4227cecbb8b67f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/db0/defines_8h_a2f99ca6366e01a8ead4227cecbb8b67f_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{defines_8h_a9864ac51060117e5bfbb49a4a211c41b}\index{defines.h@{defines.h}!STATIC\_ASSERT@{STATIC\_ASSERT}}
 \index{STATIC\_ASSERT@{STATIC\_ASSERT}!defines.h@{defines.h}}
 \doxysubsubsection{\texorpdfstring{STATIC\_ASSERT()}{STATIC\_ASSERT()}\hspace{0.1cm}{\footnotesize\ttfamily [1/10]}}

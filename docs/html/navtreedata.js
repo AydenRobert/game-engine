@@ -54,7 +54,7 @@ var NAVTREE =
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", null ],
+        [ "Enumerator", "globals_eval.html", "globals_eval" ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -64,14 +64,15 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d1/dcb/game_8c.html#afc59a90b0ff1463ae2ab8f62aaeba221",
-"d5/ddd/structvulkan__ui__shader.html#a9cb9bb65e120f69f3a3909d8fcbc19a4",
-"d6/dd8/group__iface__xdg__toplevel.html#gga9c5f29d74e9f5e730fe59ecdc397b116aecd33d2460b15a03ccb7cf099d7c4d4c",
-"d9/d0a/texture__system_8c.html",
-"db/d13/xdg-shell-client-protocol_8h.html#a5ac26be247039c7cdf4a5a26f613cfe6",
-"dc/dd0/kmath_8h.html#a05eb2a8005d1aebb1e3826d6e8288da5",
-"de/d3c/freelist_8h.html#af42df2c74093d0e5e017051079dc9c34",
-"df/d02/structrenderer__backend.html#ad9da44a8bb1fdc43db40189db8bb76ba"
+"d1/da5/vulkan__backend_8c.html#aada43db2d3a25f12c6511695c5d74d0a",
+"d4/dd8/structvulkan__shader__descriptor__set__state.html#a3183538c006afc1ca0743f4d6285a46d",
+"d6/dd8/group__iface__xdg__toplevel.html#ga83b5fc57691e10923007baaaa266575a",
+"d8/db0/defines_8h.html#ab45c9b185ca38d7f25aa3387e881f2d4",
+"da/dd6/material__system_8c.html#a71642cf5861f603f7e1bf6c4d373b906",
+"dc/d7e/structapplication__state.html#a5c49a4da818b7bae26b50df80c889279",
+"dd/d0f/shader__system_8h.html#ad8fb673c9f87735e69b6d59d1bb83252a3e6a6e14d78357dfc26d7571bc2ae1f7",
+"de/dc9/structvulkan__swapchain.html#af3fe0932b272203467d455b9b28e388f",
+"df/d61/structshader__config.html#a1e09ab18e0be9964462e27747988c492"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

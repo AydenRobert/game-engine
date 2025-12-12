@@ -1,0 +1,93 @@
+\doxysection{engine/src/resources/loaders/shader\+\_\+loader.c File Reference}
+\hypertarget{shader__loader_8c}{}\label{shader__loader_8c}\index{engine/src/resources/loaders/shader\_loader.c@{engine/src/resources/loaders/shader\_loader.c}}
+{\ttfamily \#include "{}containers/darray.\+h"{}}\newline
+{\ttfamily \#include "{}resources/loaders/material\+\_\+loader.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}core/kstring.\+h"{}}\newline
+{\ttfamily \#include "{}core/logger.\+h"{}}\newline
+{\ttfamily \#include "{}math/kmath.\+h"{}}\newline
+{\ttfamily \#include "{}resources/loaders/loader\+\_\+utils.\+h"{}}\newline
+{\ttfamily \#include "{}resources/resource\+\_\+types.\+h"{}}\newline
+{\ttfamily \#include "{}systems/resource\+\_\+system.\+h"{}}\newline
+{\ttfamily \#include "{}platform/filesystem.\+h"{}}\newline
+{\ttfamily \#include "{}systems/shader\+\_\+system.\+h"{}}\newline
+Include dependency graph for shader\+\_\+loader.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d1a/shader__loader_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__loader_8c_a46961018a258805e56a60a76d44359d5}{shader\+\_\+loader\+\_\+load}} (struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}self, const char \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}out\+\_\+resource)
+\item 
+void \mbox{\hyperlink{shader__loader_8c_ae18a5eb161272fdf46cac03a0d866c20}{shader\+\_\+loader\+\_\+unload}} (struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}self, \mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structresource}{resource}})
+\item 
+\mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \mbox{\hyperlink{shader__loader_8c_a48866f3db7f70b3574e5778466d3c133}{shader\+\_\+resource\+\_\+loader\+\_\+create}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{shader__loader_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{shader__loader_8c_a46961018a258805e56a60a76d44359d5}\index{shader\_loader.c@{shader\_loader.c}!shader\_loader\_load@{shader\_loader\_load}}
+\index{shader\_loader\_load@{shader\_loader\_load}!shader\_loader.c@{shader\_loader.c}}
+\doxysubsubsection{\texorpdfstring{shader\_loader\_load()}{shader\_loader\_load()}}
+{\footnotesize\ttfamily \label{shader__loader_8c_a46961018a258805e56a60a76d44359d5} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+loader\+\_\+load (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+resource}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d9d/shader__loader_8c_a46961018a258805e56a60a76d44359d5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d9d/shader__loader_8c_a46961018a258805e56a60a76d44359d5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__loader_8c_ae18a5eb161272fdf46cac03a0d866c20}\index{shader\_loader.c@{shader\_loader.c}!shader\_loader\_unload@{shader\_loader\_unload}}
+\index{shader\_loader\_unload@{shader\_loader\_unload}!shader\_loader.c@{shader\_loader.c}}
+\doxysubsubsection{\texorpdfstring{shader\_loader\_unload()}{shader\_loader\_unload()}}
+{\footnotesize\ttfamily \label{shader__loader_8c_ae18a5eb161272fdf46cac03a0d866c20} 
+void shader\+\_\+loader\+\_\+unload (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{\mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}}]{resource}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d9d/shader__loader_8c_ae18a5eb161272fdf46cac03a0d866c20_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d9d/shader__loader_8c_ae18a5eb161272fdf46cac03a0d866c20_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{shader__loader_8c_a48866f3db7f70b3574e5778466d3c133}\index{shader\_loader.c@{shader\_loader.c}!shader\_resource\_loader\_create@{shader\_resource\_loader\_create}}
+\index{shader\_resource\_loader\_create@{shader\_resource\_loader\_create}!shader\_loader.c@{shader\_loader.c}}
+\doxysubsubsection{\texorpdfstring{shader\_resource\_loader\_create()}{shader\_resource\_loader\_create()}}
+{\footnotesize\ttfamily \label{shader__loader_8c_a48866f3db7f70b3574e5778466d3c133} 
+\mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} shader\+\_\+resource\+\_\+loader\+\_\+create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d9d/shader__loader_8c_a48866f3db7f70b3574e5778466d3c133_cgraph}
+\end{center}
+\end{figure}

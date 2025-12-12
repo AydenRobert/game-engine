@@ -272,8 +272,8 @@ b8 string_to_b8(char *str, b8 *out_bool) {
     return true;
 }
 
-KAPI u32 string_split(const char *str, char delimiter, char ***str_darray,
-                      b8 trim_entries, b8 include_empty) {
+u32 string_split(const char *str, char delimiter, char ***str_darray,
+                 b8 trim_entries, b8 include_empty) {
     if (!str || !str_darray) {
         return 0;
     }
@@ -282,22 +282,25 @@ KAPI u32 string_split(const char *str, char delimiter, char ***str_darray,
     u32 trimmed_length = 0;
     u32 entry_count = 0;
     u32 length = string_length(str);
-    // TODO: replace with memory sparse management stuff
-    char buffer[16384]; // you don't need a bigger entry
+
+    char buffer[16384];
     u32 current_length = 0;
+
     // Iterate each char
     for (u32 i = 0; i < length; i++) {
         char c = str[i];
 
-        // found delimiter
+        // Found delimiter
         if (c == delimiter) {
             buffer[current_length] = 0;
             result = buffer;
             trimmed_length = current_length;
+
             if (trim_entries && current_length > 0) {
                 result = string_trim(result);
                 trimmed_length = string_length(result);
             }
+
             // Add new entry
             if (trimmed_length > 0 || include_empty) {
                 char *entry = kallocate(sizeof(char) * (trimmed_length + 1),
@@ -308,9 +311,9 @@ KAPI u32 string_split(const char *str, char delimiter, char ***str_darray,
                     string_ncopy(entry, result, trimmed_length);
                     entry[trimmed_length] = 0;
                 }
-                char **a = *str_darray;
-                darray_pop(a, entry);
-                *str_darray = a;
+
+                darray_push(*str_darray, entry);
+
                 entry_count++;
             }
 
@@ -320,18 +323,25 @@ KAPI u32 string_split(const char *str, char delimiter, char ***str_darray,
             continue;
         }
 
-        buffer[current_length] = c;
-        current_length++;
+        // Safety check to prevent buffer overflow
+        if (current_length < 16383) {
+            buffer[current_length] = c;
+            current_length++;
+        }
     }
 
     // At the end of the string. If any chars are queued up, read them.
     result = buffer;
+    // Ensure null termination for the final block
+    buffer[current_length] = 0;
     trimmed_length = current_length;
+
     // Trim if applicable
     if (trim_entries && current_length > 0) {
         result = string_trim(result);
         trimmed_length = string_length(result);
     }
+
     // Add new entry
     if (trimmed_length > 0 || include_empty) {
         char *entry =
@@ -342,16 +352,16 @@ KAPI u32 string_split(const char *str, char delimiter, char ***str_darray,
             string_ncopy(entry, result, trimmed_length);
             entry[trimmed_length] = 0;
         }
-        char **a = *str_darray;
-        darray_push(a, entry);
-        *str_darray = a;
+
+        // Push final entry
+        darray_push(*str_darray, entry);
         entry_count++;
     }
 
     return entry_count;
 }
 
-KAPI void string_cleanup_split_array(char **str_darray) {
+void string_cleanup_split_array(char **str_darray) {
     if (str_darray) {
         u32 count = darray_length(str_darray);
         // Free each string.

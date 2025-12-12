@@ -15,6 +15,6 @@ var searchData=
   ['transfer_5ffamily_5findex_12',['transfer_family_index',['../d5/da3/structvulkan__physical__device__queue__family__info.html#a28f1191238998f94992757a1168c40b9',1,'vulkan_physical_device_queue_family_info']]],
   ['transfer_5fqueue_13',['transfer_queue',['../d7/d6e/structvulkan__device.html#add6bf0d6ef991a180017b07bacc8f0c7',1,'vulkan_device']]],
   ['transfer_5fqueue_5findex_14',['transfer_queue_index',['../d7/d6e/structvulkan__device.html#af4c29ffbded80b609ce8d11cd9d954f2',1,'vulkan_device']]],
-  ['type_15',['type',['../dc/d5f/structmaterial__config.html#a574ec7a70b7cc37b589bc92d1cacab78',1,'material_config::type'],['../da/d20/structmaterial.html#a94a57f53ac5e7b7407f4d2c85c14a644',1,'material::type'],['../d0/db3/structresource__loader.html#a3df752869b0d3aacfc8854c18d0ea8ae',1,'resource_loader::type']]],
+  ['type_15',['type',['../d0/db3/structresource__loader.html#a3df752869b0d3aacfc8854c18d0ea8ae',1,'resource_loader::type'],['../d9/d94/structshader__uniform__config.html#ad53f71e139385713b6146d562e6c6872',1,'shader_uniform_config::type'],['../de/da7/structshader__uniform.html#ad52e5a65e7bf1bd3b150f003fe921294',1,'shader_uniform::type'],['../dd/d9f/structshader__attribute__config.html#a466d238fe3ce66f0cfb20335330f8521',1,'shader_attribute_config::type'],['../dc/d7c/structshader__attribute.html#a3fb288cc14b59f88e980d06d6e5b4615',1,'shader_attribute::type']]],
   ['type_5fpath_16',['type_path',['../d0/db3/structresource__loader.html#ace11aa1fadbc7cd48d55b6acfca29bd3',1,'resource_loader']]]
 ];

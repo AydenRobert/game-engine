@@ -1,0 +1,18 @@
+<map id="shader_system_state" name="shader_system_state">
+<area shape="rect" id="Node000001" title=" " alt="" coords="139,207,299,234"/>
+<area shape="rect" id="Node000002" href="$d9/df1/structshader__system__config.html" title="Configuration for the shader system." alt="" coords="5,106,172,134"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,142,155,181,195,206,189,206,152,185,110,147"/>
+<area shape="rect" id="Node000003" href="$d0/d99/structhashtable.html" title="Represents a simple hashtable. Members of this structure should not be modified outside the functions..." alt="" coords="199,5,284,33"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="241,48,223,207,218,205,236,50"/>
+<area shape="rect" id="Node000004" href="$d2/d93/structshader.html" title=" " alt="" coords="440,106,505,134"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="253,45,266,65,281,80,309,91,351,101,442,115,437,116,351,106,308,97,278,84,262,68,252,50"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="428,140,254,209,252,204,423,139"/>
+<area shape="rect" id="Node000005" href="$dd/db6/structtexture.html" title=" " alt="" coords="369,5,437,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="396,46,397,65,402,81,419,97,442,111,437,110,416,102,397,83,392,66,393,50"/>
+<area shape="rect" id="Node000006" href="$de/da7/structshader__uniform.html" title=" " alt="" coords="471,5,594,33"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="530,47,516,83,493,108,490,103,512,81,525,50"/>
+<area shape="rect" id="Node000007" href="$dc/d7c/structshader__attribute.html" title=" " alt="" coords="618,5,746,33"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="658,42,629,66,598,84,551,103,506,115,505,109,549,98,595,80,626,61,653,44"/>
+<area shape="rect" id="Node000008" href="$d7/d4c/structkrange.html" title=" " alt="" coords="770,5,836,33"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="780,42,749,66,714,84,658,102,601,112,506,121,505,115,600,107,657,96,711,80,746,62,775,44"/>
+</map>

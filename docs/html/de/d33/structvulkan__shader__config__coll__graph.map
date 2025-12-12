@@ -1,0 +1,7 @@
+<map id="vulkan_shader_config" name="vulkan_shader_config">
+<area shape="rect" id="Node000001" title=" " alt="" coords="96,123,257,151"/>
+<area shape="rect" id="Node000002" href="$d4/dad/structvulkan__shader__stage__config.html" title=" " alt="" coords="5,5,164,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,60,168,122,163,123,112,64"/>
+<area shape="rect" id="Node000003" href="$df/d2f/structvulkan__descriptor__set__config.html" title=" " alt="" coords="188,5,352,50"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,61,189,125,186,121,238,63"/>
+</map>

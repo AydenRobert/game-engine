@@ -48,6 +48,9 @@ typedef struct application_state {
     u64 resource_system_memory_requirement;
     void *resource_system_state;
 
+    u64 shader_system_memory_requirement;
+    void *shader_system_state;
+
     u64 renderer_system_memory_requirement;
     void *renderer_system_state;
 
@@ -204,6 +207,24 @@ KAPI b8 application_create(game *game_inst) {
             &app_state->resource_system_memory_requirement,
             app_state->resource_system_state, resource_system_config)) {
         KFATAL("Failed to initialize resource system, shutting down.");
+        return false;
+    }
+
+    // Initialize shader system
+    shader_system_config shader_system_config;
+    shader_system_config.max_shader_count = 1024;
+    shader_system_config.max_uniform_count = 128;
+    shader_system_config.max_global_textures = 31;
+    shader_system_config.max_instance_textures = 31;
+    shader_system_initialize(&app_state->shader_system_memory_requirement, 0,
+                             shader_system_config);
+    app_state->shader_system_state = linear_allocator_allocate(
+        &app_state->systems_allocator,
+        app_state->shader_system_memory_requirement, 64);
+    if (!shader_system_initialize(&app_state->shader_system_memory_requirement,
+                                  app_state->shader_system_state,
+                                  shader_system_config)) {
+        KFATAL("Failed to initialize shader system, shutting down.");
         return false;
     }
 

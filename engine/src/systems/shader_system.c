@@ -11,7 +11,6 @@
 
 #include "systems/texture_system.h"
 
-
 typedef struct shader_system_state {
     shader_system_config config;
     hashtable lookup;
@@ -140,7 +139,6 @@ b8 shader_system_create(const shader_config *config) {
     // To avoid complexity, go with 128 bytes that is garuenteed by vulkan
     // TODO: allow for bigger push constants by overflowing onto dynamic ubo
     out_shader->push_constant_size = 128;
-    out_shader->push_constant_size = 0;
 
     u8 renderpass_id = INVALID_ID_U8;
     if (!renderer_renderpass_id(config->renderpass_name, &renderpass_id)) {
@@ -185,7 +183,7 @@ b8 shader_system_create(const shader_config *config) {
         // :(
         KERROR("shader_system_create - hashtable full, cannot add '%s'.",
                config->name);
-        renderer_destroy_shader(out_shader);
+        renderer_shader_destroy(out_shader);
         return false;
     }
 
@@ -256,7 +254,7 @@ u16 shader_system_uniform_index(shader *s, const char *uniform_name) {
     }
 
     u16 index = INVALID_ID_U16;
-    if (!hashtable_get(&state_ptr->lookup, s->name, &index) ||
+    if (!hashtable_get(&s->uniform_lookup, uniform_name, &index) ||
         index == INVALID_ID_U16) {
         KERROR("shader_system_uniform_index - no uniform with name '%s' in "
                "shader '%s'.",
@@ -510,13 +508,13 @@ b8 uniform_add(shader *shader, const char *uniform_name, u32 size,
 }
 
 b8 uniform_name_valid(shader *shader, const char *uniform_name) {
-    if (!uniform_name || string_length(uniform_name)) {
+    if (!uniform_name || !string_length(uniform_name)) {
         KERROR("uniform_name_valid - invalid uniform_name passed.");
         return false;
     }
 
     u16 location;
-    if (hashtable_get(&shader->uniform_lookup, uniform_name, &location) &&
+    if (!hashtable_get(&shader->uniform_lookup, uniform_name, &location) &&
         location != INVALID_ID_U16) {
         KERROR("uniform_name_valid - a uniform with the name '%s' already "
                "exists on shader '%s'.",

@@ -112,6 +112,9 @@ b8 material_system_initialize(u64 *memory_requirement, void *state,
         state_ptr->registered_materials[i].internal_id = INVALID_ID;
     }
 
+    state_ptr->material_shader_id = INVALID_ID;
+    state_ptr->ui_shader_id = INVALID_ID;
+
     // Create default material
     if (!create_default_material()) {
         KFATAL(
@@ -219,7 +222,7 @@ material *material_system_acquire_from_config(material_config config) {
         }
 
         // Get uniform indecies
-        shader *s = shader_system_get_id(material->shader_id);
+        shader *s = shader_system_get_by_id(material->shader_id);
         // Save the locations
         if (state_ptr->material_shader_id == INVALID_ID &&
             strings_equal(config.shader_name, BUILTIN_SHADER_NAME_MATERIAL)) {
@@ -358,6 +361,8 @@ b8 material_system_apply_global(u32 shader_id, const mat4 *projection,
 }
 
 b8 material_system_apply_instance(material *m) {
+    // Apply instance-level uniforms.
+    MATERIAL_APPLY_OR_FAIL(shader_system_bind_instance(m->internal_id));
     if (m->shader_id == state_ptr->material_shader_id) {
         MATERIAL_APPLY_OR_FAIL(shader_system_uniform_set_by_index(
             state_ptr->material_locations.diffuse_colour, &m->diffuse_colour));

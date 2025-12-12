@@ -1,0 +1,11 @@
+<map id="material_system_apply_local" name="material_system_apply_local">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,57,180,102"/>
+<area shape="rect" id="Node000002" href="$d0/d98/shader__system_8c.html#aca796309a587abb50396b405a215f1da" title=" " alt="" coords="228,57,406,102"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,77,215,78,210,80,181,82"/>
+<area shape="rect" id="Node000003" href="$d0/dcc/renderer__frontend_8c.html#a736bc5f83b75efe3cb721da92f045f29" title=" " alt="" coords="454,5,616,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="400,54,470,37,465,38,401,59"/>
+<area shape="rect" id="Node000004" href="$d0/dcc/renderer__frontend_8c.html#a71af76d3e806ab847d057b0833b5b4e6" title=" " alt="" coords="454,57,616,102"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="406,77,441,79,436,79,407,82"/>
+<area shape="rect" id="Node000005" href="$d0/dcc/renderer__frontend_8c.html#a482c18ff47c4e2a0007cf8c209984708" title=" " alt="" coords="454,126,616,171"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="390,99,450,121,445,121,389,105"/>
+</map>

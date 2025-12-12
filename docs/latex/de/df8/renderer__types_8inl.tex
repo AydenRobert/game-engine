@@ -3,12 +3,13 @@
 {\ttfamily \#include "{}defines.\+h"{}}\newline
 {\ttfamily \#include "{}math/math\+\_\+types.\+h"{}}\newline
 {\ttfamily \#include "{}resources/resource\+\_\+types.\+h"{}}\newline
+{\ttfamily \#include "{}systems/shader\+\_\+system.\+h"{}}\newline
 Include dependency graph for renderer\+\_\+types.\+inl\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=282pt]{d2/d69/renderer__types_8inl__incl}
+\includegraphics[width=350pt]{d2/d69/renderer__types_8inl__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -27,6 +28,19 @@ struct \mbox{\hyperlink{structgeometry__render__data}{geometry\+\_\+render\+\_\+
 struct \mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}}
 \item 
 struct \mbox{\hyperlink{structrender__packet}{render\+\_\+packet}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{renderer__types_8inl_afb2d381b62dbab53af2171d171a71ccc}{BUILTIN\+\_\+\+SHADER\+\_\+\+NAME\+\_\+\+MATERIAL}}~"{}Shader.\+Builtin.\+Material"{}
+\item 
+\#define \mbox{\hyperlink{renderer__types_8inl_a5a6d6d002896a61a09c7381cedbad972}{BUILTIN\+\_\+\+SHADER\+\_\+\+NAME\+\_\+\+UI}}~"{}Shader.\+Builtin.\+UI"{}
+\item 
+\#define \mbox{\hyperlink{renderer__types_8inl_ad407e2624836be15a2505ac35520a070}{MAX\+\_\+\+SHADER\+\_\+\+STAGE\+\_\+\+COUNT}}~5
+\item 
+\#define \mbox{\hyperlink{renderer__types_8inl_a96b0655686555a16404a0ace00505f15}{MAX\+\_\+\+SHADER\+\_\+\+ATTRIBUTE\+\_\+\+COUNT}}~16
+\item 
+\#define \mbox{\hyperlink{renderer__types_8inl_a0a72ef91b4a933ddd0caf1b20aa66b57}{MAX\+\_\+\+SHADER\+\_\+\+UNIFORM\+\_\+\+COUNT}}~16
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -53,6 +67,41 @@ enum \mbox{\hyperlink{renderer__types_8inl_a041ad0c80961f41c674b44c0584ed2cb}{bu
 , \mbox{\hyperlink{renderer__types_8inl_a041ad0c80961f41c674b44c0584ed2cbab0d604d59ad38bbd1f49201458f23340}{BUILTIN\+\_\+\+RENDERPASS\+\_\+\+UI}} = 0x02
  \}
 \end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{renderer__types_8inl_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{renderer__types_8inl_afb2d381b62dbab53af2171d171a71ccc}\index{renderer\_types.inl@{renderer\_types.inl}!BUILTIN\_SHADER\_NAME\_MATERIAL@{BUILTIN\_SHADER\_NAME\_MATERIAL}}
+\index{BUILTIN\_SHADER\_NAME\_MATERIAL@{BUILTIN\_SHADER\_NAME\_MATERIAL}!renderer\_types.inl@{renderer\_types.inl}}
+\doxysubsubsection{\texorpdfstring{BUILTIN\_SHADER\_NAME\_MATERIAL}{BUILTIN\_SHADER\_NAME\_MATERIAL}}
+{\footnotesize\ttfamily \label{renderer__types_8inl_afb2d381b62dbab53af2171d171a71ccc} 
+\#define BUILTIN\+\_\+\+SHADER\+\_\+\+NAME\+\_\+\+MATERIAL~"{}Shader.\+Builtin.\+Material"{}}
+
+\Hypertarget{renderer__types_8inl_a5a6d6d002896a61a09c7381cedbad972}\index{renderer\_types.inl@{renderer\_types.inl}!BUILTIN\_SHADER\_NAME\_UI@{BUILTIN\_SHADER\_NAME\_UI}}
+\index{BUILTIN\_SHADER\_NAME\_UI@{BUILTIN\_SHADER\_NAME\_UI}!renderer\_types.inl@{renderer\_types.inl}}
+\doxysubsubsection{\texorpdfstring{BUILTIN\_SHADER\_NAME\_UI}{BUILTIN\_SHADER\_NAME\_UI}}
+{\footnotesize\ttfamily \label{renderer__types_8inl_a5a6d6d002896a61a09c7381cedbad972} 
+\#define BUILTIN\+\_\+\+SHADER\+\_\+\+NAME\+\_\+\+UI~"{}Shader.\+Builtin.\+UI"{}}
+
+\Hypertarget{renderer__types_8inl_a96b0655686555a16404a0ace00505f15}\index{renderer\_types.inl@{renderer\_types.inl}!MAX\_SHADER\_ATTRIBUTE\_COUNT@{MAX\_SHADER\_ATTRIBUTE\_COUNT}}
+\index{MAX\_SHADER\_ATTRIBUTE\_COUNT@{MAX\_SHADER\_ATTRIBUTE\_COUNT}!renderer\_types.inl@{renderer\_types.inl}}
+\doxysubsubsection{\texorpdfstring{MAX\_SHADER\_ATTRIBUTE\_COUNT}{MAX\_SHADER\_ATTRIBUTE\_COUNT}}
+{\footnotesize\ttfamily \label{renderer__types_8inl_a96b0655686555a16404a0ace00505f15} 
+\#define MAX\+\_\+\+SHADER\+\_\+\+ATTRIBUTE\+\_\+\+COUNT~16}
+
+\Hypertarget{renderer__types_8inl_ad407e2624836be15a2505ac35520a070}\index{renderer\_types.inl@{renderer\_types.inl}!MAX\_SHADER\_STAGE\_COUNT@{MAX\_SHADER\_STAGE\_COUNT}}
+\index{MAX\_SHADER\_STAGE\_COUNT@{MAX\_SHADER\_STAGE\_COUNT}!renderer\_types.inl@{renderer\_types.inl}}
+\doxysubsubsection{\texorpdfstring{MAX\_SHADER\_STAGE\_COUNT}{MAX\_SHADER\_STAGE\_COUNT}}
+{\footnotesize\ttfamily \label{renderer__types_8inl_ad407e2624836be15a2505ac35520a070} 
+\#define MAX\+\_\+\+SHADER\+\_\+\+STAGE\+\_\+\+COUNT~5}
+
+\Hypertarget{renderer__types_8inl_a0a72ef91b4a933ddd0caf1b20aa66b57}\index{renderer\_types.inl@{renderer\_types.inl}!MAX\_SHADER\_UNIFORM\_COUNT@{MAX\_SHADER\_UNIFORM\_COUNT}}
+\index{MAX\_SHADER\_UNIFORM\_COUNT@{MAX\_SHADER\_UNIFORM\_COUNT}!renderer\_types.inl@{renderer\_types.inl}}
+\doxysubsubsection{\texorpdfstring{MAX\_SHADER\_UNIFORM\_COUNT}{MAX\_SHADER\_UNIFORM\_COUNT}}
+{\footnotesize\ttfamily \label{renderer__types_8inl_a0a72ef91b4a933ddd0caf1b20aa66b57} 
+\#define MAX\+\_\+\+SHADER\+\_\+\+UNIFORM\+\_\+\+COUNT~16}
+
 
 
 \label{doc-typedef-members}

@@ -7,11 +7,13 @@ Collaboration diagram for renderer\+\_\+system\+\_\+state\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=257pt]{dc/dd5/structrenderer__system__state__coll__graph}
+\includegraphics[width=294pt]{dc/dd5/structrenderer__system__state__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \mbox{\hyperlink{structrenderer__system__state_a52c3666e5bca364ff89ff93792576649}{backend}}
 \item 
 \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{structrenderer__system__state_ac3adbc6ca69f6dd465396ce8eab970f4}{projection}}
 \item 
@@ -25,9 +27,9 @@ Collaboration diagram for renderer\+\_\+system\+\_\+state\+:
 \item 
 \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} \mbox{\hyperlink{structrenderer__system__state_a61ee40d959ec115ad343a2a029e308d2}{far\+\_\+clip}}
 \item 
-\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{structrenderer__system__state_a225cc8abd990474729ceee599fcef42f}{initialized}}
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{structrenderer__system__state_a39c63144a2e364104465a1c88c7a6b32}{material\+\_\+shader\+\_\+id}}
 \item 
-\mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \mbox{\hyperlink{structrenderer__system__state_a52c3666e5bca364ff89ff93792576649}{backend}}
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{structrenderer__system__state_a46f3d07ca7f6fbdafbed9b2a2602a815}{ui\+\_\+shader\+\_\+id}}
 \end{DoxyCompactItemize}
 
 
@@ -46,11 +48,11 @@ Collaboration diagram for renderer\+\_\+system\+\_\+state\+:
 {\footnotesize\ttfamily \label{structrenderer__system__state_a61ee40d959ec115ad343a2a029e308d2} 
 \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} renderer\+\_\+system\+\_\+state\+::far\+\_\+clip}
 
-\Hypertarget{structrenderer__system__state_a225cc8abd990474729ceee599fcef42f}\index{renderer\_system\_state@{renderer\_system\_state}!initialized@{initialized}}
-\index{initialized@{initialized}!renderer\_system\_state@{renderer\_system\_state}}
-\doxysubsubsection{\texorpdfstring{initialized}{initialized}}
-{\footnotesize\ttfamily \label{structrenderer__system__state_a225cc8abd990474729ceee599fcef42f} 
-\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} renderer\+\_\+system\+\_\+state\+::initialized}
+\Hypertarget{structrenderer__system__state_a39c63144a2e364104465a1c88c7a6b32}\index{renderer\_system\_state@{renderer\_system\_state}!material\_shader\_id@{material\_shader\_id}}
+\index{material\_shader\_id@{material\_shader\_id}!renderer\_system\_state@{renderer\_system\_state}}
+\doxysubsubsection{\texorpdfstring{material\_shader\_id}{material\_shader\_id}}
+{\footnotesize\ttfamily \label{structrenderer__system__state_a39c63144a2e364104465a1c88c7a6b32} 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} renderer\+\_\+system\+\_\+state\+::material\+\_\+shader\+\_\+id}
 
 \Hypertarget{structrenderer__system__state_ada2e7206a4fa1f531ef5c9f2c2d63884}\index{renderer\_system\_state@{renderer\_system\_state}!near\_clip@{near\_clip}}
 \index{near\_clip@{near\_clip}!renderer\_system\_state@{renderer\_system\_state}}
@@ -69,6 +71,12 @@ Collaboration diagram for renderer\+\_\+system\+\_\+state\+:
 \doxysubsubsection{\texorpdfstring{ui\_projection}{ui\_projection}}
 {\footnotesize\ttfamily \label{structrenderer__system__state_a2adb1d1897f38c3c9a7ad18f0a4a5123} 
 \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} renderer\+\_\+system\+\_\+state\+::ui\+\_\+projection}
+
+\Hypertarget{structrenderer__system__state_a46f3d07ca7f6fbdafbed9b2a2602a815}\index{renderer\_system\_state@{renderer\_system\_state}!ui\_shader\_id@{ui\_shader\_id}}
+\index{ui\_shader\_id@{ui\_shader\_id}!renderer\_system\_state@{renderer\_system\_state}}
+\doxysubsubsection{\texorpdfstring{ui\_shader\_id}{ui\_shader\_id}}
+{\footnotesize\ttfamily \label{structrenderer__system__state_a46f3d07ca7f6fbdafbed9b2a2602a815} 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} renderer\+\_\+system\+\_\+state\+::ui\+\_\+shader\+\_\+id}
 
 \Hypertarget{structrenderer__system__state_ae185e105c6c37c8e5cb5b2d0670019f9}\index{renderer\_system\_state@{renderer\_system\_state}!ui\_view@{ui\_view}}
 \index{ui\_view@{ui\_view}!renderer\_system\_state@{renderer\_system\_state}}

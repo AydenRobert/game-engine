@@ -1,5 +1,6 @@
 var kstring_8h =
 [
+    [ "string_cleanup_split_array", "d7/d63/kstring_8h.html#a7d90b08d30c90708c4158166fe0f3a92", null ],
     [ "string_copy", "d7/d63/kstring_8h.html#a2e2721cb0d6afa4ac7bde71a51f5d7f0", null ],
     [ "string_duplicate", "d7/d63/kstring_8h.html#a6313f0a692f28c80f3016a5f77f31bec", null ],
     [ "string_empty", "d7/d63/kstring_8h.html#ab683baecc9c29380d81c9b0fafe27738", null ],
@@ -9,6 +10,7 @@ var kstring_8h =
     [ "string_length", "d7/d63/kstring_8h.html#ab7a013ae84adad0a807d921d9e38d424", null ],
     [ "string_mid", "d7/d63/kstring_8h.html#a3a6fea23341068d71be26ed6a01c7291", null ],
     [ "string_ncopy", "d7/d63/kstring_8h.html#abf110e83cbf21d0e9939b1a1960d26cc", null ],
+    [ "string_split", "d7/d63/kstring_8h.html#a62503334d43c725cc8392529858e618c", null ],
     [ "string_to_b8", "d7/d63/kstring_8h.html#a77921b5fcfceb091641bddc64e9cb552", null ],
     [ "string_to_f32", "d7/d63/kstring_8h.html#ab2a8d90ecf93ac366cab2c087e5490d8", null ],
     [ "string_to_f64", "d7/d63/kstring_8h.html#ae1132e637fab0793f6187364ecb24538", null ],

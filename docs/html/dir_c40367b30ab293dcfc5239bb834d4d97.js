@@ -6,6 +6,8 @@ var dir_c40367b30ab293dcfc5239bb834d4d97 =
     [ "material_system.h", "df/d7e/material__system_8h.html", "df/d7e/material__system_8h" ],
     [ "resource_system.c", "d2/d8b/resource__system_8c.html", "d2/d8b/resource__system_8c" ],
     [ "resource_system.h", "db/da6/resource__system_8h.html", "db/da6/resource__system_8h" ],
+    [ "shader_system.c", "d0/d98/shader__system_8c.html", "d0/d98/shader__system_8c" ],
+    [ "shader_system.h", "dd/d0f/shader__system_8h.html", "dd/d0f/shader__system_8h" ],
     [ "texture_system.c", "d9/d0a/texture__system_8c.html", "d9/d0a/texture__system_8c" ],
     [ "texture_system.h", "d6/d6b/texture__system_8h.html", "d6/d6b/texture__system_8h" ]
 ];

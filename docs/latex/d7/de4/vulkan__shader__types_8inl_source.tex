@@ -1,0 +1,67 @@
+\doxysection{vulkan\+\_\+shader\+\_\+types.\+inl}
+\hypertarget{vulkan__shader__types_8inl_source}{}\label{vulkan__shader__types_8inl_source}\index{engine/src/renderer/vulkan/vulkan\_shader\_types.inl@{engine/src/renderer/vulkan/vulkan\_shader\_types.inl}}
+\mbox{\hyperlink{vulkan__shader__types_8inl}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{vulkan__types_8inl}{renderer/vulkan/vulkan\_types.inl}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{shader__system_8h}{systems/shader\_system.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ VULKAN\_SHADER\_MAX\_STAGES\ 8}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ VULKAN\_SHADER\_MAX\_GLOBAL\_TEXTURES\ 31}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ VULKAN\_SHADER\_MAX\_INSTANCE\_TEXTURES\ 31}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ VULKAN\_SHADER\_MAX\_ATTRIBUTES\ 16}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ VULKAN\_SHADER\_MAX\_UNIFORMS\ 128}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ VULKAN\_SHADER\_MAX\_BINDINGS\ 32}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ VULKAN\_SHADER\_MAX\_PUSH\_CONST\_RANGES\ 32}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__shader__stage__config}{vulkan\_shader\_stage\_config}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ VkShaderStageFlagBits\ \mbox{\hyperlink{structvulkan__shader__stage__config_a3d9420aa7ab2731ce1116aa1c3ff5517}{stage}};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structvulkan__shader__stage__config_a9fd705461189095f934c4ccb60f26205}{file\_name}}[255];}
+\DoxyCodeLine{00018\ \}\ \mbox{\hyperlink{structvulkan__shader__stage__config}{vulkan\_shader\_stage\_config}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__descriptor__set__config}{vulkan\_descriptor\_set\_config}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ \mbox{\hyperlink{structvulkan__descriptor__set__config_a6845ce67433ecd052ee6ae4d16b81141}{binding\_count}};}
+\DoxyCodeLine{00022\ \ \ \ \ VkDescriptorSetLayoutBinding\ \mbox{\hyperlink{structvulkan__descriptor__set__config_ae66ca36356ccd4eab72a27e603e1e509}{bindings}}[\mbox{\hyperlink{vulkan__shader__types_8inl_a7bceefd4ccc8cbf9689b5734651cb697}{VULKAN\_SHADER\_MAX\_BINDINGS}}];}
+\DoxyCodeLine{00023\ \}\ \mbox{\hyperlink{structvulkan__descriptor__set__config}{vulkan\_descriptor\_set\_config}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__shader__config}{vulkan\_shader\_config}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ \mbox{\hyperlink{structvulkan__shader__config_a8c3c8c1b5c318f8031fb760b6e02fb23}{stage\_count}};}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{structvulkan__shader__stage__config}{vulkan\_shader\_stage\_config}}\ \mbox{\hyperlink{structvulkan__shader__config_ac803c50a0353558a43e37f1ef288feeb}{stages}}[\mbox{\hyperlink{vulkan__shader__types_8inl_a522979157515fe1519d76b948165c6c0}{VULKAN\_SHADER\_MAX\_STAGES}}];}
+\DoxyCodeLine{00028\ \ \ \ \ VkDescriptorPoolSize\ \mbox{\hyperlink{structvulkan__shader__config_a73c36be65c7ebc6b4aa5255f8b26d899}{pool\_sizes}}[2];}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}\ \mbox{\hyperlink{structvulkan__shader__config_aa997304cd01d20d8a3c9b4efb6c908ec}{max\_descriptor\_set\_count}};}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ \mbox{\hyperlink{structvulkan__shader__config_ae8ce8dd7ed4905cb8edc4684ccf61576}{descriptor\_set\_count}};}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{structvulkan__descriptor__set__config}{vulkan\_descriptor\_set\_config}}\ \mbox{\hyperlink{structvulkan__shader__config_ae2ac26b2a66dd6bdba51fc661ba4ef83}{descriptor\_sets}}[2];}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Darray}}
+\DoxyCodeLine{00033\ \ \ \ \ VkVertexInputAttributeDescription\ *\mbox{\hyperlink{structvulkan__shader__config_a8e00c1702947f1a2ca96579c01da18ae}{attributes}};}
+\DoxyCodeLine{00034\ \}\ \mbox{\hyperlink{structvulkan__shader__config}{vulkan\_shader\_config}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__shader__descriptor__set__state}{vulkan\_shader\_descriptor\_set\_state}}\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ VkDescriptorSet\ \mbox{\hyperlink{structvulkan__shader__descriptor__set__state_affa87e2c6cea032450571f4e84e52791}{descriptor\_sets}}[3];}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{structvulkan__descriptor__state}{vulkan\_descriptor\_state}}\ \mbox{\hyperlink{structvulkan__shader__descriptor__set__state_a3183538c006afc1ca0743f4d6285a46d}{descriptor\_states}}[\mbox{\hyperlink{vulkan__shader__types_8inl_a7bceefd4ccc8cbf9689b5734651cb697}{VULKAN\_SHADER\_MAX\_BINDINGS}}];}
+\DoxyCodeLine{00039\ \}\ \mbox{\hyperlink{structvulkan__shader__descriptor__set__state}{vulkan\_shader\_descriptor\_set\_state}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__shader__instance__state}{vulkan\_shader\_instance\_state}}\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__shader__instance__state_aa4195da2e6874c2c159d4aef832d234f}{id}};}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{structvulkan__shader__instance__state_abd40fcbdb0a94e602ecf6ca658cc9cb6}{offset}};}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{structvulkan__shader__descriptor__set__state}{vulkan\_shader\_descriptor\_set\_state}}\ \mbox{\hyperlink{structvulkan__shader__instance__state_aec8657076d274e4f49c6f819c32fc983}{descriptor\_set\_state}};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtexture}{texture}}\ **\mbox{\hyperlink{structvulkan__shader__instance__state_a48c14d1b75aa219c285d7c04d6110610}{instance\_textures}};}
+\DoxyCodeLine{00046\ \}\ \mbox{\hyperlink{structvulkan__shader__instance__state}{vulkan\_shader\_instance\_state}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvulkan__shader}{vulkan\_shader}}\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structvulkan__shader_a5c1f0abfd353b45c3f8cda09fade5bb5}{mapped\_uniform\_buffer\_block}};}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__shader_a4fc476a860127b1092fe123c1b0f28d6}{id}};}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{structvulkan__shader__config}{vulkan\_shader\_config}}\ \mbox{\hyperlink{structvulkan__shader_a78187e0d67f4b1f800c547780a88fb68}{config}};}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{structvulkan__renderpass}{vulkan\_renderpass}}\ *\mbox{\hyperlink{structvulkan__shader_a0277498adbbecef34ffb81352546c4ac}{renderpass}};}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{structvulkan__shader__stage}{vulkan\_shader\_stage}}\ \mbox{\hyperlink{structvulkan__shader_ab39a9875f094e17237b13162fa372c4c}{stages}}[\mbox{\hyperlink{vulkan__shader__types_8inl_a522979157515fe1519d76b948165c6c0}{VULKAN\_SHADER\_MAX\_STAGES}}];}
+\DoxyCodeLine{00054\ \ \ \ \ VkDescriptorPool\ \mbox{\hyperlink{structvulkan__shader_a65f329721332d1cec29c383d5e916769}{descriptor\_pool}};}
+\DoxyCodeLine{00055\ \ \ \ \ VkDescriptorSetLayout\ \mbox{\hyperlink{structvulkan__shader_af8f8eae00af1eed9649accc0bbf1188c}{descriptor\_set\_layouts}}[2];}
+\DoxyCodeLine{00056\ \ \ \ \ VkDescriptorSet\ \mbox{\hyperlink{structvulkan__shader_a25592d79e6ee0c2e06e0c4b923d4d499}{global\_descriptor\_sets}}[3];}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{structvulkan__buffer}{vulkan\_buffer}}\ \mbox{\hyperlink{structvulkan__shader_a34ab088ea6264a2032abb746be36bb05}{uniform\_buffer}};}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{structvulkan__pipeline}{vulkan\_pipeline}}\ \mbox{\hyperlink{structvulkan__shader_a322103c66a6da62ecc2efc50dbca4365}{pipeline}};}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structvulkan__shader_abea1dd8fe0d588a1afd9daccfeefab17}{instance\_count}};}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{structvulkan__shader__instance__state}{vulkan\_shader\_instance\_state}}\ \mbox{\hyperlink{structvulkan__shader_aa19d96f1a748db56df46563185c21958}{instance\_states}}[\mbox{\hyperlink{vulkan__types_8inl_aba878367a90ee05d4e17e086bb7b529c}{VULKAN\_MAX\_MATERIAL\_COUNT}}];}
+\DoxyCodeLine{00061\ \}\ \mbox{\hyperlink{structvulkan__shader}{vulkan\_shader}};}
+
+\end{DoxyCode}

@@ -2,7 +2,6 @@
 
 #include "defines.h"
 #include "math/math_types.h"
-#include "renderer/vulkan/shaders/vulkan_ui_shader.h"
 #include "renderer/vulkan/vulkan_buffer.h"
 #include "renderer/vulkan/vulkan_command_buffer.h"
 #include "renderer/vulkan/vulkan_device.h"
@@ -14,8 +13,6 @@
 #include "renderer/vulkan/vulkan_swapchain.h"
 #include "renderer/vulkan/vulkan_types.inl"
 #include "renderer/vulkan/vulkan_utils.h"
-
-#include "renderer/vulkan/shaders/vulkan_material_shader.h"
 
 #include "core/application.h"
 #include "core/kmemory.h"
@@ -1189,9 +1186,8 @@ b8 vulkan_renderer_shader_create(struct shader *shader, u8 renderpass_id,
 
     kzero_memory(out_shader->config.descriptor_sets,
                  sizeof(vulkan_descriptor_set_config) * 2);
-    kzero_memory(out_shader->config.attributes,
-                 sizeof(VkVertexInputAttributeDescription) *
-                     darray_length(out_shader->config.attributes));
+    out_shader->config.attributes =
+        darray_create(VkVertexInputAttributeDescription);
 
     // For now, shaders will only have two types of descriptor pools
     out_shader->config.pool_sizes[0] =
@@ -1207,7 +1203,7 @@ b8 vulkan_renderer_shader_create(struct shader *shader, u8 renderpass_id,
     global_descriptor_set_config.bindings[BINDING_INDEX_UBO].descriptorType =
         VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
     global_descriptor_set_config.bindings[BINDING_INDEX_UBO].stageFlags =
-        VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_VERTEX_BIT;
+        VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT;
     global_descriptor_set_config.binding_count++;
 
     out_shader->config.descriptor_sets[DESC_SET_INDEX_GLOBAL] =
@@ -1223,7 +1219,7 @@ b8 vulkan_renderer_shader_create(struct shader *shader, u8 renderpass_id,
         instance_descriptor_set_config.bindings[BINDING_INDEX_UBO]
             .descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
         instance_descriptor_set_config.bindings[BINDING_INDEX_UBO].stageFlags =
-            VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_VERTEX_BIT;
+            VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT;
         instance_descriptor_set_config.binding_count++;
 
         out_shader->config.descriptor_sets[DESC_SET_INDEX_INSTANCE] =

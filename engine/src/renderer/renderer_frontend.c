@@ -266,8 +266,10 @@ b8 renderer_renderpass_id(const char *name, u8 *out_renderpass_id) {
     *out_renderpass_id = INVALID_ID_U8;
     if (strings_equali("Renderpass.Builtin.World", name)) {
         *out_renderpass_id = BUILTIN_RENDERPASS_WORLD;
+        return true;
     } else if (strings_equali("Renderpass.Builtin.UI", name)) {
         *out_renderpass_id = BUILTIN_RENDERPASS_UI;
+        return true;
     }
 
     KERROR("renderer_renderpass_id - no such renderpass as '%s'.", name);

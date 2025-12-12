@@ -24,95 +24,111 @@
 \DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{defines_8h_ac6baccc379c73d4e641ef847dbb08fa2}{b32}};}
 \DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \_Bool\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}};}
 \DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \textcolor{comment}{//\ Static\ assertions}}
-\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#if\ defined(\_\_clang\_\_)\ ||\ defined(\_\_gcc\_\_)}}
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ STATIC\_ASSERT\ \_Static\_assert}}
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ STATIC\_ASSERT\ static\_assert}}
-\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \textcolor{comment}{//\ Ensure\ types\ are\ correct\ size}}
-\DoxyCodeLine{00031\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}})\ ==\ 1,\ \textcolor{stringliteral}{"{}Expected\ u8\ to\ be\ 1\ byte."{}});}
-\DoxyCodeLine{00032\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}})\ ==\ 2,\ \textcolor{stringliteral}{"{}Expected\ u16\ to\ be\ 2\ bytes."{}});}
-\DoxyCodeLine{00033\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})\ ==\ 4,\ \textcolor{stringliteral}{"{}Expected\ u32\ to\ be\ 4\ bytes."{}});}
-\DoxyCodeLine{00034\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}})\ ==\ 8,\ \textcolor{stringliteral}{"{}Expected\ u64\ to\ be\ 8\ bytes."{}});}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729}{i8}})\ ==\ 1,\ \textcolor{stringliteral}{"{}Expected\ i8\ to\ be\ 1\ byte."{}});}
-\DoxyCodeLine{00037\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}})\ ==\ 2,\ \textcolor{stringliteral}{"{}Expected\ i16\ to\ be\ 2\ bytes."{}});}
-\DoxyCodeLine{00038\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}})\ ==\ 4,\ \textcolor{stringliteral}{"{}Expected\ i32\ to\ be\ 4\ bytes."{}});}
-\DoxyCodeLine{00039\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_ada59a0de67c44384c6faa924ca63c2aa}{i64}})\ ==\ 8,\ \textcolor{stringliteral}{"{}Expected\ i64\ to\ be\ 8\ bytes."{}});}
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structkrange}{krange}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{structkrange_ad428ed285a5ba7f480249c0bc2624e65}{offset}};}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{structkrange_ab3f9e1e2bcf75f6ae174aebf7b6f1fc6}{size}};}
+\DoxyCodeLine{00026\ \}\ \mbox{\hyperlink{structkrange}{krange}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ Static\ assertions}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#if\ defined(\_\_clang\_\_)\ ||\ defined(\_\_gcc\_\_)}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ STATIC\_ASSERT\ \_Static\_assert}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ STATIC\_ASSERT\ static\_assert}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ Ensure\ types\ are\ correct\ size}}
+\DoxyCodeLine{00036\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}})\ ==\ 1,\ \textcolor{stringliteral}{"{}Expected\ u8\ to\ be\ 1\ byte."{}});}
+\DoxyCodeLine{00037\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}})\ ==\ 2,\ \textcolor{stringliteral}{"{}Expected\ u16\ to\ be\ 2\ bytes."{}});}
+\DoxyCodeLine{00038\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})\ ==\ 4,\ \textcolor{stringliteral}{"{}Expected\ u32\ to\ be\ 4\ bytes."{}});}
+\DoxyCodeLine{00039\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}})\ ==\ 8,\ \textcolor{stringliteral}{"{}Expected\ u64\ to\ be\ 8\ bytes."{}});}
 \DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}})\ ==\ 4,\ \textcolor{stringliteral}{"{}Expected\ f32\ to\ be\ 4\ bytes."{}});}
-\DoxyCodeLine{00042\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}})\ ==\ 8,\ \textcolor{stringliteral}{"{}Expected\ f64\ to\ be\ 8\ bytes."{}});}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ true\ 1}}
-\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ false\ 0}}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ INVALID\_ID\ 4294967295U}}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ \textcolor{comment}{//\ Platform\ detection}}
-\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#if\ defined(WIN32)\ ||\ defined(\_WIN32)\ ||\ defined(\_\_WIN32\_\_)}}
-\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ KPLATFORM\_WINDOWS\ 1}}
-\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#ifndef\ \_WIN64}}
-\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#error\ "{}64-\/bit\ is\ required\ on\ Windows!"{}}}
-\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#elif\ defined(\_\_linux\_\_)\ ||\ defined(\_\_gnu\_linux\_\_)}}
-\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ KPLATFORM\_LINUX\ 1}}
-\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#if\ defined(\_\_ANDROID\_\_)}}
-\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ KPLATFORM\_ANDROID\ 1}}
-\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#elif\ defined(\_\_unix\_\_)}}
-\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ KPLATFORM\_UNIX\ 1}}
-\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#elif\ defined(\_POSIX\_VERSION)}}
-\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ KPLATFORM\_POSIX\ 1}}
-\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#elif\ \_\_APPLE\_\_}}
-\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ KPLATFORM\_APPLE\ 1}}
-\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#include\ <TargetConditionals.h>}}
-\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#if\ TARGET\_IPHONE\_SIMULATOR}}
-\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ KPLATFORM\_IOS\ 1}}
-\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ KPLATFORM\_IOS\_SIMULATOR\ 1}}
-\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#elif\ TARGET\_OS\_IPHONE}}
-\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ KPLATFORM\_IOS\ 1}}
-\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#elif\ TARGET\_OS\_MAC}}
-\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#error\ "{}Unknown\ Apple\ platform"{}}}
-\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#error\ "{}Unknown\ platform!"{}}}
-\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00083\ }
-\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#ifdef\ KEXPORT}}
-\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#ifdef\ \_MSC\_VER}}
-\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ KAPI\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00041\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_a2d0b2d48b0784ffa5f75c39f46562729}{i8}})\ ==\ 1,\ \textcolor{stringliteral}{"{}Expected\ i8\ to\ be\ 1\ byte."{}});}
+\DoxyCodeLine{00042\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_ac12585a6def54773148d7fb2c72a59c5}{i16}})\ ==\ 2,\ \textcolor{stringliteral}{"{}Expected\ i16\ to\ be\ 2\ bytes."{}});}
+\DoxyCodeLine{00043\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}})\ ==\ 4,\ \textcolor{stringliteral}{"{}Expected\ i32\ to\ be\ 4\ bytes."{}});}
+\DoxyCodeLine{00044\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_ada59a0de67c44384c6faa924ca63c2aa}{i64}})\ ==\ 8,\ \textcolor{stringliteral}{"{}Expected\ i64\ to\ be\ 8\ bytes."{}});}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}})\ ==\ 4,\ \textcolor{stringliteral}{"{}Expected\ f32\ to\ be\ 4\ bytes."{}});}
+\DoxyCodeLine{00047\ \mbox{\hyperlink{defines_8h_a24df254ec81fc13256ad54cfe955d229}{STATIC\_ASSERT}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{defines_8h_a94dab5770726ccbef8c7d026cfbdf8e5}{f64}})\ ==\ 8,\ \textcolor{stringliteral}{"{}Expected\ f64\ to\ be\ 8\ bytes."{}});}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ true\ 1}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ false\ 0}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ INVALID\_ID\ 4294967295U}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ INVALID\_ID\_U16\ 65535U}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ INVALID\_ID\_U8\ 255U}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{//\ Platform\ detection}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#if\ defined(WIN32)\ ||\ defined(\_WIN32)\ ||\ defined(\_\_WIN32\_\_)}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ KPLATFORM\_WINDOWS\ 1}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#ifndef\ \_WIN64}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#error\ "{}64-\/bit\ is\ required\ on\ Windows!"{}}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#elif\ defined(\_\_linux\_\_)\ ||\ defined(\_\_gnu\_linux\_\_)}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ KPLATFORM\_LINUX\ 1}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#if\ defined(\_\_ANDROID\_\_)}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ KPLATFORM\_ANDROID\ 1}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#elif\ defined(\_\_unix\_\_)}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ KPLATFORM\_UNIX\ 1}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#elif\ defined(\_POSIX\_VERSION)}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ KPLATFORM\_POSIX\ 1}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#elif\ \_\_APPLE\_\_}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ KPLATFORM\_APPLE\ 1}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#include\ <TargetConditionals.h>}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#if\ TARGET\_IPHONE\_SIMULATOR}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ KPLATFORM\_IOS\ 1}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ KPLATFORM\_IOS\_SIMULATOR\ 1}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#elif\ TARGET\_OS\_IPHONE}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ KPLATFORM\_IOS\ 1}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#elif\ TARGET\_OS\_MAC}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#error\ "{}Unknown\ Apple\ platform"{}}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{00087\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ KAPI\ \_\_attribute\_\_((visibility("{}default"{})))}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#error\ "{}Unknown\ platform!"{}}}
 \DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#ifdef\ \_MSC\_VER}}
-\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ KAPI\ \_\_declspec(dllimport)}}
-\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ KAPI}}
-\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#ifdef\ KEXPORT}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#ifdef\ \_MSC\_VER}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#define\ KAPI\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ KAPI\ \_\_attribute\_\_((visibility("{}default"{})))}}
 \DoxyCodeLine{00096\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00097\ }
-\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#define\ KCLAMP(value,\ min,\ max)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
-\DoxyCodeLine{00099\ \textcolor{preprocessor}{\ \ \ \ (value\ <=\ min)\ ?\ min\ :\ (value\ >=\ max)\ ?\ max\ :\ value;}}
-\DoxyCodeLine{00100\ }
-\DoxyCodeLine{00101\ \textcolor{comment}{//\ Inlining}}
-\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#ifdef\ \_MSC\_VER}}
-\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ KINLINE\ \_\_forceinline}}
-\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ KNOINLINE\ \_\_declspec(noinline)}}
-\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ KINLINE\ static\ inline}}
-\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ KNOINLINE}}
-\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00109\ }
-\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ GIBIBYTES(amount)\ amount\ *\ 1024\ *\ 1024\ *\ 1024}}
-\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ MEBIBYTES(amount)\ amount\ *\ 1024\ *\ 1024}}
-\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ KIBIBYTES(amount)\ amount\ *\ 1024}}
-\DoxyCodeLine{00113\ }
-\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ GIGABYTES(amount)\ amount\ *\ 1000\ *\ 1000\ *\ 1000}}
-\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ MEGABYTES(amount)\ amount\ *\ 1000\ *\ 1000}}
-\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#define\ KILOBYTES(amount)\ amount\ *\ 1000}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#ifdef\ \_MSC\_VER}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#define\ KAPI\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ KAPI}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#define\ KCLAMP(value,\ min,\ max)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\ \ \ \ (value\ <=\ min)\ ?\ min\ :\ (value\ >=\ max)\ ?\ max\ :\ value;}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{comment}{//\ Inlining}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#ifdef\ \_MSC\_VER}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#define\ KINLINE\ \_\_forceinline}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#define\ KNOINLINE\ \_\_declspec(noinline)}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ KINLINE\ static\ inline}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#define\ KNOINLINE}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#define\ GIBIBYTES(amount)\ amount\ *\ 1024\ *\ 1024\ *\ 1024}}
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ MEBIBYTES(amount)\ amount\ *\ 1024\ *\ 1024}}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ KIBIBYTES(amount)\ amount\ *\ 1024}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ GIGABYTES(amount)\ amount\ *\ 1000\ *\ 1000\ *\ 1000}}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#define\ MEGABYTES(amount)\ amount\ *\ 1000\ *\ 1000}}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#define\ KILOBYTES(amount)\ amount\ *\ 1000}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}}\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{defines_8h_abf0b958d00fe41b2f3b02d9ed263f780}{get\_aligned}}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ operand,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ granularity)\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{return}\ ((operand\ +\ (granularity\ -\/\ 1))\ \&\ \string~(granularity\ -\/\ 1));}
+\DoxyCodeLine{00127\ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \mbox{\hyperlink{defines_8h_ab4d0d8cdc3aafc511f63fecffd1806c9}{KINLINE}}\ \mbox{\hyperlink{structkrange}{krange}}\ \mbox{\hyperlink{defines_8h_a2f99ca6366e01a8ead4227cecbb8b67f}{get\_aligned\_range}}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ offset,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ size,\ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ granularity)\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{structkrange}{krange}})\{\mbox{\hyperlink{defines_8h_abf0b958d00fe41b2f3b02d9ed263f780}{get\_aligned}}(offset,\ granularity),}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_abf0b958d00fe41b2f3b02d9ed263f780}{get\_aligned}}(size,\ granularity)\};}
+\DoxyCodeLine{00132\ \}}
 
 \end{DoxyCode}

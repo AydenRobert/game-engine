@@ -17,8 +17,11 @@ var searchData=
   ['render_5ffinished_5fper_5fimage_14',['render_finished_per_image',['../de/dc9/structvulkan__swapchain.html#ae3bc4c336ea7eef7dd47951d7abe7870',1,'vulkan_swapchain']]],
   ['renderer_5fsystem_5fmemory_5frequirement_15',['renderer_system_memory_requirement',['../dc/d7e/structapplication__state.html#a00a59ff2c4530d84fcea3927994f1ee0',1,'application_state']]],
   ['renderer_5fsystem_5fstate_16',['renderer_system_state',['../dc/d7e/structapplication__state.html#a9013e0f2cacc1dca598af239a280c24b',1,'application_state']]],
-  ['repositioned_17',['repositioned',['../de/dff/structxdg__popup__listener.html#a6e3f7f24ea625d8d11b99f4de878163b',1,'xdg_popup_listener']]],
-  ['resized_18',['resized',['../df/d02/structrenderer__backend.html#aa4d9ea4b9c236ff1ef1f9bb967deb18a',1,'renderer_backend']]],
-  ['resource_5fsystem_5fmemory_5frequirement_19',['resource_system_memory_requirement',['../dc/d7e/structapplication__state.html#a73a41404679c970a29cdd5fe48d51427',1,'application_state']]],
-  ['resource_5fsystem_5fstate_20',['resource_system_state',['../dc/d7e/structapplication__state.html#ab3a3a22ba262b2167105e327e60879dd',1,'application_state']]]
+  ['renderpass_17',['renderpass',['../d8/ddd/structvulkan__shader.html#a0277498adbbecef34ffb81352546c4ac',1,'vulkan_shader']]],
+  ['renderpass_5fname_18',['renderpass_name',['../df/d61/structshader__config.html#ad766d3178dc2f8d069d1d9e12fe149fb',1,'shader_config']]],
+  ['repositioned_19',['repositioned',['../de/dff/structxdg__popup__listener.html#a6e3f7f24ea625d8d11b99f4de878163b',1,'xdg_popup_listener']]],
+  ['required_5fubo_5falignment_20',['required_ubo_alignment',['../d2/d93/structshader.html#a2c72317fa1139a232254bac77dc284d1',1,'shader']]],
+  ['resized_21',['resized',['../df/d02/structrenderer__backend.html#aa4d9ea4b9c236ff1ef1f9bb967deb18a',1,'renderer_backend']]],
+  ['resource_5fsystem_5fmemory_5frequirement_22',['resource_system_memory_requirement',['../dc/d7e/structapplication__state.html#a73a41404679c970a29cdd5fe48d51427',1,'application_state']]],
+  ['resource_5fsystem_5fstate_23',['resource_system_state',['../dc/d7e/structapplication__state.html#ab3a3a22ba262b2167105e327e60879dd',1,'application_state']]]
 ];
