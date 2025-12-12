@@ -289,16 +289,6 @@ b8 vulkan_renderer_backend_initialize(renderer_backend *backend,
         context.images_in_flight[i] = 0; // NULL
     }
 
-    // Create built in shaders
-    if (!vulkan_material_shader_create(&context, &context.material_shader)) {
-        KERROR("Error loading built-in basic_lighting shader.");
-        return false;
-    }
-    if (!vulkan_ui_shader_create(&context, &context.ui_shader)) {
-        KERROR("Error loading built-in ui shader.");
-        return false;
-    }
-
     create_buffers(&context);
 
     // Mark all geometries invalid
@@ -316,9 +306,6 @@ void vulkan_renderer_backend_shutdown(renderer_backend *backend) {
     // Destroy buffers
     vulkan_buffer_destroy(&context, &context.object_vertex_buffer);
     vulkan_buffer_destroy(&context, &context.object_index_buffer);
-
-    vulkan_material_shader_destroy(&context, &context.material_shader);
-    vulkan_ui_shader_destroy(&context, &context.ui_shader);
 
     // Sync objects
     for (u8 i = 0; i < context.swapchain.max_frames_in_flight; i++) {
@@ -503,33 +490,6 @@ b8 vulkan_renderer_backend_begin_frame(renderer_backend *backend,
     return true;
 }
 
-void vulkan_renderer_update_global_world_state(mat4 projection, mat4 view,
-                                               vec3 view_position,
-                                               vec4 ambient_colour, i32 mode) {
-    vulkan_material_shader_use(&context, &context.material_shader);
-
-    context.material_shader.global_ubo.projection = projection;
-    context.material_shader.global_ubo.view = view;
-
-    // TODO: Other ubo properties
-
-    vulkan_material_shader_update_global_state(
-        &context, &context.material_shader, context.frame_delta_time);
-}
-
-void vulkan_renderer_update_global_ui_state(mat4 projection, mat4 view,
-                                            i32 mode) {
-    vulkan_ui_shader_use(&context, &context.ui_shader);
-
-    context.ui_shader.global_ubo.projection = projection;
-    context.ui_shader.global_ubo.view = view;
-
-    // TODO: Other ubo properties
-
-    vulkan_ui_shader_update_global_state(&context, &context.ui_shader,
-                                         context.frame_delta_time);
-}
-
 b8 vulkan_renderer_backend_end_frame(renderer_backend *backend,
                                      f32 delta_time) {
     vulkan_command_buffer *command_buffer =
@@ -614,6 +574,7 @@ b8 vulkan_renderer_begin_renderpass(renderer_backend *backend,
     vulkan_command_buffer *command_buffer =
         &context.graphics_command_buffers[context.image_index];
 
+    // TODO: make custom renderpasses
     switch (renderpass_id) {
     case BUILTIN_RENDERPASS_WORLD:
         renderpass = &context.main_renderpass;
@@ -632,16 +593,6 @@ b8 vulkan_renderer_begin_renderpass(renderer_backend *backend,
 
     // Begin the renderpass
     vulkan_renderpass_begin(command_buffer, renderpass, framebuffer);
-
-    // Use the appropriate shader
-    switch (renderpass_id) {
-    case BUILTIN_RENDERPASS_WORLD:
-        vulkan_material_shader_use(&context, &context.material_shader);
-        break;
-    case BUILTIN_RENDERPASS_UI:
-        vulkan_ui_shader_use(&context, &context.ui_shader);
-        break;
-    }
 
     return true;
 }
@@ -987,67 +938,6 @@ void vulkan_renderer_destroy_texture(texture *texture) {
     kzero_memory(texture, sizeof(struct texture));
 }
 
-b8 vulkan_renderer_create_material(struct material *material) {
-    if (!material) {
-        KERROR("vulkan_renderer_create_material - called with null ptr. "
-               "Creation false.");
-        return false;
-    }
-
-    switch (material->type) {
-    case MATERIAL_TYPE_WORLD:
-        if (!vulkan_material_shader_acquire_resources(
-                &context, &context.material_shader, material)) {
-            KERROR("vulkan_renderer_create_material - Failed to acquire shader "
-                   "resources.");
-            return false;
-        }
-        break;
-    case MATERIAL_TYPE_UI:
-        if (!vulkan_ui_shader_acquire_resources(&context, &context.ui_shader,
-                                                material)) {
-            KERROR("vulkan_renderer_create_material - Failed to acquire shader "
-                   "resources.");
-            return false;
-        }
-        break;
-    default:
-        KERROR("vulkan_renderer_create_material - Unknown material type.");
-        return false;
-    }
-
-    KTRACE("Renderer: Material created.");
-    return true;
-}
-
-void vulkan_renderer_destroy_material(struct material *material) {
-    if (!material) {
-        KERROR("vulkan_renderer_create_material - called with null ptr. "
-               "Nothing was done.");
-        return;
-    }
-
-    if (material->internal_id == INVALID_ID) {
-        KERROR("vulkan_renderer_create_material - called with "
-               "internal_id=INVALID_ID. Nothing was done.");
-        return;
-    }
-
-    switch (material->type) {
-    case MATERIAL_TYPE_WORLD:
-        vulkan_material_shader_release_resources(
-            &context, &context.material_shader, material);
-        break;
-    case MATERIAL_TYPE_UI:
-        vulkan_ui_shader_release_resources(&context, &context.ui_shader,
-                                           material);
-        break;
-    default:
-        KERROR("vulkan_renderer_destroy_material - Unknown material type.");
-        return;
-    }
-}
-
 b8 vulkan_renderer_create_geometry(geometry *geometry, u32 vertex_size,
                                    u32 vertex_count, const void *vertices,
                                    u32 index_size, u32 index_count,
@@ -1193,30 +1083,6 @@ void vulkan_renderer_draw_geometry(renderer_backend *backend,
     vulkan_command_buffer *command_buffer =
         &context.graphics_command_buffers[context.image_index];
 
-    material *mat = 0;
-    if (data.geometry->material) {
-        mat = data.geometry->material;
-    } else {
-        mat = material_system_get_default();
-    }
-
-    switch (mat->type) {
-    case MATERIAL_TYPE_WORLD:
-        vulkan_material_shader_set_model(&context, &context.material_shader,
-                                         data.model);
-        vulkan_material_shader_apply_material(&context,
-                                              &context.material_shader, mat);
-        break;
-    case MATERIAL_TYPE_UI:
-        vulkan_ui_shader_set_model(&context, &context.ui_shader, data.model);
-        vulkan_ui_shader_apply_material(&context, &context.ui_shader, mat);
-        break;
-    default:
-        KERROR("vulkan_renderer_draw_geometry - Unknown material type : '%i'.",
-               mat->type);
-        return;
-    }
-
     VkDeviceSize offsets[1] = {buffer_data->vertex_buffer_offset};
     vkCmdBindVertexBuffers(command_buffer->handle, 0, 1,
                            &context.object_vertex_buffer.handle,
@@ -1325,7 +1191,7 @@ b8 vulkan_renderer_shader_create(struct shader *shader, u8 renderpass_id,
                  sizeof(vulkan_descriptor_set_config) * 2);
     kzero_memory(out_shader->config.attributes,
                  sizeof(VkVertexInputAttributeDescription) *
-                     VULKAN_SHADER_MAX_ATTRIBUTES);
+                     darray_length(out_shader->config.attributes));
 
     // For now, shaders will only have two types of descriptor pools
     out_shader->config.pool_sizes[0] =
@@ -1493,18 +1359,39 @@ b8 vulkan_renderer_shader_initialize(struct shader *shader) {
     // Process attributes
     u32 attribute_count = darray_length(shader->attributes);
     u32 offset = 0;
+    u32 location = 0;
     for (u32 i = 0; i < attribute_count; i++) {
-        // Setup new attribute
-        VkVertexInputAttributeDescription attribute;
-        attribute.location = i;
-        attribute.binding = 0;
-        attribute.offset = offset;
-        attribute.format = types[shader->attributes[i].type];
+        shader_attribute_type type = shader->attributes[i].type;
 
-        // Push into the config's attribute collection and add to the stride
-        s->config.attributes[i] = attribute;
+        if (type != SHADER_ATTRIB_TYPE_MATRIX4) {
+            // Setup new attribute
+            VkVertexInputAttributeDescription attribute;
+            attribute.location = location;
+            attribute.binding = 0;
+            attribute.offset = offset;
+            attribute.format = types[type];
 
-        offset += shader->attributes[i].size;
+            // Push into the config's attribute collection and add to the stride
+            darray_push(s->config.attributes, attribute);
+
+            offset += shader->attributes[i].size;
+            location++;
+            continue;
+        }
+
+        // special case for matrix
+        for (u32 j = 0; j < 4; j++) {
+            VkVertexInputAttributeDescription attribute;
+            attribute.location = location;
+            attribute.binding = 0;
+            attribute.offset = offset;
+            attribute.format = types[type];
+
+            darray_push(s->config.attributes, attribute);
+
+            offset += shader->attributes[i].size;
+            location++;
+        }
     }
 
     // Process uniforms
@@ -1594,7 +1481,7 @@ b8 vulkan_renderer_shader_initialize(struct shader *shader) {
 
     b8 pipeline_result = vulkan_graphics_pipeline_create(
         &context, s->renderpass, shader->attribute_stride,
-        darray_length(shader->attributes), s->config.attributes,
+        darray_length(s->config.attributes), s->config.attributes,
         s->config.descriptor_set_count, s->descriptor_set_layouts,
         s->config.stage_count, stage_create_infos, viewport, scissor, false,
         true, &s->pipeline);

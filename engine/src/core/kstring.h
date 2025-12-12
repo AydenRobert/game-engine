@@ -165,3 +165,7 @@ KAPI b8 string_to_u64(char *str, u64 *out_int);
  * @return True if parsed successfully; otherwise false.
  */
 KAPI b8 string_to_b8(char *str, b8 *out_bool);
+
+KAPI u32 string_split(const char *str, char delimiter, char ***str_darray,
+                      b8 trim_entries, b8 include_empty);
+KAPI void string_cleanup_split_array(char **str_darray);

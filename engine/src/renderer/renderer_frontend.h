@@ -18,9 +18,6 @@ b8 renderer_draw_frame(render_packet *packet);
 void renderer_create_texture(const u8 *pixels, struct texture *texture);
 void renderer_destroy_texture(struct texture *texture);
 
-b8 renderer_create_material(struct material *material);
-void renderer_destroy_material(struct material *material);
-
 b8 renderer_create_geometry(geometry *geometry, u32 vertex_size,
                             u32 vertex_count, const void *vertices,
                             u32 index_size, u32 index_count,
@@ -37,7 +34,7 @@ b8 renderer_shader_initialize(struct shader *s);
 b8 renderer_shader_use(struct shader *s);
 
 b8 renderer_shader_bind_globals(struct shader *s);
-b8 renderer_shader_bind_instance(struct shader *s, u32 *out_instance_id);
+b8 renderer_shader_bind_instance(struct shader *s, u32 instance_id);
 
 b8 renderer_shader_apply_globals(struct shader *s);
 b8 renderer_shader_apply_instance(struct shader *s);

@@ -1,5 +1,6 @@
 #include "core/kstring.h"
 
+#include "containers/darray.h"
 #include "core/kmemory.h"
 
 // TODO: temporary
@@ -269,4 +270,97 @@ b8 string_to_b8(char *str, b8 *out_bool) {
 
     *out_bool = strings_equal(str, "1") || strings_equali(str, "true");
     return true;
+}
+
+KAPI u32 string_split(const char *str, char delimiter, char ***str_darray,
+                      b8 trim_entries, b8 include_empty) {
+    if (!str || !str_darray) {
+        return 0;
+    }
+
+    char *result = 0;
+    u32 trimmed_length = 0;
+    u32 entry_count = 0;
+    u32 length = string_length(str);
+    // TODO: replace with memory sparse management stuff
+    char buffer[16384]; // you don't need a bigger entry
+    u32 current_length = 0;
+    // Iterate each char
+    for (u32 i = 0; i < length; i++) {
+        char c = str[i];
+
+        // found delimiter
+        if (c == delimiter) {
+            buffer[current_length] = 0;
+            result = buffer;
+            trimmed_length = current_length;
+            if (trim_entries && current_length > 0) {
+                result = string_trim(result);
+                trimmed_length = string_length(result);
+            }
+            // Add new entry
+            if (trimmed_length > 0 || include_empty) {
+                char *entry = kallocate(sizeof(char) * (trimmed_length + 1),
+                                        MEMORY_TAG_STRING);
+                if (trimmed_length == 0) {
+                    entry[0] = 0;
+                } else {
+                    string_ncopy(entry, result, trimmed_length);
+                    entry[trimmed_length] = 0;
+                }
+                char **a = *str_darray;
+                darray_pop(a, entry);
+                *str_darray = a;
+                entry_count++;
+            }
+
+            // Clear the buffer
+            kzero_memory(buffer, sizeof(char) * 16384);
+            current_length = 0;
+            continue;
+        }
+
+        buffer[current_length] = c;
+        current_length++;
+    }
+
+    // At the end of the string. If any chars are queued up, read them.
+    result = buffer;
+    trimmed_length = current_length;
+    // Trim if applicable
+    if (trim_entries && current_length > 0) {
+        result = string_trim(result);
+        trimmed_length = string_length(result);
+    }
+    // Add new entry
+    if (trimmed_length > 0 || include_empty) {
+        char *entry =
+            kallocate(sizeof(char) * (trimmed_length + 1), MEMORY_TAG_STRING);
+        if (trimmed_length == 0) {
+            entry[0] = 0;
+        } else {
+            string_ncopy(entry, result, trimmed_length);
+            entry[trimmed_length] = 0;
+        }
+        char **a = *str_darray;
+        darray_push(a, entry);
+        *str_darray = a;
+        entry_count++;
+    }
+
+    return entry_count;
+}
+
+KAPI void string_cleanup_split_array(char **str_darray) {
+    if (str_darray) {
+        u32 count = darray_length(str_darray);
+        // Free each string.
+        for (u32 i = 0; i < count; ++i) {
+            u32 len = string_length(str_darray[i]);
+            kfree(str_darray[i], sizeof(char) * (len + 1), MEMORY_TAG_STRING);
+        }
+
+        // Clear the darray
+        darray_clear(str_darray);
+    }
 }

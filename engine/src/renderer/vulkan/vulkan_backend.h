@@ -22,19 +22,11 @@ b8 vulkan_renderer_begin_renderpass(renderer_backend *backend,
                                     u8 renderpass_id);
 b8 vulkan_renderer_end_renderpass(renderer_backend *backend, u8 renderpass_id);
 
-void vulkan_renderer_update_global_world_state(mat4 projection, mat4 view,
-                                               vec3 view_position,
-                                               vec4 ambient_colour, i32 mode);
-void vulkan_renderer_update_global_ui_state(mat4 projection, mat4 view,
-                                            i32 mode);
 void vulkan_renderer_draw_geometry(renderer_backend *backend,
                                    geometry_render_data data);
 
 void vulkan_renderer_create_texture(const u8 *pixels, struct texture *texture);
 void vulkan_renderer_destroy_texture(texture *texture);
-
-b8 vulkan_renderer_create_material(struct material *material);
-void vulkan_renderer_destroy_material(struct material *material);
 
 b8 vulkan_renderer_create_geometry(geometry *geometry, u32 vertex_size,
                                    u32 vertex_count, const void *vertices,

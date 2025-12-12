@@ -34,7 +34,7 @@ b8 material_loader_load(struct resource_loader *self, const char *name,
     // TODO: should use an allocator
     material_config *resource_data =
         kallocate(sizeof(material_config), MEMORY_TAG_MATERIAL_INSTANCE);
-    resource_data->type = MATERIAL_TYPE_WORLD;
+    resource_data->shader_name = "Builtin.Material";
     resource_data->auto_release = true;
     resource_data->diffuse_colour = vec4_one();
     resource_data->diffuse_map_name[0] = 0;
@@ -95,11 +95,8 @@ b8 material_loader_load(struct resource_loader *self, const char *name,
                       "default of white instead.",
                       full_file_path);
             }
-        } else if (strings_equali(trimmed_variable_name, "type")) {
-            // TODO: other material types
-            if (strings_equali(trimmed_value, "ui")) {
-                resource_data->type = MATERIAL_TYPE_UI;
-            }
+        } else if (strings_equali(trimmed_variable_name, "shader")) {
+            resource_data->shader_name = string_duplicate(trimmed_value);
         }
 
         // TODO: more fields

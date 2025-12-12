@@ -11,6 +11,7 @@
 
 #include "systems/texture_system.h"
 
+
 typedef struct shader_system_state {
     shader_system_config config;
     hashtable lookup;

@@ -29,7 +29,8 @@ typedef struct vulkan_shader_config {
     u16 max_descriptor_set_count;
     u8 descriptor_set_count;
     vulkan_descriptor_set_config descriptor_sets[2];
-    VkVertexInputAttributeDescription attributes[VULKAN_SHADER_MAX_ATTRIBUTES];
+    // Darray
+    VkVertexInputAttributeDescription *attributes;
 } vulkan_shader_config;
 
 typedef struct vulkan_shader_descriptor_set_state {
