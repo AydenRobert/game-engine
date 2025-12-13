@@ -10,10 +10,18 @@ typedef struct internal_state {
     memory_pool *system_pool;
     memory_pool *main_pool;
 
+    binarytree alloc_tree;
+
     u64 freelist_size;
     freelist alloc_feelist;
     void *freelist_memory;
 } internal_state;
+
+typedef struct allocation {
+    void *ptr;
+    u64 size;
+    memory_pool *pool;
+} allocation;
 
 static internal_state *state = 0;
 
@@ -72,24 +80,32 @@ b8 memory_system_initialise(memory_system_config config) {
 //     state = 0;
 // }
 
-// TODO: make the bit boards public
-allocation *allocate_reserved(u64 size) {
-    u64 freelist_size = 0;
-    freelist_create(size, &freelist_size, 0, 0);
-
-    u64 total_size = size + sizeof(allocation) + freelist_size;
-
-    u64 offset;
-    freelist_allocate_block(&state->alloc_feelist, total_size, &offset);
-
-    allocation *alloc = (void *)((u64)state->main_pool->base_address + offset);
-    alloc->freelist_memory = (void *)((u64)alloc + sizeof(allocation));
-    freelist_create(size, &alloc->freelist_size, alloc->freelist_memory,
-                    &alloc->commit_tracker);
-
-    return alloc;
+void *allocate_reserved(u64 size) {
+    u64 offset = 0;
+    if (!freelist_allocate_block(&state->alloc_feelist, size, &offset)) {
+        return 0;
+    }
+    void *ptr = (void *)((u64)state->main_pool->base_address + offset);
+    allocation alloc_info = {};
+    alloc_info.ptr = ptr;
+    alloc_info.pool = state->main_pool;
+    alloc_info.size = size;
+    binary_tree_add_node(state->alloc_tree, alloc_info);
 }
 
-b8 allocation_ensure_commited(allocation *alloc, u64 start_index, u64 size);
+void *allocate_commited(u64 size) {
+    void *ptr = allocate_reserved(size);
+    allocation_ensure_commited(ptr, 0, size);
+    return ptr;
+}
 
-void alloc_free(allocation *alloc);
+b8 allocation_get_bitarray(void *block, bitarray *out_array) {
+    bitarray_make_subarray(&state->main_pool->array, offset, size);
+}
+
+b8 allocation_ensure_commited_pages(void *block, u64 start_page_index,
+                                    u64 page_amount);
+
+b8 allocation_ensure_commited(void *block, u64 byte_offset, u64 size);
+
+void allocation_free(void *block);

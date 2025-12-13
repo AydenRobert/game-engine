@@ -1,5 +1,6 @@
 #pragma once
 
+#include "containers/bitarray.h"
 #include "containers/freelist.h"
 #include "defines.h"
 
@@ -9,23 +10,19 @@ typedef struct memory_system_config {
     u64 max_memory;
 } memory_system_config;
 
-typedef struct allocation {
-    u64 size;
-    void *base_ptr;
-
-    u64 freelist_size;
-    void *freelist_memory;
-    freelist commit_tracker;
-} allocation;
-
 b8 memory_system_initialise(memory_system_config config);
 
 // void memory_system_shutdown();
 
-allocation *allocate_reserved(u64 size); // won't garuentee commited
+void *allocate_reserved(u64 size); // won't garuentee commited
 
-allocation *allocate_commited(u64 size); // garuentees commited
+void *allocate_commited(u64 size); // garuentees commited
 
-b8 allocation_ensure_commited(allocation *alloc, u64 start_index, u64 size);
+b8 allocation_get_bitarray(void *block, bitarray *out_array);
 
-void alloc_free(allocation *alloc);
+b8 allocation_ensure_commited_pages(void *block, u64 start_page_index,
+                                    u64 page_amount);
+
+b8 allocation_ensure_commited(void *block, u64 byte_offset, u64 size);
+
+void allocation_free(void *block);
