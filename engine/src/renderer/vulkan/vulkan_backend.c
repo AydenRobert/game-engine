@@ -1251,7 +1251,7 @@ void vulkan_renderer_shader_destroy(struct shader *s) {
     VkAllocationCallbacks *vk_allocator = context.allocator;
 
     // Descriptor set layouts
-    for (u32 i = 0; i < shader->config.max_descriptor_set_count; i++) {
+    for (u32 i = 0; i < shader->config.descriptor_set_count; i++) {
         if (shader->descriptor_set_layouts[i]) {
             vkDestroyDescriptorSetLayout(logical_device,
                                          shader->descriptor_set_layouts[i],
@@ -1877,10 +1877,10 @@ b8 vulkan_renderer_set_uniform(struct shader *s, struct shader_uniform *uniform,
     if (uniform->scope == SHADER_SCOPE_LOCAL) {
         VkCommandBuffer command_buffer =
             context.graphics_command_buffers[context.image_index].handle;
+        u32 push_constant_offset = uniform->offset - s->global_ubo_stride;
         vkCmdPushConstants(command_buffer, internal->pipeline.pipeline_layout,
-                           VK_SHADER_STAGE_VERTEX_BIT |
-                               VK_SHADER_STAGE_FRAGMENT_BIT,
-                           uniform->offset, uniform->size, value);
+                           VK_SHADER_STAGE_VERTEX_BIT, push_constant_offset,
+                           uniform->size, value);
         return true;
     }
 

@@ -181,6 +181,13 @@ b8 renderer_draw_frame(render_packet *packet) {
     }
 
     // UI renderpass
+    if (!state_ptr->backend.begin_renderpass(&state_ptr->backend,
+                                             BUILTIN_RENDERPASS_UI)) {
+        KERROR("backend.begin_renderpass - BUILTIN_RENDERPASS_WORLD failed. "
+               "Application shutting down...");
+        return false;
+    }
+
     if (!shader_system_use_by_id(state_ptr->ui_shader_id)) {
         KERROR("Failed to use ui shader. Render frame failed.");
         return false;
@@ -188,8 +195,8 @@ b8 renderer_draw_frame(render_packet *packet) {
 
     // Apply globals
     if (!material_system_apply_global(state_ptr->ui_shader_id,
-                                      &state_ptr->projection,
-                                      &state_ptr->view)) {
+                                      &state_ptr->ui_projection,
+                                      &state_ptr->ui_view)) {
         KERROR("Failed to apply globals for ui shader. Render frame "
                "failed.");
         return false;
@@ -198,8 +205,8 @@ b8 renderer_draw_frame(render_packet *packet) {
     count = packet->ui_geometry_count;
     for (u32 i = 0; i < count; i++) {
         material *m = 0;
-        if (packet->geometries[i].geometry->material) {
-            m = packet->geometries[i].geometry->material;
+        if (packet->ui_geometries[i].geometry->material) {
+            m = packet->ui_geometries[i].geometry->material;
         } else {
             m = material_system_get_default();
         }
@@ -211,11 +218,11 @@ b8 renderer_draw_frame(render_packet *packet) {
         }
 
         // Apply the locals
-        material_system_apply_local(m, &packet->geometries[i].model);
+        material_system_apply_local(m, &packet->ui_geometries[i].model);
 
         // Draw it
         state_ptr->backend.draw_geometry(&state_ptr->backend,
-                                         packet->geometries[i]);
+                                         packet->ui_geometries[i]);
     }
 
     if (!state_ptr->backend.end_renderpass(&state_ptr->backend,

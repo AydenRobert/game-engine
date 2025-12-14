@@ -123,7 +123,7 @@ b8 vulkan_graphics_pipeline_create(
     VkPushConstantRange push_constant;
     push_constant.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
     push_constant.offset = sizeof(mat4) * 0;
-    push_constant.size = sizeof(mat4) * 2;
+    push_constant.size = sizeof(mat4) * 4;
     pipeline_layout_create_info.pushConstantRangeCount = 1;
     pipeline_layout_create_info.pPushConstantRanges = &push_constant;
 

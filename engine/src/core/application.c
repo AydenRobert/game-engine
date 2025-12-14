@@ -17,6 +17,7 @@
 #include "systems/geometry_system.h"
 #include "systems/material_system.h"
 #include "systems/resource_system.h"
+#include "systems/shader_system.h"
 #include "systems/texture_system.h"
 
 // TODO: temp
@@ -451,6 +452,7 @@ KAPI b8 application_run() {
     geometry_system_shutdown(app_state->geometry_system_state);
     material_system_shutdown(app_state->material_system_state);
     texture_system_shutdown(app_state->texture_system_state);
+    shader_system_shutdown(app_state->shader_system_state);
     renderer_shutdown(app_state->renderer_system_state);
     resource_system_shutdown(app_state->resource_system_state);
     event_shutdown(app_state->event_system_state);
