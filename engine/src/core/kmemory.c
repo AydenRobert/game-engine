@@ -18,7 +18,8 @@ static const char *memory_tag_strings[MEMORY_TAG_MAX_TAGS] = {
     "BST              ", "STRING           ", "APPLICATION      ",
     "JOB              ", "TEXTURE          ", "MATERIAL_INSTANCE",
     "RENDERER         ", "GAME             ", "TRANSFORM        ",
-    "ENTITY           ", "ENTITY_NODE      ", "SCENE            "};
+    "ENTITY           ", "ENTITY_NODE      ", "SCENE            ",
+    "SHADER           "};
 
 typedef struct memory_system_state {
     memory_system_configuration config;

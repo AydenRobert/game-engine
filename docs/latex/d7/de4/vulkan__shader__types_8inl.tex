@@ -1,0 +1,155 @@
+\doxysection{engine/src/renderer/vulkan/vulkan\+\_\+shader\+\_\+types.inl File Reference}
+\hypertarget{vulkan__shader__types_8inl}{}\label{vulkan__shader__types_8inl}\index{engine/src/renderer/vulkan/vulkan\_shader\_types.inl@{engine/src/renderer/vulkan/vulkan\_shader\_types.inl}}
+{\ttfamily \#include "{}renderer/vulkan/vulkan\+\_\+types.\+inl"{}}\newline
+{\ttfamily \#include "{}systems/shader\+\_\+system.\+h"{}}\newline
+Include dependency graph for vulkan\+\_\+shader\+\_\+types.\+inl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/db2/vulkan__shader__types_8inl__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{d5/d1a/vulkan__shader__types_8inl__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvulkan__shader__stage__config}{vulkan\+\_\+shader\+\_\+stage\+\_\+config}}
+\item 
+struct \mbox{\hyperlink{structvulkan__descriptor__set__config}{vulkan\+\_\+descriptor\+\_\+set\+\_\+config}}
+\item 
+struct \mbox{\hyperlink{structvulkan__shader__config}{vulkan\+\_\+shader\+\_\+config}}
+\item 
+struct \mbox{\hyperlink{structvulkan__shader__descriptor__set__state}{vulkan\+\_\+shader\+\_\+descriptor\+\_\+set\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{structvulkan__shader__instance__state}{vulkan\+\_\+shader\+\_\+instance\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{structvulkan__shader}{vulkan\+\_\+shader}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vulkan__shader__types_8inl_a522979157515fe1519d76b948165c6c0}{VULKAN\+\_\+\+SHADER\+\_\+\+MAX\+\_\+\+STAGES}}~8
+\item 
+\#define \mbox{\hyperlink{vulkan__shader__types_8inl_a3f95f81465f4ed2b576d3f61d05bea8d}{VULKAN\+\_\+\+SHADER\+\_\+\+MAX\+\_\+\+GLOBAL\+\_\+\+TEXTURES}}~31
+\item 
+\#define \mbox{\hyperlink{vulkan__shader__types_8inl_a39497fce4642d2e6fdf70843a9db9711}{VULKAN\+\_\+\+SHADER\+\_\+\+MAX\+\_\+\+INSTANCE\+\_\+\+TEXTURES}}~31
+\item 
+\#define \mbox{\hyperlink{vulkan__shader__types_8inl_ae485f1474c716a70cfc524aaa6ba2dcd}{VULKAN\+\_\+\+SHADER\+\_\+\+MAX\+\_\+\+ATTRIBUTES}}~16
+\item 
+\#define \mbox{\hyperlink{vulkan__shader__types_8inl_af05fbac1d921b9f3d628c14af20d6c67}{VULKAN\+\_\+\+SHADER\+\_\+\+MAX\+\_\+\+UNIFORMS}}~128
+\item 
+\#define \mbox{\hyperlink{vulkan__shader__types_8inl_a7bceefd4ccc8cbf9689b5734651cb697}{VULKAN\+\_\+\+SHADER\+\_\+\+MAX\+\_\+\+BINDINGS}}~32
+\item 
+\#define \mbox{\hyperlink{vulkan__shader__types_8inl_a5ebd779c710b9da02ab0cc2b30b68a44}{VULKAN\+\_\+\+SHADER\+\_\+\+MAX\+\_\+\+PUSH\+\_\+\+CONST\+\_\+\+RANGES}}~32
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct vulkan\+\_\+shader\+\_\+stage\+\_\+config \mbox{\hyperlink{vulkan__shader__types_8inl_a5c5f85f583ac37608b250064461ac681}{vulkan\+\_\+shader\+\_\+stage\+\_\+config}}
+\item 
+typedef struct vulkan\+\_\+descriptor\+\_\+set\+\_\+config \mbox{\hyperlink{vulkan__shader__types_8inl_a90614566c5c0061be90e58c025f0fc44}{vulkan\+\_\+descriptor\+\_\+set\+\_\+config}}
+\item 
+typedef struct vulkan\+\_\+shader\+\_\+config \mbox{\hyperlink{vulkan__shader__types_8inl_af451e5d8fab91c64cf1b249b24e16dc3}{vulkan\+\_\+shader\+\_\+config}}
+\item 
+typedef struct vulkan\+\_\+shader\+\_\+descriptor\+\_\+set\+\_\+state \mbox{\hyperlink{vulkan__shader__types_8inl_ac2eef2a4d8cf3922e196b9f1b80e77a7}{vulkan\+\_\+shader\+\_\+descriptor\+\_\+set\+\_\+state}}
+\item 
+typedef struct vulkan\+\_\+shader\+\_\+instance\+\_\+state \mbox{\hyperlink{vulkan__shader__types_8inl_a87cff986ff8609d3746349d96c74aa7f}{vulkan\+\_\+shader\+\_\+instance\+\_\+state}}
+\item 
+typedef struct vulkan\+\_\+shader \mbox{\hyperlink{vulkan__shader__types_8inl_a9cc22210a10f6c01a7bc29abedbe1178}{vulkan\+\_\+shader}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{vulkan__shader__types_8inl_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{vulkan__shader__types_8inl_ae485f1474c716a70cfc524aaa6ba2dcd}\index{vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}!VULKAN\_SHADER\_MAX\_ATTRIBUTES@{VULKAN\_SHADER\_MAX\_ATTRIBUTES}}
+\index{VULKAN\_SHADER\_MAX\_ATTRIBUTES@{VULKAN\_SHADER\_MAX\_ATTRIBUTES}!vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}}
+\doxysubsubsection{\texorpdfstring{VULKAN\_SHADER\_MAX\_ATTRIBUTES}{VULKAN\_SHADER\_MAX\_ATTRIBUTES}}
+{\footnotesize\ttfamily \label{vulkan__shader__types_8inl_ae485f1474c716a70cfc524aaa6ba2dcd} 
+\#define VULKAN\+\_\+\+SHADER\+\_\+\+MAX\+\_\+\+ATTRIBUTES~16}
+
+\Hypertarget{vulkan__shader__types_8inl_a7bceefd4ccc8cbf9689b5734651cb697}\index{vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}!VULKAN\_SHADER\_MAX\_BINDINGS@{VULKAN\_SHADER\_MAX\_BINDINGS}}
+\index{VULKAN\_SHADER\_MAX\_BINDINGS@{VULKAN\_SHADER\_MAX\_BINDINGS}!vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}}
+\doxysubsubsection{\texorpdfstring{VULKAN\_SHADER\_MAX\_BINDINGS}{VULKAN\_SHADER\_MAX\_BINDINGS}}
+{\footnotesize\ttfamily \label{vulkan__shader__types_8inl_a7bceefd4ccc8cbf9689b5734651cb697} 
+\#define VULKAN\+\_\+\+SHADER\+\_\+\+MAX\+\_\+\+BINDINGS~32}
+
+\Hypertarget{vulkan__shader__types_8inl_a3f95f81465f4ed2b576d3f61d05bea8d}\index{vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}!VULKAN\_SHADER\_MAX\_GLOBAL\_TEXTURES@{VULKAN\_SHADER\_MAX\_GLOBAL\_TEXTURES}}
+\index{VULKAN\_SHADER\_MAX\_GLOBAL\_TEXTURES@{VULKAN\_SHADER\_MAX\_GLOBAL\_TEXTURES}!vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}}
+\doxysubsubsection{\texorpdfstring{VULKAN\_SHADER\_MAX\_GLOBAL\_TEXTURES}{VULKAN\_SHADER\_MAX\_GLOBAL\_TEXTURES}}
+{\footnotesize\ttfamily \label{vulkan__shader__types_8inl_a3f95f81465f4ed2b576d3f61d05bea8d} 
+\#define VULKAN\+\_\+\+SHADER\+\_\+\+MAX\+\_\+\+GLOBAL\+\_\+\+TEXTURES~31}
+
+\Hypertarget{vulkan__shader__types_8inl_a39497fce4642d2e6fdf70843a9db9711}\index{vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}!VULKAN\_SHADER\_MAX\_INSTANCE\_TEXTURES@{VULKAN\_SHADER\_MAX\_INSTANCE\_TEXTURES}}
+\index{VULKAN\_SHADER\_MAX\_INSTANCE\_TEXTURES@{VULKAN\_SHADER\_MAX\_INSTANCE\_TEXTURES}!vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}}
+\doxysubsubsection{\texorpdfstring{VULKAN\_SHADER\_MAX\_INSTANCE\_TEXTURES}{VULKAN\_SHADER\_MAX\_INSTANCE\_TEXTURES}}
+{\footnotesize\ttfamily \label{vulkan__shader__types_8inl_a39497fce4642d2e6fdf70843a9db9711} 
+\#define VULKAN\+\_\+\+SHADER\+\_\+\+MAX\+\_\+\+INSTANCE\+\_\+\+TEXTURES~31}
+
+\Hypertarget{vulkan__shader__types_8inl_a5ebd779c710b9da02ab0cc2b30b68a44}\index{vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}!VULKAN\_SHADER\_MAX\_PUSH\_CONST\_RANGES@{VULKAN\_SHADER\_MAX\_PUSH\_CONST\_RANGES}}
+\index{VULKAN\_SHADER\_MAX\_PUSH\_CONST\_RANGES@{VULKAN\_SHADER\_MAX\_PUSH\_CONST\_RANGES}!vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}}
+\doxysubsubsection{\texorpdfstring{VULKAN\_SHADER\_MAX\_PUSH\_CONST\_RANGES}{VULKAN\_SHADER\_MAX\_PUSH\_CONST\_RANGES}}
+{\footnotesize\ttfamily \label{vulkan__shader__types_8inl_a5ebd779c710b9da02ab0cc2b30b68a44} 
+\#define VULKAN\+\_\+\+SHADER\+\_\+\+MAX\+\_\+\+PUSH\+\_\+\+CONST\+\_\+\+RANGES~32}
+
+\Hypertarget{vulkan__shader__types_8inl_a522979157515fe1519d76b948165c6c0}\index{vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}!VULKAN\_SHADER\_MAX\_STAGES@{VULKAN\_SHADER\_MAX\_STAGES}}
+\index{VULKAN\_SHADER\_MAX\_STAGES@{VULKAN\_SHADER\_MAX\_STAGES}!vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}}
+\doxysubsubsection{\texorpdfstring{VULKAN\_SHADER\_MAX\_STAGES}{VULKAN\_SHADER\_MAX\_STAGES}}
+{\footnotesize\ttfamily \label{vulkan__shader__types_8inl_a522979157515fe1519d76b948165c6c0} 
+\#define VULKAN\+\_\+\+SHADER\+\_\+\+MAX\+\_\+\+STAGES~8}
+
+\Hypertarget{vulkan__shader__types_8inl_af05fbac1d921b9f3d628c14af20d6c67}\index{vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}!VULKAN\_SHADER\_MAX\_UNIFORMS@{VULKAN\_SHADER\_MAX\_UNIFORMS}}
+\index{VULKAN\_SHADER\_MAX\_UNIFORMS@{VULKAN\_SHADER\_MAX\_UNIFORMS}!vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}}
+\doxysubsubsection{\texorpdfstring{VULKAN\_SHADER\_MAX\_UNIFORMS}{VULKAN\_SHADER\_MAX\_UNIFORMS}}
+{\footnotesize\ttfamily \label{vulkan__shader__types_8inl_af05fbac1d921b9f3d628c14af20d6c67} 
+\#define VULKAN\+\_\+\+SHADER\+\_\+\+MAX\+\_\+\+UNIFORMS~128}
+
+
+
+\label{doc-typedef-members}
+\Hypertarget{vulkan__shader__types_8inl_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{vulkan__shader__types_8inl_a90614566c5c0061be90e58c025f0fc44}\index{vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}!vulkan\_descriptor\_set\_config@{vulkan\_descriptor\_set\_config}}
+\index{vulkan\_descriptor\_set\_config@{vulkan\_descriptor\_set\_config}!vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}}
+\doxysubsubsection{\texorpdfstring{vulkan\_descriptor\_set\_config}{vulkan\_descriptor\_set\_config}}
+{\footnotesize\ttfamily \label{vulkan__shader__types_8inl_a90614566c5c0061be90e58c025f0fc44} 
+typedef struct vulkan\+\_\+descriptor\+\_\+set\+\_\+config vulkan\+\_\+descriptor\+\_\+set\+\_\+config}
+
+\Hypertarget{vulkan__shader__types_8inl_a9cc22210a10f6c01a7bc29abedbe1178}\index{vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}!vulkan\_shader@{vulkan\_shader}}
+\index{vulkan\_shader@{vulkan\_shader}!vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}}
+\doxysubsubsection{\texorpdfstring{vulkan\_shader}{vulkan\_shader}}
+{\footnotesize\ttfamily \label{vulkan__shader__types_8inl_a9cc22210a10f6c01a7bc29abedbe1178} 
+typedef struct vulkan\+\_\+shader vulkan\+\_\+shader}
+
+\Hypertarget{vulkan__shader__types_8inl_af451e5d8fab91c64cf1b249b24e16dc3}\index{vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}!vulkan\_shader\_config@{vulkan\_shader\_config}}
+\index{vulkan\_shader\_config@{vulkan\_shader\_config}!vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}}
+\doxysubsubsection{\texorpdfstring{vulkan\_shader\_config}{vulkan\_shader\_config}}
+{\footnotesize\ttfamily \label{vulkan__shader__types_8inl_af451e5d8fab91c64cf1b249b24e16dc3} 
+typedef struct vulkan\+\_\+shader\+\_\+config vulkan\+\_\+shader\+\_\+config}
+
+\Hypertarget{vulkan__shader__types_8inl_ac2eef2a4d8cf3922e196b9f1b80e77a7}\index{vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}!vulkan\_shader\_descriptor\_set\_state@{vulkan\_shader\_descriptor\_set\_state}}
+\index{vulkan\_shader\_descriptor\_set\_state@{vulkan\_shader\_descriptor\_set\_state}!vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}}
+\doxysubsubsection{\texorpdfstring{vulkan\_shader\_descriptor\_set\_state}{vulkan\_shader\_descriptor\_set\_state}}
+{\footnotesize\ttfamily \label{vulkan__shader__types_8inl_ac2eef2a4d8cf3922e196b9f1b80e77a7} 
+typedef struct vulkan\+\_\+shader\+\_\+descriptor\+\_\+set\+\_\+state vulkan\+\_\+shader\+\_\+descriptor\+\_\+set\+\_\+state}
+
+\Hypertarget{vulkan__shader__types_8inl_a87cff986ff8609d3746349d96c74aa7f}\index{vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}!vulkan\_shader\_instance\_state@{vulkan\_shader\_instance\_state}}
+\index{vulkan\_shader\_instance\_state@{vulkan\_shader\_instance\_state}!vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}}
+\doxysubsubsection{\texorpdfstring{vulkan\_shader\_instance\_state}{vulkan\_shader\_instance\_state}}
+{\footnotesize\ttfamily \label{vulkan__shader__types_8inl_a87cff986ff8609d3746349d96c74aa7f} 
+typedef struct vulkan\+\_\+shader\+\_\+instance\+\_\+state vulkan\+\_\+shader\+\_\+instance\+\_\+state}
+
+\Hypertarget{vulkan__shader__types_8inl_a5c5f85f583ac37608b250064461ac681}\index{vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}!vulkan\_shader\_stage\_config@{vulkan\_shader\_stage\_config}}
+\index{vulkan\_shader\_stage\_config@{vulkan\_shader\_stage\_config}!vulkan\_shader\_types.inl@{vulkan\_shader\_types.inl}}
+\doxysubsubsection{\texorpdfstring{vulkan\_shader\_stage\_config}{vulkan\_shader\_stage\_config}}
+{\footnotesize\ttfamily \label{vulkan__shader__types_8inl_a5c5f85f583ac37608b250064461ac681} 
+typedef struct vulkan\+\_\+shader\+\_\+stage\+\_\+config vulkan\+\_\+shader\+\_\+stage\+\_\+config}
+

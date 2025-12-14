@@ -22,6 +22,7 @@ var kmemory_8h =
       [ "MEMORY_TAG_ENTITY", "d6/dbf/kmemory_8h.html#a37d016888ad6b70195335004614d4942ae5a66503c5643a2ece53a5e61217b37a", null ],
       [ "MEMORY_TAG_ENTITY_NODE", "d6/dbf/kmemory_8h.html#a37d016888ad6b70195335004614d4942ac5c23deddfa1ce60e0b73d1bf99af20e", null ],
       [ "MEMORY_TAG_SCENE", "d6/dbf/kmemory_8h.html#a37d016888ad6b70195335004614d4942a5abbd9631a24805c5770e2c81b72bac5", null ],
+      [ "MEMORY_TAG_SHADER", "d6/dbf/kmemory_8h.html#a37d016888ad6b70195335004614d4942a228a6e0af68e74a166816dcb34b946ba", null ],
       [ "MEMORY_TAG_MAX_TAGS", "d6/dbf/kmemory_8h.html#a37d016888ad6b70195335004614d4942ace51437c5832765c883cbae625e248b1", null ]
     ] ],
     [ "get_memory_alloc_count", "d6/dbf/kmemory_8h.html#ae08429b1ce06f06ef75ff0eafc823887", null ],

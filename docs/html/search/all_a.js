@@ -48,13 +48,14 @@ var searchData=
   ['knoinline_45',['KNOINLINE',['../d8/db0/defines_8h.html#afc8c390e62fe367aaf65e4b3a8e9d64c',1,'defines.h']]],
   ['krandom_46',['krandom',['../df/dc5/kmath_8c.html#ac54ae2728db0c39d2ccdea1e7c4029e9',1,'krandom():&#160;kmath.c'],['../dc/dd0/kmath_8h.html#ac54ae2728db0c39d2ccdea1e7c4029e9',1,'krandom():&#160;kmath.c']]],
   ['krandom_5fin_5frange_47',['krandom_in_range',['../df/dc5/kmath_8c.html#a1a4d8b8004d8fc7a55f7f73af084ca71',1,'krandom_in_range(i32 min, i32 max):&#160;kmath.c'],['../dc/dd0/kmath_8h.html#a1a4d8b8004d8fc7a55f7f73af084ca71',1,'krandom_in_range(i32 min, i32 max):&#160;kmath.c']]],
-  ['kset_5fmemory_48',['kset_memory',['../d3/d3c/kmemory_8c.html#a9b0af42158bf4d4a8db3d25d284b83f4',1,'kset_memory(void *dest, i32 value, u64 size):&#160;kmemory.c'],['../d6/dbf/kmemory_8h.html#a9b0af42158bf4d4a8db3d25d284b83f4',1,'kset_memory(void *dest, i32 value, u64 size):&#160;kmemory.c']]],
-  ['ksin_49',['ksin',['../df/dc5/kmath_8c.html#a4a89f4dff6daae5dd77b89ba6a3ecea2',1,'ksin(f32 x):&#160;kmath.c'],['../dc/dd0/kmath_8h.html#a4a89f4dff6daae5dd77b89ba6a3ecea2',1,'ksin(f32 x):&#160;kmath.c']]],
-  ['ksqrt_50',['ksqrt',['../df/dc5/kmath_8c.html#a44537c51868208d3bcfec4fe46db9bf4',1,'ksqrt(f32 x):&#160;kmath.c'],['../dc/dd0/kmath_8h.html#a44537c51868208d3bcfec4fe46db9bf4',1,'ksqrt(f32 x):&#160;kmath.c']]],
-  ['kstring_2ec_51',['kstring.c',['../d6/d19/kstring_8c.html',1,'']]],
-  ['kstring_2eh_52',['kstring.h',['../d7/d63/kstring_8h.html',1,'']]],
-  ['ktan_53',['ktan',['../df/dc5/kmath_8c.html#a2e33ecd9e2f3ccc5d27beab90460aa68',1,'ktan(f32 x):&#160;kmath.c'],['../dc/dd0/kmath_8h.html#a2e33ecd9e2f3ccc5d27beab90460aa68',1,'ktan(f32 x):&#160;kmath.c']]],
-  ['ktrace_54',['KTRACE',['../d1/d8c/logger_8h.html#a1871a1767ecd70d973893d36176a697f',1,'logger.h']]],
-  ['kwarn_55',['KWARN',['../d1/d8c/logger_8h.html#a3e40140ad218fd4ef727b1a9009a1bea',1,'logger.h']]],
-  ['kzero_5fmemory_56',['kzero_memory',['../d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6',1,'kzero_memory(void *block, u64 size):&#160;kmemory.c'],['../d6/dbf/kmemory_8h.html#af7a3a9859ec3104c490238242dae4ed6',1,'kzero_memory(void *block, u64 size):&#160;kmemory.c']]]
+  ['krange_48',['krange',['../d7/d4c/structkrange.html',1,'krange'],['../d8/db0/defines_8h.html#a0d37ef0b1a77903e7698337d2594035e',1,'krange:&#160;defines.h']]],
+  ['kset_5fmemory_49',['kset_memory',['../d3/d3c/kmemory_8c.html#a9b0af42158bf4d4a8db3d25d284b83f4',1,'kset_memory(void *dest, i32 value, u64 size):&#160;kmemory.c'],['../d6/dbf/kmemory_8h.html#a9b0af42158bf4d4a8db3d25d284b83f4',1,'kset_memory(void *dest, i32 value, u64 size):&#160;kmemory.c']]],
+  ['ksin_50',['ksin',['../df/dc5/kmath_8c.html#a4a89f4dff6daae5dd77b89ba6a3ecea2',1,'ksin(f32 x):&#160;kmath.c'],['../dc/dd0/kmath_8h.html#a4a89f4dff6daae5dd77b89ba6a3ecea2',1,'ksin(f32 x):&#160;kmath.c']]],
+  ['ksqrt_51',['ksqrt',['../df/dc5/kmath_8c.html#a44537c51868208d3bcfec4fe46db9bf4',1,'ksqrt(f32 x):&#160;kmath.c'],['../dc/dd0/kmath_8h.html#a44537c51868208d3bcfec4fe46db9bf4',1,'ksqrt(f32 x):&#160;kmath.c']]],
+  ['kstring_2ec_52',['kstring.c',['../d6/d19/kstring_8c.html',1,'']]],
+  ['kstring_2eh_53',['kstring.h',['../d7/d63/kstring_8h.html',1,'']]],
+  ['ktan_54',['ktan',['../df/dc5/kmath_8c.html#a2e33ecd9e2f3ccc5d27beab90460aa68',1,'ktan(f32 x):&#160;kmath.c'],['../dc/dd0/kmath_8h.html#a2e33ecd9e2f3ccc5d27beab90460aa68',1,'ktan(f32 x):&#160;kmath.c']]],
+  ['ktrace_55',['KTRACE',['../d1/d8c/logger_8h.html#a1871a1767ecd70d973893d36176a697f',1,'logger.h']]],
+  ['kwarn_56',['KWARN',['../d1/d8c/logger_8h.html#a3e40140ad218fd4ef727b1a9009a1bea',1,'logger.h']]],
+  ['kzero_5fmemory_57',['kzero_memory',['../d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6',1,'kzero_memory(void *block, u64 size):&#160;kmemory.c'],['../d6/dbf/kmemory_8h.html#af7a3a9859ec3104c490238242dae4ed6',1,'kzero_memory(void *block, u64 size):&#160;kmemory.c']]]
 ];

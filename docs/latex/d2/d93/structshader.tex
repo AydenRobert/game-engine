@@ -1,0 +1,341 @@
+\doxysection{shader Struct Reference}
+\hypertarget{structshader}{}\label{structshader}\index{shader@{shader}}
+
+
+{\ttfamily \#include $<$shader\+\_\+system.\+h$>$}
+
+
+
+Collaboration diagram for shader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc8/structshader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{structshader_a1e35b56847400058723c74f30b4bdec3}{id}}
+\begin{DoxyCompactList}\small\item\em The shader identifier. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structshader_a28ab4ade15af5029f94052ab1204993c}{name}}
+\begin{DoxyCompactList}\small\item\em The shader\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{structshader_a0e0a67da7ae59f70ac43b897e0c284ba}{use\+\_\+instances}}
+\begin{DoxyCompactList}\small\item\em Indicates if the shader uses instances. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{structshader_af0a0518169bfa27821f621c75af52f43}{use\+\_\+locals}}
+\begin{DoxyCompactList}\small\item\em Indicates if locals are used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structshader_a2c72317fa1139a232254bac77dc284d1}{required\+\_\+ubo\+\_\+alignment}}
+\begin{DoxyCompactList}\small\item\em UBO alignment in bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structshader_ac14152513b3a22539b48cff007c15df0}{global\+\_\+ubo\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em The actual size of the global UBO. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structshader_a17035b0c21acc2c2262da2409671c568}{global\+\_\+ubo\+\_\+stride}}
+\begin{DoxyCompactList}\small\item\em The stride of the UBO. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structshader_a7d8c8ffd000dddd8f139cfc082ed3cd1}{global\+\_\+ubo\+\_\+offset}}
+\begin{DoxyCompactList}\small\item\em Offset from the start of the buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structshader_abc016f6b023b30f19b6265a25713edc1}{ubo\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em Size of the instance UBO. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structshader_a66e679263ee2c43e3c5f0dbfff5f4d27}{ubo\+\_\+stride}}
+\begin{DoxyCompactList}\small\item\em Stride of the instance UBO. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structshader_a9f7520a676050701a3f18c73fee34081}{push\+\_\+constant\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em Push constant size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structshader_a1446c9ddd022cf141aac11b2d7307dce}{push\+\_\+constant\+\_\+stride}}
+\begin{DoxyCompactList}\small\item\em Push constant stride. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structshader_a87f6c51950780934ac34bcc9e2ccedb0}{global\+\_\+textures}}
+\begin{DoxyCompactList}\small\item\em Array of global texture pointers (Darray). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \mbox{\hyperlink{structshader_a00c501230bd0ae6ead0b73f41486f7b7}{instance\+\_\+texture\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em Number of instance textures. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25}{shader\+\_\+scope}} \mbox{\hyperlink{structshader_ad58a6ab54aedf474e6bd84717127bb99}{bound\+\_\+scope}}
+\begin{DoxyCompactList}\small\item\em Bounded scope. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{structshader_a7da50c48e7681f887f7ddfdfa9b5005b}{bound\+\_\+instance\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em Identifier of the currently bounded instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{structshader_af2c37c1d9b14ca34366421439b2f0143}{bound\+\_\+ubo\+\_\+offset}}
+\begin{DoxyCompactList}\small\item\em The currently bound instance\textquotesingle{}s UBO offset. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structshader_a3911cfc714adeb2c5cc83ae202977b00}{hashtable\+\_\+block}}
+\begin{DoxyCompactList}\small\item\em Block of memory used by the uniform hastable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structhashtable}{hashtable}} \mbox{\hyperlink{structshader_acf74886bd29c502cf0773942a094e9b0}{uniform\+\_\+lookup}}
+\begin{DoxyCompactList}\small\item\em Hashtable to store index/locations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structshader__uniform}{shader\+\_\+uniform}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structshader_ae3c0f611bff9c00d1094867f541d5845}{uniforms}}
+\begin{DoxyCompactList}\small\item\em An array of uniforms (Darray). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structshader__attribute}{shader\+\_\+attribute}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structshader_a84c84800dcc89efeb0ce164b7ded0ab4}{attributes}}
+\begin{DoxyCompactList}\small\item\em An array of attributes (Darray). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9}{shader\+\_\+state}} \mbox{\hyperlink{structshader_aa0d718d825f4a9962e0f6a437eb73736}{state}}
+\begin{DoxyCompactList}\small\item\em Internal state of the shader. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \mbox{\hyperlink{structshader_aa8a2b808d8da7715f82377a5ea7ddea3}{push\+\_\+constant\+\_\+range\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em Number of push constant ranges. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structkrange}{krange}} \mbox{\hyperlink{structshader_a8d1757e75996da966338b7a7424f7b57}{push\+\_\+constant\+\_\+ranges}} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em An array of push constant ranges. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \mbox{\hyperlink{structshader_a37088df01fd952507da97f975f95ea12}{attribute\+\_\+stride}}
+\begin{DoxyCompactList}\small\item\em Size of all the attributes combined. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structshader_aaec5ab359109d9f7039dde4d92ecff16}{internal\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Opaque pointer to renderer specific data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-variable-members}
+\Hypertarget{structshader_doc-variable-members}
+\doxysubsection{Field Documentation}
+\Hypertarget{structshader_a37088df01fd952507da97f975f95ea12}\index{shader@{shader}!attribute\_stride@{attribute\_stride}}
+\index{attribute\_stride@{attribute\_stride}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{attribute\_stride}{attribute\_stride}}
+{\footnotesize\ttfamily \label{structshader_a37088df01fd952507da97f975f95ea12} 
+\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} shader\+::attribute\+\_\+stride}
+
+
+
+Size of all the attributes combined. 
+
+\Hypertarget{structshader_a84c84800dcc89efeb0ce164b7ded0ab4}\index{shader@{shader}!attributes@{attributes}}
+\index{attributes@{attributes}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{attributes}{attributes}}
+{\footnotesize\ttfamily \label{structshader_a84c84800dcc89efeb0ce164b7ded0ab4} 
+\mbox{\hyperlink{structshader__attribute}{shader\+\_\+attribute}}\texorpdfstring{$\ast$}{*} shader\+::attributes}
+
+
+
+An array of attributes (Darray). 
+
+\Hypertarget{structshader_a7da50c48e7681f887f7ddfdfa9b5005b}\index{shader@{shader}!bound\_instance\_id@{bound\_instance\_id}}
+\index{bound\_instance\_id@{bound\_instance\_id}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{bound\_instance\_id}{bound\_instance\_id}}
+{\footnotesize\ttfamily \label{structshader_a7da50c48e7681f887f7ddfdfa9b5005b} 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} shader\+::bound\+\_\+instance\+\_\+id}
+
+
+
+Identifier of the currently bounded instance. 
+
+\Hypertarget{structshader_ad58a6ab54aedf474e6bd84717127bb99}\index{shader@{shader}!bound\_scope@{bound\_scope}}
+\index{bound\_scope@{bound\_scope}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{bound\_scope}{bound\_scope}}
+{\footnotesize\ttfamily \label{structshader_ad58a6ab54aedf474e6bd84717127bb99} 
+\mbox{\hyperlink{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25}{shader\+\_\+scope}} shader\+::bound\+\_\+scope}
+
+
+
+Bounded scope. 
+
+\Hypertarget{structshader_af2c37c1d9b14ca34366421439b2f0143}\index{shader@{shader}!bound\_ubo\_offset@{bound\_ubo\_offset}}
+\index{bound\_ubo\_offset@{bound\_ubo\_offset}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{bound\_ubo\_offset}{bound\_ubo\_offset}}
+{\footnotesize\ttfamily \label{structshader_af2c37c1d9b14ca34366421439b2f0143} 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} shader\+::bound\+\_\+ubo\+\_\+offset}
+
+
+
+The currently bound instance\textquotesingle{}s UBO offset. 
+
+\Hypertarget{structshader_a87f6c51950780934ac34bcc9e2ccedb0}\index{shader@{shader}!global\_textures@{global\_textures}}
+\index{global\_textures@{global\_textures}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{global\_textures}{global\_textures}}
+{\footnotesize\ttfamily \label{structshader_a87f6c51950780934ac34bcc9e2ccedb0} 
+\mbox{\hyperlink{structtexture}{texture}}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} shader\+::global\+\_\+textures}
+
+
+
+Array of global texture pointers (Darray). 
+
+\Hypertarget{structshader_a7d8c8ffd000dddd8f139cfc082ed3cd1}\index{shader@{shader}!global\_ubo\_offset@{global\_ubo\_offset}}
+\index{global\_ubo\_offset@{global\_ubo\_offset}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{global\_ubo\_offset}{global\_ubo\_offset}}
+{\footnotesize\ttfamily \label{structshader_a7d8c8ffd000dddd8f139cfc082ed3cd1} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} shader\+::global\+\_\+ubo\+\_\+offset}
+
+
+
+Offset from the start of the buffer. 
+
+\Hypertarget{structshader_ac14152513b3a22539b48cff007c15df0}\index{shader@{shader}!global\_ubo\_size@{global\_ubo\_size}}
+\index{global\_ubo\_size@{global\_ubo\_size}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{global\_ubo\_size}{global\_ubo\_size}}
+{\footnotesize\ttfamily \label{structshader_ac14152513b3a22539b48cff007c15df0} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} shader\+::global\+\_\+ubo\+\_\+size}
+
+
+
+The actual size of the global UBO. 
+
+\Hypertarget{structshader_a17035b0c21acc2c2262da2409671c568}\index{shader@{shader}!global\_ubo\_stride@{global\_ubo\_stride}}
+\index{global\_ubo\_stride@{global\_ubo\_stride}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{global\_ubo\_stride}{global\_ubo\_stride}}
+{\footnotesize\ttfamily \label{structshader_a17035b0c21acc2c2262da2409671c568} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} shader\+::global\+\_\+ubo\+\_\+stride}
+
+
+
+The stride of the UBO. 
+
+\Hypertarget{structshader_a3911cfc714adeb2c5cc83ae202977b00}\index{shader@{shader}!hashtable\_block@{hashtable\_block}}
+\index{hashtable\_block@{hashtable\_block}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{hashtable\_block}{hashtable\_block}}
+{\footnotesize\ttfamily \label{structshader_a3911cfc714adeb2c5cc83ae202977b00} 
+void\texorpdfstring{$\ast$}{*} shader\+::hashtable\+\_\+block}
+
+
+
+Block of memory used by the uniform hastable. 
+
+\Hypertarget{structshader_a1e35b56847400058723c74f30b4bdec3}\index{shader@{shader}!id@{id}}
+\index{id@{id}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{structshader_a1e35b56847400058723c74f30b4bdec3} 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} shader\+::id}
+
+
+
+The shader identifier. 
+
+\Hypertarget{structshader_a00c501230bd0ae6ead0b73f41486f7b7}\index{shader@{shader}!instance\_texture\_count@{instance\_texture\_count}}
+\index{instance\_texture\_count@{instance\_texture\_count}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{instance\_texture\_count}{instance\_texture\_count}}
+{\footnotesize\ttfamily \label{structshader_a00c501230bd0ae6ead0b73f41486f7b7} 
+\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} shader\+::instance\+\_\+texture\+\_\+count}
+
+
+
+Number of instance textures. 
+
+\Hypertarget{structshader_aaec5ab359109d9f7039dde4d92ecff16}\index{shader@{shader}!internal\_data@{internal\_data}}
+\index{internal\_data@{internal\_data}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{internal\_data}{internal\_data}}
+{\footnotesize\ttfamily \label{structshader_aaec5ab359109d9f7039dde4d92ecff16} 
+void\texorpdfstring{$\ast$}{*} shader\+::internal\+\_\+data}
+
+
+
+Opaque pointer to renderer specific data. 
+
+\Hypertarget{structshader_a28ab4ade15af5029f94052ab1204993c}\index{shader@{shader}!name@{name}}
+\index{name@{name}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{structshader_a28ab4ade15af5029f94052ab1204993c} 
+char\texorpdfstring{$\ast$}{*} shader\+::name}
+
+
+
+The shader\textquotesingle{}s name. 
+
+\Hypertarget{structshader_aa8a2b808d8da7715f82377a5ea7ddea3}\index{shader@{shader}!push\_constant\_range\_count@{push\_constant\_range\_count}}
+\index{push\_constant\_range\_count@{push\_constant\_range\_count}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{push\_constant\_range\_count}{push\_constant\_range\_count}}
+{\footnotesize\ttfamily \label{structshader_aa8a2b808d8da7715f82377a5ea7ddea3} 
+\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} shader\+::push\+\_\+constant\+\_\+range\+\_\+count}
+
+
+
+Number of push constant ranges. 
+
+\Hypertarget{structshader_a8d1757e75996da966338b7a7424f7b57}\index{shader@{shader}!push\_constant\_ranges@{push\_constant\_ranges}}
+\index{push\_constant\_ranges@{push\_constant\_ranges}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{push\_constant\_ranges}{push\_constant\_ranges}}
+{\footnotesize\ttfamily \label{structshader_a8d1757e75996da966338b7a7424f7b57} 
+\mbox{\hyperlink{structkrange}{krange}} shader\+::push\+\_\+constant\+\_\+ranges\mbox{[}32\mbox{]}}
+
+
+
+An array of push constant ranges. 
+
+\Hypertarget{structshader_a9f7520a676050701a3f18c73fee34081}\index{shader@{shader}!push\_constant\_size@{push\_constant\_size}}
+\index{push\_constant\_size@{push\_constant\_size}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{push\_constant\_size}{push\_constant\_size}}
+{\footnotesize\ttfamily \label{structshader_a9f7520a676050701a3f18c73fee34081} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} shader\+::push\+\_\+constant\+\_\+size}
+
+
+
+Push constant size. 
+
+\Hypertarget{structshader_a1446c9ddd022cf141aac11b2d7307dce}\index{shader@{shader}!push\_constant\_stride@{push\_constant\_stride}}
+\index{push\_constant\_stride@{push\_constant\_stride}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{push\_constant\_stride}{push\_constant\_stride}}
+{\footnotesize\ttfamily \label{structshader_a1446c9ddd022cf141aac11b2d7307dce} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} shader\+::push\+\_\+constant\+\_\+stride}
+
+
+
+Push constant stride. 
+
+\Hypertarget{structshader_a2c72317fa1139a232254bac77dc284d1}\index{shader@{shader}!required\_ubo\_alignment@{required\_ubo\_alignment}}
+\index{required\_ubo\_alignment@{required\_ubo\_alignment}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{required\_ubo\_alignment}{required\_ubo\_alignment}}
+{\footnotesize\ttfamily \label{structshader_a2c72317fa1139a232254bac77dc284d1} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} shader\+::required\+\_\+ubo\+\_\+alignment}
+
+
+
+UBO alignment in bytes. 
+
+\Hypertarget{structshader_aa0d718d825f4a9962e0f6a437eb73736}\index{shader@{shader}!state@{state}}
+\index{state@{state}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \label{structshader_aa0d718d825f4a9962e0f6a437eb73736} 
+\mbox{\hyperlink{shader__system_8h_a7dd78eede0fc8a5ffbe41739ab97c8f9}{shader\+\_\+state}} shader\+::state}
+
+
+
+Internal state of the shader. 
+
+\Hypertarget{structshader_abc016f6b023b30f19b6265a25713edc1}\index{shader@{shader}!ubo\_size@{ubo\_size}}
+\index{ubo\_size@{ubo\_size}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{ubo\_size}{ubo\_size}}
+{\footnotesize\ttfamily \label{structshader_abc016f6b023b30f19b6265a25713edc1} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} shader\+::ubo\+\_\+size}
+
+
+
+Size of the instance UBO. 
+
+\Hypertarget{structshader_a66e679263ee2c43e3c5f0dbfff5f4d27}\index{shader@{shader}!ubo\_stride@{ubo\_stride}}
+\index{ubo\_stride@{ubo\_stride}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{ubo\_stride}{ubo\_stride}}
+{\footnotesize\ttfamily \label{structshader_a66e679263ee2c43e3c5f0dbfff5f4d27} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} shader\+::ubo\+\_\+stride}
+
+
+
+Stride of the instance UBO. 
+
+\Hypertarget{structshader_acf74886bd29c502cf0773942a094e9b0}\index{shader@{shader}!uniform\_lookup@{uniform\_lookup}}
+\index{uniform\_lookup@{uniform\_lookup}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{uniform\_lookup}{uniform\_lookup}}
+{\footnotesize\ttfamily \label{structshader_acf74886bd29c502cf0773942a094e9b0} 
+\mbox{\hyperlink{structhashtable}{hashtable}} shader\+::uniform\+\_\+lookup}
+
+
+
+Hashtable to store index/locations. 
+
+\Hypertarget{structshader_ae3c0f611bff9c00d1094867f541d5845}\index{shader@{shader}!uniforms@{uniforms}}
+\index{uniforms@{uniforms}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{uniforms}{uniforms}}
+{\footnotesize\ttfamily \label{structshader_ae3c0f611bff9c00d1094867f541d5845} 
+\mbox{\hyperlink{structshader__uniform}{shader\+\_\+uniform}}\texorpdfstring{$\ast$}{*} shader\+::uniforms}
+
+
+
+An array of uniforms (Darray). 
+
+\Hypertarget{structshader_a0e0a67da7ae59f70ac43b897e0c284ba}\index{shader@{shader}!use\_instances@{use\_instances}}
+\index{use\_instances@{use\_instances}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{use\_instances}{use\_instances}}
+{\footnotesize\ttfamily \label{structshader_a0e0a67da7ae59f70ac43b897e0c284ba} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+::use\+\_\+instances}
+
+
+
+Indicates if the shader uses instances. 
+
+\Hypertarget{structshader_af0a0518169bfa27821f621c75af52f43}\index{shader@{shader}!use\_locals@{use\_locals}}
+\index{use\_locals@{use\_locals}!shader@{shader}}
+\doxysubsubsection{\texorpdfstring{use\_locals}{use\_locals}}
+{\footnotesize\ttfamily \label{structshader_af0a0518169bfa27821f621c75af52f43} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+::use\+\_\+locals}
+
+
+
+Indicates if locals are used. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+engine/src/systems/\mbox{\hyperlink{shader__system_8h}{shader\+\_\+system.\+h}}\end{DoxyCompactItemize}

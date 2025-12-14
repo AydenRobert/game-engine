@@ -71,12 +71,38 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8h_aa4fb0ad12002261fefbc176ff04b390d}{string\+\_\+to\+\_\+u64}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}out\+\_\+int)
 \begin{DoxyCompactList}\small\item\em Attempts to parse a 64-\/bit unsigned integer from a string. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{kstring_8h_a77921b5fcfceb091641bddc64e9cb552}{string\+\_\+to\+\_\+b8}} (char \texorpdfstring{$\ast$}{*}str, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \texorpdfstring{$\ast$}{*}out\+\_\+bool)
-\begin{DoxyCompactList}\small\item\em Attempts to parse a boolean from a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Attempts to parse a boolean from a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{kstring_8h_a62503334d43c725cc8392529858e618c}{string\+\_\+split}} (const char \texorpdfstring{$\ast$}{*}str, char delimiter, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}str\+\_\+darray, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} trim\+\_\+entries, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} include\+\_\+empty)
+\item 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \mbox{\hyperlink{kstring_8h_a7d90b08d30c90708c4158166fe0f3a92}{string\+\_\+cleanup\+\_\+split\+\_\+array}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}str\+\_\+darray)
+\end{DoxyCompactItemize}
 
 
 \label{doc-func-members}
 \Hypertarget{kstring_8h_doc-func-members}
 \doxysubsection{Function Documentation}
+\Hypertarget{kstring_8h_a7d90b08d30c90708c4158166fe0f3a92}\index{kstring.h@{kstring.h}!string\_cleanup\_split\_array@{string\_cleanup\_split\_array}}
+\index{string\_cleanup\_split\_array@{string\_cleanup\_split\_array}!kstring.h@{kstring.h}}
+\doxysubsubsection{\texorpdfstring{string\_cleanup\_split\_array()}{string\_cleanup\_split\_array()}}
+{\footnotesize\ttfamily \label{kstring_8h_a7d90b08d30c90708c4158166fe0f3a92} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void string\+\_\+cleanup\+\_\+split\+\_\+array (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{str\+\_\+darray}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d63/kstring_8h_a7d90b08d30c90708c4158166fe0f3a92_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d63/kstring_8h_a7d90b08d30c90708c4158166fe0f3a92_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{kstring_8h_a2e2721cb0d6afa4ac7bde71a51f5d7f0}\index{kstring.h@{kstring.h}!string\_copy@{string\_copy}}
 \index{string\_copy@{string\_copy}!kstring.h@{kstring.h}}
 \doxysubsubsection{\texorpdfstring{string\_copy()}{string\_copy()}}
@@ -226,6 +252,28 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d7/d63/kstring_8h_abf110e83cbf21d0e9939b1a1960d26cc_icgraph}
 \end{center}
 \end{figure}
+\Hypertarget{kstring_8h_a62503334d43c725cc8392529858e618c}\index{kstring.h@{kstring.h}!string\_split@{string\_split}}
+\index{string\_split@{string\_split}!kstring.h@{kstring.h}}
+\doxysubsubsection{\texorpdfstring{string\_split()}{string\_split()}}
+{\footnotesize\ttfamily \label{kstring_8h_a62503334d43c725cc8392529858e618c} 
+\mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} string\+\_\+split (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{char}]{delimiter}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{str\+\_\+darray}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{trim\+\_\+entries}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{include\+\_\+empty}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d63/kstring_8h_a62503334d43c725cc8392529858e618c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d63/kstring_8h_a62503334d43c725cc8392529858e618c_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{kstring_8h_a77921b5fcfceb091641bddc64e9cb552}\index{kstring.h@{kstring.h}!string\_to\_b8@{string\_to\_b8}}
 \index{string\_to\_b8@{string\_to\_b8}!kstring.h@{kstring.h}}
 \doxysubsubsection{\texorpdfstring{string\_to\_b8()}{string\_to\_b8()}}
@@ -251,6 +299,14 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=276pt]{d7/d63/kstring_8h_a77921b5fcfceb091641bddc64e9cb552_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d63/kstring_8h_a77921b5fcfceb091641bddc64e9cb552_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{kstring_8h_ab2a8d90ecf93ac366cab2c087e5490d8}\index{kstring.h@{kstring.h}!string\_to\_f32@{string\_to\_f32}}

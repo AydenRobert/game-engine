@@ -18,7 +18,6 @@ var structvulkan__context =
     [ "in_flight_fences", "d9/dc9/structvulkan__context.html#a8112e981decf4df4525dc372e62f82c8", null ],
     [ "instance", "d9/dc9/structvulkan__context.html#a71e13564f2111dafcda6c332918c196f", null ],
     [ "main_renderpass", "d9/dc9/structvulkan__context.html#a35b6a0b0b1424b05c15e93298f69f26e", null ],
-    [ "material_shader", "d9/dc9/structvulkan__context.html#a010e151c3fe4f524195d131eda4f7ac2", null ],
     [ "object_index_buffer", "d9/dc9/structvulkan__context.html#a036b1378d111274567245bd286d290d3", null ],
     [ "object_vertex_buffer", "d9/dc9/structvulkan__context.html#a668bba584e42365c13d9f5664ca217b8", null ],
     [ "queue_complete_semaphores", "d9/dc9/structvulkan__context.html#a64c9d883d2534b9cc6b7b47890efdf36", null ],
@@ -26,6 +25,5 @@ var structvulkan__context =
     [ "surface", "d9/dc9/structvulkan__context.html#ad0cd4ef188f905064d59bb918b69eb38", null ],
     [ "swapchain", "d9/dc9/structvulkan__context.html#a847e3b9f7c19d2dc9a623bc84403ee8e", null ],
     [ "ui_renderpass", "d9/dc9/structvulkan__context.html#a3d3649c5e0be460c2554bccef014a96e", null ],
-    [ "ui_shader", "d9/dc9/structvulkan__context.html#acd75fbe8660e13050c01861b80b5e17a", null ],
     [ "world_framebuffers", "d9/dc9/structvulkan__context.html#a20bab9417ffec615b656145b026f75f4", null ]
 ];

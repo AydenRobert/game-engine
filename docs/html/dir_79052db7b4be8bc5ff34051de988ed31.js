@@ -8,6 +8,8 @@ var dir_79052db7b4be8bc5ff34051de988ed31 =
     [ "loader_utils.h", "d8/d81/loader__utils_8h.html", "d8/d81/loader__utils_8h" ],
     [ "material_loader.c", "d8/d41/material__loader_8c.html", "d8/d41/material__loader_8c" ],
     [ "material_loader.h", "d9/db0/material__loader_8h.html", "d9/db0/material__loader_8h" ],
+    [ "shader_loader.c", "dd/d9d/shader__loader_8c.html", "dd/d9d/shader__loader_8c" ],
+    [ "shader_loader.h", "d9/dc0/shader__loader_8h.html", "d9/dc0/shader__loader_8h" ],
     [ "text_loader.c", "d9/d88/text__loader_8c.html", "d9/d88/text__loader_8c" ],
     [ "text_loader.h", "d6/d81/text__loader_8h.html", "d6/d81/text__loader_8h" ]
 ];

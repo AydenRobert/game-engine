@@ -1,0 +1,13 @@
+<map id="create_module" name="create_module">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,57,124,85"/>
+<area shape="rect" id="Node000002" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="204,5,323,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,54,195,36,190,39,121,59"/>
+<area shape="rect" id="Node000004" href="$d2/d8b/resource__system_8c.html#a6ca971dda0f7cd6545a27e30ae63e46d" title=" " alt="" coords="180,57,347,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="124,69,166,70,161,72,125,74"/>
+<area shape="rect" id="Node000006" href="$d2/d8b/resource__system_8c.html#af2ee144059d829688ff5cfe7806ddeac" title=" " alt="" coords="172,109,355,137"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="121,83,195,104,190,106,120,88"/>
+<area shape="rect" id="Node000003" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="403,5,577,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="323,17,390,19,385,20,324,22"/>
+<area shape="rect" id="Node000005" href="$d2/d8b/resource__system_8c.html#add0733bf358721495904be57107031d6" title=" " alt="" coords="466,57,515,85"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="347,69,452,71,447,72,348,74"/>
+</map>

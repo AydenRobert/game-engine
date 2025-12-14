@@ -1,7 +1,29 @@
 var searchData=
 [
-  ['xdg_5fpopup_5flistener_0',['xdg_popup_listener',['../de/dff/structxdg__popup__listener.html',1,'']]],
-  ['xdg_5fsurface_5flistener_1',['xdg_surface_listener',['../de/dda/structxdg__surface__listener.html',1,'']]],
-  ['xdg_5ftoplevel_5flistener_2',['xdg_toplevel_listener',['../da/d2d/structxdg__toplevel__listener.html',1,'']]],
-  ['xdg_5fwm_5fbase_5flistener_3',['xdg_wm_base_listener',['../d2/d0f/structxdg__wm__base__listener.html',1,'']]]
+  ['vec2_5fu_0',['vec2_u',['../db/d7b/unionvec2__u.html',1,'']]],
+  ['vec3_5fu_1',['vec3_u',['../d5/df1/unionvec3__u.html',1,'']]],
+  ['vec4_5fu_2',['vec4_u',['../df/dbe/unionvec4__u.html',1,'']]],
+  ['vertex_5f2d_3',['vertex_2d',['../de/dba/structvertex__2d.html',1,'']]],
+  ['vertex_5f3d_4',['vertex_3d',['../d7/ddb/structvertex__3d.html',1,'']]],
+  ['vulkan_5fbuffer_5',['vulkan_buffer',['../d5/def/structvulkan__buffer.html',1,'']]],
+  ['vulkan_5fcommand_5fbuffer_6',['vulkan_command_buffer',['../de/d25/structvulkan__command__buffer.html',1,'']]],
+  ['vulkan_5fcontext_7',['vulkan_context',['../d9/dc9/structvulkan__context.html',1,'']]],
+  ['vulkan_5fdescriptor_5fset_5fconfig_8',['vulkan_descriptor_set_config',['../df/d2f/structvulkan__descriptor__set__config.html',1,'']]],
+  ['vulkan_5fdescriptor_5fstate_9',['vulkan_descriptor_state',['../df/d4d/structvulkan__descriptor__state.html',1,'']]],
+  ['vulkan_5fdevice_10',['vulkan_device',['../d7/d6e/structvulkan__device.html',1,'']]],
+  ['vulkan_5fgeometry_5fdata_11',['vulkan_geometry_data',['../d4/d76/structvulkan__geometry__data.html',1,'']]],
+  ['vulkan_5fimage_12',['vulkan_image',['../d9/d2f/structvulkan__image.html',1,'']]],
+  ['vulkan_5fphysical_5fdevice_5fqueue_5ffamily_5finfo_13',['vulkan_physical_device_queue_family_info',['../d5/da3/structvulkan__physical__device__queue__family__info.html',1,'']]],
+  ['vulkan_5fphysical_5fdevice_5frequirements_14',['vulkan_physical_device_requirements',['../d4/d4a/structvulkan__physical__device__requirements.html',1,'']]],
+  ['vulkan_5fpipeline_15',['vulkan_pipeline',['../dc/d85/structvulkan__pipeline.html',1,'']]],
+  ['vulkan_5frenderpass_16',['vulkan_renderpass',['../d0/d06/structvulkan__renderpass.html',1,'']]],
+  ['vulkan_5fshader_17',['vulkan_shader',['../d8/ddd/structvulkan__shader.html',1,'']]],
+  ['vulkan_5fshader_5fconfig_18',['vulkan_shader_config',['../de/d44/structvulkan__shader__config.html',1,'']]],
+  ['vulkan_5fshader_5fdescriptor_5fset_5fstate_19',['vulkan_shader_descriptor_set_state',['../d4/dd8/structvulkan__shader__descriptor__set__state.html',1,'']]],
+  ['vulkan_5fshader_5finstance_5fstate_20',['vulkan_shader_instance_state',['../dd/d19/structvulkan__shader__instance__state.html',1,'']]],
+  ['vulkan_5fshader_5fstage_21',['vulkan_shader_stage',['../d8/da7/structvulkan__shader__stage.html',1,'']]],
+  ['vulkan_5fshader_5fstage_5fconfig_22',['vulkan_shader_stage_config',['../d4/dad/structvulkan__shader__stage__config.html',1,'']]],
+  ['vulkan_5fswapchain_23',['vulkan_swapchain',['../de/dc9/structvulkan__swapchain.html',1,'']]],
+  ['vulkan_5fswapchain_5fsupport_5finfo_24',['vulkan_swapchain_support_info',['../d8/db4/structvulkan__swapchain__support__info.html',1,'']]],
+  ['vulkan_5ftexture_5fdata_25',['vulkan_texture_data',['../d6/da9/structvulkan__texture__data.html',1,'']]]
 ];

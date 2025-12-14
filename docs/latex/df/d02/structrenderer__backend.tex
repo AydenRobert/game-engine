@@ -26,10 +26,6 @@ void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_aa4d9ea
 \item 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_a788904b45a981e5a5514b510852e28ad}{end\+\_\+frame}} )(struct \mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}backend, \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}} delta\+\_\+time)
 \item 
-void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_a916d4e1c4fdb74811102581ecff89e36}{update\+\_\+global\+\_\+world\+\_\+state}} )(\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} projection, \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} view, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} view\+\_\+position, \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} ambient\+\_\+colour, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} mode)
-\item 
-void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_a4da427bf2f21fe41a89132ce385f7b49}{update\+\_\+global\+\_\+ui\+\_\+state}} )(\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} projection, \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} view, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} mode)
-\item 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_aa87489090b81db88a90ec8414bd01707}{begin\+\_\+renderpass}} )(struct \mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}backend, \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} renderpass\+\_\+id)
 \item 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_a1db3260c962a0f840b159a2d80224a71}{end\+\_\+renderpass}} )(struct \mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}backend, \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} renderpass\+\_\+id)
@@ -40,13 +36,31 @@ void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_aa59a59
 \item 
 void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_a30a965d79114c284246036ec484954b2}{destroy\+\_\+texture}} )(struct \mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structtexture}{texture}})
 \item 
-\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_ac8318cd1b851c53d605b893fed5214e2}{create\+\_\+material}} )(struct \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structmaterial}{material}})
-\item 
-void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_a8e18558e489f01e5fc1cf144c03c7139}{destroy\+\_\+material}} )(struct \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structmaterial}{material}})
-\item 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_aa373cf14e93c90817af3f1cdfde5c400}{create\+\_\+geometry}} )(\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structgeometry}{geometry}}, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} vertex\+\_\+size, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} vertex\+\_\+count, const void \texorpdfstring{$\ast$}{*}vertices, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} index\+\_\+size, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} index\+\_\+count, const void \texorpdfstring{$\ast$}{*}indices)
 \item 
 void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_a80442307b76370120d34e33cd0b58887}{destroy\+\_\+geometry}} )(\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structgeometry}{geometry}})
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_a58f6a25146d37ba9f77041ce846423f1}{shader\+\_\+create}} )(struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} renderpass\+\_\+id, \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} stage\+\_\+count, const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}stage\+\_\+filenames, \mbox{\hyperlink{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400}{shader\+\_\+stage}} \texorpdfstring{$\ast$}{*}stages)
+\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_a29ece161c32ff0b0728510c3439fdb88}{shader\+\_\+destroy}} )(struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_ae133504684d6efa00cc300d93d2926d0}{shader\+\_\+initialize}} )(struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_a799b3d031c1d253f797048b8adbbc9d0}{shader\+\_\+use}} )(struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_a3d8c3428167d20c652b8d450013af9ae}{shader\+\_\+bind\+\_\+globals}} )(struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_ad27e13f713aac47c1f2f325d3e871799}{shader\+\_\+bind\+\_\+instance}} )(struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} instance\+\_\+id)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_a355bdde93ddb1ff4a97676735839027a}{shader\+\_\+apply\+\_\+globals}} )(struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_aec653248368a6c2e613f907db00599cb}{shader\+\_\+apply\+\_\+instance}} )(struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_aa0bc4c99011137f3a8c775e26bf967ee}{shader\+\_\+acquire\+\_\+instance\+\_\+resources}} )(struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}out\+\_\+instance\+\_\+id)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_acbbad45d7bbd2a9192c1e951bfa6ab50}{shader\+\_\+release\+\_\+instance\+\_\+resources}} )(struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} instance\+\_\+id)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_a706d0ce015d5baa3e7424e25f28d6d99}{set\+\_\+uniform}} )(struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, struct \mbox{\hyperlink{structshader__uniform}{shader\+\_\+uniform}} \texorpdfstring{$\ast$}{*}uniform, const void \texorpdfstring{$\ast$}{*}value)
 \end{DoxyCompactItemize}
 
 
@@ -71,12 +85,6 @@ void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structrenderer__backend_a804423
 {\footnotesize\ttfamily \label{structrenderer__backend_aa373cf14e93c90817af3f1cdfde5c400} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::create\+\_\+geometry) (\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structgeometry}{geometry}}, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} vertex\+\_\+size, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} vertex\+\_\+count, const void \texorpdfstring{$\ast$}{*}vertices, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} index\+\_\+size, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} index\+\_\+count, const void \texorpdfstring{$\ast$}{*}indices)}
 
-\Hypertarget{structrenderer__backend_ac8318cd1b851c53d605b893fed5214e2}\index{renderer\_backend@{renderer\_backend}!create\_material@{create\_material}}
-\index{create\_material@{create\_material}!renderer\_backend@{renderer\_backend}}
-\doxysubsubsection{\texorpdfstring{create\_material}{create\_material}}
-{\footnotesize\ttfamily \label{structrenderer__backend_ac8318cd1b851c53d605b893fed5214e2} 
-\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::create\+\_\+material) (struct \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structmaterial}{material}})}
-
 \Hypertarget{structrenderer__backend_aa59a591b491d1cf014f264bb3df0f347}\index{renderer\_backend@{renderer\_backend}!create\_texture@{create\_texture}}
 \index{create\_texture@{create\_texture}!renderer\_backend@{renderer\_backend}}
 \doxysubsubsection{\texorpdfstring{create\_texture}{create\_texture}}
@@ -88,12 +96,6 @@ void(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::create\+\_\+texture) (c
 \doxysubsubsection{\texorpdfstring{destroy\_geometry}{destroy\_geometry}}
 {\footnotesize\ttfamily \label{structrenderer__backend_a80442307b76370120d34e33cd0b58887} 
 void(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::destroy\+\_\+geometry) (\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structgeometry}{geometry}})}
-
-\Hypertarget{structrenderer__backend_a8e18558e489f01e5fc1cf144c03c7139}\index{renderer\_backend@{renderer\_backend}!destroy\_material@{destroy\_material}}
-\index{destroy\_material@{destroy\_material}!renderer\_backend@{renderer\_backend}}
-\doxysubsubsection{\texorpdfstring{destroy\_material}{destroy\_material}}
-{\footnotesize\ttfamily \label{structrenderer__backend_a8e18558e489f01e5fc1cf144c03c7139} 
-void(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::destroy\+\_\+material) (struct \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structmaterial}{material}})}
 
 \Hypertarget{structrenderer__backend_a30a965d79114c284246036ec484954b2}\index{renderer\_backend@{renderer\_backend}!destroy\_texture@{destroy\_texture}}
 \index{destroy\_texture@{destroy\_texture}!renderer\_backend@{renderer\_backend}}
@@ -143,23 +145,77 @@ struct \mbox{\hyperlink{structplatform__state}{platform\+\_\+state}}\texorpdfstr
 {\footnotesize\ttfamily \label{structrenderer__backend_aa4d9ea4b9c236ff1ef1f9bb967deb18a} 
 void(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::resized) (struct \mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}backend, \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} width, \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} height)}
 
+\Hypertarget{structrenderer__backend_a706d0ce015d5baa3e7424e25f28d6d99}\index{renderer\_backend@{renderer\_backend}!set\_uniform@{set\_uniform}}
+\index{set\_uniform@{set\_uniform}!renderer\_backend@{renderer\_backend}}
+\doxysubsubsection{\texorpdfstring{set\_uniform}{set\_uniform}}
+{\footnotesize\ttfamily \label{structrenderer__backend_a706d0ce015d5baa3e7424e25f28d6d99} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::set\+\_\+uniform) (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, struct \mbox{\hyperlink{structshader__uniform}{shader\+\_\+uniform}} \texorpdfstring{$\ast$}{*}uniform, const void \texorpdfstring{$\ast$}{*}value)}
+
+\Hypertarget{structrenderer__backend_aa0bc4c99011137f3a8c775e26bf967ee}\index{renderer\_backend@{renderer\_backend}!shader\_acquire\_instance\_resources@{shader\_acquire\_instance\_resources}}
+\index{shader\_acquire\_instance\_resources@{shader\_acquire\_instance\_resources}!renderer\_backend@{renderer\_backend}}
+\doxysubsubsection{\texorpdfstring{shader\_acquire\_instance\_resources}{shader\_acquire\_instance\_resources}}
+{\footnotesize\ttfamily \label{structrenderer__backend_aa0bc4c99011137f3a8c775e26bf967ee} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::shader\+\_\+acquire\+\_\+instance\+\_\+resources) (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}out\+\_\+instance\+\_\+id)}
+
+\Hypertarget{structrenderer__backend_a355bdde93ddb1ff4a97676735839027a}\index{renderer\_backend@{renderer\_backend}!shader\_apply\_globals@{shader\_apply\_globals}}
+\index{shader\_apply\_globals@{shader\_apply\_globals}!renderer\_backend@{renderer\_backend}}
+\doxysubsubsection{\texorpdfstring{shader\_apply\_globals}{shader\_apply\_globals}}
+{\footnotesize\ttfamily \label{structrenderer__backend_a355bdde93ddb1ff4a97676735839027a} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::shader\+\_\+apply\+\_\+globals) (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s)}
+
+\Hypertarget{structrenderer__backend_aec653248368a6c2e613f907db00599cb}\index{renderer\_backend@{renderer\_backend}!shader\_apply\_instance@{shader\_apply\_instance}}
+\index{shader\_apply\_instance@{shader\_apply\_instance}!renderer\_backend@{renderer\_backend}}
+\doxysubsubsection{\texorpdfstring{shader\_apply\_instance}{shader\_apply\_instance}}
+{\footnotesize\ttfamily \label{structrenderer__backend_aec653248368a6c2e613f907db00599cb} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::shader\+\_\+apply\+\_\+instance) (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s)}
+
+\Hypertarget{structrenderer__backend_a3d8c3428167d20c652b8d450013af9ae}\index{renderer\_backend@{renderer\_backend}!shader\_bind\_globals@{shader\_bind\_globals}}
+\index{shader\_bind\_globals@{shader\_bind\_globals}!renderer\_backend@{renderer\_backend}}
+\doxysubsubsection{\texorpdfstring{shader\_bind\_globals}{shader\_bind\_globals}}
+{\footnotesize\ttfamily \label{structrenderer__backend_a3d8c3428167d20c652b8d450013af9ae} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::shader\+\_\+bind\+\_\+globals) (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s)}
+
+\Hypertarget{structrenderer__backend_ad27e13f713aac47c1f2f325d3e871799}\index{renderer\_backend@{renderer\_backend}!shader\_bind\_instance@{shader\_bind\_instance}}
+\index{shader\_bind\_instance@{shader\_bind\_instance}!renderer\_backend@{renderer\_backend}}
+\doxysubsubsection{\texorpdfstring{shader\_bind\_instance}{shader\_bind\_instance}}
+{\footnotesize\ttfamily \label{structrenderer__backend_ad27e13f713aac47c1f2f325d3e871799} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::shader\+\_\+bind\+\_\+instance) (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} instance\+\_\+id)}
+
+\Hypertarget{structrenderer__backend_a58f6a25146d37ba9f77041ce846423f1}\index{renderer\_backend@{renderer\_backend}!shader\_create@{shader\_create}}
+\index{shader\_create@{shader\_create}!renderer\_backend@{renderer\_backend}}
+\doxysubsubsection{\texorpdfstring{shader\_create}{shader\_create}}
+{\footnotesize\ttfamily \label{structrenderer__backend_a58f6a25146d37ba9f77041ce846423f1} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::shader\+\_\+create) (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} renderpass\+\_\+id, \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} stage\+\_\+count, const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}stage\+\_\+filenames, \mbox{\hyperlink{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400}{shader\+\_\+stage}} \texorpdfstring{$\ast$}{*}stages)}
+
+\Hypertarget{structrenderer__backend_a29ece161c32ff0b0728510c3439fdb88}\index{renderer\_backend@{renderer\_backend}!shader\_destroy@{shader\_destroy}}
+\index{shader\_destroy@{shader\_destroy}!renderer\_backend@{renderer\_backend}}
+\doxysubsubsection{\texorpdfstring{shader\_destroy}{shader\_destroy}}
+{\footnotesize\ttfamily \label{structrenderer__backend_a29ece161c32ff0b0728510c3439fdb88} 
+void(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::shader\+\_\+destroy) (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s)}
+
+\Hypertarget{structrenderer__backend_ae133504684d6efa00cc300d93d2926d0}\index{renderer\_backend@{renderer\_backend}!shader\_initialize@{shader\_initialize}}
+\index{shader\_initialize@{shader\_initialize}!renderer\_backend@{renderer\_backend}}
+\doxysubsubsection{\texorpdfstring{shader\_initialize}{shader\_initialize}}
+{\footnotesize\ttfamily \label{structrenderer__backend_ae133504684d6efa00cc300d93d2926d0} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::shader\+\_\+initialize) (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s)}
+
+\Hypertarget{structrenderer__backend_acbbad45d7bbd2a9192c1e951bfa6ab50}\index{renderer\_backend@{renderer\_backend}!shader\_release\_instance\_resources@{shader\_release\_instance\_resources}}
+\index{shader\_release\_instance\_resources@{shader\_release\_instance\_resources}!renderer\_backend@{renderer\_backend}}
+\doxysubsubsection{\texorpdfstring{shader\_release\_instance\_resources}{shader\_release\_instance\_resources}}
+{\footnotesize\ttfamily \label{structrenderer__backend_acbbad45d7bbd2a9192c1e951bfa6ab50} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::shader\+\_\+release\+\_\+instance\+\_\+resources) (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} instance\+\_\+id)}
+
+\Hypertarget{structrenderer__backend_a799b3d031c1d253f797048b8adbbc9d0}\index{renderer\_backend@{renderer\_backend}!shader\_use@{shader\_use}}
+\index{shader\_use@{shader\_use}!renderer\_backend@{renderer\_backend}}
+\doxysubsubsection{\texorpdfstring{shader\_use}{shader\_use}}
+{\footnotesize\ttfamily \label{structrenderer__backend_a799b3d031c1d253f797048b8adbbc9d0} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::shader\+\_\+use) (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s)}
+
 \Hypertarget{structrenderer__backend_a2f44c742255595a34292c03c0f5c3129}\index{renderer\_backend@{renderer\_backend}!shutdown@{shutdown}}
 \index{shutdown@{shutdown}!renderer\_backend@{renderer\_backend}}
 \doxysubsubsection{\texorpdfstring{shutdown}{shutdown}}
 {\footnotesize\ttfamily \label{structrenderer__backend_a2f44c742255595a34292c03c0f5c3129} 
 void(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::shutdown) (struct \mbox{\hyperlink{structrenderer__backend}{renderer\+\_\+backend}} \texorpdfstring{$\ast$}{*}backend)}
-
-\Hypertarget{structrenderer__backend_a4da427bf2f21fe41a89132ce385f7b49}\index{renderer\_backend@{renderer\_backend}!update\_global\_ui\_state@{update\_global\_ui\_state}}
-\index{update\_global\_ui\_state@{update\_global\_ui\_state}!renderer\_backend@{renderer\_backend}}
-\doxysubsubsection{\texorpdfstring{update\_global\_ui\_state}{update\_global\_ui\_state}}
-{\footnotesize\ttfamily \label{structrenderer__backend_a4da427bf2f21fe41a89132ce385f7b49} 
-void(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::update\+\_\+global\+\_\+ui\+\_\+state) (\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} projection, \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} view, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} mode)}
-
-\Hypertarget{structrenderer__backend_a916d4e1c4fdb74811102581ecff89e36}\index{renderer\_backend@{renderer\_backend}!update\_global\_world\_state@{update\_global\_world\_state}}
-\index{update\_global\_world\_state@{update\_global\_world\_state}!renderer\_backend@{renderer\_backend}}
-\doxysubsubsection{\texorpdfstring{update\_global\_world\_state}{update\_global\_world\_state}}
-{\footnotesize\ttfamily \label{structrenderer__backend_a916d4e1c4fdb74811102581ecff89e36} 
-void(\texorpdfstring{$\ast$}{*} renderer\+\_\+backend\+::update\+\_\+global\+\_\+world\+\_\+state) (\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} projection, \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} view, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} view\+\_\+position, \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} ambient\+\_\+colour, \mbox{\hyperlink{defines_8h_a9e3ad5f8e752f01d926ce122d5a5285e}{i32}} mode)}
 
 
 

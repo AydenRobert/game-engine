@@ -1,6 +1,5 @@
 var dir_292ca3bc3fd0e7bae984f8f5e33cab9c =
 [
-    [ "shaders", "dir_4db5f4c10a68fbab29fa8517257b789d.html", "dir_4db5f4c10a68fbab29fa8517257b789d" ],
     [ "vulkan_backend.c", "d1/da5/vulkan__backend_8c.html", "d1/da5/vulkan__backend_8c" ],
     [ "vulkan_backend.h", "dc/d64/vulkan__backend_8h.html", "dc/d64/vulkan__backend_8h" ],
     [ "vulkan_buffer.c", "db/dab/vulkan__buffer_8c.html", "db/dab/vulkan__buffer_8c" ],
@@ -16,6 +15,9 @@ var dir_292ca3bc3fd0e7bae984f8f5e33cab9c =
     [ "vulkan_platform.h", "d9/df0/vulkan__platform_8h.html", "d9/df0/vulkan__platform_8h" ],
     [ "vulkan_renderpass.c", "dc/d5d/vulkan__renderpass_8c.html", "dc/d5d/vulkan__renderpass_8c" ],
     [ "vulkan_renderpass.h", "d8/d7c/vulkan__renderpass_8h.html", "d8/d7c/vulkan__renderpass_8h" ],
+    [ "vulkan_shader.c", "d3/d04/vulkan__shader_8c.html", null ],
+    [ "vulkan_shader.h", "da/d33/vulkan__shader_8h.html", null ],
+    [ "vulkan_shader_types.inl", "d7/de4/vulkan__shader__types_8inl.html", "d7/de4/vulkan__shader__types_8inl" ],
     [ "vulkan_shader_utils.c", "d0/dc2/vulkan__shader__utils_8c.html", "d0/dc2/vulkan__shader__utils_8c" ],
     [ "vulkan_shader_utils.h", "d9/d44/vulkan__shader__utils_8h.html", "d9/d44/vulkan__shader__utils_8h" ],
     [ "vulkan_swapchain.c", "d5/d02/vulkan__swapchain_8c.html", "d5/d02/vulkan__swapchain_8c" ],

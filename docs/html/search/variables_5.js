@@ -4,6 +4,19 @@ var searchData=
   ['f64_1',['f64',['../d8/d95/structevent__context.html#a967488791fa28881df35fb981841d96e',1,'event_context']]],
   ['far_5fclip_2',['far_clip',['../d3/df6/structrenderer__system__state.html#a61ee40d959ec115ad343a2a029e308d2',1,'renderer_system_state']]],
   ['features_3',['features',['../d7/d6e/structvulkan__device.html#aa3babaca56942fe90f103dc9c8be40d0',1,'vulkan_device']]],
+<<<<<<< HEAD
+  ['file_5fname_4',['file_name',['../d4/dad/structvulkan__shader__stage__config.html#a9fd705461189095f934c4ccb60f26205',1,'vulkan_shader_stage_config']]],
+  ['find_5fmemory_5findex_5',['find_memory_index',['../d9/dc9/structvulkan__context.html#a4c078acb6ec1a93e3d0bef27b83354c8',1,'vulkan_context']]],
+  ['format_5fcount_6',['format_count',['../d8/db4/structvulkan__swapchain__support__info.html#a061c8b2ed6e128a3d80b776199097d5a',1,'vulkan_swapchain_support_info']]],
+  ['formats_7',['formats',['../d8/db4/structvulkan__swapchain__support__info.html#ac7bbc18106f56bf56b4079105c3bf4fc',1,'vulkan_swapchain_support_info']]],
+  ['frame_5fdelta_5ftime_8',['frame_delta_time',['../d9/dc9/structvulkan__context.html#a9704bbb6aa2aa202ded1e8b8b2b225d8',1,'vulkan_context']]],
+  ['frame_5fnumber_9',['frame_number',['../df/d02/structrenderer__backend.html#afb448ca8fd7cf36629d3d1e0c4377c33',1,'renderer_backend']]],
+  ['framebuffer_5fheight_10',['framebuffer_height',['../d9/dc9/structvulkan__context.html#a0369e76bf85701ba2cf8b7f0134a2a6e',1,'vulkan_context']]],
+  ['framebuffer_5fsize_5fgeneration_11',['framebuffer_size_generation',['../d9/dc9/structvulkan__context.html#a09568b52b351488c26c1309a0918ac69',1,'vulkan_context']]],
+  ['framebuffer_5fsize_5flast_5fgeneration_12',['framebuffer_size_last_generation',['../d9/dc9/structvulkan__context.html#aa1edc2a3352ce6bc0751aa8bb6d84631',1,'vulkan_context']]],
+  ['framebuffer_5fwidth_13',['framebuffer_width',['../d9/dc9/structvulkan__context.html#ada8eb7300aedfc6bbdc6e9a01a10b0ca',1,'vulkan_context']]],
+  ['framebuffers_14',['framebuffers',['../de/dc9/structvulkan__swapchain.html#ab6f629181eb84203ef4d1d093d5a8634',1,'vulkan_swapchain']]],
+=======
   ['find_5fmemory_5findex_4',['find_memory_index',['../d9/dc9/structvulkan__context.html#a4c078acb6ec1a93e3d0bef27b83354c8',1,'vulkan_context']]],
   ['format_5fcount_5',['format_count',['../d8/db4/structvulkan__swapchain__support__info.html#a061c8b2ed6e128a3d80b776199097d5a',1,'vulkan_swapchain_support_info']]],
   ['formats_6',['formats',['../d8/db4/structvulkan__swapchain__support__info.html#ac7bbc18106f56bf56b4079105c3bf4fc',1,'vulkan_swapchain_support_info']]],
@@ -15,6 +28,7 @@ var searchData=
   ['framebuffer_5fwidth_12',['framebuffer_width',['../d9/dc9/structvulkan__context.html#ada8eb7300aedfc6bbdc6e9a01a10b0ca',1,'vulkan_context']]],
   ['framebuffers_13',['framebuffers',['../de/dc9/structvulkan__swapchain.html#ab6f629181eb84203ef4d1d093d5a8634',1,'vulkan_swapchain']]],
   ['free_14',['free',['../d3/d8d/structinternal__state.html#ad2f57049fe1f1f00768af7fc9d952bfd',1,'internal_state']]],
+>>>>>>> main
   ['free_5fnode_5fhead_15',['free_node_head',['../d3/d8d/structinternal__state.html#a8b96239ea3c9ecd7f24addf5e5a349dc',1,'internal_state']]],
   ['freelist_16',['freelist',['../d3/d8d/structinternal__state.html#a822b33dfb278a00f71a31aae4f3c6310',1,'internal_state']]],
   ['freelist_5fblock_17',['freelist_block',['../d5/def/structvulkan__buffer.html#a7f732a3b4d46f783b81814bb3529dbcb',1,'vulkan_buffer']]],

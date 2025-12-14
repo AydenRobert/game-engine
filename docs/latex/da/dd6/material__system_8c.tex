@@ -5,14 +5,20 @@
 {\ttfamily \#include "{}defines.\+h"{}}\newline
 {\ttfamily \#include "{}resources/resource\+\_\+types.\+h"{}}\newline
 {\ttfamily \#include "{}systems/resource\+\_\+system.\+h"{}}\newline
+{\ttfamily \#include "{}systems/shader\+\_\+system.\+h"{}}\newline
 {\ttfamily \#include "{}systems/texture\+\_\+system.\+h"{}}\newline
 {\ttfamily \#include "{}core/kstring.\+h"{}}\newline
 {\ttfamily \#include "{}core/logger.\+h"{}}\newline
 {\ttfamily \#include "{}math/kmath.\+h"{}}\newline
 {\ttfamily \#include "{}containers/hashtable.\+h"{}}\newline
 {\ttfamily \#include "{}renderer/renderer\+\_\+frontend.\+h"{}}\newline
+<<<<<<< HEAD
+Include dependency graph for material\+\_\+system.\+c\+:
+\nopagebreak
+=======
 {\ttfamily \#include "{}platform/filesystem.\+h"{}}\newline
 Include dependency graph for material\+\_\+system.\+c\+:\nopagebreak
+>>>>>>> main
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,12 +28,25 @@ Include dependency graph for material\+\_\+system.\+c\+:\nopagebreak
 \doxysubsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
+struct \mbox{\hyperlink{structmaterial__shader__uniform__locations}{material\+\_\+shader\+\_\+uniform\+\_\+locations}}
+\item 
+struct \mbox{\hyperlink{structui__shader__uniform__locations}{ui\+\_\+shader\+\_\+uniform\+\_\+locations}}
+\item 
 struct \mbox{\hyperlink{structmaterial__system__state}{material\+\_\+system\+\_\+state}}
 \item 
 struct \mbox{\hyperlink{structmaterial__reference}{material\+\_\+reference}}
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{material__system_8c_af01b3336ac2dd6bdff9ec089cf2c35f3}{MATERIAL\+\_\+\+APPLY\+\_\+\+OR\+\_\+\+FAIL}}(expr)
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
+\item 
+typedef struct material\+\_\+shader\+\_\+uniform\+\_\+locations \mbox{\hyperlink{material__system_8c_a745559a2864906fe8c7849c41390fe99}{material\+\_\+shader\+\_\+uniform\+\_\+locations}}
+\item 
+typedef struct ui\+\_\+shader\+\_\+uniform\+\_\+locations \mbox{\hyperlink{material__system_8c_ac2af1f51c58f40dbc16437f1fc89f88f}{ui\+\_\+shader\+\_\+uniform\+\_\+locations}}
 \item 
 typedef struct material\+\_\+system\+\_\+state \mbox{\hyperlink{material__system_8c_a284a9afbe4c13701bec215fcd159b1f0}{material\+\_\+system\+\_\+state}}
 \item 
@@ -53,12 +72,37 @@ void \mbox{\hyperlink{material__system_8c_ac54691336a811ff2d5c8dc06727fba89}{mat
 void \mbox{\hyperlink{material__system_8c_a71642cf5861f603f7e1bf6c4d373b906}{material\+\_\+system\+\_\+release}} (const char \texorpdfstring{$\ast$}{*}name)
 \item 
 \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{material__system_8c_a4ba73bfbf0e5e2fe4c8b839449ea210b}{material\+\_\+system\+\_\+get\+\_\+default}} ()
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{material__system_8c_a5dc156f1a34448e19fc44f94d3699b7c}{material\+\_\+system\+\_\+apply\+\_\+global}} (\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} shader\+\_\+id, const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}projection, const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}view)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{material__system_8c_ad32b7a909869252d632a48f902376ff8}{material\+\_\+system\+\_\+apply\+\_\+instance}} (\mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}m)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{material__system_8c_ad30788c34da9c8abd2a8f2a265f859e6}{material\+\_\+system\+\_\+apply\+\_\+local}} (\mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}m, const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}model)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 static \mbox{\hyperlink{structmaterial__system__state}{material\+\_\+system\+\_\+state}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{material__system_8c_a0f31ac201fc0ebcf4d3355b5fe41f7b9}{state\+\_\+ptr}} = 0
 \end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{material__system_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{material__system_8c_af01b3336ac2dd6bdff9ec089cf2c35f3}\index{material\_system.c@{material\_system.c}!MATERIAL\_APPLY\_OR\_FAIL@{MATERIAL\_APPLY\_OR\_FAIL}}
+\index{MATERIAL\_APPLY\_OR\_FAIL@{MATERIAL\_APPLY\_OR\_FAIL}!material\_system.c@{material\_system.c}}
+\doxysubsubsection{\texorpdfstring{MATERIAL\_APPLY\_OR\_FAIL}{MATERIAL\_APPLY\_OR\_FAIL}}
+{\footnotesize\ttfamily \label{material__system_8c_af01b3336ac2dd6bdff9ec089cf2c35f3} 
+\#define MATERIAL\+\_\+\+APPLY\+\_\+\+OR\+\_\+\+FAIL(\begin{DoxyParamCaption}\item[{}]{expr}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (!expr)\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ KERROR(\textcolor{stringliteral}{"{}Failed\ to\ apply\ material:\ '\%s'."{}},\ expr);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
 
 
 \label{doc-typedef-members}
@@ -70,11 +114,23 @@ static \mbox{\hyperlink{structmaterial__system__state}{material\+\_\+system\+\_\
 {\footnotesize\ttfamily \label{material__system_8c_a8b76e4f9dfac72b92ef039847d3ad044} 
 typedef struct material\+\_\+reference material\+\_\+reference}
 
+\Hypertarget{material__system_8c_a745559a2864906fe8c7849c41390fe99}\index{material\_system.c@{material\_system.c}!material\_shader\_uniform\_locations@{material\_shader\_uniform\_locations}}
+\index{material\_shader\_uniform\_locations@{material\_shader\_uniform\_locations}!material\_system.c@{material\_system.c}}
+\doxysubsubsection{\texorpdfstring{material\_shader\_uniform\_locations}{material\_shader\_uniform\_locations}}
+{\footnotesize\ttfamily \label{material__system_8c_a745559a2864906fe8c7849c41390fe99} 
+typedef struct material\+\_\+shader\+\_\+uniform\+\_\+locations material\+\_\+shader\+\_\+uniform\+\_\+locations}
+
 \Hypertarget{material__system_8c_a284a9afbe4c13701bec215fcd159b1f0}\index{material\_system.c@{material\_system.c}!material\_system\_state@{material\_system\_state}}
 \index{material\_system\_state@{material\_system\_state}!material\_system.c@{material\_system.c}}
 \doxysubsubsection{\texorpdfstring{material\_system\_state}{material\_system\_state}}
 {\footnotesize\ttfamily \label{material__system_8c_a284a9afbe4c13701bec215fcd159b1f0} 
 typedef struct material\+\_\+system\+\_\+state material\+\_\+system\+\_\+state}
+
+\Hypertarget{material__system_8c_ac2af1f51c58f40dbc16437f1fc89f88f}\index{material\_system.c@{material\_system.c}!ui\_shader\_uniform\_locations@{ui\_shader\_uniform\_locations}}
+\index{ui\_shader\_uniform\_locations@{ui\_shader\_uniform\_locations}!material\_system.c@{material\_system.c}}
+\doxysubsubsection{\texorpdfstring{ui\_shader\_uniform\_locations}{ui\_shader\_uniform\_locations}}
+{\footnotesize\ttfamily \label{material__system_8c_ac2af1f51c58f40dbc16437f1fc89f88f} 
+typedef struct ui\+\_\+shader\+\_\+uniform\+\_\+locations ui\+\_\+shader\+\_\+uniform\+\_\+locations}
 
 
 
@@ -175,10 +231,79 @@ Here is the call graph for this function\+:\nopagebreak
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
+<<<<<<< HEAD
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{da/dd6/material__system_8c_ab4fc1dd5effa08830f4f91c5334f108e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{material__system_8c_a5dc156f1a34448e19fc44f94d3699b7c}\index{material\_system.c@{material\_system.c}!material\_system\_apply\_global@{material\_system\_apply\_global}}
+\index{material\_system\_apply\_global@{material\_system\_apply\_global}!material\_system.c@{material\_system.c}}
+\doxysubsubsection{\texorpdfstring{material\_system\_apply\_global()}{material\_system\_apply\_global()}}
+{\footnotesize\ttfamily \label{material__system_8c_a5dc156f1a34448e19fc44f94d3699b7c} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} material\+\_\+system\+\_\+apply\+\_\+global (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{shader\+\_\+id}{, }\item[{const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}}]{projection}{, }\item[{const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}}]{view}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dd6/material__system_8c_a5dc156f1a34448e19fc44f94d3699b7c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+=======
+>>>>>>> main
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dd6/material__system_8c_a5dc156f1a34448e19fc44f94d3699b7c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{material__system_8c_ad32b7a909869252d632a48f902376ff8}\index{material\_system.c@{material\_system.c}!material\_system\_apply\_instance@{material\_system\_apply\_instance}}
+\index{material\_system\_apply\_instance@{material\_system\_apply\_instance}!material\_system.c@{material\_system.c}}
+\doxysubsubsection{\texorpdfstring{material\_system\_apply\_instance()}{material\_system\_apply\_instance()}}
+{\footnotesize\ttfamily \label{material__system_8c_ad32b7a909869252d632a48f902376ff8} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} material\+\_\+system\+\_\+apply\+\_\+instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}}]{m}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dd6/material__system_8c_ad32b7a909869252d632a48f902376ff8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dd6/material__system_8c_ad32b7a909869252d632a48f902376ff8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{material__system_8c_ad30788c34da9c8abd2a8f2a265f859e6}\index{material\_system.c@{material\_system.c}!material\_system\_apply\_local@{material\_system\_apply\_local}}
+\index{material\_system\_apply\_local@{material\_system\_apply\_local}!material\_system.c@{material\_system.c}}
+\doxysubsubsection{\texorpdfstring{material\_system\_apply\_local()}{material\_system\_apply\_local()}}
+{\footnotesize\ttfamily \label{material__system_8c_ad30788c34da9c8abd2a8f2a265f859e6} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} material\+\_\+system\+\_\+apply\+\_\+local (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}}]{m}{, }\item[{const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}}]{model}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dd6/material__system_8c_ad30788c34da9c8abd2a8f2a265f859e6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dd6/material__system_8c_ad30788c34da9c8abd2a8f2a265f859e6_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{material__system_8c_a4ba73bfbf0e5e2fe4c8b839449ea210b}\index{material\_system.c@{material\_system.c}!material\_system\_get\_default@{material\_system\_get\_default}}

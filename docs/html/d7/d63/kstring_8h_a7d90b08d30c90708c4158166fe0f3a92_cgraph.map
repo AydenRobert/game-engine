@@ -1,0 +1,17 @@
+<map id="string_cleanup_split_array" name="string_cleanup_split_array">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,76,157,120"/>
+<area shape="rect" id="Node000002" href="$d3/d3c/kmemory_8c.html#a6b55b65a2f2d473dac0d8ff4605a44fb" title=" " alt="" coords="230,57,286,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,84,217,77,212,78,158,89"/>
+<area shape="rect" id="Node000008" href="$d6/d19/kstring_8c.html#a3ac8f7f54a3429135da71637d268e6c9" title=" " alt="" coords="205,109,311,137"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="157,106,192,113,187,114,157,111"/>
+<area shape="rect" id="Node000003" href="$dd/d44/dynamic__allocator_8c.html#a10c3c742d3900e743f85fe47c11be3e5" title="Frees a block of memory that was allocated by the allocator." alt="" coords="359,32,533,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="286,65,346,59,341,60,287,70"/>
+<area shape="rect" id="Node000007" href="$de/d03/platform_8h.html#a0b638fcfa31e0704eb976a8662c095f2" title=" " alt="" coords="391,84,501,112"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="286,72,378,88,373,88,286,78"/>
+<area shape="rect" id="Node000004" href="$da/d3f/freelist_8c.html#a8af32093da394b6cfa1a3436b8e84283" title="Attempts to find a free block of memory given the size." alt="" coords="581,32,724,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="534,43,568,46,563,46,534,48"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df" title=" " alt="" coords="781,5,862,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="724,32,763,28,768,28,725,37"/>
+<area shape="rect" id="Node000006" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="772,57,871,85"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="724,54,759,61,754,61,724,59"/>
+</map>

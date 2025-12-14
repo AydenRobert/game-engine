@@ -13,7 +13,7 @@ var searchData=
   ['game_5ftypes_2eh_10',['game_types.h',['../de/d79/game__types_8h.html',1,'']]],
   ['game_5fupdate_11',['game_update',['../d1/dcb/game_8c.html#a1a612ae5a139848e80e1f7ddec49fdcf',1,'game_update(game *game_inst, f32 delta_time):&#160;game.c'],['../d2/dd5/game_8h.html#a1a612ae5a139848e80e1f7ddec49fdcf',1,'game_update(game *game_inst, f32 delta_time):&#160;game.c']]],
   ['generation_12',['generation',['../d4/d76/structvulkan__geometry__data.html#a91702aabf5a1b9384610a442585f59d1',1,'vulkan_geometry_data::generation'],['../dd/db6/structtexture.html#a86f5c2a9138ae4004bf1528c5365def0',1,'texture::generation'],['../da/d20/structmaterial.html#af48ce82f2bc1aa3f746d22d9bdd85ac1',1,'material::generation'],['../dd/ddc/structgeometry.html#abed43a9305450f0855b9d2f18ccf8953',1,'geometry::generation']]],
-  ['generations_13',['generations',['../df/d4d/structvulkan__descriptor__state.html#a23a6f33aad226b703f3b57fbec15e653',1,'vulkan_descriptor_state']]],
+  ['generations_13',['generations',['../df/d4d/structvulkan__descriptor__state.html#a7bc9ba5b8ccacad5979d15cab3783326',1,'vulkan_descriptor_state']]],
   ['geometries_14',['geometries',['../dd/da5/structrender__packet.html#a526f5ec924e892afaa1d6f382c44b2e3',1,'render_packet::geometries'],['../d9/dc9/structvulkan__context.html#a04574de8371d67ff15bed1c645585cc5',1,'vulkan_context::geometries']]],
   ['geometry_15',['geometry',['../dd/ddc/structgeometry.html',1,'geometry'],['../df/d2b/structgeometry__render__data.html#af7a8efb15739045f7e246e6766597dc0',1,'geometry_render_data::geometry'],['../da/d73/structgeometry__reference.html#af878ed9d5b4f161bf795ef84ffa41246',1,'geometry_reference::geometry'],['../de/d9c/resource__types_8h.html#aced1f9e0c0df5900f0a74916e8acec06',1,'geometry:&#160;resource_types.h']]],
   ['geometry_5fconfig_16',['geometry_config',['../de/d59/structgeometry__config.html',1,'geometry_config'],['../d4/df7/geometry__system_8h.html#a48d8dd5247f7f942ebcc29f74b179a1c',1,'geometry_config:&#160;geometry_system.h']]],
@@ -34,6 +34,28 @@ var searchData=
   ['geometry_5fsystem_5frelease_31',['geometry_system_release',['../d9/d80/geometry__system_8c.html#a2f9fd1495f9f9903d9b1a8003cf5417d',1,'geometry_system_release(geometry *geometry):&#160;geometry_system.c'],['../d4/df7/geometry__system_8h.html#a2f9fd1495f9f9903d9b1a8003cf5417d',1,'geometry_system_release(geometry *geometry):&#160;geometry_system.c']]],
   ['geometry_5fsystem_5fshutdown_32',['geometry_system_shutdown',['../d9/d80/geometry__system_8c.html#a55191f79e172eccf0c6637e252f50797',1,'geometry_system_shutdown(void *state):&#160;geometry_system.c'],['../d4/df7/geometry__system_8h.html#a55191f79e172eccf0c6637e252f50797',1,'geometry_system_shutdown(void *state):&#160;geometry_system.c']]],
   ['geometry_5fsystem_5fstate_33',['geometry_system_state',['../d7/d9b/structgeometry__system__state.html',1,'geometry_system_state'],['../dc/d7e/structapplication__state.html#a19e0a2766f2b7ac0a27c624557d99349',1,'application_state::geometry_system_state'],['../d9/d80/geometry__system_8c.html#a78bba04691517a4f6bd3d42025163636',1,'geometry_system_state:&#160;geometry_system.c']]],
+<<<<<<< HEAD
+  ['get_5faligned_34',['get_aligned',['../d8/db0/defines_8h.html#abf0b958d00fe41b2f3b02d9ed263f780',1,'defines.h']]],
+  ['get_5faligned_5frange_35',['get_aligned_range',['../d8/db0/defines_8h.html#a2f99ca6366e01a8ead4227cecbb8b67f',1,'defines.h']]],
+  ['get_5fmemory_5falloc_5fcount_36',['get_memory_alloc_count',['../d3/d3c/kmemory_8c.html#a856be2ba72d23a3da0f6720e8e29f281',1,'get_memory_alloc_count():&#160;kmemory.c'],['../d6/dbf/kmemory_8h.html#ae08429b1ce06f06ef75ff0eafc823887',1,'get_memory_alloc_count():&#160;kmemory.c']]],
+  ['get_5fmemory_5fusage_5fstr_37',['get_memory_usage_str',['../d3/d3c/kmemory_8c.html#afab51208fe57736ae8ff62918c8c3e69',1,'get_memory_usage_str():&#160;kmemory.c'],['../d6/dbf/kmemory_8h.html#afab51208fe57736ae8ff62918c8c3e69',1,'get_memory_usage_str():&#160;kmemory.c']]],
+  ['get_5fnode_38',['get_node',['../da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df',1,'freelist.c']]],
+  ['get_5fshader_5fid_39',['get_shader_id',['../d0/d98/shader__system_8c.html#a38936feb92f898b52ac4ff3024bad497',1,'shader_system.c']]],
+  ['gibibytes_40',['GIBIBYTES',['../d8/db0/defines_8h.html#acb39342a6d484da1ffc0ac4893309be4',1,'defines.h']]],
+  ['gigabytes_41',['GIGABYTES',['../d8/db0/defines_8h.html#a19138fcdc83c10d33f2c076344ca7686',1,'defines.h']]],
+  ['global_5fdescriptor_5fsets_42',['global_descriptor_sets',['../d8/ddd/structvulkan__shader.html#a25592d79e6ee0c2e06e0c4b923d4d499',1,'vulkan_shader']]],
+  ['global_5ftextures_43',['global_textures',['../d2/d93/structshader.html#a87f6c51950780934ac34bcc9e2ccedb0',1,'shader']]],
+  ['global_5fubo_5foffset_44',['global_ubo_offset',['../d2/d93/structshader.html#a7d8c8ffd000dddd8f139cfc082ed3cd1',1,'shader']]],
+  ['global_5fubo_5fsize_45',['global_ubo_size',['../d2/d93/structshader.html#ac14152513b3a22539b48cff007c15df0',1,'shader']]],
+  ['global_5fubo_5fstride_46',['global_ubo_stride',['../d2/d93/structshader.html#a17035b0c21acc2c2262da2409671c568',1,'shader']]],
+  ['goals_47',['💡 Design Goals',['../d0/d30/md_README.html#autotoc_md9',1,'']]],
+  ['graphics_48',['graphics',['../d4/d4a/structvulkan__physical__device__requirements.html#a0d60ecb3ea4f8cf40a7f31781785b867',1,'vulkan_physical_device_requirements']]],
+  ['graphics_5fcommand_5fbuffers_49',['graphics_command_buffers',['../d9/dc9/structvulkan__context.html#ada97681614808238c130037d71d38dca',1,'vulkan_context']]],
+  ['graphics_5fcommand_5fpool_50',['graphics_command_pool',['../d7/d6e/structvulkan__device.html#a07e54130446cbf987c768bd47ce48c1c',1,'vulkan_device']]],
+  ['graphics_5ffamily_5findex_51',['graphics_family_index',['../d5/da3/structvulkan__physical__device__queue__family__info.html#a3e0af6aee700c3bfa0c29b971272154d',1,'vulkan_physical_device_queue_family_info']]],
+  ['graphics_5fqueue_52',['graphics_queue',['../d7/d6e/structvulkan__device.html#a32d7146222dd894f4d4ddaf43238e588',1,'vulkan_device']]],
+  ['graphics_5fqueue_5findex_53',['graphics_queue_index',['../d7/d6e/structvulkan__device.html#ab97ca99bede93710b388835cb5bcd524',1,'vulkan_device']]]
+=======
   ['get_5fmemory_5falloc_5fcount_34',['get_memory_alloc_count',['../d3/d3c/kmemory_8c.html#a856be2ba72d23a3da0f6720e8e29f281',1,'get_memory_alloc_count():&#160;kmemory.c'],['../d6/dbf/kmemory_8h.html#ae08429b1ce06f06ef75ff0eafc823887',1,'get_memory_alloc_count():&#160;kmemory.c']]],
   ['get_5fmemory_5fusage_5fstr_35',['get_memory_usage_str',['../d3/d3c/kmemory_8c.html#afab51208fe57736ae8ff62918c8c3e69',1,'get_memory_usage_str():&#160;kmemory.c'],['../d6/dbf/kmemory_8h.html#afab51208fe57736ae8ff62918c8c3e69',1,'get_memory_usage_str():&#160;kmemory.c']]],
   ['get_5fnode_36',['get_node',['../da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df',1,'get_node(freelist *list):&#160;freelist.c'],['../d3/d8b/linkedlist_8c.html#ab49c8cbca17232ed2b35fd6e14dc08f2',1,'get_node(linkedlist *list):&#160;linkedlist.c']]],
@@ -51,4 +73,5 @@ var searchData=
   ['graphics_5ffamily_5findex_48',['graphics_family_index',['../d5/da3/structvulkan__physical__device__queue__family__info.html#a3e0af6aee700c3bfa0c29b971272154d',1,'vulkan_physical_device_queue_family_info']]],
   ['graphics_5fqueue_49',['graphics_queue',['../d7/d6e/structvulkan__device.html#a32d7146222dd894f4d4ddaf43238e588',1,'vulkan_device']]],
   ['graphics_5fqueue_5findex_50',['graphics_queue_index',['../d7/d6e/structvulkan__device.html#ab97ca99bede93710b388835cb5bcd524',1,'vulkan_device']]]
+>>>>>>> main
 ];

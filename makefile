@@ -56,7 +56,11 @@ LINKER_FLAGS_TESTBED = -lvulkan -ldl -L$(BIN_DIR) -l$(ENGINE_NAME) -Wl,-rpath,'$
 .PHONY: all clean engine testbed shaders tests run_tests docs
 
 # Default build: everything
+<<<<<<< HEAD
+all: $(ENGINE_TARGET) $(TESTBED_TARGET) shaders $(TESTS_TARGET) run_tests
+=======
 all: $(ENGINE_TARGET) $(TESTBED_TARGET) shaders $(TESTS_TARGET)
+>>>>>>> main
 
 # --- ENGINE (.so library) ---
 engine: $(ENGINE_TARGET)

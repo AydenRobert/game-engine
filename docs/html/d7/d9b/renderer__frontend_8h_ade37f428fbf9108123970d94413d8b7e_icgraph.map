@@ -1,0 +1,15 @@
+<map id="renderer_shader_destroy" name="renderer_shader_destroy">
+<area shape="rect" id="Node000001" title=" " alt="" coords="752,32,935,60"/>
+<area shape="rect" id="Node000002" href="$d0/d98/shader__system_8c.html#ad544ca673431cd43308c415e060b209f" title=" " alt="" coords="559,5,680,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="734,33,681,29,681,24,739,33"/>
+<area shape="rect" id="Node000004" href="$d0/d98/shader__system_8c.html#adad4d61742f798318d5812623d4eed79" title=" " alt="" coords="535,57,704,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="739,58,704,64,704,59,734,58"/>
+<area shape="rect" id="Node000003" href="$d0/d98/shader__system_8c.html#a36dd288e51eb5aad20794200051f573b" title="Shutdowns the shader system." alt="" coords="297,5,487,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="541,19,488,22,488,17,546,19"/>
+<area shape="rect" id="Node000005" href="$d0/dcc/renderer__frontend_8c.html#a389fec0dabe6589332ed60bb427aaaef" title=" " alt="" coords="322,57,462,85"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="518,71,462,74,462,69,523,71"/>
+<area shape="rect" id="Node000006" href="$d4/d8b/application_8c.html#a2ce02f6d4bd01f2d130aef9cd460cf6a" title=" " alt="" coords="108,57,249,85"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="305,71,249,74,249,69,310,71"/>
+<area shape="rect" id="Node000007" href="$d1/dc6/entry_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,57,60,85"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="89,72,60,74,60,69,94,70"/>
+</map>

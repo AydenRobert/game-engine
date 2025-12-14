@@ -16,15 +16,22 @@ var searchData=
   ['compute_13',['compute',['../d4/d4a/structvulkan__physical__device__requirements.html#a1e19bc98bfb1e4e23d881a43f2a977d6',1,'vulkan_physical_device_requirements']]],
   ['compute_5ffamily_5findex_14',['compute_family_index',['../d5/da3/structvulkan__physical__device__queue__family__info.html#a65cd341cf94f09630fbaa7507887a6ad',1,'vulkan_physical_device_queue_family_info']]],
   ['compute_5fqueue_5findex_15',['compute_queue_index',['../d7/d6e/structvulkan__device.html#ae72cb24a18d99a87c2fcabd7a1e6895a',1,'vulkan_device']]],
-  ['config_16',['config',['../d3/d11/structmemory__system__state.html#ab5f320e568dc15de9b8796193f550092',1,'memory_system_state::config'],['../d7/d9b/structgeometry__system__state.html#ac21fe2b81faedfe07edf5f6020590777',1,'geometry_system_state::config'],['../d2/dc7/structmaterial__system__state.html#a00e5ad65dc589e65bf501095cc247ccb',1,'material_system_state::config'],['../d5/df4/structresource__system__state.html#a864e4bacd582b590640e5c6f411ce18a',1,'resource_system_state::config'],['../d2/df9/structtexture__system__state.html#ab49841c80f2afce16b83e0dd298770e1',1,'texture_system_state::config']]],
+  ['config_16',['config',['../d3/d11/structmemory__system__state.html#ab5f320e568dc15de9b8796193f550092',1,'memory_system_state::config'],['../d8/ddd/structvulkan__shader.html#a78187e0d67f4b1f800c547780a88fb68',1,'vulkan_shader::config'],['../d7/d9b/structgeometry__system__state.html#ac21fe2b81faedfe07edf5f6020590777',1,'geometry_system_state::config'],['../d2/dc7/structmaterial__system__state.html#a00e5ad65dc589e65bf501095cc247ccb',1,'material_system_state::config'],['../d5/df4/structresource__system__state.html#a864e4bacd582b590640e5c6f411ce18a',1,'resource_system_state::config'],['../de/d62/structshader__system__state.html#a952704cf2f52870babe9b1e94c734290',1,'shader_system_state::config'],['../d2/df9/structtexture__system__state.html#ab49841c80f2afce16b83e0dd298770e1',1,'texture_system_state::config']]],
   ['configure_17',['configure',['../de/dda/structxdg__surface__listener.html#a1c4263d4ac5abb74a2fa8aa9bdd093b0',1,'xdg_surface_listener::configure'],['../da/d2d/structxdg__toplevel__listener.html#a8884ee61ecc055f927c54a5f068edaed',1,'xdg_toplevel_listener::configure'],['../de/dff/structxdg__popup__listener.html#a36e98cf6e6e4137ee2896a43f1c10730',1,'xdg_popup_listener::configure']]],
   ['configure_5fbounds_18',['configure_bounds',['../da/d2d/structxdg__toplevel__listener.html#a74d28321edf15393ea63a47ea5d3e5ec',1,'xdg_toplevel_listener']]],
   ['context_19',['context',['../d1/da5/vulkan__backend_8c.html#a171b208055a0eb2eeace24e130f74bc9',1,'vulkan_backend.c']]],
   ['create_5fgeometry_20',['create_geometry',['../df/d02/structrenderer__backend.html#aa373cf14e93c90817af3f1cdfde5c400',1,'renderer_backend']]],
   ['create_5finfo_21',['create_info',['../d8/da7/structvulkan__shader__stage.html#aa038d9e249371f17f04b613cd205ef5e',1,'vulkan_shader_stage']]],
+<<<<<<< HEAD
+  ['create_5ftexture_22',['create_texture',['../df/d02/structrenderer__backend.html#aa59a591b491d1cf014f264bb3df0f347',1,'renderer_backend']]],
+  ['current_5fframe_23',['current_frame',['../d9/dc9/structvulkan__context.html#acf8f27c63fbac8a561ce15d22f016157',1,'vulkan_context']]],
+  ['current_5fshader_5fid_24',['current_shader_id',['../de/d62/structshader__system__state.html#a577e96264e8df12c7371ca8a8f9a63fc',1,'shader_system_state']]],
+  ['custom_5ftype_25',['custom_type',['../d0/db3/structresource__loader.html#ac1950fdaa6746115b77e0d0c92694535',1,'resource_loader']]]
+=======
   ['create_5fmaterial_22',['create_material',['../df/d02/structrenderer__backend.html#ac8318cd1b851c53d605b893fed5214e2',1,'renderer_backend']]],
   ['create_5ftexture_23',['create_texture',['../df/d02/structrenderer__backend.html#aa59a591b491d1cf014f264bb3df0f347',1,'renderer_backend']]],
   ['current_5fframe_24',['current_frame',['../d9/dc9/structvulkan__context.html#acf8f27c63fbac8a561ce15d22f016157',1,'vulkan_context']]],
   ['current_5fnode_25',['current_node',['../da/d98/structlinkedlist__iterator.html#a491adb00874dd0c0f20ec7219c33f4af',1,'linkedlist_iterator']]],
   ['custom_5ftype_26',['custom_type',['../d0/db3/structresource__loader.html#ac1950fdaa6746115b77e0d0c92694535',1,'resource_loader']]]
+>>>>>>> main
 ];
