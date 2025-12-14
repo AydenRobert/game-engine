@@ -3,3 +3,5 @@ oil:/
 bin/
 obj/
 *.spv
+bin/libengine.so
+console.log
