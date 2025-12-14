@@ -2,10 +2,11 @@
 #include "containers/linkedlist_tests.h"
 #include "core/kmemory.h"
 #include "memory/dynamic_allocator_test.h"
+#include "systems/vmm_tests.h"
 #include "test_manager.h"
 
-#include "memory/linear_allocator_test.h"
 #include "containers/hastable_tests.h"
+#include "memory/linear_allocator_test.h"
 
 #include <core/logger.h>
 
@@ -26,6 +27,7 @@ int main() {
     freelist_register_tests();
     dynamic_allocator_register_tests();
     linkedlist_register_tests();
+    vmm_register_tests();
 
     KDEBUG("Starting tests...");
 
