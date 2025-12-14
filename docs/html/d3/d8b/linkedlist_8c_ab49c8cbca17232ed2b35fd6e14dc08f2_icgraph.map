@@ -1,0 +1,9 @@
+<map id="get_node" name="get_node">
+<area shape="rect" id="Node000001" title=" " alt="" coords="211,57,292,85"/>
+<area shape="rect" id="Node000002" href="$d3/d8b/linkedlist_8c.html#ab4d5e76eac9dbea7ebed3375de156afe" title="Inserts a node at a specific index." alt="" coords="12,5,156,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,55,131,36,131,31,198,53"/>
+<area shape="rect" id="Node000003" href="$d3/d8b/linkedlist_8c.html#a06f70585fa788aa7bca7db106327ec57" title="Pushes a new node to the head of the linked list." alt="" coords="5,57,163,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,72,163,74,162,69,198,71"/>
+<area shape="rect" id="Node000004" href="$d3/d8b/linkedlist_8c.html#a812cd5c3c8c86d2b136da308e39c5482" title="Pushes a new node to the tail of the linked list." alt="" coords="11,109,157,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="198,88,132,111,130,106,193,89"/>
+</map>

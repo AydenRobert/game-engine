@@ -48,9 +48,16 @@ var searchData=
   ['create_5fmodule_45',['create_module',['../d1/da5/vulkan__backend_8c.html#a8f97632bd849b08e365fd0f00f5055fb',1,'vulkan_backend.c']]],
   ['create_5fshader_5fmodule_46',['create_shader_module',['../d0/dc2/vulkan__shader__utils_8c.html#abdafeacc190d500bbd72aa141cadf2e5',1,'create_shader_module(vulkan_context *context, const char *name, const char *type_str, VkShaderStageFlagBits shader_stage_flag, u32 stage_index, vulkan_shader_stage *shader_stages):&#160;vulkan_shader_utils.c'],['../d9/d44/vulkan__shader__utils_8h.html#abdafeacc190d500bbd72aa141cadf2e5',1,'create_shader_module(vulkan_context *context, const char *name, const char *type_str, VkShaderStageFlagBits shader_stage_flag, u32 stage_index, vulkan_shader_stage *shader_stages):&#160;vulkan_shader_utils.c']]],
   ['create_5ftexture_47',['create_texture',['../df/d02/structrenderer__backend.html#aa59a591b491d1cf014f264bb3df0f347',1,'renderer_backend']]],
+<<<<<<< HEAD
   ['critical_5finit_48',['CRITICAL_INIT',['../d0/dcc/renderer__frontend_8c.html#a554c116eb8ed487c561a551781ab085c',1,'renderer_frontend.c']]],
   ['current_20status_49',['🚧 Current Status',['../d0/d30/md_README.html#autotoc_md2',1,'']]],
   ['current_5fframe_50',['current_frame',['../d9/dc9/structvulkan__context.html#acf8f27c63fbac8a561ce15d22f016157',1,'vulkan_context']]],
   ['current_5fshader_5fid_51',['current_shader_id',['../de/d62/structshader__system__state.html#a577e96264e8df12c7371ca8a8f9a63fc',1,'shader_system_state']]],
   ['custom_5ftype_52',['custom_type',['../d0/db3/structresource__loader.html#ac1950fdaa6746115b77e0d0c92694535',1,'resource_loader']]]
+=======
+  ['current_20status_48',['🚧 Current Status',['../d0/d30/md_README.html#autotoc_md2',1,'']]],
+  ['current_5fframe_49',['current_frame',['../d9/dc9/structvulkan__context.html#acf8f27c63fbac8a561ce15d22f016157',1,'vulkan_context']]],
+  ['current_5fnode_50',['current_node',['../da/d98/structlinkedlist__iterator.html#a491adb00874dd0c0f20ec7219c33f4af',1,'linkedlist_iterator']]],
+  ['custom_5ftype_51',['custom_type',['../d0/db3/structresource__loader.html#ac1950fdaa6746115b77e0d0c92694535',1,'resource_loader']]]
+>>>>>>> main
 ];

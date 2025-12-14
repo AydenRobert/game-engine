@@ -22,8 +22,16 @@ var searchData=
   ['context_19',['context',['../d1/da5/vulkan__backend_8c.html#a171b208055a0eb2eeace24e130f74bc9',1,'vulkan_backend.c']]],
   ['create_5fgeometry_20',['create_geometry',['../df/d02/structrenderer__backend.html#aa373cf14e93c90817af3f1cdfde5c400',1,'renderer_backend']]],
   ['create_5finfo_21',['create_info',['../d8/da7/structvulkan__shader__stage.html#aa038d9e249371f17f04b613cd205ef5e',1,'vulkan_shader_stage']]],
+<<<<<<< HEAD
   ['create_5ftexture_22',['create_texture',['../df/d02/structrenderer__backend.html#aa59a591b491d1cf014f264bb3df0f347',1,'renderer_backend']]],
   ['current_5fframe_23',['current_frame',['../d9/dc9/structvulkan__context.html#acf8f27c63fbac8a561ce15d22f016157',1,'vulkan_context']]],
   ['current_5fshader_5fid_24',['current_shader_id',['../de/d62/structshader__system__state.html#a577e96264e8df12c7371ca8a8f9a63fc',1,'shader_system_state']]],
   ['custom_5ftype_25',['custom_type',['../d0/db3/structresource__loader.html#ac1950fdaa6746115b77e0d0c92694535',1,'resource_loader']]]
+=======
+  ['create_5fmaterial_22',['create_material',['../df/d02/structrenderer__backend.html#ac8318cd1b851c53d605b893fed5214e2',1,'renderer_backend']]],
+  ['create_5ftexture_23',['create_texture',['../df/d02/structrenderer__backend.html#aa59a591b491d1cf014f264bb3df0f347',1,'renderer_backend']]],
+  ['current_5fframe_24',['current_frame',['../d9/dc9/structvulkan__context.html#acf8f27c63fbac8a561ce15d22f016157',1,'vulkan_context']]],
+  ['current_5fnode_25',['current_node',['../da/d98/structlinkedlist__iterator.html#a491adb00874dd0c0f20ec7219c33f4af',1,'linkedlist_iterator']]],
+  ['custom_5ftype_26',['custom_type',['../d0/db3/structresource__loader.html#ac1950fdaa6746115b77e0d0c92694535',1,'resource_loader']]]
+>>>>>>> main
 ];

@@ -34,6 +34,7 @@ var searchData=
   ['geometry_5fsystem_5frelease_31',['geometry_system_release',['../d9/d80/geometry__system_8c.html#a2f9fd1495f9f9903d9b1a8003cf5417d',1,'geometry_system_release(geometry *geometry):&#160;geometry_system.c'],['../d4/df7/geometry__system_8h.html#a2f9fd1495f9f9903d9b1a8003cf5417d',1,'geometry_system_release(geometry *geometry):&#160;geometry_system.c']]],
   ['geometry_5fsystem_5fshutdown_32',['geometry_system_shutdown',['../d9/d80/geometry__system_8c.html#a55191f79e172eccf0c6637e252f50797',1,'geometry_system_shutdown(void *state):&#160;geometry_system.c'],['../d4/df7/geometry__system_8h.html#a55191f79e172eccf0c6637e252f50797',1,'geometry_system_shutdown(void *state):&#160;geometry_system.c']]],
   ['geometry_5fsystem_5fstate_33',['geometry_system_state',['../d7/d9b/structgeometry__system__state.html',1,'geometry_system_state'],['../dc/d7e/structapplication__state.html#a19e0a2766f2b7ac0a27c624557d99349',1,'application_state::geometry_system_state'],['../d9/d80/geometry__system_8c.html#a78bba04691517a4f6bd3d42025163636',1,'geometry_system_state:&#160;geometry_system.c']]],
+<<<<<<< HEAD
   ['get_5faligned_34',['get_aligned',['../d8/db0/defines_8h.html#abf0b958d00fe41b2f3b02d9ed263f780',1,'defines.h']]],
   ['get_5faligned_5frange_35',['get_aligned_range',['../d8/db0/defines_8h.html#a2f99ca6366e01a8ead4227cecbb8b67f',1,'defines.h']]],
   ['get_5fmemory_5falloc_5fcount_36',['get_memory_alloc_count',['../d3/d3c/kmemory_8c.html#a856be2ba72d23a3da0f6720e8e29f281',1,'get_memory_alloc_count():&#160;kmemory.c'],['../d6/dbf/kmemory_8h.html#ae08429b1ce06f06ef75ff0eafc823887',1,'get_memory_alloc_count():&#160;kmemory.c']]],
@@ -54,4 +55,23 @@ var searchData=
   ['graphics_5ffamily_5findex_51',['graphics_family_index',['../d5/da3/structvulkan__physical__device__queue__family__info.html#a3e0af6aee700c3bfa0c29b971272154d',1,'vulkan_physical_device_queue_family_info']]],
   ['graphics_5fqueue_52',['graphics_queue',['../d7/d6e/structvulkan__device.html#a32d7146222dd894f4d4ddaf43238e588',1,'vulkan_device']]],
   ['graphics_5fqueue_5findex_53',['graphics_queue_index',['../d7/d6e/structvulkan__device.html#ab97ca99bede93710b388835cb5bcd524',1,'vulkan_device']]]
+=======
+  ['get_5fmemory_5falloc_5fcount_34',['get_memory_alloc_count',['../d3/d3c/kmemory_8c.html#a856be2ba72d23a3da0f6720e8e29f281',1,'get_memory_alloc_count():&#160;kmemory.c'],['../d6/dbf/kmemory_8h.html#ae08429b1ce06f06ef75ff0eafc823887',1,'get_memory_alloc_count():&#160;kmemory.c']]],
+  ['get_5fmemory_5fusage_5fstr_35',['get_memory_usage_str',['../d3/d3c/kmemory_8c.html#afab51208fe57736ae8ff62918c8c3e69',1,'get_memory_usage_str():&#160;kmemory.c'],['../d6/dbf/kmemory_8h.html#afab51208fe57736ae8ff62918c8c3e69',1,'get_memory_usage_str():&#160;kmemory.c']]],
+  ['get_5fnode_36',['get_node',['../da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df',1,'get_node(freelist *list):&#160;freelist.c'],['../d3/d8b/linkedlist_8c.html#ab49c8cbca17232ed2b35fd6e14dc08f2',1,'get_node(linkedlist *list):&#160;linkedlist.c']]],
+  ['gibibytes_37',['GIBIBYTES',['../d8/db0/defines_8h.html#acb39342a6d484da1ffc0ac4893309be4',1,'defines.h']]],
+  ['gigabytes_38',['GIGABYTES',['../d8/db0/defines_8h.html#a19138fcdc83c10d33f2c076344ca7686',1,'defines.h']]],
+  ['global_5fdescriptor_5fpool_39',['global_descriptor_pool',['../d0/d57/structvulkan__material__shader.html#a9923a04fd6b0764b4a806fe206ee5918',1,'vulkan_material_shader::global_descriptor_pool'],['../d5/ddd/structvulkan__ui__shader.html#a7fbdddef211d4fe0a6a5d1d4dcf1ee80',1,'vulkan_ui_shader::global_descriptor_pool']]],
+  ['global_5fdescriptor_5fset_5flayout_40',['global_descriptor_set_layout',['../d0/d57/structvulkan__material__shader.html#a41009b44592c2795f3060718b847eefa',1,'vulkan_material_shader::global_descriptor_set_layout'],['../d5/ddd/structvulkan__ui__shader.html#ad7eeef3edbb6292d5dfb7f3904ee89d9',1,'vulkan_ui_shader::global_descriptor_set_layout']]],
+  ['global_5fdescriptor_5fsets_41',['global_descriptor_sets',['../d0/d57/structvulkan__material__shader.html#aff59556404f4115a0016ea653f58a146',1,'vulkan_material_shader::global_descriptor_sets'],['../d5/ddd/structvulkan__ui__shader.html#a2a20b2ff011d7838bbb84e7a7d8a81b9',1,'vulkan_ui_shader::global_descriptor_sets']]],
+  ['global_5fubo_42',['global_ubo',['../d0/d57/structvulkan__material__shader.html#a63d0af53dae2f58617b579f09b70208e',1,'vulkan_material_shader::global_ubo'],['../d5/ddd/structvulkan__ui__shader.html#ac5a2626f68dd34cd28b4d0f1a490c469',1,'vulkan_ui_shader::global_ubo']]],
+  ['global_5funiform_5fbuffer_43',['global_uniform_buffer',['../d0/d57/structvulkan__material__shader.html#ac713c05fbfee746f5f9807039465e5fc',1,'vulkan_material_shader::global_uniform_buffer'],['../d5/ddd/structvulkan__ui__shader.html#ac38f0eaed67666e34f89169a092f864f',1,'vulkan_ui_shader::global_uniform_buffer']]],
+  ['goals_44',['💡 Design Goals',['../d0/d30/md_README.html#autotoc_md9',1,'']]],
+  ['graphics_45',['graphics',['../d4/d4a/structvulkan__physical__device__requirements.html#a0d60ecb3ea4f8cf40a7f31781785b867',1,'vulkan_physical_device_requirements']]],
+  ['graphics_5fcommand_5fbuffers_46',['graphics_command_buffers',['../d9/dc9/structvulkan__context.html#ada97681614808238c130037d71d38dca',1,'vulkan_context']]],
+  ['graphics_5fcommand_5fpool_47',['graphics_command_pool',['../d7/d6e/structvulkan__device.html#a07e54130446cbf987c768bd47ce48c1c',1,'vulkan_device']]],
+  ['graphics_5ffamily_5findex_48',['graphics_family_index',['../d5/da3/structvulkan__physical__device__queue__family__info.html#a3e0af6aee700c3bfa0c29b971272154d',1,'vulkan_physical_device_queue_family_info']]],
+  ['graphics_5fqueue_49',['graphics_queue',['../d7/d6e/structvulkan__device.html#a32d7146222dd894f4d4ddaf43238e588',1,'vulkan_device']]],
+  ['graphics_5fqueue_5findex_50',['graphics_queue_index',['../d7/d6e/structvulkan__device.html#ab97ca99bede93710b388835cb5bcd524',1,'vulkan_device']]]
+>>>>>>> main
 ];
