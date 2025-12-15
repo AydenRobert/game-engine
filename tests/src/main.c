@@ -2,7 +2,7 @@
 
 #include "core/kmemory.h"
 
-#include "containers/bitarray.h"
+#include "containers/binarytree_tests.h"
 #include "containers/bitarray_tests.h"
 #include "containers/freelist_tests.h"
 #include "containers/hastable_tests.h"
@@ -34,6 +34,7 @@ int main() {
     linkedlist_register_tests();
     vmm_register_tests();
     bitarray_register_tests();
+    binarytree_register_tests();
 
     KDEBUG("Starting tests...");
 

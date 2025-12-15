@@ -1,4 +1,5 @@
 #include "systems/memory_system.h"
+#include "containers/binarytree.h"
 #include "containers/freelist.h"
 #include "defines.h"
 #include "systems/vmm_system.h"
@@ -90,17 +91,19 @@ void *allocate_reserved(u64 size) {
     alloc_info.ptr = ptr;
     alloc_info.pool = state->main_pool;
     alloc_info.size = size;
-    binary_tree_add_node(state->alloc_tree, alloc_info);
+    // binary_tree_add_node(state->alloc_tree, alloc_info);
+    return 0;
 }
 
 void *allocate_commited(u64 size) {
     void *ptr = allocate_reserved(size);
-    allocation_ensure_commited(ptr, 0, size);
+    // allocation_ensure_commited(ptr, 0, size);
     return ptr;
 }
 
 b8 allocation_get_bitarray(void *block, bitarray *out_array) {
-    bitarray_make_subarray(&state->main_pool->array, offset, size);
+    // bitarray_make_subarray(&state->main_pool->array, offset, size);
+    return false;
 }
 
 b8 allocation_ensure_commited_pages(void *block, u64 start_page_index,
