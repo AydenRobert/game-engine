@@ -8,12 +8,6 @@
 
 #include <defines.h>
 
-// -----------------------------------------------------------------------------
-// Helpers
-// -----------------------------------------------------------------------------
-
-// Helper to handle the common setup logic.
-// Returns the allocated memory block so it can be freed later.
 static void *setup_bitarray(bitarray *array, u64 length, u64 *mem_req_out) {
     u64 memory_requirement = 0;
     bitarray_create(length, &memory_requirement, 0, 0);

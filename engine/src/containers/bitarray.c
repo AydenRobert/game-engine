@@ -6,6 +6,8 @@
 #define CHUNK(index) (index / 64)
 #define INDEX(index) (index % 64)
 
+#define PHYS_INDEX(array, index) ((index) + (array)->offset_bits)
+
 #define MASK_VAL(value) (((u64)value) & 1ULL)
 
 #define SET(array, value, index)                                               \
@@ -30,6 +32,7 @@ b8 bitarray_create(u64 length, u64 *memory_requirement, void *memory,
 
     out_array->array = memory;
     out_array->length = length;
+    out_array->offset_bits = 0;
 
     bitarray_fill(out_array, false);
 
@@ -42,21 +45,24 @@ void bitarray_destroy(bitarray *array) {
 }
 
 b8 bitarray_fill(bitarray *array, b8 value) {
-    return fill_range(array->array, value, 0, array->length);
+    return fill_range(array->array, value, array->offset_bits,
+                      array->offset_bits + array->length);
 }
 
 b8 bitarray_fill_range(bitarray *array, b8 value, u64 start_index, u64 size) {
     if (start_index + size > array->length) {
         return false;
     }
-    return fill_range(array->array, value, start_index, start_index + size);
+    return fill_range(array->array, value, array->offset_bits + start_index,
+                      array->offset_bits + start_index + size);
 }
 
 b8 bitarray_set(bitarray *array, b8 value, u64 index) {
     if (index >= array->length) {
         return false;
     }
-    SET(array->array, value, index);
+    u64 physical_index = PHYS_INDEX(array, index);
+    SET(array->array, value, physical_index);
     return true;
 }
 
@@ -127,6 +133,9 @@ u64 bitarray_count_set(bitarray *array) {
 
 u64 bitarray_find_first(bitarray *array, u64 start_index, u64 end_index,
                         b8 val) {
+    start_index += array->offset_bits;
+    end_index += array->offset_bits;
+
     if (start_index >= end_index) {
         return end_index;
     }
@@ -159,7 +168,9 @@ u64 bitarray_find_first(bitarray *array, u64 start_index, u64 end_index,
         if (chunk_data != 0) {
             u64 found_offset = platform_ctz(chunk_data);
             u64 found_index = current_chunk * 64 + found_offset;
-            return (found_index < end_index) ? found_index : end_index;
+            return (found_index < end_index)
+                       ? (found_index - array->offset_bits)
+                       : (end_index - array->offset_bits);
         }
         current_chunk++;
     }

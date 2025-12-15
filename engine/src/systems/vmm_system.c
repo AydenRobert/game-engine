@@ -99,8 +99,9 @@ memory_pool *vmm_new_page_pool(u64 size) {
     state->pages_reserved = new_pages_reserved;
 
     // calculate system page size
-    u32 array_size = (page_amount + 7) / 8;
-    u32 system_page_amount = bytes_to_page(array_size);
+    u64 system_memory_requirement = 0;
+    bitarray_create(page_amount, &system_memory_requirement, 0, 0);
+    u32 system_page_amount = bytes_to_page(system_memory_requirement);
 
     // reserve space
     void *base_address;
@@ -123,8 +124,9 @@ memory_pool *vmm_new_page_pool(u64 size) {
     new_pool->memory_mapped = 0;
 
     new_pool->system_pages = system_page_amount;
-    new_pool->array.length = page_amount;
-    new_pool->array.array = base_address;
+
+    bitarray_create(page_amount, &system_memory_requirement, base_address,
+                    &new_pool->array);
 
     return new_pool;
 }

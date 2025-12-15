@@ -6,6 +6,7 @@
 
 typedef struct bitarray {
     u64 length;
+    u64 offset_bits;
     u64 *array;
 } bitarray;
 
