@@ -1,8 +1,16 @@
 #include "systems/memory_system.h"
 #include "containers/binarytree.h"
+#include "containers/bitarray.h"
 #include "containers/freelist.h"
 #include "defines.h"
 #include "systems/vmm_system.h"
+
+typedef struct allocation {
+    void *ptr;
+    u64 size;
+    memory_pool *pool;
+    bitarray array;
+} allocation;
 
 typedef struct internal_state {
     memory_system_config config;
@@ -11,18 +19,13 @@ typedef struct internal_state {
     memory_pool *system_pool;
     memory_pool *main_pool;
 
+    u64 alloc_tree_size;
     binarytree alloc_tree;
+    allocation *allocations;
 
     u64 freelist_size;
     freelist alloc_feelist;
-    void *freelist_memory;
 } internal_state;
-
-typedef struct allocation {
-    void *ptr;
-    u64 size;
-    memory_pool *pool;
-} allocation;
 
 static internal_state *state = 0;
 
@@ -39,10 +42,14 @@ b8 memory_system_initialise(memory_system_config config) {
 
     memory_pool *system_pool = vmm_new_page_pool(MEBIBYTES(1ULL));
 
+    u64 binarytree_size = 0;
+    binarytree_create(config.max_allocations, &binarytree_size, 0, 0);
+    u64 allocation_array_size = sizeof(allocation) * config.max_allocations;
     u64 freelist_size = 0;
     freelist_create(config.initial_allocated, &freelist_size, 0, 0);
 
-    u64 system_size = sizeof(internal_state) + freelist_size;
+    u64 system_size = sizeof(internal_state) + binarytree_size +
+                      allocation_array_size + freelist_size;
 
     commit_info system_info;
     result = vmm_commit_pages(system_pool, 0, system_size, &system_info);
@@ -53,6 +60,15 @@ b8 memory_system_initialise(memory_system_config config) {
     state = system_pool->base_address;
     state->system_pool = system_pool;
     state->system_memory_allocated = system_size;
+    state->config = config;
+
+    void *binarytree_address = (void *)((u64)state + sizeof(internal_state));
+    binarytree_create(config.max_allocations, &state->alloc_tree_size,
+                      binarytree_address, &state->alloc_tree);
+    void *freelist_address =
+        (void *)((u64)binarytree_address + state->alloc_tree_size);
+    freelist_create(config.initial_allocated, &state->freelist_size,
+                    freelist_address, &state->alloc_feelist);
 
     memory_pool *main_pool = vmm_new_page_pool(GIBIBYTES(1ULL));
     commit_info main_info;
@@ -61,9 +77,6 @@ b8 memory_system_initialise(memory_system_config config) {
     if (!result) {
         return false;
     }
-
-    freelist_create(config.initial_allocated, &state->freelist_size,
-                    state->freelist_memory, &state->alloc_feelist);
 
     state->main_pool = main_pool;
 
@@ -82,17 +95,38 @@ b8 memory_system_initialise(memory_system_config config) {
 // }
 
 void *allocate_reserved(u64 size) {
+    allocation *alloc_info = 0;
+    u32 index;
+    for (index = 0; index < state->config.max_allocations; index++) {
+        if (state->allocations[index].ptr == 0) {
+            alloc_info = &state->allocations[index];
+        }
+    }
+    if (alloc_info == 0) {
+        return 0;
+    }
+
     u64 offset = 0;
     if (!freelist_allocate_block(&state->alloc_feelist, size, &offset)) {
         return 0;
     }
     void *ptr = (void *)((u64)state->main_pool->base_address + offset);
-    allocation alloc_info = {};
-    alloc_info.ptr = ptr;
-    alloc_info.pool = state->main_pool;
-    alloc_info.size = size;
-    // binary_tree_add_node(state->alloc_tree, alloc_info);
-    return 0;
+
+    alloc_info->ptr = ptr;
+    alloc_info->pool = state->main_pool;
+    alloc_info->size = size;
+    if (!binarytree_insert(&state->alloc_tree, (u64)ptr, index)) {
+        return 0;
+    }
+
+    u64 page_size = state->main_pool->page_size;
+    u64 ptr_diff = (u64)ptr - (u64)state->main_pool->base_address;
+    u32 page_diff = ptr_diff / page_size;
+    u32 page_amount = (size + page_size - 1) / page_size;
+    bitarray_create_sub_array(&state->main_pool->array, page_diff, page_amount,
+                              &alloc_info->array);
+
+    return ptr;
 }
 
 void *allocate_commited(u64 size) {

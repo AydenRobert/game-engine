@@ -21,6 +21,7 @@ typedef struct memory_pool {
     u32 system_pages;
     u32 pages_reserved;
     u32 pages_mapped;
+    u64 page_size;
     u64 memory_reserved;
     u64 memory_mapped;
 } memory_pool;

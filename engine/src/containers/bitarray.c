@@ -186,6 +186,7 @@ b8 bitarray_create_sub_array(bitarray *array, u64 start_index, u64 length,
         start_index + length > array->length) {
         return false;
     }
+    out_bitarray->parent = array;
     out_bitarray->array = array->array;
     out_bitarray->offset_bits = array->offset_bits + start_index;
     out_bitarray->length = length;

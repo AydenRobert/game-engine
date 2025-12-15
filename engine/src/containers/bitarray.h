@@ -4,11 +4,14 @@
 
 // create once, no resizing, fill, fill ranges, set individual values
 
-typedef struct bitarray {
+typedef struct bitarray bitarray;
+
+struct bitarray {
+    bitarray *parent;
     u64 length;
     u64 offset_bits;
     u64 *array;
-} bitarray;
+};
 
 b8 bitarray_create(u64 length, u64 *memory_requirement, void *memory,
                    bitarray *out_array);
