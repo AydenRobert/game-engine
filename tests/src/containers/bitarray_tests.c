@@ -221,6 +221,150 @@ u8 bitarray_should_handle_out_of_bounds() {
     return failed ? false : true;
 }
 
+u8 bitarray_should_search_and_count() {
+    u8 failed = false;
+    bitarray array;
+    u64 mem_req = 0;
+    u64 length = 100;
+    void *memory = setup_bitarray(&array, length, &mem_req);
+
+    // Clear
+    bitarray_fill(&array, false);
+
+    // Test Count
+    expect_should_be(0, bitarray_count_set(&array));
+    bitarray_set(&array, true, 10);
+    bitarray_set(&array, true, 20);
+    bitarray_set(&array, true, 30);
+    expect_should_be(3, bitarray_count_set(&array));
+
+    // Test Find First
+    // Should find index 10
+    expect_should_be(10, bitarray_find_first(&array, 0, length, true));
+    // Should find index 20 if we start searching after 10
+    expect_should_be(20, bitarray_find_first(&array, 11, length, true));
+
+    // Test Find First (searching for 0)
+    bitarray_fill(&array, true); // All 1s
+    bitarray_set(&array, false, 55);
+    expect_should_be(55, bitarray_find_first(&array, 0, length, false));
+
+    bitarray_destroy(&array);
+    kfree(memory, mem_req, MEMORY_TAG_ARRAY);
+
+    return failed ? false : true;
+}
+
+u8 bitarray_should_create_sub_array() {
+    u8 failed = false;
+    bitarray parent;
+    u64 mem_req = 0;
+    u64 length = 128; // 2 u64 words
+    void *memory = setup_bitarray(&parent, length, &mem_req);
+
+    // Clear parent
+    bitarray_fill(&parent, false);
+
+    // Create a sub-array (View)
+    // Parent indices 60 to 80 (20 bits long).
+    // This crosses the u64 boundary (at 63/64).
+    bitarray sub;
+    // Note: create_sub_array typically doesn't allocate new array memory,
+    // it points to the parent's memory with an offset.
+    b8 result = bitarray_create_sub_array(&parent, 60, 20, &sub);
+    expect_to_be_true(result);
+    expect_should_be(20, sub.length);
+    expect_should_be(60, sub.offset_bits);
+
+    // 1. Test Reading from Sub-array
+    // Set bit 65 in parent.
+    // In sub-array (starts at 60), this should be index 5.
+    bitarray_set(&parent, true, 65);
+    expect_to_be_true(bitarray_test(&sub, 5));
+
+    // 2. Test Writing to Sub-array
+    // Set bit 0 in sub-array.
+    // In parent, this should be index 60.
+    bitarray_set(&sub, true, 0);
+    expect_to_be_true(internal_bit_is_set(&parent, 60));
+
+    // 3. Test OOB on Sub-array
+    // Index 25 is OOB for sub-array (len 20), even though valid for parent.
+    expect_to_be_false(bitarray_set(&sub, true, 25));
+
+    // Cleanup
+    // NOTE: Depending on your implementation, destroying a sub-array
+    // might not be necessary if it doesn't own memory, but we destroy the
+    // parent.
+    bitarray_destroy(&parent);
+    kfree(memory, mem_req, MEMORY_TAG_ARRAY);
+
+    return failed ? false : true;
+}
+
+u8 bitarray_should_reflect_changes_bidirectionally() {
+    u8 failed = false;
+    bitarray parent;
+    u64 mem_req = 0;
+    u64 length = 100;
+    void *memory = setup_bitarray(&parent, length, &mem_req);
+
+    // Clean slate
+    bitarray_fill(&parent, false);
+
+    // Create a View:
+    // Parent indices 20 to 40 (Length 20)
+    bitarray sub;
+    bitarray_create_sub_array(&parent, 20, 20, &sub);
+
+    // ---------------------------------------------------------
+    // TEST 1: Parent modification -> Visible in Sub-array
+    // ---------------------------------------------------------
+    // Set index 25 in parent.
+    // Relative to sub-array (start 20), this is index 5.
+    bitarray_set(&parent, true, 25);
+
+    expect_to_be_true(bitarray_test(&sub, 5));
+    // Verify it didn't touch index 4 (parent 24) or 6 (parent 26) in sub
+    expect_to_be_false(bitarray_test(&sub, 4));
+    expect_to_be_false(bitarray_test(&sub, 6));
+
+    // ---------------------------------------------------------
+    // TEST 2: Sub-array modification -> Visible in Parent
+    // ---------------------------------------------------------
+    // Set index 0 in sub-array.
+    // This should correspond to index 20 in the parent.
+    bitarray_set(&sub, true, 0);
+
+    expect_to_be_true(internal_bit_is_set(&parent, 20));
+
+    // ---------------------------------------------------------
+    // TEST 3: Range fill on Sub-array -> Visible in Parent
+    // ---------------------------------------------------------
+    // Fill indices 10-15 in the sub-array.
+    // Relative to parent (start 20), this is 30-35.
+    bitarray_fill_range(&sub, true, 10, 5);
+
+    expect_to_be_true(internal_bit_is_set(&parent, 30));
+    expect_to_be_true(internal_bit_is_set(&parent, 34));
+    expect_to_be_false(internal_bit_is_set(&parent, 35)); // Range end
+
+    // ---------------------------------------------------------
+    // TEST 4: Clearing Parent Range -> Clears Sub-array
+    // ---------------------------------------------------------
+    // Clear everything in parent. Sub-array should read all false.
+    bitarray_fill(&parent, false);
+
+    expect_to_be_false(bitarray_test(&sub, 0));
+    expect_to_be_false(bitarray_test(&sub, 5));
+    expect_to_be_false(bitarray_test(&sub, 10));
+
+    bitarray_destroy(&parent);
+    kfree(memory, mem_req, MEMORY_TAG_ARRAY);
+
+    return failed ? false : true;
+}
+
 // -----------------------------------------------------------------------------
 // Performance Benchmarks
 // -----------------------------------------------------------------------------
@@ -284,6 +428,18 @@ void bitarray_register_tests() {
     test_manager_register_test(
         bitarray_should_handle_out_of_bounds,
         "Bitarray should fail gracefully on out of bounds access.");
+
+    test_manager_register_test(
+        bitarray_should_search_and_count,
+        "Bitarray should correctly count set bits and find first occurrences.");
+
+    test_manager_register_test(
+        bitarray_should_create_sub_array,
+        "Bitarray should create views (sub-arrays) with correct offsets.");
+
+    test_manager_register_test(
+        bitarray_should_reflect_changes_bidirectionally,
+        "Bitarray sub-arrays should sync bidirectionally with parent.");
 
     test_manager_register_test(
         bitarray_benchmark_optimized,

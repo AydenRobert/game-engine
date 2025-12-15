@@ -3,8 +3,8 @@
 #include "platform/platform.h"
 
 #define DIV_CEIL(val, div) (((val) + (div) - 1) / (div))
-#define CHUNK(index) (index / 64)
-#define INDEX(index) (index % 64)
+#define CHUNK(index) ((index) / 64)
+#define INDEX(index) ((index) % 64)
 
 #define PHYS_INDEX(array, index) ((index) + (array)->offset_bits)
 
@@ -110,7 +110,9 @@ b8 fill_range(u64 *array, b8 value, u64 start_index, u64 end_index) {
 b8 bitarray_test(bitarray *array, u64 index) {
     if (index >= array->length)
         return false;
-    return (array->array[CHUNK(index)] >> INDEX(index)) & 1ULL;
+    u64 chunk = array->array[CHUNK(array->offset_bits + index)];
+    u64 offset = INDEX(array->offset_bits + index);
+    return (chunk >> offset) & 1ULL;
 }
 
 u64 bitarray_count_set(bitarray *array) {
@@ -176,4 +178,16 @@ u64 bitarray_find_first(bitarray *array, u64 start_index, u64 end_index,
     }
 
     return end_index;
+}
+
+b8 bitarray_create_sub_array(bitarray *array, u64 start_index, u64 length,
+                             bitarray *out_bitarray) {
+    if (!array || !array->array || !out_bitarray ||
+        start_index + length > array->length) {
+        return false;
+    }
+    out_bitarray->array = array->array;
+    out_bitarray->offset_bits = array->offset_bits + start_index;
+    out_bitarray->length = length;
+    return true;
 }

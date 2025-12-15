@@ -24,3 +24,6 @@ u64 bitarray_count_set(bitarray *array);
 
 u64 bitarray_find_first(bitarray *array, u64 start_index, u64 end_index,
                         b8 val);
+
+b8 bitarray_create_sub_array(bitarray *array, u64 start_index, u64 length,
+                             bitarray *out_bitarray);
