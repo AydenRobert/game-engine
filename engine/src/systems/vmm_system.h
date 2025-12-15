@@ -94,3 +94,7 @@ b8 vmm_decommit_pages(memory_pool *pool, u64 start_index, u64 size,
 b8 vmm_release_page_pool(memory_pool *pool);
 
 u32 vmm_page_size();
+
+#if defined(_DEBUG)
+b8 vmm_is_initialised();
+#endif

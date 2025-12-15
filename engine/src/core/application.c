@@ -16,12 +16,14 @@
 #include "resources/resource_types.h"
 #include "systems/geometry_system.h"
 #include "systems/material_system.h"
+#include "systems/memory_system.h"
 #include "systems/resource_system.h"
 #include "systems/shader_system.h"
 #include "systems/texture_system.h"
 
 // TODO: temp
 #include "math/kmath.h"
+#include "systems/vmm_system.h"
 
 typedef struct application_state {
     game *game_inst;
@@ -113,6 +115,25 @@ KAPI b8 application_create(game *game_inst) {
     }
 
     // memory
+    vmm_config vmm_conf = {};
+    vmm_conf.max_memory_reserved = GIBIBYTES(1024ULL);
+    vmm_conf.max_memory_mapped = GIBIBYTES(2ULL);
+    vmm_conf.max_pool_amount = 100;
+
+    b8 result = vmm_initialise(vmm_conf);
+    if (!result) {
+        return false;
+    }
+
+    memory_system_config mem_sys_config = {};
+    mem_sys_config.max_memory = GIBIBYTES(2ULL);
+    mem_sys_config.initial_allocated = MEBIBYTES(128ULL);
+    mem_sys_config.max_allocations = 255;
+    if (!memory_system_initialise(mem_sys_config)) {
+        return false;
+    }
+
+    // TODO: remove
     memory_system_configuration memory_system_config = {};
     memory_system_config.total_alloc_count = GIBIBYTES(1);
     if (!memory_system_initialize(memory_system_config)) {

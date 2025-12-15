@@ -7,6 +7,7 @@
 #include "containers/freelist_tests.h"
 #include "containers/hastable_tests.h"
 #include "containers/linkedlist_tests.h"
+#include "containers/stack_tests.h"
 
 #include "memory/dynamic_allocator_test.h"
 #include "memory/linear_allocator_test.h"
@@ -35,6 +36,7 @@ int main() {
     vmm_register_tests();
     bitarray_register_tests();
     binarytree_register_tests();
+    stack_register_tests();
 
     KDEBUG("Starting tests...");
 

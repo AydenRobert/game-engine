@@ -22,7 +22,8 @@ static internal_state *state = 0;
 b8 alter_pages(memory_pool *pool, u32 start_index, u32 count, b8 commit,
                b8 *changed);
 void recalc_mapped_size(memory_pool *pool);
-u32 bytes_to_page(u64 bytes);
+u32 bytes_to_page_up(u64 bytes);
+u32 bytes_to_page_down(u64 bytes);
 u64 page_to_bytes(u32 pages);
 
 b8 vmm_initialise(vmm_config config) {
@@ -58,8 +59,8 @@ b8 vmm_initialise(vmm_config config) {
     state->page_size = page_size;
     state->system_page_amount = system_page_amount;
 
-    state->max_pages_reserved = bytes_to_page(config.max_memory_reserved);
-    state->max_pages_mapped = bytes_to_page(config.max_memory_mapped);
+    state->max_pages_reserved = bytes_to_page_up(config.max_memory_reserved);
+    state->max_pages_mapped = bytes_to_page_up(config.max_memory_mapped);
     state->pages_reserved = 0;
     state->pages_mapped = 0;
 
@@ -91,7 +92,7 @@ memory_pool *vmm_new_page_pool(u64 size) {
     }
 
     // calculate sizes
-    u64 page_amount = bytes_to_page(size);
+    u64 page_amount = bytes_to_page_up(size);
     u32 new_pages_reserved = state->pages_reserved + page_amount;
     if (new_pages_reserved > state->max_pages_reserved) {
         return 0;
@@ -101,7 +102,7 @@ memory_pool *vmm_new_page_pool(u64 size) {
     // calculate system page size
     u64 system_memory_requirement = 0;
     bitarray_create(page_amount, &system_memory_requirement, 0, 0);
-    u32 system_page_amount = bytes_to_page(system_memory_requirement);
+    u32 system_page_amount = bytes_to_page_up(system_memory_requirement);
 
     // reserve space
     void *base_address;
@@ -138,14 +139,14 @@ b8 vmm_commit_pages(memory_pool *pool, u64 start_index, u64 size,
     }
 
     // calculate sizes
-    u64 page_amount = bytes_to_page(size);
+    u64 page_amount = bytes_to_page_up(size);
     u32 new_pages_mapped = state->pages_mapped + page_amount;
     if (new_pages_mapped > state->max_pages_mapped) {
         return 0;
     }
 
-    // Currently rounds up the start_page_index;
-    u64 start_page_index = bytes_to_page(start_index);
+    // Currently rounds down the start_page_index;
+    u64 start_page_index = bytes_to_page_down(start_index);
 
     u64 end_page_index = start_page_index + page_amount;
     if (end_page_index > pool->pages_reserved) {
@@ -174,10 +175,10 @@ b8 vmm_decommit_pages(memory_pool *pool, u64 start_index, u64 size,
     }
 
     // calculate size
-    u64 page_amount = bytes_to_page(size);
+    u64 page_amount = bytes_to_page_up(size);
 
     // Currently rounds up the start_page_index;
-    u64 start_page_index = bytes_to_page(start_index);
+    u64 start_page_index = bytes_to_page_up(start_index);
 
     u64 end_page_index = start_page_index + page_amount;
     if (end_page_index > pool->pages_reserved) {
@@ -274,8 +275,14 @@ void recalc_mapped_size(memory_pool *pool) {
     state->pages_mapped += diff;
 }
 
-u32 bytes_to_page(u64 bytes) {
+u32 bytes_to_page_up(u64 bytes) {
     return (bytes + state->page_size - 1) / state->page_size;
 }
 
+u32 bytes_to_page_down(u64 bytes) { return bytes / state->page_size; }
+
 u64 page_to_bytes(u32 pages) { return pages * state->page_size; }
+
+#if defined(_DEBUG)
+b8 vmm_is_initialised() { return state != 0; }
+#endif
