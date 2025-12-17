@@ -138,7 +138,7 @@ b8 shader_system_create(const shader_config *config) {
 
     // To avoid complexity, go with 128 bytes that is garuenteed by vulkan
     // TODO: allow for bigger push constants by overflowing onto dynamic ubo
-    out_shader->push_constant_size = 128;
+    out_shader->push_constant_size = 0;
 
     u8 renderpass_id = INVALID_ID_U8;
     if (!renderer_renderpass_id(config->renderpass_name, &renderpass_id)) {

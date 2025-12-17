@@ -1877,7 +1877,7 @@ b8 vulkan_renderer_set_uniform(struct shader *s, struct shader_uniform *uniform,
     if (uniform->scope == SHADER_SCOPE_LOCAL) {
         VkCommandBuffer command_buffer =
             context.graphics_command_buffers[context.image_index].handle;
-        u32 push_constant_offset = uniform->offset - s->global_ubo_stride;
+        u32 push_constant_offset = uniform->offset;
         vkCmdPushConstants(command_buffer, internal->pipeline.pipeline_layout,
                            VK_SHADER_STAGE_VERTEX_BIT, push_constant_offset,
                            uniform->size, value);

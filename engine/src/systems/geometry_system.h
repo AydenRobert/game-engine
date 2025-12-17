@@ -52,3 +52,9 @@ geometry *geometry_system_get_default_geometry_2d();
 geometry_config geometry_system_generate_plane_config(
     f32 width, f32 height, u32 x_segment_count, u32 y_segment_count, f32 tile_x,
     f32 tile_y, const char *name, const char *material_name);
+
+geometry_config geometry_system_generate_cube_config(f32 width, f32 depth,
+                                                     f32 height, f32 tile_x,
+                                                     f32 tile_y,
+                                                     const char *name,
+                                                     const char *material_name);

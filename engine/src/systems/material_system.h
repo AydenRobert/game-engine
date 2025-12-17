@@ -21,6 +21,6 @@ void material_system_release(const char *name);
 material *material_system_get_default();
 
 b8 material_system_apply_global(u32 shader_id, const mat4 *projection,
-                                const mat4 *view);
+                                const mat4 *view, const vec4 *ambient_colour);
 b8 material_system_apply_instance(material *m);
 b8 material_system_apply_local(material *m, const mat4 *model);

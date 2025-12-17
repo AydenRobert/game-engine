@@ -23,6 +23,7 @@ typedef struct renderer_system_state {
     renderer_backend backend;
     mat4 projection;
     mat4 view;
+    vec4 ambient_colour;
     mat4 ui_projection;
     mat4 ui_view;
     f32 near_clip;
@@ -93,6 +94,9 @@ b8 renderer_initialize(const char *application_name,
     state_ptr->view = mat4_translation((vec3){{0, 0, 30.0f}});
     state_ptr->view = mat4_inverse(state_ptr->view);
 
+    // TODO: Obtain from scene
+    state_ptr->ambient_colour = (vec4){{0.25f, 0.25f, 0.25f, 1.0f}};
+
     // UI projection
     state_ptr->ui_projection =
         mat4_orthographic(0, 1280.0f, 720.0f, 0, -100.0f, 100.0f);
@@ -143,8 +147,8 @@ b8 renderer_draw_frame(render_packet *packet) {
 
     // Apply globals
     if (!material_system_apply_global(state_ptr->material_shader_id,
-                                      &state_ptr->projection,
-                                      &state_ptr->view)) {
+                                      &state_ptr->projection, &state_ptr->view,
+                                      &state_ptr->ambient_colour)) {
         KERROR("Failed to apply globals for material shader. Render frame "
                "failed.");
         return false;
@@ -196,7 +200,7 @@ b8 renderer_draw_frame(render_packet *packet) {
     // Apply globals
     if (!material_system_apply_global(state_ptr->ui_shader_id,
                                       &state_ptr->ui_projection,
-                                      &state_ptr->ui_view)) {
+                                      &state_ptr->ui_view, 0)) {
         KERROR("Failed to apply globals for ui shader. Render frame "
                "failed.");
         return false;
