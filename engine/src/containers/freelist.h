@@ -50,6 +50,9 @@ KAPI void freelist_destroy(freelist *list);
  */
 KAPI b8 freelist_allocate_block(freelist *list, u64 size, u64 *out_offset);
 
+KAPI b8 freelist_allocate_block_aligned(freelist *list, u64 size, u64 alignment,
+                                        u64 *out_offset);
+
 /**
  * @brief Attempts to find a free block of memory given the size.
  *
@@ -91,6 +94,3 @@ KAPI void freelist_clear(freelist *list);
  * @return The amount of free space.
  */
 KAPI u64 freelist_free_space(freelist *list);
-
-b8 freelist_state_from_bitboard(freelist *list, u64 bit_len, u64 *bits,
-                                u64 bit_size);

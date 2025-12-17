@@ -27,7 +27,7 @@ b8 stack_push(stack *s, u64 value) {
 }
 
 b8 stack_pop(stack *s, u64 *value) {
-    if (!s || !s->memory || s->allocated + sizeof(u64) > s->memory_size) {
+    if (!s || !s->memory) {
         return false;
     }
 

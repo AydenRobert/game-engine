@@ -30,8 +30,8 @@ typedef enum memory_tag {
     MEMORY_TAG_MAX_TAGS
 } memory_tag;
 
-b8 memory_system_initialize(memory_system_configuration config);
-void memory_system_shutdown();
+b8 main_memory_initialize(memory_system_configuration config);
+void main_memory_shutdown();
 
 KAPI void *kallocate(u64 size, memory_tag tag);
 KAPI void kfree(void *block, u64 size, memory_tag tag);

@@ -1,19 +1,15 @@
 #include "systems/memory_system.h"
-#include "containers/binarytree.h"
-#include "containers/bitarray.h"
-#include "containers/freelist.h"
+
 #include "core/asserts.h"
+
+#include "core/kmemory.h"
 #include "defines.h"
 #include "systems/vmm_system.h"
 
-// define alignment
-
-typedef struct allocation {
-    u64 offset;
-    u64 size;
-    memory_pool *pool;
-    bitarray array;
-} allocation;
+#include "containers/binarytree.h"
+#include "containers/bitarray.h"
+#include "containers/freelist.h"
+#include "containers/stack.h"
 
 typedef struct internal_state {
     memory_system_config config;
@@ -24,6 +20,11 @@ typedef struct internal_state {
 
     u64 alloc_tree_size;
     binarytree alloc_tree;
+
+    u64 alloc_stack_size;
+    stack alloc_indexes;
+
+    u64 alloc_array_size;
     allocation *allocations;
 
     u64 freelist_size;
@@ -32,53 +33,87 @@ typedef struct internal_state {
 
 static internal_state *state = 0;
 
-b8 memory_system_initialise(memory_system_config config) {
-    KASSERT(vmm_is_initialised());
+b8 memory_system_initialize(memory_system_config config) {
+    KASSERT_DEBUG(vmm_is_initialised());
 
-    memory_pool *system_pool = vmm_new_page_pool(MEBIBYTES(1ULL));
-
-    KASSERT(system_pool);
-    KASSERT(system_pool->base_address);
-
+    // Calculate sizes
     u64 binarytree_size = 0;
     binarytree_create(config.max_allocations, &binarytree_size, 0, 0);
+
+    u64 stack_size = sizeof(u64) * config.max_allocations;
     u64 allocation_array_size = sizeof(allocation) * config.max_allocations;
+
     u64 freelist_size = 0;
-    freelist_create(config.initial_allocated, &freelist_size, 0, 0);
+    freelist_create(config.max_memory, &freelist_size, 0, 0);
 
-    KASSERT(binarytree_size);
-    KASSERT(freelist_size);
+    KASSERT_DEBUG(binarytree_size);
+    KASSERT_DEBUG(freelist_size);
 
-    u64 system_size = sizeof(internal_state) + binarytree_size +
+    u64 system_size = sizeof(internal_state) + binarytree_size + stack_size +
                       allocation_array_size + freelist_size;
 
+    u64 system_size_round =
+        (system_size + MEBIBYTES(1ULL) - 1) & ~(MEBIBYTES(1) - 1);
+
+    // Get the system pool
+    memory_pool *system_pool = vmm_new_page_pool((system_size_round));
+
+    KASSERT_DEBUG(system_pool);
+    KASSERT_DEBUG(system_pool->base_address);
+
+    // Commit what's needed for memory system.
     commit_info system_info = {0};
     b8 result = vmm_commit_pages(system_pool, 0, system_size, &system_info);
     if (!result) {
         return false;
     }
 
-    KASSERT(system_info.start_index == 0);
-    KASSERT(system_info.size >= system_size);
+    KASSERT_DEBUG(system_info.start_index == 0);
+    KASSERT_DEBUG(system_info.size >= system_size);
 
+    // Setup state
     state = (internal_state *)system_pool->base_address;
     state->system_pool = system_pool;
     state->system_memory_allocated = system_size;
     state->config = config;
 
+    // Assign addresses
     void *binarytree_address = (void *)((u64)state + sizeof(internal_state));
     binarytree_create(config.max_allocations, &state->alloc_tree_size,
                       binarytree_address, &state->alloc_tree);
-    void *freelist_address =
+    state->alloc_stack_size = stack_size;
+    void *stack_address =
         (void *)((u64)binarytree_address + state->alloc_tree_size);
-    freelist_create(config.initial_allocated, &state->freelist_size,
+    stack_create(state->alloc_stack_size, stack_address, &state->alloc_indexes);
+
+    state->alloc_array_size = allocation_array_size;
+    void *array_address =
+        (void *)((u64)stack_address + state->alloc_stack_size);
+    kzero_memory(array_address, state->alloc_array_size);
+    state->allocations = array_address;
+
+    void *freelist_address =
+        (void *)((u64)array_address + state->alloc_array_size);
+    freelist_create(config.max_memory, &state->freelist_size,
                     freelist_address, &state->alloc_freelist);
 
-    memory_pool *main_pool = vmm_new_page_pool(GIBIBYTES(1ULL));
+    KASSERT_DEBUG(state->alloc_tree.internal_state != 0);
+    KASSERT_DEBUG(state->alloc_indexes.memory != 0);
+    KASSERT_DEBUG(state->allocations != 0);
+    KASSERT_DEBUG(state->alloc_freelist.memory != 0);
 
-    KASSERT(main_pool);
-    KASSERT(main_pool->base_address);
+    // Setup indexes
+    for (u32 i = 0; i < config.max_allocations; i++) {
+        stack_push(&state->alloc_indexes, config.max_allocations - (i + 1));
+    }
 
+    // Get the main pool
+    memory_pool *main_pool = vmm_new_page_pool(config.max_memory);
+
+    KASSERT_DEBUG(main_pool);
+    KASSERT_DEBUG(main_pool->base_address);
+
+    // Commit what is asked of the main pool
     commit_info main_info;
     result =
         vmm_commit_pages(main_pool, 0, config.initial_allocated, &main_info);
@@ -86,39 +121,42 @@ b8 memory_system_initialise(memory_system_config config) {
         return false;
     }
 
-    KASSERT(main_info.start_index == 0);
-    KASSERT(main_info.size >= config.initial_allocated);
+    KASSERT_DEBUG(main_info.start_index == 0);
+    KASSERT_DEBUG(main_info.size >= config.initial_allocated);
 
     state->main_pool = main_pool;
 
     return true;
 }
 
-// void memory_system_shutdown() {
-//     if (!state) {
-//         return;
-//     }
-//
-//     vmm_release_page_pool(state->main_pool);
-//     vmm_release_page_pool(state->system_pool);
-//     vmm_shutdown();
-//     state = 0;
-// }
-
-void *allocate_reserved(u64 size) {
-    allocation *alloc_info = 0;
-    u32 index;
-    for (index = 0; index < state->config.max_allocations; index++) {
-        if (state->allocations[index].offset == 0) {
-            alloc_info = &state->allocations[index];
-        }
+void memory_system_shutdown_tempname() {
+    if (!state) {
+        return;
     }
-    if (alloc_info == 0) {
+
+    vmm_release_page_pool(state->main_pool);
+    vmm_release_page_pool(state->system_pool);
+    state = 0;
+}
+
+// TODO: align by pages, would need to add to freelist code
+void *allocate_reserved(u64 size) {
+    // Get a free allocation info
+    allocation *alloc_info = 0;
+    u64 index = INVALID_ID;
+    stack_pop(&state->alloc_indexes, &index);
+    if (index == INVALID_ID) {
         return 0;
     }
+    alloc_info = &state->allocations[index];
 
+    alloc_info->pool = state->main_pool;
+
+    // allocate in the freelist
     u64 offset = 0;
-    if (!freelist_allocate_block(&state->alloc_freelist, size, &offset)) {
+    if (!freelist_allocate_block_aligned(&state->alloc_freelist, size,
+                                         alloc_info->pool->page_size,
+                                         &offset)) {
         return 0;
     }
     void *ptr = (void *)((u64)state->main_pool->base_address + offset);
@@ -127,9 +165,15 @@ void *allocate_reserved(u64 size) {
     alloc_info->pool = state->main_pool;
     alloc_info->size = size;
     if (!binarytree_insert(&state->alloc_tree, (u64)ptr, index)) {
+        // Clean up if goes wrong
+        freelist_free_block(&state->alloc_freelist, size, offset);
+        alloc_info->offset = 0;
+        alloc_info->pool = 0;
+        alloc_info->size = 0;
         return 0;
     }
 
+    // Setup sub bitarray
     u64 page_size = state->main_pool->page_size;
     u64 ptr_diff = (u64)ptr - (u64)state->main_pool->base_address;
     u32 page_diff = ptr_diff / page_size;
@@ -161,26 +205,21 @@ b8 allocation_ensure_commited_pages(void *block, u64 start_page_index,
         return false;
     }
 
-    KASSERT(index < state->config.max_allocations);
+    KASSERT_DEBUG(index < state->config.max_allocations);
 
     allocation *alloc_info = &state->allocations[index];
     u32 page_size = alloc_info->pool->page_size;
     // Start from the start of the page
-    u64 byte_offset = (start_page_index - 1) * page_size;
+    u64 byte_offset = (start_page_index)*page_size;
     u64 size = page_amount * page_size;
-    u64 start_index =
-        (u64)alloc_info->pool->base_address + alloc_info->offset + byte_offset;
     if (byte_offset + size > alloc_info->size) {
         return false;
     }
 
     commit_info commit_info = {0};
-    if (!vmm_commit_pages(alloc_info->pool, start_index, size, &commit_info)) {
+    if (!vmm_commit_pages(alloc_info->pool, byte_offset, size, &commit_info)) {
         return false;
     }
-
-    KASSERT(start_index > commit_info.start_index);
-    KASSERT(size < commit_info.size);
 
     return true;
 }
@@ -196,22 +235,35 @@ b8 allocation_ensure_commited(void *block, u64 byte_offset, u64 size) {
         return false;
     }
 
-    KASSERT(index < state->config.max_allocations);
+    KASSERT_DEBUG(index < state->config.max_allocations);
 
     allocation *alloc_info = &state->allocations[index];
-    u64 start_index =
-        (u64)alloc_info->pool->base_address + alloc_info->offset + byte_offset;
     if (byte_offset + size > alloc_info->size) {
         return false;
     }
 
     commit_info commit_info = {0};
-    if (!vmm_commit_pages(alloc_info->pool, start_index, size, &commit_info)) {
+    if (!vmm_commit_pages(alloc_info->pool, byte_offset, size, &commit_info)) {
         return false;
     }
 
-    KASSERT(start_index > commit_info.start_index);
-    KASSERT(size < commit_info.size);
+    return true;
+}
+
+b8 allocation_get_struct(void *block, allocation **alloc) {
+    if (!block || !alloc) {
+        return false;
+    }
+
+    u32 index = INVALID_ID;
+    b8 result = binarytree_search(&state->alloc_tree, (u64)block, &index);
+    if (!result || index == INVALID_ID) {
+        return false;
+    }
+
+    KASSERT_DEBUG(index < state->config.max_allocations);
+
+    *alloc = &state->allocations[index];
 
     return true;
 }
@@ -222,16 +274,30 @@ void allocation_free(void *block) {
     }
 
     u32 index = INVALID_ID;
-    b8 result = binarytree_search(&state->alloc_tree, (u64)block, &index);
 
-    KASSERT(result);
-    KASSERT(index != INVALID_ID);
-    KASSERT(index < state->config.max_allocations);
+    if (!binarytree_delete(&state->alloc_tree, (u64)block, &index)) {
+        return;
+    }
+
+    KASSERT_DEBUG(index != INVALID_ID);
+    KASSERT_DEBUG(index < state->config.max_allocations);
 
     allocation *alloc_info = &state->allocations[index];
 
-    freelist_free_block(&state->alloc_freelist, alloc_info->size,
-                        alloc_info->offset);
+    if (!freelist_free_block(&state->alloc_freelist, alloc_info->size,
+                             alloc_info->offset)) {
+        return;
+    }
 
-    // TODO: setup decommit tracking and freeing
+    commit_info commit_info;
+    if (!vmm_decommit_pages(alloc_info->pool, alloc_info->offset,
+                            alloc_info->size, &commit_info)) {
+        return;
+    }
+
+    KASSERT_DEBUG(commit_info.start_index == alloc_info->offset);
+
+    kzero_memory(alloc_info, sizeof(allocation));
+
+    stack_push(&state->alloc_indexes, index);
 }

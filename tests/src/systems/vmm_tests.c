@@ -1,4 +1,5 @@
 #include "vmm_tests.h"
+
 #include <systems/vmm_system.h>
 
 #include "../expect.h"

@@ -405,6 +405,64 @@ u8 freelist_should_resize_and_allocate_new_space() {
     return failed ? false : true;
 }
 
+u8 freelist_should_allocate_aligned_successfully() {
+    u8 failed = false;
+
+    freelist list;
+    u64 total_size = 1024;
+    u64 memory_requirement = 0;
+
+    // Setup
+    freelist_create(total_size, &memory_requirement, 0, 0);
+    void *memory = kallocate(memory_requirement, MEMORY_TAG_ARRAY);
+    freelist_create(total_size, &memory_requirement, memory, &list);
+
+    // First, do a small unaligned allocation to force a non-zero start offset
+    u64 offset1 = 0;
+    b8 result = freelist_allocate_block(&list, 3, &offset1);
+    expect_to_be_true(result);
+    expect_should_be(0, offset1);
+
+    // Now allocate an aligned block
+    u64 offset2 = 0;
+    u64 aligned_size = 100;
+    u64 alignment = 64;
+
+    result = freelist_allocate_block_aligned(&list, aligned_size, alignment,
+                                             &offset2);
+    expect_to_be_true(result);
+
+    // Check that the returned offset is properly aligned
+    expect_should_be(0, offset2 % alignment);
+
+    // For this scenario:
+    // - First alloc: 3 bytes at offset 0
+    // - Free region before aligned alloc: [3, 1024), size = 1021
+    // - alignment = 64, so aligned_offset = 64
+    //   padding = 64 - 3 = 61
+    // - Your allocator keeps the padding as free space and only
+    //   removes the actual aligned block (100 bytes) from the freelist.
+    //
+    // Total consumed = 3 (first) + 100 (second) = 103
+    // Expected free space = 1024 - 103 = 921
+    expect_should_be(921, freelist_free_space(&list));
+
+    // Free both blocks and ensure full coalescing
+    result = freelist_free_block(&list, aligned_size, offset2);
+    expect_to_be_true(result);
+
+    result = freelist_free_block(&list, 3, offset1);
+    expect_to_be_true(result);
+
+    expect_should_be(total_size, freelist_free_space(&list));
+
+    // Cleanup
+    freelist_destroy(&list);
+    kfree(memory, memory_requirement, MEMORY_TAG_ARRAY);
+
+    return failed ? false : true;
+}
+
 void freelist_register_tests() {
     test_manager_register_test(
         freelist_should_create_and_destroy,
@@ -447,4 +505,8 @@ void freelist_register_tests() {
     test_manager_register_test(
         freelist_should_resize_and_allocate_new_space,
         "Freelist should allow allocation in new space after resize.");
+
+    test_manager_register_test(
+        freelist_should_allocate_aligned_successfully,
+        "Freelist should allocate aligned blocks and coalesce correctly.");
 }

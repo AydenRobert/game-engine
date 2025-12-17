@@ -123,6 +123,7 @@ memory_pool *vmm_new_page_pool(u64 size) {
     new_pool->memory_reserved = page_to_bytes(page_amount);
     new_pool->pages_mapped = 0;
     new_pool->memory_mapped = 0;
+    new_pool->page_size = state->page_size;
 
     new_pool->system_pages = system_page_amount;
 

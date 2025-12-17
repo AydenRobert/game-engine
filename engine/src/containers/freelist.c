@@ -122,6 +122,100 @@ b8 freelist_allocate_block(freelist *list, u64 size, u64 *out_offset) {
     return false;
 }
 
+b8 freelist_allocate_block_aligned(freelist *list, u64 size, u64 alignment,
+                                        u64 *out_offset) {
+    if (!list || !list->memory) {
+        KERROR("freelist_allocate_block_aligned - passed invalid freelist.");
+        return false;
+    }
+
+    if (!out_offset) {
+        KERROR("freelist_allocate_block_aligned - expects valid out_offset.");
+        return false;
+    }
+
+    if (alignment == 0 || (alignment & (alignment - 1)) != 0) {
+        KERROR("freelist_allocate_block_aligned - alignment must be a power of "
+               "two.");
+        return false;
+    }
+
+    internal_state *state = (internal_state *)list->memory;
+    freelist_node *node = state->head;
+    freelist_node *previous = 0;
+
+    while (node) {
+        u64 start = node->offset;
+        u64 end = (u64)node->offset + (u64)node->size;
+        u64 aligned = (start + (alignment - 1)) & ~(alignment - 1);
+        u64 padding = aligned - start;
+        u64 total_need = padding + size;
+
+        if ((u64)node->size < total_need) {
+            // Not enough room in this node, try next.
+            previous = node;
+            node = node->next;
+            continue;
+        }
+
+        // We can allocate here.
+        *out_offset = aligned;
+
+        u64 remaining_after =
+            end - (aligned + size); // bytes after the allocated block
+
+        if (padding == 0 && remaining_after == 0) {
+            // Case A: Node consumed entirely, exactly like existing size==
+            // case.
+            if (previous) {
+                previous->next = node->next;
+            } else {
+                state->head = node->next;
+            }
+            return_node(list, node);
+            return true;
+        } else if (padding == 0) {
+            // Case B: No front fragment, only back fragment.
+            // Keep node as the back fragment.
+            node->offset = (u32)(aligned + size);
+            node->size = (u32)remaining_after;
+            return true;
+        } else if (remaining_after == 0) {
+            // Case C: Only front fragment.
+            // Shrink node to just the front fragment.
+            node->size = (u32)padding;
+            return true;
+        } else {
+            // Case D: Both front and back fragments exist.
+            // node becomes front fragment, new node becomes back fragment.
+
+            // Create new node for the back fragment.
+            freelist_node *back_node = get_node(list);
+            if (!back_node) {
+                KWARN(
+                    "freelist_allocate_block_aligned - out of freelist nodes.");
+                return false;
+            }
+
+            back_node->offset = (u32)(aligned + size);
+            back_node->size = (u32)remaining_after;
+            back_node->next = node->next;
+
+            node->size = (u32)padding;
+            node->next = back_node;
+
+            return true;
+        }
+    }
+
+    u64 free_space = freelist_free_space(list);
+    KWARN(
+        "freelist_allocate_block_aligned - no space found to allocate "
+        "aligned block of size %lluB (alignment %llu). Remaining space: %lluB.",
+        size, alignment, free_space);
+    return false;
+}
+
 b8 freelist_free_block(freelist *list, u64 size, u64 offset) {
     if (!list || !list->memory) {
         KERROR("freelist_free_block - passed invalid freelist.");

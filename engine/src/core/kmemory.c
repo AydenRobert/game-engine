@@ -4,9 +4,11 @@
 #include "core/logger.h"
 #include "memory/dynamic_allocator.h"
 #include "platform/platform.h"
+#include "systems/memory_system.h"
 
 #include <stdio.h>
 
+// TODO: temp
 struct memory_stats {
     u64 total_allocated;
     u64 tagged_allocations[MEMORY_TAG_MAX_TAGS];
@@ -33,14 +35,14 @@ typedef struct memory_system_state {
 
 static memory_system_state *state_ptr;
 
-b8 memory_system_initialize(memory_system_configuration config) {
+b8 main_memory_initialize(memory_system_configuration config) {
     u64 alloc_memory_requirement = 0;
     dynamic_allocator_create(config.total_alloc_count,
                              &alloc_memory_requirement, 0, 0);
     u64 total_memory_size =
         sizeof(memory_system_state) + alloc_memory_requirement;
 
-    void *memory_block = platform_allocate(total_memory_size, false);
+    void *memory_block = allocate_commited(total_memory_size);
     if (!memory_block) {
         KFATAL("Couldn't allocate memory for Memory System. Cannot continue.");
         return false;
@@ -61,7 +63,7 @@ b8 memory_system_initialize(memory_system_configuration config) {
     return true;
 }
 
-void memory_system_shutdown() {
+void main_memory_shutdown() {
     if (!state_ptr) {
         KWARN("Tried to shutdown memory system without it being initialized.");
         return;

@@ -129,14 +129,14 @@ KAPI b8 application_create(game *game_inst) {
     mem_sys_config.max_memory = GIBIBYTES(2ULL);
     mem_sys_config.initial_allocated = MEBIBYTES(128ULL);
     mem_sys_config.max_allocations = 255;
-    if (!memory_system_initialise(mem_sys_config)) {
+    if (!memory_system_initialize(mem_sys_config)) {
         return false;
     }
 
     // TODO: remove
     memory_system_configuration memory_system_config = {};
     memory_system_config.total_alloc_count = GIBIBYTES(1);
-    if (!memory_system_initialize(memory_system_config)) {
+    if (!main_memory_initialize(memory_system_config)) {
         KERROR("Failed to initialize memory system, shutting down.");
         return false;
     }
@@ -488,7 +488,7 @@ KAPI b8 application_run() {
           MEMORY_TAG_LINEAR_ALLOCATOR);
 
     platform_shutdown(&app_state->platform);
-    memory_system_shutdown();
+    main_memory_shutdown();
 
     return true;
 }
