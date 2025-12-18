@@ -76,3 +76,14 @@ typedef struct vertex_2d {
     vec2 position;
     vec2 texcoord;
 } vertex_2d;
+
+typedef struct transform transform;
+// NOTE: do not update directly
+struct transform {
+    vec3 position;
+    quat rotation;
+    vec3 scale;
+    b8 is_dirty;
+    mat4 local;
+    transform *parent;
+};

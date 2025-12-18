@@ -9,6 +9,7 @@
 #include "core/logger.h"
 #include "defines.h"
 #include "game_types.h"
+#include "math/math_types.h"
 #include "memory/linear_allocator.h"
 #include "platform/platform.h"
 #include "renderer/renderer_frontend.h"
@@ -24,6 +25,7 @@
 // TODO: temp
 #include "math/geometry_utils.h"
 #include "math/kmath.h"
+#include "math/transform.h"
 
 typedef struct application_state {
     game *game_inst;
@@ -67,8 +69,9 @@ typedef struct application_state {
     void *geometry_system_state;
 
     // TODO: temp
-    mesh *meshes;
-    void *base_meshes_ptr;
+    mesh meshes[10];
+    u32 mesh_count;
+
     geometry *test_ui_geometry;
 } application_state;
 
@@ -126,11 +129,14 @@ KAPI b8 application_create(game *game_inst) {
     // TODO: handle alignment in dynamic allocator
     void *raw_game_state_block =
         kallocate(game_inst->state_memory_requirement + 63, MEMORY_TAG_GAME);
-    game_inst->state = (void *)(((u64)raw_game_state_block + 63) & ~63);
+    game_inst->state = (void *)get_aligned((u64)raw_game_state_block, 64);
 
-    game_inst->application_state =
-        kallocate(sizeof(application_state), MEMORY_TAG_APPLICATION);
-    app_state = game_inst->application_state;
+    void *raw_application_state =
+        kallocate(sizeof(application_state) + 63, MEMORY_TAG_APPLICATION);
+    // TODO: temp memory alignment
+    app_state = (void *)get_aligned((u64)raw_application_state, 64);
+    game_inst->application_state = app_state;
+
     app_state->game_inst = game_inst;
 
     u64 systems_allocator_total_size = 64 * 1024 * 1024; // 64 mb
@@ -292,52 +298,59 @@ KAPI b8 application_create(game *game_inst) {
 
     // TODO: temp
 
-    app_state->meshes =
-        darray_create_aligned(mesh, 16, &app_state->base_meshes_ptr);
+    app_state->mesh_count = 0;
 
     // Load up a cube configuration, and load geometry from it.
-    mesh cube_mesh;
-    cube_mesh.geometry_count = 1;
-    cube_mesh.geometries =
-        kallocate(sizeof(mesh *) * cube_mesh.geometry_count, MEMORY_TAG_ARRAY);
+    mesh *cube_mesh = &app_state->meshes[app_state->mesh_count++];
+    cube_mesh->geometry_count = 1;
+    cube_mesh->geometries =
+        kallocate(sizeof(mesh *) * cube_mesh->geometry_count, MEMORY_TAG_ARRAY);
     geometry_config g_config = geometry_system_generate_cube_config(
         10.0f, 10.0f, 10.0f, 1.0f, 1.0f, "test_cube", "test_material");
     geometry_generate_normals(g_config.vertex_count, g_config.vertices,
                               g_config.index_count, g_config.indices);
     geometry_generate_tangents(g_config.vertex_count, g_config.vertices,
                                g_config.index_count, g_config.indices);
-    cube_mesh.geometries[0] =
+    cube_mesh->geometries[0] =
         geometry_system_acquire_from_config(g_config, true);
-    cube_mesh.model = mat4_identity();
-    darray_push(app_state->meshes, cube_mesh);
-
-    // Clean up the allocations for the geometry config.
-    kfree(g_config.vertices, sizeof(vertex_3d) * g_config.vertex_count,
-          MEMORY_TAG_ARRAY);
-    kfree(g_config.indices, sizeof(u32) * g_config.index_count,
-          MEMORY_TAG_ARRAY);
+    cube_mesh->transform = transform_create();
+    geometry_system_config_dispose(&g_config);
 
     // A second cube
-    mesh cube_mesh_2;
-    cube_mesh_2.geometry_count = 1;
-    cube_mesh_2.geometries = kallocate(
-        sizeof(mesh *) * cube_mesh_2.geometry_count, MEMORY_TAG_ARRAY);
-    geometry_config g_config_2 = geometry_system_generate_cube_config(
+    mesh *cube_mesh_2 = &app_state->meshes[app_state->mesh_count++];
+    cube_mesh_2->geometry_count = 1;
+    cube_mesh_2->geometries = kallocate(
+        sizeof(mesh *) * cube_mesh_2->geometry_count, MEMORY_TAG_ARRAY);
+    g_config = geometry_system_generate_cube_config(
         5.0f, 5.0f, 5.0f, 1.0f, 1.0f, "test_cube_2", "test_material");
-    geometry_generate_normals(g_config_2.vertex_count, g_config_2.vertices,
-                              g_config_2.index_count, g_config_2.indices);
-    geometry_generate_tangents(g_config_2.vertex_count, g_config_2.vertices,
-                               g_config_2.index_count, g_config_2.indices);
-    cube_mesh_2.geometries[0] =
+    geometry_generate_normals(g_config.vertex_count, g_config.vertices,
+                              g_config.index_count, g_config.indices);
+    geometry_generate_tangents(g_config.vertex_count, g_config.vertices,
+                               g_config.index_count, g_config.indices);
+    cube_mesh_2->geometries[0] =
         geometry_system_acquire_from_config(g_config, true);
-    cube_mesh_2.model = mat4_translation((vec3){{10.0f, 0.0f, 1.0f}});
-    darray_push(app_state->meshes, cube_mesh_2);
+    cube_mesh_2->transform =
+        transform_from_position((vec3){{10.0f, 0.0f, 1.0f}});
+    transform_set_parent(&cube_mesh_2->transform, &cube_mesh->transform);
+    geometry_system_config_dispose(&g_config);
 
-    // Clean up the allocations for the geometry config.
-    kfree(g_config_2.vertices, sizeof(vertex_3d) * g_config_2.vertex_count,
-          MEMORY_TAG_ARRAY);
-    kfree(g_config_2.indices, sizeof(u32) * g_config_2.index_count,
-          MEMORY_TAG_ARRAY);
+    // A third? cube
+    mesh *cube_mesh_3 = &app_state->meshes[app_state->mesh_count++];
+    cube_mesh_3->geometry_count = 1;
+    cube_mesh_3->geometries = kallocate(
+        sizeof(mesh *) * cube_mesh_3->geometry_count, MEMORY_TAG_ARRAY);
+    g_config = geometry_system_generate_cube_config(
+        2.0f, 2.0f, 2.0f, 1.0f, 1.0f, "test_cube_3", "test_material");
+    geometry_generate_normals(g_config.vertex_count, g_config.vertices,
+                              g_config.index_count, g_config.indices);
+    geometry_generate_tangents(g_config.vertex_count, g_config.vertices,
+                               g_config.index_count, g_config.indices);
+    cube_mesh_3->geometries[0] =
+        geometry_system_acquire_from_config(g_config, true);
+    cube_mesh_3->transform =
+        transform_from_position((vec3){{5.0f, 0.0f, 1.0f}});
+    transform_set_parent(&cube_mesh_3->transform, &cube_mesh_2->transform);
+    geometry_system_config_dispose(&g_config);
 
     geometry_config ui_config;
     ui_config.vertex_size = sizeof(vertex_2d);
@@ -433,10 +446,10 @@ KAPI b8 application_run() {
             // TODO: refactor packet creation
             render_packet packet;
             packet.delta_time = delta;
+            packet.geometry_count = 0;
 
             // TODO: temp
-            u32 mesh_count = darray_length(app_state->meshes);
-            if (mesh_count > 0) {
+            if (app_state->mesh_count > 0) {
                 // NOTE: Yes, this allocates/frees every frame. No, it doesn't
                 // matter for now since it's temporary.
                 packet.geometries = darray_create_aligned(
@@ -445,30 +458,28 @@ KAPI b8 application_run() {
                 // Perform a small rotation on the first mesh.
                 quat rotation = quat_from_axis_angle((vec3){{0, 1, 0}},
                                                      0.5f * delta, false);
-                mat4 rotation_matrix = quat_to_mat4(rotation);
-                app_state->meshes[0].model =
-                    mat4_mul(app_state->meshes[0].model, rotation_matrix);
-                if (mesh_count > 1) {
-                    // "Parent" the second cube to the first.
-                    app_state->meshes[1].model =
-                        mat4_mul(mat4_translation((vec3){{10.0f, 0.0f, 1.0f}}),
-                                 app_state->meshes[0].model);
+                transform_rotate(&app_state->meshes[0].transform, rotation);
+
+                if (app_state->mesh_count > 1) {
+                    transform_rotate(&app_state->meshes[1].transform, rotation);
                 }
+
+                if (app_state->mesh_count > 2) {
+                    transform_rotate(&app_state->meshes[2].transform, rotation);
+                }
+
                 // Iterate all meshes and add them to the packet's geometries
                 // collection
-                for (u32 i = 0; i < mesh_count; ++i) {
-                    for (u32 j = 0; j < app_state->meshes[i].geometry_count;
-                         ++j) {
+                for (u32 i = 0; i < app_state->mesh_count; ++i) {
+                    mesh *m = &app_state->meshes[i];
+                    for (u32 j = 0; j < m->geometry_count; ++j) {
                         geometry_render_data data;
-                        data.geometry = app_state->meshes[i].geometries[j];
-                        data.model = app_state->meshes[i].model;
+                        data.geometry = m->geometries[j];
+                        data.model = transform_get_world(&m->transform);
                         darray_push(packet.geometries, data);
+                        packet.geometry_count++;
                     }
                 }
-                packet.geometry_count = darray_length(packet.geometries);
-            } else {
-                packet.geometry_count = 0;
-                packet.geometries = 0;
             }
 
             geometry_render_data test_ui_render;

@@ -148,6 +148,23 @@ void geometry_system_release(geometry *geometry) {
     }
 }
 
+void geometry_system_config_dispose(geometry_config *config) {
+    if (!config) {
+        return;
+    }
+
+    if (config->vertices) {
+        kfree(config->vertices, config->vertex_size * config->vertex_count,
+              MEMORY_TAG_ARRAY);
+    }
+    if (config->indices) {
+        kfree(config->indices, config->index_size * config->index_count,
+              MEMORY_TAG_ARRAY);
+    }
+
+    kzero_memory(config, sizeof(geometry_config));
+}
+
 geometry *geometry_system_get_default_geometry_3d() {
     if (!state_ptr) {
         KERROR("geometry_system_get_default_geometry_3d - called before system "
@@ -552,7 +569,8 @@ geometry_system_generate_cube_config(f32 width, f32 depth, f32 height,
     }
 
     if (material_name && string_length(material_name) > 0) {
-        string_ncopy(config.material_name, material_name, GEOMETRY_NAME_MAX_LENGTH);
+        string_ncopy(config.material_name, material_name,
+                     GEOMETRY_NAME_MAX_LENGTH);
     } else {
         string_ncopy(config.material_name, DEFAULT_GEOMETRY_NAME,
                      GEOMETRY_NAME_MAX_LENGTH);

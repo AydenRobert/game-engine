@@ -28,6 +28,7 @@ geometry *geometry_system_acquire_by_id(u32 id);
 geometry *geometry_system_acquire_from_config(geometry_config config,
                                               b8 auto_release);
 void geometry_system_release(geometry *geometry);
+void geometry_system_config_dispose(geometry_config *config);
 
 geometry *geometry_system_get_default_geometry_3d();
 geometry *geometry_system_get_default_geometry_2d();
