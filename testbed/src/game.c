@@ -125,8 +125,14 @@ b8 game_update(game *game_inst, f32 delta_time) {
 
     recalculate_view_matrix(state);
 
-    // HACK: should not do this
-    renderer_set_view(state->view);
+    // HACK: This should not be available outside the engine.
+    renderer_set_view(state->view, state->camera_position);
+
+    // TODO: temp
+    if (input_is_key_up('P') && input_was_key_down('P')) {
+        KDEBUG("Pos:[%.2f, %.2f, %.2f", state->camera_position.x,
+               state->camera_position.y, state->camera_position.z);
+    }
     return true;
 }
 

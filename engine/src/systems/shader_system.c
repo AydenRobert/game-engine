@@ -359,6 +359,9 @@ b8 add_attribute(shader *shader, const shader_attribute_config *config) {
 }
 
 b8 add_sampler(shader *shader, const shader_uniform_config *config) {
+    KINFO("add_sampler called for: '%s', Scope: %d", config->name,
+          config->scope);
+
     if (config->scope == SHADER_SCOPE_INSTANCE && !shader->use_instances) {
         KERROR("add_sampler - cannot add an instance shader for a sampler that "
                "does not use instances.");

@@ -24,6 +24,7 @@ typedef struct renderer_system_state {
     mat4 projection;
     mat4 view;
     vec4 ambient_colour;
+    vec3 view_position;
     mat4 ui_projection;
     mat4 ui_view;
     f32 near_clip;
@@ -249,7 +250,10 @@ b8 renderer_draw_frame(render_packet *packet) {
     return true;
 }
 
-void renderer_set_view(mat4 view) { state_ptr->view = view; }
+void renderer_set_view(mat4 view, vec3 view_position) {
+    state_ptr->view = view;
+    state_ptr->view_position = view_position;
+}
 
 void renderer_create_texture(const u8 *pixels, struct texture *texture) {
     state_ptr->backend.create_texture(pixels, texture);

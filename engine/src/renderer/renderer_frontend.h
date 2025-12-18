@@ -48,4 +48,4 @@ b8 renderer_set_uniform(struct shader *s, struct shader_uniform *uniform,
                         const void *value);
 
 // HACK: this should not be exposed outside the engine
-KAPI void renderer_set_view(mat4 view);
+KAPI void renderer_set_view(mat4 view, vec3 view_position);
