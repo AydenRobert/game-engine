@@ -1,4 +1,5 @@
 #include "game.h"
+#include "renderer/renderer_types.inl"
 
 #include <core/event.h>
 #include <core/input.h>
@@ -133,6 +134,25 @@ b8 game_update(game *game_inst, f32 delta_time) {
         KDEBUG("Pos:[%.2f, %.2f, %.2f", state->camera_position.x,
                state->camera_position.y, state->camera_position.z);
     }
+
+    if (input_is_key_up('0') && input_was_key_down('0')) {
+        event_context data = {};
+        data.data.i32[0] = RENDERER_VIEW_MODE_DEFAULT;
+        event_fire(EVENT_CODE_SET_RENDER_MODE, game_inst, data);
+    }
+
+    if (input_is_key_up('1') && input_was_key_down('1')) {
+        event_context data = {};
+        data.data.i32[0] = RENDERER_VIEW_MODE_LIGHTING;
+        event_fire(EVENT_CODE_SET_RENDER_MODE, game_inst, data);
+    }
+
+    if (input_is_key_up('2') && input_was_key_down('2')) {
+        event_context data = {};
+        data.data.i32[0] = RENDERER_VIEW_MODE_NORMALS;
+        event_fire(EVENT_CODE_SET_RENDER_MODE, game_inst, data);
+    }
+
     return true;
 }
 

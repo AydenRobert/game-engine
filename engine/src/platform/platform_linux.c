@@ -309,6 +309,29 @@ keys translate_keycode(u32 x_keycode) {
         return KEY_SLASH;
     case XK_grave:
         return KEY_GRAVE;
+
+    // numbers
+    case XK_0:
+        return KEY_0;
+    case XK_1:
+        return KEY_1;
+    case XK_2:
+        return KEY_2;
+    case XK_3:
+        return KEY_3;
+    case XK_4:
+        return KEY_4;
+    case XK_5:
+        return KEY_5;
+    case XK_6:
+        return KEY_6;
+    case XK_7:
+        return KEY_7;
+    case XK_8:
+        return KEY_8;
+    case XK_9:
+        return KEY_9;
+
     case XK_a:
     case XK_A:
         return KEY_A;

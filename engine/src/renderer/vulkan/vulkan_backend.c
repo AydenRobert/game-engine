@@ -1711,8 +1711,7 @@ b8 vulkan_renderer_shader_apply_instance(struct shader *s) {
         VkWriteDescriptorSet sampler_descriptor = {
             VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET};
         sampler_descriptor.dstSet = object_descriptor_set;
-        sampler_descriptor.dstBinding =
-            i + sampler_binding_start;
+        sampler_descriptor.dstBinding = i + sampler_binding_start;
         sampler_descriptor.descriptorType =
             VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
         sampler_descriptor.descriptorCount = 1;

@@ -29,6 +29,12 @@ typedef enum builtin_renderpass {
     BUILTIN_RENDERPASS_UI = 0x02,
 } builtin_renderpass;
 
+typedef enum renderer_debug_view_mode {
+    RENDERER_VIEW_MODE_DEFAULT,
+    RENDERER_VIEW_MODE_LIGHTING,
+    RENDERER_VIEW_MODE_NORMALS
+} renderer_debug_view_mode;
+
 typedef struct renderer_backend {
     struct platform_state *plat_state;
     u64 frame_number;
@@ -46,6 +52,7 @@ typedef struct renderer_backend {
     b8 (*begin_renderpass)(struct renderer_backend *backend, u8 renderpass_id);
     b8 (*end_renderpass)(struct renderer_backend *backend, u8 renderpass_id);
 
+    // NOTE: expects geometry_render_data at alignment of 16
     void (*draw_geometry)(struct renderer_backend *backend,
                           geometry_render_data data);
 
@@ -84,7 +91,10 @@ typedef struct render_packet {
 
     u32 geometry_count;
     geometry_render_data *geometries;
+    // TODO: temp
+    void *_geometries_base_ptr;
 
     u32 ui_geometry_count;
     geometry_render_data *ui_geometries;
+
 } render_packet;

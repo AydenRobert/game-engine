@@ -39,6 +39,7 @@ b8 material_loader_load(struct resource_loader *self, const char *name,
     resource_data->diffuse_colour = vec4_one();
     resource_data->diffuse_map_name[0] = 0;
     resource_data->specular_map_name[0] = 0;
+    resource_data->normal_map_name[0] = 0;
     resource_data->shininess = 32.0f;
     string_ncopy(resource_data->name, name, MATERIAL_NAME_MAX_LENGTH);
 
@@ -92,6 +93,9 @@ b8 material_loader_load(struct resource_loader *self, const char *name,
                          TEXTURE_NAME_MAX_LENGTH);
         } else if (strings_equali(trimmed_variable_name, "specular_map_name")) {
             string_ncopy(resource_data->specular_map_name, trimmed_value,
+                         TEXTURE_NAME_MAX_LENGTH);
+        } else if (strings_equali(trimmed_variable_name, "normal_map_name")) {
+            string_ncopy(resource_data->normal_map_name, trimmed_value,
                          TEXTURE_NAME_MAX_LENGTH);
         } else if (strings_equali(trimmed_variable_name, "diffuse_colour")) {
             if (!string_to_vec4(trimmed_value,

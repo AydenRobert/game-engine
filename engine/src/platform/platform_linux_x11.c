@@ -149,8 +149,9 @@ b8 platform_pump_messages_x11(display_state *disp_state) {
             xcb_key_press_event_t *kb_event = (xcb_key_press_event_t *)event;
             b8 pressed = event->response_type == XCB_KEY_PRESS;
             xcb_keycode_t code = kb_event->detail;
-            KeySym key_sym = XkbKeycodeToKeysym(state->display, (KeyCode)code,
-                                                0, code & ShiftMask ? 1 : 0);
+            KeySym key_sym =
+                XkbKeycodeToKeysym(state->display, (KeyCode)code, 0,
+                                   0 /* code & ShiftMask ? 1 : 0*/);
             keys key = translate_keycode(key_sym);
 
             // Pass to input subsystem
@@ -197,11 +198,12 @@ b8 platform_pump_messages_x11(display_state *disp_state) {
             input_process_mouse_move(move_event->event_x, move_event->event_y);
         } break;
         case XCB_CONFIGURE_NOTIFY: {
-                xcb_configure_notify_event_t *configure_event = (xcb_configure_notify_event_t *)event;
-                event_context context = {};
-                context.data.u16[0] = configure_event->width;
-                context.data.u16[1] = configure_event->height;
-                event_fire(EVENT_CODE_RESIZED, 0, context);
+            xcb_configure_notify_event_t *configure_event =
+                (xcb_configure_notify_event_t *)event;
+            event_context context = {};
+            context.data.u16[0] = configure_event->width;
+            context.data.u16[1] = configure_event->height;
+            event_fire(EVENT_CODE_RESIZED, 0, context);
         } break;
         case XCB_CLIENT_MESSAGE: {
             cm = (xcb_client_message_event_t *)event;

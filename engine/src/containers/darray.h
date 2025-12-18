@@ -15,6 +15,11 @@ enum { DARRAY_CAPACITY, DARRAY_LENGTH, DARRAY_STRIDE, DARRAY_FIELD_LENGTH };
 KAPI void *_darray_create(u64 length, u64 stride);
 KAPI void _darray_destroy(void *array);
 
+// TODO: temp
+void *_darray_create_aligned(u64 length, u64 stride, u64 alignment,
+                             void **base_ptr);
+void _darray_destroy_aligned(void *array, u64 aligned, void *base_ptr);
+
 KAPI u64 _darray_field_get(void *array, u64 field);
 KAPI void _darray_field_set(void *array, u64 field, u64 value);
 
@@ -37,6 +42,12 @@ KAPI void *_darray_reserve_on(void *array, u64 count_to_add);
 #define darray_reserve(type, capacity) _darray_create(capacity, sizeof(type))
 
 #define darray_destroy(array) _darray_destroy(array)
+
+// TODO: temp
+#define darray_create_aligned(type, alignment, base_ptr)                       \
+    _darray_create_aligned(8, sizeof(type), alignment, base_ptr)
+#define darray_destroy_aligned(array, alignment, base_ptr)                     \
+    _darray_destroy_aligned(array, alignment, base_ptr)
 
 #define darray_push(array, value)                                              \
     {                                                                          \

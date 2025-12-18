@@ -1,5 +1,6 @@
 #include "renderer/renderer_frontend.h"
 
+#include "core/event.h"
 #include "core/kmemory.h"
 #include "core/kstring.h"
 #include "defines.h"
@@ -31,6 +32,7 @@ typedef struct renderer_system_state {
     f32 far_clip;
     u32 material_shader_id;
     u32 ui_shader_id;
+    u32 render_mode;
 } renderer_system_state;
 
 #define CRITICAL_INIT(op, msg)                                                 \
@@ -40,6 +42,33 @@ typedef struct renderer_system_state {
     }
 
 static renderer_system_state *state_ptr;
+
+b8 renderer_on_event(u16 code, void *sender, void *listener_inst,
+                     event_context context) {
+    switch (code) {
+    case EVENT_CODE_SET_RENDER_MODE: {
+        renderer_system_state *state = (renderer_system_state *)listener_inst;
+        i32 mode = context.data.i32[0];
+        switch (mode) {
+        default:
+        case RENDERER_VIEW_MODE_DEFAULT:
+            KDEBUG("Renderer mode set to default.");
+            state->render_mode = RENDERER_VIEW_MODE_DEFAULT;
+            break;
+        case RENDERER_VIEW_MODE_LIGHTING:
+            KDEBUG("Renderer mode set to lighting.");
+            state->render_mode = RENDERER_VIEW_MODE_LIGHTING;
+            break;
+        case RENDERER_VIEW_MODE_NORMALS:
+            KDEBUG("Renderer mode set to normals.");
+            state->render_mode = RENDERER_VIEW_MODE_NORMALS;
+            break;
+        }
+        return true;
+    }
+    }
+    return false;
+}
 
 b8 renderer_initialize(const char *application_name,
                        struct platform_state *plat_state,
@@ -55,6 +84,9 @@ b8 renderer_initialize(const char *application_name,
     renderer_backend_create(RENDERER_BACKEND_TYPES_VULKAN, plat_state,
                             &state_ptr->backend);
     state_ptr->backend.frame_number = 0;
+    state_ptr->render_mode = RENDERER_VIEW_MODE_DEFAULT;
+
+    event_register(EVENT_CODE_SET_RENDER_MODE, state, renderer_on_event);
 
     CRITICAL_INIT(state_ptr->backend.initialize(&state_ptr->backend,
                                                 application_name, plat_state),
@@ -108,6 +140,7 @@ b8 renderer_initialize(const char *application_name,
 
 void renderer_shutdown(void *state) {
     if (state_ptr && state_ptr->backend.shutdown) {
+        event_unregister(EVENT_CODE_SET_RENDER_MODE, state, renderer_on_event);
         state_ptr->backend.shutdown(&state_ptr->backend);
     }
     state_ptr = 0;
@@ -127,6 +160,8 @@ void renderer_on_resize(u16 width, u16 height) {
 }
 
 b8 renderer_draw_frame(render_packet *packet) {
+    state_ptr->backend.frame_number++;
+
     if (!state_ptr->backend.begin_frame(&state_ptr->backend,
                                         packet->delta_time)) {
         return true;
@@ -147,10 +182,10 @@ b8 renderer_draw_frame(render_packet *packet) {
     }
 
     // Apply globals
-    if (!material_system_apply_global(state_ptr->material_shader_id,
-                                      &state_ptr->projection, &state_ptr->view,
-                                      &state_ptr->ambient_colour,
-                                      &state_ptr->view_position)) {
+    if (!material_system_apply_global(
+            state_ptr->material_shader_id, &state_ptr->projection,
+            &state_ptr->view, &state_ptr->ambient_colour,
+            &state_ptr->view_position, state_ptr->render_mode)) {
         KERROR("Failed to apply globals for material shader. Render frame "
                "failed.");
         return false;
@@ -166,9 +201,13 @@ b8 renderer_draw_frame(render_packet *packet) {
         }
 
         // Apply the material
-        if (!material_system_apply_instance(m)) {
-            KWARN("Failed to apply material '%s'. Skipping draw.", m->name);
-            continue;
+        if (m->render_frame_number != state_ptr->backend.frame_number) {
+            if (!material_system_apply_instance(m)) {
+                KWARN("Failed to apply material '%s'. Skipping draw.", m->name);
+                continue;
+            } else {
+                m->render_frame_number = state_ptr->backend.frame_number;
+            }
         }
 
         // Apply the locals
@@ -202,7 +241,7 @@ b8 renderer_draw_frame(render_packet *packet) {
     // Apply globals
     if (!material_system_apply_global(state_ptr->ui_shader_id,
                                       &state_ptr->ui_projection,
-                                      &state_ptr->ui_view, 0, 0)) {
+                                      &state_ptr->ui_view, 0, 0, 0)) {
         KERROR("Failed to apply globals for ui shader. Render frame "
                "failed.");
         return false;
@@ -241,7 +280,6 @@ b8 renderer_draw_frame(render_packet *packet) {
     // End frame
     b8 result =
         state_ptr->backend.end_frame(&state_ptr->backend, packet->delta_time);
-    state_ptr->backend.frame_number++;
 
     if (!result) {
         KERROR("renderer_end_frame failed. Application shutting down...");
