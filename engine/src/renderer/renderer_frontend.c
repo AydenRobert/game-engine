@@ -149,7 +149,8 @@ b8 renderer_draw_frame(render_packet *packet) {
     // Apply globals
     if (!material_system_apply_global(state_ptr->material_shader_id,
                                       &state_ptr->projection, &state_ptr->view,
-                                      &state_ptr->ambient_colour)) {
+                                      &state_ptr->ambient_colour,
+                                      &state_ptr->view_position)) {
         KERROR("Failed to apply globals for material shader. Render frame "
                "failed.");
         return false;
@@ -201,7 +202,7 @@ b8 renderer_draw_frame(render_packet *packet) {
     // Apply globals
     if (!material_system_apply_global(state_ptr->ui_shader_id,
                                       &state_ptr->ui_projection,
-                                      &state_ptr->ui_view, 0)) {
+                                      &state_ptr->ui_view, 0, 0)) {
         KERROR("Failed to apply globals for ui shader. Render frame "
                "failed.");
         return false;

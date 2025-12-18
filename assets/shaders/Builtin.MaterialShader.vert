@@ -2,12 +2,13 @@
 
 layout(location = 0) in vec3 in_position;
 layout(location = 1) in vec3 in_normal;
-layout(location = 2) in vec2 in_textcoord;
+layout(location = 2) in vec2 in_texcoord;
 
 layout(set = 0, binding = 0) uniform global_uniform_object {
     mat4 projection;
     mat4 view;
     vec4 ambient_colour;
+    vec3 view_position; // Added
 } global_ubo;
 
 layout(push_constant) uniform push_constants {
@@ -22,11 +23,18 @@ layout(location = 1) out struct dto {
     vec4 ambient;
     vec2 tex_coord;
     vec3 normal;
+    vec3 frag_position; // Added: Needed for specular calculation
 } out_dto;
 
 void main() {
-    out_dto.tex_coord = in_textcoord;
+    out_dto.tex_coord = in_texcoord;
+    // Calculate Normal in world space
     out_dto.normal = mat3(u_push_constants.model) * in_normal;
     out_dto.ambient = global_ubo.ambient_colour;
+
+    // Calculate Fragment Position in World Space (Model * Position)
+    // We need this to calculate the direction from the surface to the camera
+    out_dto.frag_position = vec3(u_push_constants.model * vec4(in_position, 1.0));
+
     gl_Position = global_ubo.projection * global_ubo.view * u_push_constants.model * vec4(in_position, 1.0);
 }

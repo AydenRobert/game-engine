@@ -19,6 +19,7 @@ typedef struct material_shader_uniform_locations {
     u16 projection;
     u16 view;
     u16 ambient_colour;
+    u16 view_position;
     u16 shininess;
     u16 diffuse_colour;
     u16 diffuse_texture;
@@ -253,6 +254,8 @@ material *material_system_acquire_from_config(material_config config) {
                 shader_system_uniform_index(s, "view");
             state_ptr->material_locations.ambient_colour =
                 shader_system_uniform_index(s, "ambient_colour");
+            state_ptr->material_locations.view_position =
+                shader_system_uniform_index(s, "view_position");
             state_ptr->material_locations.diffuse_colour =
                 shader_system_uniform_index(s, "diffuse_colour");
             state_ptr->material_locations.diffuse_texture =
@@ -366,7 +369,8 @@ material *material_system_get_default() {
     }
 
 b8 material_system_apply_global(u32 shader_id, const mat4 *projection,
-                                const mat4 *view, const vec4 *ambient_colour) {
+                                const mat4 *view, const vec4 *ambient_colour,
+                                const vec3 *view_position) {
     if (shader_id == state_ptr->material_shader_id) {
         MATERIAL_APPLY_OR_FAIL(shader_system_uniform_set_by_index(
             state_ptr->material_locations.projection, projection));
@@ -374,6 +378,8 @@ b8 material_system_apply_global(u32 shader_id, const mat4 *projection,
             state_ptr->material_locations.view, view));
         MATERIAL_APPLY_OR_FAIL(shader_system_uniform_set_by_index(
             state_ptr->material_locations.ambient_colour, ambient_colour));
+        MATERIAL_APPLY_OR_FAIL(shader_system_uniform_set_by_index(
+            state_ptr->material_locations.view_position, view_position));
     } else if (shader_id == state_ptr->ui_shader_id) {
         MATERIAL_APPLY_OR_FAIL(shader_system_uniform_set_by_index(
             state_ptr->ui_locations.projection, projection));

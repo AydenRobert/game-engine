@@ -82,26 +82,43 @@ b8 application_on_resized(u16 code, void *sender, void *listener_inst,
 // TODO: temp
 b8 event_on_debug_event(u16 code, void *sender, void *listener_inst,
                         event_context data) {
-    const char *names[4] = {"cobblestone", "paving", "paving2", "grass"};
+    const char *names[3] = {"cobblestone", "paving", "paving2"};
+    const char *spec_names[3] = {"cobblestone_SPEC", "paving_SPEC",
+                                 "paving2_SPEC"};
     static i8 choice = 2;
 
-    // Save old name
+    // Save off the old names.
     const char *old_name = names[choice];
+    const char *old_spec_name = names[choice];
 
     choice++;
-    choice %= 4;
+    choice %= 3;
 
-    // Acquire the new texture
-    app_state->test_world_geometry->material->diffuse_map.texture =
-        texture_system_acquire(names[choice], true);
-    if (!app_state->test_world_geometry->material->diffuse_map.texture) {
-        KWARN("event_on_debug - no texture, using default...");
+    if (app_state->test_world_geometry) {
+        // Acquire the new diffuse texture.
         app_state->test_world_geometry->material->diffuse_map.texture =
-            texture_system_get_default_texture();
-    }
+            texture_system_acquire(names[choice], true);
+        if (!app_state->test_world_geometry->material->diffuse_map.texture) {
+            KWARN("event_on_debug_event no diffuse texture! using default");
+            app_state->test_world_geometry->material->diffuse_map.texture =
+                texture_system_get_default_texture();
+        }
 
-    // Release the old texture
-    texture_system_release(old_name);
+        // Release the old diffuse texture.
+        texture_system_release(old_name);
+
+        // Acquire the new spec texture.
+        app_state->test_world_geometry->material->specular_map.texture =
+            texture_system_acquire(spec_names[choice], true);
+        if (!app_state->test_world_geometry->material->specular_map.texture) {
+            KWARN("event_on_debug_event no spec texture! using default");
+            app_state->test_world_geometry->material->specular_map.texture =
+                texture_system_get_default_specular_texture();
+        }
+
+        // Release the old spec texture.
+        texture_system_release(old_spec_name);
+    }
 
     return true;
 }
