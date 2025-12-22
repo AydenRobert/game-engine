@@ -201,13 +201,13 @@ b8 renderer_draw_frame(render_packet *packet) {
         }
 
         // Apply the material
-        if (m->render_frame_number != state_ptr->backend.frame_number) {
-            if (!material_system_apply_instance(m)) {
-                KWARN("Failed to apply material '%s'. Skipping draw.", m->name);
-                continue;
-            } else {
-                m->render_frame_number = state_ptr->backend.frame_number;
-            }
+        b8 needs_update =
+            m->render_frame_number != state_ptr->backend.frame_number;
+        if (!material_system_apply_instance(m, needs_update)) {
+            KWARN("Failed to apply material '%s'. Skipping draw.", m->name);
+            continue;
+        } else {
+            m->render_frame_number = state_ptr->backend.frame_number;
         }
 
         // Apply the locals
@@ -257,9 +257,13 @@ b8 renderer_draw_frame(render_packet *packet) {
         }
 
         // Apply the ui
-        if (!material_system_apply_instance(m)) {
+        b8 needs_update =
+            m->render_frame_number != state_ptr->backend.frame_number;
+        if (!material_system_apply_instance(m, needs_update)) {
             KWARN("Failed to apply ui '%s'. Skipping draw.", m->name);
             continue;
+        } else {
+            m->render_frame_number = state_ptr->backend.frame_number;
         }
 
         // Apply the locals
@@ -360,8 +364,8 @@ b8 renderer_shader_apply_globals(struct shader *s) {
     return state_ptr->backend.shader_apply_globals(s);
 }
 
-b8 renderer_shader_apply_instance(struct shader *s) {
-    return state_ptr->backend.shader_apply_instance(s);
+b8 renderer_shader_apply_instance(struct shader *s, b8 needs_update) {
+    return state_ptr->backend.shader_apply_instance(s, needs_update);
 }
 
 b8 renderer_shader_acquire_instance_resources(struct shader *s,

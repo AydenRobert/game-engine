@@ -309,6 +309,26 @@ KINLINE f32 vec4_dot_f32(f32 a0, f32 a1, f32 a2, f32 a3, f32 b0, f32 b1, f32 b2,
     return a0 * b0 + a1 * b1 + a2 * b2 + a3 * b3;
 }
 
+KINLINE b8 vec4_compare(vec4 vector_0, vec4 vector_1, f32 tolerance) {
+    if (kabs(vector_0.x - vector_1.x) > tolerance) {
+        return false;
+    }
+
+    if (kabs(vector_0.y - vector_1.y) > tolerance) {
+        return false;
+    }
+
+    if (kabs(vector_0.z - vector_1.z) > tolerance) {
+        return false;
+    }
+
+    if (kabs(vector_0.w - vector_1.w) > tolerance) {
+        return false;
+    }
+
+    return true;
+}
+
 KINLINE mat4 mat4_identity() {
     mat4 out_matrix;
     kzero_memory(out_matrix.data, sizeof(f32) * 16);
@@ -357,7 +377,7 @@ KINLINE mat4 mat4_orthographic(f32 left, f32 right, f32 bottom, f32 top,
 }
 
 KINLINE mat4 mat4_perspective(f32 fov_radians, f32 aspect_ratio, f32 near_clip,
-                             f32 far_clip) {
+                              f32 far_clip) {
     f32 tan_half_fov = ktan(fov_radians * 0.5f);
     mat4 out_matrix;
     kzero_memory(out_matrix.data, sizeof(f32) * 16);

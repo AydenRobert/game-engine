@@ -1637,7 +1637,7 @@ b8 vulkan_renderer_shader_apply_globals(struct shader *s) {
     return true;
 }
 
-b8 vulkan_renderer_shader_apply_instance(struct shader *s) {
+b8 vulkan_renderer_shader_apply_instance(struct shader *s, b8 needs_update) {
     if (!s->use_instances) {
         KERROR("vulkan_renderer_shader_apply_instance - shader does not use "
                "instances.");
@@ -1655,75 +1655,78 @@ b8 vulkan_renderer_shader_apply_instance(struct shader *s) {
     VkDescriptorSet object_descriptor_set =
         object_state->descriptor_set_state.descriptor_sets[image_index];
 
-    VkWriteDescriptorSet descriptor_writes[32];
-    kzero_memory(descriptor_writes, sizeof(VkWriteDescriptorSet) * 32);
-    u32 descriptor_count = 0;
+    if (needs_update) {
+        VkWriteDescriptorSet descriptor_writes[32];
+        kzero_memory(descriptor_writes, sizeof(VkWriteDescriptorSet) * 32);
+        u32 descriptor_count = 0;
 
-    // Only do this if the descriptor has not been updated
-    u8 *instance_ubo_generation =
-        &(object_state->descriptor_set_state.descriptor_states[0]
-              .generations[image_index]);
+        // Only do this if the descriptor has not been updated
+        u8 *instance_ubo_generation =
+            &(object_state->descriptor_set_state.descriptor_states[0]
+                  .generations[image_index]);
 
-    // TODO: determine if update is necessary (dirty flag)
-    if (*instance_ubo_generation == INVALID_ID_U8) {
-        VkDescriptorBufferInfo buffer_info;
-        buffer_info.buffer = internal->uniform_buffer.handle;
-        buffer_info.offset = object_state->offset;
-        buffer_info.range = s->ubo_stride;
+        // TODO: determine if update is necessary (dirty flag)
+        if (*instance_ubo_generation == INVALID_ID_U8) {
+            VkDescriptorBufferInfo buffer_info;
+            buffer_info.buffer = internal->uniform_buffer.handle;
+            buffer_info.offset = object_state->offset;
+            buffer_info.range = s->ubo_stride;
 
-        VkWriteDescriptorSet ubo_descriptor = {
-            VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET};
-        ubo_descriptor.dstSet = object_descriptor_set;
-        ubo_descriptor.dstBinding = BINDING_INDEX_UBO; // Binding 0
-        ubo_descriptor.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
-        ubo_descriptor.descriptorCount = 1;
-        ubo_descriptor.pBufferInfo = &buffer_info;
+            VkWriteDescriptorSet ubo_descriptor = {
+                VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET};
+            ubo_descriptor.dstSet = object_descriptor_set;
+            ubo_descriptor.dstBinding = BINDING_INDEX_UBO; // Binding 0
+            ubo_descriptor.descriptorType = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+            ubo_descriptor.descriptorCount = 1;
+            ubo_descriptor.pBufferInfo = &buffer_info;
 
-        descriptor_writes[descriptor_count] = ubo_descriptor;
-        descriptor_count++;
+            descriptor_writes[descriptor_count] = ubo_descriptor;
+            descriptor_count++;
 
-        *instance_ubo_generation = 1;
-    }
+            *instance_ubo_generation = 1;
+        }
 
-    // --- Descriptors 1..N: Samplers ---
-    // Iterate over samplers. In your config, samplers start at Binding 1.
-    // The C-side "instance_textures" array maps 1:1 to these locations.
+        // --- Descriptors 1..N: Samplers ---
+        // Iterate over samplers. In your config, samplers start at Binding 1.
+        // The C-side "instance_textures" array maps 1:1 to these locations.
 
-    u32 sampler_binding_start = 1;
-    u32 total_sampler_count =
-        internal->config.descriptor_sets[DESC_SET_INDEX_INSTANCE]
-            .binding_count -
-        1; // Subtract 1 for UBO
+        u32 sampler_binding_start = 1;
+        u32 total_sampler_count =
+            internal->config.descriptor_sets[DESC_SET_INDEX_INSTANCE]
+                .binding_count -
+            1; // Subtract 1 for UBO
 
-    // We need an array of image infos kept alive until update is called
-    VkDescriptorImageInfo image_infos[32];
+        // We need an array of image infos kept alive until update is called
+        VkDescriptorImageInfo image_infos[32];
 
-    for (u32 i = 0; i < total_sampler_count; i++) {
-        texture *t = internal->instance_states[s->bound_instance_id]
-                         .instance_textures[i];
-        vulkan_texture_data *internal_data =
-            (vulkan_texture_data *)t->internal_data;
+        for (u32 i = 0; i < total_sampler_count; i++) {
+            texture *t = internal->instance_states[s->bound_instance_id]
+                             .instance_textures[i];
+            vulkan_texture_data *internal_data =
+                (vulkan_texture_data *)t->internal_data;
 
-        image_infos[i].imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
-        image_infos[i].imageView = internal_data->image.view;
-        image_infos[i].sampler = internal_data->sampler;
+            image_infos[i].imageLayout =
+                VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
+            image_infos[i].imageView = internal_data->image.view;
+            image_infos[i].sampler = internal_data->sampler;
 
-        VkWriteDescriptorSet sampler_descriptor = {
-            VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET};
-        sampler_descriptor.dstSet = object_descriptor_set;
-        sampler_descriptor.dstBinding = i + sampler_binding_start;
-        sampler_descriptor.descriptorType =
-            VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
-        sampler_descriptor.descriptorCount = 1;
-        sampler_descriptor.pImageInfo = &image_infos[i];
+            VkWriteDescriptorSet sampler_descriptor = {
+                VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET};
+            sampler_descriptor.dstSet = object_descriptor_set;
+            sampler_descriptor.dstBinding = i + sampler_binding_start;
+            sampler_descriptor.descriptorType =
+                VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+            sampler_descriptor.descriptorCount = 1;
+            sampler_descriptor.pImageInfo = &image_infos[i];
 
-        descriptor_writes[descriptor_count] = sampler_descriptor;
-        descriptor_count++;
-    }
+            descriptor_writes[descriptor_count] = sampler_descriptor;
+            descriptor_count++;
+        }
 
-    if (descriptor_count > 0) {
-        vkUpdateDescriptorSets(context.device.logical_device, descriptor_count,
-                               descriptor_writes, 0, 0);
+        if (descriptor_count > 0) {
+            vkUpdateDescriptorSets(context.device.logical_device,
+                                   descriptor_count, descriptor_writes, 0, 0);
+        }
     }
 
     // Bind the descriptor set
@@ -1762,7 +1765,7 @@ b8 vulkan_renderer_shader_acquire_instance_resources(struct shader *s,
     // Wipe memory for whole array
     instance_state->instance_textures = kallocate(
         sizeof(texture *) * s->instance_texture_count, MEMORY_TAG_ARRAY);
-    texture *default_texture = texture_system_get_default_texture();
+    texture *default_texture = texture_system_get_default_diffuse_texture();
     // Set all texture points to default until assigned
     for (u32 i = 0; i < instance_texture_count; i++) {
         instance_state->instance_textures[i] = default_texture;

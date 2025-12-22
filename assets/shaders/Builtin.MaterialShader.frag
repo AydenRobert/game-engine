@@ -88,7 +88,7 @@ void main() {
 
     vec3 map_normal = texture(normal_sampler, in_dto.tex_coord).rgb;
     vec3 localNormal = 2.0 * map_normal - 1.0;
-    localNormal.y *= -1.0;
+    localNormal.y *= 1.0;
     final_normal = normalize(TBN * localNormal);
 
     // 4. Mode Switching

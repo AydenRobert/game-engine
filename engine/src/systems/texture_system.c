@@ -14,6 +14,7 @@
 typedef struct texture_system_state {
     texture_system_config config;
     texture default_texture;
+    texture default_diffuse_texture;
     texture default_specular_texture;
     texture default_normal_texture;
 
@@ -233,14 +234,15 @@ void texture_system_release(const char *name) {
     hashtable_set(&state_ptr->registered_texture_table, name_copy, &ref);
 }
 
-texture *texture_system_get_default_texture() {
+texture *texture_system_get_default_diffuse_texture() {
     if (!state_ptr) {
-        KERROR("texture_system_get_default_texture failed. System should be "
-               "initialized when using this function. Null pointer returned.");
+        KERROR("texture_system_get_default_diffuse_texture failed. System "
+               "should be initialized when using this function. Null pointer "
+               "returned.");
         return 0;
     }
 
-    return &state_ptr->default_texture;
+    return &state_ptr->default_diffuse_texture;
 }
 
 texture *texture_system_get_default_specular_texture() {
@@ -306,6 +308,23 @@ b8 create_default_textures(texture_system_state *state_ptr) {
     renderer_create_texture(pixels, &state_ptr->default_texture);
     state_ptr->default_texture.generation = INVALID_ID;
 
+    // Diffuse texture.
+    KTRACE("Creating default diffuse texture...");
+    u8 diff_pixels[16 * 16 * 4];
+    // Default diff map is black (no diffuse)
+    kset_memory(diff_pixels, 0, sizeof(u8) * 16 * 16 * 4);
+    string_ncopy(state_ptr->default_diffuse_texture.name,
+                 DEFAULT_DIFFUSE_TEXTURE_NAME, TEXTURE_NAME_MAX_LENGTH);
+    state_ptr->default_diffuse_texture.width = 16;
+    state_ptr->default_diffuse_texture.height = 16;
+    state_ptr->default_diffuse_texture.channel_count = 4;
+    state_ptr->default_diffuse_texture.generation = INVALID_ID;
+    state_ptr->default_diffuse_texture.has_transparency = false;
+    renderer_create_texture(diff_pixels, &state_ptr->default_diffuse_texture);
+    // Manually set the texture generation to invalid since this is a default
+    // texture.
+    state_ptr->default_diffuse_texture.generation = INVALID_ID;
+
     // Specular texture.
     KTRACE("Creating default specular texture...");
     u8 spec_pixels[16 * 16 * 4];
@@ -360,6 +379,7 @@ void destroy_default_textures(texture_system_state *state_ptr) {
     }
 
     destroy_texture(&state_ptr->default_texture);
+    destroy_texture(&state_ptr->default_diffuse_texture);
     destroy_texture(&state_ptr->default_specular_texture);
     destroy_texture(&state_ptr->default_normal_texture);
 }

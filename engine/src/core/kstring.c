@@ -34,6 +34,18 @@ KAPI b8 strings_equali(const char *str0, const char *str1) {
 #endif
 }
 
+KAPI b8 strings_nequal(const char *str0, const char *str1, u64 length) {
+    return strncmp(str0, str1, length);
+}
+
+KAPI b8 strings_nequali(const char *str0, const char *str1, u64 length) {
+#if defined(__GNUC__)
+    return strncasecmp(str0, str1, length) == 0;
+#elif defined(_MSC_VER)
+    return _strnicmp(str0, str1, length) == 0;
+#endif
+}
+
 i32 string_format(char *dest, const char *format, ...) {
     if (!dest) {
         return -1;
@@ -373,4 +385,65 @@ void string_cleanup_split_array(char **str_darray) {
         // Clear the darray
         darray_clear(str_darray);
     }
+}
+
+KAPI void string_append_string(char *dest, const char *source,
+                               const char *append) {
+    sprintf(dest, "%s%s", source, append);
+}
+
+KAPI void string_append_int(char *dest, const char *source, i64 i) {
+    sprintf(dest, "%s%lli", source, i);
+}
+
+KAPI void string_append_float(char *dest, const char *source, f32 f) {
+    sprintf(dest, "%s%f", source, f);
+}
+
+KAPI void string_append_bool(char *dest, const char *source, b8 b) {
+    sprintf(dest, "%s%s", source, b ? "true" : false);
+}
+
+KAPI void string_append_char(char *dest, const char *source, char c) {
+    sprintf(dest, "%s%c", source, c);
+}
+
+KAPI void string_directory_from_path(char *dest, const char *path) {
+    u64 length = strlen(path);
+    for (i32 i = length; i >= 0; i--) {
+        char c = path[i];
+        if (c == '/' || c == '\\') {
+            strncpy(dest, path, i + 1);
+            return;
+        }
+    }
+}
+
+KAPI void string_filename_from_path(char *dest, const char *path) {
+    u64 length = strlen(path);
+    for (i32 i = length; i >= 0; i--) {
+        char c = path[i];
+        if (c == '/' || c == '\\') {
+            strcpy(dest, path + i + 1);
+            return;
+        }
+    }
+}
+
+KAPI void string_filename_no_extension_from_path(char *dest, const char *path) {
+    u64 length = strlen(path);
+    u64 start = 0;
+    u64 end = 0;
+    for (i32 i = length; i >= 0; i--) {
+        char c = path[i];
+        if (end == 0 && c == '.') {
+            end = i;
+        }
+
+        if (start == 0 && (c == '/' || c == '\\')) {
+            start = i + 1;
+            break;
+        }
+    }
+    string_mid(dest, path, start, end - start);
 }

@@ -272,6 +272,6 @@ KAPI b8 shader_system_sampler_set_by_index(u16 index, const texture *t);
 
 KAPI b8 shader_system_apply_global();
 
-KAPI b8 shader_system_apply_instance();
+KAPI b8 shader_system_apply_instance(b8 needs_update);
 
 KAPI b8 shader_system_bind_instance(u32 instance_id);

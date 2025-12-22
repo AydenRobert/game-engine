@@ -10,18 +10,18 @@ KAPI u64 string_length(const char *str);
 KAPI char *string_duplicate(const char *str);
 
 KAPI b8 strings_equal(const char *str0, const char *str1);
-
 // Case-insensitive
 KAPI b8 strings_equali(const char *str0, const char *str1);
 
-KAPI i32 string_format(char *dest, const char *format, ...);
+KAPI b8 strings_nequal(const char *str0, const char *str1, u64 length);
+KAPI b8 strings_nequali(const char *str0, const char *str1, u64 length);
 
+KAPI i32 string_format(char *dest, const char *format, ...);
 KAPI i32 string_format_v(char *dest, const char *format, va_list arg_ptr);
 
 KAPI char *string_empty(char *str);
 
 KAPI char *string_copy(char *dest, const char *source);
-
 KAPI char *string_ncopy(char *dest, const char *source, i64 length);
 
 KAPI char *string_trim(char *str);
@@ -169,3 +169,15 @@ KAPI b8 string_to_b8(char *str, b8 *out_bool);
 KAPI u32 string_split(const char *str, char delimiter, char ***str_darray,
                       b8 trim_entries, b8 include_empty);
 KAPI void string_cleanup_split_array(char **str_darray);
+
+KAPI void string_append_string(char *dest, const char *source,
+                               const char *append);
+
+KAPI void string_append_int(char *dest, const char *source, i64 i);
+KAPI void string_append_float(char *dest, const char *source, f32 f);
+KAPI void string_append_bool(char *dest, const char *source, b8 b);
+KAPI void string_append_char(char *dest, const char *source, char c);
+
+KAPI void string_directory_from_path(char *dest, const char *path);
+KAPI void string_filename_from_path(char *dest, const char *path);
+KAPI void string_filename_no_extension_from_path(char *dest, const char *path);

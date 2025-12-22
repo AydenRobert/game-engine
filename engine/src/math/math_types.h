@@ -35,7 +35,7 @@ typedef union vec4_u {
     // Used for SIMD
     alignas(16) __m128 data;
 #endif // defined(KUSE_SIMD)
-    alignas(16) f32 elements[4];
+    f32 elements[4];
     union {
         struct {
             union {
@@ -57,7 +57,7 @@ typedef union vec4_u {
 typedef vec4 quat;
 
 typedef union mat4_u {
-    alignas(16) f32 data[16];
+    f32 data[16];
 
 #if defined(KUSE_SIMD)
     alignas(16) vec4 rows[4];

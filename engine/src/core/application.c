@@ -307,13 +307,9 @@ KAPI b8 application_create(game *game_inst) {
         kallocate(sizeof(mesh *) * cube_mesh->geometry_count, MEMORY_TAG_ARRAY);
     geometry_config g_config = geometry_system_generate_cube_config(
         10.0f, 10.0f, 10.0f, 1.0f, 1.0f, "test_cube", "test_material");
-    geometry_generate_normals(g_config.vertex_count, g_config.vertices,
-                              g_config.index_count, g_config.indices);
-    geometry_generate_tangents(g_config.vertex_count, g_config.vertices,
-                               g_config.index_count, g_config.indices);
     cube_mesh->geometries[0] =
         geometry_system_acquire_from_config(g_config, true);
-    cube_mesh->transform = transform_create();
+    cube_mesh->transform = transform_from_position((vec3){{0.0f, 5.0f, 0.0f}});
     geometry_system_config_dispose(&g_config);
 
     // A second cube
@@ -323,10 +319,6 @@ KAPI b8 application_create(game *game_inst) {
         sizeof(mesh *) * cube_mesh_2->geometry_count, MEMORY_TAG_ARRAY);
     g_config = geometry_system_generate_cube_config(
         5.0f, 5.0f, 5.0f, 1.0f, 1.0f, "test_cube_2", "test_material");
-    geometry_generate_normals(g_config.vertex_count, g_config.vertices,
-                              g_config.index_count, g_config.indices);
-    geometry_generate_tangents(g_config.vertex_count, g_config.vertices,
-                               g_config.index_count, g_config.indices);
     cube_mesh_2->geometries[0] =
         geometry_system_acquire_from_config(g_config, true);
     cube_mesh_2->transform =
@@ -341,16 +333,55 @@ KAPI b8 application_create(game *game_inst) {
         sizeof(mesh *) * cube_mesh_3->geometry_count, MEMORY_TAG_ARRAY);
     g_config = geometry_system_generate_cube_config(
         2.0f, 2.0f, 2.0f, 1.0f, 1.0f, "test_cube_3", "test_material");
-    geometry_generate_normals(g_config.vertex_count, g_config.vertices,
-                              g_config.index_count, g_config.indices);
-    geometry_generate_tangents(g_config.vertex_count, g_config.vertices,
-                               g_config.index_count, g_config.indices);
     cube_mesh_3->geometries[0] =
         geometry_system_acquire_from_config(g_config, true);
     cube_mesh_3->transform =
         transform_from_position((vec3){{5.0f, 0.0f, 1.0f}});
     transform_set_parent(&cube_mesh_3->transform, &cube_mesh_2->transform);
     geometry_system_config_dispose(&g_config);
+
+    // TEST: mesh loaded from file
+    mesh *car_mesh = &app_state->meshes[app_state->mesh_count];
+    resource car_mesh_resource = {};
+    if (!resource_system_load("falcon", RESOURCE_TYPE_MESH,
+                              &car_mesh_resource)) {
+        KERROR("Failed to load car mesh resource.");
+    } else {
+        geometry_config *configs = (geometry_config *)car_mesh_resource.data;
+        car_mesh->geometry_count = car_mesh_resource.data_size;
+        car_mesh->geometries = kallocate(
+            sizeof(geometry *) * car_mesh->geometry_count, MEMORY_TAG_ARRAY);
+        for (u32 i = 0; i < car_mesh->geometry_count; i++) {
+            car_mesh->geometries[i] =
+                geometry_system_acquire_from_config(configs[i], true);
+        }
+        car_mesh->transform =
+            transform_from_position((vec3){{15.0f, 0.0f, 1.0f}});
+        resource_system_unload(&car_mesh_resource);
+        app_state->mesh_count++;
+    }
+
+    // Sponza
+    mesh *sponza_mesh = &app_state->meshes[app_state->mesh_count];
+    resource sponza_mesh_resource = {};
+    if (!resource_system_load("sponza", RESOURCE_TYPE_MESH,
+                              &sponza_mesh_resource)) {
+        KERROR("Failed to load sponza mesh resource.");
+    } else {
+        geometry_config *configs = (geometry_config *)sponza_mesh_resource.data;
+        sponza_mesh->geometry_count = sponza_mesh_resource.data_size;
+        sponza_mesh->geometries = kallocate(
+            sizeof(geometry *) * sponza_mesh->geometry_count, MEMORY_TAG_ARRAY);
+        for (u32 i = 0; i < sponza_mesh->geometry_count; i++) {
+            sponza_mesh->geometries[i] =
+                geometry_system_acquire_from_config(configs[i], true);
+        }
+        sponza_mesh->transform = transform_create();
+        transform_set_scale(&sponza_mesh->transform,
+                            vec3_mul_scalar(vec3_one(), 0.05f));
+        resource_system_unload(&sponza_mesh_resource);
+        app_state->mesh_count++;
+    }
 
     geometry_config ui_config;
     ui_config.vertex_size = sizeof(vertex_2d);
@@ -452,8 +483,7 @@ KAPI b8 application_run() {
             if (app_state->mesh_count > 0) {
                 // NOTE: Yes, this allocates/frees every frame. No, it doesn't
                 // matter for now since it's temporary.
-                packet.geometries = darray_create_aligned(
-                    geometry_render_data, 16, &packet._geometries_base_ptr);
+                packet.geometries = darray_create(geometry_render_data);
 
                 // Perform a small rotation on the first mesh.
                 quat rotation = quat_from_axis_angle((vec3){{0, 1, 0}},
@@ -492,8 +522,7 @@ KAPI b8 application_run() {
 
             // TODO: temp -> Clean up
             if (packet.geometries) {
-                darray_destroy_aligned(packet.geometries, 16,
-                                       packet._geometries_base_ptr);
+                darray_destroy(packet.geometries);
                 packet.geometries = 0;
             }
 

@@ -304,9 +304,9 @@ b8 shader_system_apply_global() {
         &state_ptr->shaders[state_ptr->current_shader_id]);
 }
 
-b8 shader_system_apply_instance() {
+b8 shader_system_apply_instance(b8 needs_update) {
     return renderer_shader_apply_instance(
-        &state_ptr->shaders[state_ptr->current_shader_id]);
+        &state_ptr->shaders[state_ptr->current_shader_id], needs_update);
 }
 
 b8 shader_system_bind_instance(u32 instance_id) {
@@ -392,7 +392,7 @@ b8 add_sampler(shader *shader, const shader_uniform_config *config) {
 
         location = global_texture_count;
         darray_push(shader->global_textures,
-                    texture_system_get_default_texture());
+                    texture_system_get_default_diffuse_texture());
     } else {
         // Otherwise it's instance level. Update details for resource
         // acquisition
