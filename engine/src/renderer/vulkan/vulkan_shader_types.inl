@@ -42,7 +42,7 @@ typedef struct vulkan_shader_instance_state {
     u32 id;
     u64 offset;
     vulkan_shader_descriptor_set_state descriptor_set_state;
-    struct texture **instance_textures;
+    struct texture_map **instance_texture_maps;
 } vulkan_shader_instance_state;
 
 typedef struct vulkan_shader {

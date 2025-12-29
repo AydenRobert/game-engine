@@ -78,11 +78,15 @@ typedef struct renderer_backend {
     b8 (*shader_apply_instance)(struct shader *s, b8 needs_update);
 
     b8 (*shader_acquire_instance_resources)(struct shader *s,
+                                            texture_map **maps,
                                             u32 *out_instance_id);
     b8 (*shader_release_instance_resources)(struct shader *s, u32 instance_id);
 
     b8 (*set_uniform)(struct shader *s, struct shader_uniform *uniform,
                       const void *value);
+
+    b8 (*texture_map_acquire_resources)(texture_map *map);
+    void (*texture_map_release_resources)(texture_map *map);
 
 } renderer_backend;
 

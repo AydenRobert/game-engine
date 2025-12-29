@@ -234,6 +234,17 @@ void texture_system_release(const char *name) {
     hashtable_set(&state_ptr->registered_texture_table, name_copy, &ref);
 }
 
+texture *texture_system_get_default_texture() {
+    if (!state_ptr) {
+        KERROR("texture_system_get_default_texture failed. System "
+               "should be initialized when using this function. Null pointer "
+               "returned.");
+        return 0;
+    }
+
+    return &state_ptr->default_texture;
+}
+
 texture *texture_system_get_default_diffuse_texture() {
     if (!state_ptr) {
         KERROR("texture_system_get_default_diffuse_texture failed. System "
@@ -305,6 +316,7 @@ b8 create_default_textures(texture_system_state *state_ptr) {
     state_ptr->default_texture.channel_count = 4;
     state_ptr->default_texture.generation = INVALID_ID;
     state_ptr->default_texture.has_transparency = false;
+    state_ptr->default_texture.is_writeable = false;
     renderer_create_texture(pixels, &state_ptr->default_texture);
     state_ptr->default_texture.generation = INVALID_ID;
 
@@ -320,6 +332,7 @@ b8 create_default_textures(texture_system_state *state_ptr) {
     state_ptr->default_diffuse_texture.channel_count = 4;
     state_ptr->default_diffuse_texture.generation = INVALID_ID;
     state_ptr->default_diffuse_texture.has_transparency = false;
+    state_ptr->default_texture.is_writeable = false;
     renderer_create_texture(diff_pixels, &state_ptr->default_diffuse_texture);
     // Manually set the texture generation to invalid since this is a default
     // texture.
@@ -337,6 +350,7 @@ b8 create_default_textures(texture_system_state *state_ptr) {
     state_ptr->default_specular_texture.channel_count = 4;
     state_ptr->default_specular_texture.generation = INVALID_ID;
     state_ptr->default_specular_texture.has_transparency = false;
+    state_ptr->default_texture.is_writeable = false;
     renderer_create_texture(spec_pixels, &state_ptr->default_specular_texture);
     // Manually set the texture generation to invalid since this is a default
     // texture.
@@ -365,6 +379,7 @@ b8 create_default_textures(texture_system_state *state_ptr) {
     state_ptr->default_normal_texture.channel_count = 4;
     state_ptr->default_normal_texture.generation = INVALID_ID;
     state_ptr->default_normal_texture.has_transparency = false;
+    state_ptr->default_texture.is_writeable = false;
     renderer_create_texture(normal_pixels, &state_ptr->default_normal_texture);
     // Manually set the texture generation to invalid since this is a default
     // texture.
@@ -398,6 +413,7 @@ b8 load_texture(const char *texture_name, texture *t) {
     temp_texture.width = resource_data->width;
     temp_texture.height = resource_data->height;
     temp_texture.channel_count = resource_data->channel_count;
+    temp_texture.is_writeable = false;
 
     u32 current_generation = t->generation;
     t->generation = INVALID_ID;

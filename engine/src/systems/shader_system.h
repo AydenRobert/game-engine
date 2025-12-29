@@ -199,8 +199,8 @@ typedef struct shader {
     u64 push_constant_size;
     /** @brief Push constant stride. */
     u64 push_constant_stride;
-    /** @brief Array of global texture pointers (Darray). */
-    texture **global_textures;
+    /** @brief Array of global texture map pointers (Darray). */
+    texture_map **global_texture_maps;
     /** @brief Number of instance textures. */
     u8 instance_texture_count;
     /** @brief Bounded scope. */

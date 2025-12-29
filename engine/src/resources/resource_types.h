@@ -36,6 +36,7 @@ typedef struct texture {
     u32 height;
     u8 channel_count;
     b8 has_transparency;
+    b8 is_writeable;
     u32 generation;
     char name[TEXTURE_NAME_MAX_LENGTH];
     void *internal_data;
@@ -48,9 +49,27 @@ typedef enum texture_use {
     TEXTURE_USE_MAP_NORMAL = 0x02
 } texture_use;
 
+typedef enum texture_filter {
+    TEXTURE_FILTER_MODE_NEAREST = 0x0,
+    TEXTURE_FILTER_MODE_LINEAR = 0x1,
+} texture_filter;
+
+typedef enum texture_repeat {
+    TEXTURE_REPEAT_REPEAT = 0x1,
+    TEXTURE_REPEAT_MIRRORED_REPEAT = 0x2,
+    TEXTURE_REPEAT_CLAMPED_TO_EDGE = 0x3,
+    TEXTURE_REPEAT_CLAMPED_TO_BORDER = 0x4,
+} texture_repeat;
+
 typedef struct texture_map {
     texture *texture;
     texture_use use;
+    texture_filter filter_minify;
+    texture_filter filter_magnify;
+    texture_repeat repeat_u; // x|s
+    texture_repeat repeat_v; // y|t
+    texture_repeat repeat_w; // z|u
+    void *internal_data;
 } texture_map;
 
 #define MATERIAL_NAME_MAX_LENGTH 512

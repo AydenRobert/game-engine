@@ -60,6 +60,11 @@ b8 renderer_backend_create(renderer_backend_type type,
 
         out_renderer_backend->set_uniform = vulkan_renderer_set_uniform;
 
+        out_renderer_backend->texture_map_acquire_resources =
+            vulkan_renderer_texture_map_acquire_resources;
+        out_renderer_backend->texture_map_release_resources =
+            vulkan_renderer_texture_map_release_resources;
+
         return true;
     }
 
@@ -102,4 +107,7 @@ void renderer_backend_destroy(struct renderer_backend *renderer_backend) {
     renderer_backend->shader_release_instance_resources = 0;
 
     renderer_backend->set_uniform = 0;
+
+    renderer_backend->texture_map_acquire_resources = 0;
+    renderer_backend->texture_map_release_resources = 0;
 }
