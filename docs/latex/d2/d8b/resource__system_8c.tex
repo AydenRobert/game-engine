@@ -3,12 +3,15 @@
 {\ttfamily \#include "{}systems/resource\+\_\+system.\+h"{}}\newline
 {\ttfamily \#include "{}core/kstring.\+h"{}}\newline
 {\ttfamily \#include "{}core/logger.\+h"{}}\newline
+{\ttfamily \#include "{}resources/loaders/mesh\+\_\+loader.\+h"{}}\newline
 {\ttfamily \#include "{}resources/resource\+\_\+types.\+h"{}}\newline
-{\ttfamily \#include "{}resources/loaders/text\+\_\+loader.\+h"{}}\newline
 {\ttfamily \#include "{}resources/loaders/binary\+\_\+loader.\+h"{}}\newline
 {\ttfamily \#include "{}resources/loaders/image\+\_\+loader.\+h"{}}\newline
 {\ttfamily \#include "{}resources/loaders/material\+\_\+loader.\+h"{}}\newline
-Include dependency graph for resource\+\_\+system.\+c\+:\nopagebreak
+{\ttfamily \#include "{}resources/loaders/shader\+\_\+loader.\+h"{}}\newline
+{\ttfamily \#include "{}resources/loaders/text\+\_\+loader.\+h"{}}\newline
+Include dependency graph for resource\+\_\+system.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -71,7 +74,8 @@ typedef struct resource\+\_\+system\+\_\+state resource\+\_\+system\+\_\+state}
 {\footnotesize\ttfamily \label{resource__system_8c_add0733bf358721495904be57107031d6} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} load (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}}]{loader}{, }\item[{\mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+resource}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -84,7 +88,8 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{resource__system_8c_a7a3f276c88408bbae1a47b2c8f68dd50} 
 const char \texorpdfstring{$\ast$}{*} resource\+\_\+system\+\_\+base\+\_\+path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -97,11 +102,12 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{resource__system_8c_a2c939af8fbfc3b7030cb84054ae7fdd4} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} resource\+\_\+system\+\_\+initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{memory\+\_\+requirement}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{state}{, }\item[{\mbox{\hyperlink{structresource__system__config}{resource\+\_\+system\+\_\+config}}}]{config}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d2/d8b/resource__system_8c_a2c939af8fbfc3b7030cb84054ae7fdd4_cgraph}
+\includegraphics[height=550pt]{d2/d8b/resource__system_8c_a2c939af8fbfc3b7030cb84054ae7fdd4_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
@@ -124,7 +130,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=279pt]{d2/d8b/resource__system_8c_a6ca971dda0f7cd6545a27e30ae63e46d_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -183,7 +190,8 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{resource__system_8c_af2ee144059d829688ff5cfe7806ddeac} 
 void resource\+\_\+system\+\_\+unload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}}]{resource}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

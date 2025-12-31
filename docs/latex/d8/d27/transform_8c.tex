@@ -1,0 +1,356 @@
+\doxysection{engine/src/math/transform.c File Reference}
+\hypertarget{transform_8c}{}\label{transform_8c}\index{engine/src/math/transform.c@{engine/src/math/transform.c}}
+{\ttfamily \#include "{}math/transform.\+h"{}}\newline
+{\ttfamily \#include "{}math/kmath.\+h"{}}\newline
+Include dependency graph for transform.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{dc/d1f/transform_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtransform}{transform}} \mbox{\hyperlink{transform_8c_aed36e3d64fbb1bf6cf6ed022674f8d9c}{transform\+\_\+create}} ()
+\item 
+\mbox{\hyperlink{structtransform}{transform}} \mbox{\hyperlink{transform_8c_adbee7e4704a15b2e5b9474e3d61723f2}{transform\+\_\+from\+\_\+position}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} position)
+\item 
+\mbox{\hyperlink{structtransform}{transform}} \mbox{\hyperlink{transform_8c_a592c1825657bca387501c1dd86fc97f6}{transform\+\_\+from\+\_\+rotation}} (\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} rotation)
+\item 
+\mbox{\hyperlink{structtransform}{transform}} \mbox{\hyperlink{transform_8c_a2c0460a1134d07820d9311fc57ea286e}{transform\+\_\+from\+\_\+position\+\_\+rotation}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} position, \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} rotation)
+\item 
+\mbox{\hyperlink{structtransform}{transform}} \mbox{\hyperlink{transform_8c_a57017372a72aefa1a139a98a5d557798}{transform\+\_\+from\+\_\+position\+\_\+rotation\+\_\+scale}} (\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} position, \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} rotation, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} scale)
+\item 
+\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{transform_8c_a45b0aeef5408805de32d4f6b94f5719b}{transform\+\_\+get\+\_\+parent}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t)
+\item 
+void \mbox{\hyperlink{transform_8c_a7db8e3da2c55a67d61c7686c2591c272}{transform\+\_\+set\+\_\+parent}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t, \mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}parent)
+\item 
+\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{transform_8c_a35f1ee19edbb543d2ca468d38220c1de}{transform\+\_\+get\+\_\+position}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t)
+\item 
+\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} \mbox{\hyperlink{transform_8c_a2dd9bd7f0c5bf51305fccce511e65db2}{transform\+\_\+get\+\_\+rotation}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t)
+\item 
+\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{transform_8c_a1e1d34a7254b30a49519357b49b4cb62}{transform\+\_\+get\+\_\+scale}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t)
+\item 
+void \mbox{\hyperlink{transform_8c_a3f06ee537f7d81ed0c4d118ebb70d5ea}{transform\+\_\+set\+\_\+position}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} position)
+\item 
+void \mbox{\hyperlink{transform_8c_a342832e0a355eaea78d2603a7ff7ab5f}{transform\+\_\+set\+\_\+rotation}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t, \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} rotation)
+\item 
+void \mbox{\hyperlink{transform_8c_af469e65cc2376803e31ae944ad93cc75}{transform\+\_\+set\+\_\+scale}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} scale)
+\item 
+void \mbox{\hyperlink{transform_8c_a525fc96336596413d29d5ca29809ed18}{transform\+\_\+translate}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} translation)
+\item 
+void \mbox{\hyperlink{transform_8c_a9a1abe4a49544a3d475f1ad38a0d9a0e}{transform\+\_\+rotate}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t, \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} rotation)
+\item 
+void \mbox{\hyperlink{transform_8c_a861ce806d92db4dbd9659744788382ea}{transform\+\_\+scale}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} scale)
+\item 
+void \mbox{\hyperlink{transform_8c_a3f4090d63928213d5569d5e583636af2}{transform\+\_\+set\+\_\+position\+\_\+rotation}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} position, \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} rotation)
+\item 
+void \mbox{\hyperlink{transform_8c_a156ac98d5e45464cf0aa1715418d41d6}{transform\+\_\+set\+\_\+position\+\_\+rotation\+\_\+scale}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} position, \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} rotation, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} scale)
+\item 
+void \mbox{\hyperlink{transform_8c_a719a01ff27408bc24f7b8eaa4e90bc69}{transform\+\_\+translate\+\_\+rotate}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} translation, \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} rotation)
+\item 
+void \mbox{\hyperlink{transform_8c_aca9338fbf87b1473341ab393fffa8f52}{transform\+\_\+translate\+\_\+rotate\+\_\+scale}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} translation, \mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} rotation, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} scale)
+\item 
+\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{transform_8c_a8b5dfd26984e655498ce385b9632868d}{transform\+\_\+get\+\_\+local}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t)
+\item 
+\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{transform_8c_aaa6aa97c14ea03759366eae3f41f4d70}{transform\+\_\+get\+\_\+world}} (\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}t)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{transform_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{transform_8c_aed36e3d64fbb1bf6cf6ed022674f8d9c}\index{transform.c@{transform.c}!transform\_create@{transform\_create}}
+\index{transform\_create@{transform\_create}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_create()}{transform\_create()}}
+{\footnotesize\ttfamily \label{transform_8c_aed36e3d64fbb1bf6cf6ed022674f8d9c} 
+\mbox{\hyperlink{structtransform}{transform}} transform\+\_\+create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d27/transform_8c_aed36e3d64fbb1bf6cf6ed022674f8d9c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d27/transform_8c_aed36e3d64fbb1bf6cf6ed022674f8d9c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transform_8c_adbee7e4704a15b2e5b9474e3d61723f2}\index{transform.c@{transform.c}!transform\_from\_position@{transform\_from\_position}}
+\index{transform\_from\_position@{transform\_from\_position}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_from\_position()}{transform\_from\_position()}}
+{\footnotesize\ttfamily \label{transform_8c_adbee7e4704a15b2e5b9474e3d61723f2} 
+\mbox{\hyperlink{structtransform}{transform}} transform\+\_\+from\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{position}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d27/transform_8c_adbee7e4704a15b2e5b9474e3d61723f2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d27/transform_8c_adbee7e4704a15b2e5b9474e3d61723f2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transform_8c_a2c0460a1134d07820d9311fc57ea286e}\index{transform.c@{transform.c}!transform\_from\_position\_rotation@{transform\_from\_position\_rotation}}
+\index{transform\_from\_position\_rotation@{transform\_from\_position\_rotation}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_from\_position\_rotation()}{transform\_from\_position\_rotation()}}
+{\footnotesize\ttfamily \label{transform_8c_a2c0460a1134d07820d9311fc57ea286e} 
+\mbox{\hyperlink{structtransform}{transform}} transform\+\_\+from\+\_\+position\+\_\+rotation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{position}{, }\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{rotation}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d27/transform_8c_a2c0460a1134d07820d9311fc57ea286e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transform_8c_a57017372a72aefa1a139a98a5d557798}\index{transform.c@{transform.c}!transform\_from\_position\_rotation\_scale@{transform\_from\_position\_rotation\_scale}}
+\index{transform\_from\_position\_rotation\_scale@{transform\_from\_position\_rotation\_scale}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_from\_position\_rotation\_scale()}{transform\_from\_position\_rotation\_scale()}}
+{\footnotesize\ttfamily \label{transform_8c_a57017372a72aefa1a139a98a5d557798} 
+\mbox{\hyperlink{structtransform}{transform}} transform\+\_\+from\+\_\+position\+\_\+rotation\+\_\+scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{position}{, }\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{rotation}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{scale}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d27/transform_8c_a57017372a72aefa1a139a98a5d557798_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transform_8c_a592c1825657bca387501c1dd86fc97f6}\index{transform.c@{transform.c}!transform\_from\_rotation@{transform\_from\_rotation}}
+\index{transform\_from\_rotation@{transform\_from\_rotation}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_from\_rotation()}{transform\_from\_rotation()}}
+{\footnotesize\ttfamily \label{transform_8c_a592c1825657bca387501c1dd86fc97f6} 
+\mbox{\hyperlink{structtransform}{transform}} transform\+\_\+from\+\_\+rotation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{rotation}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d27/transform_8c_a592c1825657bca387501c1dd86fc97f6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transform_8c_a8b5dfd26984e655498ce385b9632868d}\index{transform.c@{transform.c}!transform\_get\_local@{transform\_get\_local}}
+\index{transform\_get\_local@{transform\_get\_local}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_get\_local()}{transform\_get\_local()}}
+{\footnotesize\ttfamily \label{transform_8c_a8b5dfd26984e655498ce385b9632868d} 
+\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} transform\+\_\+get\+\_\+local (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d27/transform_8c_a8b5dfd26984e655498ce385b9632868d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d27/transform_8c_a8b5dfd26984e655498ce385b9632868d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transform_8c_a45b0aeef5408805de32d4f6b94f5719b}\index{transform.c@{transform.c}!transform\_get\_parent@{transform\_get\_parent}}
+\index{transform\_get\_parent@{transform\_get\_parent}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_get\_parent()}{transform\_get\_parent()}}
+{\footnotesize\ttfamily \label{transform_8c_a45b0aeef5408805de32d4f6b94f5719b} 
+\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*} transform\+\_\+get\+\_\+parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
+
+\Hypertarget{transform_8c_a35f1ee19edbb543d2ca468d38220c1de}\index{transform.c@{transform.c}!transform\_get\_position@{transform\_get\_position}}
+\index{transform\_get\_position@{transform\_get\_position}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_get\_position()}{transform\_get\_position()}}
+{\footnotesize\ttfamily \label{transform_8c_a35f1ee19edbb543d2ca468d38220c1de} 
+\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} transform\+\_\+get\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
+
+\Hypertarget{transform_8c_a2dd9bd7f0c5bf51305fccce511e65db2}\index{transform.c@{transform.c}!transform\_get\_rotation@{transform\_get\_rotation}}
+\index{transform\_get\_rotation@{transform\_get\_rotation}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_get\_rotation()}{transform\_get\_rotation()}}
+{\footnotesize\ttfamily \label{transform_8c_a2dd9bd7f0c5bf51305fccce511e65db2} 
+\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}} transform\+\_\+get\+\_\+rotation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
+
+\Hypertarget{transform_8c_a1e1d34a7254b30a49519357b49b4cb62}\index{transform.c@{transform.c}!transform\_get\_scale@{transform\_get\_scale}}
+\index{transform\_get\_scale@{transform\_get\_scale}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_get\_scale()}{transform\_get\_scale()}}
+{\footnotesize\ttfamily \label{transform_8c_a1e1d34a7254b30a49519357b49b4cb62} 
+\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} transform\+\_\+get\+\_\+scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
+
+\Hypertarget{transform_8c_aaa6aa97c14ea03759366eae3f41f4d70}\index{transform.c@{transform.c}!transform\_get\_world@{transform\_get\_world}}
+\index{transform\_get\_world@{transform\_get\_world}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_get\_world()}{transform\_get\_world()}}
+{\footnotesize\ttfamily \label{transform_8c_aaa6aa97c14ea03759366eae3f41f4d70} 
+\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} transform\+\_\+get\+\_\+world (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d27/transform_8c_aaa6aa97c14ea03759366eae3f41f4d70_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d27/transform_8c_aaa6aa97c14ea03759366eae3f41f4d70_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transform_8c_a9a1abe4a49544a3d475f1ad38a0d9a0e}\index{transform.c@{transform.c}!transform\_rotate@{transform\_rotate}}
+\index{transform\_rotate@{transform\_rotate}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_rotate()}{transform\_rotate()}}
+{\footnotesize\ttfamily \label{transform_8c_a9a1abe4a49544a3d475f1ad38a0d9a0e} 
+void transform\+\_\+rotate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{, }\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{rotation}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{d8/d27/transform_8c_a9a1abe4a49544a3d475f1ad38a0d9a0e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d27/transform_8c_a9a1abe4a49544a3d475f1ad38a0d9a0e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transform_8c_a861ce806d92db4dbd9659744788382ea}\index{transform.c@{transform.c}!transform\_scale@{transform\_scale}}
+\index{transform\_scale@{transform\_scale}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_scale()}{transform\_scale()}}
+{\footnotesize\ttfamily \label{transform_8c_a861ce806d92db4dbd9659744788382ea} 
+void transform\+\_\+scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{scale}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{d8/d27/transform_8c_a861ce806d92db4dbd9659744788382ea_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transform_8c_a7db8e3da2c55a67d61c7686c2591c272}\index{transform.c@{transform.c}!transform\_set\_parent@{transform\_set\_parent}}
+\index{transform\_set\_parent@{transform\_set\_parent}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_set\_parent()}{transform\_set\_parent()}}
+{\footnotesize\ttfamily \label{transform_8c_a7db8e3da2c55a67d61c7686c2591c272} 
+void transform\+\_\+set\+\_\+parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{, }\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{parent}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d27/transform_8c_a7db8e3da2c55a67d61c7686c2591c272_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transform_8c_a3f06ee537f7d81ed0c4d118ebb70d5ea}\index{transform.c@{transform.c}!transform\_set\_position@{transform\_set\_position}}
+\index{transform\_set\_position@{transform\_set\_position}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_set\_position()}{transform\_set\_position()}}
+{\footnotesize\ttfamily \label{transform_8c_a3f06ee537f7d81ed0c4d118ebb70d5ea} 
+void transform\+\_\+set\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{position}{}\end{DoxyParamCaption})}
+
+\Hypertarget{transform_8c_a3f4090d63928213d5569d5e583636af2}\index{transform.c@{transform.c}!transform\_set\_position\_rotation@{transform\_set\_position\_rotation}}
+\index{transform\_set\_position\_rotation@{transform\_set\_position\_rotation}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_set\_position\_rotation()}{transform\_set\_position\_rotation()}}
+{\footnotesize\ttfamily \label{transform_8c_a3f4090d63928213d5569d5e583636af2} 
+void transform\+\_\+set\+\_\+position\+\_\+rotation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{position}{, }\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{rotation}{}\end{DoxyParamCaption})}
+
+\Hypertarget{transform_8c_a156ac98d5e45464cf0aa1715418d41d6}\index{transform.c@{transform.c}!transform\_set\_position\_rotation\_scale@{transform\_set\_position\_rotation\_scale}}
+\index{transform\_set\_position\_rotation\_scale@{transform\_set\_position\_rotation\_scale}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_set\_position\_rotation\_scale()}{transform\_set\_position\_rotation\_scale()}}
+{\footnotesize\ttfamily \label{transform_8c_a156ac98d5e45464cf0aa1715418d41d6} 
+void transform\+\_\+set\+\_\+position\+\_\+rotation\+\_\+scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{position}{, }\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{rotation}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{scale}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d27/transform_8c_a156ac98d5e45464cf0aa1715418d41d6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transform_8c_a342832e0a355eaea78d2603a7ff7ab5f}\index{transform.c@{transform.c}!transform\_set\_rotation@{transform\_set\_rotation}}
+\index{transform\_set\_rotation@{transform\_set\_rotation}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_set\_rotation()}{transform\_set\_rotation()}}
+{\footnotesize\ttfamily \label{transform_8c_a342832e0a355eaea78d2603a7ff7ab5f} 
+void transform\+\_\+set\+\_\+rotation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{, }\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{rotation}{}\end{DoxyParamCaption})}
+
+\Hypertarget{transform_8c_af469e65cc2376803e31ae944ad93cc75}\index{transform.c@{transform.c}!transform\_set\_scale@{transform\_set\_scale}}
+\index{transform\_set\_scale@{transform\_set\_scale}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_set\_scale()}{transform\_set\_scale()}}
+{\footnotesize\ttfamily \label{transform_8c_af469e65cc2376803e31ae944ad93cc75} 
+void transform\+\_\+set\+\_\+scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{scale}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d27/transform_8c_af469e65cc2376803e31ae944ad93cc75_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transform_8c_a525fc96336596413d29d5ca29809ed18}\index{transform.c@{transform.c}!transform\_translate@{transform\_translate}}
+\index{transform\_translate@{transform\_translate}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_translate()}{transform\_translate()}}
+{\footnotesize\ttfamily \label{transform_8c_a525fc96336596413d29d5ca29809ed18} 
+void transform\+\_\+translate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{translation}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{d8/d27/transform_8c_a525fc96336596413d29d5ca29809ed18_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transform_8c_a719a01ff27408bc24f7b8eaa4e90bc69}\index{transform.c@{transform.c}!transform\_translate\_rotate@{transform\_translate\_rotate}}
+\index{transform\_translate\_rotate@{transform\_translate\_rotate}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_translate\_rotate()}{transform\_translate\_rotate()}}
+{\footnotesize\ttfamily \label{transform_8c_a719a01ff27408bc24f7b8eaa4e90bc69} 
+void transform\+\_\+translate\+\_\+rotate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{translation}{, }\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{rotation}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{d8/d27/transform_8c_a719a01ff27408bc24f7b8eaa4e90bc69_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{transform_8c_aca9338fbf87b1473341ab393fffa8f52}\index{transform.c@{transform.c}!transform\_translate\_rotate\_scale@{transform\_translate\_rotate\_scale}}
+\index{transform\_translate\_rotate\_scale@{transform\_translate\_rotate\_scale}!transform.c@{transform.c}}
+\doxysubsubsection{\texorpdfstring{transform\_translate\_rotate\_scale()}{transform\_translate\_rotate\_scale()}}
+{\footnotesize\ttfamily \label{transform_8c_aca9338fbf87b1473341ab393fffa8f52} 
+void transform\+\_\+translate\+\_\+rotate\+\_\+scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtransform}{transform}} \texorpdfstring{$\ast$}{*}}]{t}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{translation}{, }\item[{\mbox{\hyperlink{math__types_8h_af5f140c7cfd64fec8b5126ae20ca327f}{quat}}}]{rotation}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{scale}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{d8/d27/transform_8c_aca9338fbf87b1473341ab393fffa8f52_cgraph}
+\end{center}
+\end{figure}

@@ -5,7 +5,7 @@
 [DEBUG]: A test message: 3.140000
 [TRACE]: A test message: 3.140000
 [INFO]:  Input subsystem initialized.
-[INFO]:  Event system initialized at 0x7fe094694b00, size 131080
+[INFO]:  Event system initialized at 0x7f2a0aa91b00, size 131080
 [DEBUG]: Window resize: 1280 1405
 [WARN]:  renderer_state_ptr->backend does not exist to accept resize.
 [TRACE]: Loader '0' registered.
@@ -79,6 +79,9 @@
 [INFO]:  Logic device created.
 [INFO]:  Queues obtained.
 [INFO]:  Graphics command pool has been created.
+[TRACE]: texture_system_wrap_internal created texture '__internal_vulkan_swapchain_image_0__', but not registered. Resulting in an allocation, it is up to the caller to free this.
+[TRACE]: texture_system_wrap_internal created texture '__internal_vulkan_swapchain_image_1__', but not registered. Resulting in an allocation, it is up to the caller to free this.
+[TRACE]: texture_system_wrap_internal created texture '__internal_vulkan_swapchain_image_2__', but not registered. Resulting in an allocation, it is up to the caller to free this.
 [INFO]:  Swapchain created successfully!
 [INFO]:  Vulkan command buffers created.
 [INFO]:  Vulkan renderer initialized successfully!
@@ -95,13 +98,15 @@
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [WARN]:  Freelists are inefficient for small amounts of memory.
-[ERROR]: freelist_free_block - passed invalid block.
+[ERROR]: freelist_free_block - block size invalid.
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [WARN]:  Freelists are inefficient for small amounts of memory.
-[ERROR]: freelist_free_block - passed invalid block.
+[ERROR]: freelist_free_block - block size invalid.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [WARN]:  Freelists are inefficient for small amounts of memory.
+[TRACE]: Texture 'orange_lines_512' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'orange_lines_512_SPEC' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [TRACE]: Material 'test_material' already exists, ref count has been increased to '2'.
@@ -109,16 +114,32 @@
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [TRACE]: Material 'test_material' already exists, ref count has been increased to '3'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'falc_wreck_low_DefaultMaterial_AlbedoTransparency' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'falc_wreck_low_DefaultMaterial_MetallicSmoothness' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'falc_wreck_low_DefaultMaterial_Normal' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [WARN]:  Freelists are inefficient for small amounts of memory.
+[TRACE]: Texture 'sponza_column_b_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_column_b_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_column_b_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'sponza_curtain_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_curtain_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_curtain_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_curtain_spec' already exists, ref count has been increased to '2'.
-[TRACE]: Texture 'sponza_curtain_ddn' already exists, ref count has been increased to '2'.
+[TRACE]: Texture 'sponza_curtain_blue_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_curtain_spec' already exists. ref_count=2.
+[TRACE]: Texture 'sponza_curtain_ddn' already exists. ref_count=2.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'column_b' already exists, ref count has been increased to '2'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'sponza_flagpole_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_flagpole_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_flagpole_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'sponza_column_c_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_column_c_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_column_c_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'column_c' already exists, ref count has been increased to '2'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
@@ -126,8 +147,9 @@
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'fabric_c' already exists, ref count has been increased to '2'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_curtain_spec' already exists, ref count has been increased to '3'.
-[TRACE]: Texture 'sponza_curtain_ddn' already exists, ref count has been increased to '3'.
+[TRACE]: Texture 'sponza_curtain_green_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_curtain_spec' already exists. ref_count=3.
+[TRACE]: Texture 'sponza_curtain_ddn' already exists. ref_count=3.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'fabric_c' already exists, ref count has been increased to '3'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
@@ -153,7 +175,13 @@
 [TRACE]: Material 'flagpole' already exists, ref count has been increased to '4'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [WARN]:  Freelists are inefficient for small amounts of memory.
+[TRACE]: Texture 'sponza_floor_a_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_floor_a_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_floor_a_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'spnza_bricks_a_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'spnza_bricks_a_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'spnza_bricks_a_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'column_c' already exists, ref count has been increased to '3'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
@@ -173,11 +201,17 @@
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'column_b' already exists, ref count has been increased to '10'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'sponza_column_a_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_column_a_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_column_a_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'column_a' already exists, ref count has been increased to '2'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'bricks' already exists, ref count has been increased to '2'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'sponza_details_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_details_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_details_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'column_c' already exists, ref count has been increased to '6'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
@@ -209,9 +243,15 @@
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'column_c' already exists, ref count has been increased to '13'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'vase_hanging' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'vase_hanging_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'vase_hanging_ddn' does not exist yet. Created, ref_count=1.
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [WARN]:  Freelists are inefficient for small amounts of memory.
+[TRACE]: Texture 'chain_texture' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'chain_texture_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'chain_texture_ddn' does not exist yet. Created, ref_count=1.
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [WARN]:  Freelists are inefficient for small amounts of memory.
@@ -262,6 +302,9 @@
 [TRACE]: Material 'column_b' already exists, ref count has been increased to '20'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [WARN]:  Freelists are inefficient for small amounts of memory.
+[TRACE]: Texture 'sponza_arch_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_arch_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_arch_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'arch' already exists, ref count has been increased to '2'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
@@ -311,6 +354,9 @@
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'arch' already exists, ref count has been increased to '5'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'sponza_ceiling_a_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_ceiling_a_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_ceiling_a_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'arch' already exists, ref count has been increased to '6'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
@@ -324,13 +370,17 @@
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'ceiling' already exists, ref count has been increased to '3'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'sponza_fabric_green_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_fabric_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_fabric_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'column_b' already exists, ref count has been increased to '36'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'column_b' already exists, ref count has been increased to '37'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_fabric_spec' already exists, ref count has been increased to '2'.
-[TRACE]: Texture 'sponza_fabric_ddn' already exists, ref count has been increased to '2'.
+[TRACE]: Texture 'sponza_fabric_blue_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_fabric_spec' already exists. ref_count=2.
+[TRACE]: Texture 'sponza_fabric_ddn' already exists. ref_count=2.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [TRACE]: Material 'column_b' already exists, ref count has been increased to '38'.
@@ -419,6 +469,9 @@
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'flagpole' already exists, ref count has been increased to '15'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'sponza_thorn_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_thorn_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_thorn_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'flagpole' already exists, ref count has been increased to '16'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
@@ -454,8 +507,17 @@
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'leaf' already exists, ref count has been increased to '3'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'vase_round' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'vase_round_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'vase_round_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'vase_plant' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'vase_plant_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'vase_plant_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'background' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'background_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'background_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'ceiling' already exists, ref count has been increased to '4'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
@@ -732,8 +794,9 @@
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'fabric_e' already exists, ref count has been increased to '3'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_fabric_spec' already exists, ref count has been increased to '3'.
-[TRACE]: Texture 'sponza_fabric_ddn' already exists, ref count has been increased to '3'.
+[TRACE]: Texture 'sponza_fabric_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_fabric_spec' already exists. ref_count=3.
+[TRACE]: Texture 'sponza_fabric_ddn' already exists. ref_count=3.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'fabric_d' already exists, ref count has been increased to '2'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
@@ -752,9 +815,15 @@
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'fabric_a' already exists, ref count has been increased to '2'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'lion' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'lion_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'lion_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'Material__298' already exists, ref count has been increased to '2'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'vase_dif' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'vase_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'vase_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'vase' already exists, ref count has been increased to '2'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
@@ -930,6 +999,9 @@
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [TRACE]: Material 'bricks' already exists, ref count has been increased to '14'.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
+[TRACE]: Texture 'sponza_roof_diff' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_roof_spec' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'sponza_roof_ddn' does not exist yet. Created, ref_count=1.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [TRACE]: Material 'roof' already exists, ref count has been increased to '2'.
 [WARN]:  Freelists are inefficient for small amounts of memory.
@@ -971,6 +1043,7 @@
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [TRACE]: vulkan_renderer_create_geometry - Upload data range 2
 [WARN]:  Freelists are inefficient for small amounts of memory.
+[TRACE]: Texture 'logo' does not exist yet. Created, ref_count=1.
 [DEBUG]: game_initialize() called!
 [INFO]:  System memory use (tagged):
   UNKNOWN          : 0.00B
@@ -983,7 +1056,7 @@
   STRING           : 9.59KiB
   APPLICATION      : 1.62KiB
   JOB              : 0.00B
-  TEXTURE          : 2.31KiB
+  TEXTURE          : 4.00KiB
   MATERIAL_INSTANCE: 0.00B
   RENDERER         : 137.35MiB
   GAME             : 159.00B
@@ -998,125 +1071,143 @@
 [INFO]:  Swapchain created successfully!
 [INFO]:  Vulkan command buffers created.
 [INFO]:  Resized, booting.
+[DEBUG]: Swapping textures!
+[TRACE]: Texture 'cobblestone' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'cobblestone_SPEC' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'cobblestone_NRM' does not exist yet. Created, ref_count=1.
+[WARN]:  material_system_release tried to release non-existant material 'paving2'.
+[DEBUG]: Swapping textures!
+[TRACE]: Texture 'paving' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'paving_SPEC' does not exist yet. Created, ref_count=1.
+[TRACE]: Texture 'paving_NRM' does not exist yet. Created, ref_count=1.
+[TRACE]: Destroying material 'cobblestone'...
+[TRACE]: Release texture 'cobblestone', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'cobblestone_SPEC', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'cobblestone_NRM', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Released material 'cobblestone'. Texture is now unloaded as reference_count = 0 and auto_release = true.
 [INFO]:  EVENT_CODE_APPLICATION_QUIT has been recieved, shutting down.
 
-[DEBUG]: Frame count: 81, running time: 16.013165
+[DEBUG]: Frame count: 154, running time: 52.476489
 [INFO]:  after temp watch close
 [TRACE]: Destroying material 'test_material'...
-[TRACE]: Released texture 'orange_lines_512'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'orange_lines_512_SPEC'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[WARN]:  texture_system_release tried to release non-existant texture 'default_NORM'.
+[TRACE]: Release texture 'orange_lines_512', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'orange_lines_512_SPEC', texture unloaded because reference_count=0 and auto_release=true.
+[WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
 [TRACE]: Destroying material 'falc_wreck'...
-[TRACE]: Released texture 'falc_wreck_low_DefaultMaterial_AlbedoTransparency'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'falc_wreck_low_DefaultMaterial_MetallicSmoothness'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'falc_wreck_low_DefaultMaterial_Normal'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'falc_wreck_low_DefaultMaterial_AlbedoTransparency', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'falc_wreck_low_DefaultMaterial_MetallicSmoothness', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'falc_wreck_low_DefaultMaterial_Normal', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'column_b'...
-[TRACE]: Released texture 'sponza_column_b_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_column_b_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_column_b_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'sponza_column_b_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_column_b_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_column_b_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'fabric_c'...
-[TRACE]: Released texture 'sponza_curtain_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_curtain_spec'. reference_count = 2, auto_release = true.
-[TRACE]: Released texture 'sponza_curtain_ddn'. reference_count = 2, auto_release = true.
+[TRACE]: Release texture 'sponza_curtain_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_curtain_spec', reference_count=2 and auto_release=true.
+[TRACE]: Release texture 'sponza_curtain_ddn', reference_count=2 and auto_release=true.
 [TRACE]: Destroying material 'fabric_g'...
-[TRACE]: Released texture 'sponza_curtain_blue_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_curtain_spec'. reference_count = 1, auto_release = true.
-[TRACE]: Released texture 'sponza_curtain_ddn'. reference_count = 1, auto_release = true.
+[TRACE]: Release texture 'sponza_curtain_blue_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_curtain_spec', reference_count=1 and auto_release=true.
+[TRACE]: Release texture 'sponza_curtain_ddn', reference_count=1 and auto_release=true.
 [TRACE]: Destroying material 'flagpole'...
-[TRACE]: Released texture 'sponza_flagpole_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_flagpole_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_flagpole_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'sponza_flagpole_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_flagpole_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_flagpole_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'column_c'...
-[TRACE]: Released texture 'sponza_column_c_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_column_c_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_column_c_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'sponza_column_c_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_column_c_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_column_c_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'fabric_f'...
-[TRACE]: Released texture 'sponza_curtain_green_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_curtain_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_curtain_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'sponza_curtain_green_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_curtain_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_curtain_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'floor'...
-[TRACE]: Released texture 'sponza_floor_a_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_floor_a_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_floor_a_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'sponza_floor_a_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_floor_a_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_floor_a_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'bricks'...
-[TRACE]: Released texture 'spnza_bricks_a_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'spnza_bricks_a_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'spnza_bricks_a_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'spnza_bricks_a_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'spnza_bricks_a_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'spnza_bricks_a_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'column_a'...
-[TRACE]: Released texture 'sponza_column_a_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_column_a_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_column_a_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'sponza_column_a_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_column_a_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_column_a_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'details'...
-[TRACE]: Released texture 'sponza_details_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_details_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_details_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'sponza_details_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_details_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_details_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'vase_hanging'...
-[TRACE]: Released texture 'vase_hanging'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'vase_hanging_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'vase_hanging_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'vase_hanging', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'vase_hanging_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'vase_hanging_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'chain'...
-[TRACE]: Released texture 'chain_texture'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'chain_texture_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'chain_texture_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'chain_texture', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'chain_texture_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'chain_texture_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'arch'...
-[TRACE]: Released texture 'sponza_arch_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_arch_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_arch_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'sponza_arch_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_arch_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_arch_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'ceiling'...
-[TRACE]: Released texture 'sponza_ceiling_a_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_ceiling_a_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_ceiling_a_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'sponza_ceiling_a_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_ceiling_a_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_ceiling_a_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'fabric_e'...
-[TRACE]: Released texture 'sponza_fabric_green_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_fabric_spec'. reference_count = 2, auto_release = true.
-[TRACE]: Released texture 'sponza_fabric_ddn'. reference_count = 2, auto_release = true.
+[TRACE]: Release texture 'sponza_fabric_green_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_fabric_spec', reference_count=2 and auto_release=true.
+[TRACE]: Release texture 'sponza_fabric_ddn', reference_count=2 and auto_release=true.
 [TRACE]: Destroying material 'fabric_d'...
-[TRACE]: Released texture 'sponza_fabric_blue_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_fabric_spec'. reference_count = 1, auto_release = true.
-[TRACE]: Released texture 'sponza_fabric_ddn'. reference_count = 1, auto_release = true.
+[TRACE]: Release texture 'sponza_fabric_blue_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_fabric_spec', reference_count=1 and auto_release=true.
+[TRACE]: Release texture 'sponza_fabric_ddn', reference_count=1 and auto_release=true.
 [TRACE]: Destroying material 'leaf'...
-[TRACE]: Released texture 'sponza_thorn_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_thorn_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_thorn_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'sponza_thorn_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_thorn_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_thorn_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'vase_round'...
-[TRACE]: Released texture 'vase_round'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'vase_round_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'vase_round_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'vase_round', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'vase_round_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'vase_round_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'Material__57'...
-[TRACE]: Released texture 'vase_plant'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'vase_plant_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'vase_plant_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'vase_plant', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'vase_plant_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'vase_plant_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'Material__298'...
-[TRACE]: Released texture 'background'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'background_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'background_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'background', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'background_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'background_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'Material__47'...
-[WARN]:  texture_system_release tried to release non-existant texture 'default_DIFF'.
-[WARN]:  texture_system_release tried to release non-existant texture 'default_SPEC'.
-[WARN]:  texture_system_release tried to release non-existant texture 'default_NORM'.
+[WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
+[WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
+[WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
 [TRACE]: Destroying material 'fabric_a'...
-[TRACE]: Released texture 'sponza_fabric_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_fabric_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_fabric_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'sponza_fabric_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_fabric_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_fabric_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'Material__25'...
-[TRACE]: Released texture 'lion'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'lion_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'lion_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'lion', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'lion_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'lion_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'vase'...
-[TRACE]: Released texture 'vase_dif'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'vase_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'vase_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'vase_dif', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'vase_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'vase_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'roof'...
-[TRACE]: Released texture 'sponza_roof_diff'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_roof_spec'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[TRACE]: Released texture 'sponza_roof_ddn'. Texture is now unloaded as reference_count = 0 and auto_release = true.
+[TRACE]: Release texture 'sponza_roof_diff', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_roof_spec', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'sponza_roof_ddn', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'test_ui_material'...
-[TRACE]: Released texture 'logo'. Texture is now unloaded as reference_count = 0 and auto_release = true.
-[WARN]:  texture_system_release tried to release non-existant texture 'default_SPEC'.
-[WARN]:  texture_system_release tried to release non-existant texture 'default_NORM'.
+[TRACE]: Release texture 'logo', texture unloaded because reference_count=0 and auto_release=true.
+[WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
+[WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
+[TRACE]: Destroying material 'paving'...
+[TRACE]: Release texture 'paving', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'paving_SPEC', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'paving_NRM', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'default'...
-[WARN]:  texture_system_release tried to release non-existant texture 'default_DIFF'.
-[WARN]:  texture_system_release tried to release non-existant texture 'default_NORM'.
+[WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
+[WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
 [DEBUG]: Destroying Vulkan device...
 [INFO]:  Destroying command pools...
 [INFO]:  Destroying logical device

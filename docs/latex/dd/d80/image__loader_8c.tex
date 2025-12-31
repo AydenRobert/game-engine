@@ -4,11 +4,13 @@
 {\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
 {\ttfamily \#include "{}core/kstring.\+h"{}}\newline
 {\ttfamily \#include "{}core/logger.\+h"{}}\newline
+{\ttfamily \#include "{}platform/filesystem.\+h"{}}\newline
 {\ttfamily \#include "{}resources/loaders/loader\+\_\+utils.\+h"{}}\newline
 {\ttfamily \#include "{}resources/resource\+\_\+types.\+h"{}}\newline
 {\ttfamily \#include "{}systems/resource\+\_\+system.\+h"{}}\newline
 {\ttfamily \#include "{}vendor/stb\+\_\+image.\+h"{}}\newline
-Include dependency graph for image\+\_\+loader.\+c\+:\nopagebreak
+Include dependency graph for image\+\_\+loader.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -19,6 +21,8 @@ Include dependency graph for image\+\_\+loader.\+c\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{image__loader_8c_a18372412ad2fc3ce1e3240b3cf0efe78}{STB\+\_\+\+IMAGE\+\_\+\+IMPLEMENTATION}}
+\item 
+\#define \mbox{\hyperlink{image__loader_8c_a6faceef8ecdc1ab72b072fbdfb2635af}{IMAGE\+\_\+\+EXTENSION\+\_\+\+COUNT}}~4
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -34,6 +38,12 @@ void \mbox{\hyperlink{image__loader_8c_a02e8bef5b7c6b12aa5317a6ea17d84bb}{image\
 \label{doc-define-members}
 \Hypertarget{image__loader_8c_doc-define-members}
 \doxysubsection{Macro Definition Documentation}
+\Hypertarget{image__loader_8c_a6faceef8ecdc1ab72b072fbdfb2635af}\index{image\_loader.c@{image\_loader.c}!IMAGE\_EXTENSION\_COUNT@{IMAGE\_EXTENSION\_COUNT}}
+\index{IMAGE\_EXTENSION\_COUNT@{IMAGE\_EXTENSION\_COUNT}!image\_loader.c@{image\_loader.c}}
+\doxysubsubsection{\texorpdfstring{IMAGE\_EXTENSION\_COUNT}{IMAGE\_EXTENSION\_COUNT}}
+{\footnotesize\ttfamily \label{image__loader_8c_a6faceef8ecdc1ab72b072fbdfb2635af} 
+\#define IMAGE\+\_\+\+EXTENSION\+\_\+\+COUNT~4}
+
 \Hypertarget{image__loader_8c_a18372412ad2fc3ce1e3240b3cf0efe78}\index{image\_loader.c@{image\_loader.c}!STB\_IMAGE\_IMPLEMENTATION@{STB\_IMAGE\_IMPLEMENTATION}}
 \index{STB\_IMAGE\_IMPLEMENTATION@{STB\_IMAGE\_IMPLEMENTATION}!image\_loader.c@{image\_loader.c}}
 \doxysubsubsection{\texorpdfstring{STB\_IMAGE\_IMPLEMENTATION}{STB\_IMAGE\_IMPLEMENTATION}}
@@ -51,7 +61,8 @@ void \mbox{\hyperlink{image__loader_8c_a02e8bef5b7c6b12aa5317a6ea17d84bb}{image\
 {\footnotesize\ttfamily \label{image__loader_8c_a66da4252462c1386e4e5c9101e08b93d} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} image\+\_\+loader\+\_\+load (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} \texorpdfstring{$\ast$}{*}}]{self}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\mbox{\hyperlink{structresource}{resource}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+resource}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -91,7 +102,8 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{image__loader_8c_aa43f47baf41812728a2781e35d2bbadc} 
 \mbox{\hyperlink{structresource__loader}{resource\+\_\+loader}} image\+\_\+resource\+\_\+loader\+\_\+create (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

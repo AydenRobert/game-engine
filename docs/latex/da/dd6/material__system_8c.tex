@@ -12,13 +12,7 @@
 {\ttfamily \#include "{}math/kmath.\+h"{}}\newline
 {\ttfamily \#include "{}containers/hashtable.\+h"{}}\newline
 {\ttfamily \#include "{}renderer/renderer\+\_\+frontend.\+h"{}}\newline
-<<<<<<< HEAD
-Include dependency graph for material\+\_\+system.\+c\+:
-\nopagebreak
-=======
-{\ttfamily \#include "{}platform/filesystem.\+h"{}}\newline
 Include dependency graph for material\+\_\+system.\+c\+:\nopagebreak
->>>>>>> main
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -73,9 +67,9 @@ void \mbox{\hyperlink{material__system_8c_a71642cf5861f603f7e1bf6c4d373b906}{mat
 \item 
 \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{material__system_8c_a4ba73bfbf0e5e2fe4c8b839449ea210b}{material\+\_\+system\+\_\+get\+\_\+default}} ()
 \item 
-\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{material__system_8c_a5dc156f1a34448e19fc44f94d3699b7c}{material\+\_\+system\+\_\+apply\+\_\+global}} (\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} shader\+\_\+id, const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}projection, const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}view)
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{material__system_8c_aa4d552db1e399916718ec2423b6b6d4c}{material\+\_\+system\+\_\+apply\+\_\+global}} (\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} shader\+\_\+id, const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}projection, const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}view, const \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \texorpdfstring{$\ast$}{*}ambient\+\_\+colour, const \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \texorpdfstring{$\ast$}{*}view\+\_\+position, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} render\+\_\+mode)
 \item 
-\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{material__system_8c_ad32b7a909869252d632a48f902376ff8}{material\+\_\+system\+\_\+apply\+\_\+instance}} (\mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}m)
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{material__system_8c_a9477fb76c7be23080cc4eff6f97dbf88}{material\+\_\+system\+\_\+apply\+\_\+instance}} (\mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}m, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} needs\+\_\+update)
 \item 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{material__system_8c_ad30788c34da9c8abd2a8f2a265f859e6}{material\+\_\+system\+\_\+apply\+\_\+local}} (\mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}m, const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}model)
 \end{DoxyCompactItemize}
@@ -143,7 +137,8 @@ typedef struct ui\+\_\+shader\+\_\+uniform\+\_\+locations ui\+\_\+shader\+\_\+un
 {\footnotesize\ttfamily \label{material__system_8c_aaad0c4353df6e394f1e2aaa497c57714} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} create\+\_\+default\+\_\+material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -163,14 +158,16 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{material__system_8c_a9b60e2520cafcbe4f38d8e3c10f06a95} 
 void destroy\+\_\+material (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}}]{material}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{da/dd6/material__system_8c_a9b60e2520cafcbe4f38d8e3c10f06a95_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -183,14 +180,16 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{material__system_8c_ae11c47ca97d971edf8d396a8b7ed7ad0} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} load\+\_\+material (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmaterial__config}{material\+\_\+config}}}]{config}{, }\item[{\mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}}]{material}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{da/dd6/material__system_8c_ae11c47ca97d971edf8d396a8b7ed7ad0_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -203,14 +202,16 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{material__system_8c_ae395c1f929cb52e4876eafa9b2398f66} 
 \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*} material\+\_\+system\+\_\+acquire (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{da/dd6/material__system_8c_ae395c1f929cb52e4876eafa9b2398f66_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -223,57 +224,56 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{material__system_8c_ab4fc1dd5effa08830f4f91c5334f108e} 
 \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*} material\+\_\+system\+\_\+acquire\+\_\+from\+\_\+config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmaterial__config}{material\+\_\+config}}}]{config}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{da/dd6/material__system_8c_ab4fc1dd5effa08830f4f91c5334f108e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-<<<<<<< HEAD
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{da/dd6/material__system_8c_ab4fc1dd5effa08830f4f91c5334f108e_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{material__system_8c_a5dc156f1a34448e19fc44f94d3699b7c}\index{material\_system.c@{material\_system.c}!material\_system\_apply\_global@{material\_system\_apply\_global}}
+\Hypertarget{material__system_8c_aa4d552db1e399916718ec2423b6b6d4c}\index{material\_system.c@{material\_system.c}!material\_system\_apply\_global@{material\_system\_apply\_global}}
 \index{material\_system\_apply\_global@{material\_system\_apply\_global}!material\_system.c@{material\_system.c}}
 \doxysubsubsection{\texorpdfstring{material\_system\_apply\_global()}{material\_system\_apply\_global()}}
-{\footnotesize\ttfamily \label{material__system_8c_a5dc156f1a34448e19fc44f94d3699b7c} 
-\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} material\+\_\+system\+\_\+apply\+\_\+global (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{shader\+\_\+id}{, }\item[{const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}}]{projection}{, }\item[{const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}}]{view}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{material__system_8c_aa4d552db1e399916718ec2423b6b6d4c} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} material\+\_\+system\+\_\+apply\+\_\+global (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{shader\+\_\+id}{, }\item[{const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}}]{projection}{, }\item[{const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}}]{view}{, }\item[{const \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \texorpdfstring{$\ast$}{*}}]{ambient\+\_\+colour}{, }\item[{const \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \texorpdfstring{$\ast$}{*}}]{view\+\_\+position}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{render\+\_\+mode}{}\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{da/dd6/material__system_8c_a5dc156f1a34448e19fc44f94d3699b7c_cgraph}
+\includegraphics[width=350pt]{da/dd6/material__system_8c_aa4d552db1e399916718ec2423b6b6d4c_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
-=======
->>>>>>> main
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{da/dd6/material__system_8c_a5dc156f1a34448e19fc44f94d3699b7c_icgraph}
+\includegraphics[width=350pt]{da/dd6/material__system_8c_aa4d552db1e399916718ec2423b6b6d4c_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{material__system_8c_ad32b7a909869252d632a48f902376ff8}\index{material\_system.c@{material\_system.c}!material\_system\_apply\_instance@{material\_system\_apply\_instance}}
+\Hypertarget{material__system_8c_a9477fb76c7be23080cc4eff6f97dbf88}\index{material\_system.c@{material\_system.c}!material\_system\_apply\_instance@{material\_system\_apply\_instance}}
 \index{material\_system\_apply\_instance@{material\_system\_apply\_instance}!material\_system.c@{material\_system.c}}
 \doxysubsubsection{\texorpdfstring{material\_system\_apply\_instance()}{material\_system\_apply\_instance()}}
-{\footnotesize\ttfamily \label{material__system_8c_ad32b7a909869252d632a48f902376ff8} 
-\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} material\+\_\+system\+\_\+apply\+\_\+instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}}]{m}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{material__system_8c_a9477fb76c7be23080cc4eff6f97dbf88} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} material\+\_\+system\+\_\+apply\+\_\+instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}}]{m}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{needs\+\_\+update}{}\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{da/dd6/material__system_8c_ad32b7a909869252d632a48f902376ff8_cgraph}
+\includegraphics[width=350pt]{da/dd6/material__system_8c_a9477fb76c7be23080cc4eff6f97dbf88_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -281,7 +281,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{da/dd6/material__system_8c_ad32b7a909869252d632a48f902376ff8_icgraph}
+\includegraphics[width=350pt]{da/dd6/material__system_8c_a9477fb76c7be23080cc4eff6f97dbf88_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{material__system_8c_ad30788c34da9c8abd2a8f2a265f859e6}\index{material\_system.c@{material\_system.c}!material\_system\_apply\_local@{material\_system\_apply\_local}}
@@ -290,16 +290,14 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{material__system_8c_ad30788c34da9c8abd2a8f2a265f859e6} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} material\+\_\+system\+\_\+apply\+\_\+local (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}}]{m}{, }\item[{const \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \texorpdfstring{$\ast$}{*}}]{model}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{da/dd6/material__system_8c_ad30788c34da9c8abd2a8f2a265f859e6_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -312,7 +310,8 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{material__system_8c_a4ba73bfbf0e5e2fe4c8b839449ea210b} 
 \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*} material\+\_\+system\+\_\+get\+\_\+default (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -325,7 +324,8 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{material__system_8c_acd96d4f865338dcf64ca455731b43718} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} material\+\_\+system\+\_\+initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{memory\+\_\+requirement}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{state}{, }\item[{\mbox{\hyperlink{structmaterial__system__config}{material\+\_\+system\+\_\+config}}}]{config}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -345,14 +345,16 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{material__system_8c_a71642cf5861f603f7e1bf6c4d373b906} 
 void material\+\_\+system\+\_\+release (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{da/dd6/material__system_8c_a71642cf5861f603f7e1bf6c4d373b906_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -365,7 +367,8 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{material__system_8c_ac54691336a811ff2d5c8dc06727fba89} 
 void material\+\_\+system\+\_\+shutdown (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

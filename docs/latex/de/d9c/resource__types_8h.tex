@@ -8,7 +8,8 @@ Include dependency graph for resource\+\_\+types.\+h\+:\nopagebreak
 \includegraphics[width=222pt]{db/d19/resource__types_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -31,6 +32,8 @@ struct \mbox{\hyperlink{structmaterial__config}{material\+\_\+config}}
 struct \mbox{\hyperlink{structmaterial}{material}}
 \item 
 struct \mbox{\hyperlink{structgeometry}{geometry}}
+\item 
+struct \mbox{\hyperlink{structmesh}{mesh}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
@@ -54,6 +57,10 @@ typedef struct texture \mbox{\hyperlink{resource__types_8h_a69d9ace16ce6a6b0a69c
 \item 
 typedef enum \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147}{texture\+\_\+use}} \mbox{\hyperlink{resource__types_8h_a79ba2d0507881d2b605e1423c8cea6ae}{texture\+\_\+use}}
 \item 
+typedef enum \mbox{\hyperlink{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42}{texture\+\_\+filter}} \mbox{\hyperlink{resource__types_8h_a809438c18d4b92439a0a78faa735020d}{texture\+\_\+filter}}
+\item 
+typedef enum \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aac}{texture\+\_\+repeat}} \mbox{\hyperlink{resource__types_8h_afbc2fa5fd6791af8a7bbca8e5bcdf428}{texture\+\_\+repeat}}
+\item 
 typedef struct texture\+\_\+map \mbox{\hyperlink{resource__types_8h_aa8d347b355ff8077e35e5fa034808e46}{texture\+\_\+map}}
 \item 
 typedef struct material\+\_\+config \mbox{\hyperlink{resource__types_8h_a9d2084d04c8f8291d53357e6f925ac75}{material\+\_\+config}}
@@ -61,6 +68,8 @@ typedef struct material\+\_\+config \mbox{\hyperlink{resource__types_8h_a9d2084d
 typedef struct material \mbox{\hyperlink{resource__types_8h_a57b603e7fe23cde5968efe7604913d03}{material}}
 \item 
 typedef struct geometry \mbox{\hyperlink{resource__types_8h_aced1f9e0c0df5900f0a74916e8acec06}{geometry}}
+\item 
+typedef struct mesh \mbox{\hyperlink{resource__types_8h_a98a8895a7bb1586b60763820b128d68e}{mesh}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -71,13 +80,26 @@ enum \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83a}{reso
 , \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aacb93ef26c73b915982994a1c5dad6724}{RESOURCE\+\_\+\+TYPE\+\_\+\+IMAGE}}
 , \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aa1726e082b3c7dbd82916f323e53cdaad}{RESOURCE\+\_\+\+TYPE\+\_\+\+MATERIAL}}
 , \newline
-\mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aa9f4b2c10a227c7fbbb1369605bb298c0}{RESOURCE\+\_\+\+TYPE\+\_\+\+STATIC\+\_\+\+MESH}}
+\mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aaebd4efceface288edbbf9062be0ef4a5}{RESOURCE\+\_\+\+TYPE\+\_\+\+MESH}}
+, \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aa9f4b2c10a227c7fbbb1369605bb298c0}{RESOURCE\+\_\+\+TYPE\+\_\+\+STATIC\+\_\+\+MESH}}
 , \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aa8de606146a83b6d0ef73ab8d58cc86d2}{RESOURCE\+\_\+\+TYPE\+\_\+\+SHADER}}
 , \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aab9a618bd01a59e513b7de76846a223ef}{RESOURCE\+\_\+\+TYPE\+\_\+\+CUSTOM}}
  \}
 \item 
 enum \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147}{texture\+\_\+use}} \{ \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147aee5c11c42183654219b51c271979dcaa}{TEXTURE\+\_\+\+USE\+\_\+\+UNKNOWN}} = 0x00
 , \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147aa124fd894f82577e7ea7dd862fe22a7b}{TEXTURE\+\_\+\+USE\+\_\+\+MAP\+\_\+\+DIFFUSE}} = 0x01
+, \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147a542ff8e50c54dbd55868d2055a451c2d}{TEXTURE\+\_\+\+USE\+\_\+\+MAP\+\_\+\+SPECULAR}} = 0x02
+, \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147a7fa9a29889db2f1ac8d8dcc924c1f9e2}{TEXTURE\+\_\+\+USE\+\_\+\+MAP\+\_\+\+NORMAL}} = 0x02
+ \}
+\item 
+enum \mbox{\hyperlink{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42}{texture\+\_\+filter}} \{ \mbox{\hyperlink{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42a58bd945a8510c87189d35331c370ca28}{TEXTURE\+\_\+\+FILTER\+\_\+\+MODE\+\_\+\+NEAREST}} = 0x0
+, \mbox{\hyperlink{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42af33864f990a02b7c987d9b7ef8f80b38}{TEXTURE\+\_\+\+FILTER\+\_\+\+MODE\+\_\+\+LINEAR}} = 0x1
+ \}
+\item 
+enum \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aac}{texture\+\_\+repeat}} \{ \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aacabb6532dffea9d2d7fa582eafd4947b1a}{TEXTURE\+\_\+\+REPEAT\+\_\+\+REPEAT}} = 0x1
+, \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aacadeb67727610ebd531724aec1eb0e53f1}{TEXTURE\+\_\+\+REPEAT\+\_\+\+MIRRORED\+\_\+\+REPEAT}} = 0x2
+, \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aaca17653929159f3f17118d2e6289d27777}{TEXTURE\+\_\+\+REPEAT\+\_\+\+CLAMPED\+\_\+\+TO\+\_\+\+EDGE}} = 0x3
+, \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aacab45006cfd25cbac9de0afaa014c0cdb9}{TEXTURE\+\_\+\+REPEAT\+\_\+\+CLAMPED\+\_\+\+TO\+\_\+\+BORDER}} = 0x4
  \}
 \end{DoxyCompactItemize}
 
@@ -132,6 +154,12 @@ typedef struct material material}
 {\footnotesize\ttfamily \label{resource__types_8h_a9d2084d04c8f8291d53357e6f925ac75} 
 typedef struct material\+\_\+config material\+\_\+config}
 
+\Hypertarget{resource__types_8h_a98a8895a7bb1586b60763820b128d68e}\index{resource\_types.h@{resource\_types.h}!mesh@{mesh}}
+\index{mesh@{mesh}!resource\_types.h@{resource\_types.h}}
+\doxysubsubsection{\texorpdfstring{mesh}{mesh}}
+{\footnotesize\ttfamily \label{resource__types_8h_a98a8895a7bb1586b60763820b128d68e} 
+typedef struct mesh mesh}
+
 \Hypertarget{resource__types_8h_a02e07285398b79eeb4e3f1c0367e0701}\index{resource\_types.h@{resource\_types.h}!resource@{resource}}
 \index{resource@{resource}!resource\_types.h@{resource\_types.h}}
 \doxysubsubsection{\texorpdfstring{resource}{resource}}
@@ -150,11 +178,23 @@ typedef enum \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d8
 {\footnotesize\ttfamily \label{resource__types_8h_a69d9ace16ce6a6b0a69cdbce7b88ceed} 
 typedef struct texture texture}
 
+\Hypertarget{resource__types_8h_a809438c18d4b92439a0a78faa735020d}\index{resource\_types.h@{resource\_types.h}!texture\_filter@{texture\_filter}}
+\index{texture\_filter@{texture\_filter}!resource\_types.h@{resource\_types.h}}
+\doxysubsubsection{\texorpdfstring{texture\_filter}{texture\_filter}}
+{\footnotesize\ttfamily \label{resource__types_8h_a809438c18d4b92439a0a78faa735020d} 
+typedef enum \mbox{\hyperlink{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42}{texture\+\_\+filter}} \mbox{\hyperlink{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42}{texture\+\_\+filter}}}
+
 \Hypertarget{resource__types_8h_aa8d347b355ff8077e35e5fa034808e46}\index{resource\_types.h@{resource\_types.h}!texture\_map@{texture\_map}}
 \index{texture\_map@{texture\_map}!resource\_types.h@{resource\_types.h}}
 \doxysubsubsection{\texorpdfstring{texture\_map}{texture\_map}}
 {\footnotesize\ttfamily \label{resource__types_8h_aa8d347b355ff8077e35e5fa034808e46} 
 typedef struct texture\+\_\+map texture\+\_\+map}
+
+\Hypertarget{resource__types_8h_afbc2fa5fd6791af8a7bbca8e5bcdf428}\index{resource\_types.h@{resource\_types.h}!texture\_repeat@{texture\_repeat}}
+\index{texture\_repeat@{texture\_repeat}!resource\_types.h@{resource\_types.h}}
+\doxysubsubsection{\texorpdfstring{texture\_repeat}{texture\_repeat}}
+{\footnotesize\ttfamily \label{resource__types_8h_afbc2fa5fd6791af8a7bbca8e5bcdf428} 
+typedef enum \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aac}{texture\+\_\+repeat}} \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aac}{texture\+\_\+repeat}}}
 
 \Hypertarget{resource__types_8h_a79ba2d0507881d2b605e1423c8cea6ae}\index{resource\_types.h@{resource\_types.h}!texture\_use@{texture\_use}}
 \index{texture\_use@{texture\_use}!resource\_types.h@{resource\_types.h}}
@@ -190,6 +230,10 @@ RESOURCE\+\_\+\+TYPE\+\_\+\+IMAGE&\\
 RESOURCE\+\_\+\+TYPE\+\_\+\+MATERIAL&\\
 \hline
 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RESOURCE\_TYPE\_MESH@{RESOURCE\_TYPE\_MESH}!resource\_types.h@{resource\_types.h}}\index{resource\_types.h@{resource\_types.h}!RESOURCE\_TYPE\_MESH@{RESOURCE\_TYPE\_MESH}}}\Hypertarget{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aaebd4efceface288edbbf9062be0ef4a5}\label{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aaebd4efceface288edbbf9062be0ef4a5} 
+RESOURCE\+\_\+\+TYPE\+\_\+\+MESH&\\
+\hline
+
 \raisebox{\heightof{T}}[0pt][0pt]{\index{RESOURCE\_TYPE\_STATIC\_MESH@{RESOURCE\_TYPE\_STATIC\_MESH}!resource\_types.h@{resource\_types.h}}\index{resource\_types.h@{resource\_types.h}!RESOURCE\_TYPE\_STATIC\_MESH@{RESOURCE\_TYPE\_STATIC\_MESH}}}\Hypertarget{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aa9f4b2c10a227c7fbbb1369605bb298c0}\label{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aa9f4b2c10a227c7fbbb1369605bb298c0} 
 RESOURCE\+\_\+\+TYPE\+\_\+\+STATIC\+\_\+\+MESH&\\
 \hline
@@ -200,6 +244,46 @@ RESOURCE\+\_\+\+TYPE\+\_\+\+SHADER&\\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{RESOURCE\_TYPE\_CUSTOM@{RESOURCE\_TYPE\_CUSTOM}!resource\_types.h@{resource\_types.h}}\index{resource\_types.h@{resource\_types.h}!RESOURCE\_TYPE\_CUSTOM@{RESOURCE\_TYPE\_CUSTOM}}}\Hypertarget{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aab9a618bd01a59e513b7de76846a223ef}\label{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aab9a618bd01a59e513b7de76846a223ef} 
 RESOURCE\+\_\+\+TYPE\+\_\+\+CUSTOM&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42}\index{resource\_types.h@{resource\_types.h}!texture\_filter@{texture\_filter}}
+\index{texture\_filter@{texture\_filter}!resource\_types.h@{resource\_types.h}}
+\doxysubsubsection{\texorpdfstring{texture\_filter}{texture\_filter}}
+{\footnotesize\ttfamily \label{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42} 
+enum \mbox{\hyperlink{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42}{texture\+\_\+filter}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXTURE\_FILTER\_MODE\_NEAREST@{TEXTURE\_FILTER\_MODE\_NEAREST}!resource\_types.h@{resource\_types.h}}\index{resource\_types.h@{resource\_types.h}!TEXTURE\_FILTER\_MODE\_NEAREST@{TEXTURE\_FILTER\_MODE\_NEAREST}}}\Hypertarget{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42a58bd945a8510c87189d35331c370ca28}\label{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42a58bd945a8510c87189d35331c370ca28} 
+TEXTURE\+\_\+\+FILTER\+\_\+\+MODE\+\_\+\+NEAREST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXTURE\_FILTER\_MODE\_LINEAR@{TEXTURE\_FILTER\_MODE\_LINEAR}!resource\_types.h@{resource\_types.h}}\index{resource\_types.h@{resource\_types.h}!TEXTURE\_FILTER\_MODE\_LINEAR@{TEXTURE\_FILTER\_MODE\_LINEAR}}}\Hypertarget{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42af33864f990a02b7c987d9b7ef8f80b38}\label{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42af33864f990a02b7c987d9b7ef8f80b38} 
+TEXTURE\+\_\+\+FILTER\+\_\+\+MODE\+\_\+\+LINEAR&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{resource__types_8h_ad32b982b0199e43e77a48262d8185aac}\index{resource\_types.h@{resource\_types.h}!texture\_repeat@{texture\_repeat}}
+\index{texture\_repeat@{texture\_repeat}!resource\_types.h@{resource\_types.h}}
+\doxysubsubsection{\texorpdfstring{texture\_repeat}{texture\_repeat}}
+{\footnotesize\ttfamily \label{resource__types_8h_ad32b982b0199e43e77a48262d8185aac} 
+enum \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aac}{texture\+\_\+repeat}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXTURE\_REPEAT\_REPEAT@{TEXTURE\_REPEAT\_REPEAT}!resource\_types.h@{resource\_types.h}}\index{resource\_types.h@{resource\_types.h}!TEXTURE\_REPEAT\_REPEAT@{TEXTURE\_REPEAT\_REPEAT}}}\Hypertarget{resource__types_8h_ad32b982b0199e43e77a48262d8185aacabb6532dffea9d2d7fa582eafd4947b1a}\label{resource__types_8h_ad32b982b0199e43e77a48262d8185aacabb6532dffea9d2d7fa582eafd4947b1a} 
+TEXTURE\+\_\+\+REPEAT\+\_\+\+REPEAT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXTURE\_REPEAT\_MIRRORED\_REPEAT@{TEXTURE\_REPEAT\_MIRRORED\_REPEAT}!resource\_types.h@{resource\_types.h}}\index{resource\_types.h@{resource\_types.h}!TEXTURE\_REPEAT\_MIRRORED\_REPEAT@{TEXTURE\_REPEAT\_MIRRORED\_REPEAT}}}\Hypertarget{resource__types_8h_ad32b982b0199e43e77a48262d8185aacadeb67727610ebd531724aec1eb0e53f1}\label{resource__types_8h_ad32b982b0199e43e77a48262d8185aacadeb67727610ebd531724aec1eb0e53f1} 
+TEXTURE\+\_\+\+REPEAT\+\_\+\+MIRRORED\+\_\+\+REPEAT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXTURE\_REPEAT\_CLAMPED\_TO\_EDGE@{TEXTURE\_REPEAT\_CLAMPED\_TO\_EDGE}!resource\_types.h@{resource\_types.h}}\index{resource\_types.h@{resource\_types.h}!TEXTURE\_REPEAT\_CLAMPED\_TO\_EDGE@{TEXTURE\_REPEAT\_CLAMPED\_TO\_EDGE}}}\Hypertarget{resource__types_8h_ad32b982b0199e43e77a48262d8185aaca17653929159f3f17118d2e6289d27777}\label{resource__types_8h_ad32b982b0199e43e77a48262d8185aaca17653929159f3f17118d2e6289d27777} 
+TEXTURE\+\_\+\+REPEAT\+\_\+\+CLAMPED\+\_\+\+TO\+\_\+\+EDGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXTURE\_REPEAT\_CLAMPED\_TO\_BORDER@{TEXTURE\_REPEAT\_CLAMPED\_TO\_BORDER}!resource\_types.h@{resource\_types.h}}\index{resource\_types.h@{resource\_types.h}!TEXTURE\_REPEAT\_CLAMPED\_TO\_BORDER@{TEXTURE\_REPEAT\_CLAMPED\_TO\_BORDER}}}\Hypertarget{resource__types_8h_ad32b982b0199e43e77a48262d8185aacab45006cfd25cbac9de0afaa014c0cdb9}\label{resource__types_8h_ad32b982b0199e43e77a48262d8185aacab45006cfd25cbac9de0afaa014c0cdb9} 
+TEXTURE\+\_\+\+REPEAT\+\_\+\+CLAMPED\+\_\+\+TO\+\_\+\+BORDER&\\
 \hline
 
 \end{DoxyEnumFields}
@@ -216,6 +300,14 @@ TEXTURE\+\_\+\+USE\+\_\+\+UNKNOWN&\\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TEXTURE\_USE\_MAP\_DIFFUSE@{TEXTURE\_USE\_MAP\_DIFFUSE}!resource\_types.h@{resource\_types.h}}\index{resource\_types.h@{resource\_types.h}!TEXTURE\_USE\_MAP\_DIFFUSE@{TEXTURE\_USE\_MAP\_DIFFUSE}}}\Hypertarget{resource__types_8h_aea3ad146faac71d6a8126fa17e663147aa124fd894f82577e7ea7dd862fe22a7b}\label{resource__types_8h_aea3ad146faac71d6a8126fa17e663147aa124fd894f82577e7ea7dd862fe22a7b} 
 TEXTURE\+\_\+\+USE\+\_\+\+MAP\+\_\+\+DIFFUSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXTURE\_USE\_MAP\_SPECULAR@{TEXTURE\_USE\_MAP\_SPECULAR}!resource\_types.h@{resource\_types.h}}\index{resource\_types.h@{resource\_types.h}!TEXTURE\_USE\_MAP\_SPECULAR@{TEXTURE\_USE\_MAP\_SPECULAR}}}\Hypertarget{resource__types_8h_aea3ad146faac71d6a8126fa17e663147a542ff8e50c54dbd55868d2055a451c2d}\label{resource__types_8h_aea3ad146faac71d6a8126fa17e663147a542ff8e50c54dbd55868d2055a451c2d} 
+TEXTURE\+\_\+\+USE\+\_\+\+MAP\+\_\+\+SPECULAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXTURE\_USE\_MAP\_NORMAL@{TEXTURE\_USE\_MAP\_NORMAL}!resource\_types.h@{resource\_types.h}}\index{resource\_types.h@{resource\_types.h}!TEXTURE\_USE\_MAP\_NORMAL@{TEXTURE\_USE\_MAP\_NORMAL}}}\Hypertarget{resource__types_8h_aea3ad146faac71d6a8126fa17e663147a7fa9a29889db2f1ac8d8dcc924c1f9e2}\label{resource__types_8h_aea3ad146faac71d6a8126fa17e663147a7fa9a29889db2f1ac8d8dcc924c1f9e2} 
+TEXTURE\+\_\+\+USE\+\_\+\+MAP\+\_\+\+NORMAL&\\
 \hline
 
 \end{DoxyEnumFields}

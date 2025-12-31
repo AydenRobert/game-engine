@@ -2,7 +2,8 @@
 \hypertarget{structapplication__state}{}\label{structapplication__state}\index{application\_state@{application\_state}}
 
 
-Collaboration diagram for application\+\_\+state\+:\nopagebreak
+Collaboration diagram for application\+\_\+state\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -50,6 +51,10 @@ void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_ad9186
 \item 
 void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_ab3a3a22ba262b2167105e327e60879dd}{resource\+\_\+system\+\_\+state}}
 \item 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structapplication__state_a150b5d91d3460c5ae162e1bac78385b3}{shader\+\_\+system\+\_\+memory\+\_\+requirement}}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_ae1274445574b608c521006f154823ef2}{shader\+\_\+system\+\_\+state}}
+\item 
 \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{structapplication__state_a00a59ff2c4530d84fcea3927994f1ee0}{renderer\+\_\+system\+\_\+memory\+\_\+requirement}}
 \item 
 void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_a9013e0f2cacc1dca598af239a280c24b}{renderer\+\_\+system\+\_\+state}}
@@ -66,7 +71,9 @@ void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_abae75
 \item 
 void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_a19e0a2766f2b7ac0a27c624557d99349}{geometry\+\_\+system\+\_\+state}}
 \item 
-\mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_a33e08a5827a5331065f15a2e92b30b19}{test\+\_\+world\+\_\+geometry}}
+\mbox{\hyperlink{structmesh}{mesh}} \mbox{\hyperlink{structapplication__state_a2042689521b5a461ce7ecd1b9764cc12}{meshes}} \mbox{[}10\mbox{]}
+\item 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{structapplication__state_abdafb9bffee35526e395a4a5f1e56a0d}{mesh\+\_\+count}}
 \item 
 \mbox{\hyperlink{structgeometry}{geometry}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structapplication__state_ade3830b7bf1d089b5e563c1993be8d14}{test\+\_\+ui\+\_\+geometry}}
 \end{DoxyCompactItemize}
@@ -171,6 +178,18 @@ void\texorpdfstring{$\ast$}{*} application\+\_\+state\+::logging\+\_\+system\+\_
 {\footnotesize\ttfamily \label{structapplication__state_abae75067e6da999f61336e879549d701} 
 void\texorpdfstring{$\ast$}{*} application\+\_\+state\+::material\+\_\+system\+\_\+state}
 
+\Hypertarget{structapplication__state_abdafb9bffee35526e395a4a5f1e56a0d}\index{application\_state@{application\_state}!mesh\_count@{mesh\_count}}
+\index{mesh\_count@{mesh\_count}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{mesh\_count}{mesh\_count}}
+{\footnotesize\ttfamily \label{structapplication__state_abdafb9bffee35526e395a4a5f1e56a0d} 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} application\+\_\+state\+::mesh\+\_\+count}
+
+\Hypertarget{structapplication__state_a2042689521b5a461ce7ecd1b9764cc12}\index{application\_state@{application\_state}!meshes@{meshes}}
+\index{meshes@{meshes}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{meshes}{meshes}}
+{\footnotesize\ttfamily \label{structapplication__state_a2042689521b5a461ce7ecd1b9764cc12} 
+\mbox{\hyperlink{structmesh}{mesh}} application\+\_\+state\+::meshes\mbox{[}10\mbox{]}}
+
 \Hypertarget{structapplication__state_a14782a7e40b24efc8c814f786c6525ba}\index{application\_state@{application\_state}!platform@{platform}}
 \index{platform@{platform}!application\_state@{application\_state}}
 \doxysubsubsection{\texorpdfstring{platform}{platform}}
@@ -201,6 +220,18 @@ void\texorpdfstring{$\ast$}{*} application\+\_\+state\+::renderer\+\_\+system\+\
 {\footnotesize\ttfamily \label{structapplication__state_ab3a3a22ba262b2167105e327e60879dd} 
 void\texorpdfstring{$\ast$}{*} application\+\_\+state\+::resource\+\_\+system\+\_\+state}
 
+\Hypertarget{structapplication__state_a150b5d91d3460c5ae162e1bac78385b3}\index{application\_state@{application\_state}!shader\_system\_memory\_requirement@{shader\_system\_memory\_requirement}}
+\index{shader\_system\_memory\_requirement@{shader\_system\_memory\_requirement}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_memory\_requirement}{shader\_system\_memory\_requirement}}
+{\footnotesize\ttfamily \label{structapplication__state_a150b5d91d3460c5ae162e1bac78385b3} 
+\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} application\+\_\+state\+::shader\+\_\+system\+\_\+memory\+\_\+requirement}
+
+\Hypertarget{structapplication__state_ae1274445574b608c521006f154823ef2}\index{application\_state@{application\_state}!shader\_system\_state@{shader\_system\_state}}
+\index{shader\_system\_state@{shader\_system\_state}!application\_state@{application\_state}}
+\doxysubsubsection{\texorpdfstring{shader\_system\_state}{shader\_system\_state}}
+{\footnotesize\ttfamily \label{structapplication__state_ae1274445574b608c521006f154823ef2} 
+void\texorpdfstring{$\ast$}{*} application\+\_\+state\+::shader\+\_\+system\+\_\+state}
+
 \Hypertarget{structapplication__state_a213ee353f6a3fbc499d583c79f369b9a}\index{application\_state@{application\_state}!systems\_allocator@{systems\_allocator}}
 \index{systems\_allocator@{systems\_allocator}!application\_state@{application\_state}}
 \doxysubsubsection{\texorpdfstring{systems\_allocator}{systems\_allocator}}
@@ -224,12 +255,6 @@ void\texorpdfstring{$\ast$}{*} application\+\_\+state\+::systems\+\_\+allocator\
 \doxysubsubsection{\texorpdfstring{test\_ui\_geometry}{test\_ui\_geometry}}
 {\footnotesize\ttfamily \label{structapplication__state_ade3830b7bf1d089b5e563c1993be8d14} 
 \mbox{\hyperlink{structgeometry}{geometry}}\texorpdfstring{$\ast$}{*} application\+\_\+state\+::test\+\_\+ui\+\_\+geometry}
-
-\Hypertarget{structapplication__state_a33e08a5827a5331065f15a2e92b30b19}\index{application\_state@{application\_state}!test\_world\_geometry@{test\_world\_geometry}}
-\index{test\_world\_geometry@{test\_world\_geometry}!application\_state@{application\_state}}
-\doxysubsubsection{\texorpdfstring{test\_world\_geometry}{test\_world\_geometry}}
-{\footnotesize\ttfamily \label{structapplication__state_a33e08a5827a5331065f15a2e92b30b19} 
-\mbox{\hyperlink{structgeometry}{geometry}}\texorpdfstring{$\ast$}{*} application\+\_\+state\+::test\+\_\+world\+\_\+geometry}
 
 \Hypertarget{structapplication__state_af90026c9302b5120c11d1fb6e4958326}\index{application\_state@{application\_state}!texture\_system\_memory\_requirement@{texture\_system\_memory\_requirement}}
 \index{texture\_system\_memory\_requirement@{texture\_system\_memory\_requirement}!application\_state@{application\_state}}

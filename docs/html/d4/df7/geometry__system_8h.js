@@ -7,6 +7,8 @@ var geometry__system_8h =
     [ "geometry_system_config", "d4/df7/geometry__system_8h.html#a14fbf6f88d2387996c733d0c888dce24", null ],
     [ "geometry_system_acquire_by_id", "d4/df7/geometry__system_8h.html#ae0e4e5cb2d9716bfb256919854537738", null ],
     [ "geometry_system_acquire_from_config", "d4/df7/geometry__system_8h.html#aa3992a52627669573968c86505792e5c", null ],
+    [ "geometry_system_config_dispose", "d4/df7/geometry__system_8h.html#aa949a461ac859a0e10ad866830495e0e", null ],
+    [ "geometry_system_generate_cube_config", "d4/df7/geometry__system_8h.html#a4271382a80871291489328097549d5cf", null ],
     [ "geometry_system_generate_plane_config", "d4/df7/geometry__system_8h.html#af4df3267d03b54612f8a61a647fceaba", null ],
     [ "geometry_system_get_default_geometry_2d", "d4/df7/geometry__system_8h.html#aad8405f3d05faf23bdcff666935cb402", null ],
     [ "geometry_system_get_default_geometry_3d", "d4/df7/geometry__system_8h.html#a378ccb67bf20bf83f7217aeae226edf3", null ],

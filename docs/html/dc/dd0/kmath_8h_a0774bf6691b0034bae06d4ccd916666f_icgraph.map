@@ -1,5 +1,7 @@
 <map id="vec3_cross" name="vec3_cross">
-<area shape="rect" id="Node000001" title=" " alt="" coords="164,5,257,33"/>
-<area shape="rect" id="Node000002" href="$dc/dd0/kmath_8h.html#a418ca422b663a75a98608a4ffa4dec90" title=" " alt="" coords="5,5,116,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,19,116,22,116,17,151,19"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="263,32,356,60"/>
+<area shape="rect" id="Node000002" href="$d9/dd2/geometry__utils_8c.html#ab0286cb3ddf11c354d535ebfc854efd3" title=" " alt="" coords="5,5,215,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,38,215,36,215,31,250,37"/>
+<area shape="rect" id="Node000003" href="$dc/dd0/kmath_8h.html#a418ca422b663a75a98608a4ffa4dec90" title=" " alt="" coords="55,57,165,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="245,54,166,67,165,62,250,53"/>
 </map>

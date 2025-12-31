@@ -1,9 +1,15 @@
 var texture__system_8h =
 [
     [ "texture_system_config", "db/d2f/structtexture__system__config.html", "db/d2f/structtexture__system__config" ],
+    [ "DEFAULT_DIFFUSE_TEXTURE_NAME", "d6/d6b/texture__system_8h.html#ac4466e073e39a3f2b8bdf2d26ee78e47", null ],
+    [ "DEFAULT_NORMAL_TEXTURE_NAME", "d6/d6b/texture__system_8h.html#a88636b9c6ba1e3eb2df062e51a6b41e6", null ],
+    [ "DEFAULT_SPECULAR_TEXTURE_NAME", "d6/d6b/texture__system_8h.html#ac0f911c012e4cf5608e4bc6e8ad793ba", null ],
     [ "DEFAULT_TEXTURE_NAME", "d6/d6b/texture__system_8h.html#aa5d57505677b0f7a33597825053c0749", null ],
     [ "texture_system_config", "d6/d6b/texture__system_8h.html#a6443d7244e90043250cd59f9179be5e9", null ],
     [ "texture_system_acquire", "d6/d6b/texture__system_8h.html#a94229d7d8c2e06fabb2d9e3c2296599e", null ],
+    [ "texture_system_get_default_diffuse_texture", "d6/d6b/texture__system_8h.html#a76d18601359083198a46b96fe5feecce", null ],
+    [ "texture_system_get_default_normal_texture", "d6/d6b/texture__system_8h.html#ae618656c8ed539807d324ecbdc945610", null ],
+    [ "texture_system_get_default_specular_texture", "d6/d6b/texture__system_8h.html#a15e2630b52c476a887da18fa9342208c", null ],
     [ "texture_system_get_default_texture", "d6/d6b/texture__system_8h.html#ae9e13f5483fd272b9430ca11719164e4", null ],
     [ "texture_system_initialize", "d6/d6b/texture__system_8h.html#a5311316a2adfccd1ecadf29aea704cf0", null ],
     [ "texture_system_release", "d6/d6b/texture__system_8h.html#ab454daecfb4133cbca5559dd84db3ac4", null ],

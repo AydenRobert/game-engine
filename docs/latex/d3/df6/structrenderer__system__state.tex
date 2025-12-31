@@ -2,11 +2,12 @@
 \hypertarget{structrenderer__system__state}{}\label{structrenderer__system__state}\index{renderer\_system\_state@{renderer\_system\_state}}
 
 
-Collaboration diagram for renderer\+\_\+system\+\_\+state\+:\nopagebreak
+Collaboration diagram for renderer\+\_\+system\+\_\+state\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=294pt]{dc/dd5/structrenderer__system__state__coll__graph}
+\includegraphics[width=350pt]{dc/dd5/structrenderer__system__state__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Data Fields}
@@ -17,6 +18,10 @@ Collaboration diagram for renderer\+\_\+system\+\_\+state\+:\nopagebreak
 \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{structrenderer__system__state_ac3adbc6ca69f6dd465396ce8eab970f4}{projection}}
 \item 
 \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{structrenderer__system__state_a5ab9382c2529098371f0471a0fc86f62}{view}}
+\item 
+\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} \mbox{\hyperlink{structrenderer__system__state_ae416fd3bec56e1fa92d716d92188ba17}{ambient\+\_\+colour}}
+\item 
+\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} \mbox{\hyperlink{structrenderer__system__state_ae7f70edda2b061c09325c3556000e8a4}{view\+\_\+position}}
 \item 
 \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} \mbox{\hyperlink{structrenderer__system__state_a2adb1d1897f38c3c9a7ad18f0a4a5123}{ui\+\_\+projection}}
 \item 
@@ -29,12 +34,20 @@ Collaboration diagram for renderer\+\_\+system\+\_\+state\+:\nopagebreak
 \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{structrenderer__system__state_a39c63144a2e364104465a1c88c7a6b32}{material\+\_\+shader\+\_\+id}}
 \item 
 \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{structrenderer__system__state_a46f3d07ca7f6fbdafbed9b2a2602a815}{ui\+\_\+shader\+\_\+id}}
+\item 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{structrenderer__system__state_a1680c6a87d4c31129e506713f5a6c2ce}{render\+\_\+mode}}
 \end{DoxyCompactItemize}
 
 
 \label{doc-variable-members}
 \Hypertarget{structrenderer__system__state_doc-variable-members}
 \doxysubsection{Field Documentation}
+\Hypertarget{structrenderer__system__state_ae416fd3bec56e1fa92d716d92188ba17}\index{renderer\_system\_state@{renderer\_system\_state}!ambient\_colour@{ambient\_colour}}
+\index{ambient\_colour@{ambient\_colour}!renderer\_system\_state@{renderer\_system\_state}}
+\doxysubsubsection{\texorpdfstring{ambient\_colour}{ambient\_colour}}
+{\footnotesize\ttfamily \label{structrenderer__system__state_ae416fd3bec56e1fa92d716d92188ba17} 
+\mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}} renderer\+\_\+system\+\_\+state\+::ambient\+\_\+colour}
+
 \Hypertarget{structrenderer__system__state_a52c3666e5bca364ff89ff93792576649}\index{renderer\_system\_state@{renderer\_system\_state}!backend@{backend}}
 \index{backend@{backend}!renderer\_system\_state@{renderer\_system\_state}}
 \doxysubsubsection{\texorpdfstring{backend}{backend}}
@@ -65,6 +78,12 @@ Collaboration diagram for renderer\+\_\+system\+\_\+state\+:\nopagebreak
 {\footnotesize\ttfamily \label{structrenderer__system__state_ac3adbc6ca69f6dd465396ce8eab970f4} 
 \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} renderer\+\_\+system\+\_\+state\+::projection}
 
+\Hypertarget{structrenderer__system__state_a1680c6a87d4c31129e506713f5a6c2ce}\index{renderer\_system\_state@{renderer\_system\_state}!render\_mode@{render\_mode}}
+\index{render\_mode@{render\_mode}!renderer\_system\_state@{renderer\_system\_state}}
+\doxysubsubsection{\texorpdfstring{render\_mode}{render\_mode}}
+{\footnotesize\ttfamily \label{structrenderer__system__state_a1680c6a87d4c31129e506713f5a6c2ce} 
+\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} renderer\+\_\+system\+\_\+state\+::render\+\_\+mode}
+
 \Hypertarget{structrenderer__system__state_a2adb1d1897f38c3c9a7ad18f0a4a5123}\index{renderer\_system\_state@{renderer\_system\_state}!ui\_projection@{ui\_projection}}
 \index{ui\_projection@{ui\_projection}!renderer\_system\_state@{renderer\_system\_state}}
 \doxysubsubsection{\texorpdfstring{ui\_projection}{ui\_projection}}
@@ -88,6 +107,12 @@ Collaboration diagram for renderer\+\_\+system\+\_\+state\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{view}{view}}
 {\footnotesize\ttfamily \label{structrenderer__system__state_a5ab9382c2529098371f0471a0fc86f62} 
 \mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} renderer\+\_\+system\+\_\+state\+::view}
+
+\Hypertarget{structrenderer__system__state_ae7f70edda2b061c09325c3556000e8a4}\index{renderer\_system\_state@{renderer\_system\_state}!view\_position@{view\_position}}
+\index{view\_position@{view\_position}!renderer\_system\_state@{renderer\_system\_state}}
+\doxysubsubsection{\texorpdfstring{view\_position}{view\_position}}
+{\footnotesize\ttfamily \label{structrenderer__system__state_ae7f70edda2b061c09325c3556000e8a4} 
+\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} renderer\+\_\+system\+\_\+state\+::view\+\_\+position}
 
 
 

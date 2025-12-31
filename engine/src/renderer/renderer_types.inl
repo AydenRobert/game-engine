@@ -56,8 +56,13 @@ typedef struct renderer_backend {
     void (*draw_geometry)(struct renderer_backend *backend,
                           geometry_render_data data);
 
-    void (*create_texture)(const u8 *pixels, struct texture *texture);
-    void (*destroy_texture)(struct texture *texture);
+    void (*texture_create)(const u8 *pixels, struct texture *texture);
+    void (*texture_destroy)(struct texture *texture);
+
+    void (*texture_create_writeable)(struct texture *t);
+    void (*texture_resize)(struct texture *t, u32 new_width, u32 new_height);
+    void (*texture_write_data)(struct texture *t, u32 offset, u32 size,
+                               const u8 *pixels);
 
     b8 (*create_geometry)(geometry *geometry, u32 vertex_size, u32 vertex_count,
                           const void *vertices, u32 index_size, u32 index_count,
@@ -87,7 +92,6 @@ typedef struct renderer_backend {
 
     b8 (*texture_map_acquire_resources)(texture_map *map);
     void (*texture_map_release_resources)(texture_map *map);
-
 } renderer_backend;
 
 typedef struct render_packet {

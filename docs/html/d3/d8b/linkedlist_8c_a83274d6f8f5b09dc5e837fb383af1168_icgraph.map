@@ -1,0 +1,11 @@
+<map id="ll_return_node" name="ll_return_node">
+<area shape="rect" id="Node000001" title=" " alt="" coords="394,57,508,85"/>
+<area shape="rect" id="Node000002" href="$d3/d8b/linkedlist_8c.html#aa634a006a5bb8f9fac81bbc04b787124" title="Pops of a value off the start of the linked list." alt="" coords="192,5,342,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="382,53,319,36,319,31,387,52"/>
+<area shape="rect" id="Node000003" href="$d3/d8b/linkedlist_8c.html#ae7c0deaac5be876a6a1f582055f536a9" title="Pops of a value off the end of the linked list. NOTE: O(n)." alt="" coords="198,57,337,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="376,71,337,74,337,69,381,71"/>
+<area shape="rect" id="Node000004" href="$d3/d8b/linkedlist_8c.html#aa12cdf7f4ac46dee032163f4b0deaa6a" title="Removes a node at a specific index." alt="" coords="189,109,346,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="387,89,319,111,318,106,382,90"/>
+<area shape="rect" id="Node000005" href="$d3/d8b/linkedlist_8c.html#a732868a498fce30d6faf4847006c6085" title="Returns 0 or the value stored at the current node. It then removes the current node." alt="" coords="5,101,141,146"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="170,123,141,126,141,121,176,123"/>
+</map>

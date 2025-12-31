@@ -29,8 +29,14 @@ b8 renderer_backend_create(renderer_backend_type type,
 
         out_renderer_backend->draw_geometry = vulkan_renderer_draw_geometry;
 
-        out_renderer_backend->create_texture = vulkan_renderer_create_texture;
-        out_renderer_backend->destroy_texture = vulkan_renderer_destroy_texture;
+        out_renderer_backend->texture_create = vulkan_renderer_texture_create;
+        out_renderer_backend->texture_destroy = vulkan_renderer_texture_destroy;
+
+        out_renderer_backend->texture_create_writeable =
+            vulkan_renderer_texture_create_writeable;
+        out_renderer_backend->texture_write_data =
+            vulkan_renderer_texture_write_data;
+        out_renderer_backend->texture_resize = vulkan_renderer_texture_resize;
 
         out_renderer_backend->create_geometry = vulkan_renderer_create_geometry;
         out_renderer_backend->destroy_geometry =
@@ -85,8 +91,12 @@ void renderer_backend_destroy(struct renderer_backend *renderer_backend) {
 
     renderer_backend->draw_geometry = 0;
 
-    renderer_backend->create_texture = 0;
-    renderer_backend->destroy_texture = 0;
+    renderer_backend->texture_create = 0;
+    renderer_backend->texture_destroy = 0;
+
+    renderer_backend->texture_create_writeable = 0;
+    renderer_backend->texture_write_data = 0;
+    renderer_backend->texture_resize = 0;
 
     renderer_backend->create_geometry = 0;
     renderer_backend->destroy_geometry = 0;

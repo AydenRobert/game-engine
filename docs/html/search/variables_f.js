@@ -1,5 +1,29 @@
 var searchData=
 [
-  ['q_0',['q',['../df/dbe/unionvec4__u.html#a7f09873b18a15aa76453bd7b3766e627',1,'vec4_u']]],
-  ['queue_5fcomplete_5fsemaphores_1',['queue_complete_semaphores',['../d9/dc9/structvulkan__context.html#a64c9d883d2534b9cc6b7b47890efdf36',1,'vulkan_context']]]
+  ['p_0',['p',['../d5/df1/unionvec3__u.html#aa84dc4680f54d373522214476c3a1121',1,'vec3_u::p'],['../df/dbe/unionvec4__u.html#a96fa0b775c7607d7207c86562e08215f',1,'vec4_u::p']]],
+  ['parent_1',['parent',['../dd/d7a/structtransform.html#a33ae8c81919e991f322ef31d85e7e368',1,'transform']]],
+  ['physical_5fdevice_2',['physical_device',['../d7/d6e/structvulkan__device.html#afc7615a2081656e84136dc7cf4a5b875',1,'vulkan_device']]],
+  ['ping_3',['ping',['../d2/d0f/structxdg__wm__base__listener.html#a4c735d844e84443304b37d917ec847d0',1,'xdg_wm_base_listener']]],
+  ['pipeline_4',['pipeline',['../d8/ddd/structvulkan__shader.html#a322103c66a6da62ecc2efc50dbca4365',1,'vulkan_shader']]],
+  ['pipeline_5flayout_5',['pipeline_layout',['../dc/d85/structvulkan__pipeline.html#af090d423b87355d518c5a0ce8a3821de',1,'vulkan_pipeline']]],
+  ['pixels_6',['pixels',['../df/d37/structimage__resource__data.html#a6c003c384eac2c4265f22b63f0b6e8a1',1,'image_resource_data']]],
+  ['plat_5fstate_7',['plat_state',['../df/d02/structrenderer__backend.html#ad8c708f5a646224c2788f2531d46e992',1,'renderer_backend']]],
+  ['platform_8',['platform',['../dc/d7e/structapplication__state.html#a14782a7e40b24efc8c814f786c6525ba',1,'application_state']]],
+  ['pool_5fsizes_9',['pool_sizes',['../de/d44/structvulkan__shader__config.html#a73c36be65c7ebc6b4aa5255f8b26d899',1,'vulkan_shader_config']]],
+  ['popup_5fdone_10',['popup_done',['../de/dff/structxdg__popup__listener.html#af62aceff9bcec24ac9e5243107db53a2',1,'xdg_popup_listener']]],
+  ['position_11',['position',['../d7/ddb/structvertex__3d.html#a6af32341a39296b603afef4ef7ec8726',1,'vertex_3d::position'],['../de/dba/structvertex__2d.html#ae949cb2fd8a667636df4e6a524cd42ea',1,'vertex_2d::position'],['../dd/d7a/structtransform.html#afcbf03ecd36205eb4e46bc50ea4fbf04',1,'transform::position']]],
+  ['position_5findex_12',['position_index',['../dc/d9e/structmesh__vertex__index__data.html#a8789c0960ff0b1a7779812d9f5ef3d79',1,'mesh_vertex_index_data']]],
+  ['present_13',['present',['../d4/d4a/structvulkan__physical__device__requirements.html#a823c487af548bdd104834099356111fd',1,'vulkan_physical_device_requirements']]],
+  ['present_5ffamily_5findex_14',['present_family_index',['../d5/da3/structvulkan__physical__device__queue__family__info.html#a00ce509975784215988d6af3aea9c607',1,'vulkan_physical_device_queue_family_info']]],
+  ['present_5fmode_5fcount_15',['present_mode_count',['../d8/db4/structvulkan__swapchain__support__info.html#a65bfa24b47652e92c2c430e8f693e68f',1,'vulkan_swapchain_support_info']]],
+  ['present_5fmodes_16',['present_modes',['../d8/db4/structvulkan__swapchain__support__info.html#ad60786489912cdff5281e6e590e3de5e',1,'vulkan_swapchain_support_info']]],
+  ['present_5fqueue_17',['present_queue',['../d7/d6e/structvulkan__device.html#a1f3222a8df689be9f596282bf73e1d54',1,'vulkan_device']]],
+  ['present_5fqueue_5findex_18',['present_queue_index',['../d7/d6e/structvulkan__device.html#a22475a4f1b1682e06acc1667b36445af',1,'vulkan_device']]],
+  ['previous_5falloc_5fcount_19',['previous_alloc_count',['../d1/dcb/game_8c.html#abc64be9112a736c3701b85d1957fea88',1,'game.c']]],
+  ['projection_20',['projection',['../d3/df6/structrenderer__system__state.html#ac3adbc6ca69f6dd465396ce8eab970f4',1,'renderer_system_state::projection'],['../dd/d5c/structmaterial__shader__uniform__locations.html#a19de97a1521265b9dee2fc465deff7b9',1,'material_shader_uniform_locations::projection'],['../d1/d2c/structui__shader__uniform__locations.html#a735c1310ed408ad874faf95964d29ae2',1,'ui_shader_uniform_locations::projection']]],
+  ['properties_21',['properties',['../d7/d6e/structvulkan__device.html#a968a7f405c1ec7cc7893561f61b0241a',1,'vulkan_device']]],
+  ['push_5fconstant_5frange_5fcount_22',['push_constant_range_count',['../d2/d93/structshader.html#aa8a2b808d8da7715f82377a5ea7ddea3',1,'shader']]],
+  ['push_5fconstant_5franges_23',['push_constant_ranges',['../d2/d93/structshader.html#a8d1757e75996da966338b7a7424f7b57',1,'shader']]],
+  ['push_5fconstant_5fsize_24',['push_constant_size',['../d2/d93/structshader.html#a9f7520a676050701a3f18c73fee34081',1,'shader']]],
+  ['push_5fconstant_5fstride_25',['push_constant_stride',['../d2/d93/structshader.html#a1446c9ddd022cf141aac11b2d7307dce',1,'shader']]]
 ];

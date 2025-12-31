@@ -1,0 +1,19 @@
+<map id="geometry_system_config_dispose" name="geometry_system_config_dispose">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,102,191,147"/>
+<area shape="rect" id="Node000002" href="$d3/d3c/kmemory_8c.html#a6b55b65a2f2d473dac0d8ff4605a44fb" title=" " alt="" coords="271,84,326,112"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,109,258,103,253,104,192,115"/>
+<area shape="rect" id="Node000008" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="239,136,358,164"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="191,134,226,140,220,140,191,139"/>
+<area shape="rect" id="Node000003" href="$dd/d44/dynamic__allocator_8c.html#a10c3c742d3900e743f85fe47c11be3e5" title="Frees a block of memory that was allocated by the allocator." alt="" coords="406,32,580,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="326,88,421,65,427,64,327,93"/>
+<area shape="rect" id="Node000007" href="$de/d03/platform_8h.html#a0b638fcfa31e0704eb976a8662c095f2" title=" " alt="" coords="438,84,548,112"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="326,95,425,97,420,98,327,100"/>
+<area shape="rect" id="Node000004" href="$da/d3f/freelist_8c.html#a8af32093da394b6cfa1a3436b8e84283" title="Attempts to find a free block of memory given the size." alt="" coords="628,32,771,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="581,43,615,46,610,46,581,48"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df" title=" " alt="" coords="828,5,909,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="771,32,815,28,810,28,772,37"/>
+<area shape="rect" id="Node000006" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="819,57,918,85"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="771,54,806,61,801,61,771,59"/>
+<area shape="rect" id="Node000009" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="406,136,580,164"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="358,147,393,150,388,150,358,152"/>
+</map>

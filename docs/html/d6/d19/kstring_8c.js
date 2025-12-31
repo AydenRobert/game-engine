@@ -1,16 +1,24 @@
 var kstring_8c =
 [
-    [ "string_cleanup_split_array", "d6/d19/kstring_8c.html#a7d90b08d30c90708c4158166fe0f3a92", null ],
+    [ "string_append_bool", "d6/d19/kstring_8c.html#a80d291bface8b47a981492195392ed14", null ],
+    [ "string_append_char", "d6/d19/kstring_8c.html#a408c35b72b701b5d54234d84e6d903bf", null ],
+    [ "string_append_float", "d6/d19/kstring_8c.html#a0e57ff1234780f816e4ca2a60296deb1", null ],
+    [ "string_append_int", "d6/d19/kstring_8c.html#af7fc19e222eba7c9e9ba648c687a780f", null ],
+    [ "string_append_string", "d6/d19/kstring_8c.html#a16e13ae59786b00d6b6a120469582854", null ],
+    [ "string_cleanup_split_array", "d6/d19/kstring_8c.html#aefb911dbc606bb272e43aa234448a24b", null ],
     [ "string_copy", "d6/d19/kstring_8c.html#af43aa079f60bc11dd7da697df920fece", null ],
+    [ "string_directory_from_path", "d6/d19/kstring_8c.html#a5f94bc626484bff50474e0eb291400e2", null ],
     [ "string_duplicate", "d6/d19/kstring_8c.html#ae4d2c3111ca8e06cce31d32a7928f320", null ],
     [ "string_empty", "d6/d19/kstring_8c.html#ab683baecc9c29380d81c9b0fafe27738", null ],
+    [ "string_filename_from_path", "d6/d19/kstring_8c.html#ab521b5ab6a9dc1ee9bb7bb587de03b89", null ],
+    [ "string_filename_no_extension_from_path", "d6/d19/kstring_8c.html#ae674f28f7fd1f23ebee2942a71a4b1e8", null ],
     [ "string_format", "d6/d19/kstring_8c.html#a86babd936b82eaf4229e77406968f74d", null ],
     [ "string_format_v", "d6/d19/kstring_8c.html#a7d32c70521c217a716c586f145dbb4d9", null ],
     [ "string_index_of_char", "d6/d19/kstring_8c.html#af929be4747d22249aa7adc3379fd583a", null ],
     [ "string_length", "d6/d19/kstring_8c.html#a3ac8f7f54a3429135da71637d268e6c9", null ],
     [ "string_mid", "d6/d19/kstring_8c.html#a97b33c831523752f0adff22f80beaec5", null ],
     [ "string_ncopy", "d6/d19/kstring_8c.html#a9e48021ce5b39920715bfaa5d92613bc", null ],
-    [ "string_split", "d6/d19/kstring_8c.html#a62503334d43c725cc8392529858e618c", null ],
+    [ "string_split", "d6/d19/kstring_8c.html#a9c15020f6d412e710bac08200dc51925", null ],
     [ "string_to_b8", "d6/d19/kstring_8c.html#a1e6bde61bb46f6f8092ed7b71633aad7", null ],
     [ "string_to_f32", "d6/d19/kstring_8c.html#aa415b4bf6b684a0e26fc83e80e9a11e1", null ],
     [ "string_to_f64", "d6/d19/kstring_8c.html#a75741d37efcde799a7871c4910fc8401", null ],
@@ -27,5 +35,7 @@ var kstring_8c =
     [ "string_to_vec4", "d6/d19/kstring_8c.html#ae69fd9f5a95697acc5db20176c382b04", null ],
     [ "string_trim", "d6/d19/kstring_8c.html#a4dd30c30bb3f8bd5e2a051c22b04317e", null ],
     [ "strings_equal", "d6/d19/kstring_8c.html#a4088fb073177638c470fee72f8f2180a", null ],
-    [ "strings_equali", "d6/d19/kstring_8c.html#a148b565b9af89efb432a895868c1e4d1", null ]
+    [ "strings_equali", "d6/d19/kstring_8c.html#a148b565b9af89efb432a895868c1e4d1", null ],
+    [ "strings_nequal", "d6/d19/kstring_8c.html#a7f57e1c046f6b80ba5a725b3a4da7863", null ],
+    [ "strings_nequali", "d6/d19/kstring_8c.html#a935172afa95a96c7c2ff38c8ab4778a8", null ]
 ];

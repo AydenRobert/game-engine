@@ -98,8 +98,7 @@ typedef struct vulkan_swapchain {
     u8 max_frames_in_flight;
     VkSwapchainKHR handle;
     u32 image_count;
-    VkImage *images;
-    VkImageView *views;
+    texture **render_textures;
 
     vulkan_image depth_attachment;
 
@@ -222,7 +221,3 @@ struct vulkan_context {
 
     i32 (*find_memory_index)(u32 type_filter, u32 property_flags);
 };
-
-typedef struct vulkan_texture_data {
-    vulkan_image image;
-} vulkan_texture_data;

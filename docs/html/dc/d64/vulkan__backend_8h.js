@@ -13,14 +13,16 @@ var vulkan__backend_8h =
     [ "vulkan_renderer_draw_geometry", "dc/d64/vulkan__backend_8h.html#afb2953d737e09a76a30a16ed380d3a10", null ],
     [ "vulkan_renderer_end_renderpass", "dc/d64/vulkan__backend_8h.html#a3f4765d046f40fb3e61e8a6705723b39", null ],
     [ "vulkan_renderer_set_uniform", "dc/d64/vulkan__backend_8h.html#a1664f902d497f3692fc1a194c22900f9", null ],
-    [ "vulkan_renderer_shader_acquire_instance_resources", "dc/d64/vulkan__backend_8h.html#ac3d70f79ccb767b7395751d71163633b", null ],
+    [ "vulkan_renderer_shader_acquire_instance_resources", "dc/d64/vulkan__backend_8h.html#adcea9d90af3ef41910990f383571fabe", null ],
     [ "vulkan_renderer_shader_apply_globals", "dc/d64/vulkan__backend_8h.html#aca1247f1e0ed5169d3a6d9221effc8ec", null ],
-    [ "vulkan_renderer_shader_apply_instance", "dc/d64/vulkan__backend_8h.html#af36a7386585f1f4b1460b4b7baccca34", null ],
+    [ "vulkan_renderer_shader_apply_instance", "dc/d64/vulkan__backend_8h.html#ac5c1aeb7ac4a867557b4a6784276c6a9", null ],
     [ "vulkan_renderer_shader_bind_globals", "dc/d64/vulkan__backend_8h.html#aa705b7b42030638286837e30426bdff3", null ],
     [ "vulkan_renderer_shader_bind_instance", "dc/d64/vulkan__backend_8h.html#aef2f606c706272267074c99d64a80c25", null ],
     [ "vulkan_renderer_shader_create", "dc/d64/vulkan__backend_8h.html#ab70d0df012b458182ed9e6f4d1119444", null ],
     [ "vulkan_renderer_shader_destroy", "dc/d64/vulkan__backend_8h.html#aad263fa0073591002e4b065c44728c8a", null ],
     [ "vulkan_renderer_shader_initialize", "dc/d64/vulkan__backend_8h.html#a1f418ee9d14eca97c18c8d885095df5d", null ],
     [ "vulkan_renderer_shader_release_instance_resources", "dc/d64/vulkan__backend_8h.html#a47ca64d43556ec6bef3e68efc7ea5ed7", null ],
-    [ "vulkan_renderer_shader_use", "dc/d64/vulkan__backend_8h.html#ab6568ea7f5a5a5ca987770153d02d5b6", null ]
+    [ "vulkan_renderer_shader_use", "dc/d64/vulkan__backend_8h.html#ab6568ea7f5a5a5ca987770153d02d5b6", null ],
+    [ "vulkan_renderer_texture_map_acquire_resources", "dc/d64/vulkan__backend_8h.html#a2e362bd9d3c3001b5a67632159a2d4a3", null ],
+    [ "vulkan_renderer_texture_map_release_resources", "dc/d64/vulkan__backend_8h.html#ac7c308eba46cfa13316c83f83bfcb181", null ]
 ];

@@ -1,0 +1,5 @@
+<map id="linkedlist_remove_at" name="linkedlist_remove_at">
+<area shape="rect" id="Node000001" title="Removes a node at a specific index." alt="" coords="189,14,346,42"/>
+<area shape="rect" id="Node000002" href="$d3/d8b/linkedlist_8c.html#a732868a498fce30d6faf4847006c6085" title="Returns 0 or the value stored at the current node. It then removes the current node." alt="" coords="5,5,141,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,28,141,30,141,25,176,27"/>
+</map>

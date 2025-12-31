@@ -1,0 +1,19 @@
+<map id="load_ksm_file" name="load_ksm_file">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,59,117,86"/>
+<area shape="rect" id="Node000002" href="$df/d45/filesystem_8c.html#a7f5e779e0edfba42ff99dac4ed951729" title="Reads up to data_size bytes of data into out_data. Allocates *out_data which must be freed by the cal..." alt="" coords="165,32,290,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,61,151,57,147,60,118,66"/>
+<area shape="rect" id="Node000003" href="$d3/d3c/kmemory_8c.html#a35f22575c2b4fcbda423b6108e352b15" title=" " alt="" coords="187,84,268,112"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="117,78,175,88,170,91,117,84"/>
+<area shape="rect" id="Node000004" href="$dd/d44/dynamic__allocator_8c.html#aeef3ef902c20758ce4e52fd3ce7c3112" title="Allocates an amount of memory and returns the given block." alt="" coords="338,32,538,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="267,85,367,63,362,65,268,91"/>
+<area shape="rect" id="Node000008" href="$de/d03/platform_8h.html#a19df473ff145c8579c4c838d5bc67372" title=" " alt="" coords="370,84,506,112"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="268,95,357,97,352,98,268,100"/>
+<area shape="rect" id="Node000009" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="351,136,525,164"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="268,105,367,131,362,132,268,110"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#ae855f01b88cfd86e3ff8ae7682bbd06c" title="Attempts to find a allocate block of memory given the size." alt="" coords="586,32,755,60"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="539,43,573,46,568,46,539,48"/>
+<area shape="rect" id="Node000006" href="$da/d3f/freelist_8c.html#a1ce834d1bd9f9caf272e6d63aa00deb8" title="Obtains the amount of free space within the freelist." alt="" coords="803,5,948,33"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="755,32,790,30,785,31,756,37"/>
+<area shape="rect" id="Node000007" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="826,57,925,85"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="755,54,813,63,808,63,755,59"/>
+</map>

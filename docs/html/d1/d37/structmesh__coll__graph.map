@@ -1,0 +1,21 @@
+<map id="mesh" name="mesh">
+<area shape="rect" id="Node000001" title=" " alt="" coords="145,453,202,480"/>
+<area shape="rect" id="Node000002" href="$dd/ddc/structgeometry.html" title=" " alt="" coords="258,352,342,380"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="274,389,192,454,189,450,269,390"/>
+<area shape="rect" id="Node000003" href="$da/d20/structmaterial.html" title=" " alt="" coords="273,251,349,279"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,292,304,353,299,350,306,296"/>
+<area shape="rect" id="Node000004" href="$df/dbe/unionvec4__u.html" title=" " alt="" coords="225,106,293,134"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="267,146,294,226,306,251,301,250,290,228,265,151"/>
+<area shape="rect" id="Node000007" href="$dd/d7a/structtransform.html" title=" " alt="" coords="90,251,175,279"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="220,145,207,159,196,177,191,193,185,210,174,229,151,253,147,249,170,226,181,207,186,191,191,174,203,156,224,140"/>
+<area shape="rect" id="Node000005" href="$dc/d86/structtexture__map.html" title=" " alt="" coords="368,106,472,134"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="421,147,414,190,405,210,393,229,373,245,351,256,348,252,370,241,389,226,401,208,409,188,417,151"/>
+<area shape="rect" id="Node000006" href="$dd/db6/structtexture.html" title=" " alt="" coords="386,5,454,33"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="422,46,423,106,418,104,419,51"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="140,293,174,452,168,452,136,296"/>
+<area shape="poly" id="edge10_Node000007_Node000007" title=" " alt="" coords="190,255,202,265,193,274,177,277,174,272,191,270,196,265,191,260"/>
+<area shape="rect" id="Node000008" href="$d5/df1/unionvec3__u.html" title=" " alt="" coords="5,106,73,134"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="40,147,51,188,58,208,69,226,83,239,100,250,95,252,79,243,65,229,53,210,46,189,40,152"/>
+<area shape="rect" id="Node000009" href="$d6/d3a/unionmat4__u.html" title=" " alt="" coords="97,106,168,134"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="133,147,135,251,130,250,131,152"/>
+</map>

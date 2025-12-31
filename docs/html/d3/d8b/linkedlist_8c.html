@@ -125,8 +125,8 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab49c8cbca17232ed2b35fd6e14dc08f2" id="r_ab49c8cbca17232ed2b35fd6e14dc08f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d3e/structlinkedlist__node.html">linkedlist_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab49c8cbca17232ed2b35fd6e14dc08f2">get_node</a> (<a class="el" href="../../d0/dff/structlinkedlist.html">linkedlist</a> *list)</td></tr>
-<tr class="memitem:ae7ad5ce70d0c44e6a5cf92afd9dcf687" id="r_ae7ad5ce70d0c44e6a5cf92afd9dcf687"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7ad5ce70d0c44e6a5cf92afd9dcf687">return_node</a> (<a class="el" href="../../d0/dff/structlinkedlist.html">linkedlist</a> *list, <a class="el" href="../../df/d3e/structlinkedlist__node.html">linkedlist_node</a> *node)</td></tr>
+<tr class="memitem:ad83e653f0012d972b0597e7b52b4be9c" id="r_ad83e653f0012d972b0597e7b52b4be9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d3e/structlinkedlist__node.html">linkedlist_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad83e653f0012d972b0597e7b52b4be9c">ll_get_node</a> (<a class="el" href="../../d0/dff/structlinkedlist.html">linkedlist</a> *list)</td></tr>
+<tr class="memitem:a83274d6f8f5b09dc5e837fb383af1168" id="r_a83274d6f8f5b09dc5e837fb383af1168"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83274d6f8f5b09dc5e837fb383af1168">ll_return_node</a> (<a class="el" href="../../d0/dff/structlinkedlist.html">linkedlist</a> *list, <a class="el" href="../../df/d3e/structlinkedlist__node.html">linkedlist_node</a> *node)</td></tr>
 <tr class="memitem:aaf5682ba7a75e9ee25f23c406cc677d9" id="r_aaf5682ba7a75e9ee25f23c406cc677d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/db0/defines_8h.html#a3a58feb08f4f45ee137ec358217c3270">b8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf5682ba7a75e9ee25f23c406cc677d9">linkedlist_create</a> (<a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a> max_nodes, <a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a> *memory_requirement, void *memory, <a class="el" href="../../d0/dff/structlinkedlist.html">linkedlist</a> *out_list)</td></tr>
 <tr class="memdesc:aaf5682ba7a75e9ee25f23c406cc677d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a linked list struct. Each node stores a void pointer.  <br /></td></tr>
 <tr class="memitem:a421e0351ad71a54920a67ac3366d8268" id="r_a421e0351ad71a54920a67ac3366d8268"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a421e0351ad71a54920a67ac3366d8268">linkedlist_destroy</a> (<a class="el" href="../../d0/dff/structlinkedlist.html">linkedlist</a> *list)</td></tr>
@@ -151,10 +151,14 @@ Functions</h2></td></tr>
 <tr class="memdesc:acc337ea8c08ab0b47b0194e7122ac5df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current length of the list.  <br /></td></tr>
 <tr class="memitem:a0326df3469074a0aaea0a3e758643f28" id="r_a0326df3469074a0aaea0a3e758643f28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/db0/defines_8h.html#a3a58feb08f4f45ee137ec358217c3270">b8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0326df3469074a0aaea0a3e758643f28">linkedlist_iterator_begin</a> (<a class="el" href="../../d0/dff/structlinkedlist.html">linkedlist</a> *list, <a class="el" href="../../da/d98/structlinkedlist__iterator.html">linkedlist_iterator</a> *iterator)</td></tr>
 <tr class="memdesc:a0326df3469074a0aaea0a3e758643f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populates an out_iterator struct.  <br /></td></tr>
+<tr class="memitem:a965346e005f45b51eb29f76dfb649305" id="r_a965346e005f45b51eb29f76dfb649305"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/db0/defines_8h.html#a3a58feb08f4f45ee137ec358217c3270">b8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a965346e005f45b51eb29f76dfb649305">linkedlist_iterator_begin_at</a> (<a class="el" href="../../d0/dff/structlinkedlist.html">linkedlist</a> *list, <a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a> index, <a class="el" href="../../da/d98/structlinkedlist__iterator.html">linkedlist_iterator</a> *iterator)</td></tr>
+<tr class="memdesc:a965346e005f45b51eb29f76dfb649305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populates an out_iterator struct.  <br /></td></tr>
 <tr class="memitem:a8194080e3aa9df2f5de0350d8f0f9194" id="r_a8194080e3aa9df2f5de0350d8f0f9194"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/db0/defines_8h.html#a3a58feb08f4f45ee137ec358217c3270">b8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8194080e3aa9df2f5de0350d8f0f9194">linkedlist_iterator_next</a> (<a class="el" href="../../da/d98/structlinkedlist__iterator.html">linkedlist_iterator</a> *iterator)</td></tr>
 <tr class="memdesc:a8194080e3aa9df2f5de0350d8f0f9194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the iterator to get the node.  <br /></td></tr>
 <tr class="memitem:acd74cfb96edbc3e16a8950e52aa4423a" id="r_acd74cfb96edbc3e16a8950e52aa4423a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd74cfb96edbc3e16a8950e52aa4423a">linkedlist_iterator_get</a> (<a class="el" href="../../da/d98/structlinkedlist__iterator.html">linkedlist_iterator</a> *iterator)</td></tr>
 <tr class="memdesc:acd74cfb96edbc3e16a8950e52aa4423a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns 0 or the value stored at a node.  <br /></td></tr>
+<tr class="memitem:a732868a498fce30d6faf4847006c6085" id="r_a732868a498fce30d6faf4847006c6085"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a732868a498fce30d6faf4847006c6085">linkedlist_iterator_remove</a> (<a class="el" href="../../da/d98/structlinkedlist__iterator.html">linkedlist_iterator</a> *iterator)</td></tr>
+<tr class="memdesc:a732868a498fce30d6faf4847006c6085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns 0 or the value stored at the current node. It then removes the current node.  <br /></td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
 <a id="ab35b1ac13b18e76e3d842850f13337cc" name="ab35b1ac13b18e76e3d842850f13337cc"></a>
@@ -186,37 +190,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ab49c8cbca17232ed2b35fd6e14dc08f2" name="ab49c8cbca17232ed2b35fd6e14dc08f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab49c8cbca17232ed2b35fd6e14dc08f2">&#9670;&#160;</a></span>get_node()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/d3e/structlinkedlist__node.html">linkedlist_node</a> * get_node </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/dff/structlinkedlist.html">linkedlist</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d3/d8b/linkedlist_8c_ab49c8cbca17232ed2b35fd6e14dc08f2_icgraph.png" border="0" usemap="#ad3/d8b/linkedlist_8c_ab49c8cbca17232ed2b35fd6e14dc08f2_icgraph" loading="lazy" alt=""/></div>
-<map name="ad3/d8b/linkedlist_8c_ab49c8cbca17232ed2b35fd6e14dc08f2_icgraph" id="ad3/d8b/linkedlist_8c_ab49c8cbca17232ed2b35fd6e14dc08f2_icgraph">
-<area shape="rect" title=" " alt="" coords="211,57,292,85"/>
-<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#ab4d5e76eac9dbea7ebed3375de156afe" title="Inserts a node at a specific index." alt="" coords="12,5,156,33"/>
-<area shape="poly" title=" " alt="" coords="193,55,131,36,131,31,198,53"/>
-<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#a06f70585fa788aa7bca7db106327ec57" title="Pushes a new node to the head of the linked list." alt="" coords="5,57,163,85"/>
-<area shape="poly" title=" " alt="" coords="192,72,163,74,162,69,198,71"/>
-<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#a812cd5c3c8c86d2b136da308e39c5482" title="Pushes a new node to the tail of the linked list." alt="" coords="11,109,157,137"/>
-<area shape="poly" title=" " alt="" coords="198,88,132,111,130,106,193,89"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="aaf5682ba7a75e9ee25f23c406cc677d9" name="aaf5682ba7a75e9ee25f23c406cc677d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf5682ba7a75e9ee25f23c406cc677d9">&#9670;&#160;</a></span>linkedlist_create()</h2>
 
@@ -357,8 +330,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d3/d8b/linkedlist_8c_ab4d5e76eac9dbea7ebed3375de156afe_cgraph.png" border="0" usemap="#ad3/d8b/linkedlist_8c_ab4d5e76eac9dbea7ebed3375de156afe_cgraph" loading="lazy" alt=""/></div>
 <map name="ad3/d8b/linkedlist_8c_ab4d5e76eac9dbea7ebed3375de156afe_cgraph" id="ad3/d8b/linkedlist_8c_ab4d5e76eac9dbea7ebed3375de156afe_cgraph">
 <area shape="rect" title="Inserts a node at a specific index." alt="" coords="5,5,150,33"/>
-<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#ab49c8cbca17232ed2b35fd6e14dc08f2" title=" " alt="" coords="198,5,279,33"/>
-<area shape="poly" title=" " alt="" coords="150,17,185,19,180,19,150,22"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#ad83e653f0012d972b0597e7b52b4be9c" title=" " alt="" coords="198,5,294,33"/>
+<area shape="poly" title=" " alt="" coords="150,17,185,19,179,19,150,22"/>
 </map>
 </div>
 
@@ -387,6 +360,43 @@ Here is the call graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">list</td><td>The list to use. </td></tr>
+    <tr><td class="paramname">out_iterator</td><td>A pointer to an iterator struct. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if successfully; otherwise False. </dd></dl>
+
+</div>
+</div>
+<a id="a965346e005f45b51eb29f76dfb649305" name="a965346e005f45b51eb29f76dfb649305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a965346e005f45b51eb29f76dfb649305">&#9670;&#160;</a></span>linkedlist_iterator_begin_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/db0/defines_8h.html#a3a58feb08f4f45ee137ec358217c3270">b8</a> linkedlist_iterator_begin_at </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dff/structlinkedlist.html">linkedlist</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../da/d98/structlinkedlist__iterator.html">linkedlist_iterator</a> *</td>          <td class="paramname"><span class="paramname"><em>out_iterator</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Populates an out_iterator struct. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>The list to use. </td></tr>
+    <tr><td class="paramname">index</td><td>The index to start the iterator at. </td></tr>
     <tr><td class="paramname">out_iterator</td><td>A pointer to an iterator struct. </td></tr>
   </table>
   </dd>
@@ -447,6 +457,44 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a732868a498fce30d6faf4847006c6085" name="a732868a498fce30d6faf4847006c6085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a732868a498fce30d6faf4847006c6085">&#9670;&#160;</a></span>linkedlist_iterator_remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * linkedlist_iterator_remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d98/structlinkedlist__iterator.html">linkedlist_iterator</a> *</td>          <td class="paramname"><span class="paramname"><em>iterator</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns 0 or the value stored at the current node. It then removes the current node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iterator</td><td>The iterator struct. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The value stored in the node. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/d8b/linkedlist_8c_a732868a498fce30d6faf4847006c6085_cgraph.png" border="0" usemap="#ad3/d8b/linkedlist_8c_a732868a498fce30d6faf4847006c6085_cgraph" loading="lazy" alt=""/></div>
+<map name="ad3/d8b/linkedlist_8c_a732868a498fce30d6faf4847006c6085_cgraph" id="ad3/d8b/linkedlist_8c_a732868a498fce30d6faf4847006c6085_cgraph">
+<area shape="rect" title="Returns 0 or the value stored at the current node. It then removes the current node." alt="" coords="5,5,141,50"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#aa12cdf7f4ac46dee032163f4b0deaa6a" title="Removes a node at a specific index." alt="" coords="189,14,346,42"/>
+<area shape="poly" title=" " alt="" coords="141,25,176,27,170,28,141,30"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#a83274d6f8f5b09dc5e837fb383af1168" title=" " alt="" coords="394,14,508,42"/>
+<area shape="poly" title=" " alt="" coords="346,25,381,28,375,28,347,30"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="acc337ea8c08ab0b47b0194e7122ac5df" name="acc337ea8c08ab0b47b0194e7122ac5df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acc337ea8c08ab0b47b0194e7122ac5df">&#9670;&#160;</a></span>linkedlist_length()</h2>
 
@@ -502,8 +550,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d3/d8b/linkedlist_8c_aa634a006a5bb8f9fac81bbc04b787124_cgraph.png" border="0" usemap="#ad3/d8b/linkedlist_8c_aa634a006a5bb8f9fac81bbc04b787124_cgraph" loading="lazy" alt=""/></div>
 <map name="ad3/d8b/linkedlist_8c_aa634a006a5bb8f9fac81bbc04b787124_cgraph" id="ad3/d8b/linkedlist_8c_aa634a006a5bb8f9fac81bbc04b787124_cgraph">
 <area shape="rect" title="Pops of a value off the start of the linked list." alt="" coords="5,5,156,33"/>
-<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#ae7ad5ce70d0c44e6a5cf92afd9dcf687" title=" " alt="" coords="204,5,303,33"/>
-<area shape="poly" title=" " alt="" coords="156,17,190,19,185,19,156,22"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#a83274d6f8f5b09dc5e837fb383af1168" title=" " alt="" coords="204,5,318,33"/>
+<area shape="poly" title=" " alt="" coords="156,17,191,19,186,19,156,22"/>
 </map>
 </div>
 
@@ -538,8 +586,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d3/d8b/linkedlist_8c_ae7c0deaac5be876a6a1f582055f536a9_cgraph.png" border="0" usemap="#ad3/d8b/linkedlist_8c_ae7c0deaac5be876a6a1f582055f536a9_cgraph" loading="lazy" alt=""/></div>
 <map name="ad3/d8b/linkedlist_8c_ae7c0deaac5be876a6a1f582055f536a9_cgraph" id="ad3/d8b/linkedlist_8c_ae7c0deaac5be876a6a1f582055f536a9_cgraph">
 <area shape="rect" title="Pops of a value off the end of the linked list. NOTE: O(n)." alt="" coords="5,5,145,33"/>
-<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#ae7ad5ce70d0c44e6a5cf92afd9dcf687" title=" " alt="" coords="193,5,292,33"/>
-<area shape="poly" title=" " alt="" coords="145,17,180,19,175,19,145,22"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#a83274d6f8f5b09dc5e837fb383af1168" title=" " alt="" coords="193,5,307,33"/>
+<area shape="poly" title=" " alt="" coords="145,17,180,19,174,19,145,22"/>
 </map>
 </div>
 
@@ -579,7 +627,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d3/d8b/linkedlist_8c_a06f70585fa788aa7bca7db106327ec57_cgraph.png" border="0" usemap="#ad3/d8b/linkedlist_8c_a06f70585fa788aa7bca7db106327ec57_cgraph" loading="lazy" alt=""/></div>
 <map name="ad3/d8b/linkedlist_8c_a06f70585fa788aa7bca7db106327ec57_cgraph" id="ad3/d8b/linkedlist_8c_a06f70585fa788aa7bca7db106327ec57_cgraph">
 <area shape="rect" title="Pushes a new node to the head of the linked list." alt="" coords="5,5,163,33"/>
-<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#ab49c8cbca17232ed2b35fd6e14dc08f2" title=" " alt="" coords="211,5,292,33"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#ad83e653f0012d972b0597e7b52b4be9c" title=" " alt="" coords="211,5,307,33"/>
 <area shape="poly" title=" " alt="" coords="163,17,198,19,193,19,163,22"/>
 </map>
 </div>
@@ -620,8 +668,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d3/d8b/linkedlist_8c_a812cd5c3c8c86d2b136da308e39c5482_cgraph.png" border="0" usemap="#ad3/d8b/linkedlist_8c_a812cd5c3c8c86d2b136da308e39c5482_cgraph" loading="lazy" alt=""/></div>
 <map name="ad3/d8b/linkedlist_8c_a812cd5c3c8c86d2b136da308e39c5482_cgraph" id="ad3/d8b/linkedlist_8c_a812cd5c3c8c86d2b136da308e39c5482_cgraph">
 <area shape="rect" title="Pushes a new node to the tail of the linked list." alt="" coords="5,5,152,33"/>
-<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#ab49c8cbca17232ed2b35fd6e14dc08f2" title=" " alt="" coords="200,5,281,33"/>
-<area shape="poly" title=" " alt="" coords="152,17,187,19,181,19,152,22"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#ad83e653f0012d972b0597e7b52b4be9c" title=" " alt="" coords="200,5,296,33"/>
+<area shape="poly" title=" " alt="" coords="152,17,187,19,182,19,152,22"/>
 </map>
 </div>
 
@@ -661,8 +709,18 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="../../d3/d8b/linkedlist_8c_aa12cdf7f4ac46dee032163f4b0deaa6a_cgraph.png" border="0" usemap="#ad3/d8b/linkedlist_8c_aa12cdf7f4ac46dee032163f4b0deaa6a_cgraph" loading="lazy" alt=""/></div>
 <map name="ad3/d8b/linkedlist_8c_aa12cdf7f4ac46dee032163f4b0deaa6a_cgraph" id="ad3/d8b/linkedlist_8c_aa12cdf7f4ac46dee032163f4b0deaa6a_cgraph">
 <area shape="rect" title="Removes a node at a specific index." alt="" coords="5,5,163,33"/>
-<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#ae7ad5ce70d0c44e6a5cf92afd9dcf687" title=" " alt="" coords="211,5,310,33"/>
-<area shape="poly" title=" " alt="" coords="163,17,198,19,192,19,163,22"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#a83274d6f8f5b09dc5e837fb383af1168" title=" " alt="" coords="211,5,325,33"/>
+<area shape="poly" title=" " alt="" coords="163,17,197,19,192,19,163,22"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/d8b/linkedlist_8c_aa12cdf7f4ac46dee032163f4b0deaa6a_icgraph.png" border="0" usemap="#ad3/d8b/linkedlist_8c_aa12cdf7f4ac46dee032163f4b0deaa6a_icgraph" loading="lazy" alt=""/></div>
+<map name="ad3/d8b/linkedlist_8c_aa12cdf7f4ac46dee032163f4b0deaa6a_icgraph" id="ad3/d8b/linkedlist_8c_aa12cdf7f4ac46dee032163f4b0deaa6a_icgraph">
+<area shape="rect" title="Removes a node at a specific index." alt="" coords="189,14,346,42"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#a732868a498fce30d6faf4847006c6085" title="Returns 0 or the value stored at the current node. It then removes the current node." alt="" coords="5,5,141,50"/>
+<area shape="poly" title=" " alt="" coords="170,28,141,30,141,25,176,27"/>
 </map>
 </div>
 
@@ -693,14 +751,45 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ae7ad5ce70d0c44e6a5cf92afd9dcf687" name="ae7ad5ce70d0c44e6a5cf92afd9dcf687"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7ad5ce70d0c44e6a5cf92afd9dcf687">&#9670;&#160;</a></span>return_node()</h2>
+<a id="ad83e653f0012d972b0597e7b52b4be9c" name="ad83e653f0012d972b0597e7b52b4be9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad83e653f0012d972b0597e7b52b4be9c">&#9670;&#160;</a></span>ll_get_node()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void * return_node </td>
+          <td class="memname"><a class="el" href="../../df/d3e/structlinkedlist__node.html">linkedlist_node</a> * ll_get_node </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d0/dff/structlinkedlist.html">linkedlist</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/d8b/linkedlist_8c_ad83e653f0012d972b0597e7b52b4be9c_icgraph.png" border="0" usemap="#ad3/d8b/linkedlist_8c_ad83e653f0012d972b0597e7b52b4be9c_icgraph" loading="lazy" alt=""/></div>
+<map name="ad3/d8b/linkedlist_8c_ad83e653f0012d972b0597e7b52b4be9c_icgraph" id="ad3/d8b/linkedlist_8c_ad83e653f0012d972b0597e7b52b4be9c_icgraph">
+<area shape="rect" title=" " alt="" coords="211,57,307,85"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#ab4d5e76eac9dbea7ebed3375de156afe" title="Inserts a node at a specific index." alt="" coords="12,5,156,33"/>
+<area shape="poly" title=" " alt="" coords="193,54,133,36,133,31,198,52"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#a06f70585fa788aa7bca7db106327ec57" title="Pushes a new node to the head of the linked list." alt="" coords="5,57,163,85"/>
+<area shape="poly" title=" " alt="" coords="193,72,163,74,162,69,198,71"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#a812cd5c3c8c86d2b136da308e39c5482" title="Pushes a new node to the tail of the linked list." alt="" coords="11,109,157,137"/>
+<area shape="poly" title=" " alt="" coords="198,89,134,111,132,106,193,90"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a83274d6f8f5b09dc5e837fb383af1168" name="a83274d6f8f5b09dc5e837fb383af1168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83274d6f8f5b09dc5e837fb383af1168">&#9670;&#160;</a></span>ll_return_node()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * ll_return_node </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d0/dff/structlinkedlist.html">linkedlist</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span>, </td>
         </tr>
@@ -714,15 +803,17 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d3/d8b/linkedlist_8c_ae7ad5ce70d0c44e6a5cf92afd9dcf687_icgraph.png" border="0" usemap="#ad3/d8b/linkedlist_8c_ae7ad5ce70d0c44e6a5cf92afd9dcf687_icgraph" loading="lazy" alt=""/></div>
-<map name="ad3/d8b/linkedlist_8c_ae7ad5ce70d0c44e6a5cf92afd9dcf687_icgraph" id="ad3/d8b/linkedlist_8c_ae7ad5ce70d0c44e6a5cf92afd9dcf687_icgraph">
-<area shape="rect" title=" " alt="" coords="211,57,310,85"/>
-<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#aa634a006a5bb8f9fac81bbc04b787124" title="Pops of a value off the start of the linked list." alt="" coords="9,5,159,33"/>
-<area shape="poly" title=" " alt="" coords="194,53,133,36,133,31,198,51"/>
-<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#ae7c0deaac5be876a6a1f582055f536a9" title="Pops of a value off the end of the linked list. NOTE: O(n)." alt="" coords="14,57,154,85"/>
-<area shape="poly" title=" " alt="" coords="192,72,154,74,154,69,197,70"/>
-<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#aa12cdf7f4ac46dee032163f4b0deaa6a" title="Removes a node at a specific index." alt="" coords="5,109,163,137"/>
-<area shape="poly" title=" " alt="" coords="199,89,134,111,133,106,193,91"/>
+<div class="center"><img src="../../d3/d8b/linkedlist_8c_a83274d6f8f5b09dc5e837fb383af1168_icgraph.png" border="0" usemap="#ad3/d8b/linkedlist_8c_a83274d6f8f5b09dc5e837fb383af1168_icgraph" loading="lazy" alt=""/></div>
+<map name="ad3/d8b/linkedlist_8c_a83274d6f8f5b09dc5e837fb383af1168_icgraph" id="ad3/d8b/linkedlist_8c_a83274d6f8f5b09dc5e837fb383af1168_icgraph">
+<area shape="rect" title=" " alt="" coords="394,57,508,85"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#aa634a006a5bb8f9fac81bbc04b787124" title="Pops of a value off the start of the linked list." alt="" coords="192,5,342,33"/>
+<area shape="poly" title=" " alt="" coords="382,53,319,36,319,31,387,52"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#ae7c0deaac5be876a6a1f582055f536a9" title="Pops of a value off the end of the linked list. NOTE: O(n)." alt="" coords="198,57,337,85"/>
+<area shape="poly" title=" " alt="" coords="376,71,337,74,337,69,381,71"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#aa12cdf7f4ac46dee032163f4b0deaa6a" title="Removes a node at a specific index." alt="" coords="189,109,346,137"/>
+<area shape="poly" title=" " alt="" coords="387,89,319,111,318,106,382,90"/>
+<area shape="rect" href="../../d3/d8b/linkedlist_8c.html#a732868a498fce30d6faf4847006c6085" title="Returns 0 or the value stored at the current node. It then removes the current node." alt="" coords="5,101,141,146"/>
+<area shape="poly" title=" " alt="" coords="170,123,141,126,141,121,176,123"/>
 </map>
 </div>
 

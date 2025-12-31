@@ -9,7 +9,7 @@ var shader__system_8c =
     [ "new_shader_id", "d0/d98/shader__system_8c.html#a44d8426db6140293d8788afd532bd001", null ],
     [ "shader_destroy", "d0/d98/shader__system_8c.html#ad544ca673431cd43308c415e060b209f", null ],
     [ "shader_system_apply_global", "d0/d98/shader__system_8c.html#af46d3ff216d1839ab89699588f9360af", null ],
-    [ "shader_system_apply_instance", "d0/d98/shader__system_8c.html#a7b839f81992f49c4f7ad18c1dc45f042", null ],
+    [ "shader_system_apply_instance", "d0/d98/shader__system_8c.html#a232582d886ac14111e985a3a002be8c5", null ],
     [ "shader_system_bind_instance", "d0/d98/shader__system_8c.html#acdd2150a993e62722199a5cf639f65d9", null ],
     [ "shader_system_create", "d0/d98/shader__system_8c.html#adad4d61742f798318d5812623d4eed79", null ],
     [ "shader_system_get", "d0/d98/shader__system_8c.html#a8d548a76e226257e3df0e354c39bfc47", null ],

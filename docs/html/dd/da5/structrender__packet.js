@@ -1,5 +1,6 @@
 var structrender__packet =
 [
+    [ "_geometries_base_ptr", "dd/da5/structrender__packet.html#a22ca45bb8b1408c8252c8a7bc3b17a51", null ],
     [ "delta_time", "dd/da5/structrender__packet.html#a735db3997ce6caf918bbc2a1fd1086ab", null ],
     [ "geometries", "dd/da5/structrender__packet.html#a526f5ec924e892afaa1d6f382c44b2e3", null ],
     [ "geometry_count", "dd/da5/structrender__packet.html#aa17ed3b0a5739809ba2132f52e858f4b", null ],

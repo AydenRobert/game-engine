@@ -1,9 +1,13 @@
 <map id="renderer_system_state" name="renderer_system_state">
-<area shape="rect" id="Node000001" title=" " alt="" coords="52,274,224,301"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="178,274,349,301"/>
 <area shape="rect" id="Node000002" href="$df/d02/structrenderer__backend.html" title=" " alt="" coords="5,106,143,134"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,147,93,196,113,248,129,273,124,273,108,251,88,198,78,152"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,147,93,200,106,226,124,248,149,264,180,277,175,277,147,269,121,252,102,229,88,202,76,152"/>
 <area shape="rect" id="Node000003" href="$d4/d3a/structplatform__state.html" title=" " alt="" coords="15,5,133,33"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="75,46,77,106,71,105,73,51"/>
 <area shape="rect" id="Node000004" href="$d6/d3a/unionmat4__u.html" title=" " alt="" coords="167,106,237,134"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="202,147,194,198,175,251,155,275,152,271,170,248,189,197,198,151"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="197,147,193,198,196,224,206,248,216,261,232,274,226,273,213,265,201,251,191,225,188,198,193,151"/>
+<area shape="rect" id="Node000005" href="$df/dbe/unionvec4__u.html" title=" " alt="" coords="291,106,358,134"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="324,147,316,198,298,251,279,275,276,271,293,248,311,197,320,151"/>
+<area shape="rect" id="Node000006" href="$d5/df1/unionvec3__u.html" title=" " alt="" coords="431,106,498,134"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="468,147,463,201,454,228,437,252,423,261,402,268,350,279,349,274,401,263,421,256,433,248,449,226,458,200,465,151"/>
 </map>

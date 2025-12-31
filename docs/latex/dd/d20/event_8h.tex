@@ -8,7 +8,8 @@ Include dependency graph for event.\+h\+:\nopagebreak
 \includegraphics[width=210pt]{d9/d06/event_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -43,12 +44,13 @@ enum \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226}{system\+\_\+ev
 , \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226a923e40874ed01a63929ab78f31f1637d}{EVENT\+\_\+\+CODE\+\_\+\+MOUSE\+\_\+\+WHEEL}} = 0x07
 , \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226a6ed0f7b648dad406c17f0dfdd37ce656}{EVENT\+\_\+\+CODE\+\_\+\+RESIZED}} = 0x08
 , \newline
-\mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226adc91f9e55d1d7deb4a022e6e1cdebf6a}{EVENT\+\_\+\+CODE\+\_\+\+DEBUG0}} = 0x10
+\mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226aa73b666ebc0b444a1005ee1c4ca90842}{EVENT\+\_\+\+CODE\+\_\+\+SET\+\_\+\+RENDER\+\_\+\+MODE}} = 0x0A
+, \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226adc91f9e55d1d7deb4a022e6e1cdebf6a}{EVENT\+\_\+\+CODE\+\_\+\+DEBUG0}} = 0x10
 , \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226ab117003cd03a50a871af56359135c212}{EVENT\+\_\+\+CODE\+\_\+\+DEBUG1}} = 0x11
 , \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226adc02622f68824378583610fcc2f2920f}{EVENT\+\_\+\+CODE\+\_\+\+DEBUG2}} = 0x12
-, \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226aab95ada4a3c3fce11c89b5e04289f205}{EVENT\+\_\+\+CODE\+\_\+\+DEBUG3}} = 0x13
 , \newline
-\mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226ac7fd2202a34af1a3ad71273bfbc21ea4}{EVENT\+\_\+\+CODE\+\_\+\+DEBUG4}} = 0x14
+\mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226aab95ada4a3c3fce11c89b5e04289f205}{EVENT\+\_\+\+CODE\+\_\+\+DEBUG3}} = 0x13
+, \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226ac7fd2202a34af1a3ad71273bfbc21ea4}{EVENT\+\_\+\+CODE\+\_\+\+DEBUG4}} = 0x14
 , \mbox{\hyperlink{event_8h_a6779f338629229430f8974f2f86d7226a6f8c37abc1b165817660320b56d197cb}{MAX\+\_\+\+EVENT\+\_\+\+CODE}} = 0x\+FF
  \}
 \end{DoxyCompactItemize}
@@ -130,6 +132,10 @@ EVENT\+\_\+\+CODE\+\_\+\+MOUSE\+\_\+\+WHEEL&\\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_RESIZED@{EVENT\_CODE\_RESIZED}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_RESIZED@{EVENT\_CODE\_RESIZED}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226a6ed0f7b648dad406c17f0dfdd37ce656}\label{event_8h_a6779f338629229430f8974f2f86d7226a6ed0f7b648dad406c17f0dfdd37ce656} 
 EVENT\+\_\+\+CODE\+\_\+\+RESIZED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_SET\_RENDER\_MODE@{EVENT\_CODE\_SET\_RENDER\_MODE}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_SET\_RENDER\_MODE@{EVENT\_CODE\_SET\_RENDER\_MODE}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226aa73b666ebc0b444a1005ee1c4ca90842}\label{event_8h_a6779f338629229430f8974f2f86d7226aa73b666ebc0b444a1005ee1c4ca90842} 
+EVENT\+\_\+\+CODE\+\_\+\+SET\+\_\+\+RENDER\+\_\+\+MODE&\\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{EVENT\_CODE\_DEBUG0@{EVENT\_CODE\_DEBUG0}!event.h@{event.h}}\index{event.h@{event.h}!EVENT\_CODE\_DEBUG0@{EVENT\_CODE\_DEBUG0}}}\Hypertarget{event_8h_a6779f338629229430f8974f2f86d7226adc91f9e55d1d7deb4a022e6e1cdebf6a}\label{event_8h_a6779f338629229430f8974f2f86d7226adc91f9e55d1d7deb4a022e6e1cdebf6a} 
@@ -225,7 +231,8 @@ Register to listen when events are sent with the provided code. Events with dupl
 \begin{DoxyReturn}{Returns}
 true if the event is successfully registered; otherwise false. 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -263,7 +270,8 @@ Unregister from listening for when events are sent with the provided code. If no
 \begin{DoxyReturn}{Returns}
 true if the event is successfully unregistered; otherwise false. 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

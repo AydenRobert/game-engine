@@ -25,8 +25,13 @@ b8 vulkan_renderer_end_renderpass(renderer_backend *backend, u8 renderpass_id);
 void vulkan_renderer_draw_geometry(renderer_backend *backend,
                                    geometry_render_data data);
 
-void vulkan_renderer_create_texture(const u8 *pixels, struct texture *texture);
-void vulkan_renderer_destroy_texture(texture *texture);
+void vulkan_renderer_texture_create(const u8 *pixels, struct texture *texture);
+void vulkan_renderer_texture_destroy(texture *texture);
+
+void vulkan_renderer_texture_create_writeable(struct texture *t);
+void vulkan_renderer_texture_resize(struct texture *t, u32 new_width, u32 new_height);
+void vulkan_renderer_texture_write_data(struct texture *t, u32 offset, u32 size,
+                        const u8 *pixels);
 
 b8 vulkan_renderer_create_geometry(geometry *geometry, u32 vertex_size,
                                    u32 vertex_count, const void *vertices,

@@ -1,15 +1,17 @@
 <map id="engine/src/resources/loaders/loader_utils.h" name="engine/src/resources/loaders/loader_utils.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="506,5,671,50"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="607,5,772,50"/>
 <area shape="rect" id="Node000002" href="$df/d5e/binary__loader_8c.html" title=" " alt="" coords="5,98,182,143"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="490,48,194,101,182,103,181,98,193,95,490,43"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="589,41,407,68,194,101,183,103,182,97,193,95,406,62,594,40"/>
 <area shape="rect" id="Node000003" href="$dd/d80/image__loader_8c.html" title=" " alt="" coords="205,98,382,143"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="506,55,365,100,363,95,500,55"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="595,51,383,101,382,96,589,51"/>
 <area shape="rect" id="Node000004" href="$dc/dfb/loader__utils_8c.html" title=" " alt="" coords="406,98,570,143"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="556,60,513,100,511,95,551,62"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="630,56,537,100,536,95,625,57"/>
 <area shape="rect" id="Node000005" href="$d8/d41/material__loader_8c.html" title=" " alt="" coords="594,98,785,143"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="624,58,668,98,663,97,622,63"/>
-<area shape="rect" id="Node000006" href="$dd/d9d/shader__loader_8c.html" title=" " alt="" coords="809,98,988,143"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="677,52,827,98,822,97,676,57"/>
-<area shape="rect" id="Node000007" href="$d9/d88/text__loader_8c.html" title=" " alt="" coords="1013,98,1174,143"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="687,41,1001,95,1015,101,1010,100,1000,101,686,47"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="691,64,692,100,687,96,688,67"/>
+<area shape="rect" id="Node000006" href="$df/d48/mesh__loader_8c.html" title=" " alt="" coords="809,98,980,143"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="753,54,848,98,843,97,752,59"/>
+<area shape="rect" id="Node000007" href="$dd/d9d/shader__loader_8c.html" title=" " alt="" coords="1005,98,1184,143"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="787,48,1007,99,1002,99,787,53"/>
+<area shape="rect" id="Node000008" href="$d9/d88/text__loader_8c.html" title=" " alt="" coords="1209,98,1370,143"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="788,37,978,61,1197,95,1211,101,1206,100,1196,101,977,66,787,42"/>
 </map>

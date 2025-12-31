@@ -24,6 +24,12 @@ struct \mbox{\hyperlink{structtexture__system__config}{texture\+\_\+system\+\_\+
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{texture__system_8h_aa5d57505677b0f7a33597825053c0749}{DEFAULT\+\_\+\+TEXTURE\+\_\+\+NAME}}~"{}default"{}
+\item 
+\#define \mbox{\hyperlink{texture__system_8h_ac4466e073e39a3f2b8bdf2d26ee78e47}{DEFAULT\+\_\+\+DIFFUSE\+\_\+\+TEXTURE\+\_\+\+NAME}}~"{}default\+\_\+\+DIFF"{}
+\item 
+\#define \mbox{\hyperlink{texture__system_8h_ac0f911c012e4cf5608e4bc6e8ad793ba}{DEFAULT\+\_\+\+SPECULAR\+\_\+\+TEXTURE\+\_\+\+NAME}}~"{}default\+\_\+\+SPEC"{}
+\item 
+\#define \mbox{\hyperlink{texture__system_8h_a88636b9c6ba1e3eb2df062e51a6b41e6}{DEFAULT\+\_\+\+NORMAL\+\_\+\+TEXTURE\+\_\+\+NAME}}~"{}default\+\_\+\+NORM"{}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -42,12 +48,36 @@ void \mbox{\hyperlink{texture__system_8h_a3170cfd4c3f2bbf15a69e6a965a39a03}{text
 void \mbox{\hyperlink{texture__system_8h_ab454daecfb4133cbca5559dd84db3ac4}{texture\+\_\+system\+\_\+release}} (const char \texorpdfstring{$\ast$}{*}name)
 \item 
 \mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{texture__system_8h_ae9e13f5483fd272b9430ca11719164e4}{texture\+\_\+system\+\_\+get\+\_\+default\+\_\+texture}} ()
+\item 
+\mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{texture__system_8h_a76d18601359083198a46b96fe5feecce}{texture\+\_\+system\+\_\+get\+\_\+default\+\_\+diffuse\+\_\+texture}} ()
+\item 
+\mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{texture__system_8h_a15e2630b52c476a887da18fa9342208c}{texture\+\_\+system\+\_\+get\+\_\+default\+\_\+specular\+\_\+texture}} ()
+\item 
+\mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{texture__system_8h_ae618656c8ed539807d324ecbdc945610}{texture\+\_\+system\+\_\+get\+\_\+default\+\_\+normal\+\_\+texture}} ()
 \end{DoxyCompactItemize}
 
 
 \label{doc-define-members}
 \Hypertarget{texture__system_8h_doc-define-members}
 \doxysubsection{Macro Definition Documentation}
+\Hypertarget{texture__system_8h_ac4466e073e39a3f2b8bdf2d26ee78e47}\index{texture\_system.h@{texture\_system.h}!DEFAULT\_DIFFUSE\_TEXTURE\_NAME@{DEFAULT\_DIFFUSE\_TEXTURE\_NAME}}
+\index{DEFAULT\_DIFFUSE\_TEXTURE\_NAME@{DEFAULT\_DIFFUSE\_TEXTURE\_NAME}!texture\_system.h@{texture\_system.h}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_DIFFUSE\_TEXTURE\_NAME}{DEFAULT\_DIFFUSE\_TEXTURE\_NAME}}
+{\footnotesize\ttfamily \label{texture__system_8h_ac4466e073e39a3f2b8bdf2d26ee78e47} 
+\#define DEFAULT\+\_\+\+DIFFUSE\+\_\+\+TEXTURE\+\_\+\+NAME~"{}default\+\_\+\+DIFF"{}}
+
+\Hypertarget{texture__system_8h_a88636b9c6ba1e3eb2df062e51a6b41e6}\index{texture\_system.h@{texture\_system.h}!DEFAULT\_NORMAL\_TEXTURE\_NAME@{DEFAULT\_NORMAL\_TEXTURE\_NAME}}
+\index{DEFAULT\_NORMAL\_TEXTURE\_NAME@{DEFAULT\_NORMAL\_TEXTURE\_NAME}!texture\_system.h@{texture\_system.h}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_NORMAL\_TEXTURE\_NAME}{DEFAULT\_NORMAL\_TEXTURE\_NAME}}
+{\footnotesize\ttfamily \label{texture__system_8h_a88636b9c6ba1e3eb2df062e51a6b41e6} 
+\#define DEFAULT\+\_\+\+NORMAL\+\_\+\+TEXTURE\+\_\+\+NAME~"{}default\+\_\+\+NORM"{}}
+
+\Hypertarget{texture__system_8h_ac0f911c012e4cf5608e4bc6e8ad793ba}\index{texture\_system.h@{texture\_system.h}!DEFAULT\_SPECULAR\_TEXTURE\_NAME@{DEFAULT\_SPECULAR\_TEXTURE\_NAME}}
+\index{DEFAULT\_SPECULAR\_TEXTURE\_NAME@{DEFAULT\_SPECULAR\_TEXTURE\_NAME}!texture\_system.h@{texture\_system.h}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_SPECULAR\_TEXTURE\_NAME}{DEFAULT\_SPECULAR\_TEXTURE\_NAME}}
+{\footnotesize\ttfamily \label{texture__system_8h_ac0f911c012e4cf5608e4bc6e8ad793ba} 
+\#define DEFAULT\+\_\+\+SPECULAR\+\_\+\+TEXTURE\+\_\+\+NAME~"{}default\+\_\+\+SPEC"{}}
+
 \Hypertarget{texture__system_8h_aa5d57505677b0f7a33597825053c0749}\index{texture\_system.h@{texture\_system.h}!DEFAULT\_TEXTURE\_NAME@{DEFAULT\_TEXTURE\_NAME}}
 \index{DEFAULT\_TEXTURE\_NAME@{DEFAULT\_TEXTURE\_NAME}!texture\_system.h@{texture\_system.h}}
 \doxysubsubsection{\texorpdfstring{DEFAULT\_TEXTURE\_NAME}{DEFAULT\_TEXTURE\_NAME}}
@@ -83,11 +113,54 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d6/d6b/texture__system_8h_a94229d7d8c2e06fabb2d9e3c2296599e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d6/d6b/texture__system_8h_a94229d7d8c2e06fabb2d9e3c2296599e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{texture__system_8h_a76d18601359083198a46b96fe5feecce}\index{texture\_system.h@{texture\_system.h}!texture\_system\_get\_default\_diffuse\_texture@{texture\_system\_get\_default\_diffuse\_texture}}
+\index{texture\_system\_get\_default\_diffuse\_texture@{texture\_system\_get\_default\_diffuse\_texture}!texture\_system.h@{texture\_system.h}}
+\doxysubsubsection{\texorpdfstring{texture\_system\_get\_default\_diffuse\_texture()}{texture\_system\_get\_default\_diffuse\_texture()}}
+{\footnotesize\ttfamily \label{texture__system_8h_a76d18601359083198a46b96fe5feecce} 
+\mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*} texture\+\_\+system\+\_\+get\+\_\+default\+\_\+diffuse\+\_\+texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d6b/texture__system_8h_a76d18601359083198a46b96fe5feecce_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{texture__system_8h_ae618656c8ed539807d324ecbdc945610}\index{texture\_system.h@{texture\_system.h}!texture\_system\_get\_default\_normal\_texture@{texture\_system\_get\_default\_normal\_texture}}
+\index{texture\_system\_get\_default\_normal\_texture@{texture\_system\_get\_default\_normal\_texture}!texture\_system.h@{texture\_system.h}}
+\doxysubsubsection{\texorpdfstring{texture\_system\_get\_default\_normal\_texture()}{texture\_system\_get\_default\_normal\_texture()}}
+{\footnotesize\ttfamily \label{texture__system_8h_ae618656c8ed539807d324ecbdc945610} 
+\mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*} texture\+\_\+system\+\_\+get\+\_\+default\+\_\+normal\+\_\+texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d6b/texture__system_8h_ae618656c8ed539807d324ecbdc945610_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{texture__system_8h_a15e2630b52c476a887da18fa9342208c}\index{texture\_system.h@{texture\_system.h}!texture\_system\_get\_default\_specular\_texture@{texture\_system\_get\_default\_specular\_texture}}
+\index{texture\_system\_get\_default\_specular\_texture@{texture\_system\_get\_default\_specular\_texture}!texture\_system.h@{texture\_system.h}}
+\doxysubsubsection{\texorpdfstring{texture\_system\_get\_default\_specular\_texture()}{texture\_system\_get\_default\_specular\_texture()}}
+{\footnotesize\ttfamily \label{texture__system_8h_a15e2630b52c476a887da18fa9342208c} 
+\mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*} texture\+\_\+system\+\_\+get\+\_\+default\+\_\+specular\+\_\+texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d6b/texture__system_8h_a15e2630b52c476a887da18fa9342208c_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{texture__system_8h_ae9e13f5483fd272b9430ca11719164e4}\index{texture\_system.h@{texture\_system.h}!texture\_system\_get\_default\_texture@{texture\_system\_get\_default\_texture}}
@@ -96,7 +169,8 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{texture__system_8h_ae9e13f5483fd272b9430ca11719164e4} 
 \mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*} texture\+\_\+system\+\_\+get\+\_\+default\+\_\+texture (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -136,7 +210,8 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d6/d6b/texture__system_8h_ab454daecfb4133cbca5559dd84db3ac4_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

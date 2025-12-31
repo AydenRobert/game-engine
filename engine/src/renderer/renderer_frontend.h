@@ -15,8 +15,13 @@ void renderer_on_resize(u16 width, u16 height);
 
 b8 renderer_draw_frame(render_packet *packet);
 
-void renderer_create_texture(const u8 *pixels, struct texture *texture);
-void renderer_destroy_texture(struct texture *texture);
+void renderer_texture_create(const u8 *pixels, struct texture *texture);
+void renderer_texture_destroy(struct texture *texture);
+
+void renderer_texture_create_writeable(struct texture *t);
+void renderer_texture_resize(struct texture *t, u32 new_width, u32 new_height);
+void renderer_texture_write_data(struct texture *t, u32 offset, u32 size,
+                                 const u8 *pixels);
 
 b8 renderer_create_geometry(geometry *geometry, u32 vertex_size,
                             u32 vertex_count, const void *vertices,

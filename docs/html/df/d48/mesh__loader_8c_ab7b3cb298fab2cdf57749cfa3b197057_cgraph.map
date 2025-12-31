@@ -1,0 +1,13 @@
+<map id="process_subobject" name="process_subobject">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,84,147,112"/>
+<area shape="rect" id="Node000002" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="195,5,314,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,81,209,38,206,42,111,86"/>
+<area shape="rect" id="Node000004" href="$dc/dd0/kmath_8h.html#a120d0a402b1f804936f6ff2990d33977" title=" " alt="" coords="211,57,298,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="146,85,198,79,193,81,148,90"/>
+<area shape="rect" id="Node000005" href="$dc/dd0/kmath_8h.html#a8d6cf2e1120a73e329873a0b74e77762" title="Creates and returns a new 2&#45;element vector using the supplied values." alt="" coords="204,109,304,137"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="147,105,192,113,186,115,147,111"/>
+<area shape="rect" id="Node000006" href="$dc/dd0/kmath_8h.html#a4b54896480357d67259f94d532e050dd" title=" " alt="" coords="213,161,296,189"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="111,110,209,153,205,156,109,115"/>
+<area shape="rect" id="Node000003" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="362,5,536,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="314,17,349,18,344,20,315,22"/>
+</map>

@@ -14,9 +14,9 @@ var structrenderer__backend =
     [ "plat_state", "df/d02/structrenderer__backend.html#ad8c708f5a646224c2788f2531d46e992", null ],
     [ "resized", "df/d02/structrenderer__backend.html#aa4d9ea4b9c236ff1ef1f9bb967deb18a", null ],
     [ "set_uniform", "df/d02/structrenderer__backend.html#a706d0ce015d5baa3e7424e25f28d6d99", null ],
-    [ "shader_acquire_instance_resources", "df/d02/structrenderer__backend.html#aa0bc4c99011137f3a8c775e26bf967ee", null ],
+    [ "shader_acquire_instance_resources", "df/d02/structrenderer__backend.html#aca53967d4719f7e13ff897d17fc458b1", null ],
     [ "shader_apply_globals", "df/d02/structrenderer__backend.html#a355bdde93ddb1ff4a97676735839027a", null ],
-    [ "shader_apply_instance", "df/d02/structrenderer__backend.html#aec653248368a6c2e613f907db00599cb", null ],
+    [ "shader_apply_instance", "df/d02/structrenderer__backend.html#aab4f5afdfd2d60ea87bb3348d85348d6", null ],
     [ "shader_bind_globals", "df/d02/structrenderer__backend.html#a3d8c3428167d20c652b8d450013af9ae", null ],
     [ "shader_bind_instance", "df/d02/structrenderer__backend.html#ad27e13f713aac47c1f2f325d3e871799", null ],
     [ "shader_create", "df/d02/structrenderer__backend.html#a58f6a25146d37ba9f77041ce846423f1", null ],
@@ -24,5 +24,7 @@ var structrenderer__backend =
     [ "shader_initialize", "df/d02/structrenderer__backend.html#ae133504684d6efa00cc300d93d2926d0", null ],
     [ "shader_release_instance_resources", "df/d02/structrenderer__backend.html#acbbad45d7bbd2a9192c1e951bfa6ab50", null ],
     [ "shader_use", "df/d02/structrenderer__backend.html#a799b3d031c1d253f797048b8adbbc9d0", null ],
-    [ "shutdown", "df/d02/structrenderer__backend.html#a2f44c742255595a34292c03c0f5c3129", null ]
+    [ "shutdown", "df/d02/structrenderer__backend.html#a2f44c742255595a34292c03c0f5c3129", null ],
+    [ "texture_map_acquire_resources", "df/d02/structrenderer__backend.html#a5dd309c21eb48e6e4e7a61dd04f77035", null ],
+    [ "texture_map_release_resources", "df/d02/structrenderer__backend.html#a59ad3f5ab55d73690c8ec5a1a01a74c9", null ]
 ];

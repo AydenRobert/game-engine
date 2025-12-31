@@ -100,6 +100,7 @@ var kmath_8h =
     [ "vec3_up", "dc/dd0/kmath_8h.html#a1f7b5fa8b8d6785dbd6d0de6b495b163", null ],
     [ "vec3_zero", "dc/dd0/kmath_8h.html#a396247a1d1147edbade06360f4559ac9", null ],
     [ "vec4_add", "dc/dd0/kmath_8h.html#a7dbcee31ab2e7b1d6cdd530424d1c9da", null ],
+    [ "vec4_compare", "dc/dd0/kmath_8h.html#ae9cc04d66df3314260988933a814629f", null ],
     [ "vec4_create", "dc/dd0/kmath_8h.html#ab198faa792ecd191daeec7438afc3d1e", null ],
     [ "vec4_div", "dc/dd0/kmath_8h.html#a191991839d113a3e246519940cbd6a4b", null ],
     [ "vec4_dot_f32", "dc/dd0/kmath_8h.html#a46b41e60e81425ee0f14e0089bc95cc5", null ],

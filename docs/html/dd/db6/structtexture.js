@@ -6,6 +6,7 @@ var structtexture =
     [ "height", "dd/db6/structtexture.html#ab135b895ef0f58fde3dfbdf840692e2d", null ],
     [ "id", "dd/db6/structtexture.html#a80d0e2a9d244ce65a29cb87e5db5c695", null ],
     [ "internal_data", "dd/db6/structtexture.html#a2a635d43b6e8cde4581d47b1f3945677", null ],
+    [ "is_writeable", "dd/db6/structtexture.html#a808e0441f943278d37f9dfd4cad1ad77", null ],
     [ "name", "dd/db6/structtexture.html#aff42921931131ad7a3a7871077e9e916", null ],
     [ "width", "dd/db6/structtexture.html#ae54857884dad86252f0615066be9990f", null ]
 ];

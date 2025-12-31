@@ -1,0 +1,42 @@
+<map id="import_obj_material_library_file" name="import_obj_material_library_file">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,282,159,327"/>
+<area shape="rect" id="Node000002" href="$df/d45/filesystem_8c.html#aeb2523bb568e1ae441a69c05c80d7ed3" title="Closes the provided handle to a file." alt="" coords="454,5,585,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,281,100,237,124,181,158,124,180,99,205,77,261,46,322,27,383,17,441,15,437,18,384,23,323,32,263,51,208,81,184,103,162,128,128,184,105,239,91,282"/>
+<area shape="rect" id="Node000003" href="$df/d45/filesystem_8c.html#a86cbb9441406d6469d0216cd372c9125" title="Attemp to open file located at this path." alt="" coords="456,57,584,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="89,281,106,245,130,201,163,157,205,121,262,93,324,76,385,68,442,66,438,69,386,73,325,81,264,98,208,125,167,161,135,204,110,247,94,283"/>
+<area shape="rect" id="Node000004" href="$df/d45/filesystem_8c.html#a34b0ddf8fdf6f331f2986ad3bef9a0aa" title="Reads up to a newline character or EOF." alt="" coords="212,213,368,241"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="135,280,206,251,230,245,226,248,208,256,138,284"/>
+<area shape="rect" id="Node000005" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="230,265,350,293"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="158,293,217,287,213,290,160,298"/>
+<area shape="rect" id="Node000007" href="$d6/d19/kstring_8c.html#ae674f28f7fd1f23ebee2942a71a4b1e8" title=" " alt="" coords="207,368,373,412"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="138,325,222,360,217,362,138,330"/>
+<area shape="rect" id="Node000009" href="$d6/d19/kstring_8c.html#a3ac8f7f54a3429135da71637d268e6c9" title=" " alt="" coords="675,341,782,369"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="159,308,661,347,659,352,159,313"/>
+<area shape="rect" id="Node000010" href="$d6/d19/kstring_8c.html#a9e48021ce5b39920715bfaa5d92613bc" title=" " alt="" coords="238,436,342,464"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="101,325,148,374,176,400,208,422,226,432,220,433,205,427,173,404,144,378,101,330"/>
+<area shape="rect" id="Node000011" href="$d6/d19/kstring_8c.html#a4dd30c30bb3f8bd5e2a051c22b04317e" title=" " alt="" coords="244,488,336,516"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="95,325,139,399,170,439,208,473,232,487,226,487,205,477,167,442,134,402,93,330"/>
+<area shape="rect" id="Node000012" href="$d6/d19/kstring_8c.html#a935172afa95a96c7c2ff38c8ab4778a8" title=" " alt="" coords="230,540,350,568"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="90,325,107,369,131,422,165,478,185,503,208,525,219,534,213,533,205,529,181,507,160,481,126,425,102,371,89,330"/>
+<area shape="rect" id="Node000013" href="$df/d48/mesh__loader_8c.html#a0a1670b8fe55f5bff4332df655faa252" title=" " alt="" coords="233,135,347,162"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="107,280,205,200,253,169,250,173,208,204,111,283"/>
+<area shape="rect" id="Node000006" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="432,265,607,293"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="349,277,420,278,415,280,350,282"/>
+<area shape="rect" id="Node000008" href="$d6/d19/kstring_8c.html#a97b33c831523752f0adff22f80beaec5" title=" " alt="" coords="474,371,565,398"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="373,385,461,385,456,387,374,391"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="565,376,663,364,658,365,566,381"/>
+<area shape="poly" id="edge14_Node000013_Node000002" title=" " alt="" coords="303,132,352,88,385,64,420,43,442,36,438,39,422,48,388,69,356,93,307,136"/>
+<area shape="poly" id="edge15_Node000013_Node000003" title=" " alt="" coords="324,132,420,95,449,88,445,91,422,100,326,136"/>
+<area shape="rect" id="Node000014" href="$df/d45/filesystem_8c.html#a65afd51588ede15d7fcc0a920ba03a1b" title="Writes text to a provided file, appending \n to the end." alt="" coords="440,109,600,137"/>
+<area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="346,140,426,132,422,135,348,145"/>
+<area shape="rect" id="Node000015" href="$d6/d19/kstring_8c.html#a5f94bc626484bff50474e0eb291400e2" title=" " alt="" coords="421,161,618,189"/>
+<area shape="poly" id="edge17_Node000013_Node000015" title=" " alt="" coords="347,153,408,161,403,163,348,158"/>
+<area shape="rect" id="Node000016" href="$d6/d19/kstring_8c.html#a86babd936b82eaf4229e77406968f74d" title=" " alt="" coords="465,213,574,241"/>
+<area shape="poly" id="edge18_Node000013_Node000016" title=" " alt="" coords="324,160,422,198,452,209,447,210,420,203,324,165"/>
+<area shape="rect" id="Node000017" href="$d6/d19/kstring_8c.html#a7d32c70521c217a716c586f145dbb4d9" title=" " alt="" coords="666,213,791,241"/>
+<area shape="poly" id="edge19_Node000016_Node000017" title=" " alt="" coords="574,225,653,226,648,228,575,230"/>
+<area shape="rect" id="Node000018" href="$d3/d3c/kmemory_8c.html#ae88e143a36677919fee16bdf0f11bc79" title=" " alt="" coords="839,213,961,241"/>
+<area shape="poly" id="edge20_Node000017_Node000018" title=" " alt="" coords="791,225,825,227,820,228,792,230"/>
+<area shape="rect" id="Node000019" href="$de/d03/platform_8h.html#a15258bb22b902725b1fbf405463ed07d" title=" " alt="" coords="1009,213,1186,241"/>
+<area shape="poly" id="edge21_Node000018_Node000019" title=" " alt="" coords="961,225,996,227,990,228,962,230"/>
+</map>

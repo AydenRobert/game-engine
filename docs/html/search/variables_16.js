@@ -1,20 +1,11 @@
 var searchData=
 [
-  ['x_0',['x',['../dc/d81/structmouse__state.html#a75fee6855683a29759e07dddd8abe84d',1,'mouse_state::x'],['../db/d7b/unionvec2__u.html#a8351557ed259ae82d0e97ad7f2be04c1',1,'vec2_u::x'],['../d5/df1/unionvec3__u.html#a813e68cfccc7810eb92e5237e182f05c',1,'vec3_u::x'],['../df/dbe/unionvec4__u.html#ae30e88d049711ba68bdfe005e450559d',1,'vec4_u::x']]],
-  ['x11_5fstate_1',['x11_state',['../d3/d7c/structdisplay__state.html#aa83ea3536fa941db1737c829500b9aea',1,'display_state']]],
-  ['xdg_5fpopup_5fevents_2',['xdg_popup_events',['../dc/d9b/xdg-shell-protocol_8c.html#afaf16d7a07b821dd9d76d83a28cc02e3',1,'xdg-shell-protocol.c']]],
-  ['xdg_5fpopup_5finterface_3',['xdg_popup_interface',['../db/d13/xdg-shell-client-protocol_8h.html#aa60edf2c19b40f7ba7e31b4aa1bf8d19',1,'xdg_popup_interface:&#160;xdg-shell-protocol.c'],['../dc/d9b/xdg-shell-protocol_8c.html#aa60edf2c19b40f7ba7e31b4aa1bf8d19',1,'xdg_popup_interface:&#160;xdg-shell-protocol.c']]],
-  ['xdg_5fpopup_5frequests_4',['xdg_popup_requests',['../dc/d9b/xdg-shell-protocol_8c.html#a3f4c4d0c81f6efddf1a337e488b3d999',1,'xdg-shell-protocol.c']]],
-  ['xdg_5fpositioner_5finterface_5',['xdg_positioner_interface',['../db/d13/xdg-shell-client-protocol_8h.html#a16a9be7454042fdc62e0418508a624d4',1,'xdg_positioner_interface:&#160;xdg-shell-protocol.c'],['../dc/d9b/xdg-shell-protocol_8c.html#a16a9be7454042fdc62e0418508a624d4',1,'xdg_positioner_interface:&#160;xdg-shell-protocol.c']]],
-  ['xdg_5fpositioner_5frequests_6',['xdg_positioner_requests',['../dc/d9b/xdg-shell-protocol_8c.html#a74d60c715e45804abbfb69a9e0716e23',1,'xdg-shell-protocol.c']]],
-  ['xdg_5fshell_5ftypes_7',['xdg_shell_types',['../dc/d9b/xdg-shell-protocol_8c.html#ac3d3d0075de2095881bfe2d9fd622d66',1,'xdg-shell-protocol.c']]],
-  ['xdg_5fsurface_5fevents_8',['xdg_surface_events',['../dc/d9b/xdg-shell-protocol_8c.html#a002ff434c94b3a9dd7a333d06a9df531',1,'xdg-shell-protocol.c']]],
-  ['xdg_5fsurface_5finterface_9',['xdg_surface_interface',['../db/d13/xdg-shell-client-protocol_8h.html#a5ac26be247039c7cdf4a5a26f613cfe6',1,'xdg_surface_interface:&#160;xdg-shell-protocol.c'],['../dc/d9b/xdg-shell-protocol_8c.html#a5ac26be247039c7cdf4a5a26f613cfe6',1,'xdg_surface_interface:&#160;xdg-shell-protocol.c']]],
-  ['xdg_5fsurface_5frequests_10',['xdg_surface_requests',['../dc/d9b/xdg-shell-protocol_8c.html#a822df53758e9616d29a1f8fade4108a2',1,'xdg-shell-protocol.c']]],
-  ['xdg_5ftoplevel_5fevents_11',['xdg_toplevel_events',['../dc/d9b/xdg-shell-protocol_8c.html#a438bc0a84d9f8032bc13b34feff2a3cd',1,'xdg-shell-protocol.c']]],
-  ['xdg_5ftoplevel_5finterface_12',['xdg_toplevel_interface',['../db/d13/xdg-shell-client-protocol_8h.html#a41eaf1ac12f3ef225df8b9f2f6559326',1,'xdg_toplevel_interface:&#160;xdg-shell-protocol.c'],['../dc/d9b/xdg-shell-protocol_8c.html#a41eaf1ac12f3ef225df8b9f2f6559326',1,'xdg_toplevel_interface:&#160;xdg-shell-protocol.c']]],
-  ['xdg_5ftoplevel_5frequests_13',['xdg_toplevel_requests',['../dc/d9b/xdg-shell-protocol_8c.html#ad5745b9472db2bfe53010f0a77e03e17',1,'xdg-shell-protocol.c']]],
-  ['xdg_5fwm_5fbase_5fevents_14',['xdg_wm_base_events',['../dc/d9b/xdg-shell-protocol_8c.html#a1f43f6e8f0a8519a6aeeb05080036d6d',1,'xdg-shell-protocol.c']]],
-  ['xdg_5fwm_5fbase_5finterface_15',['xdg_wm_base_interface',['../db/d13/xdg-shell-client-protocol_8h.html#a334a66fc154a4d8cb3f6ab5660a097ba',1,'xdg_wm_base_interface:&#160;xdg-shell-protocol.c'],['../dc/d9b/xdg-shell-protocol_8c.html#a23c96730741064951b7a6c714ebb9403',1,'xdg_wm_base_interface:&#160;xdg-shell-protocol.c']]],
-  ['xdg_5fwm_5fbase_5frequests_16',['xdg_wm_base_requests',['../dc/d9b/xdg-shell-protocol_8c.html#af554e1eb2989ab3a59118e4d038fceb1',1,'xdg-shell-protocol.c']]]
+  ['w_0',['w',['../d5/df1/unionvec3__u.html#ae96b9f3d8a6f2253bd707db60e407150',1,'vec3_u::w'],['../df/dbe/unionvec4__u.html#a4a77e50d25d2101a5a821ba20f56927b',1,'vec4_u::w']]],
+  ['wayland_5fstate_1',['wayland_state',['../d3/d7c/structdisplay__state.html#a4044f1196fc5baa4b28b1f91cba274e7',1,'display_state']]],
+  ['width_2',['width',['../dc/d7e/structapplication__state.html#a5c49a4da818b7bae26b50df80c889279',1,'application_state::width'],['../d9/d2f/structvulkan__image.html#a26a7f4b5d7298fa2ef6125bc47140204',1,'vulkan_image::width'],['../df/d37/structimage__resource__data.html#ac62bfd950ab086f524049f62cb20ed2e',1,'image_resource_data::width'],['../dd/db6/structtexture.html#ae54857884dad86252f0615066be9990f',1,'texture::width']]],
+  ['wl_5foutput_5finterface_3',['wl_output_interface',['../dc/d9b/xdg-shell-protocol_8c.html#ae97e9c3c498cdd2419db058fa13f26a5',1,'xdg-shell-protocol.c']]],
+  ['wl_5fseat_5finterface_4',['wl_seat_interface',['../dc/d9b/xdg-shell-protocol_8c.html#abaec16e5d3db301ad4c2f3430c218239',1,'xdg-shell-protocol.c']]],
+  ['wl_5fsurface_5finterface_5',['wl_surface_interface',['../dc/d9b/xdg-shell-protocol_8c.html#ab5b94bcc25b21d2fdd945533016d0e33',1,'xdg-shell-protocol.c']]],
+  ['wm_5fcapabilities_6',['wm_capabilities',['../da/d2d/structxdg__toplevel__listener.html#a0a5d85c3d4dad3c5ec5ffb2d45ad5183',1,'xdg_toplevel_listener']]],
+  ['world_5fframebuffers_7',['world_framebuffers',['../d9/dc9/structvulkan__context.html#a20bab9417ffec615b656145b026f75f4',1,'vulkan_context']]]
 ];

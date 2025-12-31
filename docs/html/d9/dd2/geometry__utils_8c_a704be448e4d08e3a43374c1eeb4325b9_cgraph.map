@@ -1,0 +1,13 @@
+<map id="vertex3d_equal" name="vertex3d_equal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,57,128,85"/>
+<area shape="rect" id="Node000002" href="$dc/dd0/kmath_8h.html#abfad392b89bf545b932681273bcedb93" title=" " alt="" coords="176,5,292,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,54,175,37,170,40,115,59"/>
+<area shape="rect" id="Node000004" href="$dc/dd0/kmath_8h.html#adac3f96c683ee15e2e7b7656db9ea1b3" title=" " alt="" coords="176,57,292,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="128,69,163,70,158,72,129,74"/>
+<area shape="rect" id="Node000005" href="$dc/dd0/kmath_8h.html#ae9cc04d66df3314260988933a814629f" title=" " alt="" coords="176,109,292,137"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="114,83,175,103,170,105,113,88"/>
+<area shape="rect" id="Node000003" href="$df/dc5/kmath_8c.html#a4b012fd8b1c6c54b70711ebaa00fd313" title=" " alt="" coords="340,57,391,85"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="271,31,328,55,323,56,271,36"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="292,69,327,71,322,72,293,74"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="270,106,323,87,328,86,272,111"/>
+</map>

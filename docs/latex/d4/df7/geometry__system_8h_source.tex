@@ -18,26 +18,38 @@
 \DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structgeometry__config_a8876d305ac67d7776b31bded587004d3}{index\_size}};}
 \DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structgeometry__config_a7589d58435a66d45bb4d26495376510e}{index\_count}};}
 \DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structgeometry__config_a450df1f4d2b48a05b9cdcbf1c38239f4}{indices}};}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structgeometry__config_a29f2a479e4d4b28fd689ecadda865553}{name}}[\mbox{\hyperlink{resource__types_8h_a9840b465a935f36dd17db47735877e27}{GEOMETRY\_NAME\_MAX\_LENGTH}}];}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structgeometry__config_a7cc0b2dc3421124b780348f74853b136}{material\_name}}[\mbox{\hyperlink{resource__types_8h_a86c7ee3b9964a925fad1f79c84d7d8f7}{MATERIAL\_NAME\_MAX\_LENGTH}}];}
-\DoxyCodeLine{00019\ \}\ \mbox{\hyperlink{structgeometry__config}{geometry\_config}};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ DEFAULT\_GEOMETRY\_NAME\ "{}default"{}}}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{geometry__system_8h_a317d7b68bd7e7818e63bf582b2698b09}{geometry\_system\_initialize}}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ *memory\_requirement,\ \textcolor{keywordtype}{void}\ *state,}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structgeometry__system__config}{geometry\_system\_config}}\ config);}
-\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{geometry__system_8h_a55191f79e172eccf0c6637e252f50797}{geometry\_system\_shutdown}}(\textcolor{keywordtype}{void}\ *state);}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \mbox{\hyperlink{structgeometry}{geometry}}\ *\mbox{\hyperlink{geometry__system_8h_ae0e4e5cb2d9716bfb256919854537738}{geometry\_system\_acquire\_by\_id}}(\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \textcolor{keywordtype}{id});}
-\DoxyCodeLine{00028\ \mbox{\hyperlink{structgeometry}{geometry}}\ *\mbox{\hyperlink{geometry__system_8h_aa3992a52627669573968c86505792e5c}{geometry\_system\_acquire\_from\_config}}(\mbox{\hyperlink{structgeometry__config}{geometry\_config}}\ config,}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ auto\_release);}
-\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{geometry__system_8h_a2f9fd1495f9f9903d9b1a8003cf5417d}{geometry\_system\_release}}(\mbox{\hyperlink{structgeometry}{geometry}}\ *\mbox{\hyperlink{structgeometry}{geometry}});}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}\ \mbox{\hyperlink{structgeometry__config_a69dd28c98a326a0cc638f8205d3c64f2}{centre}};}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}\ \mbox{\hyperlink{structgeometry__config_acd19af3cda3f17689e391256f40aa1c2}{min\_extents}};}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}\ \mbox{\hyperlink{structgeometry__config_a61b8fa18cfc3f915485db9912943ae50}{max\_extents}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structgeometry__config_a29f2a479e4d4b28fd689ecadda865553}{name}}[\mbox{\hyperlink{resource__types_8h_a9840b465a935f36dd17db47735877e27}{GEOMETRY\_NAME\_MAX\_LENGTH}}];}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structgeometry__config_a7cc0b2dc3421124b780348f74853b136}{material\_name}}[\mbox{\hyperlink{resource__types_8h_a86c7ee3b9964a925fad1f79c84d7d8f7}{MATERIAL\_NAME\_MAX\_LENGTH}}];}
+\DoxyCodeLine{00024\ \}\ \mbox{\hyperlink{structgeometry__config}{geometry\_config}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ DEFAULT\_GEOMETRY\_NAME\ "{}default"{}}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{geometry__system_8h_a317d7b68bd7e7818e63bf582b2698b09}{geometry\_system\_initialize}}(\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ *memory\_requirement,\ \textcolor{keywordtype}{void}\ *state,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structgeometry__system__config}{geometry\_system\_config}}\ config);}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{geometry__system_8h_a55191f79e172eccf0c6637e252f50797}{geometry\_system\_shutdown}}(\textcolor{keywordtype}{void}\ *state);}
 \DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \mbox{\hyperlink{structgeometry}{geometry}}\ *\mbox{\hyperlink{geometry__system_8h_a378ccb67bf20bf83f7217aeae226edf3}{geometry\_system\_get\_default\_geometry\_3d}}();}
-\DoxyCodeLine{00033\ \mbox{\hyperlink{structgeometry}{geometry}}\ *\mbox{\hyperlink{geometry__system_8h_aad8405f3d05faf23bdcff666935cb402}{geometry\_system\_get\_default\_geometry\_2d}}();}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00052\ \mbox{\hyperlink{structgeometry__config}{geometry\_config}}\ \mbox{\hyperlink{geometry__system_8h_af4df3267d03b54612f8a61a647fceaba}{geometry\_system\_generate\_plane\_config}}(}
-\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ width,\ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ height,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ x\_segment\_count,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ y\_segment\_count,\ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ tile\_x,}
-\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ tile\_y,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *material\_name);}
+\DoxyCodeLine{00032\ \mbox{\hyperlink{structgeometry}{geometry}}\ *\mbox{\hyperlink{geometry__system_8h_ae0e4e5cb2d9716bfb256919854537738}{geometry\_system\_acquire\_by\_id}}(\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00033\ \mbox{\hyperlink{structgeometry}{geometry}}\ *\mbox{\hyperlink{geometry__system_8h_aa3992a52627669573968c86505792e5c}{geometry\_system\_acquire\_from\_config}}(\mbox{\hyperlink{structgeometry__config}{geometry\_config}}\ config,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ auto\_release);}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{geometry__system_8h_a2f9fd1495f9f9903d9b1a8003cf5417d}{geometry\_system\_release}}(\mbox{\hyperlink{structgeometry}{geometry}}\ *\mbox{\hyperlink{structgeometry}{geometry}});}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{geometry__system_8h_aa949a461ac859a0e10ad866830495e0e}{geometry\_system\_config\_dispose}}(\mbox{\hyperlink{structgeometry__config}{geometry\_config}}\ *config);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \mbox{\hyperlink{structgeometry}{geometry}}\ *\mbox{\hyperlink{geometry__system_8h_a378ccb67bf20bf83f7217aeae226edf3}{geometry\_system\_get\_default\_geometry\_3d}}();}
+\DoxyCodeLine{00039\ \mbox{\hyperlink{structgeometry}{geometry}}\ *\mbox{\hyperlink{geometry__system_8h_aad8405f3d05faf23bdcff666935cb402}{geometry\_system\_get\_default\_geometry\_2d}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00058\ \mbox{\hyperlink{structgeometry__config}{geometry\_config}}\ \mbox{\hyperlink{geometry__system_8h_af4df3267d03b54612f8a61a647fceaba}{geometry\_system\_generate\_plane\_config}}(}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ width,\ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ height,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ x\_segment\_count,\ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ y\_segment\_count,\ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ tile\_x,}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ tile\_y,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *material\_name);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \mbox{\hyperlink{structgeometry__config}{geometry\_config}}\ \mbox{\hyperlink{geometry__system_8h_a4271382a80871291489328097549d5cf}{geometry\_system\_generate\_cube\_config}}(\mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ width,\ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ depth,}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ height,\ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ tile\_x,}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ tile\_y,}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name,}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *material\_name);}
 
 \end{DoxyCode}

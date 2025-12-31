@@ -1,13 +1,15 @@
 <map id="shader" name="shader">
-<area shape="rect" id="Node000001" title=" " alt="" coords="287,106,352,134"/>
-<area shape="rect" id="Node000002" href="$dd/db6/structtexture.html" title=" " alt="" coords="5,5,74,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,45,59,65,73,80,112,95,170,105,289,117,284,118,169,110,111,100,70,84,55,68,47,51"/>
-<area shape="rect" id="Node000003" href="$d0/d99/structhashtable.html" title="Represents a simple hashtable. Members of this structure should not be modified outside the functions..." alt="" coords="137,5,222,33"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,46,192,65,203,80,222,94,243,104,289,116,284,116,242,109,219,98,199,84,188,68,182,51"/>
-<area shape="rect" id="Node000004" href="$de/da7/structshader__uniform.html" title=" " alt="" coords="251,5,374,33"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="317,46,321,107,316,104,313,50"/>
-<area shape="rect" id="Node000005" href="$dc/d7c/structshader__attribute.html" title=" " alt="" coords="398,5,526,33"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="440,43,390,84,349,108,347,103,387,80,435,44"/>
-<area shape="rect" id="Node000006" href="$d7/d4c/structkrange.html" title=" " alt="" coords="550,5,617,33"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="560,42,531,66,498,84,460,98,421,108,353,118,352,113,420,103,459,93,496,80,528,62,555,44"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="341,207,406,234"/>
+<area shape="rect" id="Node000002" href="$dc/d86/structtexture__map.html" title=" " alt="" coords="5,106,110,134"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,146,77,166,91,181,110,190,137,197,206,208,343,218,338,219,205,213,136,202,108,195,88,185,73,169,65,151"/>
+<area shape="rect" id="Node000003" href="$dd/db6/structtexture.html" title=" " alt="" coords="23,5,92,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="58,46,60,106,55,105,57,51"/>
+<area shape="rect" id="Node000004" href="$d0/d99/structhashtable.html" title="Represents a simple hashtable. Members of this structure should not be modified outside the functions..." alt="" coords="191,106,276,134"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="239,147,246,166,257,181,276,195,297,204,343,217,338,217,296,209,273,199,253,185,242,168,236,151"/>
+<area shape="rect" id="Node000005" href="$de/da7/structshader__uniform.html" title=" " alt="" coords="305,106,428,134"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="371,147,375,207,370,205,367,151"/>
+<area shape="rect" id="Node000006" href="$dc/d7c/structshader__attribute.html" title=" " alt="" coords="452,106,580,134"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="494,143,444,185,402,209,401,204,441,180,489,145"/>
+<area shape="rect" id="Node000007" href="$d7/d4c/structkrange.html" title=" " alt="" coords="604,106,671,134"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="614,143,585,167,552,185,514,199,475,208,407,219,406,214,474,203,513,194,550,180,582,162,609,145"/>
 </map>

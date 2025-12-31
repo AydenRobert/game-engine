@@ -1,7 +1,9 @@
 <map id="vertex_3d" name="vertex_3d">
-<area shape="rect" id="Node000001" title=" " alt="" coords="41,106,128,134"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="88,128,174,156"/>
 <area shape="rect" id="Node000002" href="$d5/df1/unionvec3__u.html" title=" " alt="" coords="5,5,73,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="36,46,39,65,44,81,53,93,65,105,60,106,49,97,39,83,34,66,35,51"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="43,46,53,76,68,103,82,115,99,128,94,128,78,120,64,106,48,78,42,51"/>
 <area shape="rect" id="Node000003" href="$db/d7b/unionvec2__u.html" title=" " alt="" coords="97,5,165,33"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="121,46,93,107,88,104,116,48"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,47,134,128,128,127,129,50"/>
+<area shape="rect" id="Node000004" href="$df/dbe/unionvec4__u.html" title=" " alt="" coords="193,5,261,33"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="225,46,216,78,200,106,184,120,167,130,165,125,181,115,196,103,211,76,221,50"/>
 </map>

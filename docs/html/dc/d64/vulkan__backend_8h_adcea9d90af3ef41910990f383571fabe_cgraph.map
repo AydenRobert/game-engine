@@ -1,0 +1,29 @@
+<map id="vulkan_renderer_shader_acquire_instance_resources" name="vulkan_renderer_shader_acquire_instance_resources">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,192,214,236"/>
+<area shape="rect" id="Node000002" href="$d3/d3c/kmemory_8c.html#a35f22575c2b4fcbda423b6108e352b15" title=" " alt="" coords="314,57,394,85"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,189,188,142,223,117,261,95,301,82,297,85,263,100,226,122,192,146,136,193"/>
+<area shape="rect" id="Node000009" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="294,109,414,137"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="158,189,261,146,284,141,279,143,263,151,160,193"/>
+<area shape="rect" id="Node000010" href="$d9/d0a/texture__system_8c.html#a76d18601359083198a46b96fe5feecce" title=" " alt="" coords="264,161,444,206"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="213,198,251,195,246,197,215,203"/>
+<area shape="rect" id="Node000011" href="$db/dab/vulkan__buffer_8c.html#ae83e09783e7441055f8a617ec3d2e135" title=" " alt="" coords="510,195,678,222"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="214,215,446,215,497,215,492,216,446,220,215,220"/>
+<area shape="rect" id="Node000012" href="$d4/d18/vulkan__utils_8c.html#ad8a757bc800267c37b75303b1a8b0f63" title=" " alt="" coords="262,280,446,308"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="180,234,297,274,292,276,180,239"/>
+<area shape="rect" id="Node000013" href="$d4/d18/vulkan__utils_8c.html#a7c6284088860932a8a66b8153b4bc0a4" title=" " alt="" coords="278,332,430,360"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="138,234,194,276,263,317,282,327,277,326,260,322,191,280,137,239"/>
+<area shape="rect" id="Node000003" href="$dd/d44/dynamic__allocator_8c.html#aeef3ef902c20758ce4e52fd3ce7c3112" title="Allocates an amount of memory and returns the given block." alt="" coords="494,5,694,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="393,60,514,36,510,38,395,65"/>
+<area shape="rect" id="Node000007" href="$de/d03/platform_8h.html#a19df473ff145c8579c4c838d5bc67372" title=" " alt="" coords="526,57,662,85"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="394,69,513,70,508,72,395,74"/>
+<area shape="rect" id="Node000008" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="507,109,681,137"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="394,77,515,105,510,106,395,82"/>
+<area shape="rect" id="Node000004" href="$da/d3f/freelist_8c.html#ae855f01b88cfd86e3ff8ae7682bbd06c" title="Attempts to find a allocate block of memory given the size." alt="" coords="742,117,911,145"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="660,31,695,43,750,73,798,108,792,107,748,78,693,48,660,36"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#a1ce834d1bd9f9caf272e6d63aa00deb8" title="Obtains the amount of free space within the freelist." alt="" coords="959,91,1104,118"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="911,118,946,115,941,116,912,123"/>
+<area shape="rect" id="Node000006" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="982,143,1081,170"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="911,139,969,148,964,149,911,144"/>
+<area shape="poly" id="edge9_Node000009_Node000008" title=" " alt="" coords="413,121,494,122,489,124,414,126"/>
+<area shape="poly" id="edge12_Node000011_Node000004" title=" " alt="" coords="637,192,766,151,771,150,639,197"/>
+</map>

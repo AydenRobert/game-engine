@@ -5,7 +5,7 @@ var structshader =
     [ "bound_instance_id", "d2/d93/structshader.html#a7da50c48e7681f887f7ddfdfa9b5005b", null ],
     [ "bound_scope", "d2/d93/structshader.html#ad58a6ab54aedf474e6bd84717127bb99", null ],
     [ "bound_ubo_offset", "d2/d93/structshader.html#af2c37c1d9b14ca34366421439b2f0143", null ],
-    [ "global_textures", "d2/d93/structshader.html#a87f6c51950780934ac34bcc9e2ccedb0", null ],
+    [ "global_texture_maps", "d2/d93/structshader.html#abc1bd0dceaed4ac749838795bdc065eb", null ],
     [ "global_ubo_offset", "d2/d93/structshader.html#a7d8c8ffd000dddd8f139cfc082ed3cd1", null ],
     [ "global_ubo_size", "d2/d93/structshader.html#ac14152513b3a22539b48cff007c15df0", null ],
     [ "global_ubo_stride", "d2/d93/structshader.html#a17035b0c21acc2c2262da2409671c568", null ],

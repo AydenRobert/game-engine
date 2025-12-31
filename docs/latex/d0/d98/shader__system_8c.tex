@@ -8,6 +8,7 @@
 {\ttfamily \#include "{}containers/darray.\+h"{}}\newline
 {\ttfamily \#include "{}defines.\+h"{}}\newline
 {\ttfamily \#include "{}renderer/renderer\+\_\+frontend.\+h"{}}\newline
+{\ttfamily \#include "{}resources/resource\+\_\+types.\+h"{}}\newline
 {\ttfamily \#include "{}systems/texture\+\_\+system.\+h"{}}\newline
 Include dependency graph for shader\+\_\+system.\+c\+:
 \nopagebreak
@@ -76,7 +77,7 @@ void \mbox{\hyperlink{shader__system_8c_a36dd288e51eb5aad20794200051f573b}{shade
 \item 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__system_8c_af46d3ff216d1839ab89699588f9360af}{shader\+\_\+system\+\_\+apply\+\_\+global}} ()
 \item 
-\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__system_8c_a7b839f81992f49c4f7ad18c1dc45f042}{shader\+\_\+system\+\_\+apply\+\_\+instance}} ()
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__system_8c_a232582d886ac14111e985a3a002be8c5}{shader\+\_\+system\+\_\+apply\+\_\+instance}} (\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} needs\+\_\+update)
 \item 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{shader__system_8c_acdd2150a993e62722199a5cf639f65d9}{shader\+\_\+system\+\_\+bind\+\_\+instance}} (\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} instance\+\_\+id)
 \end{DoxyCompactItemize}
@@ -107,16 +108,14 @@ typedef struct shader\+\_\+system\+\_\+state shader\+\_\+system\+\_\+state}
 {\footnotesize\ttfamily \label{shader__system_8c_a772a09bca969a054ea7b4d512fe633e8} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} add\+\_\+attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}}]{shader}{, }\item[{const \mbox{\hyperlink{structshader__attribute__config}{shader\+\_\+attribute\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d0/d98/shader__system_8c_a772a09bca969a054ea7b4d512fe633e8_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -137,8 +136,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{d0/d98/shader__system_8c_a56649f7c0ab9f9a418a45ec9ac4aa97f_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -151,16 +149,14 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_a0c8dbc44c0cd8d95b01648bc62e224c7} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} add\+\_\+uniform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}}]{shader}{, }\item[{const \mbox{\hyperlink{structshader__uniform__config}{shader\+\_\+uniform\+\_\+config}} \texorpdfstring{$\ast$}{*}}]{config}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d0/d98/shader__system_8c_a0c8dbc44c0cd8d95b01648bc62e224c7_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -173,8 +169,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_a38936feb92f898b52ac4ff3024bad497} 
 \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} get\+\_\+shader\+\_\+id (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{shader\+\_\+name}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -195,8 +190,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_a44d8426db6140293d8788afd532bd001} 
 \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} new\+\_\+shader\+\_\+id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -209,8 +203,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_ad544ca673431cd43308c415e060b209f} 
 void shader\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -231,8 +224,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_af46d3ff216d1839ab89699588f9360af} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+apply\+\_\+global (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -247,18 +239,18 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{d0/d98/shader__system_8c_af46d3ff216d1839ab89699588f9360af_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{shader__system_8c_a7b839f81992f49c4f7ad18c1dc45f042}\index{shader\_system.c@{shader\_system.c}!shader\_system\_apply\_instance@{shader\_system\_apply\_instance}}
+\Hypertarget{shader__system_8c_a232582d886ac14111e985a3a002be8c5}\index{shader\_system.c@{shader\_system.c}!shader\_system\_apply\_instance@{shader\_system\_apply\_instance}}
 \index{shader\_system\_apply\_instance@{shader\_system\_apply\_instance}!shader\_system.c@{shader\_system.c}}
 \doxysubsubsection{\texorpdfstring{shader\_system\_apply\_instance()}{shader\_system\_apply\_instance()}}
-{\footnotesize\ttfamily \label{shader__system_8c_a7b839f81992f49c4f7ad18c1dc45f042} 
-\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+apply\+\_\+instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{shader__system_8c_a232582d886ac14111e985a3a002be8c5} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+apply\+\_\+instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{needs\+\_\+update}{}\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d0/d98/shader__system_8c_a7b839f81992f49c4f7ad18c1dc45f042_cgraph}
+\includegraphics[width=350pt]{d0/d98/shader__system_8c_a232582d886ac14111e985a3a002be8c5_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -266,7 +258,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d0/d98/shader__system_8c_a7b839f81992f49c4f7ad18c1dc45f042_icgraph}
+\includegraphics[width=350pt]{d0/d98/shader__system_8c_a232582d886ac14111e985a3a002be8c5_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{shader__system_8c_acdd2150a993e62722199a5cf639f65d9}\index{shader\_system.c@{shader\_system.c}!shader\_system\_bind\_instance@{shader\_system\_bind\_instance}}
@@ -275,12 +267,19 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_acdd2150a993e62722199a5cf639f65d9} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+bind\+\_\+instance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{instance\+\_\+id}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d0/d98/shader__system_8c_acdd2150a993e62722199a5cf639f65d9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d98/shader__system_8c_acdd2150a993e62722199a5cf639f65d9_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{shader__system_8c_adad4d61742f798318d5812623d4eed79}\index{shader\_system.c@{shader\_system.c}!shader\_system\_create@{shader\_system\_create}}
@@ -297,8 +296,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{d0/d98/shader__system_8c_adad4d61742f798318d5812623d4eed79_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -311,8 +309,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_a8d548a76e226257e3df0e354c39bfc47} 
 \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*} shader\+\_\+system\+\_\+get (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{shader\+\_\+name}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -347,8 +344,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_ab1ffd22d1e04f2a4abcdefd16835bcb4} 
 \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} shader\+\_\+system\+\_\+get\+\_\+id (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{shader\+\_\+name}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -385,12 +381,19 @@ Initialises the shader system. Call twice, first time for memory requirement, se
 \begin{DoxyReturn}{Returns}
 True if successful; otherwise False. 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d0/d98/shader__system_8c_aca8d503d98443f6c89247ff0a25f28ca_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d98/shader__system_8c_aca8d503d98443f6c89247ff0a25f28ca_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{shader__system_8c_abe4a15b1fb0068d809a6b695e8c00bcc}\index{shader\_system.c@{shader\_system.c}!shader\_system\_sampler\_set@{shader\_system\_sampler\_set}}
@@ -399,8 +402,7 @@ Here is the call graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_abe4a15b1fb0068d809a6b695e8c00bcc} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+sampler\+\_\+set (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{uniform\+\_\+name}{, }\item[{const \mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -413,8 +415,7 @@ Here is the call graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_a746f63f44dce5ca5e3956adfce15c1dc} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+sampler\+\_\+set\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{index}{, }\item[{const \mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -436,12 +437,19 @@ Shutdowns the shader system.
 {\em state} & A pointer to the system state. \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d0/d98/shader__system_8c_a36dd288e51eb5aad20794200051f573b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d98/shader__system_8c_a36dd288e51eb5aad20794200051f573b_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{shader__system_8c_af4ccdf6582227e9b94cceab0bd6bc838}\index{shader\_system.c@{shader\_system.c}!shader\_system\_uniform\_index@{shader\_system\_uniform\_index}}
@@ -450,8 +458,7 @@ Here is the call graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_af4ccdf6582227e9b94cceab0bd6bc838} 
 \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} shader\+\_\+system\+\_\+uniform\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{uniform\+\_\+name}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -472,16 +479,14 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_a7fc72b007e76539b1b04f8d39fb08ad5} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+uniform\+\_\+set (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{uniform\+\_\+name}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d0/d98/shader__system_8c_a7fc72b007e76539b1b04f8d39fb08ad5_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -494,8 +499,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_aca796309a587abb50396b405a215f1da} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+uniform\+\_\+set\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{index}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -516,8 +520,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_acc11032c7b5d75b6ace78fd5a7ed1896} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+use (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{shader\+\_\+name}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -530,16 +533,14 @@ Here is the call graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_abb950e1385ff467c0adafff83437434e} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+system\+\_\+use\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{shader\+\_\+id}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d0/d98/shader__system_8c_abb950e1385ff467c0adafff83437434e_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -552,8 +553,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_a846cb7ff2b963aba55454ef91fdf7fb2} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} shader\+\_\+uniform\+\_\+add\+\_\+state\+\_\+valid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}}]{shader}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -566,16 +566,14 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_a709441bd5f735052bd788c2d8e7eeadf} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} uniform\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}}]{shader}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{uniform\+\_\+name}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{size}{, }\item[{\mbox{\hyperlink{shader__system_8h_ad8fb673c9f87735e69b6d59d1bb83252}{shader\+\_\+uniform\+\_\+type}}}]{type}{, }\item[{\mbox{\hyperlink{shader__system_8h_a7864a7740f267820cccb2f1d33c63e25}{shader\+\_\+scope}}}]{scope}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{set\+\_\+location}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{is\+\_\+sampler}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d0/d98/shader__system_8c_a709441bd5f735052bd788c2d8e7eeadf_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -588,16 +586,14 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{shader__system_8c_a5229b7d65b356cf929cd273f7c70a826} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} uniform\+\_\+name\+\_\+valid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}}]{shader}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{uniform\+\_\+name}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d0/d98/shader__system_8c_a5229b7d65b356cf929cd273f7c70a826_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

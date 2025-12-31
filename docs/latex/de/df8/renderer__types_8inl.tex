@@ -3,20 +3,16 @@
 {\ttfamily \#include "{}defines.\+h"{}}\newline
 {\ttfamily \#include "{}math/math\+\_\+types.\+h"{}}\newline
 {\ttfamily \#include "{}resources/resource\+\_\+types.\+h"{}}\newline
-<<<<<<< HEAD
 {\ttfamily \#include "{}systems/shader\+\_\+system.\+h"{}}\newline
-Include dependency graph for renderer\+\_\+types.\+inl\+:
-\nopagebreak
-=======
 Include dependency graph for renderer\+\_\+types.\+inl\+:\nopagebreak
->>>>>>> main
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d2/d69/renderer__types_8inl__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -54,6 +50,8 @@ typedef struct geometry\+\_\+render\+\_\+data \mbox{\hyperlink{renderer__types_8
 \item 
 typedef enum \mbox{\hyperlink{renderer__types_8inl_a041ad0c80961f41c674b44c0584ed2cb}{builtin\+\_\+renderpass}} \mbox{\hyperlink{renderer__types_8inl_a6505c590d46dd12dcbbe4a2508425ec4}{builtin\+\_\+renderpass}}
 \item 
+typedef enum \mbox{\hyperlink{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0}{renderer\+\_\+debug\+\_\+view\+\_\+mode}} \mbox{\hyperlink{renderer__types_8inl_ae8df2a0e88898ee1a8cc45b96a453c7c}{renderer\+\_\+debug\+\_\+view\+\_\+mode}}
+\item 
 typedef struct renderer\+\_\+backend \mbox{\hyperlink{renderer__types_8inl_afcddbffe26d088f480f0f5b2be5555db}{renderer\+\_\+backend}}
 \item 
 typedef struct render\+\_\+packet \mbox{\hyperlink{renderer__types_8inl_ab922ec7bfe32d915b2672b5a592cdb14}{render\+\_\+packet}}
@@ -68,6 +66,11 @@ enum \mbox{\hyperlink{renderer__types_8inl_aaa5db001f6365d82726eb5717553b7e9}{re
 \item 
 enum \mbox{\hyperlink{renderer__types_8inl_a041ad0c80961f41c674b44c0584ed2cb}{builtin\+\_\+renderpass}} \{ \mbox{\hyperlink{renderer__types_8inl_a041ad0c80961f41c674b44c0584ed2cbad38480b8669ce13b29147fe4e33cd813}{BUILTIN\+\_\+\+RENDERPASS\+\_\+\+WORLD}} = 0x01
 , \mbox{\hyperlink{renderer__types_8inl_a041ad0c80961f41c674b44c0584ed2cbab0d604d59ad38bbd1f49201458f23340}{BUILTIN\+\_\+\+RENDERPASS\+\_\+\+UI}} = 0x02
+ \}
+\item 
+enum \mbox{\hyperlink{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0}{renderer\+\_\+debug\+\_\+view\+\_\+mode}} \{ \mbox{\hyperlink{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0a122c62fd53db8f523de6f89e725017cd}{RENDERER\+\_\+\+VIEW\+\_\+\+MODE\+\_\+\+DEFAULT}}
+, \mbox{\hyperlink{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0a19f9065bd530217f423e03a4ee49da92}{RENDERER\+\_\+\+VIEW\+\_\+\+MODE\+\_\+\+LIGHTING}}
+, \mbox{\hyperlink{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0a3d0fa43eba0960c41e67c48d92a06e61}{RENDERER\+\_\+\+VIEW\+\_\+\+MODE\+\_\+\+NORMALS}}
  \}
 \end{DoxyCompactItemize}
 
@@ -140,6 +143,12 @@ typedef struct renderer\+\_\+backend renderer\+\_\+backend}
 {\footnotesize\ttfamily \label{renderer__types_8inl_a658e02d116ec475ab634852cf2a38021} 
 typedef enum \mbox{\hyperlink{renderer__types_8inl_aaa5db001f6365d82726eb5717553b7e9}{renderer\+\_\+backend\+\_\+type}} \mbox{\hyperlink{renderer__types_8inl_aaa5db001f6365d82726eb5717553b7e9}{renderer\+\_\+backend\+\_\+type}}}
 
+\Hypertarget{renderer__types_8inl_ae8df2a0e88898ee1a8cc45b96a453c7c}\index{renderer\_types.inl@{renderer\_types.inl}!renderer\_debug\_view\_mode@{renderer\_debug\_view\_mode}}
+\index{renderer\_debug\_view\_mode@{renderer\_debug\_view\_mode}!renderer\_types.inl@{renderer\_types.inl}}
+\doxysubsubsection{\texorpdfstring{renderer\_debug\_view\_mode}{renderer\_debug\_view\_mode}}
+{\footnotesize\ttfamily \label{renderer__types_8inl_ae8df2a0e88898ee1a8cc45b96a453c7c} 
+typedef enum \mbox{\hyperlink{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0}{renderer\+\_\+debug\+\_\+view\+\_\+mode}} \mbox{\hyperlink{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0}{renderer\+\_\+debug\+\_\+view\+\_\+mode}}}
+
 
 
 \label{doc-enum-members}
@@ -178,6 +187,26 @@ RENDERER\+\_\+\+BACKEND\+\_\+\+TYPES\+\_\+\+OPENGL&\\
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{RENDERER\_BACKEND\_TYPES\_DIRECTX@{RENDERER\_BACKEND\_TYPES\_DIRECTX}!renderer\_types.inl@{renderer\_types.inl}}\index{renderer\_types.inl@{renderer\_types.inl}!RENDERER\_BACKEND\_TYPES\_DIRECTX@{RENDERER\_BACKEND\_TYPES\_DIRECTX}}}\Hypertarget{renderer__types_8inl_aaa5db001f6365d82726eb5717553b7e9ad6ce6899c616df454daceaa0352344fd}\label{renderer__types_8inl_aaa5db001f6365d82726eb5717553b7e9ad6ce6899c616df454daceaa0352344fd} 
 RENDERER\+\_\+\+BACKEND\+\_\+\+TYPES\+\_\+\+DIRECTX&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0}\index{renderer\_types.inl@{renderer\_types.inl}!renderer\_debug\_view\_mode@{renderer\_debug\_view\_mode}}
+\index{renderer\_debug\_view\_mode@{renderer\_debug\_view\_mode}!renderer\_types.inl@{renderer\_types.inl}}
+\doxysubsubsection{\texorpdfstring{renderer\_debug\_view\_mode}{renderer\_debug\_view\_mode}}
+{\footnotesize\ttfamily \label{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0} 
+enum \mbox{\hyperlink{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0}{renderer\+\_\+debug\+\_\+view\+\_\+mode}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RENDERER\_VIEW\_MODE\_DEFAULT@{RENDERER\_VIEW\_MODE\_DEFAULT}!renderer\_types.inl@{renderer\_types.inl}}\index{renderer\_types.inl@{renderer\_types.inl}!RENDERER\_VIEW\_MODE\_DEFAULT@{RENDERER\_VIEW\_MODE\_DEFAULT}}}\Hypertarget{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0a122c62fd53db8f523de6f89e725017cd}\label{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0a122c62fd53db8f523de6f89e725017cd} 
+RENDERER\+\_\+\+VIEW\+\_\+\+MODE\+\_\+\+DEFAULT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RENDERER\_VIEW\_MODE\_LIGHTING@{RENDERER\_VIEW\_MODE\_LIGHTING}!renderer\_types.inl@{renderer\_types.inl}}\index{renderer\_types.inl@{renderer\_types.inl}!RENDERER\_VIEW\_MODE\_LIGHTING@{RENDERER\_VIEW\_MODE\_LIGHTING}}}\Hypertarget{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0a19f9065bd530217f423e03a4ee49da92}\label{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0a19f9065bd530217f423e03a4ee49da92} 
+RENDERER\+\_\+\+VIEW\+\_\+\+MODE\+\_\+\+LIGHTING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RENDERER\_VIEW\_MODE\_NORMALS@{RENDERER\_VIEW\_MODE\_NORMALS}!renderer\_types.inl@{renderer\_types.inl}}\index{renderer\_types.inl@{renderer\_types.inl}!RENDERER\_VIEW\_MODE\_NORMALS@{RENDERER\_VIEW\_MODE\_NORMALS}}}\Hypertarget{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0a3d0fa43eba0960c41e67c48d92a06e61}\label{renderer__types_8inl_ad27cd42c0f546536c36a9aabed7809b0a3d0fa43eba0960c41e67c48d92a06e61} 
+RENDERER\+\_\+\+VIEW\+\_\+\+MODE\+\_\+\+NORMALS&\\
 \hline
 
 \end{DoxyEnumFields}

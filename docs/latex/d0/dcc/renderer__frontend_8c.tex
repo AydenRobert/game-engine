@@ -1,6 +1,7 @@
 \doxysection{engine/src/renderer/renderer\+\_\+frontend.c File Reference}
 \hypertarget{renderer__frontend_8c}{}\label{renderer__frontend_8c}\index{engine/src/renderer/renderer\_frontend.c@{engine/src/renderer/renderer\_frontend.c}}
 {\ttfamily \#include "{}renderer/renderer\+\_\+frontend.\+h"{}}\newline
+{\ttfamily \#include "{}core/event.\+h"{}}\newline
 {\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
 {\ttfamily \#include "{}core/kstring.\+h"{}}\newline
 {\ttfamily \#include "{}defines.\+h"{}}\newline
@@ -17,7 +18,8 @@
 {\ttfamily \#include $<$stddef.\+h$>$}\newline
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
-Include dependency graph for renderer\+\_\+frontend.\+c\+:\nopagebreak
+Include dependency graph for renderer\+\_\+frontend.\+c\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -42,6 +44,8 @@ typedef struct renderer\+\_\+system\+\_\+state \mbox{\hyperlink{renderer__fronte
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{renderer__frontend_8c_ac111be14dddfcb1f4f20c9d8a37d3a86}{renderer\+\_\+on\+\_\+event}} (\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} code, void \texorpdfstring{$\ast$}{*}sender, void \texorpdfstring{$\ast$}{*}listener\+\_\+inst, \mbox{\hyperlink{structevent__context}{event\+\_\+context}} \mbox{\hyperlink{vulkan__backend_8c_a171b208055a0eb2eeace24e130f74bc9}{context}})
+\item 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{renderer__frontend_8c_a389fec0dabe6589332ed60bb427aaaef}{renderer\+\_\+initialize}} (const char \texorpdfstring{$\ast$}{*}application\+\_\+name, struct \mbox{\hyperlink{structplatform__state}{platform\+\_\+state}} \texorpdfstring{$\ast$}{*}plat\+\_\+state, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}memory\+\_\+requirement, void \texorpdfstring{$\ast$}{*}state)
 \item 
 void \mbox{\hyperlink{renderer__frontend_8c_afca1d9aa7e07852bc4a437e2a55ebbb6}{renderer\+\_\+shutdown}} (void \texorpdfstring{$\ast$}{*}state)
@@ -50,7 +54,7 @@ void \mbox{\hyperlink{renderer__frontend_8c_a132251baefe2198eda971cb071ab0bdd}{r
 \item 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{renderer__frontend_8c_aa1a64974ce989cb8a822d5910e45eeec}{renderer\+\_\+draw\+\_\+frame}} (\mbox{\hyperlink{structrender__packet}{render\+\_\+packet}} \texorpdfstring{$\ast$}{*}packet)
 \item 
-void \mbox{\hyperlink{renderer__frontend_8c_a8f4bdfed0b0b2bf648279e914a3db500}{renderer\+\_\+set\+\_\+view}} (\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} view)
+void \mbox{\hyperlink{renderer__frontend_8c_ae992e99f426ba02a6425ff5efca02f5e}{renderer\+\_\+set\+\_\+view}} (\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}} view, \mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}} view\+\_\+position)
 \item 
 void \mbox{\hyperlink{renderer__frontend_8c_a576891b6b0f8e2de38a5c6def3823db9}{renderer\+\_\+create\+\_\+texture}} (const \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \texorpdfstring{$\ast$}{*}pixels, struct \mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structtexture}{texture}})
 \item 
@@ -76,13 +80,17 @@ void \mbox{\hyperlink{renderer__frontend_8c_ade37f428fbf9108123970d94413d8b7e}{r
 \item 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{renderer__frontend_8c_a8c6604973cdbee2cab3ddc84fc830ed9}{renderer\+\_\+shader\+\_\+apply\+\_\+globals}} (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s)
 \item 
-\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{renderer__frontend_8c_a0728f9d90467c483bf9134eb118776be}{renderer\+\_\+shader\+\_\+apply\+\_\+instance}} (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s)
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{renderer__frontend_8c_a32e56cdd8d2c58b569074d4533394279}{renderer\+\_\+shader\+\_\+apply\+\_\+instance}} (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} needs\+\_\+update)
 \item 
-\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{renderer__frontend_8c_a3837f15886db60bd25adb320cd24fc4f}{renderer\+\_\+shader\+\_\+acquire\+\_\+instance\+\_\+resources}} (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}out\+\_\+instance\+\_\+id)
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{renderer__frontend_8c_a6d0979d4e18310eda674025c921d2ca0}{renderer\+\_\+shader\+\_\+acquire\+\_\+instance\+\_\+resources}} (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{structtexture__map}{texture\+\_\+map}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}maps, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}out\+\_\+instance\+\_\+id)
 \item 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{renderer__frontend_8c_a260739a732fee590283ba8c1c63b5b93}{renderer\+\_\+shader\+\_\+release\+\_\+instance\+\_\+resources}} (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} instance\+\_\+id)
 \item 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{renderer__frontend_8c_a736bc5f83b75efe3cb721da92f045f29}{renderer\+\_\+set\+\_\+uniform}} (struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}s, struct \mbox{\hyperlink{structshader__uniform}{shader\+\_\+uniform}} \texorpdfstring{$\ast$}{*}uniform, const void \texorpdfstring{$\ast$}{*}value)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{renderer__frontend_8c_a9263f4d44a70640e7a2cde31f599307c}{renderer\+\_\+texture\+\_\+map\+\_\+acquire\+\_\+resources}} (\mbox{\hyperlink{structtexture__map}{texture\+\_\+map}} \texorpdfstring{$\ast$}{*}map)
+\item 
+void \mbox{\hyperlink{renderer__frontend_8c_a758d8d6ee795e457995d6d0f36c6634f}{renderer\+\_\+texture\+\_\+map\+\_\+release\+\_\+resources}} (\mbox{\hyperlink{structtexture__map}{texture\+\_\+map}} \texorpdfstring{$\ast$}{*}map)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -137,29 +145,14 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_af97c5fd395a40f2dd026c72e14d45b62_icgraph}
 \end{center}
 \end{figure}
-<<<<<<< HEAD
-=======
-\Hypertarget{renderer__frontend_8c_a4683817d4b1b2113b0df7662150a0fc5}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_create\_material@{renderer\_create\_material}}
-\index{renderer\_create\_material@{renderer\_create\_material}!renderer\_frontend.c@{renderer\_frontend.c}}
-\doxysubsubsection{\texorpdfstring{renderer\_create\_material()}{renderer\_create\_material()}}
-{\footnotesize\ttfamily \label{renderer__frontend_8c_a4683817d4b1b2113b0df7662150a0fc5} 
-\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} renderer\+\_\+create\+\_\+material (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}}]{material}{}\end{DoxyParamCaption})}
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_a4683817d4b1b2113b0df7662150a0fc5_icgraph}
-\end{center}
-\end{figure}
->>>>>>> main
 \Hypertarget{renderer__frontend_8c_a576891b6b0f8e2de38a5c6def3823db9}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_create\_texture@{renderer\_create\_texture}}
 \index{renderer\_create\_texture@{renderer\_create\_texture}!renderer\_frontend.c@{renderer\_frontend.c}}
 \doxysubsubsection{\texorpdfstring{renderer\_create\_texture()}{renderer\_create\_texture()}}
 {\footnotesize\ttfamily \label{renderer__frontend_8c_a576891b6b0f8e2de38a5c6def3823db9} 
 void renderer\+\_\+create\+\_\+texture (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \texorpdfstring{$\ast$}{*}}]{pixels}{, }\item[{struct \mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*}}]{texture}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -179,29 +172,14 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_a0ce11f2f9b370fcce3c0aec4667d6a2b_icgraph}
 \end{center}
 \end{figure}
-<<<<<<< HEAD
-=======
-\Hypertarget{renderer__frontend_8c_ad87ce9fe4eeb5fb97c77edec9ab84d7a}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_destroy\_material@{renderer\_destroy\_material}}
-\index{renderer\_destroy\_material@{renderer\_destroy\_material}!renderer\_frontend.c@{renderer\_frontend.c}}
-\doxysubsubsection{\texorpdfstring{renderer\_destroy\_material()}{renderer\_destroy\_material()}}
-{\footnotesize\ttfamily \label{renderer__frontend_8c_ad87ce9fe4eeb5fb97c77edec9ab84d7a} 
-void renderer\+\_\+destroy\+\_\+material (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structmaterial}{material}} \texorpdfstring{$\ast$}{*}}]{material}{}\end{DoxyParamCaption})}
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_ad87ce9fe4eeb5fb97c77edec9ab84d7a_icgraph}
-\end{center}
-\end{figure}
->>>>>>> main
 \Hypertarget{renderer__frontend_8c_a07cb43f363df0240af713c483b72308f}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_destroy\_texture@{renderer\_destroy\_texture}}
 \index{renderer\_destroy\_texture@{renderer\_destroy\_texture}!renderer\_frontend.c@{renderer\_frontend.c}}
 \doxysubsubsection{\texorpdfstring{renderer\_destroy\_texture()}{renderer\_destroy\_texture()}}
 {\footnotesize\ttfamily \label{renderer__frontend_8c_a07cb43f363df0240af713c483b72308f} 
 void renderer\+\_\+destroy\+\_\+texture (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structtexture}{texture}} \texorpdfstring{$\ast$}{*}}]{texture}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -214,7 +192,8 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{renderer__frontend_8c_aa1a64974ce989cb8a822d5910e45eeec} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} renderer\+\_\+draw\+\_\+frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrender__packet}{render\+\_\+packet}} \texorpdfstring{$\ast$}{*}}]{packet}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -234,7 +213,8 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{renderer__frontend_8c_a389fec0dabe6589332ed60bb427aaaef} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} renderer\+\_\+initialize (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{application\+\_\+name}{, }\item[{struct \mbox{\hyperlink{structplatform__state}{platform\+\_\+state}} \texorpdfstring{$\ast$}{*}}]{plat\+\_\+state}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \texorpdfstring{$\ast$}{*}}]{memory\+\_\+requirement}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -248,6 +228,20 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_a389fec0dabe6589332ed60bb427aaaef_icgraph}
 \end{center}
 \end{figure}
+\Hypertarget{renderer__frontend_8c_ac111be14dddfcb1f4f20c9d8a37d3a86}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_on\_event@{renderer\_on\_event}}
+\index{renderer\_on\_event@{renderer\_on\_event}!renderer\_frontend.c@{renderer\_frontend.c}}
+\doxysubsubsection{\texorpdfstring{renderer\_on\_event()}{renderer\_on\_event()}}
+{\footnotesize\ttfamily \label{renderer__frontend_8c_ac111be14dddfcb1f4f20c9d8a37d3a86} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} renderer\+\_\+on\+\_\+event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{code}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{sender}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{listener\+\_\+inst}{, }\item[{\mbox{\hyperlink{structevent__context}{event\+\_\+context}}}]{context}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_ac111be14dddfcb1f4f20c9d8a37d3a86_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{renderer__frontend_8c_a132251baefe2198eda971cb071ab0bdd}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_on\_resize@{renderer\_on\_resize}}
 \index{renderer\_on\_resize@{renderer\_on\_resize}!renderer\_frontend.c@{renderer\_frontend.c}}
 \doxysubsubsection{\texorpdfstring{renderer\_on\_resize()}{renderer\_on\_resize()}}
@@ -255,7 +249,6 @@ Here is the caller graph for this function\+:\nopagebreak
 void renderer\+\_\+on\+\_\+resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{width}{, }\item[{\mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{height}{}\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:\nopagebreak
-<<<<<<< HEAD
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -275,10 +268,7 @@ Here is the caller graph for this function\+:\nopagebreak
 {\footnotesize\ttfamily \label{renderer__frontend_8c_aa70d4c2f7c330d9585a1d6ec80929a81} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} renderer\+\_\+renderpass\+\_\+id (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+renderpass\+\_\+id}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
-=======
->>>>>>> main
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -306,34 +296,32 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_a736bc5f83b75efe3cb721da92f045f29_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{renderer__frontend_8c_a8f4bdfed0b0b2bf648279e914a3db500}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_set\_view@{renderer\_set\_view}}
+\Hypertarget{renderer__frontend_8c_ae992e99f426ba02a6425ff5efca02f5e}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_set\_view@{renderer\_set\_view}}
 \index{renderer\_set\_view@{renderer\_set\_view}!renderer\_frontend.c@{renderer\_frontend.c}}
 \doxysubsubsection{\texorpdfstring{renderer\_set\_view()}{renderer\_set\_view()}}
-{\footnotesize\ttfamily \label{renderer__frontend_8c_a8f4bdfed0b0b2bf648279e914a3db500} 
-void renderer\+\_\+set\+\_\+view (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{view}{}\end{DoxyParamCaption})}
-
-Here is the caller graph for this function\+:\nopagebreak
-<<<<<<< HEAD
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_a8f4bdfed0b0b2bf648279e914a3db500_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{renderer__frontend_8c_a3837f15886db60bd25adb320cd24fc4f}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_shader\_acquire\_instance\_resources@{renderer\_shader\_acquire\_instance\_resources}}
-\index{renderer\_shader\_acquire\_instance\_resources@{renderer\_shader\_acquire\_instance\_resources}!renderer\_frontend.c@{renderer\_frontend.c}}
-\doxysubsubsection{\texorpdfstring{renderer\_shader\_acquire\_instance\_resources()}{renderer\_shader\_acquire\_instance\_resources()}}
-{\footnotesize\ttfamily \label{renderer__frontend_8c_a3837f15886db60bd25adb320cd24fc4f} 
-\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} renderer\+\_\+shader\+\_\+acquire\+\_\+instance\+\_\+resources (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+instance\+\_\+id}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{renderer__frontend_8c_ae992e99f426ba02a6425ff5efca02f5e} 
+void renderer\+\_\+set\+\_\+view (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{math__types_8h_a858329ffda7b5fe4913cca7ff8f34f30}{mat4}}}]{view}{, }\item[{\mbox{\hyperlink{math__types_8h_a8105231df6f33ef7bfaf26b96b09fb81}{vec3}}}]{view\+\_\+position}{}\end{DoxyParamCaption})}
 
 Here is the caller graph for this function\+:
 \nopagebreak
-=======
->>>>>>> main
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_a3837f15886db60bd25adb320cd24fc4f_icgraph}
+\includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_ae992e99f426ba02a6425ff5efca02f5e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{renderer__frontend_8c_a6d0979d4e18310eda674025c921d2ca0}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_shader\_acquire\_instance\_resources@{renderer\_shader\_acquire\_instance\_resources}}
+\index{renderer\_shader\_acquire\_instance\_resources@{renderer\_shader\_acquire\_instance\_resources}!renderer\_frontend.c@{renderer\_frontend.c}}
+\doxysubsubsection{\texorpdfstring{renderer\_shader\_acquire\_instance\_resources()}{renderer\_shader\_acquire\_instance\_resources()}}
+{\footnotesize\ttfamily \label{renderer__frontend_8c_a6d0979d4e18310eda674025c921d2ca0} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} renderer\+\_\+shader\+\_\+acquire\+\_\+instance\+\_\+resources (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{\mbox{\hyperlink{structtexture__map}{texture\+\_\+map}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{maps}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+instance\+\_\+id}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_a6d0979d4e18310eda674025c921d2ca0_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{renderer__frontend_8c_a8c6604973cdbee2cab3ddc84fc830ed9}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_shader\_apply\_globals@{renderer\_shader\_apply\_globals}}
@@ -350,18 +338,18 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_a8c6604973cdbee2cab3ddc84fc830ed9_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{renderer__frontend_8c_a0728f9d90467c483bf9134eb118776be}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_shader\_apply\_instance@{renderer\_shader\_apply\_instance}}
+\Hypertarget{renderer__frontend_8c_a32e56cdd8d2c58b569074d4533394279}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_shader\_apply\_instance@{renderer\_shader\_apply\_instance}}
 \index{renderer\_shader\_apply\_instance@{renderer\_shader\_apply\_instance}!renderer\_frontend.c@{renderer\_frontend.c}}
 \doxysubsubsection{\texorpdfstring{renderer\_shader\_apply\_instance()}{renderer\_shader\_apply\_instance()}}
-{\footnotesize\ttfamily \label{renderer__frontend_8c_a0728f9d90467c483bf9134eb118776be} 
-\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} renderer\+\_\+shader\+\_\+apply\+\_\+instance (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{renderer__frontend_8c_a32e56cdd8d2c58b569074d4533394279} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} renderer\+\_\+shader\+\_\+apply\+\_\+instance (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}}]{needs\+\_\+update}{}\end{DoxyParamCaption})}
 
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_a0728f9d90467c483bf9134eb118776be_icgraph}
+\includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_a32e56cdd8d2c58b569074d4533394279_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{renderer__frontend_8c_a71af76d3e806ab847d057b0833b5b4e6}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_shader\_bind\_globals@{renderer\_shader\_bind\_globals}}
@@ -398,8 +386,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{renderer__frontend_8c_a7e06da9eaf254abb1285988e496a2bd7} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} renderer\+\_\+shader\+\_\+create (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}}]{s}{, }\item[{\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}}]{renderpass\+\_\+id}{, }\item[{\mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}}]{stage\+\_\+count}{, }\item[{const char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{stage\+\_\+filenames}{, }\item[{\mbox{\hyperlink{shader__system_8h_ae96315c3b2e0673aa632ec5680ebf400}{shader\+\_\+stage}} \texorpdfstring{$\ast$}{*}}]{stages}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -426,8 +413,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{renderer__frontend_8c_a40285d6a3c1d776bf719ae6e50dad316} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} renderer\+\_\+shader\+\_\+initialize (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -454,8 +440,7 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{renderer__frontend_8c_ad441b2027f3048a94c9791a853476955} 
 \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} renderer\+\_\+shader\+\_\+use (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structshader}{shader}} \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -468,11 +453,47 @@ Here is the caller graph for this function\+:
 {\footnotesize\ttfamily \label{renderer__frontend_8c_afca1d9aa7e07852bc4a437e2a55ebbb6} 
 void renderer\+\_\+shutdown (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{state}{}\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{d0/dcc/renderer__frontend_8c_afca1d9aa7e07852bc4a437e2a55ebbb6_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_afca1d9aa7e07852bc4a437e2a55ebbb6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{renderer__frontend_8c_a9263f4d44a70640e7a2cde31f599307c}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_texture\_map\_acquire\_resources@{renderer\_texture\_map\_acquire\_resources}}
+\index{renderer\_texture\_map\_acquire\_resources@{renderer\_texture\_map\_acquire\_resources}!renderer\_frontend.c@{renderer\_frontend.c}}
+\doxysubsubsection{\texorpdfstring{renderer\_texture\_map\_acquire\_resources()}{renderer\_texture\_map\_acquire\_resources()}}
+{\footnotesize\ttfamily \label{renderer__frontend_8c_a9263f4d44a70640e7a2cde31f599307c} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} renderer\+\_\+texture\+\_\+map\+\_\+acquire\+\_\+resources (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtexture__map}{texture\+\_\+map}} \texorpdfstring{$\ast$}{*}}]{map}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_a9263f4d44a70640e7a2cde31f599307c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{renderer__frontend_8c_a758d8d6ee795e457995d6d0f36c6634f}\index{renderer\_frontend.c@{renderer\_frontend.c}!renderer\_texture\_map\_release\_resources@{renderer\_texture\_map\_release\_resources}}
+\index{renderer\_texture\_map\_release\_resources@{renderer\_texture\_map\_release\_resources}!renderer\_frontend.c@{renderer\_frontend.c}}
+\doxysubsubsection{\texorpdfstring{renderer\_texture\_map\_release\_resources()}{renderer\_texture\_map\_release\_resources()}}
+{\footnotesize\ttfamily \label{renderer__frontend_8c_a758d8d6ee795e457995d6d0f36c6634f} 
+void renderer\+\_\+texture\+\_\+map\+\_\+release\+\_\+resources (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtexture__map}{texture\+\_\+map}} \texorpdfstring{$\ast$}{*}}]{map}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dcc/renderer__frontend_8c_a758d8d6ee795e457995d6d0f36c6634f_icgraph}
 \end{center}
 \end{figure}
 

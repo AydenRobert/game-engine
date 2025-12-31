@@ -9,10 +9,10 @@ var renderer__frontend_8h =
     [ "renderer_on_resize", "d7/d9b/renderer__frontend_8h.html#a132251baefe2198eda971cb071ab0bdd", null ],
     [ "renderer_renderpass_id", "d7/d9b/renderer__frontend_8h.html#aa70d4c2f7c330d9585a1d6ec80929a81", null ],
     [ "renderer_set_uniform", "d7/d9b/renderer__frontend_8h.html#a736bc5f83b75efe3cb721da92f045f29", null ],
-    [ "renderer_set_view", "d7/d9b/renderer__frontend_8h.html#a2cdc1a0a88cbb69abe8544ea792134ab", null ],
-    [ "renderer_shader_acquire_instance_resources", "d7/d9b/renderer__frontend_8h.html#a3837f15886db60bd25adb320cd24fc4f", null ],
+    [ "renderer_set_view", "d7/d9b/renderer__frontend_8h.html#a2dc00140f49a8a393cb0f6a41b332b26", null ],
+    [ "renderer_shader_acquire_instance_resources", "d7/d9b/renderer__frontend_8h.html#a6d0979d4e18310eda674025c921d2ca0", null ],
     [ "renderer_shader_apply_globals", "d7/d9b/renderer__frontend_8h.html#a8c6604973cdbee2cab3ddc84fc830ed9", null ],
-    [ "renderer_shader_apply_instance", "d7/d9b/renderer__frontend_8h.html#a0728f9d90467c483bf9134eb118776be", null ],
+    [ "renderer_shader_apply_instance", "d7/d9b/renderer__frontend_8h.html#a32e56cdd8d2c58b569074d4533394279", null ],
     [ "renderer_shader_bind_globals", "d7/d9b/renderer__frontend_8h.html#a71af76d3e806ab847d057b0833b5b4e6", null ],
     [ "renderer_shader_bind_instance", "d7/d9b/renderer__frontend_8h.html#a482c18ff47c4e2a0007cf8c209984708", null ],
     [ "renderer_shader_create", "d7/d9b/renderer__frontend_8h.html#a7e06da9eaf254abb1285988e496a2bd7", null ],
@@ -20,5 +20,7 @@ var renderer__frontend_8h =
     [ "renderer_shader_initialize", "d7/d9b/renderer__frontend_8h.html#a40285d6a3c1d776bf719ae6e50dad316", null ],
     [ "renderer_shader_release_instance_resources", "d7/d9b/renderer__frontend_8h.html#a260739a732fee590283ba8c1c63b5b93", null ],
     [ "renderer_shader_use", "d7/d9b/renderer__frontend_8h.html#ad441b2027f3048a94c9791a853476955", null ],
-    [ "renderer_shutdown", "d7/d9b/renderer__frontend_8h.html#afca1d9aa7e07852bc4a437e2a55ebbb6", null ]
+    [ "renderer_shutdown", "d7/d9b/renderer__frontend_8h.html#afca1d9aa7e07852bc4a437e2a55ebbb6", null ],
+    [ "renderer_texture_map_acquire_resources", "d7/d9b/renderer__frontend_8h.html#a9263f4d44a70640e7a2cde31f599307c", null ],
+    [ "renderer_texture_map_release_resources", "d7/d9b/renderer__frontend_8h.html#a758d8d6ee795e457995d6d0f36c6634f", null ]
 ];

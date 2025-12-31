@@ -1,7 +1,9 @@
 var darray_8c =
 [
     [ "_darray_create", "d6/d71/darray_8c.html#afeedbfc73b73afde4c0bf2a889305108", null ],
+    [ "_darray_create_aligned", "d6/d71/darray_8c.html#a828bd02c771f415e47a6b206a8148ee1", null ],
     [ "_darray_destroy", "d6/d71/darray_8c.html#a2fe5e3c2494168523cb08a62a1cef3f0", null ],
+    [ "_darray_destroy_aligned", "d6/d71/darray_8c.html#a024aa4f7c2ba7567460b88925fe9b57a", null ],
     [ "_darray_field_get", "d6/d71/darray_8c.html#a3458495487a9f5e51f624d66a5f16c4d", null ],
     [ "_darray_field_set", "d6/d71/darray_8c.html#a9a04e308cbc0cb796826f971f77af0b5", null ],
     [ "_darray_insert_at", "d6/d71/darray_8c.html#abfb21e49debe3371395864fa7f3d0b6e", null ],

@@ -1,9 +1,17 @@
 var kstring_8h =
 [
+    [ "string_append_bool", "d7/d63/kstring_8h.html#a80d291bface8b47a981492195392ed14", null ],
+    [ "string_append_char", "d7/d63/kstring_8h.html#a408c35b72b701b5d54234d84e6d903bf", null ],
+    [ "string_append_float", "d7/d63/kstring_8h.html#a0e57ff1234780f816e4ca2a60296deb1", null ],
+    [ "string_append_int", "d7/d63/kstring_8h.html#af7fc19e222eba7c9e9ba648c687a780f", null ],
+    [ "string_append_string", "d7/d63/kstring_8h.html#a16e13ae59786b00d6b6a120469582854", null ],
     [ "string_cleanup_split_array", "d7/d63/kstring_8h.html#a7d90b08d30c90708c4158166fe0f3a92", null ],
     [ "string_copy", "d7/d63/kstring_8h.html#a2e2721cb0d6afa4ac7bde71a51f5d7f0", null ],
+    [ "string_directory_from_path", "d7/d63/kstring_8h.html#a5f94bc626484bff50474e0eb291400e2", null ],
     [ "string_duplicate", "d7/d63/kstring_8h.html#a6313f0a692f28c80f3016a5f77f31bec", null ],
     [ "string_empty", "d7/d63/kstring_8h.html#ab683baecc9c29380d81c9b0fafe27738", null ],
+    [ "string_filename_from_path", "d7/d63/kstring_8h.html#ab521b5ab6a9dc1ee9bb7bb587de03b89", null ],
+    [ "string_filename_no_extension_from_path", "d7/d63/kstring_8h.html#ae674f28f7fd1f23ebee2942a71a4b1e8", null ],
     [ "string_format", "d7/d63/kstring_8h.html#a7fec1c1563d0862f70d82a917db33b1d", null ],
     [ "string_format_v", "d7/d63/kstring_8h.html#aa518371ea23e9607d8e3510ec32dac25", null ],
     [ "string_index_of_char", "d7/d63/kstring_8h.html#af800a91db82019d4d323836568b98d4c", null ],
@@ -27,5 +35,7 @@ var kstring_8h =
     [ "string_to_vec4", "d7/d63/kstring_8h.html#ad7c955132fe8f53aaeaff69fc8b77703", null ],
     [ "string_trim", "d7/d63/kstring_8h.html#ae12f9761e86ff49b94e2d88d138a362a", null ],
     [ "strings_equal", "d7/d63/kstring_8h.html#a3ffc35591464c532cf94a5bcb6adb2bc", null ],
-    [ "strings_equali", "d7/d63/kstring_8h.html#a148b565b9af89efb432a895868c1e4d1", null ]
+    [ "strings_equali", "d7/d63/kstring_8h.html#a148b565b9af89efb432a895868c1e4d1", null ],
+    [ "strings_nequal", "d7/d63/kstring_8h.html#a7f57e1c046f6b80ba5a725b3a4da7863", null ],
+    [ "strings_nequali", "d7/d63/kstring_8h.html#a935172afa95a96c7c2ff38c8ab4778a8", null ]
 ];

@@ -1,60 +1,62 @@
 <map id="material_loader_load" name="material_loader_load">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,389,165,417"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,416,165,444"/>
 <area shape="rect" id="Node000002" href="$df/d45/filesystem_8c.html#aeb2523bb568e1ae441a69c05c80d7ed3" title="Closes the provided handle to a file." alt="" coords="251,5,381,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,388,90,326,109,233,125,182,146,132,175,85,211,44,238,29,235,33,214,48,179,88,151,134,130,184,114,234,95,326,90,389"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,415,88,349,105,249,121,194,143,139,173,88,211,44,238,29,235,33,214,48,177,91,148,141,126,195,110,250,94,349,89,416"/>
 <area shape="rect" id="Node000003" href="$df/d45/filesystem_8c.html#a86cbb9441406d6469d0216cd372c9125" title="Attemp to open file located at this path." alt="" coords="252,57,380,85"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="85,388,94,334,115,255,131,212,152,169,179,130,211,96,239,81,236,85,214,100,183,133,157,172,136,214,120,256,99,335,90,389"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="85,415,92,357,112,270,128,223,149,177,177,134,211,96,239,81,235,85,214,100,181,137,154,179,133,225,117,272,97,357,90,416"/>
 <area shape="rect" id="Node000004" href="$df/d45/filesystem_8c.html#a34b0ddf8fdf6f331f2986ad3bef9a0aa" title="Reads up to a newline character or EOF." alt="" coords="238,109,394,137"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="87,388,99,343,123,280,160,212,183,181,211,153,231,142,228,146,214,157,187,184,164,215,128,282,105,345,92,390"/>
-<area shape="rect" id="Node000005" href="$d3/d3c/kmemory_8c.html#a35f22575c2b4fcbda423b6108e352b15" title=" " alt="" coords="489,313,569,341"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="113,387,159,367,212,350,282,337,353,329,476,325,471,328,353,334,283,342,213,355,161,372,117,391"/>
-<area shape="rect" id="Node000012" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="470,211,589,238"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="87,388,101,348,125,294,161,239,184,216,211,197,245,182,280,174,317,172,353,173,423,185,482,204,477,206,421,190,353,178,317,177,281,180,246,188,214,201,188,220,165,243,129,296,106,350,93,389"/>
-<area shape="rect" id="Node000013" href="$d2/d8b/resource__system_8c.html#a7a3f276c88408bbae1a47b2c8f68dd50" title=" " alt="" coords="213,263,419,290"/>
-<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="100,387,148,347,211,306,244,294,240,298,214,311,151,351,104,390"/>
-<area shape="rect" id="Node000014" href="$d6/d19/kstring_8c.html#ae4d2c3111ca8e06cce31d32a7928f320" title=" " alt="" coords="253,364,378,392"/>
-<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="164,392,240,385,236,388,166,397"/>
-<area shape="rect" id="Node000017" href="$d6/d19/kstring_8c.html#a3ac8f7f54a3429135da71637d268e6c9" title=" " alt="" coords="476,452,582,480"/>
-<area shape="poly" id="edge24_Node000001_Node000017" title=" " alt="" coords="165,412,462,454,459,458,166,417"/>
-<area shape="rect" id="Node000018" href="$d6/d19/kstring_8c.html#a86babd936b82eaf4229e77406968f74d" title=" " alt="" coords="261,621,370,649"/>
-<area shape="poly" id="edge19_Node000001_Node000018" title=" " alt="" coords="91,415,108,455,133,506,168,560,190,585,214,606,249,624,244,626,211,611,186,589,164,564,128,509,103,457,91,420"/>
-<area shape="rect" id="Node000020" href="$d6/d19/kstring_8c.html#af929be4747d22249aa7adc3379fd583a" title="Returns the index of the first occurance of c; otherwise returns &#45;1." alt="" coords="238,465,394,493"/>
-<area shape="poly" id="edge22_Node000001_Node000020" title=" " alt="" coords="126,415,214,445,256,459,251,461,212,450,127,420"/>
-<area shape="rect" id="Node000021" href="$d6/d19/kstring_8c.html#a97b33c831523752f0adff22f80beaec5" title=" " alt="" coords="271,517,361,545"/>
-<area shape="poly" id="edge25_Node000001_Node000021" title=" " alt="" coords="100,415,149,459,180,482,214,502,258,519,253,521,212,507,177,486,146,463,100,420"/>
-<area shape="rect" id="Node000022" href="$d6/d19/kstring_8c.html#a9e48021ce5b39920715bfaa5d92613bc" title=" " alt="" coords="264,569,368,597"/>
-<area shape="poly" id="edge27_Node000001_Node000022" title=" " alt="" coords="94,415,140,483,174,522,214,554,251,572,246,573,211,559,170,525,136,486,94,420"/>
-<area shape="rect" id="Node000023" href="$d6/d19/kstring_8c.html#ae69fd9f5a95697acc5db20176c382b04" title="Attemps to parse a vector from the provided string. Zeros out memory before attempting to parse." alt="" coords="258,211,374,238"/>
-<area shape="poly" id="edge28_Node000001_Node000023" title=" " alt="" coords="92,388,136,321,171,282,211,249,245,235,241,239,214,253,174,286,140,324,96,390"/>
-<area shape="rect" id="Node000024" href="$d6/d19/kstring_8c.html#a4dd30c30bb3f8bd5e2a051c22b04317e" title=" " alt="" coords="270,673,362,701"/>
-<area shape="poly" id="edge30_Node000001_Node000024" title=" " alt="" coords="89,415,103,464,126,529,162,599,186,631,214,658,234,670,257,680,252,681,231,675,211,663,182,634,158,602,121,531,98,465,89,420"/>
-<area shape="rect" id="Node000025" href="$d6/d19/kstring_8c.html#a148b565b9af89efb432a895868c1e4d1" title=" " alt="" coords="260,725,372,753"/>
-<area shape="poly" id="edge31_Node000001_Node000025" title=" " alt="" coords="88,415,99,472,119,552,136,595,156,637,183,676,214,710,248,730,242,730,211,715,178,680,152,640,131,597,114,553,94,473,87,420"/>
-<area shape="rect" id="Node000026" href="$dc/dd0/kmath_8h.html#a4b54896480357d67259f94d532e050dd" title=" " alt="" coords="274,777,358,805"/>
-<area shape="poly" id="edge32_Node000001_Node000026" title=" " alt="" coords="87,415,95,480,113,574,129,625,151,675,179,722,214,762,236,776,262,787,256,786,233,781,211,767,174,725,146,677,124,627,108,575,90,481,86,420"/>
-<area shape="rect" id="Node000006" href="$dd/d44/dynamic__allocator_8c.html#aeef3ef902c20758ce4e52fd3ce7c3112" title="Allocates an amount of memory and returns the given block." alt="" coords="639,301,840,329"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="569,322,626,321,621,323,570,327"/>
-<area shape="rect" id="Node000010" href="$de/d03/platform_8h.html#a19df473ff145c8579c4c838d5bc67372" title=" " alt="" coords="671,353,808,381"/>
-<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="569,332,658,351,653,352,570,337"/>
-<area shape="rect" id="Node000011" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="652,224,827,252"/>
-<area shape="poly" id="edge10_Node000005_Node000011" title=" " alt="" coords="563,311,693,257,688,260,565,315"/>
-<area shape="rect" id="Node000007" href="$da/d3f/freelist_8c.html#ae855f01b88cfd86e3ff8ae7682bbd06c" title="Attempts to find a allocate block of memory given the size." alt="" coords="892,301,1060,329"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="839,313,879,314,874,316,841,318"/>
-<area shape="rect" id="Node000008" href="$da/d3f/freelist_8c.html#a1ce834d1bd9f9caf272e6d63aa00deb8" title="Obtains the amount of free space within the freelist." alt="" coords="1113,276,1258,304"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1060,302,1100,300,1095,301,1062,308"/>
-<area shape="rect" id="Node000009" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="1136,328,1235,356"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="1061,323,1123,333,1118,334,1061,329"/>
-<area shape="poly" id="edge12_Node000012_Node000011" title=" " alt="" coords="589,226,640,230,635,232,590,231"/>
-<area shape="poly" id="edge15_Node000014_Node000005" title=" " alt="" coords="376,361,476,339,472,342,378,366"/>
-<area shape="rect" id="Node000015" href="$d3/d3c/kmemory_8c.html#ae88e143a36677919fee16bdf0f11bc79" title=" " alt="" coords="678,429,801,457"/>
-<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="379,385,665,430,660,433,379,390"/>
-<area shape="poly" id="edge18_Node000014_Node000017" title=" " alt="" coords="369,390,420,407,492,444,487,445,418,412,370,395"/>
-<area shape="rect" id="Node000016" href="$de/d03/platform_8h.html#a15258bb22b902725b1fbf405463ed07d" title=" " alt="" coords="888,429,1065,457"/>
-<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="801,441,874,443,869,444,802,446"/>
-<area shape="rect" id="Node000019" href="$d6/d19/kstring_8c.html#a7d32c70521c217a716c586f145dbb4d9" title=" " alt="" coords="467,581,591,609"/>
-<area shape="poly" id="edge20_Node000018_Node000019" title=" " alt="" coords="370,622,454,609,449,611,372,628"/>
-<area shape="poly" id="edge21_Node000019_Node000015" title=" " alt="" coords="549,579,704,468,709,465,551,583"/>
-<area shape="poly" id="edge23_Node000020_Node000017" title=" " alt="" coords="394,472,463,469,458,471,395,477"/>
-<area shape="poly" id="edge26_Node000021_Node000017" title=" " alt="" coords="360,518,418,502,478,484,473,487,420,507,363,523"/>
-<area shape="poly" id="edge29_Node000023_Node000012" title=" " alt="" coords="373,222,456,223,452,226,375,227"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="86,415,96,364,118,292,135,253,155,215,181,179,211,148,226,140,222,144,214,152,185,182,160,217,139,255,123,294,101,366,91,416"/>
+<area shape="rect" id="Node000005" href="$d3/d3c/kmemory_8c.html#a35f22575c2b4fcbda423b6108e352b15" title=" " alt="" coords="489,263,569,290"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="93,414,138,356,172,324,212,299,279,277,350,266,417,264,476,269,471,271,417,270,351,272,281,282,214,304,175,329,142,360,98,417"/>
+<area shape="rect" id="Node000012" href="$d3/d3c/kmemory_8c.html#af7a3a9859ec3104c490238242dae4ed6" title=" " alt="" coords="470,209,589,237"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="90,414,107,382,133,340,168,298,211,264,271,238,335,223,398,216,456,216,452,219,398,221,336,228,273,243,214,268,172,302,137,343,111,385,95,416"/>
+<area shape="rect" id="Node000013" href="$d2/d8b/resource__system_8c.html#a7a3f276c88408bbae1a47b2c8f68dd50" title=" " alt="" coords="213,571,419,598"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="96,442,144,498,177,529,214,556,229,564,224,565,211,560,174,533,140,502,97,447"/>
+<area shape="rect" id="Node000014" href="$d6/d19/kstring_8c.html#ae4d2c3111ca8e06cce31d32a7928f320" title=" " alt="" coords="253,365,378,393"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="150,413,240,394,236,398,153,418"/>
+<area shape="rect" id="Node000017" href="$d6/d19/kstring_8c.html#a3ac8f7f54a3429135da71637d268e6c9" title=" " alt="" coords="476,441,582,469"/>
+<area shape="poly" id="edge24_Node000001_Node000017" title=" " alt="" coords="165,432,462,449,459,453,166,437"/>
+<area shape="rect" id="Node000018" href="$d6/d19/kstring_8c.html#a86babd936b82eaf4229e77406968f74d" title=" " alt="" coords="261,313,370,341"/>
+<area shape="poly" id="edge19_Node000001_Node000018" title=" " alt="" coords="104,414,152,382,212,351,248,340,244,344,214,356,155,387,108,417"/>
+<area shape="rect" id="Node000020" href="$d6/d19/kstring_8c.html#af929be4747d22249aa7adc3379fd583a" title="Returns the index of the first occurance of c; otherwise returns &#45;1." alt="" coords="238,467,394,494"/>
+<area shape="poly" id="edge22_Node000001_Node000020" title=" " alt="" coords="150,442,237,461,233,464,152,447"/>
+<area shape="rect" id="Node000021" href="$d6/d19/kstring_8c.html#a97b33c831523752f0adff22f80beaec5" title=" " alt="" coords="271,519,361,546"/>
+<area shape="poly" id="edge25_Node000001_Node000021" title=" " alt="" coords="105,441,155,473,214,503,258,519,253,521,212,508,152,477,107,447"/>
+<area shape="rect" id="Node000022" href="$d6/d19/kstring_8c.html#a9e48021ce5b39920715bfaa5d92613bc" title=" " alt="" coords="264,623,368,650"/>
+<area shape="poly" id="edge27_Node000001_Node000022" title=" " alt="" coords="92,441,111,477,136,522,171,568,214,608,251,626,246,627,211,612,167,572,132,525,106,479,92,447"/>
+<area shape="rect" id="Node000023" href="$d6/d19/kstring_8c.html#aa415b4bf6b684a0e26fc83e80e9a11e1" title="Attempts to parse a 32&#45;bit floating point number from a string." alt="" coords="263,675,369,702"/>
+<area shape="poly" id="edge28_Node000001_Node000023" title=" " alt="" coords="90,441,105,486,129,545,165,607,188,635,214,660,250,679,245,680,211,664,184,639,161,610,124,547,100,488,90,447"/>
+<area shape="rect" id="Node000024" href="$d6/d19/kstring_8c.html#ae69fd9f5a95697acc5db20176c382b04" title="Attemps to parse a vector from the provided string. Zeros out memory before attempting to parse." alt="" coords="258,161,374,189"/>
+<area shape="poly" id="edge29_Node000001_Node000024" title=" " alt="" coords="88,415,102,373,127,317,163,257,185,229,211,205,245,188,241,192,214,209,189,233,167,260,131,320,107,375,93,416"/>
+<area shape="rect" id="Node000025" href="$d6/d19/kstring_8c.html#a4dd30c30bb3f8bd5e2a051c22b04317e" title=" " alt="" coords="270,727,362,754"/>
+<area shape="poly" id="edge31_Node000001_Node000025" title=" " alt="" coords="88,442,101,495,123,568,139,607,159,645,184,681,214,712,234,724,257,734,252,734,231,729,211,716,180,684,155,648,134,609,118,569,96,496,88,447"/>
+<area shape="rect" id="Node000026" href="$d6/d19/kstring_8c.html#a148b565b9af89efb432a895868c1e4d1" title=" " alt="" coords="260,779,372,806"/>
+<area shape="poly" id="edge32_Node000001_Node000026" title=" " alt="" coords="87,442,97,503,116,590,132,637,153,683,181,726,214,764,247,784,242,784,211,768,176,730,149,686,127,639,111,591,92,504,87,447"/>
+<area shape="rect" id="Node000027" href="$dc/dd0/kmath_8h.html#a4b54896480357d67259f94d532e050dd" title=" " alt="" coords="274,831,358,858"/>
+<area shape="poly" id="edge33_Node000001_Node000027" title=" " alt="" coords="87,441,93,511,110,611,126,666,148,721,177,772,214,816,235,830,262,840,256,840,233,834,211,820,172,775,143,723,121,668,105,612,88,511,86,447"/>
+<area shape="rect" id="Node000006" href="$dd/d44/dynamic__allocator_8c.html#aeef3ef902c20758ce4e52fd3ce7c3112" title="Allocates an amount of memory and returns the given block." alt="" coords="639,313,840,341"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="569,283,667,308,662,310,570,289"/>
+<area shape="rect" id="Node000010" href="$de/d03/platform_8h.html#a19df473ff145c8579c4c838d5bc67372" title=" " alt="" coords="671,261,808,289"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="569,274,658,275,653,277,570,279"/>
+<area shape="rect" id="Node000011" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="652,209,827,237"/>
+<area shape="poly" id="edge10_Node000005_Node000011" title=" " alt="" coords="568,264,670,240,665,243,571,269"/>
+<area shape="rect" id="Node000007" href="$da/d3f/freelist_8c.html#ae855f01b88cfd86e3ff8ae7682bbd06c" title="Attempts to find a allocate block of memory given the size." alt="" coords="892,313,1060,341"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="839,325,879,326,874,328,841,330"/>
+<area shape="rect" id="Node000008" href="$da/d3f/freelist_8c.html#a1ce834d1bd9f9caf272e6d63aa00deb8" title="Obtains the amount of free space within the freelist." alt="" coords="1113,288,1258,316"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1060,314,1100,312,1095,313,1062,319"/>
+<area shape="rect" id="Node000009" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="1136,340,1235,368"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="1061,335,1123,345,1118,346,1061,341"/>
+<area shape="poly" id="edge12_Node000012_Node000011" title=" " alt="" coords="588,221,639,222,635,224,590,226"/>
+<area shape="poly" id="edge15_Node000014_Node000005" title=" " alt="" coords="378,367,418,350,432,339,441,327,451,314,465,301,477,296,473,300,469,305,455,318,446,330,436,343,420,355,381,371"/>
+<area shape="rect" id="Node000015" href="$d3/d3c/kmemory_8c.html#ae88e143a36677919fee16bdf0f11bc79" title=" " alt="" coords="678,365,801,393"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="378,377,665,377,661,381,379,382"/>
+<area shape="poly" id="edge18_Node000014_Node000017" title=" " alt="" coords="365,391,420,409,483,434,478,436,418,414,366,396"/>
+<area shape="rect" id="Node000016" href="$de/d03/platform_8h.html#a15258bb22b902725b1fbf405463ed07d" title=" " alt="" coords="888,365,1065,393"/>
+<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="801,377,874,378,869,380,802,382"/>
+<area shape="rect" id="Node000019" href="$d6/d19/kstring_8c.html#a7d32c70521c217a716c586f145dbb4d9" title=" " alt="" coords="467,315,591,342"/>
+<area shape="poly" id="edge20_Node000018_Node000019" title=" " alt="" coords="370,325,453,327,449,329,372,330"/>
+<area shape="poly" id="edge21_Node000019_Node000015" title=" " alt="" coords="589,340,667,360,662,362,590,346"/>
+<area shape="poly" id="edge23_Node000020_Node000017" title=" " alt="" coords="393,469,463,462,458,465,395,474"/>
+<area shape="poly" id="edge26_Node000021_Node000017" title=" " alt="" coords="360,520,418,503,489,475,485,478,420,508,363,525"/>
+<area shape="poly" id="edge30_Node000024_Node000012" title=" " alt="" coords="373,186,457,205,452,208,375,191"/>
 </map>

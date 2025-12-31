@@ -1,0 +1,13 @@
+<map id="quat_mul" name="quat_mul">
+<area shape="rect" id="Node000001" title=" " alt="" coords="475,65,558,93"/>
+<area shape="rect" id="Node000002" href="$d8/d27/transform_8c.html#a9a1abe4a49544a3d475f1ad38a0d9a0e" title=" " alt="" coords="286,5,418,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="463,59,426,47,396,36,397,31,428,42,468,59"/>
+<area shape="rect" id="Node000005" href="$d8/d27/transform_8c.html#a719a01ff27408bc24f7b8eaa4e90bc69" title=" " alt="" coords="277,57,427,102"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="457,79,428,82,428,77,462,79"/>
+<area shape="rect" id="Node000006" href="$d8/d27/transform_8c.html#aca9338fbf87b1473341ab393fffa8f52" title=" " alt="" coords="277,126,427,171"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="470,99,407,128,406,123,465,100"/>
+<area shape="rect" id="Node000003" href="$d4/d8b/application_8c.html#ad6aaa3596896dacf8de1439cc34a264b" title=" " alt="" coords="108,5,229,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="268,20,230,22,229,17,273,18"/>
+<area shape="rect" id="Node000004" href="$d1/dc6/entry_8h.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,60,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="90,21,61,22,59,17,94,17"/>
+</map>

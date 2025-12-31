@@ -1,0 +1,127 @@
+\doxysection{engine/src/math/geometry\+\_\+utils.c File Reference}
+\hypertarget{geometry__utils_8c}{}\label{geometry__utils_8c}\index{engine/src/math/geometry\_utils.c@{engine/src/math/geometry\_utils.c}}
+{\ttfamily \#include "{}math/geometry\+\_\+utils.\+h"{}}\newline
+{\ttfamily \#include "{}core/kmemory.\+h"{}}\newline
+{\ttfamily \#include "{}core/logger.\+h"{}}\newline
+{\ttfamily \#include "{}math/kmath.\+h"{}}\newline
+{\ttfamily \#include "{}math/math\+\_\+types.\+h"{}}\newline
+Include dependency graph for geometry\+\_\+utils.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/db0/geometry__utils_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{geometry__utils_8c_ab0286cb3ddf11c354d535ebfc854efd3}{geometry\+\_\+generate\+\_\+normals}} (\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} vertex\+\_\+count, \mbox{\hyperlink{structvertex__3d}{vertex\+\_\+3d}} \texorpdfstring{$\ast$}{*}vertices, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} index\+\_\+count, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}incices)
+\item 
+void \mbox{\hyperlink{geometry__utils_8c_a090359e5a2c111bdefd6f6d9815c9460}{geometry\+\_\+generate\+\_\+tangents}} (\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} vertex\+\_\+count, \mbox{\hyperlink{structvertex__3d}{vertex\+\_\+3d}} \texorpdfstring{$\ast$}{*}vertices, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} index\+\_\+count, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}incices)
+\item 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} \mbox{\hyperlink{geometry__utils_8c_a704be448e4d08e3a43374c1eeb4325b9}{vertex3d\+\_\+equal}} (\mbox{\hyperlink{structvertex__3d}{vertex\+\_\+3d}} vert\+\_\+0, \mbox{\hyperlink{structvertex__3d}{vertex\+\_\+3d}} vert\+\_\+1)
+\item 
+void \mbox{\hyperlink{geometry__utils_8c_ad00cc5e063ec3f4b5f3e00fbf861fd21}{reassign\+\_\+index}} (\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} index\+\_\+count, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}indices, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} from, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} to)
+\item 
+void \mbox{\hyperlink{geometry__utils_8c_aeb3e40fd9ac192218830cfbbd9e8b523}{geometry\+\_\+deduplicate\+\_\+vertices}} (\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} vertex\+\_\+count, \mbox{\hyperlink{structvertex__3d}{vertex\+\_\+3d}} \texorpdfstring{$\ast$}{*}vertices, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} index\+\_\+count, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}incices, \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}out\+\_\+vertex\+\_\+count, \mbox{\hyperlink{structvertex__3d}{vertex\+\_\+3d}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}out\+\_\+vertices)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{geometry__utils_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{geometry__utils_8c_aeb3e40fd9ac192218830cfbbd9e8b523}\index{geometry\_utils.c@{geometry\_utils.c}!geometry\_deduplicate\_vertices@{geometry\_deduplicate\_vertices}}
+\index{geometry\_deduplicate\_vertices@{geometry\_deduplicate\_vertices}!geometry\_utils.c@{geometry\_utils.c}}
+\doxysubsubsection{\texorpdfstring{geometry\_deduplicate\_vertices()}{geometry\_deduplicate\_vertices()}}
+{\footnotesize\ttfamily \label{geometry__utils_8c_aeb3e40fd9ac192218830cfbbd9e8b523} 
+void geometry\+\_\+deduplicate\+\_\+vertices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{vertex\+\_\+count}{, }\item[{\mbox{\hyperlink{structvertex__3d}{vertex\+\_\+3d}} \texorpdfstring{$\ast$}{*}}]{vertices}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{index\+\_\+count}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}}]{incices}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}}]{out\+\_\+vertex\+\_\+count}{, }\item[{\mbox{\hyperlink{structvertex__3d}{vertex\+\_\+3d}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{out\+\_\+vertices}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/dd2/geometry__utils_8c_aeb3e40fd9ac192218830cfbbd9e8b523_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/dd2/geometry__utils_8c_aeb3e40fd9ac192218830cfbbd9e8b523_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{geometry__utils_8c_ab0286cb3ddf11c354d535ebfc854efd3}\index{geometry\_utils.c@{geometry\_utils.c}!geometry\_generate\_normals@{geometry\_generate\_normals}}
+\index{geometry\_generate\_normals@{geometry\_generate\_normals}!geometry\_utils.c@{geometry\_utils.c}}
+\doxysubsubsection{\texorpdfstring{geometry\_generate\_normals()}{geometry\_generate\_normals()}}
+{\footnotesize\ttfamily \label{geometry__utils_8c_ab0286cb3ddf11c354d535ebfc854efd3} 
+void geometry\+\_\+generate\+\_\+normals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{vertex\+\_\+count}{, }\item[{\mbox{\hyperlink{structvertex__3d}{vertex\+\_\+3d}} \texorpdfstring{$\ast$}{*}}]{vertices}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{index\+\_\+count}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}}]{incices}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/dd2/geometry__utils_8c_ab0286cb3ddf11c354d535ebfc854efd3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{geometry__utils_8c_a090359e5a2c111bdefd6f6d9815c9460}\index{geometry\_utils.c@{geometry\_utils.c}!geometry\_generate\_tangents@{geometry\_generate\_tangents}}
+\index{geometry\_generate\_tangents@{geometry\_generate\_tangents}!geometry\_utils.c@{geometry\_utils.c}}
+\doxysubsubsection{\texorpdfstring{geometry\_generate\_tangents()}{geometry\_generate\_tangents()}}
+{\footnotesize\ttfamily \label{geometry__utils_8c_a090359e5a2c111bdefd6f6d9815c9460} 
+void geometry\+\_\+generate\+\_\+tangents (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{vertex\+\_\+count}{, }\item[{\mbox{\hyperlink{structvertex__3d}{vertex\+\_\+3d}} \texorpdfstring{$\ast$}{*}}]{vertices}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{index\+\_\+count}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}}]{incices}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/dd2/geometry__utils_8c_a090359e5a2c111bdefd6f6d9815c9460_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/dd2/geometry__utils_8c_a090359e5a2c111bdefd6f6d9815c9460_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{geometry__utils_8c_ad00cc5e063ec3f4b5f3e00fbf861fd21}\index{geometry\_utils.c@{geometry\_utils.c}!reassign\_index@{reassign\_index}}
+\index{reassign\_index@{reassign\_index}!geometry\_utils.c@{geometry\_utils.c}}
+\doxysubsubsection{\texorpdfstring{reassign\_index()}{reassign\_index()}}
+{\footnotesize\ttfamily \label{geometry__utils_8c_ad00cc5e063ec3f4b5f3e00fbf861fd21} 
+void reassign\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{index\+\_\+count}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \texorpdfstring{$\ast$}{*}}]{indices}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{from}{, }\item[{\mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{to}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/dd2/geometry__utils_8c_ad00cc5e063ec3f4b5f3e00fbf861fd21_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{geometry__utils_8c_a704be448e4d08e3a43374c1eeb4325b9}\index{geometry\_utils.c@{geometry\_utils.c}!vertex3d\_equal@{vertex3d\_equal}}
+\index{vertex3d\_equal@{vertex3d\_equal}!geometry\_utils.c@{geometry\_utils.c}}
+\doxysubsubsection{\texorpdfstring{vertex3d\_equal()}{vertex3d\_equal()}}
+{\footnotesize\ttfamily \label{geometry__utils_8c_a704be448e4d08e3a43374c1eeb4325b9} 
+\mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}} vertex3d\+\_\+equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structvertex__3d}{vertex\+\_\+3d}}}]{vert\+\_\+0}{, }\item[{\mbox{\hyperlink{structvertex__3d}{vertex\+\_\+3d}}}]{vert\+\_\+1}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/dd2/geometry__utils_8c_a704be448e4d08e3a43374c1eeb4325b9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/dd2/geometry__utils_8c_a704be448e4d08e3a43374c1eeb4325b9_icgraph}
+\end{center}
+\end{figure}

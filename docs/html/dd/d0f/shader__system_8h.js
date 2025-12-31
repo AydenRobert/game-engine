@@ -82,7 +82,7 @@ var shader__system_8h =
       [ "SHADER_UNIFORM_TYPE_CUSTOM", "dd/d0f/shader__system_8h.html#ad8fb673c9f87735e69b6d59d1bb83252aa7cc4f1771be894e002adee553a4f9f2", null ]
     ] ],
     [ "shader_system_apply_global", "dd/d0f/shader__system_8h.html#a3723daed49d355ee186759a1c15d2a34", null ],
-    [ "shader_system_apply_instance", "dd/d0f/shader__system_8h.html#a5d6a0ed1e93e9e08ba9cdf49fd4401cb", null ],
+    [ "shader_system_apply_instance", "dd/d0f/shader__system_8h.html#a0d361460ed177c9f004b45487b811f2c", null ],
     [ "shader_system_bind_instance", "dd/d0f/shader__system_8h.html#a6489e3b156e5001f2ce3d051b0d43aad", null ],
     [ "shader_system_create", "dd/d0f/shader__system_8h.html#a60fa71ea702dad92db16922240ef7e89", null ],
     [ "shader_system_get", "dd/d0f/shader__system_8h.html#a5954b70c21adc82e32f202fff9e931fa", null ],

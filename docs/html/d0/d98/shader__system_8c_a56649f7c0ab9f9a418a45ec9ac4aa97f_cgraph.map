@@ -1,29 +1,45 @@
 <map id="add_sampler" name="add_sampler">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,114,111,142"/>
-<area shape="rect" id="Node000002" href="$d0/d98/shader__system_8c.html#a846cb7ff2b963aba55454ef91fdf7fb2" title=" " alt="" coords="159,5,314,50"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,111,157,60,170,55,166,59,160,65,81,115"/>
-<area shape="rect" id="Node000003" href="$d9/d0a/texture__system_8c.html#ae9e13f5483fd272b9430ca11719164e4" title=" " alt="" coords="161,75,312,119"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="110,116,147,111,143,114,112,121"/>
-<area shape="rect" id="Node000004" href="$d0/d98/shader__system_8c.html#a709441bd5f735052bd788c2d8e7eeadf" title=" " alt="" coords="185,143,288,171"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="111,134,171,145,167,147,112,139"/>
-<area shape="rect" id="Node000011" href="$d0/d98/shader__system_8c.html#a5229b7d65b356cf929cd273f7c70a826" title=" " alt="" coords="159,195,314,223"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="83,139,160,180,178,189,173,190,158,185,82,145"/>
-<area shape="rect" id="Node000005" href="$d8/db0/defines_8h.html#a2f99ca6366e01a8ead4227cecbb8b67f" title=" " alt="" coords="362,91,503,119"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="288,141,365,122,360,124,289,146"/>
-<area shape="rect" id="Node000007" href="$d8/de9/hashtable_8c.html#a33773f5004b2ecc9a3af543ba2e52c60" title="Stores a copy of the data in value into the provided hashtable. Only use for tables which were NOT cr..." alt="" coords="376,143,489,171"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="288,154,363,156,358,158,289,160"/>
-<area shape="rect" id="Node000006" href="$d8/db0/defines_8h.html#abf0b958d00fe41b2f3b02d9ed263f780" title=" " alt="" coords="564,91,661,119"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="503,102,551,105,545,105,504,108"/>
-<area shape="rect" id="Node000008" href="$d8/de9/hashtable_8c.html#a69977851e8a85a621f7bd49b66405f3c" title=" " alt="" coords="564,195,661,223"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="484,169,552,191,547,191,483,174"/>
-<area shape="rect" id="Node000009" href="$d3/d3c/kmemory_8c.html#ae88e143a36677919fee16bdf0f11bc79" title=" " alt="" coords="551,143,674,171"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="489,154,539,157,534,157,489,160"/>
-<area shape="rect" id="Node000010" href="$de/d03/platform_8h.html#a15258bb22b902725b1fbf405463ed07d" title=" " alt="" coords="722,143,899,171"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="674,154,708,157,703,157,674,160"/>
-<area shape="rect" id="Node000012" href="$d8/de9/hashtable_8c.html#abc39f8ea1cbed6f616ea660f9f00b876" title="Obtains a copy of data present in the hashtable. Only use for tables which were NOT created with is_p..." alt="" coords="376,195,489,223"/>
-<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="314,206,363,209,358,209,314,212"/>
-<area shape="rect" id="Node000013" href="$d6/d19/kstring_8c.html#a3ac8f7f54a3429135da71637d268e6c9" title=" " alt="" coords="380,247,486,275"/>
-<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="292,221,367,243,362,243,291,226"/>
-<area shape="poly" id="edge12_Node000012_Node000008" title=" " alt="" coords="489,206,552,209,546,209,490,212"/>
-<area shape="poly" id="edge13_Node000012_Node000009" title=" " alt="" coords="483,192,545,176,550,175,484,197"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,247,111,274"/>
+<area shape="rect" id="Node000002" href="$d3/d3c/kmemory_8c.html#a35f22575c2b4fcbda423b6108e352b15" title=" " alt="" coords="202,83,282,110"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,245,97,185,124,150,157,120,188,106,185,110,160,124,128,153,102,188,68,248"/>
+<area shape="rect" id="Node000009" href="$d0/dcc/renderer__frontend_8c.html#a9263f4d44a70640e7a2cde31f599307c" title=" " alt="" coords="159,134,325,179"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="75,245,112,217,157,189,170,184,166,188,160,193,115,222,79,248"/>
+<area shape="rect" id="Node000010" href="$d0/d98/shader__system_8c.html#a846cb7ff2b963aba55454ef91fdf7fb2" title=" " alt="" coords="165,204,319,248"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="110,248,151,241,148,245,113,253"/>
+<area shape="rect" id="Node000011" href="$d9/d0a/texture__system_8c.html#ae9e13f5483fd272b9430ca11719164e4" title=" " alt="" coords="166,273,318,318"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="110,268,153,277,149,279,112,273"/>
+<area shape="rect" id="Node000012" href="$d0/d98/shader__system_8c.html#a709441bd5f735052bd788c2d8e7eeadf" title=" " alt="" coords="190,341,294,369"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="76,272,114,300,160,327,178,337,173,338,157,332,111,305,76,277"/>
+<area shape="rect" id="Node000019" href="$d0/d98/shader__system_8c.html#a5229b7d65b356cf929cd273f7c70a826" title=" " alt="" coords="164,393,320,421"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="68,272,105,325,131,353,160,378,171,386,166,387,157,383,127,357,101,328,67,278"/>
+<area shape="rect" id="Node000003" href="$dd/d44/dynamic__allocator_8c.html#aeef3ef902c20758ce4e52fd3ce7c3112" title="Allocates an amount of memory and returns the given block." alt="" coords="373,31,573,58"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="281,85,396,61,392,64,284,90"/>
+<area shape="rect" id="Node000007" href="$de/d03/platform_8h.html#a19df473ff145c8579c4c838d5bc67372" title=" " alt="" coords="405,83,541,110"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="282,94,391,95,387,98,283,99"/>
+<area shape="rect" id="Node000008" href="$de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="386,135,560,162"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="282,103,396,130,392,132,283,108"/>
+<area shape="rect" id="Node000004" href="$da/d3f/freelist_8c.html#ae855f01b88cfd86e3ff8ae7682bbd06c" title="Attempts to find a allocate block of memory given the size." alt="" coords="621,31,790,58"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="573,42,608,44,603,45,575,47"/>
+<area shape="rect" id="Node000005" href="$da/d3f/freelist_8c.html#a1ce834d1bd9f9caf272e6d63aa00deb8" title="Obtains the amount of free space within the freelist." alt="" coords="854,57,999,85"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="790,52,841,60,836,61,790,57"/>
+<area shape="rect" id="Node000006" href="$da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="877,5,976,33"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="789,32,864,26,859,27,791,37"/>
+<area shape="rect" id="Node000013" href="$d8/db0/defines_8h.html#a2f99ca6366e01a8ead4227cecbb8b67f" title=" " alt="" coords="402,289,544,317"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="293,341,396,320,391,322,295,346"/>
+<area shape="rect" id="Node000015" href="$d8/de9/hashtable_8c.html#a33773f5004b2ecc9a3af543ba2e52c60" title="Stores a copy of the data in value into the provided hashtable. Only use for tables which were NOT cr..." alt="" coords="417,341,529,369"/>
+<area shape="poly" id="edge14_Node000012_Node000015" title=" " alt="" coords="294,353,404,354,399,356,294,358"/>
+<area shape="rect" id="Node000014" href="$d8/db0/defines_8h.html#abf0b958d00fe41b2f3b02d9ed263f780" title=" " alt="" coords="657,289,754,317"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="544,301,644,303,639,304,544,306"/>
+<area shape="rect" id="Node000016" href="$d8/de9/hashtable_8c.html#a69977851e8a85a621f7bd49b66405f3c" title=" " alt="" coords="657,341,754,369"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="529,353,645,355,639,356,530,358"/>
+<area shape="rect" id="Node000017" href="$d3/d3c/kmemory_8c.html#ae88e143a36677919fee16bdf0f11bc79" title=" " alt="" coords="644,393,767,421"/>
+<area shape="poly" id="edge16_Node000015_Node000017" title=" " alt="" coords="530,365,632,390,627,390,529,370"/>
+<area shape="rect" id="Node000018" href="$de/d03/platform_8h.html#a15258bb22b902725b1fbf405463ed07d" title=" " alt="" coords="838,393,1015,421"/>
+<area shape="poly" id="edge17_Node000017_Node000018" title=" " alt="" coords="767,405,825,407,820,407,767,410"/>
+<area shape="rect" id="Node000020" href="$d8/de9/hashtable_8c.html#abc39f8ea1cbed6f616ea660f9f00b876" title="Obtains a copy of data present in the hashtable. Only use for tables which were NOT created with is_p..." alt="" coords="416,393,530,421"/>
+<area shape="poly" id="edge19_Node000019_Node000020" title=" " alt="" coords="320,405,403,407,398,408,320,410"/>
+<area shape="rect" id="Node000021" href="$d6/d19/kstring_8c.html#a3ac8f7f54a3429135da71637d268e6c9" title=" " alt="" coords="420,445,526,473"/>
+<area shape="poly" id="edge22_Node000019_Node000021" title=" " alt="" coords="307,419,408,444,402,444,307,424"/>
+<area shape="poly" id="edge20_Node000020_Node000016" title=" " alt="" coords="530,392,639,370,645,369,531,397"/>
+<area shape="poly" id="edge21_Node000020_Node000017" title=" " alt="" coords="530,405,631,407,626,407,530,410"/>
 </map>

@@ -11,77 +11,112 @@
 \DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aa78903d09717855364bc887ae0e811029}{RESOURCE\_TYPE\_BINARY}},}
 \DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aacb93ef26c73b915982994a1c5dad6724}{RESOURCE\_TYPE\_IMAGE}},}
 \DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aa1726e082b3c7dbd82916f323e53cdaad}{RESOURCE\_TYPE\_MATERIAL}},}
-\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aa9f4b2c10a227c7fbbb1369605bb298c0}{RESOURCE\_TYPE\_STATIC\_MESH}},}
-\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aa8de606146a83b6d0ef73ab8d58cc86d2}{RESOURCE\_TYPE\_SHADER}},}
-\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aab9a618bd01a59e513b7de76846a223ef}{RESOURCE\_TYPE\_CUSTOM}}}
-\DoxyCodeLine{00013\ \}\ \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83a}{resource\_type}};}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structresource}{resource}}\ \{}
-\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structresource_af6263522ae3820a386ae382c41f2eb5b}{loader\_id}};}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structresource_a74e088a5a3c6b12a25f5776c372680f8}{name}};}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structresource_a70fd488eb9a63d8d98f73c8ccf7032ec}{full\_path}};}
-\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{structresource_aa5e7f8e92bce1c6f990f044570f4a814}{data\_size}};}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structresource_a6d2c86769bb2ec68a0087e5a0175d276}{data}};}
-\DoxyCodeLine{00021\ \}\ \mbox{\hyperlink{structresource}{resource}};}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structimage__resource__data}{image\_resource\_data}}\ \{}
-\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ \mbox{\hyperlink{structimage__resource__data_aa14d02f6d822e95495b3b40888647fff}{channel\_count}};}
-\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structimage__resource__data_ac62bfd950ab086f524049f62cb20ed2e}{width}};}
-\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structimage__resource__data_aaa3aeee2e6ae12d6d71e8dede4c863f2}{height}};}
-\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ *\mbox{\hyperlink{structimage__resource__data_a6c003c384eac2c4265f22b63f0b6e8a1}{pixels}};}
-\DoxyCodeLine{00028\ \}\ \mbox{\hyperlink{structimage__resource__data}{image\_resource\_data}};}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ TEXTURE\_NAME\_MAX\_LENGTH\ 512}}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtexture}{texture}}\ \{}
-\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structtexture_a80d0e2a9d244ce65a29cb87e5db5c695}{id}};}
-\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structtexture_ae54857884dad86252f0615066be9990f}{width}};}
-\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structtexture_ab135b895ef0f58fde3dfbdf840692e2d}{height}};}
-\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ \mbox{\hyperlink{structtexture_ae00b4c6fc1add9e080a13fff260c01ca}{channel\_count}};}
-\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{structtexture_ab9b61470d021bc2e7d8a4ee544f4ffe6}{has\_transparency}};}
-\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structtexture_a86f5c2a9138ae4004bf1528c5365def0}{generation}};}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structtexture_aff42921931131ad7a3a7871077e9e916}{name}}[\mbox{\hyperlink{resource__types_8h_aa1f1d42c2919da754694e18cae601e81}{TEXTURE\_NAME\_MAX\_LENGTH}}];}
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structtexture_a2a635d43b6e8cde4581d47b1f3945677}{internal\_data}};}
-\DoxyCodeLine{00041\ \}\ \mbox{\hyperlink{structtexture}{texture}};}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147}{texture\_use}}\ \{}
-\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147aee5c11c42183654219b51c271979dcaa}{TEXTURE\_USE\_UNKNOWN}}\ =\ 0x00,}
-\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147aa124fd894f82577e7ea7dd862fe22a7b}{TEXTURE\_USE\_MAP\_DIFFUSE}}\ =\ 0x01}
-\DoxyCodeLine{00046\ \}\ \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147}{texture\_use}};}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtexture__map}{texture\_map}}\ \{}
-\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{structtexture__map_a33ddcc4ba1d3f0148c5632a468b1e693}{texture}}\ *\mbox{\hyperlink{structtexture__map_a33ddcc4ba1d3f0148c5632a468b1e693}{texture}};}
-\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147}{texture\_use}}\ \mbox{\hyperlink{structtexture__map_a18bbbe03ff0a2e03f4ac7220a7e29bf3}{use}};}
-\DoxyCodeLine{00051\ \}\ \mbox{\hyperlink{structtexture__map}{texture\_map}};}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ MATERIAL\_NAME\_MAX\_LENGTH\ 512}}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmaterial__config}{material\_config}}\ \{}
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structmaterial__config_a44470af1a4d4f549d85b39707ad97768}{name}}[\mbox{\hyperlink{resource__types_8h_a86c7ee3b9964a925fad1f79c84d7d8f7}{MATERIAL\_NAME\_MAX\_LENGTH}}];}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structmaterial__config_a77014a3aeeb02bd6c5c9b24afe17ed4c}{shader\_name}};}
-\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{structmaterial__config_aac5176ac81b536e3069286a49ebc09be}{auto\_release}};}
-\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ \mbox{\hyperlink{structmaterial__config_a5208780d48ccf706dd4602bb311f6ff4}{diffuse\_colour}};}
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structmaterial__config_a7031da2bb93b1b4957fa3f7f5c219804}{diffuse\_map\_name}}[\mbox{\hyperlink{resource__types_8h_aa1f1d42c2919da754694e18cae601e81}{TEXTURE\_NAME\_MAX\_LENGTH}}];}
-\DoxyCodeLine{00061\ \}\ \mbox{\hyperlink{structmaterial__config}{material\_config}};}
-\DoxyCodeLine{00062\ }
-\DoxyCodeLine{00063\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmaterial}{material}}\ \{}
-\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structmaterial_a3d8120d0d8fff6e80e62bd93fa5755de}{id}};}
-\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structmaterial_af48ce82f2bc1aa3f746d22d9bdd85ac1}{generation}};}
-\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structmaterial_af99bf7dd929232ff4c85952900b492d9}{internal\_id}};}
-\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structmaterial_a3a1694486ba2bcd5bcc9b54be8069dd3}{name}}[\mbox{\hyperlink{resource__types_8h_a86c7ee3b9964a925fad1f79c84d7d8f7}{MATERIAL\_NAME\_MAX\_LENGTH}}];}
-\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ \mbox{\hyperlink{structmaterial_aea5d0c3195e6306af5ae29d652eea0b8}{diffuse\_colour}};}
-\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{structtexture__map}{texture\_map}}\ \mbox{\hyperlink{structmaterial_a805109350e71f2cf0dd8c8912f24e070}{diffuse\_map}};}
-\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structmaterial_aaf2c5128efc1b3e6a16b2669e9e76035}{shader\_id}};}
-\DoxyCodeLine{00071\ \}\ \mbox{\hyperlink{structmaterial}{material}};}
-\DoxyCodeLine{00072\ }
-\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ GEOMETRY\_NAME\_MAX\_LENGTH\ 256}}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aaebd4efceface288edbbf9062be0ef4a5}{RESOURCE\_TYPE\_MESH}},}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aa9f4b2c10a227c7fbbb1369605bb298c0}{RESOURCE\_TYPE\_STATIC\_MESH}},}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aa8de606146a83b6d0ef73ab8d58cc86d2}{RESOURCE\_TYPE\_SHADER}},}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83aab9a618bd01a59e513b7de76846a223ef}{RESOURCE\_TYPE\_CUSTOM}}}
+\DoxyCodeLine{00014\ \}\ \mbox{\hyperlink{resource__types_8h_a509a729cba5db28cddc3c2ec18d0d83a}{resource\_type}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structresource}{resource}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structresource_af6263522ae3820a386ae382c41f2eb5b}{loader\_id}};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structresource_a74e088a5a3c6b12a25f5776c372680f8}{name}};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structresource_a70fd488eb9a63d8d98f73c8ccf7032ec}{full\_path}};}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}\ \mbox{\hyperlink{structresource_aa5e7f8e92bce1c6f990f044570f4a814}{data\_size}};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structresource_a6d2c86769bb2ec68a0087e5a0175d276}{data}};}
+\DoxyCodeLine{00022\ \}\ \mbox{\hyperlink{structresource}{resource}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structimage__resource__data}{image\_resource\_data}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ \mbox{\hyperlink{structimage__resource__data_aa14d02f6d822e95495b3b40888647fff}{channel\_count}};}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structimage__resource__data_ac62bfd950ab086f524049f62cb20ed2e}{width}};}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structimage__resource__data_aaa3aeee2e6ae12d6d71e8dede4c863f2}{height}};}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ *\mbox{\hyperlink{structimage__resource__data_a6c003c384eac2c4265f22b63f0b6e8a1}{pixels}};}
+\DoxyCodeLine{00029\ \}\ \mbox{\hyperlink{structimage__resource__data}{image\_resource\_data}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ TEXTURE\_NAME\_MAX\_LENGTH\ 512}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtexture}{texture}}\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structtexture_a80d0e2a9d244ce65a29cb87e5db5c695}{id}};}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structtexture_ae54857884dad86252f0615066be9990f}{width}};}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structtexture_ab135b895ef0f58fde3dfbdf840692e2d}{height}};}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{defines_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}\ \mbox{\hyperlink{structtexture_ae00b4c6fc1add9e080a13fff260c01ca}{channel\_count}};}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{structtexture_ab9b61470d021bc2e7d8a4ee544f4ffe6}{has\_transparency}};}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{structtexture_a808e0441f943278d37f9dfd4cad1ad77}{is\_writeable}};}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structtexture_a86f5c2a9138ae4004bf1528c5365def0}{generation}};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structtexture_aff42921931131ad7a3a7871077e9e916}{name}}[\mbox{\hyperlink{resource__types_8h_aa1f1d42c2919da754694e18cae601e81}{TEXTURE\_NAME\_MAX\_LENGTH}}];}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structtexture_a2a635d43b6e8cde4581d47b1f3945677}{internal\_data}};}
+\DoxyCodeLine{00043\ \}\ \mbox{\hyperlink{structtexture}{texture}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147}{texture\_use}}\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147aee5c11c42183654219b51c271979dcaa}{TEXTURE\_USE\_UNKNOWN}}\ =\ 0x00,}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147aa124fd894f82577e7ea7dd862fe22a7b}{TEXTURE\_USE\_MAP\_DIFFUSE}}\ =\ 0x01,}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147a542ff8e50c54dbd55868d2055a451c2d}{TEXTURE\_USE\_MAP\_SPECULAR}}\ =\ 0x02,}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147a7fa9a29889db2f1ac8d8dcc924c1f9e2}{TEXTURE\_USE\_MAP\_NORMAL}}\ =\ 0x02}
+\DoxyCodeLine{00050\ \}\ \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147}{texture\_use}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42}{texture\_filter}}\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42a58bd945a8510c87189d35331c370ca28}{TEXTURE\_FILTER\_MODE\_NEAREST}}\ =\ 0x0,}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42af33864f990a02b7c987d9b7ef8f80b38}{TEXTURE\_FILTER\_MODE\_LINEAR}}\ =\ 0x1,}
+\DoxyCodeLine{00055\ \}\ \mbox{\hyperlink{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42}{texture\_filter}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aac}{texture\_repeat}}\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aacabb6532dffea9d2d7fa582eafd4947b1a}{TEXTURE\_REPEAT\_REPEAT}}\ =\ 0x1,}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aacadeb67727610ebd531724aec1eb0e53f1}{TEXTURE\_REPEAT\_MIRRORED\_REPEAT}}\ =\ 0x2,}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aaca17653929159f3f17118d2e6289d27777}{TEXTURE\_REPEAT\_CLAMPED\_TO\_EDGE}}\ =\ 0x3,}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aacab45006cfd25cbac9de0afaa014c0cdb9}{TEXTURE\_REPEAT\_CLAMPED\_TO\_BORDER}}\ =\ 0x4,}
+\DoxyCodeLine{00062\ \}\ \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aac}{texture\_repeat}};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structtexture__map}{texture\_map}}\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{structtexture__map_a33ddcc4ba1d3f0148c5632a468b1e693}{texture}}\ *\mbox{\hyperlink{structtexture__map_a33ddcc4ba1d3f0148c5632a468b1e693}{texture}};}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_aea3ad146faac71d6a8126fa17e663147}{texture\_use}}\ \mbox{\hyperlink{structtexture__map_a18bbbe03ff0a2e03f4ac7220a7e29bf3}{use}};}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42}{texture\_filter}}\ \mbox{\hyperlink{structtexture__map_ab33dec92b8f81d079d0c3964e74c5e29}{filter\_minify}};}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_a7833590bfaa63fe9a8f9b5a944a2bf42}{texture\_filter}}\ \mbox{\hyperlink{structtexture__map_a1cfafad92845e34aae688fbfede98d1f}{filter\_magnify}};}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aac}{texture\_repeat}}\ \mbox{\hyperlink{structtexture__map_a8201474a0863eb0f4fc98d19bc56875d}{repeat\_u}};\ \textcolor{comment}{//\ x|s}}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aac}{texture\_repeat}}\ \mbox{\hyperlink{structtexture__map_a83613cab5649c42860d0190bbe98d214}{repeat\_v}};\ \textcolor{comment}{//\ y|t}}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{resource__types_8h_ad32b982b0199e43e77a48262d8185aac}{texture\_repeat}}\ \mbox{\hyperlink{structtexture__map_a528f421f9f6fd7a0cde3c722bc48dbca}{repeat\_w}};\ \textcolor{comment}{//\ z|u}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structtexture__map_a179ab4e34b3656a90a0ec11e302a17d9}{internal\_data}};}
+\DoxyCodeLine{00073\ \}\ \mbox{\hyperlink{structtexture__map}{texture\_map}};}
 \DoxyCodeLine{00074\ }
-\DoxyCodeLine{00075\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structgeometry}{geometry}}\ \{}
-\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structgeometry_a68b5c37575a8bfa7966245adca976088}{id}};}
-\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structgeometry_abed43a9305450f0855b9d2f18ccf8953}{generation}};}
-\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structgeometry_a1bbea7a4d8e8d30a3e1ed2ce70a4515a}{internal\_id}};}
-\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structgeometry_a92c2b7ba33c42b29be886ba23c68fa29}{name}}[\mbox{\hyperlink{resource__types_8h_a9840b465a935f36dd17db47735877e27}{GEOMETRY\_NAME\_MAX\_LENGTH}}];}
-\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{structgeometry_a447f8f6e2dba45c96d798b03ec33342f}{material}}\ *\mbox{\hyperlink{structgeometry_a447f8f6e2dba45c96d798b03ec33342f}{material}};}
-\DoxyCodeLine{00081\ \}\ \mbox{\hyperlink{structgeometry}{geometry}};}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ MATERIAL\_NAME\_MAX\_LENGTH\ 512}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmaterial__config}{material\_config}}\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structmaterial__config_a44470af1a4d4f549d85b39707ad97768}{name}}[\mbox{\hyperlink{resource__types_8h_a86c7ee3b9964a925fad1f79c84d7d8f7}{MATERIAL\_NAME\_MAX\_LENGTH}}];}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structmaterial__config_a77014a3aeeb02bd6c5c9b24afe17ed4c}{shader\_name}};}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{defines_8h_a3a58feb08f4f45ee137ec358217c3270}{b8}}\ \mbox{\hyperlink{structmaterial__config_aac5176ac81b536e3069286a49ebc09be}{auto\_release}};}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ \mbox{\hyperlink{structmaterial__config_a5208780d48ccf706dd4602bb311f6ff4}{diffuse\_colour}};}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ \mbox{\hyperlink{structmaterial__config_a092505cde0bce7ecfc02cc944d1cc998}{shininess}};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structmaterial__config_a7031da2bb93b1b4957fa3f7f5c219804}{diffuse\_map\_name}}[\mbox{\hyperlink{resource__types_8h_aa1f1d42c2919da754694e18cae601e81}{TEXTURE\_NAME\_MAX\_LENGTH}}];}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structmaterial__config_a58310d94b1899bc09816961befdc6c07}{specular\_map\_name}}[\mbox{\hyperlink{resource__types_8h_aa1f1d42c2919da754694e18cae601e81}{TEXTURE\_NAME\_MAX\_LENGTH}}];}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structmaterial__config_a18bb08cbb207a83322e693e656287bcb}{normal\_map\_name}}[\mbox{\hyperlink{resource__types_8h_aa1f1d42c2919da754694e18cae601e81}{TEXTURE\_NAME\_MAX\_LENGTH}}];}
+\DoxyCodeLine{00086\ \}\ \mbox{\hyperlink{structmaterial__config}{material\_config}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmaterial}{material}}\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structmaterial_a3d8120d0d8fff6e80e62bd93fa5755de}{id}};}
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structmaterial_af48ce82f2bc1aa3f746d22d9bdd85ac1}{generation}};}
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structmaterial_af99bf7dd929232ff4c85952900b492d9}{internal\_id}};}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structmaterial_a3a1694486ba2bcd5bcc9b54be8069dd3}{name}}[\mbox{\hyperlink{resource__types_8h_a86c7ee3b9964a925fad1f79c84d7d8f7}{MATERIAL\_NAME\_MAX\_LENGTH}}];}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{math__types_8h_a6d07267a855fd8e0194ffcb3128396cd}{vec4}}\ \mbox{\hyperlink{structmaterial_aea5d0c3195e6306af5ae29d652eea0b8}{diffuse\_colour}};}
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{structtexture__map}{texture\_map}}\ \mbox{\hyperlink{structmaterial_a805109350e71f2cf0dd8c8912f24e070}{diffuse\_map}};}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{structtexture__map}{texture\_map}}\ \mbox{\hyperlink{structmaterial_a7270eb621969386d6832df46599c375a}{specular\_map}};}
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{structtexture__map}{texture\_map}}\ \mbox{\hyperlink{structmaterial_a6aa4c6beb32391e1b791b133296580e3}{normal\_map}};}
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{defines_8h_a5f6906312a689f27d70e9d086649d3fd}{f32}}\ \mbox{\hyperlink{structmaterial_a3530f633612d5225e977ef0860da1950}{shininess}};}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structmaterial_aaf2c5128efc1b3e6a16b2669e9e76035}{shader\_id}};}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structmaterial_ab7ece9e8002cacd2e84bd50f71af6731}{render\_frame\_number}};}
+\DoxyCodeLine{00100\ \}\ \mbox{\hyperlink{structmaterial}{material}};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ GEOMETRY\_NAME\_MAX\_LENGTH\ 256}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structgeometry}{geometry}}\ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structgeometry_a68b5c37575a8bfa7966245adca976088}{id}};}
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structgeometry_abed43a9305450f0855b9d2f18ccf8953}{generation}};}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{defines_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}\ \mbox{\hyperlink{structgeometry_a1bbea7a4d8e8d30a3e1ed2ce70a4515a}{internal\_id}};}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structgeometry_a92c2b7ba33c42b29be886ba23c68fa29}{name}}[\mbox{\hyperlink{resource__types_8h_a9840b465a935f36dd17db47735877e27}{GEOMETRY\_NAME\_MAX\_LENGTH}}];}
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{structgeometry_a447f8f6e2dba45c96d798b03ec33342f}{material}}\ *\mbox{\hyperlink{structgeometry_a447f8f6e2dba45c96d798b03ec33342f}{material}};}
+\DoxyCodeLine{00110\ \}\ \mbox{\hyperlink{structgeometry}{geometry}};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmesh}{mesh}}\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{defines_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}\ \mbox{\hyperlink{structmesh_abf9c74b2ef916cf62a62c684f51fe3f6}{geometry\_count}};}
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{structgeometry}{geometry}}\ **\mbox{\hyperlink{structmesh_a5e2641027a2b3726d2a52eb0479a7289}{geometries}};}
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{structmesh_a9829ad048b000cc756e4a89a9567a286}{transform}}\ \mbox{\hyperlink{structmesh_a9829ad048b000cc756e4a89a9567a286}{transform}};}
+\DoxyCodeLine{00116\ \}\ \mbox{\hyperlink{structmesh}{mesh}};}
 
 \end{DoxyCode}

@@ -9,6 +9,8 @@ var geometry__system_8c =
     [ "destroy_geometry", "d9/d80/geometry__system_8c.html#a0077e027e5b66945cf87017946792504", null ],
     [ "geometry_system_acquire_by_id", "d9/d80/geometry__system_8c.html#ae0e4e5cb2d9716bfb256919854537738", null ],
     [ "geometry_system_acquire_from_config", "d9/d80/geometry__system_8c.html#aa3992a52627669573968c86505792e5c", null ],
+    [ "geometry_system_config_dispose", "d9/d80/geometry__system_8c.html#aa949a461ac859a0e10ad866830495e0e", null ],
+    [ "geometry_system_generate_cube_config", "d9/d80/geometry__system_8c.html#a4271382a80871291489328097549d5cf", null ],
     [ "geometry_system_generate_plane_config", "d9/d80/geometry__system_8c.html#af4df3267d03b54612f8a61a647fceaba", null ],
     [ "geometry_system_get_default_geometry_2d", "d9/d80/geometry__system_8c.html#aad8405f3d05faf23bdcff666935cb402", null ],
     [ "geometry_system_get_default_geometry_3d", "d9/d80/geometry__system_8c.html#a378ccb67bf20bf83f7217aeae226edf3", null ],

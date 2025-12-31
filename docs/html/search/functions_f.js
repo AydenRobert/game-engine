@@ -24,5 +24,7 @@ var searchData=
   ['platform_5fstartup_21',['platform_startup',['../de/d03/platform_8h.html#a1557f29064029f8b437d0fbcc587ebbd',1,'platform.h']]],
   ['platform_5fstartup_5fwayland_22',['platform_startup_wayland',['../dc/d29/platform__linux__wayland_8h.html#a723755eb812b292c0e89891dd0e082e9',1,'platform_linux_wayland.h']]],
   ['platform_5fstartup_5fx11_23',['platform_startup_x11',['../de/df2/platform__linux__x11_8h.html#a2d7c7dcc96d86245789f8abdbab90eb9',1,'platform_linux_x11.h']]],
-  ['platform_5fzero_5fmemory_24',['platform_zero_memory',['../de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654',1,'platform.h']]]
+  ['platform_5fzero_5fmemory_24',['platform_zero_memory',['../de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654',1,'platform.h']]],
+  ['process_5fobj_5fgroup_25',['process_obj_group',['../df/d48/mesh__loader_8c.html#aa50b91901a2847e1777485a588269863',1,'mesh_loader.c']]],
+  ['process_5fsubobject_26',['process_subobject',['../df/d48/mesh__loader_8c.html#ab7b3cb298fab2cdf57749cfa3b197057',1,'mesh_loader.c']]]
 ];

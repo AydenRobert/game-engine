@@ -95,32 +95,36 @@ $(function(){initNavTree('d6/d71/darray_8c.html','../../',''); });
 <code>#include &quot;<a class="el" href="../../d6/dbf/kmemory_8h_source.html">core/kmemory.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d1/d8c/logger_8h_source.html">core/logger.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d60/utils_8h_source.html">core/utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/db0/defines_8h_source.html">defines.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for darray.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d9a/darray_8c__incl.png" border="0" usemap="#aengine_2src_2containers_2darray_8c" loading="lazy" alt=""/></div>
 <map name="aengine_2src_2containers_2darray_8c" id="aengine_2src_2containers_2darray_8c">
-<area shape="rect" title=" " alt="" coords="227,5,388,50"/>
+<area shape="rect" title=" " alt="" coords="208,5,369,50"/>
 <area shape="rect" href="../../d1/d4e/darray_8h.html" title=" " alt="" coords="5,98,151,126"/>
-<area shape="poly" title=" " alt="" coords="245,53,130,95,128,90,248,49"/>
-<area shape="rect" href="../../d6/dbf/kmemory_8h.html" title=" " alt="" coords="175,98,301,126"/>
-<area shape="poly" title=" " alt="" coords="291,49,261,88,257,84,287,52"/>
-<area shape="rect" href="../../d1/d8c/logger_8h.html" title=" " alt="" coords="325,98,431,126"/>
-<area shape="poly" title=" " alt="" coords="327,48,359,86,354,86,325,53"/>
-<area shape="rect" href="../../d5/d60/utils_8h.html" title=" " alt="" coords="455,98,549,126"/>
-<area shape="poly" title=" " alt="" coords="359,48,459,91,454,92,359,53"/>
-<area shape="rect" href="../../d8/db0/defines_8h.html" title=" " alt="" coords="267,174,348,201"/>
-<area shape="poly" title=" " alt="" coords="119,124,254,167,250,170,119,129"/>
-<area shape="poly" title=" " alt="" coords="251,124,287,163,282,162,249,129"/>
-<area shape="poly" title=" " alt="" coords="368,125,332,165,329,160,363,127"/>
-<area shape="poly" title=" " alt="" coords="470,126,357,171,355,165,465,127"/>
+<area shape="poly" title=" " alt="" coords="231,53,127,94,125,90,234,49"/>
+<area shape="rect" href="../../d8/db0/defines_8h.html" title=" " alt="" coords="248,174,329,201"/>
+<area shape="poly" title=" " alt="" coords="257,49,234,73,216,99,213,112,216,125,232,146,253,165,247,164,228,149,212,127,208,112,212,97,230,70,252,52"/>
+<area shape="rect" href="../../d6/dbf/kmemory_8h.html" title=" " alt="" coords="226,98,352,126"/>
+<area shape="poly" title=" " alt="" coords="290,48,291,84,286,81,287,53"/>
+<area shape="rect" href="../../d1/d8c/logger_8h.html" title=" " alt="" coords="376,98,481,126"/>
+<area shape="poly" title=" " alt="" coords="326,48,396,90,391,90,325,53"/>
+<area shape="rect" href="../../d5/d60/utils_8h.html" title=" " alt="" coords="506,98,599,126"/>
+<area shape="poly" title=" " alt="" coords="359,48,498,92,493,93,358,53"/>
+<area shape="poly" title=" " alt="" coords="116,124,239,167,235,170,115,129"/>
+<area shape="poly" title=" " alt="" coords="291,124,291,159,286,156,287,128"/>
+<area shape="poly" title=" " alt="" coords="406,126,328,169,326,164,401,127"/>
+<area shape="poly" title=" " alt="" coords="508,126,345,173,344,168,503,126"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:afeedbfc73b73afde4c0bf2a889305108" id="r_afeedbfc73b73afde4c0bf2a889305108"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afeedbfc73b73afde4c0bf2a889305108">_darray_create</a> (<a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a> length, <a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a> stride)</td></tr>
+<tr class="memitem:a828bd02c771f415e47a6b206a8148ee1" id="r_a828bd02c771f415e47a6b206a8148ee1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a828bd02c771f415e47a6b206a8148ee1">_darray_create_aligned</a> (<a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a> length, <a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a> stride, <a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a> alignment, void **base_ptr)</td></tr>
 <tr class="memitem:a2fe5e3c2494168523cb08a62a1cef3f0" id="r_a2fe5e3c2494168523cb08a62a1cef3f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fe5e3c2494168523cb08a62a1cef3f0">_darray_destroy</a> (void *array)</td></tr>
+<tr class="memitem:a024aa4f7c2ba7567460b88925fe9b57a" id="r_a024aa4f7c2ba7567460b88925fe9b57a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a024aa4f7c2ba7567460b88925fe9b57a">_darray_destroy_aligned</a> (void *array, <a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a> alignment, void *base_ptr)</td></tr>
 <tr class="memitem:a3458495487a9f5e51f624d66a5f16c4d" id="r_a3458495487a9f5e51f624d66a5f16c4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3458495487a9f5e51f624d66a5f16c4d">_darray_field_get</a> (void *array, <a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a> field)</td></tr>
 <tr class="memitem:a9a04e308cbc0cb796826f971f77af0b5" id="r_a9a04e308cbc0cb796826f971f77af0b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a04e308cbc0cb796826f971f77af0b5">_darray_field_set</a> (void *array, <a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a> field, <a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a> value)</td></tr>
 <tr class="memitem:a32f03c35518f90b8cc0ba0f4127d6bd7" id="r_a32f03c35518f90b8cc0ba0f4127d6bd7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32f03c35518f90b8cc0ba0f4127d6bd7">_darray_resize</a> (void *array)</td></tr>
@@ -194,6 +198,63 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a828bd02c771f415e47a6b206a8148ee1" name="a828bd02c771f415e47a6b206a8148ee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a828bd02c771f415e47a6b206a8148ee1">&#9670;&#160;</a></span>_darray_create_aligned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * _darray_create_aligned </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a></td>          <td class="paramname"><span class="paramname"><em>stride</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a></td>          <td class="paramname"><span class="paramname"><em>alignment</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **</td>          <td class="paramname"><span class="paramname"><em>base_ptr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d71/darray_8c_a828bd02c771f415e47a6b206a8148ee1_cgraph.png" border="0" usemap="#ad6/d71/darray_8c_a828bd02c771f415e47a6b206a8148ee1_cgraph" loading="lazy" alt=""/></div>
+<map name="ad6/d71/darray_8c_a828bd02c771f415e47a6b206a8148ee1_cgraph" id="ad6/d71/darray_8c_a828bd02c771f415e47a6b206a8148ee1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,137,179,165"/>
+<area shape="rect" href="../../d3/d3c/kmemory_8c.html#a35f22575c2b4fcbda423b6108e352b15" title=" " alt="" coords="242,111,322,138"/>
+<area shape="poly" title=" " alt="" coords="178,136,230,131,224,133,180,142"/>
+<area shape="rect" href="../../d3/d3c/kmemory_8c.html#a9b0af42158bf4d4a8db3d25d284b83f4" title=" " alt="" coords="227,163,338,190"/>
+<area shape="poly" title=" " alt="" coords="179,160,214,167,208,167,179,165"/>
+<area shape="rect" href="../../dd/d44/dynamic__allocator_8c.html#aeef3ef902c20758ce4e52fd3ce7c3112" title="Allocates an amount of memory and returns the given block." alt="" coords="386,32,586,60"/>
+<area shape="poly" title=" " alt="" coords="307,108,385,70,412,64,407,65,387,75,309,113"/>
+<area shape="rect" href="../../de/d03/platform_8h.html#a19df473ff145c8579c4c838d5bc67372" title=" " alt="" coords="418,84,554,112"/>
+<area shape="poly" title=" " alt="" coords="322,117,405,108,400,109,323,122"/>
+<area shape="rect" href="../../de/d03/platform_8h.html#a59e03b207e95523b84692ea7f68e4654" title=" " alt="" coords="399,136,573,164"/>
+<area shape="poly" title=" " alt="" coords="323,127,386,137,381,137,323,132"/>
+<area shape="rect" href="../../da/d3f/freelist_8c.html#ae855f01b88cfd86e3ff8ae7682bbd06c" title="Attempts to find a allocate block of memory given the size." alt="" coords="634,32,803,60"/>
+<area shape="poly" title=" " alt="" coords="587,43,621,45,616,46,587,48"/>
+<area shape="rect" href="../../da/d3f/freelist_8c.html#a1ce834d1bd9f9caf272e6d63aa00deb8" title="Obtains the amount of free space within the freelist." alt="" coords="851,5,996,33"/>
+<area shape="poly" title=" " alt="" coords="803,32,838,30,833,31,804,37"/>
+<area shape="rect" href="../../da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="874,57,973,85"/>
+<area shape="poly" title=" " alt="" coords="803,54,861,63,856,63,803,59"/>
+<area shape="rect" href="../../de/d03/platform_8h.html#aa65146de20a7fd23870d3809834021b7" title=" " alt="" coords="403,188,569,216"/>
+<area shape="poly" title=" " alt="" coords="339,181,390,190,385,190,339,186"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a2fe5e3c2494168523cb08a62a1cef3f0" name="a2fe5e3c2494168523cb08a62a1cef3f0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2fe5e3c2494168523cb08a62a1cef3f0">&#9670;&#160;</a></span>_darray_destroy()</h2>
 
@@ -240,6 +301,52 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="170,35,140,32,140,27,175,34"/>
 <area shape="rect" href="../../d6/d71/darray_8c.html#ad0d43d106169b005a03bd36f0ac6a740" title=" " alt="" coords="18,57,127,85"/>
 <area shape="poly" title=" " alt="" coords="170,57,128,66,127,61,175,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a024aa4f7c2ba7567460b88925fe9b57a" name="a024aa4f7c2ba7567460b88925fe9b57a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a024aa4f7c2ba7567460b88925fe9b57a">&#9670;&#160;</a></span>_darray_destroy_aligned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _darray_destroy_aligned </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>array</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d8/db0/defines_8h.html#ad758b7a5c3f18ed79d2fcd23d9f16357">u64</a></td>          <td class="paramname"><span class="paramname"><em>alignment</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>base_ptr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d71/darray_8c_a024aa4f7c2ba7567460b88925fe9b57a_cgraph.png" border="0" usemap="#ad6/d71/darray_8c_a024aa4f7c2ba7567460b88925fe9b57a_cgraph" loading="lazy" alt=""/></div>
+<map name="ad6/d71/darray_8c_a024aa4f7c2ba7567460b88925fe9b57a_cgraph" id="ad6/d71/darray_8c_a024aa4f7c2ba7567460b88925fe9b57a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,59,187,86"/>
+<area shape="rect" href="../../d3/d3c/kmemory_8c.html#a6b55b65a2f2d473dac0d8ff4605a44fb" title=" " alt="" coords="235,59,290,86"/>
+<area shape="poly" title=" " alt="" coords="187,70,221,72,216,73,188,75"/>
+<area shape="rect" href="../../dd/d44/dynamic__allocator_8c.html#a10c3c742d3900e743f85fe47c11be3e5" title="Frees a block of memory that was allocated by the allocator." alt="" coords="338,32,512,60"/>
+<area shape="poly" title=" " alt="" coords="290,65,320,63,325,62,291,71"/>
+<area shape="rect" href="../../de/d03/platform_8h.html#a0b638fcfa31e0704eb976a8662c095f2" title=" " alt="" coords="370,84,480,112"/>
+<area shape="poly" title=" " alt="" coords="291,74,358,87,352,87,290,79"/>
+<area shape="rect" href="../../da/d3f/freelist_8c.html#a8af32093da394b6cfa1a3436b8e84283" title="Attempts to find a free block of memory given the size." alt="" coords="560,32,703,60"/>
+<area shape="poly" title=" " alt="" coords="513,43,547,46,542,46,513,48"/>
+<area shape="rect" href="../../da/d3f/freelist_8c.html#ad39f732a3cda733b6877f9bd57efa0df" title=" " alt="" coords="760,5,841,33"/>
+<area shape="poly" title=" " alt="" coords="703,32,742,28,747,28,704,37"/>
+<area shape="rect" href="../../da/d3f/freelist_8c.html#a9417519c6873a6840b346b2c907a2142" title=" " alt="" coords="751,57,850,85"/>
+<area shape="poly" title=" " alt="" coords="703,54,738,62,733,61,703,59"/>
 </map>
 </div>
 

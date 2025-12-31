@@ -8,7 +8,8 @@ Include dependency graph for darray.\+h\+:\nopagebreak
 \includegraphics[width=200pt]{d4/d65/darray_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -27,6 +28,10 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \#define \mbox{\hyperlink{darray_8h_a0805205fc6e4a577824396a03d82e951}{darray\+\_\+reserve}}(type,  capacity)
 \item 
 \#define \mbox{\hyperlink{darray_8h_a276aa834ed16f81d63f16c13dfdbe67d}{darray\+\_\+destroy}}(array)
+\item 
+\#define \mbox{\hyperlink{darray_8h_a2babf1a9fb545f77217f41d9677365e8}{darray\+\_\+create\+\_\+aligned}}(type,  alignment,  base\+\_\+ptr)
+\item 
+\#define \mbox{\hyperlink{darray_8h_a2cefe601daf18322fc3a8869cf5dc134}{darray\+\_\+destroy\+\_\+aligned}}(array,  alignment,  base\+\_\+ptr)
 \item 
 \#define \mbox{\hyperlink{darray_8h_a7ad89931e6589fa09b83ea99de2b32e6}{darray\+\_\+push}}(array,  value)
 \item 
@@ -63,6 +68,10 @@ enum \{ \mbox{\hyperlink{darray_8h_a386695e4f47fc78a4460a785aac8a5d0af47ac19f1dc
 \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{darray_8h_a2a31fc1b919b7043ab60c5a5dfd799f2}{\+\_\+darray\+\_\+create}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} length, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} stride)
 \item 
 \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} void \mbox{\hyperlink{darray_8h_a6b17a4fb11bc83a4441ad6061513b3b6}{\+\_\+darray\+\_\+destroy}} (void \texorpdfstring{$\ast$}{*}array)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{darray_8h_a828bd02c771f415e47a6b206a8148ee1}{\+\_\+darray\+\_\+create\+\_\+aligned}} (\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} length, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} stride, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} alignment, void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}base\+\_\+ptr)
+\item 
+void \mbox{\hyperlink{darray_8h_a69d7fd17c9e4c62ce7532765b3ec4fae}{\+\_\+darray\+\_\+destroy\+\_\+aligned}} (void \texorpdfstring{$\ast$}{*}array, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} aligned, void \texorpdfstring{$\ast$}{*}base\+\_\+ptr)
 \item 
 \mbox{\hyperlink{defines_8h_a0dc00ea56793277f556f072353318f35}{KAPI}} \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} \mbox{\hyperlink{darray_8h_a0c567bc6af05cb5a437059a54e575217}{\+\_\+darray\+\_\+field\+\_\+get}} (void \texorpdfstring{$\ast$}{*}array, \mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}} field)
 \item 
@@ -118,6 +127,17 @@ enum \{ \mbox{\hyperlink{darray_8h_a386695e4f47fc78a4460a785aac8a5d0af47ac19f1dc
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{darray_8c_afeedbfc73b73afde4c0bf2a889305108}{\_darray\_create}}(\mbox{\hyperlink{darray_8h_a9480f1a372af84bc03f4a55659188202}{DARRAY\_DEFAULT\_CAPACITY}},\ \textcolor{keyword}{sizeof}(type))}
 
 \end{DoxyCode}
+\Hypertarget{darray_8h_a2babf1a9fb545f77217f41d9677365e8}\index{darray.h@{darray.h}!darray\_create\_aligned@{darray\_create\_aligned}}
+\index{darray\_create\_aligned@{darray\_create\_aligned}!darray.h@{darray.h}}
+\doxysubsubsection{\texorpdfstring{darray\_create\_aligned}{darray\_create\_aligned}}
+{\footnotesize\ttfamily \label{darray_8h_a2babf1a9fb545f77217f41d9677365e8} 
+\#define darray\+\_\+create\+\_\+aligned(\begin{DoxyParamCaption}\item[{}]{type}{, }\item[{}]{alignment}{, }\item[{}]{base\+\_\+ptr}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{darray_8c_a828bd02c771f415e47a6b206a8148ee1}{\_darray\_create\_aligned}}(8,\ \textcolor{keyword}{sizeof}(type),\ alignment,\ base\_ptr)}
+
+\end{DoxyCode}
 \Hypertarget{darray_8h_a9480f1a372af84bc03f4a55659188202}\index{darray.h@{darray.h}!DARRAY\_DEFAULT\_CAPACITY@{DARRAY\_DEFAULT\_CAPACITY}}
 \index{DARRAY\_DEFAULT\_CAPACITY@{DARRAY\_DEFAULT\_CAPACITY}!darray.h@{darray.h}}
 \doxysubsubsection{\texorpdfstring{DARRAY\_DEFAULT\_CAPACITY}{DARRAY\_DEFAULT\_CAPACITY}}
@@ -133,6 +153,17 @@ enum \{ \mbox{\hyperlink{darray_8h_a386695e4f47fc78a4460a785aac8a5d0af47ac19f1dc
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{darray_8c_a2fe5e3c2494168523cb08a62a1cef3f0}{\_darray\_destroy}}(array)}
+
+\end{DoxyCode}
+\Hypertarget{darray_8h_a2cefe601daf18322fc3a8869cf5dc134}\index{darray.h@{darray.h}!darray\_destroy\_aligned@{darray\_destroy\_aligned}}
+\index{darray\_destroy\_aligned@{darray\_destroy\_aligned}!darray.h@{darray.h}}
+\doxysubsubsection{\texorpdfstring{darray\_destroy\_aligned}{darray\_destroy\_aligned}}
+{\footnotesize\ttfamily \label{darray_8h_a2cefe601daf18322fc3a8869cf5dc134} 
+\#define darray\+\_\+destroy\+\_\+aligned(\begin{DoxyParamCaption}\item[{}]{array}{, }\item[{}]{alignment}{, }\item[{}]{base\+\_\+ptr}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{darray_8c_a024aa4f7c2ba7567460b88925fe9b57a}{\_darray\_destroy\_aligned}}(array,\ alignment,\ base\_ptr)}
 
 \end{DoxyCode}
 \Hypertarget{darray_8h_a95581a1912c392d51125909802a239db}\index{darray.h@{darray.h}!darray\_insert\_at@{darray\_insert\_at}}
@@ -298,6 +329,20 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{d1/d4e/darray_8h_a2a31fc1b919b7043ab60c5a5dfd799f2_icgraph}
 \end{center}
 \end{figure}
+\Hypertarget{darray_8h_a828bd02c771f415e47a6b206a8148ee1}\index{darray.h@{darray.h}!\_darray\_create\_aligned@{\_darray\_create\_aligned}}
+\index{\_darray\_create\_aligned@{\_darray\_create\_aligned}!darray.h@{darray.h}}
+\doxysubsubsection{\texorpdfstring{\_darray\_create\_aligned()}{\_darray\_create\_aligned()}}
+{\footnotesize\ttfamily \label{darray_8h_a828bd02c771f415e47a6b206a8148ee1} 
+void \texorpdfstring{$\ast$}{*} \+\_\+darray\+\_\+create\+\_\+aligned (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{length}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{stride}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{alignment}{, }\item[{void \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{base\+\_\+ptr}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d4e/darray_8h_a828bd02c771f415e47a6b206a8148ee1_cgraph}
+\end{center}
+\end{figure}
 \Hypertarget{darray_8h_a6b17a4fb11bc83a4441ad6061513b3b6}\index{darray.h@{darray.h}!\_darray\_destroy@{\_darray\_destroy}}
 \index{\_darray\_destroy@{\_darray\_destroy}!darray.h@{darray.h}}
 \doxysubsubsection{\texorpdfstring{\_darray\_destroy()}{\_darray\_destroy()}}
@@ -316,6 +361,20 @@ Here is the caller graph for this function\+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d1/d4e/darray_8h_a6b17a4fb11bc83a4441ad6061513b3b6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{darray_8h_a69d7fd17c9e4c62ce7532765b3ec4fae}\index{darray.h@{darray.h}!\_darray\_destroy\_aligned@{\_darray\_destroy\_aligned}}
+\index{\_darray\_destroy\_aligned@{\_darray\_destroy\_aligned}!darray.h@{darray.h}}
+\doxysubsubsection{\texorpdfstring{\_darray\_destroy\_aligned()}{\_darray\_destroy\_aligned()}}
+{\footnotesize\ttfamily \label{darray_8h_a69d7fd17c9e4c62ce7532765b3ec4fae} 
+void \+\_\+darray\+\_\+destroy\+\_\+aligned (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{array}{, }\item[{\mbox{\hyperlink{defines_8h_ad758b7a5c3f18ed79d2fcd23d9f16357}{u64}}}]{aligned}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{base\+\_\+ptr}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d4e/darray_8h_a69d7fd17c9e4c62ce7532765b3ec4fae_cgraph}
 \end{center}
 \end{figure}
 \Hypertarget{darray_8h_a0c567bc6af05cb5a437059a54e575217}\index{darray.h@{darray.h}!\_darray\_field\_get@{\_darray\_field\_get}}
