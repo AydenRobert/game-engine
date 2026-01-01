@@ -5,7 +5,7 @@
 [DEBUG]: A test message: 3.140000
 [TRACE]: A test message: 3.140000
 [INFO]:  Input subsystem initialized.
-[INFO]:  Event system initialized at 0x7f2a0aa91b00, size 131080
+[INFO]:  Event system initialized at 0x7fb2e9a76b00, size 131080
 [DEBUG]: Window resize: 1280 1405
 [WARN]:  renderer_state_ptr->backend does not exist to accept resize.
 [TRACE]: Loader '0' registered.
@@ -82,9 +82,22 @@
 [TRACE]: texture_system_wrap_internal created texture '__internal_vulkan_swapchain_image_0__', but not registered. Resulting in an allocation, it is up to the caller to free this.
 [TRACE]: texture_system_wrap_internal created texture '__internal_vulkan_swapchain_image_1__', but not registered. Resulting in an allocation, it is up to the caller to free this.
 [TRACE]: texture_system_wrap_internal created texture '__internal_vulkan_swapchain_image_2__', but not registered. Resulting in an allocation, it is up to the caller to free this.
+[TRACE]: texture_system_wrap_internal created texture '__kohi_default_depth_texture__', but not registered. Resulting in an allocation, it is up to the caller to free this.
 [INFO]:  Swapchain created successfully!
 [INFO]:  Vulkan command buffers created.
 [INFO]:  Vulkan renderer initialized successfully!
+[ERROR]: vkCreateFramebuffer(): pCreateInfo->height is zero.
+The Vulkan spec states: height must be greater than 0 (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-VkFramebufferCreateInfo-height-00887)
+[ERROR]: vkCreateFramebuffer(): pCreateInfo->height is zero.
+The Vulkan spec states: height must be greater than 0 (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-VkFramebufferCreateInfo-height-00887)
+[ERROR]: vkCreateFramebuffer(): pCreateInfo->height is zero.
+The Vulkan spec states: height must be greater than 0 (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-VkFramebufferCreateInfo-height-00887)
+[ERROR]: vkCreateFramebuffer(): pCreateInfo->height is zero.
+The Vulkan spec states: height must be greater than 0 (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-VkFramebufferCreateInfo-height-00887)
+[ERROR]: vkCreateFramebuffer(): pCreateInfo->height is zero.
+The Vulkan spec states: height must be greater than 0 (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-VkFramebufferCreateInfo-height-00887)
+[ERROR]: vkCreateFramebuffer(): pCreateInfo->height is zero.
+The Vulkan spec states: height must be greater than 0 (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-VkFramebufferCreateInfo-height-00887)
 [INFO]:  add_sampler called for: 'diffuse_texture', Scope: 1
 [INFO]:  add_sampler called for: 'specular_texture', Scope: 1
 [INFO]:  add_sampler called for: 'normal_texture', Scope: 1
@@ -1056,7 +1069,7 @@
   STRING           : 9.59KiB
   APPLICATION      : 1.62KiB
   JOB              : 0.00B
-  TEXTURE          : 4.00KiB
+  TEXTURE          : 5.06KiB
   MATERIAL_INSTANCE: 0.00B
   RENDERER         : 137.35MiB
   GAME             : 159.00B
@@ -1066,28 +1079,70 @@
   SCENE            : 4.92KiB
   SHADER           : 4.16KiB
 
+[ERROR]: vkCmdBeginRenderPass(): pRenderPassBegin->renderArea.extent.height is zero.
+The Vulkan spec states: If the pNext chain does not contain VkDeviceGroupRenderPassBeginInfo or its deviceRenderAreaCount member is equal to 0, renderArea.extent.height must be greater than 0 (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-VkRenderPassBeginInfo-None-08997)
+[ERROR]: vkCmdBeginRenderPass(): pCreateInfo->pAttachments[0] You cannot start a render pass using attachment 0 where the render pass initial layout is VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL and the previous known layout of the attachment is VK_IMAGE_LAYOUT_PRESENT_SRC_KHR. The layouts must match, or the render pass initial layout for the attachment must be VK_IMAGE_LAYOUT_UNDEFINED.
+The Vulkan spec states: If the initialLayout member of any of the VkAttachmentDescription structures specified when creating the render pass specified in the renderPass member of pRenderPassBegin is not VK_IMAGE_LAYOUT_UNDEFINED, then each such initialLayout must be equal to the current layout of the corresponding attachment image subresource of the framebuffer specified in the framebuffer member of pRenderPassBegin (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-vkCmdBeginRenderPass-initialLayout-00900)
+[ERROR]: vkCmdBeginRenderPass(): pRenderPassBegin->renderArea.extent.height is zero.
+The Vulkan spec states: If the pNext chain does not contain VkDeviceGroupRenderPassBeginInfo or its deviceRenderAreaCount member is equal to 0, renderArea.extent.height must be greater than 0 (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-VkRenderPassBeginInfo-None-08997)
+[ERROR]: vkCmdBeginRenderPass(): pRenderPassBegin->renderArea.extent.height is zero.
+The Vulkan spec states: If the pNext chain does not contain VkDeviceGroupRenderPassBeginInfo or its deviceRenderAreaCount member is equal to 0, renderArea.extent.height must be greater than 0 (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-VkRenderPassBeginInfo-None-08997)
+[ERROR]: vkCmdBeginRenderPass(): pCreateInfo->pAttachments[0] You cannot start a render pass using attachment 0 where the render pass initial layout is VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL and the previous known layout of the attachment is VK_IMAGE_LAYOUT_PRESENT_SRC_KHR. The layouts must match, or the render pass initial layout for the attachment must be VK_IMAGE_LAYOUT_UNDEFINED.
+The Vulkan spec states: If the initialLayout member of any of the VkAttachmentDescription structures specified when creating the render pass specified in the renderPass member of pRenderPassBegin is not VK_IMAGE_LAYOUT_UNDEFINED, then each such initialLayout must be equal to the current layout of the corresponding attachment image subresource of the framebuffer specified in the framebuffer member of pRenderPassBegin (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-vkCmdBeginRenderPass-initialLayout-00900)
+[ERROR]: vkCmdBeginRenderPass(): pRenderPassBegin->renderArea.extent.height is zero.
+The Vulkan spec states: If the pNext chain does not contain VkDeviceGroupRenderPassBeginInfo or its deviceRenderAreaCount member is equal to 0, renderArea.extent.height must be greater than 0 (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-VkRenderPassBeginInfo-None-08997)
 [DEBUG]: Window resize: 1251 1361
 [INFO]:  Vulkan renderer backend->resize: w/h/gen: 1251/1361/1
+[ERROR]: vkQueuePresentKHR(): pPresentInfo->pSwapchains[0] images passed to present must be in layout VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR but VkImage 0x50000000005 is in VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL.
+The Vulkan spec states: Each element of pImageIndices must be the index of a presentable image acquired from the swapchain specified by the corresponding element of the pSwapchains array, and the presented image subresource must be in the VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR layout at the time the operation is executed on a VkDevice (https://docs.vulkan.org/spec/latest/chapters/VK_KHR_surface/wsi.html#VUID-VkPresentInfoKHR-pImageIndices-01430)
+[ERROR]: vkQueuePresentKHR(): pPresentInfo->pSwapchains[0] images passed to present must be in layout VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR but VkImage 0x60000000006 is in VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL.
+The Vulkan spec states: Each element of pImageIndices must be the index of a presentable image acquired from the swapchain specified by the corresponding element of the pSwapchains array, and the presented image subresource must be in the VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR layout at the time the operation is executed on a VkDevice (https://docs.vulkan.org/spec/latest/chapters/VK_KHR_surface/wsi.html#VUID-VkPresentInfoKHR-pImageIndices-01430)
+[TRACE]: texture_system_wrap_internal created texture '__kohi_default_depth_texture__', but not registered. Resulting in an allocation, it is up to the caller to free this.
 [INFO]:  Swapchain created successfully!
 [INFO]:  Vulkan command buffers created.
 [INFO]:  Resized, booting.
+[ERROR]: vkCmdBeginRenderPass(): pCreateInfo->pAttachments[0] You cannot start a render pass using attachment 0 where the render pass initial layout is VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL and the previous known layout of the attachment is VK_IMAGE_LAYOUT_PRESENT_SRC_KHR. The layouts must match, or the render pass initial layout for the attachment must be VK_IMAGE_LAYOUT_UNDEFINED.
+The Vulkan spec states: If the initialLayout member of any of the VkAttachmentDescription structures specified when creating the render pass specified in the renderPass member of pRenderPassBegin is not VK_IMAGE_LAYOUT_UNDEFINED, then each such initialLayout must be equal to the current layout of the corresponding attachment image subresource of the framebuffer specified in the framebuffer member of pRenderPassBegin (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-vkCmdBeginRenderPass-initialLayout-00900)
+[ERROR]: vkCmdBeginRenderPass(): pCreateInfo->pAttachments[0] You cannot start a render pass using attachment 0 where the render pass initial layout is VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL and the previous known layout of the attachment is VK_IMAGE_LAYOUT_PRESENT_SRC_KHR. The layouts must match, or the render pass initial layout for the attachment must be VK_IMAGE_LAYOUT_UNDEFINED.
+The Vulkan spec states: If the initialLayout member of any of the VkAttachmentDescription structures specified when creating the render pass specified in the renderPass member of pRenderPassBegin is not VK_IMAGE_LAYOUT_UNDEFINED, then each such initialLayout must be equal to the current layout of the corresponding attachment image subresource of the framebuffer specified in the framebuffer member of pRenderPassBegin (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-vkCmdBeginRenderPass-initialLayout-00900)
+[ERROR]: vkCmdBeginRenderPass(): pCreateInfo->pAttachments[0] You cannot start a render pass using attachment 0 where the render pass initial layout is VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL and the previous known layout of the attachment is VK_IMAGE_LAYOUT_PRESENT_SRC_KHR. The layouts must match, or the render pass initial layout for the attachment must be VK_IMAGE_LAYOUT_UNDEFINED.
+The Vulkan spec states: If the initialLayout member of any of the VkAttachmentDescription structures specified when creating the render pass specified in the renderPass member of pRenderPassBegin is not VK_IMAGE_LAYOUT_UNDEFINED, then each such initialLayout must be equal to the current layout of the corresponding attachment image subresource of the framebuffer specified in the framebuffer member of pRenderPassBegin (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-vkCmdBeginRenderPass-initialLayout-00900)
+[ERROR]: vkQueuePresentKHR(): pPresentInfo->pSwapchains[0] images passed to present must be in layout VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR but VkImage 0x8990000000899 is in VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL.
+The Vulkan spec states: Each element of pImageIndices must be the index of a presentable image acquired from the swapchain specified by the corresponding element of the pSwapchains array, and the presented image subresource must be in the VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR layout at the time the operation is executed on a VkDevice (https://docs.vulkan.org/spec/latest/chapters/VK_KHR_surface/wsi.html#VUID-VkPresentInfoKHR-pImageIndices-01430)
+[ERROR]: vkCmdBeginRenderPass(): pCreateInfo->pAttachments[0] You cannot start a render pass using attachment 0 where the render pass initial layout is VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL and the previous known layout of the attachment is VK_IMAGE_LAYOUT_PRESENT_SRC_KHR. The layouts must match, or the render pass initial layout for the attachment must be VK_IMAGE_LAYOUT_UNDEFINED.
+The Vulkan spec states: If the initialLayout member of any of the VkAttachmentDescription structures specified when creating the render pass specified in the renderPass member of pRenderPassBegin is not VK_IMAGE_LAYOUT_UNDEFINED, then each such initialLayout must be equal to the current layout of the corresponding attachment image subresource of the framebuffer specified in the framebuffer member of pRenderPassBegin (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-vkCmdBeginRenderPass-initialLayout-00900)
+[ERROR]: vkQueuePresentKHR(): pPresentInfo->pSwapchains[0] images passed to present must be in layout VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR but VkImage 0x89a000000089a is in VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL.
+The Vulkan spec states: Each element of pImageIndices must be the index of a presentable image acquired from the swapchain specified by the corresponding element of the pSwapchains array, and the presented image subresource must be in the VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR layout at the time the operation is executed on a VkDevice (https://docs.vulkan.org/spec/latest/chapters/VK_KHR_surface/wsi.html#VUID-VkPresentInfoKHR-pImageIndices-01430)
+[ERROR]: vkCmdBeginRenderPass(): pCreateInfo->pAttachments[0] You cannot start a render pass using attachment 0 where the render pass initial layout is VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL and the previous known layout of the attachment is VK_IMAGE_LAYOUT_PRESENT_SRC_KHR. The layouts must match, or the render pass initial layout for the attachment must be VK_IMAGE_LAYOUT_UNDEFINED.
+The Vulkan spec states: If the initialLayout member of any of the VkAttachmentDescription structures specified when creating the render pass specified in the renderPass member of pRenderPassBegin is not VK_IMAGE_LAYOUT_UNDEFINED, then each such initialLayout must be equal to the current layout of the corresponding attachment image subresource of the framebuffer specified in the framebuffer member of pRenderPassBegin (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-vkCmdBeginRenderPass-initialLayout-00900)
+[ERROR]: vkQueuePresentKHR(): pPresentInfo->pSwapchains[0] images passed to present must be in layout VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR but VkImage 0x89b000000089b is in VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL.
+The Vulkan spec states: Each element of pImageIndices must be the index of a presentable image acquired from the swapchain specified by the corresponding element of the pSwapchains array, and the presented image subresource must be in the VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR layout at the time the operation is executed on a VkDevice (https://docs.vulkan.org/spec/latest/chapters/VK_KHR_surface/wsi.html#VUID-VkPresentInfoKHR-pImageIndices-01430)
+[ERROR]: vkCmdBeginRenderPass(): pCreateInfo->pAttachments[0] You cannot start a render pass using attachment 0 where the render pass initial layout is VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL and the previous known layout of the attachment is VK_IMAGE_LAYOUT_PRESENT_SRC_KHR. The layouts must match, or the render pass initial layout for the attachment must be VK_IMAGE_LAYOUT_UNDEFINED.
+The Vulkan spec states: If the initialLayout member of any of the VkAttachmentDescription structures specified when creating the render pass specified in the renderPass member of pRenderPassBegin is not VK_IMAGE_LAYOUT_UNDEFINED, then each such initialLayout must be equal to the current layout of the corresponding attachment image subresource of the framebuffer specified in the framebuffer member of pRenderPassBegin (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-vkCmdBeginRenderPass-initialLayout-00900)
+[ERROR]: vkQueuePresentKHR(): pPresentInfo->pSwapchains[0] images passed to present must be in layout VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR but VkImage 0x8990000000899 is in VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL.
+The Vulkan spec states: Each element of pImageIndices must be the index of a presentable image acquired from the swapchain specified by the corresponding element of the pSwapchains array, and the presented image subresource must be in the VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR layout at the time the operation is executed on a VkDevice (https://docs.vulkan.org/spec/latest/chapters/VK_KHR_surface/wsi.html#VUID-VkPresentInfoKHR-pImageIndices-01430)
+[ERROR]: vkCmdBeginRenderPass(): pCreateInfo->pAttachments[0] You cannot start a render pass using attachment 0 where the render pass initial layout is VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL and the previous known layout of the attachment is VK_IMAGE_LAYOUT_PRESENT_SRC_KHR. The layouts must match, or the render pass initial layout for the attachment must be VK_IMAGE_LAYOUT_UNDEFINED.
+The Vulkan spec states: If the initialLayout member of any of the VkAttachmentDescription structures specified when creating the render pass specified in the renderPass member of pRenderPassBegin is not VK_IMAGE_LAYOUT_UNDEFINED, then each such initialLayout must be equal to the current layout of the corresponding attachment image subresource of the framebuffer specified in the framebuffer member of pRenderPassBegin (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-vkCmdBeginRenderPass-initialLayout-00900)
+[ERROR]: vkQueuePresentKHR(): pPresentInfo->pSwapchains[0] images passed to present must be in layout VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR but VkImage 0x89a000000089a is in VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL.
+The Vulkan spec states: Each element of pImageIndices must be the index of a presentable image acquired from the swapchain specified by the corresponding element of the pSwapchains array, and the presented image subresource must be in the VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR layout at the time the operation is executed on a VkDevice (https://docs.vulkan.org/spec/latest/chapters/VK_KHR_surface/wsi.html#VUID-VkPresentInfoKHR-pImageIndices-01430)
+[ERROR]: (Warning - This VUID has now been reported 10 times, which is the duplicate_message_limit value, this will be the last time reporting it).
+vkCmdBeginRenderPass(): pCreateInfo->pAttachments[0] You cannot start a render pass using attachment 0 where the render pass initial layout is VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL and the previous known layout of the attachment is VK_IMAGE_LAYOUT_PRESENT_SRC_KHR. The layouts must match, or the render pass initial layout for the attachment must be VK_IMAGE_LAYOUT_UNDEFINED.
+The Vulkan spec states: If the initialLayout member of any of the VkAttachmentDescription structures specified when creating the render pass specified in the renderPass member of pRenderPassBegin is not VK_IMAGE_LAYOUT_UNDEFINED, then each such initialLayout must be equal to the current layout of the corresponding attachment image subresource of the framebuffer specified in the framebuffer member of pRenderPassBegin (https://docs.vulkan.org/spec/latest/chapters/renderpass.html#VUID-vkCmdBeginRenderPass-initialLayout-00900)
+[ERROR]: vkQueuePresentKHR(): pPresentInfo->pSwapchains[0] images passed to present must be in layout VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR but VkImage 0x89b000000089b is in VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL.
+The Vulkan spec states: Each element of pImageIndices must be the index of a presentable image acquired from the swapchain specified by the corresponding element of the pSwapchains array, and the presented image subresource must be in the VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR layout at the time the operation is executed on a VkDevice (https://docs.vulkan.org/spec/latest/chapters/VK_KHR_surface/wsi.html#VUID-VkPresentInfoKHR-pImageIndices-01430)
+[ERROR]: vkQueuePresentKHR(): pPresentInfo->pSwapchains[0] images passed to present must be in layout VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR but VkImage 0x8990000000899 is in VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL.
+The Vulkan spec states: Each element of pImageIndices must be the index of a presentable image acquired from the swapchain specified by the corresponding element of the pSwapchains array, and the presented image subresource must be in the VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR layout at the time the operation is executed on a VkDevice (https://docs.vulkan.org/spec/latest/chapters/VK_KHR_surface/wsi.html#VUID-VkPresentInfoKHR-pImageIndices-01430)
+[ERROR]: (Warning - This VUID has now been reported 10 times, which is the duplicate_message_limit value, this will be the last time reporting it).
+vkQueuePresentKHR(): pPresentInfo->pSwapchains[0] images passed to present must be in layout VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR but VkImage 0x89a000000089a is in VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL.
+The Vulkan spec states: Each element of pImageIndices must be the index of a presentable image acquired from the swapchain specified by the corresponding element of the pSwapchains array, and the presented image subresource must be in the VK_IMAGE_LAYOUT_PRESENT_SRC_KHR or VK_IMAGE_LAYOUT_SHARED_PRESENT_KHR layout at the time the operation is executed on a VkDevice (https://docs.vulkan.org/spec/latest/chapters/VK_KHR_surface/wsi.html#VUID-VkPresentInfoKHR-pImageIndices-01430)
 [DEBUG]: Swapping textures!
 [TRACE]: Texture 'cobblestone' does not exist yet. Created, ref_count=1.
 [TRACE]: Texture 'cobblestone_SPEC' does not exist yet. Created, ref_count=1.
 [TRACE]: Texture 'cobblestone_NRM' does not exist yet. Created, ref_count=1.
 [WARN]:  material_system_release tried to release non-existant material 'paving2'.
-[DEBUG]: Swapping textures!
-[TRACE]: Texture 'paving' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'paving_SPEC' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'paving_NRM' does not exist yet. Created, ref_count=1.
-[TRACE]: Destroying material 'cobblestone'...
-[TRACE]: Release texture 'cobblestone', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'cobblestone_SPEC', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'cobblestone_NRM', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Released material 'cobblestone'. Texture is now unloaded as reference_count = 0 and auto_release = true.
 [INFO]:  EVENT_CODE_APPLICATION_QUIT has been recieved, shutting down.
 
-[DEBUG]: Frame count: 154, running time: 52.476489
+[DEBUG]: Frame count: 225, running time: 9.461072
 [INFO]:  after temp watch close
 [TRACE]: Destroying material 'test_material'...
 [TRACE]: Release texture 'orange_lines_512', texture unloaded because reference_count=0 and auto_release=true.
@@ -1201,10 +1256,10 @@
 [TRACE]: Release texture 'logo', texture unloaded because reference_count=0 and auto_release=true.
 [WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
 [WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
-[TRACE]: Destroying material 'paving'...
-[TRACE]: Release texture 'paving', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'paving_SPEC', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'paving_NRM', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Destroying material 'cobblestone'...
+[TRACE]: Release texture 'cobblestone', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'cobblestone_SPEC', texture unloaded because reference_count=0 and auto_release=true.
+[TRACE]: Release texture 'cobblestone_NRM', texture unloaded because reference_count=0 and auto_release=true.
 [TRACE]: Destroying material 'default'...
 [WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
 [WARN]:  Tried to release a texture with auto_release=false & reference_count=0.

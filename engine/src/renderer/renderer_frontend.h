@@ -29,9 +29,9 @@ b8 renderer_create_geometry(geometry *geometry, u32 vertex_size,
                             const void *indices);
 void renderer_destroy_geometry(geometry *geometry);
 
-b8 renderer_renderpass_id(const char *name, u8 *out_renderpass_id);
+renderpass *renderer_renderpass_get(const char *name);
 
-b8 renderer_shader_create(struct shader *s, u8 renderpass_id, u8 stage_count,
+b8 renderer_shader_create(struct shader *s, renderpass *pass, u8 stage_count,
                           const char **stage_filenames, shader_stage *stages);
 void renderer_shader_destroy(struct shader *s);
 
@@ -55,6 +55,17 @@ b8 renderer_set_uniform(struct shader *s, struct shader_uniform *uniform,
 
 b8 renderer_texture_map_acquire_resources(texture_map *map);
 void renderer_texture_map_release_resources(texture_map *map);
+
+void renderer_renderpass_create(renderpass *out_renderpass, f32 depth,
+                                u32 stencil, b8 has_prev_pass,
+                                b8 has_next_pass);
+void renderer_renderpass_destroy(renderpass *renderpass);
+
+void renderer_render_target_create(u8 attachment_count, texture **attachments,
+                                   renderpass *pass, u32 width, u32 height,
+                                   render_target *out_target);
+void renderer_render_target_destroy(render_target *target,
+                                    b8 free_internal_memory);
 
 // HACK: this should not be exposed outside the engine
 KAPI void renderer_set_view(mat4 view, vec3 view_position);

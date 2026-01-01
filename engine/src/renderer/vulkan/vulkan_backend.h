@@ -1,26 +1,32 @@
 #pragma once
 
 #include "renderer/renderer_backend.h"
+#include "renderer/vulkan/vulkan_types.inl"
 #include "resources/resource_types.h"
 #include "systems/shader_system.h"
 
 struct shader;
 struct shader_uniform;
 
-b8 vulkan_renderer_backend_initialize(renderer_backend *backend,
-                                      const char *application_name,
+// system
+b8 vulkan_renderer_backend_initialize(struct renderer_backend *backend,
+                                      const renderer_backend_config *config,
+                                      u8 *out_window_render_target_count,
                                       struct platform_state *plat_state);
 void vulkan_renderer_backend_shutdown(renderer_backend *backend);
 
+// main frame functions
 void vulkan_renderer_backend_on_resized(renderer_backend *backend, u16 width,
                                         u16 height);
 b8 vulkan_renderer_backend_begin_frame(renderer_backend *backend,
                                        f32 delta_time);
 b8 vulkan_renderer_backend_end_frame(renderer_backend *backend, f32 delta_time);
 
-b8 vulkan_renderer_begin_renderpass(renderer_backend *backend,
-                                    u8 renderpass_id);
-b8 vulkan_renderer_end_renderpass(renderer_backend *backend, u8 renderpass_id);
+// renderpass functions
+b8 vulkan_renderer_begin_renderpass(renderer_backend *backend, renderpass *pass,
+                                    render_target *target);
+b8 vulkan_renderer_end_renderpass(renderer_backend *backend, renderpass *pass);
+renderpass *vulkan_renderer_renderpass_get(const char *name);
 
 void vulkan_renderer_draw_geometry(renderer_backend *backend,
                                    geometry_render_data data);
@@ -29,9 +35,10 @@ void vulkan_renderer_texture_create(const u8 *pixels, struct texture *texture);
 void vulkan_renderer_texture_destroy(texture *texture);
 
 void vulkan_renderer_texture_create_writeable(struct texture *t);
-void vulkan_renderer_texture_resize(struct texture *t, u32 new_width, u32 new_height);
+void vulkan_renderer_texture_resize(struct texture *t, u32 new_width,
+                                    u32 new_height);
 void vulkan_renderer_texture_write_data(struct texture *t, u32 offset, u32 size,
-                        const u8 *pixels);
+                                        const u8 *pixels);
 
 b8 vulkan_renderer_create_geometry(geometry *geometry, u32 vertex_size,
                                    u32 vertex_count, const void *vertices,
@@ -39,7 +46,7 @@ b8 vulkan_renderer_create_geometry(geometry *geometry, u32 vertex_size,
                                    const void *indices);
 void vulkan_renderer_destroy_geometry(geometry *geometry);
 
-b8 vulkan_renderer_shader_create(struct shader *shader, u8 renderpass_id,
+b8 vulkan_renderer_shader_create(struct shader *shader, renderpass *pass,
                                  u8 stage_count, const char **stage_filenames,
                                  shader_stage *stages);
 void vulkan_renderer_shader_destroy(struct shader *shader);
@@ -60,3 +67,19 @@ b8 vulkan_renderer_set_uniform(struct shader *s, struct shader_uniform *uniform,
 
 b8 vulkan_renderer_texture_map_acquire_resources(texture_map *map);
 void vulkan_renderer_texture_map_release_resources(texture_map *map);
+
+void vulkan_renderpass_create(renderpass *out_renderpass, f32 depth,
+                              u32 stencil, b8 has_prev_pass, b8 has_next_pass);
+void vulkan_renderpass_destroy(renderpass *renderpass);
+
+void vulkan_renderer_render_target_create(u8 attachment_count,
+                                          texture **attachments,
+                                          renderpass *pass, u32 width,
+                                          u32 height,
+                                          render_target *out_target);
+void vulkan_renderer_render_target_destroy(render_target *target,
+                                           b8 free_internal_memory);
+
+texture *vulkan_renderer_window_attachment_get(u8 index);
+texture *vulkan_renderer_depth_attachment_get();
+u8 vulkan_renderer_window_attachment_index_get();

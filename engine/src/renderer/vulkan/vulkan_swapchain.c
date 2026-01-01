@@ -276,12 +276,19 @@ void create(vulkan_context *context, u32 width, u32 height,
     }
 
     // Create depth image and view
-    vulkan_image_create(
-        context, VK_IMAGE_TYPE_2D, swapchain_extent.width,
-        swapchain_extent.height, context->device.depth_format,
-        VK_IMAGE_TILING_OPTIMAL, VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT,
-        VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, true, VK_IMAGE_ASPECT_DEPTH_BIT,
-        &swapchain->depth_attachment);
+    vulkan_image *image = kallocate(sizeof(texture), MEMORY_TAG_TEXTURE);
+    vulkan_image_create(context, VK_IMAGE_TYPE_2D, swapchain_extent.width,
+                        swapchain_extent.height, context->device.depth_format,
+                        VK_IMAGE_TILING_OPTIMAL,
+                        VK_IMAGE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT,
+                        VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, true,
+                        VK_IMAGE_ASPECT_DEPTH_BIT, image);
+
+    context->swapchain.depth_texture = texture_system_wrap_internal(
+        "__kohi_default_depth_texture__", swapchain_extent.width,
+        swapchain_extent.height, context->device.depth_channel_count, false,
+        true, false, image);
+
     KINFO("Swapchain created successfully!");
 }
 
@@ -289,7 +296,11 @@ void destroy(vulkan_context *context, vulkan_swapchain *swapchain) {
     // Ensure GPU is idle before destroying swapchain-dependent resources
     vkDeviceWaitIdle(context->device.logical_device);
 
-    vulkan_image_destroy(context, &swapchain->depth_attachment);
+    vulkan_image_destroy(
+        context, (vulkan_image *)swapchain->depth_texture->internal_data);
+    kfree(swapchain->depth_texture->internal_data, sizeof(vulkan_image),
+          MEMORY_TAG_TEXTURE);
+    context->swapchain.depth_texture = 0;
 
     // Only destroy the view, not the images. Those are owned by the swapchain.
     for (u32 i = 0; i < swapchain->image_count; i++) {

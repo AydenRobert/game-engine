@@ -21,9 +21,9 @@ b8 renderer_backend_create(renderer_backend_type type,
         out_renderer_backend->begin_frame = vulkan_renderer_backend_begin_frame;
         out_renderer_backend->end_frame = vulkan_renderer_backend_end_frame;
 
-        out_renderer_backend->begin_renderpass =
+        out_renderer_backend->renderpass_begin =
             vulkan_renderer_begin_renderpass;
-        out_renderer_backend->end_renderpass = vulkan_renderer_end_renderpass;
+        out_renderer_backend->renderpass_end = vulkan_renderer_end_renderpass;
 
         out_renderer_backend->resized = vulkan_renderer_backend_on_resized;
 
@@ -71,6 +71,20 @@ b8 renderer_backend_create(renderer_backend_type type,
         out_renderer_backend->texture_map_release_resources =
             vulkan_renderer_texture_map_release_resources;
 
+        out_renderer_backend->renderpass_create = vulkan_renderpass_create;
+        out_renderer_backend->renderpass_destroy = vulkan_renderpass_destroy;
+        out_renderer_backend->renderpass_get = vulkan_renderer_renderpass_get;
+        out_renderer_backend->render_target_create =
+            vulkan_renderer_render_target_create;
+        out_renderer_backend->render_target_destroy =
+            vulkan_renderer_render_target_destroy;
+        out_renderer_backend->window_attachment_get =
+            vulkan_renderer_window_attachment_get;
+        out_renderer_backend->depth_attachment_get =
+            vulkan_renderer_depth_attachment_get;
+        out_renderer_backend->window_attachment_index_get =
+            vulkan_renderer_window_attachment_index_get;
+
         return true;
     }
 
@@ -84,8 +98,8 @@ void renderer_backend_destroy(struct renderer_backend *renderer_backend) {
     renderer_backend->begin_frame = 0;
     renderer_backend->end_frame = 0;
 
-    renderer_backend->begin_renderpass = 0;
-    renderer_backend->end_renderpass = 0;
+    renderer_backend->renderpass_begin = 0;
+    renderer_backend->renderpass_end = 0;
 
     renderer_backend->resized = 0;
 
@@ -120,4 +134,13 @@ void renderer_backend_destroy(struct renderer_backend *renderer_backend) {
 
     renderer_backend->texture_map_acquire_resources = 0;
     renderer_backend->texture_map_release_resources = 0;
+
+    renderer_backend->renderpass_create = 0;
+    renderer_backend->renderpass_destroy = 0;
+    renderer_backend->renderpass_get = 0;
+    renderer_backend->render_target_create = 0;
+    renderer_backend->render_target_destroy = 0;
+    renderer_backend->window_attachment_get = 0;
+    renderer_backend->depth_attachment_get = 0;
+    renderer_backend->window_attachment_index_get = 0;
 }
