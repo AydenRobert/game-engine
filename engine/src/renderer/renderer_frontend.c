@@ -94,12 +94,14 @@ b8 renderer_initialize(const char *application_name,
 
     // default framebuffer size
     state_ptr->framebuffer_width = 1280;
-    state_ptr->framebuffer_width = 720;
+    state_ptr->framebuffer_height = 720;
     state_ptr->resizing = false;
     state_ptr->frames_since_resize = 0;
 
-    renderer_backend_create(RENDERER_BACKEND_TYPES_VULKAN, plat_state,
-                            &state_ptr->backend);
+    if (!renderer_backend_create(RENDERER_BACKEND_TYPES_VULKAN, plat_state,
+                            &state_ptr->backend)) {
+        return false;
+    }
     state_ptr->backend.frame_number = 0;
     state_ptr->render_mode = RENDERER_VIEW_MODE_DEFAULT;
 

@@ -94,8 +94,8 @@ b8 vulkan_renderer_backend_initialize(struct renderer_backend *backend,
     context.on_rendertarget_refresh_required =
         config->on_rendertarget_refresh_required;
 
-    context.framebuffer_width = 800;
-    context.framebuffer_height = 600;
+    context.framebuffer_width = 1280;
+    context.framebuffer_height = 720;
 
     // Setup vulkan instance
     VkApplicationInfo app_info = {VK_STRUCTURE_TYPE_APPLICATION_INFO};
@@ -278,7 +278,7 @@ b8 vulkan_renderer_backend_initialize(struct renderer_backend *backend,
 
         vulkan_renderpass_create(&context.registered_passes[id], 1.0f, 0,
                                  config->pass_configs[i].prev_name != 0,
-                                 config->pass_configs[i].prev_name != 0);
+                                 config->pass_configs[i].next_name != 0);
 
         hashtable_set(&context.renderpass_table, config->pass_configs[i].name,
                       &id);
