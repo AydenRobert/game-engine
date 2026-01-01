@@ -66,6 +66,3 @@ void renderer_render_target_create(u8 attachment_count, texture **attachments,
                                    render_target *out_target);
 void renderer_render_target_destroy(render_target *target,
                                     b8 free_internal_memory);
-
-// HACK: this should not be exposed outside the engine
-KAPI void renderer_set_view(mat4 view, vec3 view_position);

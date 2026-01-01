@@ -16,6 +16,7 @@
 
 // systems
 #include "resources/resource_types.h"
+#include "systems/camera_system.h"
 #include "systems/geometry_system.h"
 #include "systems/material_system.h"
 #include "systems/resource_system.h"
@@ -23,7 +24,6 @@
 #include "systems/texture_system.h"
 
 // TODO: temp
-#include "math/geometry_utils.h"
 #include "math/kmath.h"
 #include "math/transform.h"
 
@@ -67,6 +67,9 @@ typedef struct application_state {
 
     u64 geometry_system_memory_requirement;
     void *geometry_system_state;
+
+    u64 camera_system_memory_requirement;
+    void *camera_system_state;
 
     // TODO: temp
     mesh meshes[10];
@@ -293,6 +296,21 @@ KAPI b8 application_create(game *game_inst) {
             &app_state->geometry_system_memory_requirement,
             app_state->geometry_system_state, geometry_system_config)) {
         KFATAL("Failed to initialize geometry system, shutting down.");
+        return false;
+    }
+
+    // Initialize geometry system
+    camera_system_config camera_system_config;
+    camera_system_config.max_camera_count = 61;
+    camera_system_initialize(&app_state->camera_system_memory_requirement, 0,
+                             camera_system_config);
+    app_state->camera_system_state = linear_allocator_allocate(
+        &app_state->systems_allocator,
+        app_state->camera_system_memory_requirement, 64);
+    if (!camera_system_initialize(&app_state->camera_system_memory_requirement,
+                                  app_state->camera_system_state,
+                                  camera_system_config)) {
+        KFATAL("Failed to initialize camera system, shutting down.");
         return false;
     }
 
