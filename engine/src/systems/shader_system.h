@@ -225,6 +225,8 @@ typedef struct shader {
     krange push_constant_ranges[32];
     /** @brief Size of all the attributes combined. */
     u16 attribute_stride;
+    /** @brief frame number shader was last updated */
+    u64 render_frame_number;
     /** @brief Opaque pointer to renderer specific data. */
     void *internal_data;
 } shader;

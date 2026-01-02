@@ -28,6 +28,14 @@ typedef struct render_view_world_internal_data {
     u32 render_mode;
 } render_view_world_internal_data;
 
+typedef struct geometry_distance {
+    geometry_render_data g;
+    f32 distance;
+} geometry_distance;
+
+static void quick_sort(geometry_distance arr[], i32 low_index, i32 high_index,
+                       b8 ascending);
+
 static b8 render_view_on_event(u16 code, void *sender, void *listener_inst,
                                event_context context) {
     if (!listener_inst || !((render_view *)listener_inst)->internal_data) {
@@ -149,19 +157,45 @@ b8 render_view_world_on_build_packet(const render_view *self, void *data,
         camera_position_get(internal_data->world_camera);
     out_packet->ambient_colour = internal_data->ambient_colour;
 
+    geometry_distance *geometry_distances = darray_create(geometry_distance);
+
     for (u32 i = 0; i < mesh_data->mesh_count; i++) {
         mesh *m = &mesh_data->meshes[i];
+        mat4 model = transform_get_world(&m->transform);
         for (u32 j = 0; j < m->geometry_count; j++) {
+            geometry_render_data render_data;
+            render_data.geometry = m->geometries[j];
+            render_data.model = model;
+
             if ((m->geometries[j]->material->diffuse_map.texture->flags &
                  TEXTURE_FLAG_HAS_TRANSPARENCY) == 0) {
-                geometry_render_data render_data;
-                render_data.geometry = m->geometries[j];
-                render_data.model = transform_get_world(&m->transform);
                 darray_push(out_packet->geometries, render_data);
                 out_packet->geometry_count++;
+            } else {
+                vec3 centre =
+                    vec3_transform(render_data.geometry->centre, model);
+                f32 distance = vec3_distance(
+                    centre, internal_data->world_camera->position);
+
+                geometry_distance gdist;
+                gdist.distance = kabs(distance);
+                gdist.g = render_data;
+
+                darray_push(geometry_distances, gdist);
             }
         }
     }
+
+    // Sort the distances
+    u32 geometry_count = darray_length(geometry_distances);
+    quick_sort(geometry_distances, 0, geometry_count - 1, false);
+
+    for (u32 i = 0; i < geometry_count; i++) {
+        darray_push(out_packet->geometries, geometry_distances[i].g);
+        out_packet->geometry_count++;
+    }
+
+    darray_destroy(geometry_distances);
 
     return true;
 }
@@ -190,9 +224,9 @@ b8 render_view_world_on_render(const render_view *self,
 
         // TODO: generic data get from scene
         if (!material_system_apply_global(
-                shader_id, &packet->projection_matrix, &packet->view_matrix,
-                &packet->ambient_colour, &packet->view_position,
-                internal_data->render_mode)) {
+                shader_id, frame_number, &packet->projection_matrix,
+                &packet->view_matrix, &packet->ambient_colour,
+                &packet->view_position, internal_data->render_mode)) {
             KERROR("render_view_world_on_render - failed to apply globals.");
             return false;
         }
@@ -230,4 +264,42 @@ b8 render_view_world_on_render(const render_view *self,
     }
 
     return true;
+}
+
+static void swap(geometry_distance *a, geometry_distance *b) {
+    geometry_distance temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+static i32 partition(geometry_distance arr[], i32 low_index, i32 high_index,
+                     b8 ascending) {
+    geometry_distance pivot = arr[high_index];
+    i32 i = (low_index - 1);
+
+    for (u32 j = low_index; j <= high_index - 1; j++) {
+        if (ascending) {
+            if (arr[j].distance < pivot.distance) {
+                i++;
+                swap(&arr[i], &arr[j]);
+            }
+        } else {
+            if (arr[j].distance > pivot.distance) {
+                i++;
+                swap(&arr[i], &arr[j]);
+            }
+        }
+    }
+
+    swap(&arr[i + 1], &arr[high_index]);
+    return i + 1;
+}
+
+static void quick_sort(geometry_distance arr[], i32 low_index, i32 high_index,
+                       b8 ascending) {
+    if (low_index >= high_index)
+        return;
+    i32 pivot_point = partition(arr, low_index, high_index, ascending);
+    quick_sort(arr, low_index, pivot_point - 1, ascending);
+    quick_sort(arr, pivot_point + 1, high_index, ascending);
 }

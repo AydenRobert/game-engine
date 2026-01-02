@@ -1,0 +1,172 @@
+==248155== Warning: set address range perms: large range [0x59ce4028, 0x119ce4158) (noaccess)
+==248155==
+==248155== HEAP SUMMARY:
+==248155==     in use at exit: 567,927,009 bytes in 171 blocks
+==248155==   total heap usage: 836,144 allocs, 835,973 frees, 5,135,462,728 bytes allocated
+==248155==
+==248155== 16 bytes in 1 blocks are definitely lost in loss record 1 of 55
+==248155==    at 0x484E7A8: malloc (vg_replace_malloc.c:446)
+==248155==    by 0x4945989: platform_startup (engine/src/platform/platform_linux.c:37)
+==248155==    by 0x4941F61: application_create (engine/src/core/application.c:207)
+==248155==    by 0x40012F2: main (entry.h:29)
+==248155==
+==248155== 80 bytes in 1 blocks are definitely lost in loss record 15 of 55
+==248155==    at 0x484E7A8: malloc (vg_replace_malloc.c:446)
+==248155==    by 0x5EBD0A1: ???
+==248155==    by 0x63496F1: ???
+==248155==    by 0x6349988: ???
+==248155==    by 0x6464019: ???
+==248155==    by 0x6201FFD: ???
+==248155==    by 0xE3C1C99: ???
+==248155==    by 0xE3B0854: ???
+==248155==    by 0x494BFD0: vulkan_graphics_pipeline_create (engine/src/renderer/vulkan/vulkan_pipeline.c:162)
+==248155==    by 0x4952948: vulkan_renderer_shader_initialize (engine/src/renderer/vulkan/vulkan_backend.c:1516)
+==248155==    by 0x495A07F: renderer_shader_initialize (engine/src/renderer/renderer_frontend.c:371)
+==248155==    by 0x4983EC8: shader_system_create (engine/src/systems/shader_system.c:176)
+==248155==
+==248155== 96 bytes in 1 blocks are definitely lost in loss record 18 of 55
+==248155==    at 0x4855C13: calloc (vg_replace_malloc.c:1675)
+==248155==    by 0x4D51AED: UnknownInlinedFun (wayland-private.h:254)
+==248155==    by 0x4D51AED: proxy_create (wayland-client.c:485)
+==248155==    by 0x4D51FAD: UnknownInlinedFun (wayland-client.c:745)
+==248155==    by 0x4D51FAD: wl_proxy_marshal_array_flags (wayland-client.c:910)
+==248155==    by 0x4D52FD2: wl_proxy_marshal_flags (wayland-client.c:863)
+==248155==    by 0x4944B1D: wl_display_get_registry (wayland-client-protocol.h:1129)
+==248155==    by 0x4944983: platform_startup_wayland (engine/src/platform/platform_linux_wayland.c:309)
+==248155==    by 0x49459C6: platform_startup (engine/src/platform/platform_linux.c:41)
+==248155==    by 0x4941F61: application_create (engine/src/core/application.c:207)
+==248155==    by 0x40012F2: main (entry.h:29)
+==248155==
+==248155== 96 bytes in 1 blocks are definitely lost in loss record 19 of 55
+==248155==    at 0x4855C13: calloc (vg_replace_malloc.c:1675)
+==248155==    by 0x4D51AED: UnknownInlinedFun (wayland-private.h:254)
+==248155==    by 0x4D51AED: proxy_create (wayland-client.c:485)
+==248155==    by 0x4D51FAD: UnknownInlinedFun (wayland-client.c:745)
+==248155==    by 0x4D51FAD: wl_proxy_marshal_array_flags (wayland-client.c:910)
+==248155==    by 0x4D52FD2: wl_proxy_marshal_flags (wayland-client.c:863)
+==248155==    by 0x494486E: wl_registry_bind (wayland-client-protocol.h:1242)
+==248155==    by 0x4944752: registry_global (engine/src/platform/platform_linux_wayland.c:278)
+==248155==    by 0x4EDDAC5: ffi_call_unix64 (unix64.S:104)
+==248155==    by 0x4EDA76A: ffi_call_int.lto_priv.0 (ffi64.c:676)
+==248155==    by 0x4EDD06D: ffi_call (ffi64.c:713)
+==248155==    by 0x4D5048C: wl_closure_invoke.constprop.0 (connection.c:1241)
+==248155==    by 0x4D512E8: dispatch_event (wayland-client.c:1707)
+==248155==    by 0x4D516F2: UnknownInlinedFun (wayland-client.c:1853)
+==248155==    by 0x4D516F2: wl_display_dispatch_queue_pending (wayland-client.c:2190)
+==248155==
+==248155== 96 bytes in 1 blocks are definitely lost in loss record 20 of 55
+==248155==    at 0x4855C13: calloc (vg_replace_malloc.c:1675)
+==248155==    by 0x4D51AED: UnknownInlinedFun (wayland-private.h:254)
+==248155==    by 0x4D51AED: proxy_create (wayland-client.c:485)
+==248155==    by 0x4D51FAD: UnknownInlinedFun (wayland-client.c:745)
+==248155==    by 0x4D51FAD: wl_proxy_marshal_array_flags (wayland-client.c:910)
+==248155==    by 0x4D52FD2: wl_proxy_marshal_flags (wayland-client.c:863)
+==248155==    by 0x494486E: wl_registry_bind (wayland-client-protocol.h:1242)
+==248155==    by 0x4944792: registry_global (engine/src/platform/platform_linux_wayland.c:281)
+==248155==    by 0x4EDDAC5: ffi_call_unix64 (unix64.S:104)
+==248155==    by 0x4EDA76A: ffi_call_int.lto_priv.0 (ffi64.c:676)
+==248155==    by 0x4EDD06D: ffi_call (ffi64.c:713)
+==248155==    by 0x4D5048C: wl_closure_invoke.constprop.0 (connection.c:1241)
+==248155==    by 0x4D512E8: dispatch_event (wayland-client.c:1707)
+==248155==    by 0x4D516F2: UnknownInlinedFun (wayland-client.c:1853)
+==248155==    by 0x4D516F2: wl_display_dispatch_queue_pending (wayland-client.c:2190)
+==248155==
+==248155== 5,521,408 (1,327,104 direct, 4,194,304 indirect) bytes in 3 blocks are definitely lost in loss record 49 of 55
+==248155==    at 0x484E7A8: malloc (vg_replace_malloc.c:446)
+==248155==    by 0x4961AF4: stbi__malloc (stb_image.h:987)
+==248155==    by 0x496A2E9: stbi__malloc_mad3 (stb_image.h:1058)
+==248155==    by 0x496990E: stbi__create_png_image_raw (stb_image.h:4712)
+==248155==    by 0x4968DF6: stbi__create_png_image (stb_image.h:4868)
+==248155==    by 0x4967C79: stbi__parse_png_file (stb_image.h:5214)
+==248155==    by 0x4966E01: stbi__do_png (stb_image.h:5267)
+==248155==    by 0x4963141: stbi__png_load (stb_image.h:5299)
+==248155==    by 0x4962BFD: stbi__load_main (stb_image.h:1147)
+==248155==    by 0x49603DF: stbi__load_and_postprocess_8bit (stb_image.h:1263)
+==248155==    by 0x49602E5: stbi_load_from_file (stb_image.h:1381)
+==248155==    by 0x49601DC: stbi_load (stb_image.h:1371)
+==248155==
+==248155== 8,389,874 (184 direct, 8,389,690 indirect) bytes in 1 blocks are definitely lost in loss record 50 of 55
+==248155==    at 0x4855C13: calloc (vg_replace_malloc.c:1675)
+==248155==    by 0xDA7AAC3: dbus_message_new_empty_header (dbus-message.c:1263)
+==248155==    by 0xDA7CBBD: _dbus_message_loader_queue_messages (dbus-message.c:4713)
+==248155==    by 0xDA878AE: _dbus_transport_get_dispatch_status (dbus-transport.c:1148)
+==248155==    by 0xDA87AA7: _dbus_transport_queue_messages (dbus-transport.c:1175)
+==248155==    by 0xDA87E00: do_reading (dbus-transport-socket.c:912)
+==248155==    by 0xDA8838C: socket_do_iteration (dbus-transport-socket.c:1225)
+==248155==    by 0xDA6BE92: UnknownInlinedFun (dbus-transport.c:1019)
+==248155==    by 0xDA6BE92: UnknownInlinedFun (dbus-transport.c:1002)
+==248155==    by 0xDA6BE92: _dbus_connection_do_iteration_unlocked (dbus-connection.c:1231)
+==248155==    by 0xDA80B9F: UnknownInlinedFun (dbus-connection.c:2449)
+==248155==    by 0xDA80B9F: dbus_pending_call_block (dbus-pending-call.c:770)
+==248155==    by 0xDA6DD46: dbus_connection_send_with_reply_and_block (dbus-connection.c:3591)
+==248155==    by 0xDA6DFED: dbus_bus_register (dbus-bus.c:698)
+==248155==    by 0xDA6E2DA: internal_bus_get (dbus-bus.c:486)
+==248155==
+==248155== 54,525,952 bytes in 7 blocks are possibly lost in loss record 51 of 55
+==248155==    at 0x484E7A8: malloc (vg_replace_malloc.c:446)
+==248155==    by 0x4961AF4: stbi__malloc (stb_image.h:987)
+==248155==    by 0x496A2E9: stbi__malloc_mad3 (stb_image.h:1058)
+==248155==    by 0x4967F9A: stbi__convert_format (stb_image.h:1763)
+==248155==    by 0x4966B11: stbi__tga_load (stb_image.h:6065)
+==248155==    by 0x4962DE7: stbi__load_main (stb_image.h:1184)
+==248155==    by 0x49603DF: stbi__load_and_postprocess_8bit (stb_image.h:1263)
+==248155==    by 0x49602E5: stbi_load_from_file (stb_image.h:1381)
+==248155==    by 0x49601DC: stbi_load (stb_image.h:1371)
+==248155==    by 0x4962910: image_loader_load (engine/src/resources/loaders/image_loader.c:51)
+==248155==    by 0x497D7F5: load (engine/src/systems/resource_system.c:226)
+==248155==    by 0x497D747: resource_system_load (engine/src/systems/resource_system.c:139)
+==248155==
+==248155== 73,400,320 (18,874,368 direct, 54,525,952 indirect) bytes in 6 blocks are definitely lost in loss record 53 of 55
+==248155==    at 0x484E7A8: malloc (vg_replace_malloc.c:446)
+==248155==    by 0x4961AF4: stbi__malloc (stb_image.h:987)
+==248155==    by 0x496A2E9: stbi__malloc_mad3 (stb_image.h:1058)
+==248155==    by 0x4966484: stbi__tga_load (stb_image.h:5927)
+==248155==    by 0x4962DE7: stbi__load_main (stb_image.h:1184)
+==248155==    by 0x49603DF: stbi__load_and_postprocess_8bit (stb_image.h:1263)
+==248155==    by 0x49602E5: stbi_load_from_file (stb_image.h:1381)
+==248155==    by 0x49601DC: stbi_load (stb_image.h:1371)
+==248155==    by 0x4962910: image_loader_load (engine/src/resources/loaders/image_loader.c:51)
+==248155==    by 0x497D7F5: load (engine/src/systems/resource_system.c:226)
+==248155==    by 0x497D747: resource_system_load (engine/src/systems/resource_system.c:139)
+==248155==    by 0x497F2ED: load_texture (engine/src/systems/texture_system.c:378)
+==248155==
+==248155== 201,326,592 bytes in 3 blocks are possibly lost in loss record 54 of 55
+==248155==    at 0x484E7A8: malloc (vg_replace_malloc.c:446)
+==248155==    by 0x4961AF4: stbi__malloc (stb_image.h:987)
+==248155==    by 0x496A2E9: stbi__malloc_mad3 (stb_image.h:1058)
+==248155==    by 0x496990E: stbi__create_png_image_raw (stb_image.h:4712)
+==248155==    by 0x4968DF6: stbi__create_png_image (stb_image.h:4868)
+==248155==    by 0x4967C79: stbi__parse_png_file (stb_image.h:5214)
+==248155==    by 0x4966E01: stbi__do_png (stb_image.h:5267)
+==248155==    by 0x4963141: stbi__png_load (stb_image.h:5299)
+==248155==    by 0x4962BFD: stbi__load_main (stb_image.h:1147)
+==248155==    by 0x49603DF: stbi__load_and_postprocess_8bit (stb_image.h:1263)
+==248155==    by 0x49602E5: stbi_load_from_file (stb_image.h:1381)
+==248155==    by 0x49601DC: stbi_load (stb_image.h:1371)
+==248155==
+==248155== 224,657,408 bytes in 44 blocks are definitely lost in loss record 55 of 55
+==248155==    at 0x484E7A8: malloc (vg_replace_malloc.c:446)
+==248155==    by 0x4961AF4: stbi__malloc (stb_image.h:987)
+==248155==    by 0x496A2E9: stbi__malloc_mad3 (stb_image.h:1058)
+==248155==    by 0x4967F9A: stbi__convert_format (stb_image.h:1763)
+==248155==    by 0x4966B11: stbi__tga_load (stb_image.h:6065)
+==248155==    by 0x4962DE7: stbi__load_main (stb_image.h:1184)
+==248155==    by 0x49603DF: stbi__load_and_postprocess_8bit (stb_image.h:1263)
+==248155==    by 0x49602E5: stbi_load_from_file (stb_image.h:1381)
+==248155==    by 0x49601DC: stbi_load (stb_image.h:1371)
+==248155==    by 0x4962910: image_loader_load (engine/src/resources/loaders/image_loader.c:51)
+==248155==    by 0x497D7F5: load (engine/src/systems/resource_system.c:226)
+==248155==    by 0x497D747: resource_system_load (engine/src/systems/resource_system.c:139)
+==248155==
+==248155== LEAK SUMMARY:
+==248155==    definitely lost: 244,859,448 bytes in 59 blocks
+==248155==    indirectly lost: 67,109,946 bytes in 9 blocks
+==248155==      possibly lost: 255,852,544 bytes in 10 blocks
+==248155==    still reachable: 105,039 bytes in 92 blocks
+==248155==         suppressed: 32 bytes in 1 blocks
+==248155== Reachable blocks (those to which a pointer was found) are not shown.
+==248155== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==248155==
+==248155== Use --track-origins=yes to see where uninitialised values come from
+==248155== For lists of detected and suppressed errors, rerun with: -s
+==248155== ERROR SUMMARY: 1503 errors from 161 contexts (suppressed: 0 from 0)

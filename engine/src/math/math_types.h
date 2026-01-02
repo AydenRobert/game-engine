@@ -64,6 +64,11 @@ typedef union mat4_u {
 #endif
 } mat4;
 
+typedef struct extents_3d {
+    vec3 min;
+    vec3 max;
+} extents_3d;
+
 typedef struct vertex_3d {
     vec3 position;
     vec3 normal;

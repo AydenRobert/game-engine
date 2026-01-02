@@ -5,7 +5,7 @@
 [DEBUG]: A test message: 3.140000
 [TRACE]: A test message: 3.140000
 [INFO]:  Input subsystem initialized.
-[INFO]:  Event system initialized at 0x7fffb7938000, size 131080
+[INFO]:  Event system initialized at 0x7f72dba60000, size 131080
 [DEBUG]: Window resize: 1280 1405
 [WARN]:  renderer_state_ptr->backend does not exist to accept resize.
 [TRACE]: Loader '0' registered.
@@ -90,10 +90,10 @@
 [DEBUG]: Graphics pipeline created.
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [WARN]:  Freelists are inefficient for small amounts of memory.
-[ERROR]: freelist_free_block - block size invalid.
+[ERROR]: freelist_free_block - passed invalid block.
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [WARN]:  Freelists are inefficient for small amounts of memory.
-[ERROR]: freelist_free_block - block size invalid.
+[ERROR]: freelist_free_block - passed invalid block.
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [WARN]:  Freelists are inefficient for small amounts of memory.
 [WARN]:  Freelists are inefficient for small amounts of memory.
@@ -198,7 +198,7 @@
   DICT             : 0.00B
   RING_QUEUE       : 0.00B
   BST              : 0.00B
-  STRING           : 9.59KiB
+  STRING           : 9.60KiB
   APPLICATION      : 2.98KiB
   JOB              : 0.00B
   TEXTURE          : 5.06KiB
@@ -218,7 +218,7 @@
 [INFO]:  Resized, booting.
 [INFO]:  EVENT_CODE_APPLICATION_QUIT has been recieved, shutting down.
 
-[DEBUG]: Frame count: 95, running time: 0.627871
+[DEBUG]: Frame count: 58, running time: 127.159747
 [INFO]:  after temp watch close
 [WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
 [WARN]:  Tried to release a texture with auto_release=false & reference_count=0.

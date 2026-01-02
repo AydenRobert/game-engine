@@ -61,6 +61,7 @@ b8 shader_system_initialize(u64 *memory_requirement, void *memory,
     // invalidate
     for (u32 i = 0; i < state_ptr->config.max_shader_count; i++) {
         state_ptr->shaders[i].id = INVALID_ID;
+        state_ptr->shaders[i].render_frame_number = INVALID_ID_64;
     }
 
     u32 invalid_id = INVALID_ID;

@@ -130,7 +130,8 @@ b8 render_view_ui_on_render(const render_view *self,
             return false;
         }
 
-        if (!material_system_apply_global(shader_id, &packet->projection_matrix,
+        if (!material_system_apply_global(shader_id, frame_number,
+                                          &packet->projection_matrix,
                                           &packet->view_matrix, 0, 0, 0)) {
             KERROR("render_view_ui_on_render - failed to apply globals.");
             return false;
@@ -165,6 +166,7 @@ b8 render_view_ui_on_render(const render_view *self,
             KERROR("render_view_ui_on_render - renderpass %u end failed.", i);
             return false;
         }
+
     }
 
     return true;

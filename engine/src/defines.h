@@ -53,6 +53,7 @@ STATIC_ASSERT(sizeof(f64) == 8, "Expected f64 to be 8 bytes.");
  * @brief any ID set to this should be considered invalid, therefore, not
  * pointing to anything.
  */
+#define INVALID_ID_64 18446744073709551615UL
 #define INVALID_ID 4294967295U
 #define INVALID_ID_U16 65535U
 #define INVALID_ID_U8 255U

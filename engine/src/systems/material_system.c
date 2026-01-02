@@ -298,7 +298,8 @@ material *material_system_acquire_from_config(material_config config) {
 
         material->id = material_reference.handle;
     } else {
-        // KTRACE("Material '%s' already exists, ref count has been increased to "
+        // KTRACE("Material '%s' already exists, ref count has been increased to
+        // "
         //        "'%i'.",
         //        config.name, material_reference.reference_count);
     }
@@ -353,8 +354,9 @@ void material_system_release(const char *name) {
         //        name);
     } else {
         // KTRACE(
-        //     "Released material '%s'. reference_count = %i, auto_release = %s.",
-        //     name, ref.reference_count, ref.auto_release ? "true" : "false");
+        //     "Released material '%s'. reference_count = %i, auto_release =
+        //     %s.", name, ref.reference_count, ref.auto_release ? "true" :
+        //     "false");
     }
 
     // Update the entry
@@ -377,9 +379,19 @@ material *material_system_get_default() {
         return false;                                                          \
     }
 
-b8 material_system_apply_global(u32 shader_id, const mat4 *projection,
-                                const mat4 *view, const vec4 *ambient_colour,
+b8 material_system_apply_global(u32 shader_id, u64 renderer_frame_number,
+                                const mat4 *projection, const mat4 *view,
+                                const vec4 *ambient_colour,
                                 const vec3 *view_position, u32 render_mode) {
+    shader *s = shader_system_get_by_id(shader_id);
+    if (!s) {
+        return false;
+    }
+
+    if (s->render_frame_number == renderer_frame_number) {
+        return true;
+    }
+
     if (shader_id == state_ptr->material_shader_id) {
         MATERIAL_APPLY_OR_FAIL(shader_system_uniform_set_by_index(
             state_ptr->material_locations.projection, projection));
@@ -401,7 +413,11 @@ b8 material_system_apply_global(u32 shader_id, const mat4 *projection,
                shader_id);
         return false;
     }
+
     MATERIAL_APPLY_OR_FAIL(shader_system_apply_global());
+
+    s->render_frame_number = renderer_frame_number;
+    
     return true;
 }
 

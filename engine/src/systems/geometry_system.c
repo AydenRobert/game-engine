@@ -64,7 +64,8 @@ b8 geometry_system_initialize(u64 *memory_requirement, void *state,
     for (u32 i = 0; i < count; i++) {
         state_ptr->registered_geometries[i].geometry.id = INVALID_ID;
         state_ptr->registered_geometries[i].geometry.internal_id = INVALID_ID;
-        state_ptr->registered_geometries[i].geometry.generation = INVALID_ID;
+        state_ptr->registered_geometries[i].geometry.generation =
+            INVALID_ID_U16;
     }
 
     if (!create_default_geometries()) {
@@ -193,11 +194,15 @@ b8 create_geometry(geometry_config config, geometry *geo) {
         state_ptr->registered_geometries[geo->id].reference_count = 0;
         state_ptr->registered_geometries[geo->id].auto_release = false;
         geo->id = INVALID_ID;
-        geo->generation = INVALID_ID;
+        geo->generation = INVALID_ID_U16;
         geo->internal_id = INVALID_ID;
 
         return false;
     }
+
+    geo->centre = config.centre;
+    geo->extents.min = config.min_extents;
+    geo->extents.max = config.max_extents;
 
     if (string_length(config.material_name)) {
         geo->material = material_system_acquire(config.material_name);
@@ -212,7 +217,7 @@ b8 create_geometry(geometry_config config, geometry *geo) {
 void destroy_geometry(geometry *geo) {
     renderer_geometry_destroy(geo);
     geo->id = INVALID_ID;
-    geo->generation = INVALID_ID;
+    geo->generation = INVALID_ID_U16;
     geo->internal_id = INVALID_ID;
 
     string_empty(geo->name);
@@ -462,6 +467,16 @@ geometry_system_generate_cube_config(f32 width, f32 depth, f32 height,
     f32 max_uvx = tile_x;
     f32 max_uvy = tile_y;
 
+    config.min_extents.x = min_x;
+    config.min_extents.y = min_y;
+    config.min_extents.z = min_z;
+    config.max_extents.x = max_x;
+    config.max_extents.y = max_y;
+    config.max_extents.z = max_z;
+    config.centre.x = 0;
+    config.centre.y = 0;
+    config.centre.z = 0;
+
     vertex_3d verts[24];
 
     // Front face
@@ -577,7 +592,8 @@ geometry_system_generate_cube_config(f32 width, f32 depth, f32 height,
                      GEOMETRY_NAME_MAX_LENGTH);
     }
 
-    geometry_generate_tangents(config.vertex_count, config.vertices, config.index_count, config.indices);
+    geometry_generate_tangents(config.vertex_count, config.vertices,
+                               config.index_count, config.indices);
 
     return config;
 }

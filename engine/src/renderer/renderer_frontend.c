@@ -1,5 +1,6 @@
 #include "renderer/renderer_frontend.h"
 
+#include "containers/darray.h"
 #include "core/kmemory.h"
 #include "defines.h"
 #include "renderer/renderer_backend.h"
@@ -221,6 +222,11 @@ b8 renderer_draw_frame(render_packet *packet) {
                 state_ptr->backend.frame_number, attachment_index)) {
             KERROR("renderer_draw_frame - Error rendering view index %i.", i);
             return false;
+        }
+        // TODO: temp
+        if (packet->views[i].geometries) {
+            darray_destroy(packet->views[i].geometries);
+            packet->views[i].geometries = 0;
         }
     }
 
