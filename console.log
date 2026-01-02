@@ -5,7 +5,7 @@
 [DEBUG]: A test message: 3.140000
 [TRACE]: A test message: 3.140000
 [INFO]:  Input subsystem initialized.
-[INFO]:  Event system initialized at 0x7f828f1b0ac0, size 131080
+[INFO]:  Event system initialized at 0x7fffb7938000, size 131080
 [DEBUG]: Window resize: 1280 1405
 [WARN]:  renderer_state_ptr->backend does not exist to accept resize.
 [TRACE]: Loader '0' registered.
@@ -79,10 +79,6 @@
 [INFO]:  Logic device created.
 [INFO]:  Queues obtained.
 [INFO]:  Graphics command pool has been created.
-[TRACE]: texture_system_wrap_internal created texture '__internal_vulkan_swapchain_image_0__', but not registered. Resulting in an allocation, it is up to the caller to free this.
-[TRACE]: texture_system_wrap_internal created texture '__internal_vulkan_swapchain_image_1__', but not registered. Resulting in an allocation, it is up to the caller to free this.
-[TRACE]: texture_system_wrap_internal created texture '__internal_vulkan_swapchain_image_2__', but not registered. Resulting in an allocation, it is up to the caller to free this.
-[TRACE]: texture_system_wrap_internal created texture '__kohi_default_depth_texture__', but not registered. Resulting in an allocation, it is up to the caller to free this.
 [INFO]:  Swapchain created successfully!
 [INFO]:  Vulkan command buffers created.
 [INFO]:  Vulkan renderer initialized successfully!
@@ -92,959 +88,107 @@
 [DEBUG]: Graphics pipeline created.
 [INFO]:  add_sampler called for: 'diffuse_texture', Scope: 1
 [DEBUG]: Graphics pipeline created.
-[TRACE]: Creating default texture...
-[TRACE]: Creating default diffuse texture...
-[TRACE]: Creating default specular texture...
-[TRACE]: Creating default normal texture...
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[ERROR]: vulkan_buffer_allocate - required valid buffer and size.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[ERROR]: vulkan_buffer_allocate - required valid buffer and size.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Texture 'orange_lines_512' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'orange_lines_512_SPEC' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'test_material' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'test_material' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'falc_wreck_low_DefaultMaterial_AlbedoTransparency' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'falc_wreck_low_DefaultMaterial_MetallicSmoothness' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'falc_wreck_low_DefaultMaterial_Normal' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Texture 'sponza_column_b_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_column_b_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_column_b_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_curtain_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_curtain_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_curtain_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_curtain_blue_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_curtain_spec' already exists. ref_count=2.
-[TRACE]: Texture 'sponza_curtain_ddn' already exists. ref_count=2.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_flagpole_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_flagpole_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_flagpole_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_column_c_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_column_c_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_column_c_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'fabric_g' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'fabric_c' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_curtain_green_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_curtain_spec' already exists. ref_count=3.
-[TRACE]: Texture 'sponza_curtain_ddn' already exists. ref_count=3.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'fabric_c' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'fabric_f' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'fabric_c' already exists, ref count has been increased to '4'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'fabric_g' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'fabric_f' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '4'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '5'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '4'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Texture 'sponza_floor_a_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_floor_a_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_floor_a_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'spnza_bricks_a_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'spnza_bricks_a_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'spnza_bricks_a_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '4'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '5'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '6'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '7'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '8'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '9'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '10'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_column_a_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_column_a_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_column_a_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_a' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'bricks' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_details_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_details_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_details_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '6'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '7'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'details' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'bricks' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'details' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'details' already exists, ref count has been increased to '4'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'details' already exists, ref count has been increased to '5'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'bricks' already exists, ref count has been increased to '4'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '8'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '9'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '10'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '11'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '12'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '13'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'vase_hanging' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'vase_hanging_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'vase_hanging_ddn' does not exist yet. Created, ref_count=1.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Texture 'chain_texture' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'chain_texture_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'chain_texture_ddn' does not exist yet. Created, ref_count=1.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'chain' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '14'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '4'.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'chain' already exists, ref count has been increased to '3'.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'chain' already exists, ref count has been increased to '4'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '15'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '16'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '11'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '12'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '13'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '14'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '15'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '16'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '17'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '18'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '19'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '20'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Texture 'sponza_arch_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_arch_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_arch_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_a' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_a' already exists, ref count has been increased to '4'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '21'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '22'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '23'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '24'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '25'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '26'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '27'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '28'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '29'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '30'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '31'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '32'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '33'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '34'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '4'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '35'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '5'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_ceiling_a_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_ceiling_a_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_ceiling_a_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '6'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'ceiling' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '7'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '8'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '9'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'ceiling' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_fabric_green_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_fabric_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_fabric_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '36'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '37'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_fabric_blue_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_fabric_spec' already exists. ref_count=2.
-[TRACE]: Texture 'sponza_fabric_ddn' already exists. ref_count=2.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '38'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '39'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '40'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '41'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '42'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '43'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '44'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '45'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '46'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '47'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '48'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '5'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '17'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '18'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '19'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '20'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '21'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '22'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '23'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '24'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '10'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '11'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '6'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '7'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '49'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '50'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '51'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '52'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '53'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '8'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '54'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '9'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '10'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '55'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '11'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '25'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '12'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '13'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '14'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '15'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_thorn_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_thorn_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_thorn_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '16'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '17'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '18'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'leaf' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '19'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '20'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '56'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '57'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '58'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '59'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '60'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '61'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'bricks' already exists, ref count has been increased to '5'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'bricks' already exists, ref count has been increased to '6'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '12'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'leaf' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'vase_round' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'vase_round_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'vase_round_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'vase_plant' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'vase_plant_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'vase_plant_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'background' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'background_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'background_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'ceiling' already exists, ref count has been increased to '4'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_a' already exists, ref count has been increased to '5'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '62'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '63'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '64'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '65'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '66'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '67'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '68'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '69'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '70'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '71'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '72'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '73'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '74'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '75'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '76'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '77'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '78'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '79'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '80'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '81'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '13'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_a' already exists, ref count has been increased to '6'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_a' already exists, ref count has been increased to '7'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_a' already exists, ref count has been increased to '8'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_a' already exists, ref count has been increased to '9'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_a' already exists, ref count has been increased to '10'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_a' already exists, ref count has been increased to '11'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_a' already exists, ref count has been increased to '12'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'ceiling' already exists, ref count has been increased to '5'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'floor' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '82'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '83'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '84'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '85'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '86'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '87'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '88'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'bricks' already exists, ref count has been increased to '7'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '21'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '89'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '90'.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'chain' already exists, ref count has been increased to '5'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '14'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '15'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '16'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '17'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'bricks' already exists, ref count has been increased to '8'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '18'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '19'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '20'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'bricks' already exists, ref count has been increased to '9'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'bricks' already exists, ref count has been increased to '10'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '91'.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'chain' already exists, ref count has been increased to '6'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '92'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '93'.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'chain' already exists, ref count has been increased to '7'.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'chain' already exists, ref count has been increased to '8'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '94'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '5'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '6'.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'chain' already exists, ref count has been increased to '9'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '7'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '95'.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'chain' already exists, ref count has been increased to '10'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '8'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '9'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '26'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '22'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '27'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '96'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '28'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '23'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '97'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '98'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '99'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '100'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '101'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '102'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '103'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '104'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '105'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '106'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '24'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '25'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '26'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '29'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '30'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '107'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '108'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '31'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '32'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '33'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '34'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '109'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '110'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '111'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '112'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '35'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '36'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '113'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '114'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'ceiling' already exists, ref count has been increased to '6'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '21'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'ceiling' already exists, ref count has been increased to '7'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '22'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'ceiling' already exists, ref count has been increased to '8'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '23'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'ceiling' already exists, ref count has been increased to '9'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '24'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'ceiling' already exists, ref count has been increased to '10'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '25'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '10'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '115'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'fabric_e' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '116'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'fabric_e' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_fabric_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_fabric_spec' already exists. ref_count=3.
-[TRACE]: Texture 'sponza_fabric_ddn' already exists. ref_count=3.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'fabric_d' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '117'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'leaf' already exists, ref count has been increased to '4'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'leaf' already exists, ref count has been increased to '5'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '118'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '119'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'fabric_d' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'fabric_a' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'lion' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'lion_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'lion_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'Material__298' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'vase_dif' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'vase_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'vase_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase' already exists, ref count has been increased to '4'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_round' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'Material__57' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_round' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'Material__57' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_round' already exists, ref count has been increased to '4'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'Material__57' already exists, ref count has been increased to '4'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '11'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'bricks' already exists, ref count has been increased to '11'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'Material__25' already exists, ref count has been increased to '2'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'Material__298' already exists, ref count has been increased to '3'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '26'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '27'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_round' already exists, ref count has been increased to '5'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'Material__57' already exists, ref count has been increased to '5'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '120'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '28'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '121'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '29'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '122'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '123'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '124'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '125'.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'chain' already exists, ref count has been increased to '11'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '126'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '30'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '31'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '127'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '128'.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'chain' already exists, ref count has been increased to '12'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '12'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_round' already exists, ref count has been increased to '6'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'Material__57' already exists, ref count has been increased to '6'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_round' already exists, ref count has been increased to '7'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'Material__57' already exists, ref count has been increased to '7'.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'chain' already exists, ref count has been increased to '13'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '13'.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'chain' already exists, ref count has been increased to '14'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '14'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '15'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_round' already exists, ref count has been increased to '8'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'Material__57' already exists, ref count has been increased to '8'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '16'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '17'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '18'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '32'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '33'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '34'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '35'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '36'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '37'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '38'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '39'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '40'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '41'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '37'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '38'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '39'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '40'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'ceiling' already exists, ref count has been increased to '11'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'bricks' already exists, ref count has been increased to '12'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '27'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'bricks' already exists, ref count has been increased to '13'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'arch' already exists, ref count has been increased to '28'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'ceiling' already exists, ref count has been increased to '12'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '129'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '130'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'leaf' already exists, ref count has been increased to '6'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'leaf' already exists, ref count has been increased to '7'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '131'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'column_b' already exists, ref count has been increased to '132'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '42'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'leaf' already exists, ref count has been increased to '8'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '43'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '44'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '45'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'flagpole' already exists, ref count has been increased to '46'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'bricks' already exists, ref count has been increased to '14'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Texture 'sponza_roof_diff' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_roof_spec' does not exist yet. Created, ref_count=1.
-[TRACE]: Texture 'sponza_roof_ddn' does not exist yet. Created, ref_count=1.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'roof' already exists, ref count has been increased to '2'.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'chain' already exists, ref count has been increased to '15'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '41'.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Material 'chain' already exists, ref count has been increased to '16'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '19'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '42'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '43'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '44'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '45'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '46'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '47'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '48'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '49'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '50'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '51'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'column_c' already exists, ref count has been increased to '52'.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[TRACE]: Material 'vase_hanging' already exists, ref count has been increased to '20'.
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: vulkan_renderer_create_geometry - Upload data range 2
-[WARN]:  Freelists are inefficient for small amounts of memory.
-[TRACE]: Texture 'logo' does not exist yet. Created, ref_count=1.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[ERROR]: freelist_free_block - block size invalid.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[ERROR]: freelist_free_block - block size invalid.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
+[WARN]:  Freelists are inefficient for small amounts of memory.
 [DEBUG]: game_initialize() called!
 [INFO]:  System memory use (tagged):
   UNKNOWN          : 0.00B
@@ -1055,7 +199,7 @@
   RING_QUEUE       : 0.00B
   BST              : 0.00B
   STRING           : 9.59KiB
-  APPLICATION      : 1.64KiB
+  APPLICATION      : 2.98KiB
   JOB              : 0.00B
   TEXTURE          : 5.06KiB
   MATERIAL_INSTANCE: 0.00B
@@ -1069,127 +213,19 @@
 
 [DEBUG]: Window resize: 1251 1361
 [INFO]:  Vulkan renderer backend->resize: w/h/gen: 1251/1361/1
-[TRACE]: texture_system_wrap_internal created texture '__kohi_default_depth_texture__', but not registered. Resulting in an allocation, it is up to the caller to free this.
 [INFO]:  Swapchain created successfully!
 [INFO]:  Vulkan command buffers created.
 [INFO]:  Resized, booting.
 [INFO]:  EVENT_CODE_APPLICATION_QUIT has been recieved, shutting down.
 
-[DEBUG]: Frame count: 239, running time: 8.875035
+[DEBUG]: Frame count: 95, running time: 0.627871
 [INFO]:  after temp watch close
-[TRACE]: Destroying material 'test_material'...
-[TRACE]: Release texture 'orange_lines_512', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'orange_lines_512_SPEC', texture unloaded because reference_count=0 and auto_release=true.
-[WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
-[TRACE]: Destroying material 'falc_wreck'...
-[TRACE]: Release texture 'falc_wreck_low_DefaultMaterial_AlbedoTransparency', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'falc_wreck_low_DefaultMaterial_MetallicSmoothness', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'falc_wreck_low_DefaultMaterial_Normal', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'column_b'...
-[TRACE]: Release texture 'sponza_column_b_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_column_b_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_column_b_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'fabric_c'...
-[TRACE]: Release texture 'sponza_curtain_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_curtain_spec', reference_count=2 and auto_release=true.
-[TRACE]: Release texture 'sponza_curtain_ddn', reference_count=2 and auto_release=true.
-[TRACE]: Destroying material 'fabric_g'...
-[TRACE]: Release texture 'sponza_curtain_blue_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_curtain_spec', reference_count=1 and auto_release=true.
-[TRACE]: Release texture 'sponza_curtain_ddn', reference_count=1 and auto_release=true.
-[TRACE]: Destroying material 'flagpole'...
-[TRACE]: Release texture 'sponza_flagpole_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_flagpole_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_flagpole_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'column_c'...
-[TRACE]: Release texture 'sponza_column_c_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_column_c_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_column_c_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'fabric_f'...
-[TRACE]: Release texture 'sponza_curtain_green_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_curtain_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_curtain_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'floor'...
-[TRACE]: Release texture 'sponza_floor_a_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_floor_a_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_floor_a_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'bricks'...
-[TRACE]: Release texture 'spnza_bricks_a_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'spnza_bricks_a_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'spnza_bricks_a_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'column_a'...
-[TRACE]: Release texture 'sponza_column_a_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_column_a_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_column_a_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'details'...
-[TRACE]: Release texture 'sponza_details_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_details_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_details_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'vase_hanging'...
-[TRACE]: Release texture 'vase_hanging', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'vase_hanging_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'vase_hanging_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'chain'...
-[TRACE]: Release texture 'chain_texture', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'chain_texture_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'chain_texture_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'arch'...
-[TRACE]: Release texture 'sponza_arch_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_arch_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_arch_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'ceiling'...
-[TRACE]: Release texture 'sponza_ceiling_a_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_ceiling_a_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_ceiling_a_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'fabric_e'...
-[TRACE]: Release texture 'sponza_fabric_green_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_fabric_spec', reference_count=2 and auto_release=true.
-[TRACE]: Release texture 'sponza_fabric_ddn', reference_count=2 and auto_release=true.
-[TRACE]: Destroying material 'fabric_d'...
-[TRACE]: Release texture 'sponza_fabric_blue_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_fabric_spec', reference_count=1 and auto_release=true.
-[TRACE]: Release texture 'sponza_fabric_ddn', reference_count=1 and auto_release=true.
-[TRACE]: Destroying material 'leaf'...
-[TRACE]: Release texture 'sponza_thorn_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_thorn_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_thorn_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'vase_round'...
-[TRACE]: Release texture 'vase_round', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'vase_round_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'vase_round_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'Material__57'...
-[TRACE]: Release texture 'vase_plant', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'vase_plant_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'vase_plant_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'Material__298'...
-[TRACE]: Release texture 'background', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'background_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'background_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'Material__47'...
 [WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
 [WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
 [WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
-[TRACE]: Destroying material 'fabric_a'...
-[TRACE]: Release texture 'sponza_fabric_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_fabric_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_fabric_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'Material__25'...
-[TRACE]: Release texture 'lion', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'lion_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'lion_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'vase'...
-[TRACE]: Release texture 'vase_dif', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'vase_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'vase_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'roof'...
-[TRACE]: Release texture 'sponza_roof_diff', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_roof_spec', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Release texture 'sponza_roof_ddn', texture unloaded because reference_count=0 and auto_release=true.
-[TRACE]: Destroying material 'test_ui_material'...
-[TRACE]: Release texture 'logo', texture unloaded because reference_count=0 and auto_release=true.
 [WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
 [WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
-[TRACE]: Destroying material 'default'...
+[WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
 [WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
 [WARN]:  Tried to release a texture with auto_release=false & reference_count=0.
 [DEBUG]: Destroying Vulkan device...

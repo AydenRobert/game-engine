@@ -594,8 +594,7 @@ b8 vulkan_renderer_backend_end_frame(renderer_backend *backend,
     return true;
 }
 
-b8 vulkan_renderer_begin_renderpass(renderer_backend *backend, renderpass *pass,
-                                    render_target *target) {
+b8 vulkan_renderer_renderpass_begin(renderpass *pass, render_target *target) {
     vulkan_command_buffer *command_buffer =
         &context.graphics_command_buffers[context.image_index];
 
@@ -647,7 +646,7 @@ b8 vulkan_renderer_begin_renderpass(renderer_backend *backend, renderpass *pass,
     return true;
 }
 
-b8 vulkan_renderer_end_renderpass(renderer_backend *backend, renderpass *pass) {
+b8 vulkan_renderer_renderpass_end(renderpass *pass) {
     vulkan_command_buffer *command_buffer =
         &context.graphics_command_buffers[context.image_index];
 
@@ -1037,7 +1036,7 @@ b8 vulkan_renderer_create_geometry(geometry *geometry, u32 vertex_size,
         internal_data->index_count = index_count;
         internal_data->index_element_size = sizeof(u32);
         u32 index_total_size = index_count * index_size;
-        KTRACE("vulkan_renderer_create_geometry - Upload data range 2");
+        // KTRACE("vulkan_renderer_create_geometry - Upload data range 2");
         if (!upload_data_range(&context, pool, 0, queue,
                                &context.object_index_buffer,
                                &internal_data->index_buffer_offset,
@@ -1107,14 +1106,14 @@ void vulkan_renderer_destroy_geometry(geometry *geometry) {
 }
 
 void vulkan_renderer_draw_geometry(renderer_backend *backend,
-                                   geometry_render_data data) {
+                                   geometry_render_data *data) {
     // ignore non-uploaded geometries
-    if (data.geometry && data.geometry->internal_id == INVALID_ID) {
+    if (data->geometry && data->geometry->internal_id == INVALID_ID) {
         return;
     }
 
     vulkan_geometry_data *buffer_data =
-        &context.geometries[data.geometry->internal_id];
+        &context.geometries[data->geometry->internal_id];
     vulkan_command_buffer *command_buffer =
         &context.graphics_command_buffers[context.image_index];
 

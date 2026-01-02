@@ -298,9 +298,9 @@ material *material_system_acquire_from_config(material_config config) {
 
         material->id = material_reference.handle;
     } else {
-        KTRACE("Material '%s' already exists, ref count has been increased to "
-               "'%i'.",
-               config.name, material_reference.reference_count);
+        // KTRACE("Material '%s' already exists, ref count has been increased to "
+        //        "'%i'.",
+        //        config.name, material_reference.reference_count);
     }
 
     // Update the entry
@@ -348,13 +348,13 @@ void material_system_release(const char *name) {
         // Reset the reference
         ref.handle = INVALID_ID;
         ref.auto_release = false;
-        KTRACE("Released material '%s'. Texture is now unloaded as "
-               "reference_count = 0 and auto_release = true.",
-               name);
+        // KTRACE("Released material '%s'. Texture is now unloaded as "
+        //        "reference_count = 0 and auto_release = true.",
+        //        name);
     } else {
-        KTRACE(
-            "Released material '%s'. reference_count = %i, auto_release = %s.",
-            name, ref.reference_count, ref.auto_release ? "true" : "false");
+        // KTRACE(
+        //     "Released material '%s'. reference_count = %i, auto_release = %s.",
+        //     name, ref.reference_count, ref.auto_release ? "true" : "false");
     }
 
     // Update the entry
@@ -567,7 +567,7 @@ b8 load_material(material_config config, material *mat) {
 }
 
 void destroy_material(material *mat) {
-    KTRACE("Destroying material '%s'...", mat->name);
+    // KTRACE("Destroying material '%s'...", mat->name);
 
     // Release texture references
     if (mat->diffuse_map.texture) {

@@ -8,6 +8,7 @@
 #include "defines.h"
 #include "renderer/renderer_frontend.h"
 #include "renderer/vulkan/vulkan_backend.h"
+
 #include "resources/resource_types.h"
 
 #include "systems/resource_system.h"
@@ -188,10 +189,10 @@ texture *texture_system_wrap_internal(const char *name, u32 width, u32 height,
         t = &state_ptr->registered_textures[id];
     } else {
         t = kallocate(sizeof(texture), MEMORY_TAG_TEXTURE);
-        KTRACE("texture_system_wrap_internal created texture '%s', but not "
-               "registered. Resulting in an allocation, it is up to the caller "
-               "to free this.",
-               name);
+        // KTRACE("texture_system_wrap_internal created texture '%s', but not "
+               // "registered. Resulting in an allocation, it is up to the caller "
+               // "to free this.",
+               // name);
     }
 
     t->id = id;
@@ -257,7 +258,7 @@ GET_DEFAULT_FUNC(default_normal_texture)
 
 b8 create_default_textures(texture_system_state *state_ptr) {
     // NOTE: Create default texture, 256x256 blue/white checkerboard patten
-    KTRACE("Creating default texture...");
+    // KTRACE("Creating default texture...");
     const u32 tex_dimension = 256;
     const u32 bpp = 4;
     const u32 pixel_count = tex_dimension * tex_dimension;
@@ -297,7 +298,7 @@ b8 create_default_textures(texture_system_state *state_ptr) {
     state_ptr->default_texture.generation = INVALID_ID;
 
     // Diffuse texture.
-    KTRACE("Creating default diffuse texture...");
+    // KTRACE("Creating default diffuse texture...");
     u8 diff_pixels[16 * 16 * 4];
     // Default diff map is black (no diffuse)
     kset_memory(diff_pixels, 0, sizeof(u8) * 16 * 16 * 4);
@@ -314,7 +315,7 @@ b8 create_default_textures(texture_system_state *state_ptr) {
     state_ptr->default_diffuse_texture.generation = INVALID_ID;
 
     // Specular texture.
-    KTRACE("Creating default specular texture...");
+    // KTRACE("Creating default specular texture...");
     u8 spec_pixels[16 * 16 * 4];
     // Default spec map is black (no specular)
     kset_memory(spec_pixels, 0, sizeof(u8) * 16 * 16 * 4);
@@ -331,7 +332,7 @@ b8 create_default_textures(texture_system_state *state_ptr) {
     state_ptr->default_specular_texture.generation = INVALID_ID;
 
     // Normal texture.
-    KTRACE("Creating default normal texture...");
+    // KTRACE("Creating default normal texture...");
     u8 normal_pixels[16 * 16 * 4]; // w * h * channels
     kset_memory(normal_pixels, 0, sizeof(u8) * 16 * 16 * 4);
     // Each pixel.
@@ -382,7 +383,7 @@ b8 load_texture(const char *texture_name, texture *t) {
 
     image_resource_data *resource_data = img_resource.data;
 
-    texture temp_texture;
+    texture temp_texture = {0};
     temp_texture.width = resource_data->width;
     temp_texture.height = resource_data->height;
     temp_texture.channel_count = resource_data->channel_count;
@@ -406,7 +407,7 @@ b8 load_texture(const char *texture_name, texture *t) {
     // Take a copy of the name
     string_ncopy(temp_texture.name, texture_name, TEXTURE_NAME_MAX_LENGTH);
     temp_texture.generation = INVALID_ID;
-    temp_texture.flags |= has_transparency ? TEXTURE_FLAG_HAS_TRANSPARENCY : 0;
+    temp_texture.flags = has_transparency ? TEXTURE_FLAG_HAS_TRANSPARENCY : 0;
 
     // Acquire internal texture resources and upload to GPU.
     renderer_texture_create(resource_data->pixels, &temp_texture);
@@ -488,14 +489,14 @@ b8 process_texture_reference(const char *name, i8 reference_diff,
 
             ref.handle = INVALID_ID;
             ref.auto_release = false;
-            KTRACE("Release texture '%s', texture unloaded because "
-                   "reference_count=0 and auto_release=true.",
-                   name_copy);
+            // KTRACE("Release texture '%s', texture unloaded because "
+                   // "reference_count=0 and auto_release=true.",
+                   // name_copy);
         } else {
-            KTRACE(
-                "Release texture '%s', reference_count=%i and auto_release=%s.",
-                name_copy, ref.reference_count,
-                ref.auto_release ? "true" : "false");
+            // KTRACE(
+                // "Release texture '%s', reference_count=%i and auto_release=%s.",
+                // name_copy, ref.reference_count,
+                // ref.auto_release ? "true" : "false");
         }
     } else {
         // incrementing the reference count
@@ -522,7 +523,7 @@ b8 process_texture_reference(const char *name, i8 reference_diff,
             texture *t = &state_ptr->registered_textures[ref.handle];
             // Create new texture
             if (skip_load) {
-                KTRACE("Load skipped for texture '%s'.", name);
+                // KTRACE("Load skipped for texture '%s'.", name);
             } else {
                 if (!load_texture(name, t)) {
                     *out_texture_id = INVALID_ID;
@@ -531,12 +532,12 @@ b8 process_texture_reference(const char *name, i8 reference_diff,
                 }
                 t->id = ref.handle;
             }
-            KTRACE("Texture '%s' does not exist yet. Created, ref_count=%i.",
-                   name, ref.reference_count);
+            // KTRACE("Texture '%s' does not exist yet. Created, ref_count=%i.",
+                   // name, ref.reference_count);
         } else {
             *out_texture_id = ref.handle;
-            KTRACE("Texture '%s' already exists. ref_count=%i.", name,
-                   ref.reference_count);
+            // KTRACE("Texture '%s' already exists. ref_count=%i.", name,
+                   // ref.reference_count);
         }
     }
 

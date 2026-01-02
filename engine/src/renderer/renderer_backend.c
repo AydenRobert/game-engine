@@ -22,8 +22,8 @@ b8 renderer_backend_create(renderer_backend_type type,
         out_renderer_backend->end_frame = vulkan_renderer_backend_end_frame;
 
         out_renderer_backend->renderpass_begin =
-            vulkan_renderer_begin_renderpass;
-        out_renderer_backend->renderpass_end = vulkan_renderer_end_renderpass;
+            vulkan_renderer_renderpass_begin;
+        out_renderer_backend->renderpass_end = vulkan_renderer_renderpass_end;
 
         out_renderer_backend->resized = vulkan_renderer_backend_on_resized;
 

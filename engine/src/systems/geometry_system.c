@@ -187,7 +187,7 @@ geometry *geometry_system_get_default_geometry_2d() {
 }
 
 b8 create_geometry(geometry_config config, geometry *geo) {
-    if (!renderer_create_geometry(geo, config.vertex_size, config.vertex_count,
+    if (!renderer_geometry_create(geo, config.vertex_size, config.vertex_count,
                                   config.vertices, config.index_size,
                                   config.index_count, config.indices)) {
         state_ptr->registered_geometries[geo->id].reference_count = 0;
@@ -210,7 +210,7 @@ b8 create_geometry(geometry_config config, geometry *geo) {
 }
 
 void destroy_geometry(geometry *geo) {
-    renderer_destroy_geometry(geo);
+    renderer_geometry_destroy(geo);
     geo->id = INVALID_ID;
     geo->generation = INVALID_ID;
     geo->internal_id = INVALID_ID;
@@ -253,7 +253,7 @@ b8 create_default_geometries() {
 
     u32 indices3d[6] = {0, 1, 2, 0, 3, 1};
 
-    if (!renderer_create_geometry(&state_ptr->default_3d_geometry,
+    if (!renderer_geometry_create(&state_ptr->default_3d_geometry,
                                   sizeof(vertex_3d), 4, verts3d, sizeof(u32), 6,
                                   indices3d)) {
         KFATAL(
@@ -290,7 +290,7 @@ b8 create_default_geometries() {
     // NOTE: counter_clockwise
     u32 indices2d[6] = {2, 1, 0, 3, 0, 1};
 
-    if (!renderer_create_geometry(&state_ptr->default_2d_geometry,
+    if (!renderer_geometry_create(&state_ptr->default_2d_geometry,
                                   sizeof(vertex_2d), 4, verts2d, sizeof(u32), 6,
                                   indices2d)) {
         KFATAL(

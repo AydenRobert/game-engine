@@ -15,10 +15,12 @@
 #include "renderer/renderer_frontend.h"
 
 // systems
+#include "renderer/renderer_types.inl"
 #include "resources/resource_types.h"
 #include "systems/camera_system.h"
 #include "systems/geometry_system.h"
 #include "systems/material_system.h"
+#include "systems/render_view_system.h"
 #include "systems/resource_system.h"
 #include "systems/shader_system.h"
 #include "systems/texture_system.h"
@@ -71,11 +73,14 @@ typedef struct application_state {
     u64 camera_system_memory_requirement;
     void *camera_system_state;
 
+    u64 render_view_system_memory_requirement;
+    void *render_view_system_state;
+
     // TODO: temp
     mesh meshes[10];
     u32 mesh_count;
-
-    geometry *test_ui_geometry;
+    mesh ui_meshes[10];
+    u32 ui_mesh_count;
 } application_state;
 
 static application_state *app_state;
@@ -299,7 +304,7 @@ KAPI b8 application_create(game *game_inst) {
         return false;
     }
 
-    // Initialize geometry system
+    // Initialize camera system
     camera_system_config camera_system_config;
     camera_system_config.max_camera_count = 61;
     camera_system_initialize(&app_state->camera_system_memory_requirement, 0,
@@ -311,6 +316,54 @@ KAPI b8 application_create(game *game_inst) {
                                   app_state->camera_system_state,
                                   camera_system_config)) {
         KFATAL("Failed to initialize camera system, shutting down.");
+        return false;
+    }
+
+    // Initialize render_view system
+    render_view_system_config render_view_system_config;
+    render_view_system_config.max_view_count = 251;
+    render_view_system_initialize(
+        &app_state->render_view_system_memory_requirement, 0,
+        render_view_system_config);
+    app_state->render_view_system_state = linear_allocator_allocate(
+        &app_state->systems_allocator,
+        app_state->render_view_system_memory_requirement, 64);
+    if (!render_view_system_initialize(
+            &app_state->render_view_system_memory_requirement,
+            app_state->render_view_system_state, render_view_system_config)) {
+        KFATAL("Failed to initialize render_view system, shutting down.");
+        return false;
+    }
+
+    render_view_config opaque_world_config = {};
+    opaque_world_config.type = RENDER_VIEW_KNOWN_TYPE_WORLD;
+    opaque_world_config.width = 0;
+    opaque_world_config.height = 0;
+    opaque_world_config.name = "world_opaque";
+    opaque_world_config.pass_count = 1;
+    render_view_pass_config passes[1];
+    passes[0].name = "Renderpass.Builtin.World";
+    opaque_world_config.passes = passes;
+    opaque_world_config.view_matrix_source =
+        RENDER_VIEW_VIEW_MATRIX_SOURCE_SCENE_CAMERA;
+    if (!render_view_system_create(&opaque_world_config)) {
+        KFATAL("Failed to create world_config view, aborting.");
+        return false;
+    }
+
+    render_view_config ui_view_config = {};
+    ui_view_config.type = RENDER_VIEW_KNOWN_TYPE_UI;
+    ui_view_config.width = 0;
+    ui_view_config.height = 0;
+    ui_view_config.name = "ui";
+    ui_view_config.pass_count = 1;
+    render_view_pass_config ui_passes[1];
+    ui_passes[0].name = "Renderpass.Builtin.UI";
+    ui_view_config.passes = ui_passes;
+    ui_view_config.view_matrix_source =
+        RENDER_VIEW_VIEW_MATRIX_SOURCE_SCENE_CAMERA;
+    if (!render_view_system_create(&ui_view_config)) {
+        KFATAL("Failed to create world_config view, aborting.");
         return false;
     }
 
@@ -439,8 +492,13 @@ KAPI b8 application_create(game *game_inst) {
     u32 uiindices[6] = {2, 1, 0, 3, 0, 1};
     ui_config.indices = uiindices;
 
-    app_state->test_ui_geometry =
+    app_state->ui_mesh_count = 1;
+    app_state->ui_meshes[0].geometry_count = 1;
+    app_state->ui_meshes[0].geometries =
+        kallocate(sizeof(geometry *), MEMORY_TAG_ARRAY);
+    app_state->ui_meshes[0].geometries[0] =
         geometry_system_acquire_from_config(ui_config, true);
+    app_state->ui_meshes[0].transform = transform_create();
 
     // Load default geometry
     // app_state->test_geometry = geometry_system_get_default_geometry();
@@ -492,17 +550,8 @@ KAPI b8 application_run() {
                 break;
             }
 
-            // TODO: refactor packet creation
-            render_packet packet;
-            packet.delta_time = delta;
-            packet.geometry_count = 0;
-
             // TODO: temp
             if (app_state->mesh_count > 0) {
-                // NOTE: Yes, this allocates/frees every frame. No, it doesn't
-                // matter for now since it's temporary.
-                packet.geometries = darray_create(geometry_render_data);
-
                 // Perform a small rotation on the first mesh.
                 quat rotation = quat_from_axis_angle((vec3){{0, 1, 0}},
                                                      0.5f * delta, false);
@@ -515,34 +564,45 @@ KAPI b8 application_run() {
                 if (app_state->mesh_count > 2) {
                     transform_rotate(&app_state->meshes[2].transform, rotation);
                 }
-
-                // Iterate all meshes and add them to the packet's geometries
-                // collection
-                for (u32 i = 0; i < app_state->mesh_count; ++i) {
-                    mesh *m = &app_state->meshes[i];
-                    for (u32 j = 0; j < m->geometry_count; ++j) {
-                        geometry_render_data data;
-                        data.geometry = m->geometries[j];
-                        data.model = transform_get_world(&m->transform);
-                        darray_push(packet.geometries, data);
-                        packet.geometry_count++;
-                    }
-                }
             }
 
-            geometry_render_data test_ui_render;
-            test_ui_render.geometry = app_state->test_ui_geometry;
-            test_ui_render.model = mat4_translation((vec3){{0, 0, 0}});
-            packet.ui_geometry_count = 1;
-            packet.ui_geometries = &test_ui_render;
+            // TODO: refactor packet creation
+            render_packet packet = {};
+            packet.delta_time = delta;
+
+            // TODO: read from frame config
+            packet.view_count = 2;
+            render_view_packet views[2];
+            kzero_memory(views, sizeof(render_view_packet) * 2);
+            packet.views = views;
+
+            // World
+            mesh_packet_data world_mesh_data = {};
+            world_mesh_data.mesh_count = app_state->mesh_count;
+            world_mesh_data.meshes = app_state->meshes;
+            // TODO: this performs a lookup on every frame
+            if (!render_view_system_build_packet(
+                    render_view_system_get("world_opaque"), &world_mesh_data,
+                    &packet.views[0])) {
+                KERROR("Failed to build packet for 'world_opaque'.");
+                return false;
+            }
+
+            // ui
+            mesh_packet_data ui_mesh_data = {};
+            ui_mesh_data.mesh_count = app_state->ui_mesh_count;
+            ui_mesh_data.meshes = app_state->ui_meshes;
+            // TODO: this performs a lookup on every frame
+            if (!render_view_system_build_packet(render_view_system_get("ui"),
+                                                 &ui_mesh_data,
+                                                 &packet.views[1])) {
+                KERROR("Failed to build packet for 'ui'.");
+                return false;
+            }
 
             renderer_draw_frame(&packet);
 
             // TODO: temp -> Clean up
-            if (packet.geometries) {
-                darray_destroy(packet.geometries);
-                packet.geometries = 0;
-            }
 
             // Calculate frame time
             f64 frame_end_time = platform_get_absolute_time();

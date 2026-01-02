@@ -23,7 +23,7 @@ typedef struct internal_state {
 static camera_system_state *state_ptr;
 
 b8 camera_system_initialize(u64 *memory_requirement, void *state,
-                           camera_system_config config) {
+                            camera_system_config config) {
     if (config.max_camera_count == 0) {
         KFATAL(
             "camera_system_initalize - config.max_camera_count must be > 0.");
@@ -55,9 +55,9 @@ b8 camera_system_initialize(u64 *memory_requirement, void *state,
         state_ptr->cameras[i].reference_count = 0;
     }
 
-    void *hashtable_block = array_block + array_requirement;
-    hashtable_create(sizeof(u16), config.max_camera_count, hashtable_block,
-                     false, &state_ptr->lookup);
+    state_ptr->hashtable_block = array_block + array_requirement;
+    hashtable_create(sizeof(u16), config.max_camera_count,
+                     state_ptr->hashtable_block, false, &state_ptr->lookup);
     u16 invalid_id = INVALID_ID_U16;
     hashtable_fill(&state_ptr->lookup, &invalid_id);
 
